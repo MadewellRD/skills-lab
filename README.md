@@ -14,4 +14,4 @@ Public lab for Agentic skill creations, packaged skills, references, and release
 
 ## Skill packaging rule
 
-Packaged ChatGPT skills should always be distributed as `skill.zip`. Keep source under `skills/<skill-name>/` and publish packaged archives through GitHub Releases or `releases/<skill-name>/` notes.
+Packaged Agentic skills should always be distributed as `skill.zip`. Keep source under `skills/<skill-name>/` and publish packaged archives through GitHub Releases or `releases/<skill-name>/` notes.
