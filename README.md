@@ -1,6 +1,6 @@
 # Skills Lab
 
-Public lab for ChatGPT skill creations, packaged skills, references, and release artifacts.
+Public lab for Agentic skill creations, packaged skills, references, and release artifacts.
 
 ## Current skills
 
