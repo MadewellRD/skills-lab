@@ -3,28 +3,25 @@
 # Format:
 # <sha256>  <filename>
 #
-# These checksums cover release archives currently available for verification in this session.
-# Remaining suite archives should be regenerated or uploaded as release assets before final release checksum publication.
+# Generated from validated packaged skill archives for the v0.1.0 suite.
+# The suite contains 19 archives, ordered 000 through 018.
 
 944b6c65be8301aeefdd7617da939cd3071282d223719f2bbee05700a54edc25  000-sdlc-command-desk-skill.zip
+9f0c953100cb8dcaa7554ca8c9601d2e378f7f876dc1421b9b44aa9f4dbce484  001-product-requirements-desk-skill.zip
+74907d1cdaa4dfb6a1e5f3f026310b5733ccad2135eee5088b8e844814d0d30d  002-technical-discovery-desk-skill.zip
+931807197143451537e2eb1476f42105984bba2a09b399d1fc0227594d07c7e7  003-architecture-design-desk-skill.zip
+db62e5a63c1f0de5ce9c54d336a42d075553eb7fa2c8552fc6cf43ed9eb86f70  004-issue-planning-desk-skill.zip
 9fe139e860c0309a3002e2b925166be96180cea7b1402101563865ffa8489f03  005-implementation-handoff-desk-skill.zip
+056ba0d8a4610a480b3115acedabe0342ab3f25b2706889fde5d9d8b07be3fd2  006-review-quality-desk-skill.zip
+13347f682e8f90b4ca2f85139ffcef8f12ce486848bcde07b16d23a9f280e5d6  007-test-strategy-desk-skill.zip
+84c0f04be538bfeccfa01e4b4b852df38916bae9335fb2fbbd99b2504bc03001  008-verification-desk-skill.zip
+3321c3185709302d299af813da19719c0a99b6eeab9b1f8f74ecd21f1ac4e007  009-docs-traceability-desk-skill.zip
+db1749744e7be5ee3fe70a58b8e3b48e559f5fb809c3ace3d2f68a98f0ac3f15  010-security-threat-desk-skill.zip
+3195b25bc263a58eb8ad67549d158bd2ef27375b0a4727be7631bab5fc34c488  011-ci-failure-desk-skill.zip
+7fbc37d4e02c63c6fe7486d144fe7b5d6d6d4ade80cc15e376711e31de210c00  012-release-operations-desk-skill.zip
 0157b149422274573ca81212a047bb89b4c827cd673f17cdcd0c1cd739c10d0c  013-deployment-desk-skill.zip
-26d0b5f32e05a8eec5b2905e89cf0340ce650c24afe4146b7bea201178432410  014-observability-readiness-desk-skill.zip
+094f45f620591c5e491bf4850da2386c44d2a564afcac47e3a2f12bb8bd04187  014-observability-readiness-desk-skill.zip
 63fb00e19b2be4a1770ab2e5e5f81e0b8aca6e10fa9be49bc472a7e420949d94  015-incident-response-desk-skill.zip
 a62b8a3496baf89963ad9beb12f81279731be14c42ebb804e036caab2dc512aa  016-maintenance-refactor-desk-skill.zip
 8439ca74320adb1b6d80a9208ffafe48ea3cf10c27f3916ece33e66fa4475062  017-retrospective-desk-skill.zip
 95888137932e4c3e889f676b986428012c99c4916cc3cb09bf2863b0496d5d9e  018-decommissioning-desk-skill.zip
-
-# Pending checksums before final v0.1.0 release
-#
-# 001-product-requirements-desk-skill.zip
-# 002-technical-discovery-desk-skill.zip
-# 003-architecture-design-desk-skill.zip
-# 004-issue-planning-desk-skill.zip
-# 006-review-quality-desk-skill.zip
-# 007-test-strategy-desk-skill.zip
-# 008-verification-desk-skill.zip
-# 009-docs-traceability-desk-skill.zip
-# 010-security-threat-desk-skill.zip
-# 011-ci-failure-desk-skill.zip
-# 012-release-operations-desk-skill.zip
