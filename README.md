@@ -6,6 +6,14 @@ SDLC Command Desk is a public skills lab for building, packaging, and sharing Ag
 
 Think freely. Ship safely. Spend coding-agent tokens on code, not chaos.
 
+## Quick links
+
+- [Manifest](MANIFEST.md) — ordered list of every skill in the suite.
+- [Install and use guide](docs/INSTALL.md) — how to install and use the skills in ChatGPT.
+- [Checksums](CHECKSUMS.txt) — SHA256 hashes for release artifacts.
+- [Release notes](releases/v0.1.0.md) — draft notes for the initial `v0.1.0` suite release.
+- [Release publishing guide](releases/README.md) — artifact and release policy.
+
 ## What this repository contains
 
 This repository contains packaged and source-ready skills for an AI-native software development lifecycle.
@@ -105,20 +113,11 @@ Docs and communication sources are used for:
 
 If required source facts are missing or conflicting, the correct behavior is to halt or produce a connector diagnostic. Do not invent repo state, issue IDs, branch names, test names, CI status, or acceptance criteria.
 
-## Repository layout
+## Install
 
-```text
-docs/
-  Research notes, lifecycle maps, sprint prompts, operating standards, and design docs.
+See [docs/INSTALL.md](docs/INSTALL.md) for the full installation and usage guide.
 
-releases/
-  Release notes and packaged skill artifact instructions.
-
-skills/
-  Packaged skill archives and/or unpacked skill source directories.
-```
-
-## Recommended skill archive order
+Recommended install order:
 
 ```text
 000-sdlc-command-desk-skill.zip
@@ -154,14 +153,49 @@ For repository organization, archives may use descriptive filenames such as:
 
 The uploaded archive itself should still contain one valid skill directory with a valid `SKILL.md`.
 
+## Release artifacts
+
+The `v0.1.0` release artifact set contains all 19 packaged skill archives plus `CHECKSUMS.txt`.
+
+Use `CHECKSUMS.txt` to verify downloads before installing. PowerShell example:
+
+```powershell
+Get-FileHash .\000-sdlc-command-desk-skill.zip -Algorithm SHA256
+```
+
+To publish the GitHub Release from a local artifact folder, use the ASCII-safe helper script:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\publish-v0.1.0.ps1
+```
+
+## Repository layout
+
+```text
+docs/
+  Research notes, lifecycle maps, sprint prompts, operating standards, and install/use docs.
+
+releases/
+  Release notes, release policy, and release publishing helpers.
+
+skills/
+  Packaged skill archives and/or unpacked skill source directories.
+```
+
 ## Current status
 
 The first full SDLC suite has been created as packaged skill archives.
 
-Next repository tasks:
+Completed repository support:
 
-1. Add a manifest for all packaged skills.
-2. Add checksums for release artifacts.
-3. Add source directories for each skill if source publication is desired.
-4. Create GitHub Releases for stable skill bundles.
-5. Add install/use instructions for ChatGPT users.
+- Manifest for all packaged skills.
+- Complete `CHECKSUMS.txt` for all 19 release artifacts.
+- Install/use instructions for ChatGPT users.
+- Release artifact guidance.
+- Draft `v0.1.0` release notes.
+- ASCII-safe `v0.1.0` publish script.
+
+Remaining work:
+
+- Publish the actual GitHub Release and attach all stable skill bundles.
+- Add source directories for each skill if source publication is desired.
