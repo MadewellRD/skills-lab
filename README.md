@@ -1,4 +1,4 @@
-﻿# SDLC Command Desk
+# SDLC Command Desk
 
 Token-efficient software delivery skills for vibe coders, solo builders, and AI-native engineering teams.
 
@@ -58,53 +58,56 @@ idea
   -> maintenance
   -> retrospective
   -> decommissioning
+```
 
 The intent is not to make builders slower. The intent is to remove repeated process thinking so coding agents can spend more of their token budget on code, tests, and validation.
 
-Token-efficiency principle
+## Token-efficiency principle
 
 The SDLC skills should reduce ambiguity before work reaches a coding agent.
 
 Upstream desks produce structured source-of-truth artifacts. The implementation handoff desk then compresses those artifacts into concise execution prompts with:
 
-exact scope
-exact files when known
-exact branch and base facts when available
-exact allowed and forbidden changes
-exact validation commands
-exact halt conditions
-exact PR body requirements
+- exact scope
+- exact files when known
+- exact branch and base facts when available
+- exact allowed and forbidden changes
+- exact validation commands
+- exact halt conditions
+- exact PR body requirements
 
 This keeps Codex, Claude Code, and similar tools from wasting tokens rediscovering process, requirements, architecture, tests, or release expectations.
 
-Connector-grounding principle
+## Connector-grounding principle
 
 Skills should use live connected sources when available.
 
 GitHub is treated as the source of truth for:
 
-repositories
-branches
-commits
-pull requests
-issues
-changed files
-CI/check status
-workflow logs
-tests and source files
+- repositories
+- branches
+- commits
+- pull requests
+- issues
+- changed files
+- CI/check status
+- workflow logs
+- tests and source files
 
 Docs and communication sources are used for:
 
-roadmap context
-product decisions
-architecture notes
-audit evidence
-stakeholder decisions
-release and operational context
+- roadmap context
+- product decisions
+- architecture notes
+- audit evidence
+- stakeholder decisions
+- release and operational context
 
 If required source facts are missing or conflicting, the correct behavior is to halt or produce a connector diagnostic. Do not invent repo state, issue IDs, branch names, test names, CI status, or acceptance criteria.
 
-Repository layout
+## Repository layout
+
+```text
 docs/
   Research notes, lifecycle maps, sprint prompts, operating standards, and design docs.
 
@@ -113,7 +116,11 @@ releases/
 
 skills/
   Packaged skill archives and/or unpacked skill source directories.
-Recommended skill archive order
+```
+
+## Recommended skill archive order
+
+```text
 000-sdlc-command-desk-skill.zip
 001-product-requirements-desk-skill.zip
 002-technical-discovery-desk-skill.zip
@@ -133,25 +140,28 @@ Recommended skill archive order
 016-maintenance-refactor-desk-skill.zip
 017-retrospective-desk-skill.zip
 018-decommissioning-desk-skill.zip
-Packaging rule
+```
 
-Each individual skill should be packaged as a valid uploadable skill archive. When preparing a skill for upload, the final archive should be named skill.zip.
+## Packaging rule
+
+Each individual skill should be packaged as a valid uploadable skill archive. When preparing a skill for upload, the final archive should be named `skill.zip`.
 
 For repository organization, archives may use descriptive filenames such as:
 
+```text
 005-implementation-handoff-desk-skill.zip
+```
 
-The uploaded archive itself should still contain one valid skill directory with a valid SKILL.md.
+The uploaded archive itself should still contain one valid skill directory with a valid `SKILL.md`.
 
-Current status
+## Current status
 
 The first full SDLC suite has been created as packaged skill archives.
 
 Next repository tasks:
 
-Add a manifest for all packaged skills.
-Add checksums for release artifacts.
-Add source directories for each skill if source publication is desired.
-Create GitHub Releases for stable skill bundles.
-Add install/use instructions for ChatGPT users.
-'@ | Set-Content -Path .\README.md -Encoding UTF8
+1. Add a manifest for all packaged skills.
+2. Add checksums for release artifacts.
+3. Add source directories for each skill if source publication is desired.
+4. Create GitHub Releases for stable skill bundles.
+5. Add install/use instructions for ChatGPT users.
