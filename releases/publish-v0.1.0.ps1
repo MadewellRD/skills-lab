@@ -1,5 +1,6 @@
 # Publish SDLC Command Desk v0.1.0 release assets.
 # Run from the directory containing this script and the 19 skill zip archives.
+# ASCII-only to avoid PowerShell parser issues on systems with non-UTF-8 defaults.
 
 $ErrorActionPreference = "Stop"
 
@@ -25,5 +26,5 @@ gh release create v0.1.0 `
   018-decommissioning-desk-skill.zip `
   CHECKSUMS.txt `
   --repo MadewellRD/skills-lab `
-  --title "v0.1.0 — Initial SDLC Command Desk Suite" `
+  --title "v0.1.0 - Initial SDLC Command Desk Suite" `
   --notes-file RELEASE_BODY.md
