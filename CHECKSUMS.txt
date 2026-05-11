@@ -1,0 +1,30 @@
+# SHA256 checksums for SDLC Command Desk release artifacts
+#
+# Format:
+# <sha256>  <filename>
+#
+# These checksums cover release archives currently available for verification in this session.
+# Remaining suite archives should be regenerated or uploaded as release assets before final release checksum publication.
+
+944b6c65be8301aeefdd7617da939cd3071282d223719f2bbee05700a54edc25  000-sdlc-command-desk-skill.zip
+9fe139e860c0309a3002e2b925166be96180cea7b1402101563865ffa8489f03  005-implementation-handoff-desk-skill.zip
+0157b149422274573ca81212a047bb89b4c827cd673f17cdcd0c1cd739c10d0c  013-deployment-desk-skill.zip
+26d0b5f32e05a8eec5b2905e89cf0340ce650c24afe4146b7bea201178432410  014-observability-readiness-desk-skill.zip
+63fb00e19b2be4a1770ab2e5e5f81e0b8aca6e10fa9be49bc472a7e420949d94  015-incident-response-desk-skill.zip
+a62b8a3496baf89963ad9beb12f81279731be14c42ebb804e036caab2dc512aa  016-maintenance-refactor-desk-skill.zip
+8439ca74320adb1b6d80a9208ffafe48ea3cf10c27f3916ece33e66fa4475062  017-retrospective-desk-skill.zip
+95888137932e4c3e889f676b986428012c99c4916cc3cb09bf2863b0496d5d9e  018-decommissioning-desk-skill.zip
+
+# Pending checksums before final v0.1.0 release
+#
+# 001-product-requirements-desk-skill.zip
+# 002-technical-discovery-desk-skill.zip
+# 003-architecture-design-desk-skill.zip
+# 004-issue-planning-desk-skill.zip
+# 006-review-quality-desk-skill.zip
+# 007-test-strategy-desk-skill.zip
+# 008-verification-desk-skill.zip
+# 009-docs-traceability-desk-skill.zip
+# 010-security-threat-desk-skill.zip
+# 011-ci-failure-desk-skill.zip
+# 012-release-operations-desk-skill.zip
