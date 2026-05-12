@@ -1,0 +1,3 @@
+interface:
+  display_name: "Product Requirements Desk"
+  short_description: "Connector-grounded PRDs, requirement IDs, acceptance criteria, non-goals, risks, and downstream SDLC handoffs."

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Verification Desk"
+  short_description: "Create requirements traceability, V&V reports, acceptance-gate reviews, and release-blocker evidence maps."

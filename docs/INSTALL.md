@@ -2,6 +2,8 @@
 
 This guide explains how to use the SDLC Command Desk skill suite from this repository.
 
+Current recommended install set: `v0.1.1` workflow-linked suite.
+
 ## What you need
 
 - ChatGPT with Skills support.

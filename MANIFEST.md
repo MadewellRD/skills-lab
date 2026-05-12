@@ -1,10 +1,11 @@
 # SDLC Command Desk Manifest
 
-This manifest tracks the first SDLC Command Desk skill suite.
+This manifest tracks the workflow-linked SDLC Command Desk skill suite.
 
 ## Suite identity
 
 - Suite name: SDLC Command Desk
+- Suite version: v0.1.1 workflow-linked
 - Repository: https://github.com/MadewellRD/skills-lab
 - Audience: vibe coders, solo builders, and AI-native engineering teams
 - Purpose: reduce SDLC ambiguity and help coding agents spend more tokens on code, tests, and validation instead of rediscovering process.
@@ -44,6 +45,8 @@ Upload-facing archives should still contain one valid skill and may be renamed t
 | 017 | `retrospective-desk` | retrospectives, cycle metrics, process improvements, action plans | continuous improvement | created |
 | 018 | `decommissioning-desk` | feature/API/system retirement, cutover, data retention, communications, rollback-safe shutdown | decommissioning | created |
 
+Source publication status: all 19 workflow-linked skill source directories are published under `skills/`.
+
 ## Operating rules
 
 Every skill in the suite should preserve these principles:
@@ -63,6 +66,6 @@ Release archives should be attached through GitHub Releases. Keep large or binar
 Future release support files:
 
 - `releases/README.md`
-- `releases/v0.1.0.md`
+- `releases/v0.1.1.md`
 - `CHECKSUMS.txt`
 - `docs/INSTALL.md`

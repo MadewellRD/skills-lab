@@ -1,0 +1,3 @@
+interface:
+  display_name: "SDLC Command Desk"
+  short_description: "Routes SDLC work across lifecycle desk skills and enforces connector-grounded stage order."

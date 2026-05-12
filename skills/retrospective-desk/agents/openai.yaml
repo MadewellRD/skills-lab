@@ -1,0 +1,3 @@
+interface:
+  display_name: "Retrospective Desk"
+  short_description: "Create evidence-backed retrospectives and process-improvement plans for software delivery."

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Security Threat Desk"
+  short_description: "Creates connector-grounded threat models, security reviews, and mitigation handoffs."

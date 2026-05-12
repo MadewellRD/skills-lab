@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Design Desk"
+  short_description: "Creates connector-grounded architecture specs, ADRs, contracts, migration plans, and implementation handoff notes."
+  icon: "🏗️"
