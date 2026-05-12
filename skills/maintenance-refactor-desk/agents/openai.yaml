@@ -1,0 +1,3 @@
+interface:
+  display_name: "Maintenance Refactor Desk"
+  short_description: "Plans safe refactors, upgrades, migrations, and technical-debt work."

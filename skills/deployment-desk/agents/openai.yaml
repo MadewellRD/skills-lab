@@ -1,0 +1,3 @@
+interface:
+  display_name: "Deployment Desk"
+  short_description: "Plan deployments, staged rollouts, go/no-go gates, rollback paths, and post-deploy checks."

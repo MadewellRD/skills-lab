@@ -1,0 +1,3 @@
+interface:
+  display_name: "CI Failure Desk"
+  short_description: "Diagnoses CI/CD failures, flaky tests, workflow issues, and rerun or fix decisions."

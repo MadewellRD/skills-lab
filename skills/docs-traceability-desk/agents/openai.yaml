@@ -1,0 +1,5 @@
+interface:
+  display_name: Docs Traceability Desk
+  short_description: Build proof maps, claim maps, doc-code consistency reports, knowledge indexes, and audit evidence.
+  icon: file-text
+  color: indigo

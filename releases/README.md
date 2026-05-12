@@ -2,6 +2,8 @@
 
 This directory contains release notes and release-artifact guidance for SDLC Command Desk.
 
+Current workflow-linked release candidate: `v0.1.1`.
+
 ## Artifact policy
 
 Packaged skill archives should be published through GitHub Releases when stable.
@@ -32,7 +34,7 @@ Before finalizing a release:
 Use semantic-ish release tags for bundle releases:
 
 ```text
-v0.1.0
+v0.1.1
 v0.2.0
 v1.0.0
 ```

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Observability Readiness Desk"
+  short_description: "Create observability readiness reports, telemetry plans, SLO notes, alerting checks, and runbook evidence."
+  icon: "activity"
+  accent_color: "#2563EB"
