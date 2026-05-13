@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skill-lab.dev/ir-schema/v1.0/workflow-packet.schema.json",
+  "title": "Skill-Lab Workflow Packet",
+  "description": "Runtime state object passed between leaves within a Desk and across Desks. Doubles as the governance signal stream consumed by ROGUE:OPS audit ingestion.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "desk",
+    "current_stage",
+    "completed_stages",
+    "source_facts",
+    "ready_to_continue",
+    "audit_trail"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "desk": {
+      "description": "Fully-qualified Desk reference in @org/desk form.",
+      "type": "string",
+      "pattern": "^@[a-zA-Z0-9-]+/[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "current_stage": {
+      "description": "Name or id of the leaf currently active.",
+      "type": "string"
+    },
+    "completed_stages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_stage": {
+      "type": ["string", "null"]
+    },
+    "source_facts": {
+      "description": "Facts grounded in connectors or uploaded documents. Required to anchor outputs and prevent fabrication.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "source", "content"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "source": {
+            "description": "Where this fact came from: connector name, file path, or 'user_text'.",
+            "type": "string"
+          },
+          "content": { "type": "string" },
+          "captured_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "decision", "rationale"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "decision": { "type": "string" },
+          "rationale": { "type": "string" },
+          "decided_by": { "type": "string" },
+          "decided_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "artifacts": {
+      "description": "Output artifacts produced by completed leaves.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "filename", "produced_by"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "filename": { "type": "string" },
+          "content": { "type": "string" },
+          "content_uri": {
+            "type": "string",
+            "format": "uri"
+          },
+          "produced_by": {
+            "description": "Skill reference that produced this artifact.",
+            "type": "string"
+          },
+          "produced_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "halt_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["condition", "raised_by", "raised_at"],
+        "additionalProperties": false,
+        "properties": {
+          "condition": { "type": "string" },
+          "raised_by": { "type": "string" },
+          "raised_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "diagnostic_artifact": {
+            "type": "string",
+            "description": "Filename of the connector-diagnostic or workflow-halt artifact."
+          },
+          "resume_prompt": { "type": "string" }
+        }
+      }
+    },
+    "ready_to_continue": {
+      "type": "boolean"
+    },
+    "inter_desk_context": {
+      "description": "State carried when this workflow involves multiple Desks. The top-of-house router populates this when handing off across Desks.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "originating_desk": {
+          "type": "string",
+          "pattern": "^@[a-zA-Z0-9-]+/[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+        },
+        "desk_stack": {
+          "description": "Stack of Desks invoked so far. Most recent is the active one.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^@[a-zA-Z0-9-]+/[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+          }
+        },
+        "shared_facts": {
+          "description": "Facts that should propagate across Desks (e.g., 'we are working on PR #123').",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "audit_trail": {
+      "description": "Append-only sequence of leaf invocations. Consumed by ROGUE:OPS audit ingestion.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "skill", "skill_version"],
+        "additionalProperties": false,
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "skill": {
+            "type": "string",
+            "description": "Fully-qualified skill reference: @org/desk/skill."
+          },
+          "skill_version": { "type": "string" },
+          "connectors_called": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "policy_decisions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["policy", "outcome"],
+              "additionalProperties": false,
+              "properties": {
+                "policy": { "type": "string" },
+                "outcome": {
+                  "type": "string",
+                  "enum": ["allowed", "denied", "approval_required", "approval_granted"]
+                },
+                "target": { "type": "string" },
+                "reason": { "type": "string" }
+              }
+            }
+          },
+          "halt": { "type": "boolean" },
+          "duration_ms": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "target": {
+            "description": "Target runtime this leaf was executed on.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

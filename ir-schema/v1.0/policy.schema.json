@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skill-lab.dev/ir-schema/v1.0/policy.schema.json",
+  "title": "Skill-Lab Policy",
+  "description": "Schema for policy.yaml. Declares execution boundaries, halt conditions, and audit configuration. Consumed by ROGUE:OPS-compatible runtimes for governance enforcement.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "execution_boundaries"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "execution_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "filesystem": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "allowed_paths": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Glob patterns the skill is allowed to read or write. Anything outside is denied."
+            },
+            "denied_paths": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Glob patterns the skill is explicitly denied even if covered by allowed_paths."
+            },
+            "require_approval_for_writes": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        "network": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "allowed_domains": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "denied_domains": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "require_approval": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Domains where outbound calls require human approval at runtime."
+            }
+          }
+        },
+        "connectors": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "require_approval_for_writes": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "audit_all": {
+              "type": "boolean",
+              "default": true
+            },
+            "denied": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "halt_on": {
+      "description": "Conditions under which the skill must halt rather than fabricate output.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "enum": [
+              "missing_required_connector",
+              "policy_violation",
+              "schema_validation_failure",
+              "audit_write_failure"
+            ]
+          },
+          {
+            "type": "object",
+            "required": ["condition"],
+            "additionalProperties": false,
+            "properties": {
+              "condition": {
+                "type": "string",
+                "enum": ["confidence_below_threshold"]
+              },
+              "threshold": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "log_all_invocations": {
+          "type": "boolean",
+          "default": true
+        },
+        "retain_workflow_packets": {
+          "type": "boolean",
+          "default": true
+        },
+        "retention_days": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3650,
+          "default": 90
+        },
+        "audit_sink": {
+          "description": "Where audit events are emitted. 'local' writes to the workflow packet only; 'rogue-ops' emits to a ROGUE:OPS-compatible ingestion endpoint.",
+          "type": "string",
+          "enum": ["local", "rogue-ops", "both"],
+          "default": "local"
+        }
+      }
+    }
+  }
+}

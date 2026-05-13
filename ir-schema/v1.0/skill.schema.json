@@ -1,0 +1,267 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skill-lab.dev/ir-schema/v1.0/skill.schema.json",
+  "title": "Skill-Lab Skill IR Frontmatter",
+  "description": "Schema for the YAML frontmatter of a Skill-Lab skill IR file (SKILL.md). Validates structure of skill metadata, inputs/outputs, capability requirements, composition references, and provenance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "description",
+    "version",
+    "desk",
+    "role",
+    "capability_requirements",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "description": "IR schema version this skill conforms to. Pinned per file so the compiler can accept the current version and one back.",
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "name": {
+      "description": "Skill name in kebab-case. Unique within a Desk.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 64
+    },
+    "description": {
+      "description": "Single-paragraph description used for activation matching by host orchestrators.",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 1024
+    },
+    "version": {
+      "description": "Skill version in semver form (MAJOR.MINOR.PATCH). Used by the registry for dependency resolution.",
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
+    },
+    "desk": {
+      "description": "Desk this skill belongs to, in kebab-case.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "lifecycle_stage": {
+      "description": "Optional lifecycle stage assignment for Desks with sequential lifecycle shapes (e.g., SDLC). Tool-routed Desks (e.g., GitHub Command Desk) may omit this.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["number", "name"],
+      "properties": {
+        "number": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 99
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        }
+      }
+    },
+    "role": {
+      "description": "Skill role within its Desk. 'router' is the top-of-house skill; 'orchestrator' is a Desk command desk; 'leaf' is a lifecycle/capability skill.",
+      "type": "string",
+      "enum": ["router", "orchestrator", "leaf"]
+    },
+    "inputs": {
+      "description": "Typed inputs the skill consumes. The orchestrator preflight verifies required inputs are available before invocation.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/io_descriptor" }
+    },
+    "outputs": {
+      "description": "Artifacts the skill produces. Each output has a stable id and a target filename.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/output_descriptor" }
+    },
+    "connectors_required": {
+      "description": "Connectors that must be wired for the skill to run. Missing required connectors trigger a connector diagnostic and halt.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/connector_name" },
+      "uniqueItems": true
+    },
+    "connectors_optional": {
+      "description": "Connectors the skill uses opportunistically when available. Missing optional connectors do not block execution.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/connector_name" },
+      "uniqueItems": true
+    },
+    "composes_from": {
+      "description": "Upstream skills this skill consumes outputs from. May reference skills within the same Desk or in other Desks. Version constraints follow semver range syntax.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/skill_reference" }
+    },
+    "hands_off_to": {
+      "description": "Downstream skills this skill hands off to. May reference skills within the same Desk or in other Desks.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/skill_reference" }
+    },
+    "capability_requirements": {
+      "description": "Capabilities the skill needs from its host target. The compiler refuses to emit for targets that cannot satisfy 'required' capabilities.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_io",
+        "script_execution",
+        "tool_calling",
+        "long_context",
+        "multimodal",
+        "workflow_packet"
+      ],
+      "properties": {
+        "file_io": { "$ref": "#/definitions/capability_level" },
+        "script_execution": { "$ref": "#/definitions/capability_level" },
+        "tool_calling": { "$ref": "#/definitions/capability_level" },
+        "long_context": { "$ref": "#/definitions/capability_level" },
+        "multimodal": { "$ref": "#/definitions/capability_level" },
+        "workflow_packet": { "$ref": "#/definitions/capability_level" }
+      }
+    },
+    "activation_hints": {
+      "description": "Natural-language phrases that should activate this skill. Used to seed Custom GPT conversation starters and other target activation surfaces.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 256
+      },
+      "minItems": 1,
+      "maxItems": 16
+    },
+    "provenance": {
+      "description": "Authorship, source attribution, and license. Required for supply-chain auditability.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author", "license"],
+      "properties": {
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "license": {
+          "type": "string",
+          "enum": ["Apache-2.0", "MIT", "BSD-3-Clause", "CC-BY-4.0", "Proprietary"]
+        }
+      }
+    },
+    "policy_ref": {
+      "description": "Optional path to a policy.yaml file overriding Desk-level policy for this skill. Resolved relative to the SKILL.md file.",
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._/-]+\\.ya?ml$"
+    }
+  },
+  "definitions": {
+    "io_descriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "document",
+            "markdown",
+            "json",
+            "yaml",
+            "github_pr",
+            "github_issue",
+            "github_repo",
+            "ci_artifact",
+            "code_diff",
+            "user_text",
+            "uploaded_file",
+            "workflow_packet"
+          ]
+        },
+        "required": {
+          "type": "boolean",
+          "default": false
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 512
+        }
+      }
+    },
+    "output_descriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "filename"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["markdown", "json", "yaml", "diagnostic"]
+        },
+        "filename": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9._-]+\\.(md|json|ya?ml)$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 512
+        }
+      }
+    },
+    "connector_name": {
+      "type": "string",
+      "enum": [
+        "filesystem",
+        "github",
+        "gitlab",
+        "drive",
+        "gmail",
+        "slack",
+        "linear",
+        "jira",
+        "notion",
+        "calendar",
+        "web"
+      ]
+    },
+    "skill_reference": {
+      "description": "Reference to another skill, supporting cross-Desk composition and semver version ranges.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ref"],
+      "properties": {
+        "ref": {
+          "description": "Skill reference in @org/desk/skill form, or bare skill name for same-Desk references.",
+          "type": "string",
+          "pattern": "^(@[a-zA-Z0-9-]+/[a-z][a-z0-9-]*/)?[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+        },
+        "version": {
+          "description": "Semver range expression (e.g., '^1.0.0', '>=1.2.0 <2.0.0'). Defaults to '*' if omitted.",
+          "type": "string",
+          "default": "*"
+        },
+        "reason": {
+          "description": "Optional human-readable reason for the composition, surfaced in registry views.",
+          "type": "string",
+          "maxLength": 256
+        }
+      }
+    },
+    "capability_level": {
+      "type": "string",
+      "enum": ["required", "preferred", "none"]
+    }
+  }
+}
