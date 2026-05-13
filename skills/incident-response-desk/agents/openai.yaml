@@ -1,5 +1,0 @@
-interface:
-  display_name: Incident Response Desk
-  short_description: Connector-grounded incident triage, RCA, hotfix handoff, and production-support artifacts.
-  icon: alert-triangle
-  accent_color: '#B91C1C'

@@ -1,5 +1,0 @@
-interface:
-  display_name: "Decommissioning Desk"
-  short_description: "Plan safe retirement of features, APIs, services, data stores, integrations, and software assets."
-  icon: "archive"
-  accent_color: "#5f6b7a"

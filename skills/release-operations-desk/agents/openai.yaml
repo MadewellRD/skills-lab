@@ -1,3 +1,0 @@
-interface:
-  display_name: "Release Operations Desk"
-  short_description: "Prepare release readiness, release notes, version/tag, rollback, and post-release verification artifacts."

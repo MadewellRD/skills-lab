@@ -1,203 +1,165 @@
-# SDLC Command Desk
+# Skill-Lab — Phase 0 Deliverable
 
-Token-efficient software delivery skills for vibe coders, solo builders, and AI-native engineering teams.
+Status: complete, all tests green
+Built in: Claude session, validated end-to-end
+Next phase: Phase 1 — Compiler core graph resolver + Claude target adapter (identity)
 
-SDLC Command Desk is a public skills lab for building, packaging, and sharing Agentic SDLC skills. The goal is simple: let builders stay creative while the skills handle lifecycle structure, source grounding, safety gates, and low-token implementation handoffs.
+This directory is the load-bearing foundation for Skill-Lab RC1. It defines the canonical Intermediate Representation that every Desk and every skill conforms to, and provides a working TypeScript parser and validator that the rest of the system builds on.
 
-Think freely. Ship safely. Spend coding-agent tokens on code, not chaos.
+Everything here has been written, type-checked, tested, and smoke-tested end-to-end before any implementation agent has been invoked.
 
-## Quick links
+## What's in Phase 0
 
-- [Manifest](MANIFEST.md) — ordered list of every skill in the suite.
-- [Install and use guide](docs/INSTALL.md) — how to install and use the skills in ChatGPT.
-- [Checksums](CHECKSUMS.txt) — SHA256 hashes for release artifacts.
-- [Release notes](releases/v0.1.1.md) — workflow-linked `v0.1.1` suite release notes.
-- [Release publishing guide](releases/README.md) — artifact and release policy.
+The IR schema (`ir-schema/v1.0/`) — four JSON Schema documents that define the IR contract. The skill schema declares the shape of every SKILL.md frontmatter. The desk schema declares the desk-level manifest including capability tags, leaf enumeration, supported targets, and cross-Desk dependencies. The policy schema is the governance contract surface consumed by ROGUE:OPS-compatible runtimes. The workflow packet schema is the runtime state object that flows between leaves (within a Desk) and across Desks (via the inter_desk_context block).
 
-## What this repository contains
+Both semver versioning and cross-Desk composition are baked in from v1.0. Composition references take the form `@org/desk/skill` with semver range constraints (e.g., `^1.0.0`). Workflow packets carry an `inter_desk_context` block that the top-of-house router populates when handoffs cross Desk boundaries.
 
-This repository contains packaged and source-ready skills for an AI-native software development lifecycle.
+The compiler core (`compiler/core/`) — a TypeScript module providing the parser, the validator, the IR types, and a command-line entry point. Parser reads SKILL.md files and produces a `ParsedSkill` object with frontmatter and anchor-keyed body sections. Validator runs three layers of validation (JSON Schema, body structure, semantic invariants) and returns either `{ok: true}` or `{ok: false, errors: [...]}`. The validator is code-fence-aware (H2 anchors inside triple-backtick blocks are correctly ignored as content, not structure).
 
-The suite is organized around one top-level orchestrator skill:
+The worked example (`desks/sdlc-command-desk/skills/verification-desk/SKILL.md`) — the existing SDLC v0.1.1 verification-desk converted to the new IR format. Demonstrates the full frontmatter shape including semver-versioned cross-Desk composition references, all required body anchors in canonical order, the workflow packet schema reference, and the policy reference. Parses and validates cleanly under the CLI.
 
-- `sdlc-command-desk` — orchestrates end-to-end lifecycle flow, enforces connector preflight, prevents premature implementation, and coordinates the SDLC skill suite.
+The test suite (`compiler/core/tests/`) — 40 tests across three files. Parser tests cover frontmatter extraction, anchor splitting, code-fence awareness, missing-anchor detection, and out-of-order detection. Validator tests cover schema validation, body structure validation, semver helpers, semantic invariants (capability consistency, orchestrator role rules), and a round-trip test against the converted verification-desk. All 40 pass.
 
-And the lifecycle desks:
+## How to run it
 
-- `product-requirements-desk` — product requirements, acceptance criteria, non-goals, risks, and downstream handoff notes.
-- `technical-discovery-desk` — repo recon, feasibility, constraints, unknowns, spikes, and risk registers.
-- `architecture-design-desk` — architecture specs, ADRs, interface contracts, component boundaries, and migration plans.
-- `issue-planning-desk` — GitHub-ready issue plans, milestones, dependency graphs, labels, and acceptance gates.
-- `implementation-handoff-desk` — low-token coding-agent handoffs for scoped branch, commit, PR, merge-train, halt-resume, docs/proof, and repo-operation work.
-- `review-quality-desk` — PR review, diff risk, scope creep checks, missing-test assessment, and review recommendations.
-- `test-strategy-desk` — QA scenarios, regression plans, fixture plans, and coverage-gap reports.
-- `verification-desk` — V&V reports, requirements traceability matrices, acceptance gates, evidence maps, and release blockers.
-- `docs-traceability-desk` — proof maps, claim maps, doc-code consistency, knowledge indexes, and audit evidence.
-- `security-threat-desk` — threat modeling, trust boundaries, dependency/security review, and mitigation mapping.
-- `ci-failure-desk` — CI failure triage, flaky-test classification, rerun policy, root-cause analysis, and pipeline health.
-- `release-operations-desk` — release readiness, release notes, version/tag planning, rollback planning, and post-release verification.
-- `deployment-desk` — deployment plans, rollout stages, feature flags, change management, go/no-go gates, and post-deploy checks.
-- `observability-readiness-desk` — telemetry design, logs/metrics/traces, SLO notes, alerts, dashboards, and runbooks.
-- `incident-response-desk` — incident triage, severity classification, RCA, hotfix handoff, and follow-up issue planning.
-- `maintenance-refactor-desk` — refactor planning, dependency upgrades, migrations, dead-code removal, and regression controls.
-- `retrospective-desk` — retrospectives, cycle metrics, process improvements, and follow-up action plans.
-- `decommissioning-desk` — feature/API/system retirement, cutover planning, data retention, communications, archive rules, and rollback-safe shutdown.
-
-## Operating model
-
-The suite follows a staged SDLC model:
-
-```text
-idea
-  -> requirements
-  -> technical discovery
-  -> architecture and design
-  -> issue planning
-  -> implementation handoff
-  -> review
-  -> testing
-  -> verification
-  -> security
-  -> CI/CD
-  -> release
-  -> deployment
-  -> observability
-  -> incident response
-  -> maintenance
-  -> retrospective
-  -> decommissioning
+```bash
+cd compiler/core
+npm install
+npx vitest run                                                    # 40 tests
+npx tsx src/cli.ts ../../desks/sdlc-command-desk/skills/verification-desk/SKILL.md
+# → OK verification-desk@1.0.0
+npx tsx src/cli.ts fixtures/bad-skill.md
+# → FAIL with 12 enumerated errors across schema, body, and semantic layers
 ```
 
-The intent is not to make builders slower. The intent is to remove repeated process thinking so coding agents can spend more of their token budget on code, tests, and validation.
+## The IR file shape, in one place
 
-## Token-efficiency principle
+A skill is a Markdown file with YAML frontmatter and mandatory body anchors:
 
-The SDLC skills should reduce ambiguity before work reaches a coding agent.
+```
+---
+schema_version: "1.0"
+name: <kebab-case-name>
+description: <20-1024 chars>
+version: <semver>
+desk: <kebab-case-desk-name>
+role: leaf | orchestrator | router
+lifecycle_stage:                              # optional, for lifecycle-shaped Desks
+  number: <int>
+  name: <snake_case>
+inputs: [{id, type, required?, description?}]
+outputs: [{id, type, filename, description?}]
+connectors_required: [enum]
+connectors_optional: [enum]
+composes_from: [{ref, version?, reason?}]     # cross-Desk and semver-aware
+hands_off_to: [{ref, version?, reason?}]
+capability_requirements:                       # all six keys required
+  file_io: required | preferred | none
+  script_execution: required | preferred | none
+  tool_calling: required | preferred | none
+  long_context: required | preferred | none
+  multimodal: required | preferred | none
+  workflow_packet: required | preferred | none
+activation_hints: [<phrase>]
+provenance:
+  author: <name>
+  sources: [<uri>]
+  license: Apache-2.0 | MIT | BSD-3-Clause | CC-BY-4.0 | Proprietary
+policy_ref: <path/to/policy.yaml>             # optional
+---
 
-Upstream desks produce structured source-of-truth artifacts. The implementation handoff desk then compresses those artifacts into concise execution prompts with:
-
-- exact scope
-- exact files when known
-- exact branch and base facts when available
-- exact allowed and forbidden changes
-- exact validation commands
-- exact halt conditions
-- exact PR body requirements
-
-This keeps Codex, Claude Code, and similar tools from wasting tokens rediscovering process, requirements, architecture, tests, or release expectations.
-
-## Connector-grounding principle
-
-Skills should use live connected sources when available.
-
-GitHub is treated as the source of truth for:
-
-- repositories
-- branches
-- commits
-- pull requests
-- issues
-- changed files
-- CI/check status
-- workflow logs
-- tests and source files
-
-Docs and communication sources are used for:
-
-- roadmap context
-- product decisions
-- architecture notes
-- audit evidence
-- stakeholder decisions
-- release and operational context
-
-If required source facts are missing or conflicting, the correct behavior is to halt or produce a connector diagnostic. Do not invent repo state, issue IDs, branch names, test names, CI status, or acceptance criteria.
-
-## Install
-
-See [docs/INSTALL.md](docs/INSTALL.md) for the full installation and usage guide.
-
-Recommended install order:
-
-```text
-000-sdlc-command-desk-skill.zip
-001-product-requirements-desk-skill.zip
-002-technical-discovery-desk-skill.zip
-003-architecture-design-desk-skill.zip
-004-issue-planning-desk-skill.zip
-005-implementation-handoff-desk-skill.zip
-006-review-quality-desk-skill.zip
-007-test-strategy-desk-skill.zip
-008-verification-desk-skill.zip
-009-docs-traceability-desk-skill.zip
-010-security-threat-desk-skill.zip
-011-ci-failure-desk-skill.zip
-012-release-operations-desk-skill.zip
-013-deployment-desk-skill.zip
-014-observability-readiness-desk-skill.zip
-015-incident-response-desk-skill.zip
-016-maintenance-refactor-desk-skill.zip
-017-retrospective-desk-skill.zip
-018-decommissioning-desk-skill.zip
+## Purpose
+## Activation
+## Procedure
+## Output Contract
+## Halt Conditions
+## Workflow Packet
+## Composition
+## References                                 # optional
 ```
 
-## Packaging rule
+Anchors must appear in this exact order. Anchors inside fenced code blocks are content, not structure.
 
-Each individual skill should be packaged as a valid uploadable skill archive. When preparing a skill for upload, the final archive should be named `skill.zip`.
+## What the validator catches
 
-For repository organization, archives may use descriptive filenames such as:
+Three layers run in sequence; every layer reports independently so a single broken file produces a complete error inventory rather than failing fast:
 
-```text
-005-implementation-handoff-desk-skill.zip
+Schema layer (Ajv against `skill.schema.json`) — required fields, enum values, regex patterns (kebab-case names, semver versions), additional-property strictness, format checks on URIs.
+
+Body layer (custom) — required anchor presence, anchor order against `REQUIRED_ANCHORS`, unknown anchors surfaced as warnings.
+
+Semantic layer (custom) — semver string validity (stricter than the `semver` library, rejects the `v` prefix to agree with the schema regex), semver range validity in composition references, capability consistency (workflow_packet=required is inconsistent with file_io=none), role invariants (orchestrator must compose with at least one leaf).
+
+Cross-reference validation (composes_from and hands_off_to resolvability against the registry) is deferred to Phase 1's graph resolver, which has access to multi-Desk context.
+
+## Decision log entries from Phase 0
+
+These decisions were made during the build, beyond what the architecture doc specified:
+
+The license enum is closed (Apache-2.0, MIT, BSD-3-Clause, CC-BY-4.0, Proprietary). Open-license-string would allow typos and license-policy violations to slip through; closed enum forces an explicit decision.
+
+The semver regex is strict — no `v` prefix accepted. The `semver` npm library accepts `v1.0.0` and silently strips it. The validator overrides this to match the schema's pattern, so the two layers agree.
+
+The code-fence parser treats unclosed fences conservatively — content from an unclosed fence to end-of-body is treated as fenced. This is the safe default for malformed input; the alternative (lookahead for explicit closing) would accept malformed templates as structure.
+
+Unknown body anchors are warnings, not errors. Some Desks may want additional sections (a `## Examples` anchor, for instance). The validator flags them so the architect knows, but does not block compilation. Target adapters may drop them.
+
+Schema validation uses `strict: true, allErrors: true`. Strict mode catches typos in schema authoring; allErrors gives the architect a complete inventory of failures per file rather than fail-fast behavior that hides downstream problems.
+
+## What Phase 1 picks up
+
+The graph resolver — walking `composes_from` and `hands_off_to` references across a registry of parsed skills, detecting cycles, version-resolving against `desk.yaml` `depends_on` declarations, and producing a topologically-ordered execution graph.
+
+The Claude target adapter — identity-mapping a parsed skill back to a Claude SKILL.md ZIP (frontmatter + body + references/ + scripts/). The byte-for-byte round-trip against the existing v0.1.1 SDLC artifacts is the Phase 1 acceptance test.
+
+The desk manifest parser — `parseDeskFile` reading `desks/<desk>/desk.yaml`, validating against `desk.schema.json`, and resolving leaf skill references against the parsed skills in the same Desk.
+
+The conversion of the remaining 18 SDLC leaves to IR format, each round-trip-validated.
+
+## Repository topology after Phase 0
+
+```
+skill-lab/
+├── ir-schema/v1.0/
+│   ├── skill.schema.json
+│   ├── desk.schema.json
+│   ├── policy.schema.json
+│   └── workflow-packet.schema.json
+├── compiler/core/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── vitest.config.ts
+│   ├── src/
+│   │   ├── types.ts
+│   │   ├── parser.ts
+│   │   ├── validator.ts
+│   │   ├── index.ts
+│   │   └── cli.ts
+│   ├── tests/
+│   │   ├── parser.test.ts
+│   │   ├── parser-fence.test.ts
+│   │   └── validator.test.ts
+│   └── fixtures/
+│       └── bad-skill.md
+├── desks/sdlc-command-desk/skills/verification-desk/
+│   ├── SKILL.md
+│   ├── references/        (empty, populated in Phase 1)
+│   └── evals/             (empty, populated in Phase 3)
+└── docs/skill-ir/         (reserved for Phase 1 IR spec doc)
 ```
 
-The uploaded archive itself should still contain one valid skill directory with a valid `SKILL.md`.
+## Implementation-agent handoff
 
-## Release artifacts
+The agent does not need to author any code. Its job is to:
 
-The `v0.1.1` workflow-linked release artifact set contains all 19 packaged skill archives plus `CHECKSUMS.txt`.
+1. `git init` the target repository.
+2. Create the directory structure shown above.
+3. Drop the files in this delivery into the corresponding locations.
+4. `cd compiler/core && npm install`.
+5. `npx vitest run` — confirm 40/40 pass.
+6. `npx tsc --noEmit` — confirm clean type-check.
+7. `npx tsx src/cli.ts ../../desks/sdlc-command-desk/skills/verification-desk/SKILL.md` — confirm `OK verification-desk@1.0.0`.
+8. `npx tsx src/cli.ts fixtures/bad-skill.md` — confirm exit code 1 with 12 enumerated errors.
+9. Commit as `Phase 0: IR schemas, parser, validator, verification-desk converted`.
 
-Use `CHECKSUMS.txt` to verify downloads before installing. PowerShell example:
-
-```powershell
-Get-FileHash .\000-sdlc-command-desk-skill.zip -Algorithm SHA256
-```
-
-To publish the GitHub Release from a local artifact folder, use the ASCII-safe helper script:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\publish-v0.1.1.ps1
-```
-
-## Repository layout
-
-```text
-docs/
-  Research notes, lifecycle maps, sprint prompts, operating standards, and install/use docs.
-
-releases/
-  Release notes, release policy, and release publishing helpers.
-
-skills/
-  Packaged skill archives and/or unpacked skill source directories.
-```
-
-## Current status
-
-The workflow-linked SDLC suite source is now published under `skills/`.
-
-Completed repository support:
-
-- Manifest for the workflow-linked suite.
-- Workflow-linked suite source imported for all 19 desks under `skills/`.
-- Shared `suite-workflow-contract.md` present in every desk.
-- `sdlc-command-desk` includes orchestrator contracts and workflow runner script.
-- Complete `CHECKSUMS.txt` for the `v0.1.1` release artifact set.
-- Install/use instructions for ChatGPT users.
-- Release artifact guidance.
-- `v0.1.1` release notes.
-- ASCII-safe `v0.1.1` publish script.
-
-Remaining work:
-
-- Publish the GitHub Release `v0.1.1` and attach all stable release assets.
+If any of those steps fails, halt and report — do not attempt to fix.

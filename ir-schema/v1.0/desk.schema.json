@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skill-lab.dev/ir-schema/v1.0/desk.schema.json",
+  "title": "Skill-Lab Desk Manifest",
+  "description": "Schema for desks/<desk>/desk.yaml. Defines a Desk's identity, capability tags, orchestrator skill, leaves, cross-Desk dependencies, and policy reference.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "display_name",
+    "description",
+    "version",
+    "capability_tags",
+    "orchestrator",
+    "leaves"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "name": {
+      "description": "Desk name in kebab-case. Globally unique within the registry.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 64
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 128
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 1024
+    },
+    "version": {
+      "description": "Desk version in semver form.",
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
+    },
+    "namespace": {
+      "description": "Registry namespace (e.g., '@MadewellRD'). Defaults to '@local' for unpublished Desks.",
+      "type": "string",
+      "pattern": "^@[a-zA-Z0-9-]+$",
+      "default": "@local"
+    },
+    "capability_tags": {
+      "description": "Tags used by the top-of-house router to match user intent to Desks.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "minItems": 1,
+      "maxItems": 32,
+      "uniqueItems": true
+    },
+    "orchestrator": {
+      "description": "Name of the skill within this Desk that serves as its command-desk router.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+    },
+    "leaves": {
+      "description": "Names of leaf skills in this Desk. Must include the orchestrator.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "workflow_packet_schema": {
+      "description": "Path to the workflow packet schema this Desk uses. Resolved relative to the Desk root.",
+      "type": "string",
+      "default": "workflow-packet.schema.json"
+    },
+    "policy": {
+      "description": "Path to the Desk-level policy.yaml file. Resolved relative to the Desk root.",
+      "type": "string",
+      "default": "policy.yaml"
+    },
+    "depends_on": {
+      "description": "Other Desks this Desk depends on for cross-Desk composition. Version constraints follow semver range syntax.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ref"],
+        "properties": {
+          "ref": {
+            "type": "string",
+            "pattern": "^@[a-zA-Z0-9-]+/[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+          },
+          "version": {
+            "type": "string",
+            "default": "*"
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 256
+          }
+        }
+      }
+    },
+    "supported_targets": {
+      "description": "Targets this Desk explicitly supports. Compiler will refuse to emit unlisted targets. If omitted, all targets supported by every leaf's capability_requirements are eligible.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "claude",
+          "openai-custom-gpt",
+          "openai-apps-sdk",
+          "gemini-gem",
+          "copilot-extension",
+          "anthropic-agent-sdk",
+          "langchain",
+          "autogen"
+        ]
+      },
+      "uniqueItems": true
+    }
+  }
+}
