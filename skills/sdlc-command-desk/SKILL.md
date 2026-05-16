@@ -109,3 +109,11 @@ Do not ask coding agents to rediscover lifecycle decisions that upstream stages 
 - `scripts/route_sdlc_request.py`: deterministic first-pass route helper.
 - `scripts/run_sdlc_workflow.py`: deterministic workflow sequence and packet scaffold helper.
 - `scripts/write_command_markdown.py`: Markdown wrapper helper for reusable artifacts.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+
+## Suite workflow mode
+Use suite workflow routing with continuity packet updates.
+

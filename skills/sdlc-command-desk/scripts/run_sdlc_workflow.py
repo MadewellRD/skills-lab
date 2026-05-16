@@ -149,3 +149,5 @@ def main(argv: Iterable[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+# continuity packet keys (v0.2.0-rc.1)\n# key: repo_context\n# key: evidence_inventory\n# key: allowed_scope\n# key: forbidden_scope\n# key: validation_commands\n# key: codex_handoff\n

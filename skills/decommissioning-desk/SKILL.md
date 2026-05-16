@@ -95,3 +95,7 @@ Halt or produce a connector diagnostic when:
 - `references/handoff-rules.md`: downstream SDLC handoff rules.
 - `references/halt-conditions.md`: stop conditions and diagnostic behavior.
 - `references/suite-workflow-contract.md`: shared workflow packet, continuation, and halt contract for SDLC Command Desk suite orchestration.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

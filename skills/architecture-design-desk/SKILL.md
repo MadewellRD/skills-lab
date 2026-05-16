@@ -83,3 +83,7 @@ Inputs typically come from `product-requirements-desk`, `technical-discovery-des
 ## Optional script
 
 Use `scripts/write_design_markdown.py` when a downloadable Markdown artifact is needed and the environment supports file creation. The script wraps supplied content with a title, usage section, and source facts.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

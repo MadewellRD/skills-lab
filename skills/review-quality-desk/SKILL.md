@@ -90,3 +90,7 @@ Follow `references/halt-conditions.md`. Halt or mark the review as `insufficient
 - Consume issue plans from `issue-planning-desk` when checking scope and sequencing.
 - Hand off follow-up implementation work to `implementation-handoff-desk`.
 - Hand off formal traceability and release evidence to `verification-desk` or `docs-traceability-desk`.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

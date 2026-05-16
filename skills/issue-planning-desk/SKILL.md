@@ -96,3 +96,7 @@ Halt or produce a connector diagnostic when:
 - Inputs commonly come from `product-requirements-desk`, `technical-discovery-desk`, and `architecture-design-desk`.
 - Outputs commonly feed `implementation-handoff-desk`, `test-strategy-desk`, `verification-desk`, and `docs-traceability-desk`.
 - When implementation prompts are requested, do not duplicate `implementation-handoff-desk`; prepare issue-backed handoff notes and continue into `implementation-handoff-desk` for the final coding-agent prompt when implementation-readiness facts are present; otherwise emit `Workflow Halt`.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
