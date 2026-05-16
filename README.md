@@ -259,7 +259,7 @@ Potential suite families include:
 
 - **New user setup:** [Install and use](docs/INSTALL.md), [Manifest](MANIFEST.md)
 - **Release work:** [Release guide](releases/README.md), [Checksums](CHECKSUMS.txt), [v0.2.0-rc.1](releases/v0.2.0-rc.1.md), [v0.1.1](releases/v0.1.1.md)
-- **Current suite structure:** [Manifest](MANIFEST.md), `skills/sdlc-command-desk/`, `skills/*-desk/`
+- **Current suite structure:** [Manifest](MANIFEST.md), `skills/<Command Desk Suite>/`, `skills/SDLC Command Desk/*.md`, `dist/skills/<packaged-skill-dir>/`
 - **Repository policy:** [License](LICENSE), [Release publishing guide](releases/README.md)
 
 ## From source
@@ -309,7 +309,10 @@ releases/
   Release notes, release policy, and release publishing helpers.
 
 skills/
-  Packaged skill archives and unpacked skill source directories.
+  Command Desk suite authoring folders and source Markdown files.
+
+dist/skills/
+  Packaged ChatGPT-compatible skill directories (distribution artifacts).
 
 tools/
   Validation and release-support tooling.
