@@ -347,3 +347,7 @@ Next release work:
 Skills-Lab is built for builders who want AI agents to move faster without losing source truth, reviewability, or operational control.
 
 Issues and pull requests should stay evidence-first: include repo state, affected files, validation commands, source facts, and any known halt conditions.
+
+## Skills Layout
+
+See [docs/skills-repo-structure.md](docs/skills-repo-structure.md) for the canonical suite-based `.md` authoring layout.
