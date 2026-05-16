@@ -1,41 +1,70 @@
-# SDLC Command Desk — Agentic SDLC Skill Suite
+# Skills-Lab
 
-Think freely. Ship safely. Spend coding-agent tokens on code, tests, and validation.
+![Skills-Lab hero](assets/skills-lab-hero.svg)
 
-[![Release candidate](https://img.shields.io/badge/release-v0.2.0--rc.1-orange.svg)](releases/v0.2.0-rc.1.md)
+Think in chat. Execute in the CLI. Ship like you already know the SDLC.
+
+[![Release candidate](https://img.shields.io/badge/SDLC%20Command%20Desk-v0.2.0--rc.1-orange.svg)](releases/v0.2.0-rc.1.md)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-SDLC Command Desk is a public skills lab for building, packaging, and sharing Agentic SDLC skills. It gives vibe coders, solo builders, and AI-native engineering teams a lifecycle control plane for taking an idea through requirements, discovery, architecture, implementation handoff, review, testing, release, deployment, operations, maintenance, and decommissioning.
+Skills-Lab is a public lab for building and sharing Desk Suites: ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk through professional software delivery without needing to already know the process.
 
-The product is not process for process's sake. The product is better handoffs: source-grounded, token-efficient artifacts that let coding agents spend fewer tokens rediscovering context and more tokens writing, testing, and validating code.
+The goal is direct: give builders with little or no software-development background a guided path through requirements, discovery, architecture, planning, implementation preparation, testing, verification, release, and operations while still producing the kind of shippable output expected from an experienced engineering team.
 
-New here? Start with [Install and use](docs/INSTALL.md), then open the [manifest](MANIFEST.md) to see the full suite.
+Skills-Lab is also designed to save coding-agent tokens. The Desk Suites do the heavy reasoning in the chat interface. They produce source-grounded plans, artifacts, code, tests, files, validation steps, and small execution handoffs. Codex, Claude Code, or another CLI agent should receive constrained work with as little ambiguity as possible, reason only about localized issues or errors, and spend its token budget executing instead of rediscovering the SDLC.
+
+The first suite in this repository is **SDLC Command Desk**. It is not the repository name. It is one Desk Suite inside Skills-Lab.
 
 ## Quick links
 
-- [Install and use](docs/INSTALL.md) — how to install the suite in ChatGPT and when to use each desk.
-- [Manifest](MANIFEST.md) — ordered list of every skill in the suite.
+- [Install and use](docs/INSTALL.md) — how to install the current Desk Suite in ChatGPT and when to use each desk.
+- [Manifest](MANIFEST.md) — ordered list of the current SDLC Command Desk suite.
 - [Checksums](CHECKSUMS.txt) — SHA256 hashes for packaged release artifacts.
-- [v0.2.0-rc.1 release note](releases/v0.2.0-rc.1.md) — continuity-kernel release candidate.
+- [v0.2.0-rc.1 release note](releases/v0.2.0-rc.1.md) — continuity-kernel release candidate for SDLC Command Desk.
 - [v0.1.1 release notes](releases/v0.1.1.md) — prior workflow-linked release notes.
 - [Release publishing guide](releases/README.md) — artifact policy, checksum policy, and release process.
 
-## Install
+## What Skills-Lab is for
 
-Recommended path:
+Skills-Lab exists to make high-quality software delivery accessible without requiring the user to already understand engineering process, system design, test strategy, release discipline, or operational readiness.
 
-1. Download the packaged skill archives from the target release artifact set.
-2. Install `000-sdlc-command-desk-skill.zip` first.
-3. Install the lifecycle desk skills you want to use.
-4. Enable GitHub access for repository-grounded work.
-5. Enable docs or communication connectors when requirements, roadmap decisions, architecture notes, incidents, or release context live outside GitHub.
+A Desk Suite should help a user move from idea to production by generating the artifacts that experienced teams normally create along the way:
 
-See [docs/INSTALL.md](docs/INSTALL.md) for the full install and usage guide.
+- product requirements
+- technical discovery notes
+- architecture and design plans
+- issue breakdowns
+- code-oriented implementation handoffs
+- test strategies
+- verification evidence
+- security and threat notes
+- release and deployment plans
+- incident, maintenance, retrospective, and decommissioning artifacts
 
-Recommended install order:
+The intended workflow is:
+
+```text
+ChatGPT Desk Suite
+  -> reason through the SDLC
+  -> produce source-grounded artifacts and code-ready files
+  -> hand off small constrained work to Codex / Claude Code / CLI agent
+  -> CLI executes with minimal reasoning
+  -> results return to chat for validation, next-step planning, or another handoff
+```
+
+## Current Desk Suite: SDLC Command Desk
+
+SDLC Command Desk is the first Desk Suite published in Skills-Lab. It provides an end-to-end SDLC workflow made of one orchestrator and 18 lifecycle desks.
+
+Install the orchestrator first:
 
 ```text
 000-sdlc-command-desk-skill.zip
+```
+
+Then install the lifecycle desks you want to use:
+
+```text
 001-product-requirements-desk-skill.zip
 002-technical-discovery-desk-skill.zip
 003-architecture-design-desk-skill.zip
@@ -56,12 +85,14 @@ Recommended install order:
 018-decommissioning-desk-skill.zip
 ```
 
+See [docs/INSTALL.md](docs/INSTALL.md) for the full install and usage guide.
+
 ## Quick start
 
-Start with the orchestrator when the lifecycle stage is unclear:
+Start with the suite orchestrator when you do not know which lifecycle stage applies:
 
 ```text
-Use sdlc-command-desk to classify this work and route me through the right lifecycle stages: I want to add paid team workspaces to my app.
+Use sdlc-command-desk to classify this work and walk me through the SDLC until we reach the next required halt or CLI handoff: I want to build a paid team workspace feature.
 ```
 
 Use a specific desk when the stage is already known:
@@ -78,18 +109,19 @@ Use technical-discovery-desk to inspect this repository and produce a feasibilit
 Use implementation-handoff-desk to turn this approved issue plan into a low-token Codex handoff prompt.
 ```
 
-## Highlights
+## Design principles
 
-- **Lifecycle control plane** — `sdlc-command-desk` routes and orchestrates work across the software delivery lifecycle.
-- **Workflow packets** — stage outputs preserve source facts, open questions, acceptance gates, and halt conditions so downstream desks do not restart from scratch.
-- **Continuity kernel** — `v0.2.0-rc.1` adds continuity controls across all 19 desks while preserving `v0.1.1` as the prior workflow-linked release candidate.
-- **Connector-grounded artifacts** — GitHub, docs, and communication sources are used as evidence before operational artifacts are produced.
-- **Low-token coding-agent handoffs** — implementation prompts are compressed around objective, scope, files, validation, commit plan, PR body, and halt rules.
-- **Safety gates over guesswork** — missing or conflicting source facts produce diagnostics or workflow halts instead of invented repo state.
+- **Zero-knowledge SDLC guidance** — users should not need to know what a PRD, ADR, RTM, release gate, rollback plan, or CI triage memo is before starting.
+- **Chat does the reasoning** — Desk Suites run planning, analysis, decomposition, source review, and quality-gate reasoning in the chat interface.
+- **CLI does the execution** — Codex, Claude Code, or another CLI agent should receive small, explicit tasks and files instead of broad, ambiguous product intent.
+- **Nearly complete code generation** — each suite should aim to provide as much implementation-ready code, tests, documentation, and validation structure as possible before CLI handoff.
+- **Token conservation** — every desk should reduce rework and repeated reasoning for coding agents.
+- **Source grounding** — repository state, issues, PRs, CI, docs, and decisions should be cited or named when they drive an artifact.
+- **Halt instead of hallucinate** — missing repo facts, unknown branch state, conflicting docs, absent tests, or unverified requirements should produce a halt or diagnostic rather than invented certainty.
 
 ## What this repository contains
 
-This repository contains source-ready and packaged skills for an AI-native software development lifecycle.
+This repository currently contains source-ready and packaged skills for the SDLC Command Desk suite.
 
 The top-level orchestrator is:
 
@@ -118,9 +150,9 @@ The lifecycle desks are:
 | 017 | `retrospective-desk` | retrospectives, cycle metrics, process improvements, and follow-up action plans |
 | 018 | `decommissioning-desk` | feature/API/system retirement, cutover planning, data retention, communications, archive rules, and rollback-safe shutdown |
 
-## Operating model
+## SDLC Command Desk operating model
 
-The suite follows a staged SDLC model:
+The current suite follows this staged workflow:
 
 ```text
 idea
@@ -175,9 +207,9 @@ If required source facts are missing or conflicting, the correct behavior is to 
 
 ## Token-efficiency model
 
-The SDLC skills should reduce ambiguity before work reaches a coding agent.
+The Desk Suites should reduce ambiguity before work reaches a coding agent.
 
-A strong implementation handoff includes:
+A strong CLI handoff includes:
 
 - exact objective
 - exact scope
@@ -188,6 +220,8 @@ A strong implementation handoff includes:
 - exact halt conditions
 - exact PR title and body requirements
 - exact final stop line when handing work to another agent
+
+The better the chat-side desk output is, the less Codex or Claude Code has to infer. The target is constrained execution, not open-ended rediscovery.
 
 ## Operator quick refs
 
@@ -209,11 +243,23 @@ Use review-quality-desk to review this pull request for scope creep, missing tes
 Use release-operations-desk to prepare release readiness notes, rollback plan, tag plan, and post-release verification gates.
 ```
 
+## Future Desk Suites
+
+Skills-Lab is intended to grow beyond SDLC Command Desk. Future suites can follow the same model: chat-side reasoning, source-grounded artifacts, small CLI-ready handoffs, and strong quality gates.
+
+Potential suite families include:
+
+- DevSecOps Command Desk
+- AI Engineering Command Desk
+- Product Command Desk
+- Data Command Desk
+- additional specialized Desk Suites for domain-specific build, release, and operations workflows
+
 ## Docs by goal
 
 - **New user setup:** [Install and use](docs/INSTALL.md), [Manifest](MANIFEST.md)
 - **Release work:** [Release guide](releases/README.md), [Checksums](CHECKSUMS.txt), [v0.2.0-rc.1](releases/v0.2.0-rc.1.md), [v0.1.1](releases/v0.1.1.md)
-- **Suite structure:** [Manifest](MANIFEST.md), `skills/sdlc-command-desk/`, `skills/*-desk/`
+- **Current suite structure:** [Manifest](MANIFEST.md), `skills/sdlc-command-desk/`, `skills/*-desk/`
 - **Repository policy:** [License](LICENSE), [Release publishing guide](releases/README.md)
 
 ## From source
@@ -253,6 +299,9 @@ Get-FileHash .\000-sdlc-command-desk-skill.zip -Algorithm SHA256
 ## Repository layout
 
 ```text
+assets/
+  Skills-Lab visual assets for README and release materials.
+
 docs/
   Research notes, lifecycle maps, operating standards, and install/use docs.
 
@@ -268,12 +317,17 @@ tools/
 
 ## Current status
 
-Current release candidate: `v0.2.0-rc.1` continuity-kernel.
+Repository name: Skills-Lab.
+
+Current published suite: SDLC Command Desk.
+
+Current SDLC Command Desk release candidate: `v0.2.0-rc.1` continuity-kernel.
 
 Completed repository support:
 
-- Manifest for the workflow-linked suite.
-- Workflow-linked suite source imported for all 19 desks under `skills/`.
+- Skills-Lab repo framing and visual identity.
+- Manifest for the workflow-linked SDLC Command Desk suite.
+- Workflow-linked suite source imported for all 19 SDLC desks under `skills/`.
 - Shared workflow contract present across the desk suite.
 - Continuity-kernel references added across all 19 desks.
 - `sdlc-command-desk` includes orchestrator contracts and workflow runner support.
@@ -284,12 +338,12 @@ Completed repository support:
 
 Next release work:
 
-- Finalize the GitHub Release asset set for the active release candidate.
+- Finalize the GitHub Release asset set for the active SDLC Command Desk release candidate.
 - Confirm manifest, install guide, release notes, and checksums all reference the same artifact set.
 - Promote the release candidate after validation is green.
 
 ## Community
 
-This project is built for builders who want AI agents to move faster without losing source truth, reviewability, or operational control.
+Skills-Lab is built for builders who want AI agents to move faster without losing source truth, reviewability, or operational control.
 
 Issues and pull requests should stay evidence-first: include repo state, affected files, validation commands, source facts, and any known halt conditions.
