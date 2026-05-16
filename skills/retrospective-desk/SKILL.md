@@ -100,3 +100,7 @@ Do not invent owners, due dates, metrics, incident impact, PR status, CI state, 
 ## Optional helper
 
 Use `scripts/write_retrospective_markdown.py` when a local file artifact is needed from provided text. The helper wraps retrospective content in the standard downloadable Markdown structure.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

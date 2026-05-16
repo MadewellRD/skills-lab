@@ -134,3 +134,7 @@ When connector facts are available, carry them into the markdown prompt or compa
 - `scripts/render_handoff_prompt.py`: optional helper for rendering a full implementation handoff prompt from a JSON spec.
 - `scripts/write_prompt_markdown.py`: helper for wrapping any prompt in the required downloadable markdown file format.
 - `references/suite-workflow-contract.md`: shared workflow packet, continuation, and halt contract for SDLC Command Desk suite orchestration.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

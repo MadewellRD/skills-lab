@@ -98,3 +98,7 @@ Do not mark work as verified unless there is direct evidence. Passing CI alone i
 ## Halt behavior
 
 Use `references/halt-conditions.md`. Halt or produce a connector diagnostic when required sources are missing, requirement identity is ambiguous, evidence conflicts, CI status cannot be verified, or release readiness would require unsupported assumptions.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

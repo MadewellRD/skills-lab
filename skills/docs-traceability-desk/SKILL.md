@@ -74,3 +74,7 @@ Load only the reference needed for the current artifact:
 ## Quality bar
 
 Every traceability artifact must separate facts from inference, cite or name source artifacts, mark unsupported claims clearly, and preserve conflicts rather than smoothing them over. When a doc says something that the repo cannot prove, label it as unsupported or unverified and recommend the next evidence-gathering step.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

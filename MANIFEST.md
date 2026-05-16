@@ -69,3 +69,6 @@ Future release support files:
 - `releases/v0.1.1.md`
 - `CHECKSUMS.txt`
 - `docs/INSTALL.md`
+
+Suite version: v0.2.0-rc.1 continuity-kernel
+

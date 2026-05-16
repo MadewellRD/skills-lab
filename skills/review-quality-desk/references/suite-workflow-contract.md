@@ -71,3 +71,9 @@ Resume prompt:
 ## Child-desk behavior
 
 Each child desk must produce its normal artifact plus a compact workflow packet. If the next stage is obvious and source facts are sufficient, continue into the next stage contract rather than stopping at a recommendation. If the next stage requires a different specialist skill that is installed, ChatGPT may invoke it. If it is not available, use the stage contract summarized by `sdlc-command-desk`.
+
+## Continuity Packet
+
+All desks must preserve and update `continuity_packet` as defined in `references/continuity-kernel.md`.
+
+Do not stop with a bare next-desk instruction when enough facts exist to continue. Evaluate readiness gates before continuation and classify interruptions using `references/halt-taxonomy.md`. Resume prompts must include the updated continuity packet.

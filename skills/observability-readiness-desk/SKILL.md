@@ -79,3 +79,7 @@ Halt or produce a connector diagnostic when:
 - Use `incident-response-desk` for active incidents, RCA, severity handling, and remediation tracking.
 - Use `release-operations-desk` for release runbooks and post-release verification packaging.
 - Use `implementation-handoff-desk` when an observability gap needs a code/config PR prompt.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

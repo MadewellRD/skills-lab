@@ -106,3 +106,7 @@ Halt and report instead of drafting a confident plan when:
 - `references/output-contract.md`: artifact wrappers and deliverable expectations.
 - `references/handoff-rules.md`: downstream SDLC skill handoff rules.
 - `references/halt-conditions.md`: mandatory stop points.
+
+## Continuity Kernel Adoption
+
+Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
