@@ -12,20 +12,30 @@ Packaged skill artifact layout:
 
 ```text
 dist/skills/
-  <packaged skill directory>/
-    skill.md or SKILL.md
-    references/
-    scripts/
-    agents/
-    assets/
+  <suite-slug>/
+    <skill-slug>/
+      skill.md or SKILL.md
+      references/
+      scripts/
+      agents/
+      assets/
+
+dist/manifests/
+  <generated suite manifests/checksums>
+
+dist/packages/
+  <generated local package archives>
 ```
 
 Policy:
 
-- `skills/` is the human-readable suite authoring layer.
+- `skills/<Suite Name>/` contains human-authored suite source Markdown.
 - Root `skills/<individual-desk-name>/` directories are not allowed.
 - SDLC Command Desk remains the canonical existing software-delivery lifecycle suite.
 - New domain suites should follow the same workflow-linked architecture pattern.
-- Packaged ChatGPT-compatible skill directories live under `dist/skills/` when committed.
+- `dist/skills/<suite-slug>/<skill-slug>/` contains generated or packaged ChatGPT-compatible skill directories.
+- `dist/manifests/` is reserved for generated suite manifests/checksums.
+- `dist/packages/` is reserved for generated local package archives.
+- `releases/` contains immutable versioned release artifacts.
 - Existing desk source Markdown filenames are preserved as `.md`.
 - `.desk.md` is not required and must not be imposed.

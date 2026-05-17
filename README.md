@@ -259,7 +259,7 @@ Potential suite families include:
 
 - **New user setup:** [Install and use](docs/INSTALL.md), [Manifest](MANIFEST.md)
 - **Release work:** [Release guide](releases/README.md), [Checksums](CHECKSUMS.txt), [v0.2.0-rc.1](releases/v0.2.0-rc.1.md), [v0.1.1](releases/v0.1.1.md)
-- **Current suite structure:** [Manifest](MANIFEST.md), `skills/<Command Desk Suite>/`, `skills/SDLC Command Desk/*.md`, `dist/skills/<packaged-skill-dir>/`
+- **Current suite structure:** [Manifest](MANIFEST.md), `skills/<Command Desk Suite>/`, `skills/SDLC Command Desk/*.md`, `dist/skills/<suite-slug>/<skill-slug>/`
 - **Repository policy:** [License](LICENSE), [Release publishing guide](releases/README.md)
 
 ## From source
@@ -306,13 +306,20 @@ docs/
   Research notes, lifecycle maps, operating standards, and install/use docs.
 
 releases/
-  Release notes, release policy, and release publishing helpers.
+  Immutable versioned release artifacts, release notes, and release publishing helpers.
 
 skills/
-  Command Desk suite authoring folders and source Markdown files.
+  Human-authored Command Desk suite authoring folders and source Markdown files.
 
 dist/skills/
-  Packaged ChatGPT-compatible skill directories (distribution artifacts).
+  Suite-scoped packaged ChatGPT-compatible skill directories.
+  Layout: dist/skills/<suite-slug>/<skill-slug>/
+
+dist/manifests/
+  Reserved for generated suite manifests and checksums.
+
+dist/packages/
+  Reserved for generated local package archives.
 
 tools/
   Validation and release-support tooling.
