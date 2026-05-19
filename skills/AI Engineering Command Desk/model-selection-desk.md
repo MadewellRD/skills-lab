@@ -85,3 +85,15 @@ Choose and justify model candidates for an AI capability. Compare task fit, qual
 - State uncertainty explicitly and halt when required facts are missing.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+
+## Low-token execution policy
+
+- Produce a compact model decision packet that includes task class, candidates, exclusion reasons, routing rules, fallback model, eval requirement, and unresolved assumptions.
+- Do not ask Codex or Claude Code to infer provider constraints, cost class, latency target, safety tier, or acceptance thresholds; require those facts or return `Workflow Halt`.
+- When implementation is required, hand off exact model identifiers, configuration names, allowed provider surfaces, environment constraints, validation commands, and rollback expectations.
+
+## Continuity Kernel Adoption
+
+- Read and update `references/suite-workflow-contract.md` before advancing to another AI Engineering desk.
+- Set `ready_to_continue: true` only when the selected model path, fallback policy, required evals, and remaining risks are explicit enough for the next desk.
+- Preserve `source_facts`, `decisions`, `assumptions`, `open_questions`, `validation_gates`, and `downstream_handoff_targets` in the workflow packet.
