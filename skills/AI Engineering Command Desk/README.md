@@ -1,8 +1,10 @@
 # AI Engineering Command Desk
 
-Status: source-only suite authoring pass.
+Status: source-only suite authoring pass; suite-wide hardening baseline applied.
 
 The AI Engineering Command Desk suite defines workflow-linked desk source specs for designing, evaluating, releasing, and operating AI systems. It covers model selection, prompt systems, tool schemas, agent architecture, retrieval and RAG, evals, datasets, fine-tuning, safety, red-team work, inference operations, observability, cost and latency optimization, release readiness, and AI incident response.
+
+This suite now follows the SDLC Command Desk operating grammar: every desk preserves a workflow packet, advances through stages when facts are sufficient, and returns `Workflow Halt` only when a required fact, connector, approval, or source conflict blocks safe continuation.
 
 ## Repository role
 
@@ -11,6 +13,7 @@ This folder is the human-authored source layer for AI Engineering Command Desk d
 ```text
 skills/AI Engineering Command Desk/
   *.md
+  references/*.md
 ```
 
 Packaged ChatGPT-compatible skills are generated later under:
@@ -42,6 +45,12 @@ Do not place generated package output in this folder.
 - `ai-release-readiness-desk.md` — go/no-go gate for evals, safety, ops, observability, rollback, docs, and support readiness.
 - `ai-incident-response-desk.md` — production AI incident triage, containment, rollback, evidence preservation, and follow-up.
 
+## Shared references
+
+- `references/suite-workflow-contract.md` — AI workflow packet, stage advancement, continuation, and halt contract.
+- `references/standards-source-map.md` — authoritative standards and industry references used to harden this suite.
+- `references/desk-hardening-matrix.md` — desk-by-desk hardening expectations and downstream handoff map.
+
 ## Workflow path
 
 Default AI Engineering flow:
@@ -71,10 +80,13 @@ Not every workflow needs every stage. The orchestrator should run the shortest s
 
 - Desk files are kebab-case and end in `.md`.
 - Each desk source file starts with `name` and `description` frontmatter.
-- Each desk defines role, evidence requirements, workflow, outputs, packet fields, halt conditions, handoffs, source hierarchy, and quality bar.
+- Each desk defines role, evidence requirements, workflow, outputs, packet fields, halt conditions, handoffs, source hierarchy, quality bar, low-token execution policy, and continuity behavior.
 - Source specs must preserve halt behavior instead of inventing missing facts.
 - Source specs should be useful for later packaging but must not contain generated package output.
+- Every desk should reduce downstream Codex/Claude Code reasoning by carrying exact scope, evidence, validation gates, stop conditions, and handoff targets.
 
 ## Relationship to SDLC Command Desk
 
 AI Engineering Command Desk follows the workflow-linked suite pattern proven by SDLC Command Desk, but it does not replace SDLC. SDLC remains the canonical software-delivery lifecycle suite. AI Engineering specializes in AI system design, evaluation, safety, operation, and incident workflows, and can hand off implementation-ready work to SDLC when software changes are required.
+
+The governing rule is: complete the current stage, preserve the workflow packet, continue when facts are sufficient, and halt only when a required fact, connector, approval, or source conflict blocks progress.
