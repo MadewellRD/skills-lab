@@ -1,0 +1,15 @@
+interface:
+  display_name: Prompt Systems Desk
+  short_description: Designs connector-grounded prompt systems, fixtures, validation gates, and low-token implementation handoffs.
+  default_prompt: Use $prompt-systems-desk to design or harden AI prompt systems with explicit instruction hierarchy, context assembly, tool/retrieval boundaries, eval fixtures, prompt injection controls, observability hooks, and workflow-packet handoffs.
+  icon: 🧩
+  primary_color: '#7c3aed'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
