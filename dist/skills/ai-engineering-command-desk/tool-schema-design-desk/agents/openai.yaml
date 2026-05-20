@@ -1,0 +1,15 @@
+interface:
+  display_name: Tool Schema Design Desk
+  short_description: Designs safe AI tool schemas, permission boundaries, validation gates, and low-token implementation handoffs.
+  default_prompt: Use $tool-schema-design-desk to design or harden AI tool, function, connector, or MCP resource contracts with explicit schemas, authorization, tenancy, destructive-action gates, idempotency, error semantics, observability hooks, and workflow-packet handoffs.
+  icon: 🛠️
+  primary_color: '#0891b2'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

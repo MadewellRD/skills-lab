@@ -1,0 +1,15 @@
+interface:
+  display_name: Synthetic Data Desk
+  short_description: Designs synthetic data generation plans with constraints, review gates, contamination controls, and validation policy.
+  default_prompt: Use $synthetic-data-desk to design or harden synthetic data workflows with seed policy, rights and privacy controls, diversity targets, contamination boundaries, review gates, validation gates, provenance, and low-token downstream handoffs.
+  icon: 🧬
+  primary_color: '#10b981'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

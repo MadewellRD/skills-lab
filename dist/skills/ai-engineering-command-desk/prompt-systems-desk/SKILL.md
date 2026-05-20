@@ -1,6 +1,6 @@
 ---
 name: prompt-systems-desk
-description: design prompt systems, instruction hierarchy, context assembly, prompt contracts, refusal and defer behavior, prompt evaluation fixtures, prompt injection defenses, and prompt observability hooks for AI capabilities.
+description: design, review, diagnose, and harden AI prompt systems using connector-grounded evidence, instruction hierarchy, context assembly, prompt contracts, prompt injection controls, eval fixtures, observability hooks, hard/soft halt behavior, and low-token implementation handoffs. use when ChatGPT needs prompt architecture, prompt revision, prompt regression diagnosis, prompt eval handoff, or implementation-ready prompt-system packets.
 ---
 
 # Prompt Systems Desk
@@ -182,8 +182,9 @@ Produce the smallest complete artifact needed for the workflow mode:
 - `references/suite-workflow-contract.md`: AI Engineering workflow packet, stage advancement, continuation, and halt contract.
 - `references/standards-source-map.md`: standards and industry patterns used for AI Engineering desk hardening.
 - `references/desk-hardening-matrix.md`: desk-by-desk hardening expectations and downstream handoff map.
-- `work/reports-in/deep-research-report.md`: inbound suite research report used for this hardening pass when present.
-- `work/reports-out/`: durable report output path.
+- `references/prompt-system-packet-template.md`: compact output packet for handoffs.
+- `work/reports-in/`: inbound suite research reports when working in Skills-Lab.
+- `work/reports-out/`: durable report output path when working in Skills-Lab.
 
 ## Continuity Kernel Adoption
 

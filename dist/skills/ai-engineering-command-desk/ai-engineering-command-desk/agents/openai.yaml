@@ -1,0 +1,15 @@
+interface:
+  display_name: AI Engineering Command Desk
+  short_description: Orchestrates AI engineering workflows across model, prompt, tool, agent, retrieval, eval, safety, ops, release, and incident desks.
+  default_prompt: Use $ai-engineering-command-desk to resolve the AI workflow mode, gather connector-grounded evidence, build or update the workflow packet, route to the right specialist desk, preserve halt conditions, and produce low-token downstream handoffs.
+  icon: 🧠
+  primary_color: '#2563eb'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,15 @@
+interface:
+  display_name: Dataset Curation Desk
+  short_description: Plans and reviews AI datasets for rights, labels, splits, privacy, drift, provenance, and validation gates.
+  default_prompt: Use $dataset-curation-desk to design or review AI datasets with explicit source ownership, rights, consent, privacy class, labeling schema, split policy, contamination controls, validation gates, and downstream handoff targets.
+  icon: 🗂️
+  primary_color: '#0f766e'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

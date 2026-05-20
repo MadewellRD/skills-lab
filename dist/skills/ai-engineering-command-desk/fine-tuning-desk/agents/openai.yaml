@@ -1,0 +1,15 @@
+interface:
+  display_name: Fine Tuning Desk
+  short_description: Assesses fine-tuning justification, data readiness, eval gates, rollout, rollback, and release risk.
+  default_prompt: Use $fine-tuning-desk to decide whether fine-tuning is justified, validate training-data readiness, define eval gates, and produce low-token rollout or implementation handoffs with explicit data, safety, and rollback controls.
+  icon: 🧬
+  primary_color: '#0f766e'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

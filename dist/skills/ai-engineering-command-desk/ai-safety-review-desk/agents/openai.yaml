@@ -1,0 +1,15 @@
+interface:
+  display_name: AI Safety Review Desk
+  short_description: Reviews AI capability risks, mitigations, approval gates, launch blockers, and residual risk.
+  default_prompt: Use $ai-safety-review-desk to review AI capability risk with connector-grounded evidence, mitigation mapping, blocked-launch criteria, approval gates, residual-risk notes, and low-token downstream handoffs.
+  icon: 🛡️
+  primary_color: '#dc2626'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

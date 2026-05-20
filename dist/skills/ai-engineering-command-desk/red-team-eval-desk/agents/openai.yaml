@@ -1,0 +1,15 @@
+interface:
+  display_name: Red Team Eval Desk
+  short_description: Plans and analyzes defensive adversarial AI tests and regression candidates.
+  default_prompt: Use $red-team-eval-desk to plan or analyze adversarial AI testing for jailbreaks, prompt injection, data exfiltration, unsafe autonomy, over-permissioned tools, and policy evasion with explicit scope boundaries, severity rubrics, mitigations, and downstream handoffs.
+  icon: 🛡️
+  primary_color: '#dc2626'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
