@@ -1,0 +1,3 @@
+interface:
+  display_name: "Web Security SecOps Desk"
+  short_description: "Web security, hardening, abuse, and secops controls for the Web Development Command Desk suite."

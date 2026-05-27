@@ -1,0 +1,3 @@
+interface:
+  display_name: "Web Performance Desk"
+  short_description: "Core web vitals, budgets, caching, and optimization for the Web Development Command Desk suite."

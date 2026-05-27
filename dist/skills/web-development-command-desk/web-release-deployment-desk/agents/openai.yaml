@@ -1,0 +1,3 @@
+interface:
+  display_name: "Web Release Deployment Desk"
+  short_description: "Ci/cd, preview, deployment, rollback, and launch validation for the Web Development Command Desk suite."

@@ -1,0 +1,150 @@
+{
+  "suite": "web-development-command-desk",
+  "version": "v0.3.0-web-development-command-desk",
+  "generated": "2026-05-26",
+  "source": "skills/Web Development Command Desk",
+  "packaged_root": "dist/skills/web-development-command-desk",
+  "archive_root": "dist/packages/web-development-command-desk",
+  "skills": [
+    {
+      "order": 0,
+      "skill": "web-development-command-desk",
+      "display_name": "Web Development Command Desk",
+      "role": "web workflow orchestrator",
+      "path": "dist/skills/web-development-command-desk/web-development-command-desk",
+      "archive": "dist/packages/web-development-command-desk/000-web-development-command-desk-skill.zip",
+      "bytes": 12450,
+      "sha256": "6d23f8f605153e26f7bd4cee2f367a815ad7b6d21b0978bcc79c17331f96474a"
+    },
+    {
+      "order": 1,
+      "skill": "site-product-requirements-desk",
+      "display_name": "Site Product Requirements Desk",
+      "role": "web product requirements and acceptance criteria",
+      "path": "dist/skills/web-development-command-desk/site-product-requirements-desk",
+      "archive": "dist/packages/web-development-command-desk/001-site-product-requirements-desk-skill.zip",
+      "bytes": 9345,
+      "sha256": "7f8707a44f8ef25a501e42632d848dc9ba678c1c217619f1688517c7e92c5d68"
+    },
+    {
+      "order": 2,
+      "skill": "information-architecture-desk",
+      "display_name": "Information Architecture Desk",
+      "role": "sitemap, navigation, route, and content structure",
+      "path": "dist/skills/web-development-command-desk/information-architecture-desk",
+      "archive": "dist/packages/web-development-command-desk/002-information-architecture-desk-skill.zip",
+      "bytes": 9227,
+      "sha256": "178c22a5e13dc9927ba3a557f6278d0f99f9de58f4adb832e77fc01828ff0589"
+    },
+    {
+      "order": 3,
+      "skill": "ux-ui-design-system-desk",
+      "display_name": "UX UI Design System Desk",
+      "role": "UX/UI systems, components, states, and responsive patterns",
+      "path": "dist/skills/web-development-command-desk/ux-ui-design-system-desk",
+      "archive": "dist/packages/web-development-command-desk/003-ux-ui-design-system-desk-skill.zip",
+      "bytes": 9136,
+      "sha256": "4868d1a21b3a6d5ecba239dab7656c8145bb7557c8a13de3539c6bc5321cf3f5"
+    },
+    {
+      "order": 4,
+      "skill": "frontend-engineering-desk",
+      "display_name": "Frontend Engineering Desk",
+      "role": "frontend architecture and implementation handoff",
+      "path": "dist/skills/web-development-command-desk/frontend-engineering-desk",
+      "archive": "dist/packages/web-development-command-desk/004-frontend-engineering-desk-skill.zip",
+      "bytes": 9158,
+      "sha256": "99ab2d2b120dbd7d4a7d762966412c247e45dc91eacdea2b804c68144cf0175f"
+    },
+    {
+      "order": 5,
+      "skill": "backend-integration-desk",
+      "display_name": "Backend Integration Desk",
+      "role": "API, auth, data, and service integration planning",
+      "path": "dist/skills/web-development-command-desk/backend-integration-desk",
+      "archive": "dist/packages/web-development-command-desk/005-backend-integration-desk-skill.zip",
+      "bytes": 9106,
+      "sha256": "9bfa3137b4103984196a78e31bc2be6fd063d9831991fc73645b0bda83d85199"
+    },
+    {
+      "order": 6,
+      "skill": "cms-content-operations-desk",
+      "display_name": "CMS Content Operations Desk",
+      "role": "CMS, editorial workflow, localization, and governance",
+      "path": "dist/skills/web-development-command-desk/cms-content-operations-desk",
+      "archive": "dist/packages/web-development-command-desk/006-cms-content-operations-desk-skill.zip",
+      "bytes": 9143,
+      "sha256": "d376de41e71cfaa0ae9e0702ce1846104256f756800ac5be60bb58eae5124c67"
+    },
+    {
+      "order": 7,
+      "skill": "web-security-secops-desk",
+      "display_name": "Web Security SecOps Desk",
+      "role": "web security, hardening, abuse, and SecOps controls",
+      "path": "dist/skills/web-development-command-desk/web-security-secops-desk",
+      "archive": "dist/packages/web-development-command-desk/007-web-security-secops-desk-skill.zip",
+      "bytes": 9105,
+      "sha256": "63830dc7c5c74082df67e8e4e309310f490179421ad95ca843260d4179fac1f1"
+    },
+    {
+      "order": 8,
+      "skill": "web-performance-desk",
+      "display_name": "Web Performance Desk",
+      "role": "Core Web Vitals, budgets, caching, and optimization",
+      "path": "dist/skills/web-development-command-desk/web-performance-desk",
+      "archive": "dist/packages/web-development-command-desk/008-web-performance-desk-skill.zip",
+      "bytes": 9011,
+      "sha256": "a68d76b4046cf9da4f625f7d1d00ddd31e5a02618677702a4749f1d50154306c"
+    },
+    {
+      "order": 9,
+      "skill": "accessibility-seo-desk",
+      "display_name": "Accessibility SEO Desk",
+      "role": "WCAG, semantic structure, metadata, crawlability, and SEO",
+      "path": "dist/skills/web-development-command-desk/accessibility-seo-desk",
+      "archive": "dist/packages/web-development-command-desk/009-accessibility-seo-desk-skill.zip",
+      "bytes": 9109,
+      "sha256": "aa5d9cc015631b4244f09757afab266ae156470357a750d2862310c82dfe015b"
+    },
+    {
+      "order": 10,
+      "skill": "web-testing-qa-desk",
+      "display_name": "Web Testing QA Desk",
+      "role": "browser, device, responsive, integration, and release QA",
+      "path": "dist/skills/web-development-command-desk/web-testing-qa-desk",
+      "archive": "dist/packages/web-development-command-desk/010-web-testing-qa-desk-skill.zip",
+      "bytes": 8943,
+      "sha256": "42d5caf5b1c76656917c778e7208e2c10c84292294eb76ed3e48155486a94adb"
+    },
+    {
+      "order": 11,
+      "skill": "web-observability-desk",
+      "display_name": "Web Observability Desk",
+      "role": "RUM, synthetic checks, dashboards, alerts, and incidents",
+      "path": "dist/skills/web-development-command-desk/web-observability-desk",
+      "archive": "dist/packages/web-development-command-desk/011-web-observability-desk-skill.zip",
+      "bytes": 9039,
+      "sha256": "b88109b81934937931091d4fd91e2d524a36a621bf564f68bbe22bbb3e59ad76"
+    },
+    {
+      "order": 12,
+      "skill": "web-release-deployment-desk",
+      "display_name": "Web Release Deployment Desk",
+      "role": "CI/CD, preview, deployment, rollback, and launch validation",
+      "path": "dist/skills/web-development-command-desk/web-release-deployment-desk",
+      "archive": "dist/packages/web-development-command-desk/012-web-release-deployment-desk-skill.zip",
+      "bytes": 9173,
+      "sha256": "a18abd5138ff9f21ec3e08c19f6f4b5f683838f8c6760239f22defa462964f12"
+    },
+    {
+      "order": 13,
+      "skill": "web-maintenance-growth-desk",
+      "display_name": "Web Maintenance Growth Desk",
+      "role": "post-launch iteration, experiments, content refresh, and lifecycle health",
+      "path": "dist/skills/web-development-command-desk/web-maintenance-growth-desk",
+      "archive": "dist/packages/web-development-command-desk/013-web-maintenance-growth-desk-skill.zip",
+      "bytes": 9247,
+      "sha256": "59c36523dfaafae628b27089ecc0b4b1b087f1c8cb4a571e69cb2a90eb5596d7"
+    }
+  ]
+}

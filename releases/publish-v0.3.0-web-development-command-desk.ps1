@@ -1,0 +1,5 @@
+$ErrorActionPreference = "Stop"
+$Version = "v0.3.0-web-development-command-desk"
+$PackageRoot = "dist/packages/web-development-command-desk"
+Write-Host "Publish $Version after verifying checksums in $PackageRoot/CHECKSUMS.txt"
+Write-Host "Attach all *-skill.zip files from $PackageRoot to the GitHub Release."
