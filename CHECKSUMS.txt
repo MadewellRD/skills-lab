@@ -17,3 +17,19 @@ d7dd86c0000bba1297d909527f2d4a83ce67b58d67018c8cd5d192aa0ebed621  010-security-t
 dc3ab594f990add8d07469394521a4fddf5df4fea11872414ef75110efc344f2  016-maintenance-refactor-desk-skill.zip
 4b29650a3671e8842e8d0cf5528e1eed268ab2a8a5cbb723581249b7c50195aa  017-retrospective-desk-skill.zip
 35375fbf9b64e410e9731263cc6cf48e3e81681a121d08d49e804e561df89fa3  018-decommissioning-desk-skill.zip
+
+# Web Development Command Desk package checksums
+6d23f8f605153e26f7bd4cee2f367a815ad7b6d21b0978bcc79c17331f96474a  dist/packages/web-development-command-desk/000-web-development-command-desk-skill.zip
+7f8707a44f8ef25a501e42632d848dc9ba678c1c217619f1688517c7e92c5d68  dist/packages/web-development-command-desk/001-site-product-requirements-desk-skill.zip
+178c22a5e13dc9927ba3a557f6278d0f99f9de58f4adb832e77fc01828ff0589  dist/packages/web-development-command-desk/002-information-architecture-desk-skill.zip
+4868d1a21b3a6d5ecba239dab7656c8145bb7557c8a13de3539c6bc5321cf3f5  dist/packages/web-development-command-desk/003-ux-ui-design-system-desk-skill.zip
+99ab2d2b120dbd7d4a7d762966412c247e45dc91eacdea2b804c68144cf0175f  dist/packages/web-development-command-desk/004-frontend-engineering-desk-skill.zip
+9bfa3137b4103984196a78e31bc2be6fd063d9831991fc73645b0bda83d85199  dist/packages/web-development-command-desk/005-backend-integration-desk-skill.zip
+d376de41e71cfaa0ae9e0702ce1846104256f756800ac5be60bb58eae5124c67  dist/packages/web-development-command-desk/006-cms-content-operations-desk-skill.zip
+63830dc7c5c74082df67e8e4e309310f490179421ad95ca843260d4179fac1f1  dist/packages/web-development-command-desk/007-web-security-secops-desk-skill.zip
+a68d76b4046cf9da4f625f7d1d00ddd31e5a02618677702a4749f1d50154306c  dist/packages/web-development-command-desk/008-web-performance-desk-skill.zip
+aa5d9cc015631b4244f09757afab266ae156470357a750d2862310c82dfe015b  dist/packages/web-development-command-desk/009-accessibility-seo-desk-skill.zip
+42d5caf5b1c76656917c778e7208e2c10c84292294eb76ed3e48155486a94adb  dist/packages/web-development-command-desk/010-web-testing-qa-desk-skill.zip
+b88109b81934937931091d4fd91e2d524a36a621bf564f68bbe22bbb3e59ad76  dist/packages/web-development-command-desk/011-web-observability-desk-skill.zip
+a18abd5138ff9f21ec3e08c19f6f4b5f683838f8c6760239f22defa462964f12  dist/packages/web-development-command-desk/012-web-release-deployment-desk-skill.zip
+59c36523dfaafae628b27089ecc0b4b1b087f1c8cb4a571e69cb2a90eb5596d7  dist/packages/web-development-command-desk/013-web-maintenance-growth-desk-skill.zip

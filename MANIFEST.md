@@ -72,3 +72,27 @@ Future release support files:
 
 Suite version: v0.2.0-rc.1 continuity-kernel
 
+## Web Development Command Desk packaged suite
+
+- Suite version: v0.3.0-web-development-command-desk
+- Source: `skills/Web Development Command Desk/`
+- Packaged skills: `dist/skills/web-development-command-desk/`
+- Packages: `dist/packages/web-development-command-desk/`
+- Manifest: `dist/manifests/web-development-command-desk-MANIFEST.md`
+
+| Order | Skill | Status |
+|---:|---|---|
+| 000 | `web-development-command-desk` | packaged |
+| 001 | `site-product-requirements-desk` | packaged |
+| 002 | `information-architecture-desk` | packaged |
+| 003 | `ux-ui-design-system-desk` | packaged |
+| 004 | `frontend-engineering-desk` | packaged |
+| 005 | `backend-integration-desk` | packaged |
+| 006 | `cms-content-operations-desk` | packaged |
+| 007 | `web-security-secops-desk` | packaged |
+| 008 | `web-performance-desk` | packaged |
+| 009 | `accessibility-seo-desk` | packaged |
+| 010 | `web-testing-qa-desk` | packaged |
+| 011 | `web-observability-desk` | packaged |
+| 012 | `web-release-deployment-desk` | packaged |
+| 013 | `web-maintenance-growth-desk` | packaged |

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Web Observability Desk"
+  short_description: "Rum, synthetic checks, dashboards, alerts, and incidents for the Web Development Command Desk suite."

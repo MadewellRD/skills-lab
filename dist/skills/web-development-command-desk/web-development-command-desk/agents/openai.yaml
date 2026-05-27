@@ -1,0 +1,3 @@
+interface:
+  display_name: "Web Development Command Desk"
+  short_description: "Web workflow orchestrator for the Web Development Command Desk suite."
