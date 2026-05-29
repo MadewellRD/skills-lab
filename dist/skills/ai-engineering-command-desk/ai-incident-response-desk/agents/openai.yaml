@@ -1,0 +1,15 @@
+interface:
+  display_name: AI Incident Response Desk
+  short_description: Triage AI production incidents with containment, rollback, evidence, eval, safety, and follow-up handoffs.
+  default_prompt: Use $ai-incident-response-desk to triage AI production incidents involving hallucinations, safety failures, prompt injection, tool misuse, data leakage, model regressions, cost spikes, latency degradation, eval regressions, or user harm. Preserve evidence, classify severity, define containment and rollback, and emit low-token handoffs.
+  icon: 🚨
+  primary_color: '#dc2626'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,15 @@
+interface:
+  display_name: AI Release Readiness Desk
+  short_description: Assesses AI launch readiness, go/no-go gates, blockers, risk acceptance, rollback, and release handoffs.
+  default_prompt: Use $ai-release-readiness-desk to assess whether an AI capability is ready to launch or roll out. Verify eval, safety, red-team, inference ops, observability, rollback, docs/support, approval owner, blockers, and risk acceptance before producing go/no-go or downstream release/deployment handoff.
+  icon: 🚦
+  primary_color: '#16a34a'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

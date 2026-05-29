@@ -1,0 +1,15 @@
+interface:
+  display_name: Inference Ops Desk
+  short_description: Plans production AI inference operations, SLOs, provider constraints, fallbacks, runbooks, and low-token handoffs.
+  default_prompt: Use $inference-ops-desk to design or harden production AI inference operations with explicit deployment topology, provider limits, retries, timeouts, caching, batching, fallbacks, secrets, logging, retention, SLOs, rollback, and workflow-packet handoffs.
+  icon: ⚙️
+  primary_color: '#0f766e'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

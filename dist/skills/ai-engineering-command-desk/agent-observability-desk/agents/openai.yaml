@@ -1,0 +1,15 @@
+interface:
+  display_name: Agent Observability Desk
+  short_description: Designs traces, metrics, dashboards, alerts, privacy controls, and runbooks for AI agents and workflows.
+  default_prompt: Use $agent-observability-desk to design or harden AI observability with connector-grounded traces, model/tool/retrieval events, metrics, dashboards, alerts, privacy controls, runbooks, and low-token handoff packets.
+  icon: 📡
+  primary_color: '#0ea5e9'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

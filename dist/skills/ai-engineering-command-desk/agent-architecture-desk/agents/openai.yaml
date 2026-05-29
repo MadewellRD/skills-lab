@@ -1,0 +1,15 @@
+interface:
+  display_name: Agent Architecture Desk
+  short_description: Designs bounded AI agent architecture, autonomy limits, state, memory, tools, approvals, observability, and handoffs.
+  default_prompt: Use $agent-architecture-desk to design or harden AI agent architecture with explicit agency ceiling, loop design, state and memory strategy, tool routes, approval gates, retry and halt policy, observability hooks, eval scenarios, and low-token implementation handoffs.
+  icon: 🕸️
+  primary_color: '#2563eb'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,15 @@
+interface:
+  display_name: Cost Latency Optimization Desk
+  short_description: Optimizes AI cost, latency, throughput, and token usage while preserving quality, safety, and grounding gates.
+  default_prompt: Use $cost-latency-optimization-desk to analyze AI runtime baselines, identify safe optimization levers, preserve eval/safety/grounding thresholds, define rollout and rollback controls, and produce low-token implementation handoffs.
+  icon: ⚡
+  primary_color: '#f59e0b'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

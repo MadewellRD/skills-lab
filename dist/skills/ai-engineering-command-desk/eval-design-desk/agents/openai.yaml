@@ -1,0 +1,15 @@
+interface:
+  display_name: Eval Design Desk
+  short_description: Designs connector-grounded AI eval plans, rubrics, datasets, thresholds, and release gates.
+  default_prompt: Use $eval-design-desk to design AI evaluation plans with behavior contracts, dataset slices, rubrics, grader policies, thresholds, regression coverage, safety slices, reporting, and low-token implementation handoffs.
+  icon: 📏
+  primary_color: '#0f766e'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

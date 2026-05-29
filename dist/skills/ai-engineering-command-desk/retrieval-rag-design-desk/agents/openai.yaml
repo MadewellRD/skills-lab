@@ -1,0 +1,15 @@
+interface:
+  display_name: Retrieval RAG Design Desk
+  short_description: Designs connector-grounded RAG systems, corpus maps, retrieval evals, permission filters, and citation policies.
+  default_prompt: Use $retrieval-rag-design-desk to design or harden retrieval augmented generation systems with explicit corpora, permissions, chunking, indexing, ranking, citations, freshness, grounding evals, observability hooks, and workflow-packet handoffs.
+  icon: 🔎
+  primary_color: '#0f766e'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
