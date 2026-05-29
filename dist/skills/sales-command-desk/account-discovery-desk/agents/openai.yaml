@@ -1,0 +1,5 @@
+interface:
+  display_name: Account Discovery Desk
+  short_description: Build account briefs, stakeholder maps, whitespace hypotheses, and meeting agendas from CRM, files, and public account evidence.
+  icon: chart-line
+  accent_color: '#1f6feb'

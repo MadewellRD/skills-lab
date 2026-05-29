@@ -1,0 +1,5 @@
+interface:
+  display_name: Lead Research Desk
+  short_description: Research and rank prospects using ICP, CRM, enrichment, and public evidence before outreach.
+  icon: chart-line
+  accent_color: '#1f6feb'

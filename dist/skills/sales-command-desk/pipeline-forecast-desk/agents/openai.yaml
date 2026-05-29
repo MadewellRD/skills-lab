@@ -1,0 +1,5 @@
+interface:
+  display_name: Pipeline Forecast Desk
+  short_description: Generate forecast narratives, commit and best-case views, risk-adjusted models, and spreadsheet artifacts from pipeline data.
+  icon: chart-line
+  accent_color: '#1f6feb'

@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "skill_count": 13,
+  "source_files": 14,
+  "packaged_skill_dirs": 13,
+  "zip_count": 16,
+  "manifest": "dist/manifests/sales-command-desk-v0.1.0.json",
+  "checksums": "CHECKSUMS-sales-command-desk-v0.1.0.txt"
+}

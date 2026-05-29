@@ -1,0 +1,5 @@
+interface:
+  display_name: Sales Command Desk
+  short_description: Route and run revenue workflow stages across sales research, discovery, outbound, call prep, qualification, proposals, CRM updates, forecasting, renewals, and customer handoff.
+  icon: chart-line
+  accent_color: '#1f6feb'

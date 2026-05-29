@@ -1,0 +1,5 @@
+interface:
+  display_name: Objection Handling Desk
+  short_description: Draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections.
+  icon: chart-line
+  accent_color: '#1f6feb'

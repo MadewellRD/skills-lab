@@ -1,0 +1,5 @@
+interface:
+  display_name: Proposal Desk
+  short_description: Create customer-facing proposal, scope, deck, DOCX, and PDF drafts with brand, pricing, and approval controls.
+  icon: chart-line
+  accent_color: '#1f6feb'

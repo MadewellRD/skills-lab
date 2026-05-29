@@ -1,0 +1,120 @@
+{
+  "suite": "AI Engineering Command Desk",
+  "suite_slug": "ai-engineering-command-desk",
+  "suite_version": "v0.1.0-source-only",
+  "generated": "2026-05-29",
+  "packaged_skills": 18,
+  "source_suite": "skills/AI Engineering Command Desk/",
+  "packaged_suite": "dist/skills/ai-engineering-command-desk/",
+  "note": "Source-only packaging pass. No zip archives generated. Zip packaging and GitHub Release pending.",
+  "desks": [
+    {
+      "order": 0,
+      "skill": "agent-architecture-desk",
+      "path": "dist/skills/ai-engineering-command-desk/agent-architecture-desk",
+      "bytes": 42908
+    },
+    {
+      "order": 1,
+      "skill": "agent-observability-desk",
+      "path": "dist/skills/ai-engineering-command-desk/agent-observability-desk",
+      "bytes": 40974
+    },
+    {
+      "order": 2,
+      "skill": "ai-engineering-command-desk",
+      "path": "dist/skills/ai-engineering-command-desk/ai-engineering-command-desk",
+      "bytes": 37247
+    },
+    {
+      "order": 3,
+      "skill": "ai-incident-response-desk",
+      "path": "dist/skills/ai-engineering-command-desk/ai-incident-response-desk",
+      "bytes": 34787
+    },
+    {
+      "order": 4,
+      "skill": "ai-release-readiness-desk",
+      "path": "dist/skills/ai-engineering-command-desk/ai-release-readiness-desk",
+      "bytes": 36984
+    },
+    {
+      "order": 5,
+      "skill": "ai-safety-review-desk",
+      "path": "dist/skills/ai-engineering-command-desk/ai-safety-review-desk",
+      "bytes": 40770
+    },
+    {
+      "order": 6,
+      "skill": "cost-latency-optimization-desk",
+      "path": "dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk",
+      "bytes": 33560
+    },
+    {
+      "order": 7,
+      "skill": "dataset-curation-desk",
+      "path": "dist/skills/ai-engineering-command-desk/dataset-curation-desk",
+      "bytes": 39964
+    },
+    {
+      "order": 8,
+      "skill": "eval-design-desk",
+      "path": "dist/skills/ai-engineering-command-desk/eval-design-desk",
+      "bytes": 40198
+    },
+    {
+      "order": 9,
+      "skill": "eval-run-analysis-desk",
+      "path": "dist/skills/ai-engineering-command-desk/eval-run-analysis-desk",
+      "bytes": 37393
+    },
+    {
+      "order": 10,
+      "skill": "fine-tuning-desk",
+      "path": "dist/skills/ai-engineering-command-desk/fine-tuning-desk",
+      "bytes": 40609
+    },
+    {
+      "order": 11,
+      "skill": "inference-ops-desk",
+      "path": "dist/skills/ai-engineering-command-desk/inference-ops-desk",
+      "bytes": 34740
+    },
+    {
+      "order": 12,
+      "skill": "model-selection-desk",
+      "path": "dist/skills/ai-engineering-command-desk/model-selection-desk",
+      "bytes": 33415
+    },
+    {
+      "order": 13,
+      "skill": "prompt-systems-desk",
+      "path": "dist/skills/ai-engineering-command-desk/prompt-systems-desk",
+      "bytes": 39786
+    },
+    {
+      "order": 14,
+      "skill": "red-team-eval-desk",
+      "path": "dist/skills/ai-engineering-command-desk/red-team-eval-desk",
+      "bytes": 39475
+    },
+    {
+      "order": 15,
+      "skill": "retrieval-rag-design-desk",
+      "path": "dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk",
+      "bytes": 37821
+    },
+    {
+      "order": 16,
+      "skill": "synthetic-data-desk",
+      "path": "dist/skills/ai-engineering-command-desk/synthetic-data-desk",
+      "bytes": 41562
+    },
+    {
+      "order": 17,
+      "skill": "tool-schema-design-desk",
+      "path": "dist/skills/ai-engineering-command-desk/tool-schema-design-desk",
+      "bytes": 40721
+    }
+  ]
+}

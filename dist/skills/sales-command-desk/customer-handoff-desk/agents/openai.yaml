@@ -1,0 +1,5 @@
+interface:
+  display_name: Customer Handoff Desk
+  short_description: Prepare post-sale handoff packages for onboarding, customer success, support, or implementation teams.
+  icon: chart-line
+  accent_color: '#1f6feb'

@@ -1,0 +1,5 @@
+interface:
+  display_name: Sales Call Prep Desk
+  short_description: Prepare agendas, discovery questions, attendee context, objection watchlists, and follow-up scaffolds for sales meetings.
+  icon: chart-line
+  accent_color: '#1f6feb'

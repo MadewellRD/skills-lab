@@ -1,0 +1,5 @@
+interface:
+  display_name: Deal Review Desk
+  short_description: Prepare internal deal reviews with risks, asks, commercial impact, approvals, and recommended decisions.
+  icon: chart-line
+  accent_color: '#1f6feb'

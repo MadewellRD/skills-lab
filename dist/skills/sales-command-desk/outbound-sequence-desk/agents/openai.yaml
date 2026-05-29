@@ -1,0 +1,5 @@
+interface:
+  display_name: Outbound Sequence Desk
+  short_description: Draft outbound email and follow-up sequences with persona targeting, personalization, compliance controls, and approval gates.
+  icon: chart-line
+  accent_color: '#1f6feb'

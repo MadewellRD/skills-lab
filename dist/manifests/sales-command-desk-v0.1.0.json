@@ -1,0 +1,105 @@
+{
+  "suite": "sales-command-desk",
+  "version": "0.1.0",
+  "generated_on": "2026-05-27",
+  "source_dir": "skills/Sales Command Desk",
+  "dist_dir": "dist/skills/sales-command-desk",
+  "skills": [
+    {
+      "name": "sales-command-desk",
+      "title": "Sales Command Desk",
+      "path": "dist/skills/sales-command-desk/sales-command-desk"
+    },
+    {
+      "name": "lead-research-desk",
+      "title": "Lead Research Desk",
+      "path": "dist/skills/sales-command-desk/lead-research-desk"
+    },
+    {
+      "name": "account-discovery-desk",
+      "title": "Account Discovery Desk",
+      "path": "dist/skills/sales-command-desk/account-discovery-desk"
+    },
+    {
+      "name": "outbound-sequence-desk",
+      "title": "Outbound Sequence Desk",
+      "path": "dist/skills/sales-command-desk/outbound-sequence-desk"
+    },
+    {
+      "name": "sales-call-prep-desk",
+      "title": "Sales Call Prep Desk",
+      "path": "dist/skills/sales-command-desk/sales-call-prep-desk"
+    },
+    {
+      "name": "qualification-desk",
+      "title": "Qualification Desk",
+      "path": "dist/skills/sales-command-desk/qualification-desk"
+    },
+    {
+      "name": "objection-handling-desk",
+      "title": "Objection Handling Desk",
+      "path": "dist/skills/sales-command-desk/objection-handling-desk"
+    },
+    {
+      "name": "proposal-desk",
+      "title": "Proposal Desk",
+      "path": "dist/skills/sales-command-desk/proposal-desk"
+    },
+    {
+      "name": "deal-review-desk",
+      "title": "Deal Review Desk",
+      "path": "dist/skills/sales-command-desk/deal-review-desk"
+    },
+    {
+      "name": "crm-update-desk",
+      "title": "CRM Update Desk",
+      "path": "dist/skills/sales-command-desk/crm-update-desk"
+    },
+    {
+      "name": "pipeline-forecast-desk",
+      "title": "Pipeline Forecast Desk",
+      "path": "dist/skills/sales-command-desk/pipeline-forecast-desk"
+    },
+    {
+      "name": "renewal-expansion-desk",
+      "title": "Renewal Expansion Desk",
+      "path": "dist/skills/sales-command-desk/renewal-expansion-desk"
+    },
+    {
+      "name": "customer-handoff-desk",
+      "title": "Customer Handoff Desk",
+      "path": "dist/skills/sales-command-desk/customer-handoff-desk"
+    }
+  ],
+  "packages": [
+    "dist/packages/sales-command-desk/sales-command-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/lead-research-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/account-discovery-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/outbound-sequence-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/sales-call-prep-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/qualification-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/objection-handling-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/proposal-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/deal-review-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/crm-update-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/pipeline-forecast-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/renewal-expansion-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/customer-handoff-desk-v0.1.0.zip",
+    "dist/packages/sales-command-desk/sales-command-desk-v0.1.0-source.zip",
+    "dist/packages/sales-command-desk/sales-command-desk-v0.1.0-release-artifacts.zip",
+    "dist/packages/sales-command-desk/sales-command-desk-v0.1.0-skill-bundles.zip"
+  ],
+  "shared_references": [
+    "suite-workflow-contract.md",
+    "workflow-packet-schema.md",
+    "source-inventory.md",
+    "stage-contract.md"
+  ],
+  "source_references": [
+    "skills/Sales Command Desk/references/suite-workflow-contract.md",
+    "skills/Sales Command Desk/references/workflow-packet-schema.md",
+    "skills/Sales Command Desk/references/source-inventory.md",
+    "skills/Sales Command Desk/references/stage-contracts/<desk>.md",
+    "skills/Sales Command Desk/references/desk-workflows/<desk>.md"
+  ]
+}

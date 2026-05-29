@@ -1,0 +1,5 @@
+interface:
+  display_name: Qualification Desk
+  short_description: Score opportunities against MEDDICC, BANT, or local qualification frameworks with evidence-backed gaps and next actions.
+  icon: chart-line
+  accent_color: '#1f6feb'

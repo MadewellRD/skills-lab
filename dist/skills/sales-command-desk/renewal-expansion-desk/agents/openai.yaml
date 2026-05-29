@@ -1,0 +1,5 @@
+interface:
+  display_name: Renewal Expansion Desk
+  short_description: Support renewal, upsell, and cross-sell motions with churn risk, expansion hypotheses, outreach, and forecast impact notes.
+  icon: chart-line
+  accent_color: '#1f6feb'

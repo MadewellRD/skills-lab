@@ -1,0 +1,5 @@
+interface:
+  display_name: CRM Update Desk
+  short_description: Create safe CRM note, task, field, and stage update packages with dry-run diffs, approvals, and audit logs.
+  icon: chart-line
+  accent_color: '#1f6feb'

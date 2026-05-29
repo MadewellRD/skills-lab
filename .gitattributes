@@ -1,0 +1,12 @@
+# Normalize all text files to LF in the repository.
+# On checkout, write LF regardless of platform or core.autocrlf setting.
+* text=auto eol=lf
+
+# Explicitly mark binary files — no line-ending conversion.
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text eol=lf
