@@ -1,0 +1,8 @@
+interface:
+  display_name: Market Discovery Desk
+  short_description: Analyze market context, category dynamics, customer segments, and opportunity framing from primary and secondary evidence.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

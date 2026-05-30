@@ -1,0 +1,8 @@
+interface:
+  display_name: Product Command Desk
+  short_description: Orchestrate product workflows from idea through discovery, requirements, prioritization, roadmap, launch, experimentation, feedback, retention, and retrospective.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

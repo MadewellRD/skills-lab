@@ -1,0 +1,93 @@
+{
+  "suite": "product-command-desk",
+  "version": "0.1.0",
+  "generated_on": "2026-05-30",
+  "source_dir": "skills/Product Command Desk",
+  "dist_dir": "dist/skills/product-command-desk",
+  "skills": [
+    {
+      "slug": "product-command-desk",
+      "title": "Product Command Desk"
+    },
+    {
+      "slug": "market-discovery-desk",
+      "title": "Market Discovery Desk"
+    },
+    {
+      "slug": "user-research-desk",
+      "title": "User Research Desk"
+    },
+    {
+      "slug": "persona-segmentation-desk",
+      "title": "Persona & Segmentation Desk"
+    },
+    {
+      "slug": "opportunity-sizing-desk",
+      "title": "Opportunity Sizing Desk"
+    },
+    {
+      "slug": "competitive-analysis-desk",
+      "title": "Competitive Analysis Desk"
+    },
+    {
+      "slug": "prd-desk",
+      "title": "PRD Desk"
+    },
+    {
+      "slug": "roadmap-planning-desk",
+      "title": "Roadmap Planning Desk"
+    },
+    {
+      "slug": "feature-prioritization-desk",
+      "title": "Feature Prioritization Desk"
+    },
+    {
+      "slug": "pricing-packaging-desk",
+      "title": "Pricing & Packaging Desk"
+    },
+    {
+      "slug": "gtm-brief-desk",
+      "title": "GTM Brief Desk"
+    },
+    {
+      "slug": "launch-readiness-desk",
+      "title": "Launch Readiness Desk"
+    },
+    {
+      "slug": "experiment-design-desk",
+      "title": "Experiment Design Desk"
+    },
+    {
+      "slug": "feedback-synthesis-desk",
+      "title": "Feedback Synthesis Desk"
+    },
+    {
+      "slug": "churn-retention-analysis-desk",
+      "title": "Churn & Retention Analysis Desk"
+    },
+    {
+      "slug": "product-retrospective-desk",
+      "title": "Product Retrospective Desk"
+    }
+  ],
+  "packages": [
+    "dist/packages/product-command-desk/product-command-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/market-discovery-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/user-research-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/persona-segmentation-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/opportunity-sizing-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/competitive-analysis-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/prd-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/roadmap-planning-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/feature-prioritization-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/pricing-packaging-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/gtm-brief-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/launch-readiness-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/experiment-design-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/feedback-synthesis-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/churn-retention-analysis-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/product-retrospective-desk-v0.1.0.zip",
+    "dist/packages/product-command-desk/product-command-desk-v0.1.0-skill-bundles.zip",
+    "dist/packages/product-command-desk/product-command-desk-v0.1.0-source.zip"
+  ]
+}

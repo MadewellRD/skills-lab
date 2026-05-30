@@ -1,0 +1,8 @@
+interface:
+  display_name: Feature Prioritization Desk
+  short_description: Rank, score, and document feature prioritization decisions with impact/effort tradeoffs and decision records.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

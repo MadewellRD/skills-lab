@@ -1,0 +1,8 @@
+interface:
+  display_name: PRD Desk
+  short_description: Write product requirements, acceptance criteria, non-goals, risks, and downstream handoffs.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

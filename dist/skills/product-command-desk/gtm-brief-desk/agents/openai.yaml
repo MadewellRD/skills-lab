@@ -1,0 +1,8 @@
+interface:
+  display_name: GTM Brief Desk
+  short_description: Write go-to-market briefs covering audiences, messaging, channels, sales/support enablement, and launch handoff.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

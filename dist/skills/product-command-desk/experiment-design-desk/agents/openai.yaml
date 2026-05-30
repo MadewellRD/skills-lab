@@ -1,0 +1,8 @@
+interface:
+  display_name: Experiment Design Desk
+  short_description: Design product experiments with hypotheses, metrics, cohorts, guardrails, and decision rules.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

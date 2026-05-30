@@ -1,0 +1,8 @@
+interface:
+  display_name: Competitive Analysis Desk
+  short_description: Analyze competitors, alternatives, substitutes, positioning, and differentiation opportunities.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

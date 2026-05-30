@@ -1,0 +1,8 @@
+interface:
+  display_name: Persona & Segmentation Desk
+  short_description: Define personas, segments, ICP, use-cases, and customer journeys from behavioral and contextual evidence.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

@@ -1,0 +1,8 @@
+interface:
+  display_name: Product Retrospective Desk
+  short_description: Run post-launch or cycle retrospectives, capture lessons, metric outcomes, and improvement actions.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

@@ -1,0 +1,8 @@
+interface:
+  display_name: Pricing & Packaging Desk
+  short_description: Develop pricing hypotheses, packages, entitlements, monetization risk assessments, and pricing experiments.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

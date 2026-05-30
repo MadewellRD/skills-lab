@@ -1,0 +1,8 @@
+interface:
+  display_name: User Research Desk
+  short_description: Plan, conduct, and synthesize user interviews, research plans, and findings into evidence-backed product insights.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

@@ -1,20 +1,20 @@
-90b85737785dd869406c77ab35266616dcde9c801b7c466aaeaaee039ccaddd9  dist/manifests/sales-command-desk-v0.1.0.json
-40d36b342cbea9c729823f2e044e85b7e2b77ff068f4e095d822fc23ba0329e5  dist/packages/sales-command-desk/account-discovery-desk-v0.1.0.zip
-e49353fea2118b5d79b9437f06208be7ed96cec0cc5f3a0de88bab905b801910  dist/packages/sales-command-desk/crm-update-desk-v0.1.0.zip
-2f652a49ffa62c4961413d6894127ebce5eb02eb217bccfb3c8f5de15c003860  dist/packages/sales-command-desk/customer-handoff-desk-v0.1.0.zip
-a7862346917d6401607a3099a1a7b83eb7ad1d4894f6ff104ec5e3c57ec2aab6  dist/packages/sales-command-desk/deal-review-desk-v0.1.0.zip
-4bc14f545ad2c1b7ee24cef36cafde54b3462566cdc713438302220496766d8b  dist/packages/sales-command-desk/lead-research-desk-v0.1.0.zip
-84b2bd8416c437f1e045091acc7b749f90d96f104c5ef708c2fc263d1e306779  dist/packages/sales-command-desk/objection-handling-desk-v0.1.0.zip
-dd19e4dc7e58cfb9bb7c11c0a2527f890f4d63c1b1ea7b2f604cad58772f0980  dist/packages/sales-command-desk/outbound-sequence-desk-v0.1.0.zip
-f0290c3929889a7a8d984e09311d707822af419880d3151cafb811663ec74c9e  dist/packages/sales-command-desk/pipeline-forecast-desk-v0.1.0.zip
-89a9cd93f5ecd93019b9fc882e047a0d13eec7e21f4baaca3c4787e6cbcf0951  dist/packages/sales-command-desk/proposal-desk-v0.1.0.zip
-d24aedd290d0d4c88544ad4e19e15b9e40656ef3bd5c005586551dc57a1b25ad  dist/packages/sales-command-desk/qualification-desk-v0.1.0.zip
-264eb18d35ae7b47ed379d8cb77f01c713d1779ab564a0ece8e4de8aa2a055d1  dist/packages/sales-command-desk/renewal-expansion-desk-v0.1.0.zip
-d578220241e03cbfb02ff9db6f554bff441d1df62dbdae2f6fb92c55ab120fe5  dist/packages/sales-command-desk/sales-call-prep-desk-v0.1.0.zip
-7c55f89b53036d07cdc1514413711830a84ff8271090e49687612d82e9a73436  dist/packages/sales-command-desk/sales-command-desk-v0.1.0-release-artifacts.zip
-6eaf88b8439d362f1071b689f600c5f25ca9a4ce9a9c48dcbfd3ea7fbc47de2c  dist/packages/sales-command-desk/sales-command-desk-v0.1.0-skill-bundles.zip
-d2f842c2ebf1a6b0540c8ee5cd0d785a71ccfa51b0c298fd91b8d6cff187b560  dist/packages/sales-command-desk/sales-command-desk-v0.1.0-source.zip
-d03446444315864f0528763e8828111a0dab0ec7253d4f4ca1a4a1111c30af92  dist/packages/sales-command-desk/sales-command-desk-v0.1.0.zip
+f813e1975afdb9f21d3d1ae51bbce7dc2585a5b4c7dbfba8d8bf60acc1032cdf  dist/manifests/sales-command-desk-v0.1.0.json
+05820a2d125a799c8ab268405c072508a4ca0932da8bcc5d8dc55fb57eb756f2  dist/packages/sales-command-desk/account-discovery-desk-v0.1.0.zip
+7b919cd83621fad8cedf2ef02cf78c15b44375b4209463ed2b2b0966a3d9d78a  dist/packages/sales-command-desk/crm-update-desk-v0.1.0.zip
+c277ad99682e917ab4e59722f3858ea5f394d6b72bd0f9bfe25d359673c7203f  dist/packages/sales-command-desk/customer-handoff-desk-v0.1.0.zip
+e9721aa73a86a99e0d930d9264d84ad65539747f7c3a8a15cdd73073a519f8c2  dist/packages/sales-command-desk/deal-review-desk-v0.1.0.zip
+41d29fb513aae0cef9d850c74707a1270c2ba7cc9e292babc0c029e1c2938925  dist/packages/sales-command-desk/lead-research-desk-v0.1.0.zip
+11c19a969a81cd398218e2846415d9b2a730708d939aa043bf2f688664ae1ecf  dist/packages/sales-command-desk/objection-handling-desk-v0.1.0.zip
+c69adad55ac0fbc0afaaa10e0af146df839d29d3aa4b1056e7de86db92cd9120  dist/packages/sales-command-desk/outbound-sequence-desk-v0.1.0.zip
+3acaf34b7f1b77d4fec072fc93cbfe81f17412f3ea11f3ccf7177156e6891d40  dist/packages/sales-command-desk/pipeline-forecast-desk-v0.1.0.zip
+a287d11cb83142c5730ddcd4d71d46a17bc16d4d2765ce5816e112b8cd29c563  dist/packages/sales-command-desk/proposal-desk-v0.1.0.zip
+05e4d4358ca0c45704a0af25e04a017e8a2bc3033738bdfd045d4276b0eed502  dist/packages/sales-command-desk/qualification-desk-v0.1.0.zip
+3d53e8a9678d9bd7d68041b56b7befb5b445d4c1ee4b1db19bced086f7960bbd  dist/packages/sales-command-desk/renewal-expansion-desk-v0.1.0.zip
+266acb6ffbd4ac626976bd9f8360169b09aedac32c6f8e382d1f6982734e624d  dist/packages/sales-command-desk/sales-call-prep-desk-v0.1.0.zip
+8c614321d1f4331381e63d9c9a71f6c571809da4c7135f9b7413950ad19a3a6f  dist/packages/sales-command-desk/sales-command-desk-v0.1.0-release-artifacts.zip
+0b88ecd32d629ccf6779a28cf59ade6e857ca9a8f1adf7981b5446bb049967b6  dist/packages/sales-command-desk/sales-command-desk-v0.1.0-skill-bundles.zip
+4d33475c7a2a1b65e4930d2cadfdda3ea526188a1d13190941b89a77649bdfbf  dist/packages/sales-command-desk/sales-command-desk-v0.1.0-source.zip
+8c1647297cb1d8b1bf1d35df3ff0bbc4c76380218d0d7990fc267da91bce0548  dist/packages/sales-command-desk/sales-command-desk-v0.1.0.zip
 10e1ee9328e78d1105244748c643cdf0d053157aea9d2cc5795f96a389e8aafe  dist/skills/sales-command-desk/account-discovery-desk/agents/openai.yaml
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/sales-command-desk/account-discovery-desk/assets/.gitkeep
 c10809e27b18079455abcc895c68636ed49795a74e91344da61ffd0c5d337881  dist/skills/sales-command-desk/account-discovery-desk/references/source-inventory.md
@@ -106,17 +106,46 @@ c10809e27b18079455abcc895c68636ed49795a74e91344da61ffd0c5d337881  dist/skills/sa
 cfa1a5e804a84f5912ac5312fc0c3620e8a5051649c27c7d413eaa7da9f9c34e  dist/skills/sales-command-desk/sales-command-desk/references/suite-workflow-contract.md
 360d048cd9ed7f4670c41217cb7742578405340e8628e351f411c7cf2d63aa97  dist/skills/sales-command-desk/sales-command-desk/references/workflow-packet-schema.md
 8217310ab90c0d1f430b3cb973b554ef026c19e85bfb052f8792faaf8e07accd  dist/skills/sales-command-desk/sales-command-desk/SKILL.md
-f5fd58739c93d550e12652f442c6ec73b144bbed98e8b30c801eab6821f5a89f  skills/Sales Revenue Command Desk/account-discovery-desk.md
-bf117b5fe7926614268ec52790eb5f3a6ccf4d8c67446619f59a439209b11656  skills/Sales Revenue Command Desk/crm-update-desk.md
-fe9316a5a804e58a45f8814c402c7dafe76a15ebf7826f9785eaac085a6ed5d7  skills/Sales Revenue Command Desk/customer-handoff-desk.md
-fa10eb653a7cacec728a3c44452c9e4e8de6ab8c0e18555cc4dd24b115ec31a1  skills/Sales Revenue Command Desk/deal-review-desk.md
-3915ff367c0eb41b3f6d9f58c911e7aa981bdd1c68ce974d01b308e317398e65  skills/Sales Revenue Command Desk/lead-research-desk.md
-7ecf13516d90598603aa72fc9c81831ffc27b2f8cf7f644ade204244cec4f9b2  skills/Sales Revenue Command Desk/objection-handling-desk.md
-41bca95ba184e7fa9648b42cd62b1d9f794be367a3de60d2611b16c99775bdc1  skills/Sales Revenue Command Desk/outbound-sequence-desk.md
-e35b96734d85f63b1655c5aed4d1f18c5f4eb69317f1645c568099d490dab20b  skills/Sales Revenue Command Desk/pipeline-forecast-desk.md
-f681ee3b4c9e0de1ec85a59aeb889d62c081aba89e18b3dc1b41aa516a81ba06  skills/Sales Revenue Command Desk/proposal-desk.md
-de728834a04543f35b101e3fba3cc3f061cee5f090cac33ff69a4c94fb480954  skills/Sales Revenue Command Desk/qualification-desk.md
-670211eab49632b6bd8710a96dfd8c9171b1d0cf43819ce555f2797ec22acfdc  skills/Sales Revenue Command Desk/README.md
-98d24ac0a4dfd527e28d562598163daf43e2a9d5c6268ceb748862b3e140b3f3  skills/Sales Revenue Command Desk/renewal-expansion-desk.md
-e399c83e6c788d17006ed6b52d101f3100e0acf2810cd8066efaa2f023fee168  skills/Sales Revenue Command Desk/sales-call-prep-desk.md
-13096ad99f8098ddc2252432d24bfb27418a7ebc7947322e8deeeb089a416cdd  skills/Sales Revenue Command Desk/sales-command-desk.md
+f5fd58739c93d550e12652f442c6ec73b144bbed98e8b30c801eab6821f5a89f  skills/Sales Command Desk/account-discovery-desk.md
+bf117b5fe7926614268ec52790eb5f3a6ccf4d8c67446619f59a439209b11656  skills/Sales Command Desk/crm-update-desk.md
+fe9316a5a804e58a45f8814c402c7dafe76a15ebf7826f9785eaac085a6ed5d7  skills/Sales Command Desk/customer-handoff-desk.md
+fa10eb653a7cacec728a3c44452c9e4e8de6ab8c0e18555cc4dd24b115ec31a1  skills/Sales Command Desk/deal-review-desk.md
+3915ff367c0eb41b3f6d9f58c911e7aa981bdd1c68ce974d01b308e317398e65  skills/Sales Command Desk/lead-research-desk.md
+7ecf13516d90598603aa72fc9c81831ffc27b2f8cf7f644ade204244cec4f9b2  skills/Sales Command Desk/objection-handling-desk.md
+41bca95ba184e7fa9648b42cd62b1d9f794be367a3de60d2611b16c99775bdc1  skills/Sales Command Desk/outbound-sequence-desk.md
+e35b96734d85f63b1655c5aed4d1f18c5f4eb69317f1645c568099d490dab20b  skills/Sales Command Desk/pipeline-forecast-desk.md
+f681ee3b4c9e0de1ec85a59aeb889d62c081aba89e18b3dc1b41aa516a81ba06  skills/Sales Command Desk/proposal-desk.md
+de728834a04543f35b101e3fba3cc3f061cee5f090cac33ff69a4c94fb480954  skills/Sales Command Desk/qualification-desk.md
+a75d335e02af5db401eeb7bd55f89d691906e4a3213e2f5c7366f896afc91b5f  skills/Sales Command Desk/README.md
+2efcf666e1a0ba2bd31f724faecb62d3c64c8d19efb8c1a8729c3ffa5d60e81a  skills/Sales Command Desk/references/desk-workflows/account-discovery-desk.md
+2a718c13a1baebf94552dfa321431a8609f5aa9473bd487a1b6e31121afb1743  skills/Sales Command Desk/references/desk-workflows/crm-update-desk.md
+825f7df2890d906702bc491d8f02c0f7bfc42d20a38b2379117a616c767abb4f  skills/Sales Command Desk/references/desk-workflows/customer-handoff-desk.md
+9eb2155c1c8ee87ec994ddb37d53243b087cd012a7c5b61a3a4bee54d49e7011  skills/Sales Command Desk/references/desk-workflows/deal-review-desk.md
+733ef5cdf7fb5a37cd1fb8fea1373a6fa181ab3546eb1b0699a4b45c59960c35  skills/Sales Command Desk/references/desk-workflows/lead-research-desk.md
+1e13659345a808ba55f6027e59f45680968d0909fef081d6dac4e4c58d198324  skills/Sales Command Desk/references/desk-workflows/objection-handling-desk.md
+3be4dc581731aaf3166bd6f1d781a06059bf041e48faac9a45c336d84707aba0  skills/Sales Command Desk/references/desk-workflows/outbound-sequence-desk.md
+1e26f5c8143306cdcdb14c8a8c04c95490e37e116964b2c32bf22964b18e5201  skills/Sales Command Desk/references/desk-workflows/pipeline-forecast-desk.md
+c623e8409c3b54e2ae5c116b42e31975cb35686f5111255e158105b81d06364f  skills/Sales Command Desk/references/desk-workflows/proposal-desk.md
+25f95f18005325ea9c13471179868050ebad56a365e94659d1ec7894decb3287  skills/Sales Command Desk/references/desk-workflows/qualification-desk.md
+4852d05da05fbbbffea9c32aaf1614c545ae66d6a5b811963a079f30b06e29c7  skills/Sales Command Desk/references/desk-workflows/renewal-expansion-desk.md
+e61e73790b9bf15cf1c2005c846526e092ef5f36b6b873e31c2364308c69d154  skills/Sales Command Desk/references/desk-workflows/sales-call-prep-desk.md
+64ada9bfb40b8bf5eda982c694e598bc54dde0e07fe527eb2a608b4fa6e77986  skills/Sales Command Desk/references/desk-workflows/sales-command-desk.md
+c10809e27b18079455abcc895c68636ed49795a74e91344da61ffd0c5d337881  skills/Sales Command Desk/references/source-inventory.md
+361bd6ed7ed9449029840c8d453acdd902d2141b8d161583d9ab08b1f8764b00  skills/Sales Command Desk/references/stage-contracts/account-discovery-desk.md
+e52950049bc0bf8d1f62d67fa6d96446e459b522140fb5ce1c9831bffbf07392  skills/Sales Command Desk/references/stage-contracts/crm-update-desk.md
+90dc319f63dc65686faaa2c4f0be721455150fc83bd2817b01130d0b81b0ec15  skills/Sales Command Desk/references/stage-contracts/customer-handoff-desk.md
+154e47d2b06e4852e670ab969e5896f7b4201f7880024b3b0c920c6385eb48f5  skills/Sales Command Desk/references/stage-contracts/deal-review-desk.md
+e1ccecaf36c68a43508d4e32b4a46254c0b45abda521d6389d104d7c68060744  skills/Sales Command Desk/references/stage-contracts/lead-research-desk.md
+a9a3228fc89b74edf3df261675850a82519f68c838b26aaa574c612cc07d20a3  skills/Sales Command Desk/references/stage-contracts/objection-handling-desk.md
+3a0ccceff016be1982a34393a235d1cc8e943869f92fbe110a3f86b606f2b5d7  skills/Sales Command Desk/references/stage-contracts/outbound-sequence-desk.md
+cf3bc916c30cd770e5cbf4c6e03e97ef77b4b7af6616c292971271820ffe9a8a  skills/Sales Command Desk/references/stage-contracts/pipeline-forecast-desk.md
+c8683b6f2a4e8b6202d5310a762362d829625b911877a37fb73ce3cc9ac539d0  skills/Sales Command Desk/references/stage-contracts/proposal-desk.md
+f07b7c80ac5f0473f777cbf7cb9aad80f8dc91ad2e020c4c7c488968e52bb933  skills/Sales Command Desk/references/stage-contracts/qualification-desk.md
+240ef6a202498588d2f53f2b3e7acc2e1ae8f9fe3256883a43e09ec935757dec  skills/Sales Command Desk/references/stage-contracts/renewal-expansion-desk.md
+96469a900c6e43ad9caab4ed600bbc234e4837afc94d8c1d87cf7f49bafe4906  skills/Sales Command Desk/references/stage-contracts/sales-call-prep-desk.md
+7b501c4ac2f4642c9bbf5e09013404a108427811e6ce8ee199e6f30ca6c6d84b  skills/Sales Command Desk/references/stage-contracts/sales-command-desk.md
+cfa1a5e804a84f5912ac5312fc0c3620e8a5051649c27c7d413eaa7da9f9c34e  skills/Sales Command Desk/references/suite-workflow-contract.md
+360d048cd9ed7f4670c41217cb7742578405340e8628e351f411c7cf2d63aa97  skills/Sales Command Desk/references/workflow-packet-schema.md
+98d24ac0a4dfd527e28d562598163daf43e2a9d5c6268ceb748862b3e140b3f3  skills/Sales Command Desk/renewal-expansion-desk.md
+e399c83e6c788d17006ed6b52d101f3100e0acf2810cd8066efaa2f023fee168  skills/Sales Command Desk/sales-call-prep-desk.md
+13096ad99f8098ddc2252432d24bfb27418a7ebc7947322e8deeeb089a416cdd  skills/Sales Command Desk/sales-command-desk.md

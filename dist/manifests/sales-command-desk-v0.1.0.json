@@ -1,7 +1,7 @@
 {
   "suite": "sales-command-desk",
   "version": "0.1.0",
-  "generated_on": "2026-05-27",
+  "generated_on": "2026-05-30",
   "source_dir": "skills/Sales Command Desk",
   "dist_dir": "dist/skills/sales-command-desk",
   "skills": [
@@ -94,12 +94,5 @@
     "workflow-packet-schema.md",
     "source-inventory.md",
     "stage-contract.md"
-  ],
-  "source_references": [
-    "skills/Sales Command Desk/references/suite-workflow-contract.md",
-    "skills/Sales Command Desk/references/workflow-packet-schema.md",
-    "skills/Sales Command Desk/references/source-inventory.md",
-    "skills/Sales Command Desk/references/stage-contracts/<desk>.md",
-    "skills/Sales Command Desk/references/desk-workflows/<desk>.md"
   ]
 }

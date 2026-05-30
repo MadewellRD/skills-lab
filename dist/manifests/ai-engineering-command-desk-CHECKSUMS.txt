@@ -1,4 +1,21 @@
-dcd7aa4e754cb0f404a7c81868e97eb634f33897c2d09de10b9f33f80acc17bb  dist/skills/ai-engineering-command-desk/agent-architecture-desk/SKILL.md
+de8a0f47d1a47be9875b178b6ac9c6be2679e6d638e6029cedab94d4493de8d8  dist/packages/ai-engineering-command-desk/000-agent-architecture-desk-skill.zip
+89f5b98e2698f0ff1d680f5ff2dec4b0dfaedce1a0c35b39260aff974cfa7acd  dist/packages/ai-engineering-command-desk/001-agent-observability-desk-skill.zip
+6806edbc64d1a47307f9d0d5580cc8bb9f426680d31f7a129b8ccfc8a54a5111  dist/packages/ai-engineering-command-desk/002-ai-engineering-command-desk-skill.zip
+627b4f88992599f455f82f3d49a74d287194b18010c172e3f67abbbbbeaf3b5b  dist/packages/ai-engineering-command-desk/003-ai-incident-response-desk-skill.zip
+7d8b5f92a06b9a00c26a688dcda5e5b8b4dbd0f597e1b7a6faf968f70dbcc788  dist/packages/ai-engineering-command-desk/004-ai-release-readiness-desk-skill.zip
+d34e57205068afb24047ac807e5b4f9cb14f101676fd3ace19106dde794f1f2e  dist/packages/ai-engineering-command-desk/005-ai-safety-review-desk-skill.zip
+9b9981fd89be2e1ed939a28fed10567b3fcb9934b72142817b4a373490a02a40  dist/packages/ai-engineering-command-desk/006-cost-latency-optimization-desk-skill.zip
+b67f53e0328320476667b659664ab7ccff488790cf2802274eb68be5fd35b2d7  dist/packages/ai-engineering-command-desk/007-dataset-curation-desk-skill.zip
+b2dc3d449873cc2522c0affb76321cb1d11a49e2ae749bd19a69887797d228c4  dist/packages/ai-engineering-command-desk/008-eval-design-desk-skill.zip
+3e60348ae74538ae2ea55704d72b24a2c614aacfc6092a66d4567cf98045d090  dist/packages/ai-engineering-command-desk/009-eval-run-analysis-desk-skill.zip
+bae5f86830732f82dc600efa08d844005a7c12bb414c04ce069a42395c3eb308  dist/packages/ai-engineering-command-desk/010-fine-tuning-desk-skill.zip
+6d00abcccfe4528d8bcca517f532ca1dc64be94deb1011971bc9f7736a367a51  dist/packages/ai-engineering-command-desk/011-inference-ops-desk-skill.zip
+a73be057b6be795a5de484af6f7a14a387ebf5459dc0744a86b0ee1a0beb4e1b  dist/packages/ai-engineering-command-desk/012-model-selection-desk-skill.zip
+7fcfbb2346b5c83a2f53ad8880e99ad8764fb695207b10f5a2fb7af76a39cc05  dist/packages/ai-engineering-command-desk/013-prompt-systems-desk-skill.zip
+f725c519562d04fe129b15abc3431cf6dbc365db903e0dac960988646e41407f  dist/packages/ai-engineering-command-desk/014-red-team-eval-desk-skill.zip
+ac945dbb0abdd30ea972f26e15873a9e1f2fd61e9f02e7b8a7cf8f0003ee66fb  dist/packages/ai-engineering-command-desk/015-retrieval-rag-design-desk-skill.zip
+c5921939f2cf0a2c8c44bb19d645a5ec7c09b873e84ab267ea3217d165feb27e  dist/packages/ai-engineering-command-desk/016-synthetic-data-desk-skill.zip
+0d6bfbff810be8703d2139693a43a48e6be476fb08ab759f5705c9c1da2310ee  dist/packages/ai-engineering-command-desk/017-tool-schema-design-desk-skill.zip
 3fe763a1e71b237439eab4395661f5bf963ea43a515a89b78e85cde59f86f315  dist/skills/ai-engineering-command-desk/agent-architecture-desk/agents/openai.yaml
 5eef7d585877ac5ea8bc1c19fadf9db33f1af1a61e9fd0cdf435a45b7e561502  dist/skills/ai-engineering-command-desk/agent-architecture-desk/assets/icon.svg
 eb2bf6c7db158a822d468e68005e013ac779bcaca4a58f5d08548be6d9273e08  dist/skills/ai-engineering-command-desk/agent-architecture-desk/references/agent-architecture-packet-template.md
@@ -6,7 +23,7 @@ edeb20974faa94140b3f77ae627337ebfdefc61a7bab10ce4c02acb2b5dc3263  dist/skills/ai
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/agent-architecture-desk/references/desk-hardening-matrix.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/agent-architecture-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/agent-architecture-desk/references/suite-workflow-contract.md
-cba94e8b27d36662f91573de69e6fdab64cd227a1d167c002608359ba0ffe77f  dist/skills/ai-engineering-command-desk/agent-observability-desk/SKILL.md
+dcd7aa4e754cb0f404a7c81868e97eb634f33897c2d09de10b9f33f80acc17bb  dist/skills/ai-engineering-command-desk/agent-architecture-desk/SKILL.md
 5e6edb56e6f1d34ae2106fe6433f20a4ef9bbdcb2a093c3b434336375035526f  dist/skills/ai-engineering-command-desk/agent-observability-desk/agents/openai.yaml
 d381fc165dd8f64e78a44ec5e27098715ade36b7624380de5313e892b4db51e4  dist/skills/ai-engineering-command-desk/agent-observability-desk/assets/icon.svg
 4b676787d1061a9807594dd1ec58dc46bc118a38f528e9d16b9946414a9377c4  dist/skills/ai-engineering-command-desk/agent-observability-desk/references/agent-observability-packet-template.md
@@ -14,7 +31,7 @@ d381fc165dd8f64e78a44ec5e27098715ade36b7624380de5313e892b4db51e4  dist/skills/ai
 813889cc0f43d4f6965ef915dcec83e911bfde7b7710a731cf15f409e64bd36f  dist/skills/ai-engineering-command-desk/agent-observability-desk/references/observability-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/agent-observability-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/agent-observability-desk/references/suite-workflow-contract.md
-e0e467bbf49ad7abecd02b73ff6ed3b8a806cdb3193b403320234884515ac99c  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/SKILL.md
+cba94e8b27d36662f91573de69e6fdab64cd227a1d167c002608359ba0ffe77f  dist/skills/ai-engineering-command-desk/agent-observability-desk/SKILL.md
 fb39b418c317f73700b1c0848539469df14cc1dff824df4818cbb977b2268f28  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/agents/openai.yaml
 105fc9b45cf31f83964b8388933c673963e9580d9dfba37bf3759628907b24e6  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/assets/icon.svg
 fdb63bcf347ed055a8316f8b7c6587a33d4025ba9a842fffd1dc7ce87ea32238  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/references/ai-engineering-orchestration-packet-template.md
@@ -22,7 +39,7 @@ fdb63bcf347ed055a8316f8b7c6587a33d4025ba9a842fffd1dc7ce87ea32238  dist/skills/ai
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/references/desk-hardening-matrix.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/references/suite-workflow-contract.md
-d1572cbd7a995f2055055d40f56a600ac36fd416fc7d655d8930e673d6262522  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/SKILL.md
+e0e467bbf49ad7abecd02b73ff6ed3b8a806cdb3193b403320234884515ac99c  dist/skills/ai-engineering-command-desk/ai-engineering-command-desk/SKILL.md
 f9c5a341686f5270a0ad79c57ff5c6064c3e10db8100948c0872df1807040c91  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/agents/openai.yaml
 1d6ba688e899602ba8389ee4d8a294f59e2aabc161d7d9c70838efec980f61d5  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/assets/icon.svg
 8b1c3d20959048200586c769459e484086e838ffd152e0607822d87c26902f28  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/references/ai-incident-quality-checklist.md
@@ -30,7 +47,7 @@ f9c5a341686f5270a0ad79c57ff5c6064c3e10db8100948c0872df1807040c91  dist/skills/ai
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/references/desk-hardening-matrix.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/references/suite-workflow-contract.md
-e6730813d2236b7c4f1870bdac42c74d122827bc04ff225c018ec8f2914a238d  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/SKILL.md
+d1572cbd7a995f2055055d40f56a600ac36fd416fc7d655d8930e673d6262522  dist/skills/ai-engineering-command-desk/ai-incident-response-desk/SKILL.md
 4181dc0b64f3be50c5c290e0296040bf24beecfc04b7c68f849c7a8a8ad7e10a  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/agents/openai.yaml
 61bd4bd7d79b420f97389ad1d1450618c769dff706bf7f074e4f3f0f829c0dbd  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/assets/icon.svg
 694a68950c5d758e73eeee01f3e2e866f9abbbea5859b04c6f6d767c367a7b25  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/references/ai-release-readiness-packet-template.md
@@ -38,7 +55,7 @@ e6730813d2236b7c4f1870bdac42c74d122827bc04ff225c018ec8f2914a238d  dist/skills/ai
 70538ff6a3775b4efb12d5a1ae252f51066d39bfad93a766a3e4e8a026494f1f  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/references/release-readiness-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/references/suite-workflow-contract.md
-1b30619a4ec0966329fde5d2327b0cfa90043316361ce919690138d06cdd520d  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/SKILL.md
+e6730813d2236b7c4f1870bdac42c74d122827bc04ff225c018ec8f2914a238d  dist/skills/ai-engineering-command-desk/ai-release-readiness-desk/SKILL.md
 dbc8c289ffef8baf0bc0fd3a2a9763b3e2923d07123c4381e6df41056ffb626e  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/agents/openai.yaml
 6be25fd700c01f75b37f040b138fe2370fca8d116962e4696e7530413c66270f  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/assets/icon.svg
 be2ae2e1932696eff19a338e60a40178ebbe0ddc049ad864ed9e02f1e2480b33  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/references/ai-safety-risk-checklist.md
@@ -46,7 +63,7 @@ be2ae2e1932696eff19a338e60a40178ebbe0ddc049ad864ed9e02f1e2480b33  dist/skills/ai
 5ef640f428980c345f13e504cc5edcf19eb4b6f638f50978d1740536065be64c  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/references/safety-review-packet-template.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/references/suite-workflow-contract.md
-e4b26b71aa83b9b27324f2aba6c81ce17646145d407dfcdb9880b1a1a7bb1576  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/SKILL.md
+1b30619a4ec0966329fde5d2327b0cfa90043316361ce919690138d06cdd520d  dist/skills/ai-engineering-command-desk/ai-safety-review-desk/SKILL.md
 1069d152ed17d390d772fe13339b630b47c240027ef3cf3ae0339b3c89ebcc0f  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/agents/openai.yaml
 c2ec9557cd32665106055bec4f0f47030be1f424e579a2e0ecc083e712b2e6c6  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/assets/icon.svg
 088271e4c5c9f0e360fe032d92252f096dfc4d65b356090a8202cc676cbf2166  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/references/cost-latency-optimization-packet-template.md
@@ -54,7 +71,7 @@ c2ec9557cd32665106055bec4f0f47030be1f424e579a2e0ecc083e712b2e6c6  dist/skills/ai
 aa640d71586b860a6e058f5ae9aef8af096ca7b42bd5a44bc0627a508676e119  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/references/desk-hardening-matrix.md
 a21fcac67b40ed0d8adf9a0ce93f28d89e932860d1462a8f8925b7da8fe67280  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/references/suite-workflow-contract.md
-5e1c52e9c34626c7853d65741df8203d1ff50e29d0bb70f60e1320098bf057f1  dist/skills/ai-engineering-command-desk/dataset-curation-desk/SKILL.md
+e4b26b71aa83b9b27324f2aba6c81ce17646145d407dfcdb9880b1a1a7bb1576  dist/skills/ai-engineering-command-desk/cost-latency-optimization-desk/SKILL.md
 bc02208e127b25f6d497ee1277461f74fb756bfbf6e9734b52852d568813dcae  dist/skills/ai-engineering-command-desk/dataset-curation-desk/agents/openai.yaml
 ee3fa7c4dfad9f6d0902939e8d0260fcc25a6e71f4a9066bff5cab0fbc0e2ffd  dist/skills/ai-engineering-command-desk/dataset-curation-desk/assets/icon.svg
 ce6472fc48b698b9bce4af8023f9cfd552b70ce5cd4bc60477cf4b4fc3918ae5  dist/skills/ai-engineering-command-desk/dataset-curation-desk/references/dataset-curation-packet-template.md
@@ -62,7 +79,7 @@ ce6472fc48b698b9bce4af8023f9cfd552b70ce5cd4bc60477cf4b4fc3918ae5  dist/skills/ai
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/dataset-curation-desk/references/desk-hardening-matrix.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/dataset-curation-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/dataset-curation-desk/references/suite-workflow-contract.md
-ee55cd300d127dba9b1a77a6770bc936af1e51435d09a37a6878681a683ef618  dist/skills/ai-engineering-command-desk/eval-design-desk/SKILL.md
+5e1c52e9c34626c7853d65741df8203d1ff50e29d0bb70f60e1320098bf057f1  dist/skills/ai-engineering-command-desk/dataset-curation-desk/SKILL.md
 0a487affaa975f65612294e2f6fc9ee624a8e3a59f57a4d11c467cd441a74a90  dist/skills/ai-engineering-command-desk/eval-design-desk/agents/openai.yaml
 c053a75594b8ee20b4b35d661b282acd6e7445d232018111472521148f76ae9c  dist/skills/ai-engineering-command-desk/eval-design-desk/assets/icon.svg
 001639229db11fdfe28436f8520f61ccbef42e7788eee7a3f8b0d252fd3cd06a  dist/skills/ai-engineering-command-desk/eval-design-desk/references/desk-hardening-matrix.md
@@ -70,7 +87,7 @@ c053a75594b8ee20b4b35d661b282acd6e7445d232018111472521148f76ae9c  dist/skills/ai
 e62c9296dfec7be39cf0956aff856d5bf865a852d4cbdc183900dbd1d1925027  dist/skills/ai-engineering-command-desk/eval-design-desk/references/eval-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/eval-design-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/eval-design-desk/references/suite-workflow-contract.md
-07b8c522be41ac0a1c7c8a61e0e2ccdf6fac5ebf7e7ad036c3991520f3269395  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/SKILL.md
+ee55cd300d127dba9b1a77a6770bc936af1e51435d09a37a6878681a683ef618  dist/skills/ai-engineering-command-desk/eval-design-desk/SKILL.md
 0611a77c1b0c05c62333e4a583590d397f51e44a58ae6dc4e14cdeacbc4afd11  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/agents/openai.yaml
 9080fac47ab79c039a287167372fd01f7db4cee16ecdbdc2329acb28e8f3e255  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/assets/icon.svg
 7c9decc7144d63309759efd61123fe50f51981d43981d7a6a716dcbf4fec4c76  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/references/desk-hardening-matrix.md
@@ -78,7 +95,7 @@ d274e13dcf40bf418aacb776ef862c77882cd55a52349236ab402c9dc15a1cf8  dist/skills/ai
 dd55445a9bbbce20d841bd93096889f3230f78ee632239b7a5629703902b775c  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/references/eval-run-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/references/suite-workflow-contract.md
-ee54019b65715c78b3051928e54db864d26f4fd17db9d2393f29f5123a38fb22  dist/skills/ai-engineering-command-desk/fine-tuning-desk/SKILL.md
+07b8c522be41ac0a1c7c8a61e0e2ccdf6fac5ebf7e7ad036c3991520f3269395  dist/skills/ai-engineering-command-desk/eval-run-analysis-desk/SKILL.md
 211da058442dc8f97e1f229329c345037f5e6aa83e85b7b31a80daa424f04bbe  dist/skills/ai-engineering-command-desk/fine-tuning-desk/agents/openai.yaml
 d4ff94bca400273eeec8a1df0b05f64c5e6b3ec43dd9a284a86545df9527e980  dist/skills/ai-engineering-command-desk/fine-tuning-desk/assets/icon.svg
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/fine-tuning-desk/references/desk-hardening-matrix.md
@@ -86,7 +103,7 @@ d4ff94bca400273eeec8a1df0b05f64c5e6b3ec43dd9a284a86545df9527e980  dist/skills/ai
 b26a570a305be934450afcc60bd5298980dd713d6f69cf8c07af309533af7d9a  dist/skills/ai-engineering-command-desk/fine-tuning-desk/references/fine-tuning-readiness-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/fine-tuning-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/fine-tuning-desk/references/suite-workflow-contract.md
-176929e2edae59615d5cd4e4a65d35320a24bda766ee5d1960ae4c840cf59f39  dist/skills/ai-engineering-command-desk/inference-ops-desk/SKILL.md
+ee54019b65715c78b3051928e54db864d26f4fd17db9d2393f29f5123a38fb22  dist/skills/ai-engineering-command-desk/fine-tuning-desk/SKILL.md
 df8b29b097d4d02da4a4678e5c8fc425bf42516ab2a4c70f308bf728ae98f6f7  dist/skills/ai-engineering-command-desk/inference-ops-desk/agents/openai.yaml
 e7f8dfd92a2e6f2b3898126c13f9c2ead6301da2e8e89ec0cb518ce0e5e82082  dist/skills/ai-engineering-command-desk/inference-ops-desk/assets/icon.svg
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/inference-ops-desk/references/desk-hardening-matrix.md
@@ -94,7 +111,7 @@ e7f8dfd92a2e6f2b3898126c13f9c2ead6301da2e8e89ec0cb518ce0e5e82082  dist/skills/ai
 4cc53a00ebbed33ba6b11d06881f00ba9f41d64d41862d6d1ba2b5ee81b59607  dist/skills/ai-engineering-command-desk/inference-ops-desk/references/inference-ops-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/inference-ops-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/inference-ops-desk/references/suite-workflow-contract.md
-3f1b05e49079fde9250299f467e555c745d21f9f4c38a164c25513fd5994131f  dist/skills/ai-engineering-command-desk/model-selection-desk/SKILL.md
+176929e2edae59615d5cd4e4a65d35320a24bda766ee5d1960ae4c840cf59f39  dist/skills/ai-engineering-command-desk/inference-ops-desk/SKILL.md
 b4b6c8ea5b77f40694d479a12e2f69924d5d56ab710b34b36113d3681f276caa  dist/skills/ai-engineering-command-desk/model-selection-desk/agents/openai.yaml
 0c935775f4d1e1bbb56ac4b550f28b35c20c051656f6a07d311f1d6c2cadd5b7  dist/skills/ai-engineering-command-desk/model-selection-desk/assets/icon.svg
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/model-selection-desk/references/desk-hardening-matrix.md
@@ -102,14 +119,14 @@ b4b6c8ea5b77f40694d479a12e2f69924d5d56ab710b34b36113d3681f276caa  dist/skills/ai
 e4f1384b6e8d57c7635c90a07397cfe2b93cd6b43948df4006659f5e6ab9e6bf  dist/skills/ai-engineering-command-desk/model-selection-desk/references/model-selection-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/model-selection-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/model-selection-desk/references/suite-workflow-contract.md
-5fbc6d87c27ff50448301ac66f0ac935a06ba94d143f7913aa7540e2c68a6fb4  dist/skills/ai-engineering-command-desk/prompt-systems-desk/SKILL.md
+3f1b05e49079fde9250299f467e555c745d21f9f4c38a164c25513fd5994131f  dist/skills/ai-engineering-command-desk/model-selection-desk/SKILL.md
 7f355ed1cbc96b5fdf3ee31ec5a3f2b9937b9e99349b82a5c8869b359b9bb52c  dist/skills/ai-engineering-command-desk/prompt-systems-desk/agents/openai.yaml
 1ed9235d850afad5b78591ec95aa52413f7e0dc51fe7bad556fbed4037cca952  dist/skills/ai-engineering-command-desk/prompt-systems-desk/assets/icon.svg
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/prompt-systems-desk/references/desk-hardening-matrix.md
 f8309f8676b0f3d4887d388a7a9043d948674c5a695adb6bcd8a5b94b0bdb44e  dist/skills/ai-engineering-command-desk/prompt-systems-desk/references/prompt-system-packet-template.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/prompt-systems-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/prompt-systems-desk/references/suite-workflow-contract.md
-bb55350c942ac7ecbcea30e73559ea04b2f4b952037a8a6cbef53f8f31b96802  dist/skills/ai-engineering-command-desk/red-team-eval-desk/SKILL.md
+5fbc6d87c27ff50448301ac66f0ac935a06ba94d143f7913aa7540e2c68a6fb4  dist/skills/ai-engineering-command-desk/prompt-systems-desk/SKILL.md
 ddb7681f7ab66eb03baddd5e57230f1744eea942ae41d2f4499c9e14466980be  dist/skills/ai-engineering-command-desk/red-team-eval-desk/agents/openai.yaml
 28be684a9aef1d890ccd9f3162e6e4f9e1c1ce2f19809a8e380e4b0946cabb7c  dist/skills/ai-engineering-command-desk/red-team-eval-desk/assets/icon.svg
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/red-team-eval-desk/references/desk-hardening-matrix.md
@@ -117,7 +134,7 @@ ddb7681f7ab66eb03baddd5e57230f1744eea942ae41d2f4499c9e14466980be  dist/skills/ai
 fcdbb561530fd4d62fb4a90c5537f067538e39752bce0242153bd3604b108933  dist/skills/ai-engineering-command-desk/red-team-eval-desk/references/red-team-quality-checklist.md
 0d41f37489ec985ddb61ec5845e704cb8299cff9c71e35e777d5dc1143efe1fc  dist/skills/ai-engineering-command-desk/red-team-eval-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/red-team-eval-desk/references/suite-workflow-contract.md
-9c19333b1c64f0c457a128be19f07d90f5ddce0c65f606d2642460e2fa838555  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/SKILL.md
+bb55350c942ac7ecbcea30e73559ea04b2f4b952037a8a6cbef53f8f31b96802  dist/skills/ai-engineering-command-desk/red-team-eval-desk/SKILL.md
 79264ea2a944856aeaea4cddc7e7fd54e64a98e3460b675cc4a5519d0b306db9  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/agents/openai.yaml
 0262e429d728dcf82e982e494795f0c284bdd121fe8a94dd32efe9117071e5e7  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/assets/icon.svg
 fe32cfcab3b07a79220cc5bf674d10e0d14e69820182f0d56a214667ea3c70a8  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/references/desk-hardening-matrix.md
@@ -125,7 +142,7 @@ d1e511d026933b7f1215459c771a7162c5b4c80cb5ae05faa53c28f34cba86dd  dist/skills/ai
 368b53e4ffa050855cdf2986a48734cb95a34e2a80dd2ef821e899ec067f5ce8  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/references/retrieval-quality-checklist.md
 e424955433d1ee75fd7edfd773f4deab7e74ecbe480d87f9891aa3572a404eb9  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/references/standards-source-map.md
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/references/suite-workflow-contract.md
-dbf14e3bf5fa41a1935c7f9930ed98cfd14c2062a9f41003a38e94abcef3937f  dist/skills/ai-engineering-command-desk/synthetic-data-desk/SKILL.md
+9c19333b1c64f0c457a128be19f07d90f5ddce0c65f606d2642460e2fa838555  dist/skills/ai-engineering-command-desk/retrieval-rag-design-desk/SKILL.md
 f2855b3d4e67ca93585ff9d3ccaf79a409e77244b695046bcaf4b22a2376db97  dist/skills/ai-engineering-command-desk/synthetic-data-desk/agents/openai.yaml
 a1993dee7197f3b974ee4961ddf43c3f76fea668c7cc132ddfe48e4411b5cb62  dist/skills/ai-engineering-command-desk/synthetic-data-desk/assets/icon.svg
 8eec8db50514c17e1f773799979bf7f659c329e7627f9c3509cb1e729b55d2e1  dist/skills/ai-engineering-command-desk/synthetic-data-desk/references/desk-hardening-matrix.md
@@ -133,7 +150,7 @@ a1993dee7197f3b974ee4961ddf43c3f76fea668c7cc132ddfe48e4411b5cb62  dist/skills/ai
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/synthetic-data-desk/references/suite-workflow-contract.md
 951e1bfa3b2793b921c0da399b4f9397c7275b37660edda4decb2072ccefbb3d  dist/skills/ai-engineering-command-desk/synthetic-data-desk/references/synthetic-data-packet-template.md
 43899997ec5121e512540b0f077623ba9468e9b6ae0ca3a939a9d60e268272e2  dist/skills/ai-engineering-command-desk/synthetic-data-desk/references/synthetic-data-quality-checklist.md
-7f257d866b9d3356700b6d7b8c80882741220c5b9459d7308076aee60e84a7da  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/SKILL.md
+dbf14e3bf5fa41a1935c7f9930ed98cfd14c2062a9f41003a38e94abcef3937f  dist/skills/ai-engineering-command-desk/synthetic-data-desk/SKILL.md
 b30ed2668561a0043a0185c91a8fc0155f97a5454752ec01c10478b3b8cfe198  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/agents/openai.yaml
 c364bea66ebe6485e92b1b466e602f980030f327a558146da2ec98724529ad8c  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/assets/icon.svg
 cef663daa829fe2db9189372976ec25246413f7e2865068246289ad95c0b8613  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/references/desk-hardening-matrix.md
@@ -141,3 +158,4 @@ cef663daa829fe2db9189372976ec25246413f7e2865068246289ad95c0b8613  dist/skills/ai
 8c789bc4a9e30fd77b2f837e82cbfd9c4556f5a81c4b80192eb60d7f08cb97fd  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/references/suite-workflow-contract.md
 5a0488eeca5b16cd2d20a9d0680e83376d496b515ed50ef9041841b261100ee6  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/references/tool-schema-packet-template.md
 c5a0754920191837c2d5d6da6abc046c51c579b649c2615a20fa12c3382e06d8  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/references/tool-schema-risk-checklist.md
+7f257d866b9d3356700b6d7b8c80882741220c5b9459d7308076aee60e84a7da  dist/skills/ai-engineering-command-desk/tool-schema-design-desk/SKILL.md

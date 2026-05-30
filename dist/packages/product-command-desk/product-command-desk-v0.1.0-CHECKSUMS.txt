@@ -1,0 +1,84 @@
+954414a57334653737ab3b2037764445718fb32228d5a3feac55c595cde6c68e  dist/manifests/product-command-desk-v0.1.0.json
+5bfd7e93b869759414bcb463fd0d2ac19b45f4e541dfc893965bc4885d80cacc  dist/packages/product-command-desk/churn-retention-analysis-desk-v0.1.0.zip
+ef33afdcbfb48c1665bbc96d24f70c54f7254822030e8fc495313a22fb10983d  dist/packages/product-command-desk/competitive-analysis-desk-v0.1.0.zip
+ab7be2d5508d65d49cd5b5eef6af747d82f77a0e8d2cdbfbe8c6d7843ac2a38d  dist/packages/product-command-desk/experiment-design-desk-v0.1.0.zip
+3af20d7169edc937c0947e561a9a9b8c8e8ee308f71181edac020bc0a3bf7edd  dist/packages/product-command-desk/feature-prioritization-desk-v0.1.0.zip
+066af717d7811b582afbc85fa9a1938005127058450d2b10853f593c35155efc  dist/packages/product-command-desk/feedback-synthesis-desk-v0.1.0.zip
+cc5b484be4b173794bdad335e91d7c08de1e97a01c1558eec1fc361902d91a65  dist/packages/product-command-desk/gtm-brief-desk-v0.1.0.zip
+6441767b827993717190942dda7f21dcf12c170967062eafd3792b2f07b27168  dist/packages/product-command-desk/launch-readiness-desk-v0.1.0.zip
+cec88bdf7b9df09f56ace461bb52a5cc5234e175fad65a6c949f82f81c032aa4  dist/packages/product-command-desk/market-discovery-desk-v0.1.0.zip
+64af0ec658a1686249d22e954d17242286e9ee6ac6dc6b091f6f4ecb17b86da2  dist/packages/product-command-desk/opportunity-sizing-desk-v0.1.0.zip
+1d9d0e118d6ccf81c3cc8727f92eb4939b4be4ee236194219ea131fa267c20d4  dist/packages/product-command-desk/persona-segmentation-desk-v0.1.0.zip
+34efe8a6d06dbee4664dd786c4509b2059bfed62c0e283f56da4c186f8b87808  dist/packages/product-command-desk/prd-desk-v0.1.0.zip
+0fdbcdad86073e41281f5b7a93c6b3893a1ff5a38b85e1d7e733fc01c8fd515e  dist/packages/product-command-desk/pricing-packaging-desk-v0.1.0.zip
+54b0d3c444b88663df8aa27bd3744ac0bc0baf284276da1d9eb92495877a8189  dist/packages/product-command-desk/product-command-desk-v0.1.0-skill-bundles.zip
+ce9e17791a314bd611666ddb45598205ee92ba982e0f3e812fab57c57f472fe5  dist/packages/product-command-desk/product-command-desk-v0.1.0-source.zip
+252a16e21fe98355fa3a2bb9809d2b04205cb41e11a3c3ef3012460a5d41fdbf  dist/packages/product-command-desk/product-command-desk-v0.1.0.zip
+bbbb1c0989b26894fc9fda260d961f472e235554339c50fb3e66c6f5358e0b45  dist/packages/product-command-desk/product-retrospective-desk-v0.1.0.zip
+f6abcc87e6574685462ac0d27014ef2139ba780118be1197591dd42cfda3766e  dist/packages/product-command-desk/roadmap-planning-desk-v0.1.0.zip
+d3e2f1a2a3c6a7242a49d8e804ca5ea6f41163a1fabc7002d0dfcf49b56b5b8c  dist/packages/product-command-desk/user-research-desk-v0.1.0.zip
+dc43f83ccaa08be972c727ec9db78be7b025e0ec2544b885889ff1846b3f09df  dist/skills/product-command-desk/churn-retention-analysis-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/churn-retention-analysis-desk/assets/.gitkeep
+a0a736be8d0e7502da46c9ee603e4dcab2ff26d49b84f72ac18e7ecbe24449f7  dist/skills/product-command-desk/churn-retention-analysis-desk/SKILL.md
+ba897600f266f684162dd871196005bb285d3914049dbef2c0d604f23c21f5bd  dist/skills/product-command-desk/competitive-analysis-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/competitive-analysis-desk/assets/.gitkeep
+8b837c53c718e9412c550d95de1e26d860e32d2c1595a80906da5811dfda6f0d  dist/skills/product-command-desk/competitive-analysis-desk/SKILL.md
+961ff96d4e834acce6ae50f2da80fd5dfb48a4ca3210aa6eb0d00c1256e6649f  dist/skills/product-command-desk/experiment-design-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/experiment-design-desk/assets/.gitkeep
+cce30fd2e4bec07240fa9b456a354332c8fa70bf3768c9caf1017cc9b924d070  dist/skills/product-command-desk/experiment-design-desk/SKILL.md
+550242372e0ce12e6778443a466a4713cca41848fea1f6dfbc6a95c498531c7f  dist/skills/product-command-desk/feature-prioritization-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/feature-prioritization-desk/assets/.gitkeep
+3b4908fe0c0bb2ad93aa824518e15c47efb145c0db45047f66b085515315984e  dist/skills/product-command-desk/feature-prioritization-desk/SKILL.md
+a28c197fb2fbdfc77136c61595d96370c51521e17bc5704215c92b25bbae142e  dist/skills/product-command-desk/feedback-synthesis-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/feedback-synthesis-desk/assets/.gitkeep
+c7c9b1dd633d25fe70793816204edc7b380646da1c4e57abaac97bbbd6cfa98a  dist/skills/product-command-desk/feedback-synthesis-desk/SKILL.md
+77d06554de30806ace1cb632b9f75d63dbd7779e6977ce84d9e523501394c277  dist/skills/product-command-desk/gtm-brief-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/gtm-brief-desk/assets/.gitkeep
+1463a42d99e634ecdd755f612f1475002e6cbdb046e00ce8190482f5f7d3bc85  dist/skills/product-command-desk/gtm-brief-desk/SKILL.md
+c50505cc834f978982682f9d4a2520340e3a6c8e21d5a5cbc21eed1328178e83  dist/skills/product-command-desk/launch-readiness-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/launch-readiness-desk/assets/.gitkeep
+28a254de62be10bd094a30f13cfd42a19216bd56528586fa1f408e1ab6a547ff  dist/skills/product-command-desk/launch-readiness-desk/SKILL.md
+68b049a5b59ba6ceb1dff204f3da9b50c41d08947204b0a616f1f4381875feed  dist/skills/product-command-desk/market-discovery-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/market-discovery-desk/assets/.gitkeep
+bdc29c1210d5d1aa8a9340be82389654643064362c1a64ba62414098b8789f63  dist/skills/product-command-desk/market-discovery-desk/SKILL.md
+be9b8f33bfd5ad09fdfd26ca54fa53335231af182bc616be92fd710683392c54  dist/skills/product-command-desk/opportunity-sizing-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/opportunity-sizing-desk/assets/.gitkeep
+5476ee366069f5e6b98d944fba157d8c35212236a4dac6a7c1c945c9906dedcf  dist/skills/product-command-desk/opportunity-sizing-desk/SKILL.md
+3f262f6ce30c938812432281a36b400d8ffae20ea2d78177e0306594fee1961d  dist/skills/product-command-desk/persona-segmentation-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/persona-segmentation-desk/assets/.gitkeep
+dc71b0c0b318968628e1acabc9edfaf506b3a799cc1230b899b3ce4fbcc98805  dist/skills/product-command-desk/persona-segmentation-desk/SKILL.md
+4b977125050ee10d4f4c5755187f7062a09245af07ff5d166c79377709627b35  dist/skills/product-command-desk/prd-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/prd-desk/assets/.gitkeep
+435c8a150a6d2035e63bfb892f722e0d2f565ac0bf48bcb87ce751353ecce7c0  dist/skills/product-command-desk/prd-desk/SKILL.md
+c175cc5643e2ec6e3f52251d81c65f8cb898e174c55498371f96ff5ed7a8bacb  dist/skills/product-command-desk/pricing-packaging-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/pricing-packaging-desk/assets/.gitkeep
+0696278421286b8278a55328d6087da8c9b2f5757b9b719102ebe83f46c5b9cf  dist/skills/product-command-desk/pricing-packaging-desk/SKILL.md
+7a03621375fcdebd282188610e9e0b8599dc2a4c108497f6539b541aedcb7582  dist/skills/product-command-desk/product-command-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/product-command-desk/assets/.gitkeep
+8d54687814361c7d20bfa81120f9ae12fb1ad9991ebebd7079d6d835145a5675  dist/skills/product-command-desk/product-command-desk/SKILL.md
+f19d827ee5615bada43d97c62a4b4f0a9b97428e143a124920c5795d01018fe1  dist/skills/product-command-desk/product-retrospective-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/product-retrospective-desk/assets/.gitkeep
+fc5321211867134aadb09adac590f5bc2710a1e01b562df7a025c3c390576012  dist/skills/product-command-desk/product-retrospective-desk/SKILL.md
+0c48970a8e7c5b9e0ec1de1960053115c5b40f29dad275ddb97a3379867b68f7  dist/skills/product-command-desk/roadmap-planning-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/roadmap-planning-desk/assets/.gitkeep
+ad8312b6c94f10b26a65d18b663786e8d32a5db0940652a87016adf3f59a05f6  dist/skills/product-command-desk/roadmap-planning-desk/SKILL.md
+f212dfb4f6a08638539a8bbdc9ebd3fcd48c4a42c99b53ad53807973845ee3da  dist/skills/product-command-desk/user-research-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/product-command-desk/user-research-desk/assets/.gitkeep
+94657c84d16c4c5005bc4c62f554119bc54b335ab2762b8fbd75db7b1c097d18  dist/skills/product-command-desk/user-research-desk/SKILL.md
+a0a736be8d0e7502da46c9ee603e4dcab2ff26d49b84f72ac18e7ecbe24449f7  skills/Product Command Desk/churn-retention-analysis-desk.md
+8b837c53c718e9412c550d95de1e26d860e32d2c1595a80906da5811dfda6f0d  skills/Product Command Desk/competitive-analysis-desk.md
+cce30fd2e4bec07240fa9b456a354332c8fa70bf3768c9caf1017cc9b924d070  skills/Product Command Desk/experiment-design-desk.md
+3b4908fe0c0bb2ad93aa824518e15c47efb145c0db45047f66b085515315984e  skills/Product Command Desk/feature-prioritization-desk.md
+c7c9b1dd633d25fe70793816204edc7b380646da1c4e57abaac97bbbd6cfa98a  skills/Product Command Desk/feedback-synthesis-desk.md
+1463a42d99e634ecdd755f612f1475002e6cbdb046e00ce8190482f5f7d3bc85  skills/Product Command Desk/gtm-brief-desk.md
+28a254de62be10bd094a30f13cfd42a19216bd56528586fa1f408e1ab6a547ff  skills/Product Command Desk/launch-readiness-desk.md
+bdc29c1210d5d1aa8a9340be82389654643064362c1a64ba62414098b8789f63  skills/Product Command Desk/market-discovery-desk.md
+5476ee366069f5e6b98d944fba157d8c35212236a4dac6a7c1c945c9906dedcf  skills/Product Command Desk/opportunity-sizing-desk.md
+dc71b0c0b318968628e1acabc9edfaf506b3a799cc1230b899b3ce4fbcc98805  skills/Product Command Desk/persona-segmentation-desk.md
+435c8a150a6d2035e63bfb892f722e0d2f565ac0bf48bcb87ce751353ecce7c0  skills/Product Command Desk/prd-desk.md
+0696278421286b8278a55328d6087da8c9b2f5757b9b719102ebe83f46c5b9cf  skills/Product Command Desk/pricing-packaging-desk.md
+8d54687814361c7d20bfa81120f9ae12fb1ad9991ebebd7079d6d835145a5675  skills/Product Command Desk/product-command-desk.md
+fc5321211867134aadb09adac590f5bc2710a1e01b562df7a025c3c390576012  skills/Product Command Desk/product-retrospective-desk.md
+05c9bdb23b3cc27439e13cef5ad7485fa0954b31eaf588ce1c7e048df8ded151  skills/Product Command Desk/README.md
+ad8312b6c94f10b26a65d18b663786e8d32a5db0940652a87016adf3f59a05f6  skills/Product Command Desk/roadmap-planning-desk.md
+94657c84d16c4c5005bc4c62f554119bc54b335ab2762b8fbd75db7b1c097d18  skills/Product Command Desk/user-research-desk.md

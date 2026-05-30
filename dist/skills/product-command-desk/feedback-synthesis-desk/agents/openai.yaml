@@ -1,0 +1,8 @@
+interface:
+  display_name: Feedback Synthesis Desk
+  short_description: Intake, cluster, and weight product feedback from multiple sources and map to product actions.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

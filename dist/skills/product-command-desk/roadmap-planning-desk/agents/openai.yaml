@@ -1,0 +1,8 @@
+interface:
+  display_name: Roadmap Planning Desk
+  short_description: Plan roadmap themes, sequencing, dependencies, milestones, and tradeoffs.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

@@ -1,0 +1,8 @@
+interface:
+  display_name: Opportunity Sizing Desk
+  short_description: Estimate TAM, SAM, SOM, revenue potential, adoption constraints, and confidence levels for product opportunities.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt

@@ -1,0 +1,8 @@
+interface:
+  display_name: Launch Readiness Desk
+  short_description: Gate product launches against release scope, comms, support, docs, metrics, and rollback readiness.
+  icon: 📦
+  primary_color: '#7c3aed'
+policy:
+  products:
+    - chatgpt
