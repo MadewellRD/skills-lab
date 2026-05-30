@@ -1,14 +1,13 @@
 # Skills-Lab
 
 ![Skills-Lab hero](assets/skills-lab-hero.svg)
-
-Think in chat. Execute in the CLI. Ship like you already know the process.
-
 [![SDLC Command Desk](https://img.shields.io/badge/SDLC%20Command%20Desk-v0.2.0-green.svg)](releases/v0.2.0-rc.1.md)
 [![Web Development Command Desk](https://img.shields.io/badge/Web%20Dev%20Command%20Desk-v0.3.0-green.svg)](releases/v0.3.0-web-development-command-desk.md)
 [![AI Engineering Command Desk](https://img.shields.io/badge/AI%20Engineering%20Command%20Desk-v0.1.0-blue.svg)](dist/manifests/ai-engineering-command-desk-manifest.json)
 [![Sales Revenue Command Desk](https://img.shields.io/badge/Sales%20Revenue%20Command%20Desk-v0.1.0-blue.svg)](releases/sales-command-desk-v0.1.0.md)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+Think in chat. Execute in the CLI. Ship like you already know the process.
+
 
 Skills-Lab is a public lab for building and sharing **Desk Suites** — ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk professional workflows without needing to already know the process.
 
