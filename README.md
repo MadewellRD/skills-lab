@@ -1,9 +1,9 @@
 # Skills-Lab
 
 ![Skills-Lab hero](assets/skills-lab-hero.svg)
-[![GitHub latest release](https://img.shields.io/badge/GitHub%20latest-web--development--command--desk--v0.3.0-blue.svg)](https://github.com/MadewellRD/skills-lab/releases/tag/web-development-command-desk-v0.3.0)
-[![SDLC release candidate](https://img.shields.io/badge/SDLC%20Command%20Desk-v0.2.0--rc.1-yellow.svg)](releases/v0.2.0-rc.1.md)
-[![Published suites](https://img.shields.io/badge/published%20suites-5-green.svg)](MANIFEST.md)
+[![Latest release](https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest%20release&sort=semver)](https://github.com/MadewellRD/skills-lab/releases/latest)
+[![Published suites](https://img.shields.io/badge/published%20suites-5-22c55e.svg)](MANIFEST.md)
+[![Release validation](https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg)](.github/workflows/validate-release-assets.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 Think in chat. Execute in the CLI. Ship like you already know the process.
 
@@ -23,31 +23,30 @@ The goal is direct: give builders a guided path through any domain — software 
 
 ## Release status
 
-GitHub Releases now publishes the main packaged suite lines. Web Development Command Desk v0.3.0 is marked as the GitHub `Latest` release.
+GitHub Releases publishes the main packaged suite lines. Web Development Command Desk v0.3.0 is marked as the GitHub `Latest` release.
 
 ### GitHub-published suite releases
 
 | Release | Suite | GitHub state | Assets |
 |---|---|---|---|
-| [v0.2.0-rc.1](releases/v0.2.0-rc.1.md) | SDLC Command Desk | Published, not marked as GitHub `Latest` | 19 skill zips + `CHECKSUMS.txt` |
-| [v0.1.1](releases/v0.1.1.md) | SDLC Command Desk | Published and currently marked GitHub `Latest` | Workflow-linked release bundle + checksums |
-| [v0.1.0](releases/v0.1.0.md) | SDLC Command Desk | Published historical release | Initial 19 skill zips + checksums |
+| [web-development-command-desk-v0.3.0](https://github.com/MadewellRD/skills-lab/releases/tag/web-development-command-desk-v0.3.0) | Web Development Command Desk | Published and marked GitHub `Latest` | 14 skill zips + manifest/checksum assets |
+| [ai-engineering-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/ai-engineering-command-desk-v0.1.0) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
+| [product-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/product-command-desk-v0.1.0) | Product Command Desk | Published | 16 skill zips + release/source bundles + checksums |
+| [sales-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/sales-command-desk-v0.1.0) | Sales Command Desk | Published | 13 skill zips + release/source bundles + checksums |
+| [v0.2.0-rc.1](https://github.com/MadewellRD/skills-lab/releases/tag/v0.2.0-rc.1) | SDLC Command Desk | Published release candidate | 19 skill zips + `CHECKSUMS.txt` |
 
 ### Historical SDLC releases
 
-| Suite | Version | Source | Packaged skills | Package artifacts | Checksum source |
-|---|---|---|---:|---:|---|
-| Web Development Command Desk | v0.3.0 | `skills/Web Development Command Desk/` | 14 | 14 skill zips | `dist/manifests/web-development-command-desk-CHECKSUMS.txt` |
-| AI Engineering Command Desk | v0.1.0 | `skills/AI Engineering Command Desk/` | 18 | 18 skill zips | `dist/manifests/ai-engineering-command-desk-CHECKSUMS.txt` |
-| Sales Command Desk | v0.1.0 | `skills/Sales Command Desk/` | 13 | 13 skill zips + release/source bundles | `CHECKSUMS-sales-command-desk-v0.1.0.txt` |
-| Product Command Desk | v0.1.0 | `skills/Product Command Desk/` | 16 | 16 skill zips + release/source bundles | `CHECKSUMS-product-command-desk-v0.1.0.txt` |
+| Release | Suite | GitHub state | Assets |
+|---|---|---|---|
+| [v0.1.1](https://github.com/MadewellRD/skills-lab/releases/tag/v0.1.1) | SDLC Command Desk | Published historical release | Workflow-linked release bundle + checksums |
+| [v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/v0.1.0) | SDLC Command Desk | Published historical release | Initial 19 skill zips + checksums |
 
 ### Source scaffold suites
 
 These suites have source directories or README stubs but no generated `dist/` packages yet: Cloud Infrastructure, Customer Success, Customer Support, Data, Finance Accounting, FinOps, GRC, Knowledge Ops, Legal Contracts, Marketing Growth, People Talent, Platform Engineering, Privacy Data Protection, Procurement Vendor Management, Research, Sales Revenue (source preserved), Security, and SRE Reliability.
 
 ---
-
 ## How Desk Suites work
 
 Each Desk Suite follows the same model:

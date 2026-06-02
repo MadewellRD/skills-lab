@@ -1,87 +1,82 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Skills-Lab hero graphic</title>
-  <desc id="desc">Skills-Lab turns non-developer product ideas into source-grounded SDLC artifacts and small CLI-ready coding tasks.</desc>
+﻿<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Skills-Lab Desk Suite hero</title>
+  <desc id="desc">A dark command-center style hero graphic for Skills-Lab, showing governed Desk Suites turning chat reasoning into CLI execution.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#07111F"/>
-      <stop offset="0.45" stop-color="#0A1226"/>
-      <stop offset="1" stop-color="#130B2D"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.46" stop-color="#101827"/>
+      <stop offset="1" stop-color="#172033"/>
     </linearGradient>
-    <linearGradient id="accent" x1="80" y1="80" x2="1500" y2="780" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2F80ED"/>
-      <stop offset="0.45" stop-color="#29D3C2"/>
-      <stop offset="1" stop-color="#B14CFF"/>
+    <linearGradient id="panel" x1="110" y1="92" x2="1170" y2="548" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111c2e" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#0a1322" stop-opacity="0.96"/>
     </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#101B32" stop-opacity="0.95"/>
-      <stop offset="1" stop-color="#0A1020" stop-opacity="0.75"/>
+    <linearGradient id="accent" x1="184" y1="186" x2="1096" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#22c55e"/>
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="14" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glow" x="-40" y="-40" width="1360" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.35 0 0 0 0 0.95 0 0 0 0 1 0 0 0 0.35 0"/>
     </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#93a4bd" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1350" cy="145" r="220" fill="#2F80ED" opacity="0.12"/>
-  <circle cx="280" cy="760" r="260" fill="#B14CFF" opacity="0.12"/>
-  <path d="M82 724C302 617 454 650 628 725C828 812 1007 818 1514 604" stroke="url(#accent)" stroke-opacity="0.24" stroke-width="3"/>
 
-  <g transform="translate(86 74)">
-    <g filter="url(#glow)">
-      <path d="M86 24v120L26 255c-12 23 5 51 31 51h190c26 0 43-28 31-51l-60-111V24" stroke="url(#accent)" stroke-width="10" stroke-linejoin="round"/>
-      <path d="M120 152l-34 34 34 34M185 152l34 34-34 34M169 145l-33 84" stroke="#8CEBFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="112" cy="0" r="13" fill="#2F80ED"/>
-      <circle cx="149" cy="-26" r="10" fill="#29D3C2"/>
-      <circle cx="184" cy="5" r="12" fill="#B14CFF"/>
-    </g>
-    <text x="330" y="90" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="94" font-weight="800" letter-spacing="-3">Skills-Lab</text>
-    <text x="335" y="143" fill="#5FD9FF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="1">DESK SUITES FOR NON-DEVS, VIBE CODERS, AND AI-NATIVE BUILDERS</text>
-    <text x="335" y="206" fill="#DCE8FF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30">Walk through the SDLC with zero prior knowledge.</text>
-    <text x="335" y="248" fill="#DCE8FF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30">Produce source-grounded plans, code, tests, and shippable artifacts.</text>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <path d="M-40 470C170 370 285 423 474 315C645 218 822 93 1320 174" stroke="url(#accent)" stroke-opacity="0.24" stroke-width="72" filter="url(#glow)"/>
+  <path d="M-20 496C197 385 318 440 504 331C681 226 828 118 1300 184" stroke="url(#accent)" stroke-opacity="0.9" stroke-width="2"/>
+
+  <rect x="96" y="78" width="1088" height="484" rx="34" fill="url(#panel)" stroke="#93c5fd" stroke-opacity="0.18"/>
+  <rect x="124" y="106" width="1032" height="428" rx="24" fill="#08111f" fill-opacity="0.64" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <g opacity="0.95">
+    <text x="170" y="190" fill="#e5f3ff" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-2">Skills-Lab</text>
+    <text x="174" y="236" fill="#9fb3cc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="24" font-weight="500">Desk Suites for governed AI-native workflows</text>
+    <text x="174" y="278" fill="#cbd5e1" font-family="Consolas, Cascadia Mono, monospace" font-size="20">think in chat  →  constrain the task  →  execute in the CLI</text>
   </g>
 
-  <g transform="translate(86 402)">
-    <rect x="0" y="0" width="1428" height="150" rx="24" fill="url(#panel)" stroke="#254363"/>
-    <g transform="translate(44 32)">
-      <text x="0" y="0" fill="#5FD9FF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">CHAT INTERFACE</text>
-      <text x="0" y="42" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Skills-Lab Desk Suites</text>
-      <text x="0" y="80" fill="#BFD0EA" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24">requirements • discovery • architecture • issues • tests • verification • release</text>
-    </g>
-    <path d="M620 76h196" stroke="#35A7FF" stroke-width="7" stroke-linecap="round"/>
-    <path d="M792 48l38 28-38 28" stroke="#35A7FF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="650" y="48" fill="#5FD9FF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">SMALL TASKS + FILES</text>
-    <g transform="translate(870 32)">
-      <text x="0" y="0" fill="#C78BFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">CLI EXECUTION</text>
-      <text x="0" y="42" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Codex / Claude Code</text>
-      <text x="0" y="80" fill="#BFD0EA" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24">minimal reasoning • focused fixes • validation loops</text>
-    </g>
+  <g transform="translate(170 334)">
+    <rect width="212" height="58" rx="16" fill="#0f2437" stroke="#67e8f9" stroke-opacity="0.45"/>
+    <circle cx="32" cy="29" r="8" fill="#67e8f9"/>
+    <text x="54" y="36" fill="#e0f2fe" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="18" font-weight="700">Chat reasoning</text>
+  </g>
+  <g transform="translate(406 334)">
+    <rect width="212" height="58" rx="16" fill="#171b3a" stroke="#a78bfa" stroke-opacity="0.45"/>
+    <circle cx="32" cy="29" r="8" fill="#a78bfa"/>
+    <text x="54" y="36" fill="#ede9fe" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="18" font-weight="700">Desk contracts</text>
+  </g>
+  <g transform="translate(642 334)">
+    <rect width="212" height="58" rx="16" fill="#10251e" stroke="#34d399" stroke-opacity="0.45"/>
+    <circle cx="32" cy="29" r="8" fill="#34d399"/>
+    <text x="54" y="36" fill="#dcfce7" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="18" font-weight="700">CLI execution</text>
+  </g>
+  <g transform="translate(878 334)">
+    <rect width="212" height="58" rx="16" fill="#24162a" stroke="#f472b6" stroke-opacity="0.45"/>
+    <circle cx="32" cy="29" r="8" fill="#f472b6"/>
+    <text x="54" y="36" fill="#fce7f3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="18" font-weight="700">Evidence gates</text>
   </g>
 
-  <g transform="translate(86 596)">
-    <rect x="0" y="0" width="330" height="154" rx="22" fill="url(#panel)" stroke="#254363"/>
-    <text x="30" y="48" fill="#5FD9FF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">ZERO KNOWLEDGE</text>
-    <text x="30" y="90" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23">Guided SDLC flow</text>
-    <text x="30" y="123" fill="#BFD0EA" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">without being a developer</text>
-
-    <rect x="366" y="0" width="330" height="154" rx="22" fill="url(#panel)" stroke="#254363"/>
-    <text x="396" y="48" fill="#65FF8A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">SHIP QUALITY</text>
-    <text x="396" y="90" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23">Plans, code, tests, docs</text>
-    <text x="396" y="123" fill="#BFD0EA" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">with quality gates built in</text>
-
-    <rect x="732" y="0" width="330" height="154" rx="22" fill="url(#panel)" stroke="#254363"/>
-    <text x="762" y="48" fill="#FFCF5F" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">SAVE TOKENS</text>
-    <text x="762" y="90" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23">Reason in chat first</text>
-    <text x="762" y="123" fill="#BFD0EA" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">hand off constrained tasks</text>
-
-    <rect x="1098" y="0" width="330" height="154" rx="22" fill="url(#panel)" stroke="#254363"/>
-    <text x="1128" y="48" fill="#C78BFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">DESK SUITES</text>
-    <text x="1128" y="90" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23">SDLC Command Desk</text>
-    <text x="1128" y="123" fill="#BFD0EA" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21">and more suites to come</text>
+  <g stroke="#8aa4c6" stroke-width="2" stroke-opacity="0.36" fill="none">
+    <path d="M382 363H406"/>
+    <path d="M618 363H642"/>
+    <path d="M854 363H878"/>
   </g>
 
-  <text x="800" y="824" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">Skills-Lab is the bridge between your idea and production.</text>
-  <text x="800" y="865" text-anchor="middle" fill="#8CEBFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Chat does the thinking. CLI does the execution.</text>
+  <g transform="translate(170 435)">
+    <rect width="920" height="58" rx="18" fill="#020617" fill-opacity="0.78" stroke="#38bdf8" stroke-opacity="0.22"/>
+    <text x="28" y="37" fill="#7dd3fc" font-family="Consolas, Cascadia Mono, monospace" font-size="18">$ use command-desk --route --validate --handoff --halt-on-unknowns</text>
+  </g>
+
+  <g transform="translate(902 144)">
+    <rect width="188" height="112" rx="22" fill="#0b1220" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="28" y="42" fill="#e2e8f0" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="18" font-weight="800">Published</text>
+    <text x="28" y="73" fill="#67e8f9" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="32" font-weight="800">5</text>
+    <text x="70" y="73" fill="#94a3b8" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="18">suite lines</text>
+  </g>
+
+  <text x="174" y="520" fill="#64748b" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="16">SDLC • Web Development • AI Engineering • Product • Sales</text>
 </svg>
