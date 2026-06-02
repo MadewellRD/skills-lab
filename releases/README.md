@@ -30,6 +30,16 @@ Every published artifact set must have SHA256 checksums. Before finalizing a rel
 4. Confirm the manifest, install guide, release notes, and GitHub Release assets reference the same artifact set.
 5. Attach archives and checksum files to the GitHub Release.
 
+## Release note filenames
+
+Release note files should use the suite-scoped convention `<suite-slug>-v<version>.md`, matching the GitHub Release tag when the release is suite-specific.
+
+Examples:
+
+- `sdlc-command-desk-v0.2.0.md`
+- `web-development-command-desk-v0.3.0.md`
+- `ai-engineering-command-desk-v0.1.0.md`
+
 ## Versioning
 
 Use semantic-ish release tags for global bundle releases, for example `v0.2.0`, `v0.3.0`, or `v1.0.0`.

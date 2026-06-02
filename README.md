@@ -13,9 +13,13 @@
 
 <p align="center"><strong>Think in chat. Execute in the CLI. Ship like you already know the process.</strong></p>
 
-Skills-Lab is a public lab for building and sharing **Desk Suites** — ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk professional workflows without needing to already know the process.
+<p align="center">
+  Skills-Lab is a public lab for building and sharing <strong>Desk Suites</strong> — ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk professional workflows without needing to already know the process.
+</p>
 
-The goal is direct: give builders a guided path through any domain — software delivery, web development, AI engineering, sales — while producing the kind of output expected from an experienced team. Chat does the reasoning. The CLI does the execution. Coding agents receive constrained, source-grounded work instead of open-ended intent.
+<p align="center">
+  The goal is direct: give builders a guided path through any domain — software delivery, web development, AI engineering, sales — while producing the kind of output expected from an experienced team. Chat does the reasoning. The CLI does the execution. Coding agents receive constrained, source-grounded work instead of open-ended intent.
+</p>
 
 ## Quick links
 
@@ -158,7 +162,7 @@ Release notes live in `releases/`. GitHub Releases are the public download surfa
 
 | Release notes | Suite | Status | Assets |
 |---|---|---|---|
-| [v0.3.0-web-development-command-desk](releases/v0.3.0-web-development-command-desk.md) | Web Development Command Desk | Published as `web-development-command-desk-v0.3.0`; GitHub `Latest` | 14 skill zips + manifest/checksum assets |
+| [web-development-command-desk-v0.3.0](releases/web-development-command-desk-v0.3.0.md) | Web Development Command Desk | Published as `web-development-command-desk-v0.3.0`; GitHub `Latest` | 14 skill zips + manifest/checksum assets |
 | [ai-engineering-command-desk-v0.1.0](releases/ai-engineering-command-desk-v0.1.0.md) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | [product-command-desk-v0.1.0](releases/product-command-desk-v0.1.0.md) | Product Command Desk | Published | 16 skill zips + release/source bundles |
 | [sales-command-desk-v0.1.0](releases/sales-command-desk-v0.1.0.md) | Sales Command Desk | Published | 13 skill zips + release/source bundles |
