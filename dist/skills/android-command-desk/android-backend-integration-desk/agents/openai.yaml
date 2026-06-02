@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Backend Integration Desk
+  short_description: Defines APIs, auth, sync, push, payments, multiplayer, and cloud saves.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

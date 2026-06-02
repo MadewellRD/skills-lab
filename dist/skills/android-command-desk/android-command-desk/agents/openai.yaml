@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Command Desk
+  short_description: Orchestrates complete Android app and game development workflows.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

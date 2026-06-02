@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Performance Optimization Desk
+  short_description: Plans app/game performance, benchmarks, profiling, and device-tier budgets.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

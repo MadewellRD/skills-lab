@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Observability Liveops Desk
+  short_description: Defines crash/ANR monitoring, analytics, remote config, alerts, and live ops.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

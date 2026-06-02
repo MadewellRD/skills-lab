@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Release Store Ops Desk
+  short_description: Plans builds, signing, Play tracks, staged rollout, rollback, and store readiness.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

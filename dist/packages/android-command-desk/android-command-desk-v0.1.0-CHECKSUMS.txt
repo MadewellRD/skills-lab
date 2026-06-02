@@ -1,0 +1,149 @@
+2caa8f2b910a8fd6f120024fc21cec083961034f7289380d1b4da0c3a14e72ee  dist/manifests/android-command-desk-v0.1.0.json
+45da2155928e37de2beeea19ba2e5fdb3a32c91961e44837a3c126edf2e6405d  dist/packages/android-command-desk/000-android-command-desk-skill.zip
+741a4586ec4b714ff2ea1e8dd3f00b271cd727e47f6a0c917eb840f8ccd765b2  dist/packages/android-command-desk/001-android-product-requirements-desk-skill.zip
+fc2ad4c398ff41363da0e711b6ca029b0eec9d072c137f39864db658d8f8407a  dist/packages/android-command-desk/002-android-technical-discovery-desk-skill.zip
+36e0b65350759efcc60b8e23adadf2455af06ee5be9ead225947a190ce05a2ee  dist/packages/android-command-desk/003-android-architecture-design-desk-skill.zip
+7c6b968d9bac42812ed747e393a1c43e8eb46def9630452ef44f35aafc6ec7a2  dist/packages/android-command-desk/004-android-ui-ux-desk-skill.zip
+86751e9e5a8ec7671470ded4acc53b2c6d5bf27d02e907146f981ef51c4b7fec  dist/packages/android-command-desk/005-android-app-engineering-desk-skill.zip
+1fe8a1cba6162efb90d8112b18317f6a0d6290bd82283ab33ca248c9ed7c238a  dist/packages/android-command-desk/006-android-game-engineering-desk-skill.zip
+042f0eb67b894ded89d07e752c4116eaa0ae30f21afaa52bbc38ea202fe1bed4  dist/packages/android-command-desk/007-android-backend-integration-desk-skill.zip
+235f10b8361c95c3a3f3a137666ec5f9de4cc6693fe3ccc64a9b5ee64b6a9dd9  dist/packages/android-command-desk/008-android-security-privacy-desk-skill.zip
+fc38dfa4371e068d6a30a854d963f1ef6042e367b3c818601bb61dadfb18b286  dist/packages/android-command-desk/009-android-performance-optimization-desk-skill.zip
+25e412e9322bce8c36d09e178926107d85d6e41ca16cfdf230a31c9e1090a37c  dist/packages/android-command-desk/010-android-testing-qa-desk-skill.zip
+f1c929bee2b7cdd2beeff23cb7a52ed9579da552094194027acf8c5b3322bc99  dist/packages/android-command-desk/011-android-release-store-ops-desk-skill.zip
+c20bcbef75c0a9a1ad37226116c4ee11a1cfa7af7d732275cfd564e82d84944f  dist/packages/android-command-desk/012-android-observability-liveops-desk-skill.zip
+666acaa71b1304c18ba9563ccbdef44b0eeca5b21e049b644044cb64ba301263  dist/packages/android-command-desk/013-android-maintenance-growth-desk-skill.zip
+33a0ed315686ab2f224df16781e1744f3c61d3fe98b5633e2e84aa7fb7a50e77  dist/packages/android-command-desk/android-command-desk-v0.1.0-skill-bundles.zip
+47ba6ab8f0c7596cae0dca68357f68e3814a1c001d587d5f9bded6d5f1f98004  dist/packages/android-command-desk/android-command-desk-v0.1.0-source.zip
+7cc53a39d34e9912b322bc99943deece4f9f4ae6ed7cd4248ad4e46996885149  dist/skills/android-command-desk/android-app-engineering-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-app-engineering-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-app-engineering-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-app-engineering-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-app-engineering-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-app-engineering-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-app-engineering-desk/references/platform/android-low-token-policy.md
+f25dbc99c35b24d7f515b2bb2e460396380ceff8c9d0f1b65eb6e1802a452e5e  dist/skills/android-command-desk/android-app-engineering-desk/SKILL.md
+c96c96b6d818d682372074f2ca59afed4cda94f642fbdea0986462d7726b825e  dist/skills/android-command-desk/android-architecture-design-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-architecture-design-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-architecture-design-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-architecture-design-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-architecture-design-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-architecture-design-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-architecture-design-desk/references/platform/android-low-token-policy.md
+a31828278d768f5cf6d35d592c1227a6ac29c51139bdb3395bd33ce330207b29  dist/skills/android-command-desk/android-architecture-design-desk/SKILL.md
+c18f232fd2a3fd1f825df439da4b5e7824ece77ee412d46254a7921cb5694975  dist/skills/android-command-desk/android-backend-integration-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-backend-integration-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-backend-integration-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-backend-integration-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-backend-integration-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-backend-integration-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-backend-integration-desk/references/platform/android-low-token-policy.md
+11c8e46422f12f07e4ae2633a306ffbed696a00c165d3cc663ca4d467a585d6c  dist/skills/android-command-desk/android-backend-integration-desk/SKILL.md
+230192e056b914549c98cd1c5289df22b70373ae991dec647fe7b2d50a75831a  dist/skills/android-command-desk/android-command-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-command-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-command-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-command-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-command-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-command-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-command-desk/references/platform/android-low-token-policy.md
+d6a252c98e9dc88d3cf8f650262edf30b2c48c28adb7574aa3baa996c2e33896  dist/skills/android-command-desk/android-command-desk/SKILL.md
+a1bcf22b152665319936ad98ac24e63e566996a805d12ca8a4f783c6d6c8afd7  dist/skills/android-command-desk/android-game-engineering-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-game-engineering-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-game-engineering-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-game-engineering-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-game-engineering-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-game-engineering-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-game-engineering-desk/references/platform/android-low-token-policy.md
+7bdd79f507b85aa7ea3be864c2aad99a2cb3369396c2e61514b610755c81994f  dist/skills/android-command-desk/android-game-engineering-desk/SKILL.md
+2cbda12e9189abc0234e5c8e4dde225e00715517d48bd791cd973e3247479140  dist/skills/android-command-desk/android-maintenance-growth-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-maintenance-growth-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-maintenance-growth-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-maintenance-growth-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-maintenance-growth-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-maintenance-growth-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-maintenance-growth-desk/references/platform/android-low-token-policy.md
+20c9a9aeae5c4b240e50ce7af18d93a2073202df0072e0d841c3b9806e93a3bf  dist/skills/android-command-desk/android-maintenance-growth-desk/SKILL.md
+c513789c97ecf996bfe2bb65620defd5912943c75ba85f7860ef0d8244426a45  dist/skills/android-command-desk/android-observability-liveops-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-observability-liveops-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-observability-liveops-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-observability-liveops-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-observability-liveops-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-observability-liveops-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-observability-liveops-desk/references/platform/android-low-token-policy.md
+9c35925728ec635381a8b6314035deeb45f365b2c26456a2b8d547cc233d3a03  dist/skills/android-command-desk/android-observability-liveops-desk/SKILL.md
+5765dc3e6aa383fc65e6557490367194639641c208b634b5c881801c49a41096  dist/skills/android-command-desk/android-performance-optimization-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-performance-optimization-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-performance-optimization-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-performance-optimization-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-performance-optimization-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-performance-optimization-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-performance-optimization-desk/references/platform/android-low-token-policy.md
+ae47812844733f372f212f689f4d8b3810f6bd4169efc4249f899ea2dd1d1410  dist/skills/android-command-desk/android-performance-optimization-desk/SKILL.md
+c21d31a746c178d5f1f814fb655e2c6a0d52a4361a56fbdd200637f693036551  dist/skills/android-command-desk/android-product-requirements-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-product-requirements-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-product-requirements-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-product-requirements-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-product-requirements-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-product-requirements-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-product-requirements-desk/references/platform/android-low-token-policy.md
+d46f7002bba099ab42c3790e1e7d9a592147b3b5391345e58f007453ef239113  dist/skills/android-command-desk/android-product-requirements-desk/SKILL.md
+38f34367ea452b4429f64f6576ba60e44f01369574a5b4c36e0df035db723d0b  dist/skills/android-command-desk/android-release-store-ops-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-release-store-ops-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-release-store-ops-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-release-store-ops-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-release-store-ops-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-release-store-ops-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-release-store-ops-desk/references/platform/android-low-token-policy.md
+a2dd8b421a62ef70a262d3539e26d2929d6ef00051e27326849a5226f765f1fb  dist/skills/android-command-desk/android-release-store-ops-desk/SKILL.md
+a6f9f5bad379d8f9a894b1922f58ab3880fd09fd170ba494b59460adb9eeba57  dist/skills/android-command-desk/android-security-privacy-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-security-privacy-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-security-privacy-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-security-privacy-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-security-privacy-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-security-privacy-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-security-privacy-desk/references/platform/android-low-token-policy.md
+690bf589278ade0824e280029cacfc33fe344def2b2c137d59c520b4a47ecca9  dist/skills/android-command-desk/android-security-privacy-desk/SKILL.md
+146ff7f7ebbc836656dee6672faccf93c56032ad69246555c94c96108b15b659  dist/skills/android-command-desk/android-technical-discovery-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-technical-discovery-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-technical-discovery-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-technical-discovery-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-technical-discovery-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-technical-discovery-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-technical-discovery-desk/references/platform/android-low-token-policy.md
+fb5e563a20369f8d761bcd4975e789972794c24cdcf5cff7e3f3f14d718316ca  dist/skills/android-command-desk/android-technical-discovery-desk/SKILL.md
+6a767e201276adc5f97ebfb597997cf4ccccec9f0b5ebcb60b1d5a88120edaa2  dist/skills/android-command-desk/android-testing-qa-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-testing-qa-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-testing-qa-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-testing-qa-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-testing-qa-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-testing-qa-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-testing-qa-desk/references/platform/android-low-token-policy.md
+d68e6cf020c409dd418f5e51264f513bed97aa17c16fba472bf9e4768c2e120a  dist/skills/android-command-desk/android-testing-qa-desk/SKILL.md
+6822b09e1a6b38d378f1143343cf2d1835b3285848842d18e409f42f1a3d7ec1  dist/skills/android-command-desk/android-ui-ux-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/android-command-desk/android-ui-ux-desk/assets/.gitkeep
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  dist/skills/android-command-desk/android-ui-ux-desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  dist/skills/android-command-desk/android-ui-ux-desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  dist/skills/android-command-desk/android-ui-ux-desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  dist/skills/android-command-desk/android-ui-ux-desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  dist/skills/android-command-desk/android-ui-ux-desk/references/platform/android-low-token-policy.md
+112148457334dc6cd5131fc1ac92a6cb4a371d6320e4a1bc77c19092fc2a2d02  dist/skills/android-command-desk/android-ui-ux-desk/SKILL.md
+d6a252c98e9dc88d3cf8f650262edf30b2c48c28adb7574aa3baa996c2e33896  skills/Android Command Desk/000-android-command-desk.md
+d46f7002bba099ab42c3790e1e7d9a592147b3b5391345e58f007453ef239113  skills/Android Command Desk/001-android-product-requirements-desk.md
+fb5e563a20369f8d761bcd4975e789972794c24cdcf5cff7e3f3f14d718316ca  skills/Android Command Desk/002-android-technical-discovery-desk.md
+a31828278d768f5cf6d35d592c1227a6ac29c51139bdb3395bd33ce330207b29  skills/Android Command Desk/003-android-architecture-design-desk.md
+112148457334dc6cd5131fc1ac92a6cb4a371d6320e4a1bc77c19092fc2a2d02  skills/Android Command Desk/004-android-ui-ux-desk.md
+f25dbc99c35b24d7f515b2bb2e460396380ceff8c9d0f1b65eb6e1802a452e5e  skills/Android Command Desk/005-android-app-engineering-desk.md
+7bdd79f507b85aa7ea3be864c2aad99a2cb3369396c2e61514b610755c81994f  skills/Android Command Desk/006-android-game-engineering-desk.md
+11c8e46422f12f07e4ae2633a306ffbed696a00c165d3cc663ca4d467a585d6c  skills/Android Command Desk/007-android-backend-integration-desk.md
+690bf589278ade0824e280029cacfc33fe344def2b2c137d59c520b4a47ecca9  skills/Android Command Desk/008-android-security-privacy-desk.md
+ae47812844733f372f212f689f4d8b3810f6bd4169efc4249f899ea2dd1d1410  skills/Android Command Desk/009-android-performance-optimization-desk.md
+d68e6cf020c409dd418f5e51264f513bed97aa17c16fba472bf9e4768c2e120a  skills/Android Command Desk/010-android-testing-qa-desk.md
+a2dd8b421a62ef70a262d3539e26d2929d6ef00051e27326849a5226f765f1fb  skills/Android Command Desk/011-android-release-store-ops-desk.md
+9c35925728ec635381a8b6314035deeb45f365b2c26456a2b8d547cc233d3a03  skills/Android Command Desk/012-android-observability-liveops-desk.md
+20c9a9aeae5c4b240e50ce7af18d93a2073202df0072e0d841c3b9806e93a3bf  skills/Android Command Desk/013-android-maintenance-growth-desk.md
+297f882347e56d8a0208dfab9365f1fd1b579ac52cf9622f47cff4f71798f22b  skills/Android Command Desk/README.md
+4d55b154d60f67670eee18bb8680721c4acbdbd1fd3699b42aa7a19f359ba707  skills/Android Command Desk/references/desk-workflows/android-command-desk.md
+675e6e94c51b7b0c6677e889023a5be7a2821d84aad62a1ebc24f97c285d4287  skills/Android Command Desk/references/desk-workflows/android-delivery-packet.md
+7130920e2038a30b0c08b26aa700eeb19c8748b62b94ac76210ca374bebb3602  skills/Android Command Desk/references/platform/android-app-baseline.md
+dec3ac263e2fbe6b8c8f88e206bc01aea274455693cc016f9ae1bd9012fc2f6d  skills/Android Command Desk/references/platform/android-game-baseline.md
+500ae13b4ae15eaccc3e3ea7766f08b49d1cdbf99a30c077dfa1afd1e4560bd9  skills/Android Command Desk/references/platform/android-low-token-policy.md
