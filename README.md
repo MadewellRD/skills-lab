@@ -1,7 +1,7 @@
 # Skills-Lab
 
 <p align="center">
-  <img src="assets/skills-lab-hero.svg" alt="Skills-Lab hero" width="100%" />
+  <img src="assets/repo_image.png" alt="Skills-Lab hero" width="100%" />
 </p>
 
 <p align="center">
