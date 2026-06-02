@@ -16,7 +16,7 @@ This manifest tracks all command desk suites published in this repository.
 | AI Engineering Command Desk | v0.1.0 | `skills/AI Engineering Command Desk/` | `dist/skills/ai-engineering-command-desk/` | `dist/packages/ai-engineering-command-desk/` | Yes: `ai-engineering-command-desk-v0.1.0` | Published |
 | Product Command Desk | v0.1.0 | `skills/Product Command Desk/` | `dist/skills/product-command-desk/` | `dist/packages/product-command-desk/` | Yes: `product-command-desk-v0.1.0` | Published |
 | Sales Command Desk | v0.1.0 | `skills/Sales Command Desk/` | `dist/skills/sales-command-desk/` | `dist/packages/sales-command-desk/` | Yes: `sales-command-desk-v0.1.0` | Published |
-| SDLC Command Desk | v0.2.0-rc.1 | `skills/SDLC Command Desk/` | `dist/skills/sdlc-command-desk/` | `dist/packages/sdlc-command-desk/` | Yes: `v0.2.0-rc.1` | Published release candidate |
+| SDLC Command Desk | v0.2.0 | `skills/SDLC Command Desk/` | `dist/skills/sdlc-command-desk/` | `dist/packages/sdlc-command-desk/` | Yes: `sdlc-command-desk-v0.2.0` | Published |
 | Sales Revenue Command Desk | v0.1.0 | `skills/Sales Revenue Command Desk/` | (merged into `sales-command-desk`) | (merged into `sales-command-desk`) | No | Source preserved; superseded by Sales Command Desk |
 ## Package naming convention
 

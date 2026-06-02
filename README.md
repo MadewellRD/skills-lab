@@ -1,12 +1,17 @@
 # Skills-Lab
 
-![Skills-Lab hero](assets/skills-lab-hero.svg)
-[![Latest release](https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest%20release&sort=semver)](https://github.com/MadewellRD/skills-lab/releases/latest)
-[![Published suites](https://img.shields.io/badge/published%20suites-5-22c55e.svg)](MANIFEST.md)
-[![Release validation](https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg)](.github/workflows/validate-release-assets.yml)
-[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-Think in chat. Execute in the CLI. Ship like you already know the process.
+<p align="center">
+  <img src="assets/skills-lab-hero.svg" alt="Skills-Lab hero" width="100%" />
+</p>
 
+<p align="center">
+  <a href="https://github.com/MadewellRD/skills-lab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest%20release&sort=semver"></a>
+  <a href="MANIFEST.md"><img alt="Published suites" src="https://img.shields.io/badge/published%20suites-5-22c55e.svg"></a>
+  <a href=".github/workflows/validate-release-assets.yml"><img alt="Release validation" src="https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg"></a>
+  <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
+</p>
+
+<p align="center"><strong>Think in chat. Execute in the CLI. Ship like you already know the process.</strong></p>
 
 Skills-Lab is a public lab for building and sharing **Desk Suites** — ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk professional workflows without needing to already know the process.
 
@@ -30,23 +35,17 @@ GitHub Releases publishes the main packaged suite lines. Web Development Command
 | Release | Suite | GitHub state | Assets |
 |---|---|---|---|
 | [web-development-command-desk-v0.3.0](https://github.com/MadewellRD/skills-lab/releases/tag/web-development-command-desk-v0.3.0) | Web Development Command Desk | Published and marked GitHub `Latest` | 14 skill zips + manifest/checksum assets |
+| [sdlc-command-desk-v0.2.0](https://github.com/MadewellRD/skills-lab/releases/tag/sdlc-command-desk-v0.2.0) | SDLC Command Desk | Published | 19 skill zips + checksum assets |
 | [ai-engineering-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/ai-engineering-command-desk-v0.1.0) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | [product-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/product-command-desk-v0.1.0) | Product Command Desk | Published | 16 skill zips + release/source bundles + checksums |
 | [sales-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/sales-command-desk-v0.1.0) | Sales Command Desk | Published | 13 skill zips + release/source bundles + checksums |
-| [v0.2.0-rc.1](https://github.com/MadewellRD/skills-lab/releases/tag/v0.2.0-rc.1) | SDLC Command Desk | Published release candidate | 19 skill zips + `CHECKSUMS.txt` |
-
-### Historical SDLC releases
-
-| Release | Suite | GitHub state | Assets |
-|---|---|---|---|
-| [v0.1.1](https://github.com/MadewellRD/skills-lab/releases/tag/v0.1.1) | SDLC Command Desk | Published historical release | Workflow-linked release bundle + checksums |
-| [v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/v0.1.0) | SDLC Command Desk | Published historical release | Initial 19 skill zips + checksums |
 
 ### Source scaffold suites
 
 These suites have source directories or README stubs but no generated `dist/` packages yet: Cloud Infrastructure, Customer Success, Customer Support, Data, Finance Accounting, FinOps, GRC, Knowledge Ops, Legal Contracts, Marketing Growth, People Talent, Platform Engineering, Privacy Data Protection, Procurement Vendor Management, Research, Sales Revenue (source preserved), Security, and SRE Reliability.
 
 ---
+
 ## How Desk Suites work
 
 Each Desk Suite follows the same model:
@@ -163,7 +162,7 @@ Release notes live in `releases/`. GitHub Releases are the public download surfa
 | [ai-engineering-command-desk-v0.1.0](releases/ai-engineering-command-desk-v0.1.0.md) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | [product-command-desk-v0.1.0](releases/product-command-desk-v0.1.0.md) | Product Command Desk | Published | 16 skill zips + release/source bundles |
 | [sales-command-desk-v0.1.0](releases/sales-command-desk-v0.1.0.md) | Sales Command Desk | Published | 13 skill zips + release/source bundles |
-| [v0.2.0-rc.1](releases/v0.2.0-rc.1.md) | SDLC Command Desk | Published release candidate | 19 skill zips + `CHECKSUMS.txt` |
+| [sdlc-command-desk-v0.2.0](releases/sdlc-command-desk-v0.2.0.md) | SDLC Command Desk | Published | 19 skill zips + checksum assets |
 
 Verify packaged artifacts before publishing or installing:
 

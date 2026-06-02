@@ -12,7 +12,7 @@ GitHub Releases are the public download surface for published suites. The reposi
 | `ai-engineering-command-desk-v0.1.0` | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | `product-command-desk-v0.1.0` | Product Command Desk | Published | 16 skill zips + release/source bundles + checksums |
 | `sales-command-desk-v0.1.0` | Sales Command Desk | Published | 13 skill zips + release/source bundles + checksums |
-| `v0.2.0-rc.1` | SDLC Command Desk | Published release candidate | 19 skill zips + `CHECKSUMS.txt` |
+| `sdlc-command-desk-v0.2.0` | SDLC Command Desk | Published | 19 skill zips + checksum assets |
 | `v0.1.1` | SDLC Command Desk | Published historical release | Workflow-linked bundle + checksums |
 | `v0.1.0` | SDLC Command Desk | Published historical release | Initial 19 skill zips + checksums |
 
@@ -36,4 +36,4 @@ Use semantic-ish release tags for global bundle releases, for example `v0.2.0`, 
 
 Use suite-scoped tags when publishing one suite independently, for example `web-development-command-desk-v0.3.0` or `product-command-desk-v0.1.0`.
 
-Use prerelease markers such as `-rc.1` only when the GitHub Release is also marked as a prerelease.
+Use prerelease markers such as `-rc.1` only when the GitHub Release is also marked as a prerelease. Cleaned-up final suite releases should use suite-scoped tags such as `sdlc-command-desk-v0.2.0`.
