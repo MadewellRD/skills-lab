@@ -6,7 +6,9 @@
 
 <p align="center">
   <a href="https://github.com/MadewellRD/skills-lab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest%20release&sort=semver"></a>
+  <a href="https://github.com/MadewellRD/skills-lab/releases/tag/android-command-desk-v0.1.0"><img alt="Android Command Desk v0.1.0" src="https://img.shields.io/badge/android%20command%20desk-v0.1.0-22c55e.svg"></a>
   <a href="MANIFEST.md"><img alt="Published suites" src="https://img.shields.io/badge/published%20suites-6-22c55e.svg"></a>
+  <a href="MANIFEST.md"><img alt="Packaged skills" src="https://img.shields.io/badge/packaged%20skills-94-06b6d4.svg"></a>
   <a href=".github/workflows/validate-release-assets.yml"><img alt="Release validation" src="https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg"></a>
   <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
 </p>
