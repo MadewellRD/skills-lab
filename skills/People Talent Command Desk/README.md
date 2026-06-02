@@ -1,4 +1,4 @@
-﻿# People Talent Command Desk
+# People Talent Command Desk
 
 Status: planned suite scaffold.
 

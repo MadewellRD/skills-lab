@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Validate release checksum files against package roots."""
 from __future__ import annotations
 

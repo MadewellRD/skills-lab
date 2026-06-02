@@ -1,4 +1,4 @@
-﻿# AI Engineering Command Desk Skills Packaging Report
+# AI Engineering Command Desk Skills Packaging Report
 
 Date: 2026-05-19
 Branch: `feat/package-ai-engineering-command-desk-skills`

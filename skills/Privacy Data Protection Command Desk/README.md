@@ -1,4 +1,4 @@
-﻿# Privacy Data Protection Command Desk
+# Privacy Data Protection Command Desk
 
 Status: planned suite scaffold.
 

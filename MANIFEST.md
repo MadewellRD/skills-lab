@@ -31,7 +31,7 @@ Upload-facing archives may be renamed to `skill.zip` when uploading through Chat
 
 ---
 
-## SDLC Command Desk — v0.2.0-rc.1 continuity-kernel
+## SDLC Command Desk — v0.2.0
 
 19 desks. Continuity kernel, readiness gates, halt taxonomy, preflight cache, Codex conservation policy applied across all desks.
 

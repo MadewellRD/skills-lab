@@ -1,4 +1,4 @@
-﻿# Finance Accounting Command Desk
+# Finance Accounting Command Desk
 
 Status: planned suite scaffold.
 

@@ -13,8 +13,8 @@ GitHub Releases are the public download surface for published suites. The reposi
 | `product-command-desk-v0.1.0` | Product Command Desk | Published | 16 skill zips + release/source bundles + checksums |
 | `sales-command-desk-v0.1.0` | Sales Command Desk | Published | 13 skill zips + release/source bundles + checksums |
 | `sdlc-command-desk-v0.2.0` | SDLC Command Desk | Published | 19 skill zips + checksum assets |
-| `v0.1.1` | SDLC Command Desk | Published historical release | Workflow-linked bundle + checksums |
-| `v0.1.0` | SDLC Command Desk | Published historical release | Initial 19 skill zips + checksums |
+| `v0.1.1` | SDLC Command Desk | Historical notes only; GitHub Release removed | Workflow-linked bundle + checksums |
+| `v0.1.0` | SDLC Command Desk | Historical notes only; GitHub Release removed | Initial 19 skill zips + checksums |
 
 ## Artifact policy
 

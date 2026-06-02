@@ -1,4 +1,4 @@
-﻿# SDLC Command Desk
+# SDLC Command Desk
 
 Canonical existing software-delivery lifecycle suite.
 
