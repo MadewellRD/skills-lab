@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Validate packaged SDLC Command Desk artifacts against the current suite layout."""
 from pathlib import Path
 import sys
@@ -7,8 +7,7 @@ REPO = Path(__file__).resolve().parents[1]
 SOURCE = REPO / "skills" / "SDLC Command Desk"
 DIST = REPO / "dist" / "skills" / "sdlc-command-desk"
 PACKAGES = REPO / "dist" / "packages" / "sdlc-command-desk"
-RELEASE_NOTES = REPO / "releases" / "v0.2.0-rc.1.md"
-PUBLISH_SCRIPT = REPO / "releases" / "publish-v0.2.0-rc.1.ps1"
+RELEASE_NOTES = REPO / "releases" / "sdlc-command-desk-v0.2.0.md"
 MANIFEST = REPO / "MANIFEST.md"
 
 EXPECTED = [
@@ -94,8 +93,7 @@ zip_count = len(list(PACKAGES.glob("*.zip"))) if PACKAGES.exists() else 0
 check(zip_count == len(EXPECTED), f"expected {len(EXPECTED)} SDLC zip artifacts; found {zip_count}")
 
 check(RELEASE_NOTES.exists(), f"release notes exist: {RELEASE_NOTES.relative_to(REPO)}")
-check(PUBLISH_SCRIPT.exists(), f"publish helper exists: {PUBLISH_SCRIPT.relative_to(REPO)}")
-check(MANIFEST.exists() and "v0.2.0-rc.1" in MANIFEST.read_text(encoding="utf-8"), "MANIFEST references v0.2.0-rc.1")
+check(MANIFEST.exists() and "sdlc-command-desk-v0.2.0" in MANIFEST.read_text(encoding="utf-8"), "MANIFEST references sdlc-command-desk-v0.2.0")
 
 if failures:
     print(f"\nSDLC validation failed: {len(failures)} issue(s)")
