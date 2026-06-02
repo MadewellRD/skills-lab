@@ -1,4 +1,4 @@
-﻿# Cloud Infrastructure Command Desk
+# Cloud Infrastructure Command Desk
 
 Status: planned suite scaffold.
 

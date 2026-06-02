@@ -1,4 +1,4 @@
-﻿# FinOps Command Desk
+# FinOps Command Desk
 
 Status: planned suite scaffold.
 

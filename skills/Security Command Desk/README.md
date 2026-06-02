@@ -1,4 +1,4 @@
-﻿# Security Command Desk
+# Security Command Desk
 
 Status: planned suite scaffold.
 

@@ -1,4 +1,4 @@
-﻿# Customer Success Command Desk
+# Customer Success Command Desk
 
 Status: planned suite scaffold.
 

@@ -1,4 +1,4 @@
-﻿# Skills Repository Structure
+# Skills Repository Structure
 
 Canonical source authoring layout:
 

@@ -1,4 +1,4 @@
-﻿# Legal Contracts Command Desk
+# Legal Contracts Command Desk
 
 Status: planned suite scaffold.
 

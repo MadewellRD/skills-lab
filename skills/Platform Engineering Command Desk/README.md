@@ -1,4 +1,4 @@
-﻿# Platform Engineering Command Desk
+# Platform Engineering Command Desk
 
 Status: planned suite scaffold.
 

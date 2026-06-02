@@ -1,4 +1,4 @@
-﻿name: Validate release assets
+name: Validate release assets
 
 on:
   workflow_dispatch:

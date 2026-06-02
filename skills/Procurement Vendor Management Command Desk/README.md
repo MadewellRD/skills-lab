@@ -1,4 +1,4 @@
-﻿# Procurement Vendor Management Command Desk
+# Procurement Vendor Management Command Desk
 
 Status: planned suite scaffold.
 

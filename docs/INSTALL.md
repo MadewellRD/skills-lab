@@ -2,7 +2,7 @@
 
 This guide explains how to use the SDLC Command Desk skill suite from this repository.
 
-Current recommended install set: `v0.1.1` workflow-linked suite.
+Current recommended install set: `sdlc-command-desk-v0.2.0` for the SDLC workflow, or the latest published suite release for the workflow you want to install.
 
 ## What you need
 

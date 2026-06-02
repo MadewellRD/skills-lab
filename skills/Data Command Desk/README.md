@@ -1,4 +1,4 @@
-﻿# Data Command Desk
+# Data Command Desk
 
 Status: planned suite scaffold.
 

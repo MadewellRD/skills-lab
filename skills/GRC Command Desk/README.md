@@ -1,4 +1,4 @@
-﻿# GRC Command Desk
+# GRC Command Desk
 
 Status: planned suite scaffold.
 

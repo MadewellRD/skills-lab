@@ -1,4 +1,4 @@
-﻿# Research Command Desk
+# Research Command Desk
 
 Status: planned suite scaffold.
 

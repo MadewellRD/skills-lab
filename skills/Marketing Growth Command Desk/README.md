@@ -1,4 +1,4 @@
-﻿# Marketing Growth Command Desk
+# Marketing Growth Command Desk
 
 Status: planned suite scaffold.
 

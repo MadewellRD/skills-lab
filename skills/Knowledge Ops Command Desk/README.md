@@ -1,4 +1,4 @@
-﻿# Knowledge Ops Command Desk
+# Knowledge Ops Command Desk
 
 Status: planned suite scaffold.
 

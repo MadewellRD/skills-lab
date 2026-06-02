@@ -1,4 +1,4 @@
-﻿# SRE Reliability Command Desk
+# SRE Reliability Command Desk
 
 Status: planned suite scaffold.
 

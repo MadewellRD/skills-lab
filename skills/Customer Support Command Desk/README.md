@@ -1,4 +1,4 @@
-﻿# Customer Support Command Desk
+# Customer Support Command Desk
 
 Status: planned suite scaffold.
 
