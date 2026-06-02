@@ -17,6 +17,8 @@ This manifest tracks all command desk suites published in this repository.
 | Product Command Desk | v0.1.0 | `skills/Product Command Desk/` | `dist/skills/product-command-desk/` | `dist/packages/product-command-desk/` | Yes: `product-command-desk-v0.1.0` | Published |
 | Sales Command Desk | v0.1.0 | `skills/Sales Command Desk/` | `dist/skills/sales-command-desk/` | `dist/packages/sales-command-desk/` | Yes: `sales-command-desk-v0.1.0` | Published |
 | SDLC Command Desk | v0.2.0 | `skills/SDLC Command Desk/` | `dist/skills/sdlc-command-desk/` | `dist/packages/sdlc-command-desk/` | Yes: `sdlc-command-desk-v0.2.0` | Published |
+| Android Command Desk | v0.1.0-stub | `skills/Android Command Desk/` | Not generated | Not generated | No | Source scaffold; app/game coverage planned |
+| iOS Command Desk | v0.1.0-stub | `skills/iOS Command Desk/` | Not generated | Not generated | No | Source scaffold; app/game coverage planned |
 | Sales Revenue Command Desk | v0.1.0 | `skills/Sales Revenue Command Desk/` | (merged into `sales-command-desk`) | (merged into `sales-command-desk`) | No | Source preserved; superseded by Sales Command Desk |
 ## Package naming convention
 
@@ -166,6 +168,52 @@ Checksums: `CHECKSUMS-product-command-desk-v0.1.0.txt` | Packages: `dist/package
 
 ---
 
+## Android Command Desk — v0.1.0-stub
+
+14 source stubs. Covers Android app development and Android game development from requirements through release, Play Store operations, observability/live ops, and maintenance.
+
+| Order | Skill | Status |
+|---:|---|---|
+| 000 | `000-android-command-desk` | source stub |
+| 001 | `001-android-product-requirements-desk` | source stub |
+| 002 | `002-android-technical-discovery-desk` | source stub |
+| 003 | `003-android-architecture-design-desk` | source stub |
+| 004 | `004-android-ui-ux-desk` | source stub |
+| 005 | `005-android-app-engineering-desk` | source stub |
+| 006 | `006-android-game-engineering-desk` | source stub |
+| 007 | `007-android-backend-integration-desk` | source stub |
+| 008 | `008-android-security-privacy-desk` | source stub |
+| 009 | `009-android-performance-optimization-desk` | source stub |
+| 010 | `010-android-testing-qa-desk` | source stub |
+| 011 | `011-android-release-store-ops-desk` | source stub |
+| 012 | `012-android-observability-liveops-desk` | source stub |
+| 013 | `013-android-maintenance-growth-desk` | source stub |
+
+---
+
+## iOS Command Desk — v0.1.0-stub
+
+14 source stubs. Covers iOS app development and iOS game development from requirements through release, App Store operations, observability/live ops, and maintenance.
+
+| Order | Skill | Status |
+|---:|---|---|
+| 000 | `000-ios-command-desk` | source stub |
+| 001 | `001-ios-product-requirements-desk` | source stub |
+| 002 | `002-ios-technical-discovery-desk` | source stub |
+| 003 | `003-ios-architecture-design-desk` | source stub |
+| 004 | `004-ios-ui-ux-desk` | source stub |
+| 005 | `005-ios-app-engineering-desk` | source stub |
+| 006 | `006-ios-game-engineering-desk` | source stub |
+| 007 | `007-ios-backend-integration-desk` | source stub |
+| 008 | `008-ios-security-privacy-desk` | source stub |
+| 009 | `009-ios-performance-optimization-desk` | source stub |
+| 010 | `010-ios-testing-qa-desk` | source stub |
+| 011 | `011-ios-release-app-store-ops-desk` | source stub |
+| 012 | `012-ios-observability-liveops-desk` | source stub |
+| 013 | `013-ios-maintenance-growth-desk` | source stub |
+
+---
+
 ## Operating rules
 
 Every skill in every suite preserves these principles:
@@ -182,4 +230,4 @@ Every skill in every suite preserves these principles:
 
 The following suites have `skills/` directories with README stubs. No dist content yet.
 
-Cloud Infrastructure Command Desk, Customer Success Command Desk, Customer Support Command Desk, Data Command Desk, Finance Accounting Command Desk, FinOps Command Desk, GRC Command Desk, Knowledge Ops Command Desk, Legal Contracts Command Desk, Marketing Growth Command Desk, People Talent Command Desk, Platform Engineering Command Desk, Privacy Data Protection Command Desk, Procurement Vendor Management Command Desk, Research Command Desk, Sales Revenue Command Desk (source preserved), Security Command Desk, SRE Reliability Command Desk.
+Android Command Desk, iOS Command Desk, Cloud Infrastructure Command Desk, Customer Success Command Desk, Customer Support Command Desk, Data Command Desk, Finance Accounting Command Desk, FinOps Command Desk, GRC Command Desk, Knowledge Ops Command Desk, Legal Contracts Command Desk, Marketing Growth Command Desk, People Talent Command Desk, Platform Engineering Command Desk, Privacy Data Protection Command Desk, Procurement Vendor Management Command Desk, Research Command Desk, Sales Revenue Command Desk (source preserved), Security Command Desk, SRE Reliability Command Desk.
