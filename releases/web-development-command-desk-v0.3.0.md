@@ -1,6 +1,6 @@
-# v0.3.0-web-development-command-desk - Web Development Command Desk packaged artifacts
+# Web Development Command Desk v0.3.0
 
-Status: packaged release candidate
+Status: published
 Date: 2026-05-26
 
 ## Summary
