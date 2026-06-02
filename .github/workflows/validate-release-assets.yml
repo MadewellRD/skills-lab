@@ -1,0 +1,22 @@
+﻿name: Validate release assets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate-release-assets:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate SDLC suite layout
+        run: python tools/validate_sdlc_suite.py
+
+      - name: Validate release asset checksums
+        run: python tools/validate_release_assets.py

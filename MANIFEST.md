@@ -10,15 +10,14 @@ This manifest tracks all command desk suites published in this repository.
 
 ## Suite registry
 
-| Suite | Version | Source | dist/skills | dist/packages | Release status |
-|---|---|---|---|---|---|
-| SDLC Command Desk | v0.2.0-rc.1 | `skills/SDLC Command Desk/` | `dist/skills/sdlc-command-desk/` | `dist/packages/sdlc-command-desk/` | Released (latest) |
-| Web Development Command Desk | v0.3.0 | `skills/Web Development Command Desk/` | `dist/skills/web-development-command-desk/` | `dist/packages/web-development-command-desk/` | Packaged; GitHub Release pending |
-| AI Engineering Command Desk | v0.1.0 | `skills/AI Engineering Command Desk/` | `dist/skills/ai-engineering-command-desk/` | `dist/packages/ai-engineering-command-desk/` | Packaged; GitHub Release pending |
-| Sales Command Desk | v0.1.0 | `skills/Sales Command Desk/` | `dist/skills/sales-command-desk/` | `dist/packages/sales-command-desk/` | Packaged; GitHub Release pending |
-| Product Command Desk | v0.1.0 | `skills/Product Command Desk/` | `dist/skills/product-command-desk/` | `dist/packages/product-command-desk/` | Packaged; GitHub Release pending |
-| Sales Revenue Command Desk | v0.1.0 | `skills/Sales Revenue Command Desk/` | (merged into sales-command-desk) | (merged into sales-command-desk) | Source preserved; superseded by Sales Command Desk |
-| Web Development Command Desk | v0.3.0 | `skills/Web Development Command Desk/` | `dist/skills/web-development-command-desk/` | `dist/packages/web-development-command-desk/` | Packaged |
+| Suite | Version | Source | dist/skills | dist/packages | GitHub Release | Status |
+|---|---|---|---|---|---|---|
+| SDLC Command Desk | v0.2.0-rc.1 | `skills/SDLC Command Desk/` | `dist/skills/sdlc-command-desk/` | `dist/packages/sdlc-command-desk/` | Yes: `v0.2.0-rc.1`; GitHub `Latest` still points to `v0.1.1` | Published release candidate |
+| Web Development Command Desk | v0.3.0 | `skills/Web Development Command Desk/` | `dist/skills/web-development-command-desk/` | `dist/packages/web-development-command-desk/` | No | Packaged; GitHub Release pending |
+| AI Engineering Command Desk | v0.1.0 | `skills/AI Engineering Command Desk/` | `dist/skills/ai-engineering-command-desk/` | `dist/packages/ai-engineering-command-desk/` | No | Packaged; GitHub Release pending |
+| Sales Command Desk | v0.1.0 | `skills/Sales Command Desk/` | `dist/skills/sales-command-desk/` | `dist/packages/sales-command-desk/` | No | Packaged; GitHub Release pending |
+| Product Command Desk | v0.1.0 | `skills/Product Command Desk/` | `dist/skills/product-command-desk/` | `dist/packages/product-command-desk/` | No | Packaged; GitHub Release pending |
+| Sales Revenue Command Desk | v0.1.0 | `skills/Sales Revenue Command Desk/` | (merged into `sales-command-desk`) | (merged into `sales-command-desk`) | No | Source preserved; superseded by Sales Command Desk |
 
 ## Package naming convention
 
