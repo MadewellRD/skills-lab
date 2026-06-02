@@ -1,4 +1,4 @@
-# Skills-Lab
+﻿# Skills-Lab
 
 <p align="center">
   <img src="assets/repo_image.png" alt="Skills-Lab hero" width="100%" />
@@ -6,7 +6,10 @@
 
 <p align="center">
   <a href="https://github.com/MadewellRD/skills-lab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest%20release&sort=semver"></a>
+  <a href="https://github.com/MadewellRD/skills-lab/releases/tag/android-command-desk-v0.1.0"><img alt="Android Command Desk v0.1.0" src="https://img.shields.io/badge/android%20command%20desk-v0.1.0-22c55e.svg"></a>
+  <a href="https://github.com/MadewellRD/skills-lab/releases/tag/ios-command-desk-v0.1.0"><img alt="iOS Command Desk v0.1.0" src="https://img.shields.io/badge/iOS%20command%20desk-v0.1.0-0ea5e9.svg"></a>
   <a href="MANIFEST.md"><img alt="Published suites" src="https://img.shields.io/badge/published%20suites-7-22c55e.svg"></a>
+  <a href="MANIFEST.md"><img alt="Packaged skills" src="https://img.shields.io/badge/packaged%20skills-108-06b6d4.svg"></a>
   <a href=".github/workflows/validate-release-assets.yml"><img alt="Release validation" src="https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg"></a>
   <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
 </p>
@@ -14,11 +17,11 @@
 <p align="center"><strong>Think in chat. Execute in the CLI. Ship like you already know the process.</strong></p>
 
 <p align="center">
-  Skills-Lab is a public lab for building and sharing <strong>Desk Suites</strong> — ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk professional workflows without needing to already know the process.
+  Skills-Lab is a public lab for building and sharing <strong>Desk Suites</strong> â€” ChatGPT skill systems that let vibe coders, non-developers, solo builders, and AI-native teams walk professional workflows without needing to already know the process.
 </p>
 
 <p align="center">
-  The goal is direct: give builders a guided path through any domain — software delivery, web development, AI engineering, sales — while producing the kind of output expected from an experienced team. Chat does the reasoning. The CLI does the execution. Coding agents receive constrained, source-grounded work instead of open-ended intent.
+  The goal is direct: give builders a guided path through any domain â€” software delivery, web development, AI engineering, sales â€” while producing the kind of output expected from an experienced team. Chat does the reasoning. The CLI does the execution. Coding agents receive constrained, source-grounded work instead of open-ended intent.
 </p>
 
 ## Quick links
@@ -58,18 +61,18 @@ Each Desk Suite follows the same model:
 
 ```text
 ChatGPT Desk Suite
-  → reason through the workflow domain
-  → produce source-grounded artifacts, plans, and code-ready files
-  → hand off constrained work to Codex / Claude Code / CLI agent
-  → CLI executes with minimal reasoning
-  → results return to chat for validation and next-step planning
+  â†’ reason through the workflow domain
+  â†’ produce source-grounded artifacts, plans, and code-ready files
+  â†’ hand off constrained work to Codex / Claude Code / CLI agent
+  â†’ CLI executes with minimal reasoning
+  â†’ results return to chat for validation and next-step planning
 ```
 
 **Chat does the reasoning.** Desk Suites run planning, analysis, decomposition, source review, and quality-gate reasoning in the chat interface.
 
-**CLI does the execution.** Coding agents receive small, explicit tasks and files — not broad product intent. The goal is constrained execution, not open-ended rediscovery.
+**CLI does the execution.** Coding agents receive small, explicit tasks and files â€” not broad product intent. The goal is constrained execution, not open-ended rediscovery.
 
-**Halt instead of hallucinate.** Missing facts, conflicting sources, absent tests, or unverified requirements produce a halt or diagnostic — not invented certainty.
+**Halt instead of hallucinate.** Missing facts, conflicting sources, absent tests, or unverified requirements produce a halt or diagnostic â€” not invented certainty.
 
 ---
 
@@ -113,11 +116,11 @@ app or Android game without skipping platform-specific gates.
 
 ## Design principles
 
-- **Zero-knowledge domain guidance** — users should not need to know what a PRD, ADR, RTM, MEDDICC score, inference SLO, or release gate is before starting.
-- **Source grounding** — repo state, issues, PRs, CI, docs, CRM, and connector evidence are cited when they drive an artifact.
-- **Token conservation** — every desk reduces rework and repeated reasoning for coding agents and downstream automation.
-- **Nearly complete output** — each suite should provide as much implementation-ready content as possible before any CLI or external handoff.
-- **Workflow continuity** — desks preserve workflow packets so sessions can pause, resume, and hand off without losing state.
+- **Zero-knowledge domain guidance** â€” users should not need to know what a PRD, ADR, RTM, MEDDICC score, inference SLO, or release gate is before starting.
+- **Source grounding** â€” repo state, issues, PRs, CI, docs, CRM, and connector evidence are cited when they drive an artifact.
+- **Token conservation** â€” every desk reduces rework and repeated reasoning for coding agents and downstream automation.
+- **Nearly complete output** â€” each suite should provide as much implementation-ready content as possible before any CLI or external handoff.
+- **Workflow continuity** â€” desks preserve workflow packets so sessions can pause, resume, and hand off without losing state.
 
 ---
 
@@ -207,3 +210,4 @@ Skills-Lab is built for builders who want AI agents to move faster without losin
 Issues and pull requests should stay evidence-first: include repo state, affected files, validation commands, source facts, and known halt conditions.
 
 See [MANIFEST.md](MANIFEST.md) for the full suite registry and [docs/INSTALL.md](docs/INSTALL.md) for setup instructions.
+
