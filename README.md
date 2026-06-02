@@ -1,9 +1,9 @@
 # Skills-Lab
 
 ![Skills-Lab hero](assets/skills-lab-hero.svg)
-[![GitHub latest release](https://img.shields.io/badge/GitHub%20latest-v0.1.1-blue.svg)](https://github.com/MadewellRD/skills-lab/releases/tag/v0.1.1)
+[![GitHub latest release](https://img.shields.io/badge/GitHub%20latest-web--development--command--desk--v0.3.0-blue.svg)](https://github.com/MadewellRD/skills-lab/releases/tag/web-development-command-desk-v0.3.0)
 [![SDLC release candidate](https://img.shields.io/badge/SDLC%20Command%20Desk-v0.2.0--rc.1-yellow.svg)](releases/v0.2.0-rc.1.md)
-[![Packaged suites](https://img.shields.io/badge/packaged%20suites-5-green.svg)](MANIFEST.md)
+[![Published suites](https://img.shields.io/badge/published%20suites-5-green.svg)](MANIFEST.md)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 Think in chat. Execute in the CLI. Ship like you already know the process.
 
@@ -23,9 +23,9 @@ The goal is direct: give builders a guided path through any domain — software 
 
 ## Release status
 
-GitHub Releases currently publishes the SDLC line only. Additional suites are packaged in this repository and are ready for release-publication work, but they are not yet GitHub Releases.
+GitHub Releases now publishes the main packaged suite lines. Web Development Command Desk v0.3.0 is marked as the GitHub `Latest` release.
 
-### GitHub-published releases
+### GitHub-published suite releases
 
 | Release | Suite | GitHub state | Assets |
 |---|---|---|---|
@@ -33,7 +33,7 @@ GitHub Releases currently publishes the SDLC line only. Additional suites are pa
 | [v0.1.1](releases/v0.1.1.md) | SDLC Command Desk | Published and currently marked GitHub `Latest` | Workflow-linked release bundle + checksums |
 | [v0.1.0](releases/v0.1.0.md) | SDLC Command Desk | Published historical release | Initial 19 skill zips + checksums |
 
-### Packaged suites awaiting GitHub Release publication
+### Historical SDLC releases
 
 | Suite | Version | Source | Packaged skills | Package artifacts | Checksum source |
 |---|---|---|---:|---:|---|
@@ -156,15 +156,15 @@ MANIFEST.md                     All suite versions, desk inventory, and package 
 
 ## Releases
 
-Release notes live in `releases/`. GitHub Releases are the public download surface for published suites; `dist/packages/` is the repository staging area for packaged artifacts that have not been published yet.
+Release notes live in `releases/`. GitHub Releases are the public download surface for published suites; `dist/packages/` remains the repository staging area for packaged artifacts.
 
 | Release notes | Suite | Status | Assets |
 |---|---|---|---|
-| [v0.2.0-rc.1](releases/v0.2.0-rc.1.md) | SDLC Command Desk | Published on GitHub Releases; not marked `Latest` | 19 skill zips + `CHECKSUMS.txt` |
-| [v0.3.0-web-development-command-desk](releases/v0.3.0-web-development-command-desk.md) | Web Development Command Desk | Packaged; GitHub Release pending | 14 skill zips |
-| [sales-command-desk-v0.1.0](releases/sales-command-desk-v0.1.0.md) | Sales Command Desk | Packaged; GitHub Release pending | 13 skill zips + release/source bundles |
-| [product-command-desk-v0.1.0](releases/product-command-desk-v0.1.0.md) | Product Command Desk | Packaged; GitHub Release pending | 16 skill zips + release/source bundles |
-| AI Engineering Command Desk v0.1.0 | AI Engineering Command Desk | Packaged; GitHub Release pending | 18 skill zips |
+| [v0.3.0-web-development-command-desk](releases/v0.3.0-web-development-command-desk.md) | Web Development Command Desk | Published as `web-development-command-desk-v0.3.0`; GitHub `Latest` | 14 skill zips + manifest/checksum assets |
+| [ai-engineering-command-desk-v0.1.0](releases/ai-engineering-command-desk-v0.1.0.md) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
+| [product-command-desk-v0.1.0](releases/product-command-desk-v0.1.0.md) | Product Command Desk | Published | 16 skill zips + release/source bundles |
+| [sales-command-desk-v0.1.0](releases/sales-command-desk-v0.1.0.md) | Sales Command Desk | Published | 13 skill zips + release/source bundles |
+| [v0.2.0-rc.1](releases/v0.2.0-rc.1.md) | SDLC Command Desk | Published release candidate | 19 skill zips + `CHECKSUMS.txt` |
 
 Verify packaged artifacts before publishing or installing:
 
@@ -173,7 +173,6 @@ python tools/validate_release_assets.py
 ```
 
 ---
-
 ## From source
 
 ```bash
