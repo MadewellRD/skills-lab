@@ -1,0 +1,8 @@
+interface:
+  display_name: Android App Engineering Desk
+  short_description: Prepares native Android app implementation handoffs.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

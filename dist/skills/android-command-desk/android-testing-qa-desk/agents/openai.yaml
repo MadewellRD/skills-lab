@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Testing QA Desk
+  short_description: Defines Android app/game QA, test matrix, device coverage, and release gates.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

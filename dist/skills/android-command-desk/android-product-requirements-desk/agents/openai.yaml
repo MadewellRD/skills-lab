@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Product Requirements Desk
+  short_description: Defines Android app/game requirements and acceptance gates.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

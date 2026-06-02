@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Maintenance Growth Desk
+  short_description: Plans SDK updates, policy changes, experiments, monetization, and technical debt.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

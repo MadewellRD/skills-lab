@@ -1,0 +1,8 @@
+interface:
+  display_name: Android Security Privacy Desk
+  short_description: Reviews security, privacy, permissions, data safety, policy, and abuse risks.
+  icon: 🤖
+  primary_color: '#22c55e'
+policy:
+  products:
+    - chatgpt

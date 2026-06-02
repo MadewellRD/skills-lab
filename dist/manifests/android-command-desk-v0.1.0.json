@@ -1,0 +1,113 @@
+{
+  "suite": "android-command-desk",
+  "title": "Android Command Desk",
+  "version": "0.1.0",
+  "generated_on": "2026-06-02",
+  "source_dir": "skills/Android Command Desk",
+  "dist_dir": "dist/skills/android-command-desk",
+  "package_dir": "dist/packages/android-command-desk",
+  "skills": [
+    {
+      "order": "000",
+      "slug": "android-command-desk",
+      "source": "000-android-command-desk.md",
+      "title": "Android Command Desk"
+    },
+    {
+      "order": "001",
+      "slug": "android-product-requirements-desk",
+      "source": "001-android-product-requirements-desk.md",
+      "title": "Android Product Requirements Desk"
+    },
+    {
+      "order": "002",
+      "slug": "android-technical-discovery-desk",
+      "source": "002-android-technical-discovery-desk.md",
+      "title": "Android Technical Discovery Desk"
+    },
+    {
+      "order": "003",
+      "slug": "android-architecture-design-desk",
+      "source": "003-android-architecture-design-desk.md",
+      "title": "Android Architecture Design Desk"
+    },
+    {
+      "order": "004",
+      "slug": "android-ui-ux-desk",
+      "source": "004-android-ui-ux-desk.md",
+      "title": "Android UI UX Desk"
+    },
+    {
+      "order": "005",
+      "slug": "android-app-engineering-desk",
+      "source": "005-android-app-engineering-desk.md",
+      "title": "Android App Engineering Desk"
+    },
+    {
+      "order": "006",
+      "slug": "android-game-engineering-desk",
+      "source": "006-android-game-engineering-desk.md",
+      "title": "Android Game Engineering Desk"
+    },
+    {
+      "order": "007",
+      "slug": "android-backend-integration-desk",
+      "source": "007-android-backend-integration-desk.md",
+      "title": "Android Backend Integration Desk"
+    },
+    {
+      "order": "008",
+      "slug": "android-security-privacy-desk",
+      "source": "008-android-security-privacy-desk.md",
+      "title": "Android Security Privacy Desk"
+    },
+    {
+      "order": "009",
+      "slug": "android-performance-optimization-desk",
+      "source": "009-android-performance-optimization-desk.md",
+      "title": "Android Performance Optimization Desk"
+    },
+    {
+      "order": "010",
+      "slug": "android-testing-qa-desk",
+      "source": "010-android-testing-qa-desk.md",
+      "title": "Android Testing QA Desk"
+    },
+    {
+      "order": "011",
+      "slug": "android-release-store-ops-desk",
+      "source": "011-android-release-store-ops-desk.md",
+      "title": "Android Release Store Ops Desk"
+    },
+    {
+      "order": "012",
+      "slug": "android-observability-liveops-desk",
+      "source": "012-android-observability-liveops-desk.md",
+      "title": "Android Observability Liveops Desk"
+    },
+    {
+      "order": "013",
+      "slug": "android-maintenance-growth-desk",
+      "source": "013-android-maintenance-growth-desk.md",
+      "title": "Android Maintenance Growth Desk"
+    }
+  ],
+  "packages": [
+    "dist/packages/android-command-desk/000-android-command-desk-skill.zip",
+    "dist/packages/android-command-desk/001-android-product-requirements-desk-skill.zip",
+    "dist/packages/android-command-desk/002-android-technical-discovery-desk-skill.zip",
+    "dist/packages/android-command-desk/003-android-architecture-design-desk-skill.zip",
+    "dist/packages/android-command-desk/004-android-ui-ux-desk-skill.zip",
+    "dist/packages/android-command-desk/005-android-app-engineering-desk-skill.zip",
+    "dist/packages/android-command-desk/006-android-game-engineering-desk-skill.zip",
+    "dist/packages/android-command-desk/007-android-backend-integration-desk-skill.zip",
+    "dist/packages/android-command-desk/008-android-security-privacy-desk-skill.zip",
+    "dist/packages/android-command-desk/009-android-performance-optimization-desk-skill.zip",
+    "dist/packages/android-command-desk/010-android-testing-qa-desk-skill.zip",
+    "dist/packages/android-command-desk/011-android-release-store-ops-desk-skill.zip",
+    "dist/packages/android-command-desk/012-android-observability-liveops-desk-skill.zip",
+    "dist/packages/android-command-desk/013-android-maintenance-growth-desk-skill.zip",
+    "dist/packages/android-command-desk/android-command-desk-v0.1.0-skill-bundles.zip",
+    "dist/packages/android-command-desk/android-command-desk-v0.1.0-source.zip"
+  ]
+}
