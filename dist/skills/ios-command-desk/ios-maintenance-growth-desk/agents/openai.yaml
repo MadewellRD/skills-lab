@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Maintenance Growth Desk
+  short_description: Plans SDK updates, policy changes, experiments, monetization, and technical debt.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

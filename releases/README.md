@@ -9,6 +9,8 @@ GitHub Releases are the public download surface for published suites. The reposi
 | Release | Suite | GitHub state | Assets |
 |---|---|---|---|
 | `web-development-command-desk-v0.3.0` | Web Development Command Desk | Published and marked GitHub `Latest` | 14 skill zips + manifest/checksum assets |
+| `android-command-desk-v0.1.0` | Android Command Desk | Published | 14 skill zips + release/source bundles + manifest/checksum assets |
+| `ios-command-desk-v0.1.0` | iOS Command Desk | Published | 14 skill zips + release/source bundles + manifest/checksum assets |
 | `ai-engineering-command-desk-v0.1.0` | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | `product-command-desk-v0.1.0` | Product Command Desk | Published | 16 skill zips + release/source bundles + checksums |
 | `sales-command-desk-v0.1.0` | Sales Command Desk | Published | 13 skill zips + release/source bundles + checksums |
@@ -39,6 +41,7 @@ Examples:
 - `sdlc-command-desk-v0.2.0.md`
 - `web-development-command-desk-v0.3.0.md`
 - `ai-engineering-command-desk-v0.1.0.md`
+- `ios-command-desk-v0.1.0.md`
 
 ## Versioning
 

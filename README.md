@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/MadewellRD/skills-lab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest%20release&sort=semver"></a>
-  <a href="MANIFEST.md"><img alt="Published suites" src="https://img.shields.io/badge/published%20suites-6-22c55e.svg"></a>
+  <a href="MANIFEST.md"><img alt="Published suites" src="https://img.shields.io/badge/published%20suites-7-22c55e.svg"></a>
   <a href=".github/workflows/validate-release-assets.yml"><img alt="Release validation" src="https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg"></a>
   <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
 </p>
@@ -41,6 +41,7 @@ GitHub Releases publishes the main packaged suite lines. Web Development Command
 | [web-development-command-desk-v0.3.0](https://github.com/MadewellRD/skills-lab/releases/tag/web-development-command-desk-v0.3.0) | Web Development Command Desk | Published and marked GitHub `Latest` | 14 skill zips + manifest/checksum assets |
 | [sdlc-command-desk-v0.2.0](https://github.com/MadewellRD/skills-lab/releases/tag/sdlc-command-desk-v0.2.0) | SDLC Command Desk | Published | 19 skill zips + checksum assets |
 | [android-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/android-command-desk-v0.1.0) | Android Command Desk | Published | 14 skill zips + release/source bundles + manifest/checksum assets |
+| [ios-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/ios-command-desk-v0.1.0) | iOS Command Desk | Published | 14 skill zips + release/source bundles + manifest/checksum assets |
 | [ai-engineering-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/ai-engineering-command-desk-v0.1.0) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | [product-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/product-command-desk-v0.1.0) | Product Command Desk | Published | 16 skill zips + release/source bundles + checksums |
 | [sales-command-desk-v0.1.0](https://github.com/MadewellRD/skills-lab/releases/tag/sales-command-desk-v0.1.0) | Sales Command Desk | Published | 13 skill zips + release/source bundles + checksums |
@@ -136,7 +137,7 @@ skills/                         Human-authored source Markdown for all Desk Suit
   Android Command Desk/         14 packaged desk source files + references/
   Sales Command Desk/           13 packaged desk source files + references/
   Product Command Desk/         16 packaged desk source files + references
-  iOS Command Desk/             source scaffold suite for iOS app/game development
+  iOS Command Desk/             14 packaged desk source files + references/
   ...                           source scaffold suite directories
 
 dist/
@@ -151,6 +152,7 @@ dist/
   packages/                     ZIP archives for GitHub Releases and direct upload.
     web-development-command-desk/ 14 skill zips + manifest/checksum assets
     android-command-desk/        14 skill zips + release/source bundles + manifest/checksum assets
+    ios-command-desk/            14 skill zips + release/source bundles + manifest/checksum assets
     ai-engineering-command-desk/  18 skill zip archives
     sales-command-desk/           13 skill zips + release/source bundles
     product-command-desk/         16 skill zips + release/source bundles
@@ -174,6 +176,7 @@ Release notes live in `releases/`. GitHub Releases are the public download surfa
 |---|---|---|---|
 | [web-development-command-desk-v0.3.0](releases/web-development-command-desk-v0.3.0.md) | Web Development Command Desk | Published as `web-development-command-desk-v0.3.0`; GitHub `Latest` | 14 skill zips + manifest/checksum assets |
 | [android-command-desk-v0.1.0](releases/android-command-desk-v0.1.0.md) | Android Command Desk | Published | 14 skill zips + release/source bundles + manifest/checksum assets |
+| [ios-command-desk-v0.1.0](releases/ios-command-desk-v0.1.0.md) | iOS Command Desk | Published | 14 skill zips + release/source bundles + manifest/checksum assets |
 | [ai-engineering-command-desk-v0.1.0](releases/ai-engineering-command-desk-v0.1.0.md) | AI Engineering Command Desk | Published | 18 skill zips + manifest/checksum assets |
 | [product-command-desk-v0.1.0](releases/product-command-desk-v0.1.0.md) | Product Command Desk | Published | 16 skill zips + release/source bundles |
 | [sales-command-desk-v0.1.0](releases/sales-command-desk-v0.1.0.md) | Sales Command Desk | Published | 13 skill zips + release/source bundles |

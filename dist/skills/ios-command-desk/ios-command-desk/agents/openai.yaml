@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Command Desk
+  short_description: Orchestrates complete iOS app and game development workflows.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

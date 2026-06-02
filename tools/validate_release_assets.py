@@ -51,6 +51,18 @@ ARTIFACT_SETS = [
         REPO / "dist" / "packages" / "product-command-desk",
         16,
     ),
+    ArtifactSet(
+        "Android Command Desk",
+        REPO / "CHECKSUMS-android-command-desk-v0.1.0.txt",
+        REPO / "dist" / "packages" / "android-command-desk",
+        14,
+    ),
+    ArtifactSet(
+        "iOS Command Desk",
+        REPO / "CHECKSUMS-ios-command-desk-v0.1.0.txt",
+        REPO / "dist" / "packages" / "ios-command-desk",
+        14,
+    ),
 ]
 
 
