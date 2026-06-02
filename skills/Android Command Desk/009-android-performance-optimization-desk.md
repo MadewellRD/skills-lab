@@ -1,26 +1,73 @@
 ---
 name: android-performance-optimization-desk
-description: plan Android performance for startup, memory, battery, ANR and crash risk, rendering, frame pacing, asset loading, profiling, and device-tier budgets.
+description: plan Android performance for startup, memory, battery, ANR and crash risk, rendering, frame pacing, asset loading, Macrobenchmark, Baseline Profiles, profiling, and device-tier budgets.
 ---
 
 # Android Performance Optimization Desk
 
-## Status
+## Suite workflow mode
 
-Planned source stub.
+This desk is part of the Android Command Desk workflow suite. Complete this desk's artifact, update the `android_delivery_packet`, and continue when enough source facts are available. Return `Workflow Halt` instead of inventing benchmarks, traces, device tiers, frame budgets, profiling output, or release-performance evidence.
 
 ## Role
 
-Define Android performance budgets and optimization paths for apps and games: startup, memory, battery, ANR risk, crash risk, rendering, frame pacing, asset loading, profiling, thermal/device tiers, and regression gates.
+Plan Android performance work for app and game surfaces: startup, memory, battery, ANR/crash risk, rendering, jank, frame pacing, asset loading, Macrobenchmark, Baseline Profiles, Android GPU Inspector, profiling, and device-tier budgets.
 
-## SDLC alignment
+## Workflow
 
-Use testing, verification, observability, and release gates to make performance measurable before launch.
+1. Resolve performance goal, target devices, current measurements, workload, and validation commands.
+2. Classify performance lane: app startup/runtime, Compose/View rendering, background/battery, native/game rendering, asset loading, or release regression gate.
+3. Identify available evidence: benchmark reports, traces, CI results, ANRs/crashes, profiler output, telemetry, or user-observed symptoms.
+4. Define optimization hypotheses, measurement plan, device matrix, success gates, and rollback criteria.
+5. Continue to testing or implementation handoff when measurement is sufficient.
 
-## Output contract
+## Responsibilities
 
-Produce budgets, profiling plan, high-risk paths, validation commands, release gates, and `android_delivery_packet` updates.
+- Require measurement before optimization claims.
+- Use Macrobenchmark and Baseline Profiles for app startup/release readiness when relevant.
+- Use AGI/GPU/frame pacing and device-tier budgets for game performance when relevant.
+- Keep performance handoffs focused on measured bottlenecks, not generic tuning.
 
-## Halt behavior
+## Expected inputs
 
-Halt when target devices, performance budgets, profiling data, or reproducible validation commands are missing.
+Benchmark output, traces, profiler results, CI reports, crash/ANR data, device matrix, app/game requirements, performance budgets, repo/build facts, and prior `android_delivery_packet`.
+
+## Expected outputs
+
+Performance plan, measurement matrix, bottleneck hypotheses, validation commands, success gates, optimization handoff, halt conditions, and packet update.
+
+## Evidence packet additions
+
+- performance lane and workload
+- device tiers and current measurements
+- benchmark/profiling commands
+- app startup/runtime or game frame budget
+- success gates and rollback criteria
+- optimization hypotheses tied to evidence
+
+## Packet fields to update
+
+`performance_budgets`, `benchmark_commands`, `profiling_tools`, `device_tiers`, `baseline_profiles`, `frame_budget`, `battery_constraints`, `bottlenecks`, `validation_commands`, `source_facts`, `open_questions`, `ready_to_continue`
+
+## Halt conditions
+
+- No performance target or current measurement exists for optimization claims.
+- Device tier, workload, or test scenario is unknown.
+- Required profiler/benchmark output is unavailable.
+- Release gate depends on performance evidence that has not been collected.
+
+## Default output modes
+
+- `android-performance-plan.md`
+- `android-benchmark-matrix.md`
+- `android-profile-summary.md`
+- `android-performance-handoff.md`
+- `workflow-halt.md`
+
+## Downstream handoff
+
+Continue to `android-testing-qa-desk` after performance gates and validation commands are clear.
+
+## SDLC suite handoff
+
+Use `test-strategy-desk`, `verification-desk`, `ci-failure-desk`, or `implementation-handoff-desk` when measured performance work needs generic lifecycle support.
