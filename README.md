@@ -46,7 +46,7 @@ GitHub Releases publishes the main packaged suite lines. Web Development Command
 
 ### Source scaffold suites
 
-These suites have source directories or README stubs but no generated `dist/` packages yet: Cloud Infrastructure, Customer Success, Customer Support, Data, Finance Accounting, FinOps, GRC, Knowledge Ops, Legal Contracts, Marketing Growth, People Talent, Platform Engineering, Privacy Data Protection, Procurement Vendor Management, Research, Sales Revenue (source preserved), Security, and SRE Reliability.
+These suites have source directories or README stubs but no generated `dist/` packages yet: Android, iOS, Cloud Infrastructure, Customer Success, Customer Support, Data, Finance Accounting, FinOps, GRC, Knowledge Ops, Legal Contracts, Marketing Growth, People Talent, Platform Engineering, Privacy Data Protection, Procurement Vendor Management, Research, Sales Revenue (source preserved), Security, and SRE Reliability.
 
 ---
 
@@ -129,6 +129,8 @@ skills/                         Human-authored source Markdown for all Desk Suit
   AI Engineering Command Desk/  18 desk source files + references/
   Sales Command Desk/           13 packaged desk source files + references/
   Product Command Desk/         16 packaged desk source files + references
+  Android Command Desk/         source scaffold suite for Android app/game development
+  iOS Command Desk/             source scaffold suite for iOS app/game development
   ...                           source scaffold suite directories
 
 dist/
