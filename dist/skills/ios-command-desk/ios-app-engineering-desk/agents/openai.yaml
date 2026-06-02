@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS App Engineering Desk
+  short_description: Prepares native iOS app implementation handoffs.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

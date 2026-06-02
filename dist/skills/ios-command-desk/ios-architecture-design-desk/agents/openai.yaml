@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Architecture Design Desk
+  short_description: Designs architecture, modules, data flow, engine boundaries, and ADR decisions.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

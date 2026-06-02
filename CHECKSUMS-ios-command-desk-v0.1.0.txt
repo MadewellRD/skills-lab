@@ -1,0 +1,149 @@
+d01d2158018ee97c29220c6c23ed005b2e83cf12c229f29754415becc468fefc  dist/manifests/ios-command-desk-v0.1.0.json
+0f126ad0665d126bf78a1e46c7521fd5c8a2e43638d4ef5ff0ebe00591acad53  dist/packages/ios-command-desk/000-ios-command-desk-skill.zip
+fbf4288e60e0a5a5befb1f06f616fd1d6bbc83fd079eb69636251df69f50cd75  dist/packages/ios-command-desk/001-ios-product-requirements-desk-skill.zip
+9fbd774c16a2c505ac32ae93c5d48b0647dc49fd12f802507c9c28adfb253192  dist/packages/ios-command-desk/002-ios-technical-discovery-desk-skill.zip
+5124e84168aa07ee53482c832a76b14902a3493976ac261cbb28999b1301a43c  dist/packages/ios-command-desk/003-ios-architecture-design-desk-skill.zip
+550e2351b18aaa47bc6abbb5d5823e24348b7ba4f3a23adbf2001a2f02f4ce52  dist/packages/ios-command-desk/004-ios-ui-ux-desk-skill.zip
+a360c33cf307adb28eb60210eb4561992f853688ae87bce5b42f310e246ae532  dist/packages/ios-command-desk/005-ios-app-engineering-desk-skill.zip
+feed97dd471a88fbb95e3ae73c55ed5d06637a08ea8190f5810960dd43d55f7f  dist/packages/ios-command-desk/006-ios-game-engineering-desk-skill.zip
+c588821ff960358acef21986560e8ea6f87897ba22b93aa017bb79ccfc51f46b  dist/packages/ios-command-desk/007-ios-backend-integration-desk-skill.zip
+52edd4ea68e073e5cf8dcdb59c15964cdb7e449f839534262022dddfc2732747  dist/packages/ios-command-desk/008-ios-security-privacy-desk-skill.zip
+77472895c3480ad952530eefc84caf8e82b32a6896302f53f26aa2020ff79e3c  dist/packages/ios-command-desk/009-ios-performance-optimization-desk-skill.zip
+05a10ecffffa8a6e40108b4d1303cb2c8e92fc8e3e2b60404cb1efc6c7298b90  dist/packages/ios-command-desk/010-ios-testing-qa-desk-skill.zip
+ee7917a5611e34ae5d9551eea7cce845ee47abe445ae66a12db3390eda34f009  dist/packages/ios-command-desk/011-ios-release-app-store-ops-desk-skill.zip
+e201a07ab092f8e422536bb1a873296c08d11af47ed96e3397813e54b0f19d11  dist/packages/ios-command-desk/012-ios-observability-liveops-desk-skill.zip
+62aeb0b55a65e4d9db4181d4d24c9800d1423993caca3d6eed27cf173f6247c3  dist/packages/ios-command-desk/013-ios-maintenance-growth-desk-skill.zip
+b75a67ce57e48fe7eeb3c85da1bdbc7f01650d3ab837b1bd78510c9cf84cb7ef  dist/packages/ios-command-desk/ios-command-desk-v0.1.0-skill-bundles.zip
+ad8b77a55c232ead8903db88c7695e42a4ceb7facbdca2184ea73f830a5a93ee  dist/packages/ios-command-desk/ios-command-desk-v0.1.0-source.zip
+ffd712e042f64778e029ef2f67dcb783ef60d0ab4f3dd645ae6a42e2c04ad581  dist/skills/ios-command-desk/ios-app-engineering-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-app-engineering-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-app-engineering-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-app-engineering-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-app-engineering-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-app-engineering-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-app-engineering-desk/references/platform/ios-low-token-policy.md
+b9d73b74f8c9203eb363046da8735f07f841e7e78f187dedd2fe2117fdac4b06  dist/skills/ios-command-desk/ios-app-engineering-desk/SKILL.md
+77e36bc258faf008ed95acbfeb4aff72d3088fca8719dc76a52f51de51d76093  dist/skills/ios-command-desk/ios-architecture-design-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-architecture-design-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-architecture-design-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-architecture-design-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-architecture-design-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-architecture-design-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-architecture-design-desk/references/platform/ios-low-token-policy.md
+b80ae2058aacfbda40775f8b324f7644aa53fb7489dd57ea8ec575903dd9a3e6  dist/skills/ios-command-desk/ios-architecture-design-desk/SKILL.md
+181a141c84dd478af112873bac39682fc3a618fad13a170a257af800886e4f8a  dist/skills/ios-command-desk/ios-backend-integration-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-backend-integration-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-backend-integration-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-backend-integration-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-backend-integration-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-backend-integration-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-backend-integration-desk/references/platform/ios-low-token-policy.md
+a60686054633547a32c29cae76dc575eab16d19e5d4d0cbd3cbdc96db30357ef  dist/skills/ios-command-desk/ios-backend-integration-desk/SKILL.md
+f24d90fb87a28a999e60272cbf13c7988c58bb00d8f6bf66dfca16b2627ca2d7  dist/skills/ios-command-desk/ios-command-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-command-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-command-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-command-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-command-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-command-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-command-desk/references/platform/ios-low-token-policy.md
+f584b1f6493d163804c1ba0355e14f2499501a0b43071dfb19c92f705b6ef26d  dist/skills/ios-command-desk/ios-command-desk/SKILL.md
+288084f334be57a55ad8dbd6154051a1ba5c74fb1a69eb0fa5edfdc6f370f9be  dist/skills/ios-command-desk/ios-game-engineering-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-game-engineering-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-game-engineering-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-game-engineering-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-game-engineering-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-game-engineering-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-game-engineering-desk/references/platform/ios-low-token-policy.md
+40c7f1cb7d300ffd1cb4a9cb662fe9513dd5653f343958d1e256ae4097c3527e  dist/skills/ios-command-desk/ios-game-engineering-desk/SKILL.md
+06ed3a031070366cbe537206092c276266cf1e148ed8f040299701526cc218b1  dist/skills/ios-command-desk/ios-maintenance-growth-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-maintenance-growth-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-maintenance-growth-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-maintenance-growth-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-maintenance-growth-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-maintenance-growth-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-maintenance-growth-desk/references/platform/ios-low-token-policy.md
+567f3653e6ddde2b481782d02745447326c79c6c6fea98f90d794a88c3a168d5  dist/skills/ios-command-desk/ios-maintenance-growth-desk/SKILL.md
+0bed0d86bc30a12b986fcce22cbf36a708be8995a3018cda5777f02af3523f43  dist/skills/ios-command-desk/ios-observability-liveops-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-observability-liveops-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-observability-liveops-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-observability-liveops-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-observability-liveops-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-observability-liveops-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-observability-liveops-desk/references/platform/ios-low-token-policy.md
+7153ee2da62f09f3d0319496c7788a74e4604124d25a3eff5af4d201cca8de9c  dist/skills/ios-command-desk/ios-observability-liveops-desk/SKILL.md
+7a69de69a3fcbfa0ed9c38a817a994fccdc1db89d722dd743defc4ca387636c2  dist/skills/ios-command-desk/ios-performance-optimization-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-performance-optimization-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-performance-optimization-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-performance-optimization-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-performance-optimization-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-performance-optimization-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-performance-optimization-desk/references/platform/ios-low-token-policy.md
+184277a47accb1bedd121c3b20ea43c17505a629bb4d5642f5ceb605b5c2f52b  dist/skills/ios-command-desk/ios-performance-optimization-desk/SKILL.md
+4fda1c68a76567b8977bb4078a4a4c83c94645677fe7f09697c56183b480096e  dist/skills/ios-command-desk/ios-product-requirements-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-product-requirements-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-product-requirements-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-product-requirements-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-product-requirements-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-product-requirements-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-product-requirements-desk/references/platform/ios-low-token-policy.md
+f5f68e98adf6dd7bc40225c670d64e47eda5eb9037ada3dd63289d202cbb4db5  dist/skills/ios-command-desk/ios-product-requirements-desk/SKILL.md
+5c062beaf49fa3f4aa21679a225623d92ac62cf497c45028c36d51c8c1a4d123  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/references/platform/ios-low-token-policy.md
+301a80fcbbcf09ce4fb296d48f2a3baaff51d889cecff8b372bf7c05651af688  dist/skills/ios-command-desk/ios-release-app-store-ops-desk/SKILL.md
+2a85727474fa4709bf3aa4f6de284ea26f503ddb45d9d579e7f073e89ab17ecb  dist/skills/ios-command-desk/ios-security-privacy-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-security-privacy-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-security-privacy-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-security-privacy-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-security-privacy-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-security-privacy-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-security-privacy-desk/references/platform/ios-low-token-policy.md
+5d965468387535264973a1444c6c2c1e2466075a401ccab8f3206e858ef5656c  dist/skills/ios-command-desk/ios-security-privacy-desk/SKILL.md
+723609bb2bba37029ec9c80d92f073a1f5bb65c953a2bcea165a2ca11fb2bc85  dist/skills/ios-command-desk/ios-technical-discovery-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-technical-discovery-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-technical-discovery-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-technical-discovery-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-technical-discovery-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-technical-discovery-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-technical-discovery-desk/references/platform/ios-low-token-policy.md
+f4fea9c85c2a71067306d422a58e1a5b296b264b65a9ba5edd98f0c3f230373f  dist/skills/ios-command-desk/ios-technical-discovery-desk/SKILL.md
+09b65e47f708a6d7dd5cd183d88129df2921c31706fa9c6d27041007af2d9223  dist/skills/ios-command-desk/ios-testing-qa-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-testing-qa-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-testing-qa-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-testing-qa-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-testing-qa-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-testing-qa-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-testing-qa-desk/references/platform/ios-low-token-policy.md
+8d8e8579cc8abe95d1b36987f8bea8eff197a2bba9cc06b1132dbb4bb745f875  dist/skills/ios-command-desk/ios-testing-qa-desk/SKILL.md
+36a4fbec8202852627d11337aef48d2c7fe936b6dcf3767dbf71ca0a70860c53  dist/skills/ios-command-desk/ios-ui-ux-desk/agents/openai.yaml
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dist/skills/ios-command-desk/ios-ui-ux-desk/assets/.gitkeep
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  dist/skills/ios-command-desk/ios-ui-ux-desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  dist/skills/ios-command-desk/ios-ui-ux-desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  dist/skills/ios-command-desk/ios-ui-ux-desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  dist/skills/ios-command-desk/ios-ui-ux-desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  dist/skills/ios-command-desk/ios-ui-ux-desk/references/platform/ios-low-token-policy.md
+d436fb14b7383dd8cc46aefbe0d914470bd943cbc6eb70c571f89cb83bbe0d92  dist/skills/ios-command-desk/ios-ui-ux-desk/SKILL.md
+f584b1f6493d163804c1ba0355e14f2499501a0b43071dfb19c92f705b6ef26d  skills/iOS Command Desk/000-ios-command-desk.md
+f5f68e98adf6dd7bc40225c670d64e47eda5eb9037ada3dd63289d202cbb4db5  skills/iOS Command Desk/001-ios-product-requirements-desk.md
+f4fea9c85c2a71067306d422a58e1a5b296b264b65a9ba5edd98f0c3f230373f  skills/iOS Command Desk/002-ios-technical-discovery-desk.md
+b80ae2058aacfbda40775f8b324f7644aa53fb7489dd57ea8ec575903dd9a3e6  skills/iOS Command Desk/003-ios-architecture-design-desk.md
+d436fb14b7383dd8cc46aefbe0d914470bd943cbc6eb70c571f89cb83bbe0d92  skills/iOS Command Desk/004-ios-ui-ux-desk.md
+b9d73b74f8c9203eb363046da8735f07f841e7e78f187dedd2fe2117fdac4b06  skills/iOS Command Desk/005-ios-app-engineering-desk.md
+40c7f1cb7d300ffd1cb4a9cb662fe9513dd5653f343958d1e256ae4097c3527e  skills/iOS Command Desk/006-ios-game-engineering-desk.md
+a60686054633547a32c29cae76dc575eab16d19e5d4d0cbd3cbdc96db30357ef  skills/iOS Command Desk/007-ios-backend-integration-desk.md
+5d965468387535264973a1444c6c2c1e2466075a401ccab8f3206e858ef5656c  skills/iOS Command Desk/008-ios-security-privacy-desk.md
+184277a47accb1bedd121c3b20ea43c17505a629bb4d5642f5ceb605b5c2f52b  skills/iOS Command Desk/009-ios-performance-optimization-desk.md
+8d8e8579cc8abe95d1b36987f8bea8eff197a2bba9cc06b1132dbb4bb745f875  skills/iOS Command Desk/010-ios-testing-qa-desk.md
+301a80fcbbcf09ce4fb296d48f2a3baaff51d889cecff8b372bf7c05651af688  skills/iOS Command Desk/011-ios-release-app-store-ops-desk.md
+7153ee2da62f09f3d0319496c7788a74e4604124d25a3eff5af4d201cca8de9c  skills/iOS Command Desk/012-ios-observability-liveops-desk.md
+567f3653e6ddde2b481782d02745447326c79c6c6fea98f90d794a88c3a168d5  skills/iOS Command Desk/013-ios-maintenance-growth-desk.md
+bfe4ac6ed1e16539f47be89027ef64221018e7dd3125d1cb9517359a3615fc26  skills/iOS Command Desk/README.md
+3c5c4337f33b335e3e601b5150ecec5d39906dde966c4997a235215c66ad1563  skills/iOS Command Desk/references/desk-workflows/ios-command-desk.md
+8703b86adf1bb888243a551c8bf27d1116bec209784e2576e092c3e600fdf3f2  skills/iOS Command Desk/references/desk-workflows/ios-delivery-packet.md
+9a07ac508311c2018b29307e3b88e406d633eaf498246b5183621edb20673eb5  skills/iOS Command Desk/references/platform/ios-app-baseline.md
+127f1ee4e937a6752f7bf0bef6533296dac96c33ac985f9f0bbf1e36091d026b  skills/iOS Command Desk/references/platform/ios-game-baseline.md
+8a18fa2efa567fc7aec3c95cc55e3ec18bd4d0af2e8b9427c3254bb8a2f1ce60  skills/iOS Command Desk/references/platform/ios-low-token-policy.md

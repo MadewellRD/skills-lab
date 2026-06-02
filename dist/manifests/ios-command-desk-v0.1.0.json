@@ -1,0 +1,113 @@
+{
+  "suite": "ios-command-desk",
+  "title": "iOS Command Desk",
+  "version": "0.1.0",
+  "generated_on": "2026-06-02",
+  "source_dir": "skills/iOS Command Desk",
+  "dist_dir": "dist/skills/ios-command-desk",
+  "package_dir": "dist/packages/ios-command-desk",
+  "skills": [
+    {
+      "order": "000",
+      "slug": "ios-command-desk",
+      "source": "000-ios-command-desk.md",
+      "title": "iOS Command Desk"
+    },
+    {
+      "order": "001",
+      "slug": "ios-product-requirements-desk",
+      "source": "001-ios-product-requirements-desk.md",
+      "title": "iOS Product Requirements Desk"
+    },
+    {
+      "order": "002",
+      "slug": "ios-technical-discovery-desk",
+      "source": "002-ios-technical-discovery-desk.md",
+      "title": "iOS Technical Discovery Desk"
+    },
+    {
+      "order": "003",
+      "slug": "ios-architecture-design-desk",
+      "source": "003-ios-architecture-design-desk.md",
+      "title": "iOS Architecture Design Desk"
+    },
+    {
+      "order": "004",
+      "slug": "ios-ui-ux-desk",
+      "source": "004-ios-ui-ux-desk.md",
+      "title": "iOS UI UX Desk"
+    },
+    {
+      "order": "005",
+      "slug": "ios-app-engineering-desk",
+      "source": "005-ios-app-engineering-desk.md",
+      "title": "iOS App Engineering Desk"
+    },
+    {
+      "order": "006",
+      "slug": "ios-game-engineering-desk",
+      "source": "006-ios-game-engineering-desk.md",
+      "title": "iOS Game Engineering Desk"
+    },
+    {
+      "order": "007",
+      "slug": "ios-backend-integration-desk",
+      "source": "007-ios-backend-integration-desk.md",
+      "title": "iOS Backend Integration Desk"
+    },
+    {
+      "order": "008",
+      "slug": "ios-security-privacy-desk",
+      "source": "008-ios-security-privacy-desk.md",
+      "title": "iOS Security Privacy Desk"
+    },
+    {
+      "order": "009",
+      "slug": "ios-performance-optimization-desk",
+      "source": "009-ios-performance-optimization-desk.md",
+      "title": "iOS Performance Optimization Desk"
+    },
+    {
+      "order": "010",
+      "slug": "ios-testing-qa-desk",
+      "source": "010-ios-testing-qa-desk.md",
+      "title": "iOS Testing QA Desk"
+    },
+    {
+      "order": "011",
+      "slug": "ios-release-app-store-ops-desk",
+      "source": "011-ios-release-app-store-ops-desk.md",
+      "title": "iOS Release App Store Ops Desk"
+    },
+    {
+      "order": "012",
+      "slug": "ios-observability-liveops-desk",
+      "source": "012-ios-observability-liveops-desk.md",
+      "title": "iOS Observability Liveops Desk"
+    },
+    {
+      "order": "013",
+      "slug": "ios-maintenance-growth-desk",
+      "source": "013-ios-maintenance-growth-desk.md",
+      "title": "iOS Maintenance Growth Desk"
+    }
+  ],
+  "packages": [
+    "dist/packages/ios-command-desk/000-ios-command-desk-skill.zip",
+    "dist/packages/ios-command-desk/001-ios-product-requirements-desk-skill.zip",
+    "dist/packages/ios-command-desk/002-ios-technical-discovery-desk-skill.zip",
+    "dist/packages/ios-command-desk/003-ios-architecture-design-desk-skill.zip",
+    "dist/packages/ios-command-desk/004-ios-ui-ux-desk-skill.zip",
+    "dist/packages/ios-command-desk/005-ios-app-engineering-desk-skill.zip",
+    "dist/packages/ios-command-desk/006-ios-game-engineering-desk-skill.zip",
+    "dist/packages/ios-command-desk/007-ios-backend-integration-desk-skill.zip",
+    "dist/packages/ios-command-desk/008-ios-security-privacy-desk-skill.zip",
+    "dist/packages/ios-command-desk/009-ios-performance-optimization-desk-skill.zip",
+    "dist/packages/ios-command-desk/010-ios-testing-qa-desk-skill.zip",
+    "dist/packages/ios-command-desk/011-ios-release-app-store-ops-desk-skill.zip",
+    "dist/packages/ios-command-desk/012-ios-observability-liveops-desk-skill.zip",
+    "dist/packages/ios-command-desk/013-ios-maintenance-growth-desk-skill.zip",
+    "dist/packages/ios-command-desk/ios-command-desk-v0.1.0-skill-bundles.zip",
+    "dist/packages/ios-command-desk/ios-command-desk-v0.1.0-source.zip"
+  ]
+}

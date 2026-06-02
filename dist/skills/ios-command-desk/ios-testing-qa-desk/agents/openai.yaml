@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Testing QA Desk
+  short_description: Defines iOS app/game QA, test matrix, device coverage, and release gates.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

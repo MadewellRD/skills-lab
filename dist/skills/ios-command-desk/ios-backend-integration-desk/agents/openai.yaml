@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Backend Integration Desk
+  short_description: Defines APIs, auth, sync, push, payments, multiplayer, and cloud saves.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

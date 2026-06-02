@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Performance Optimization Desk
+  short_description: Plans app/game performance, benchmarks, profiling, and device-tier budgets.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Release App Store Ops Desk
+  short_description: Plans builds, signing, TestFlight groups and App Store release states, staged rollout, rollback, and store readiness.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

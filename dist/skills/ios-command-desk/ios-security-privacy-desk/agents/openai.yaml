@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Security Privacy Desk
+  short_description: Reviews security, privacy, permissions, privacy labels, policy, and abuse risks.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

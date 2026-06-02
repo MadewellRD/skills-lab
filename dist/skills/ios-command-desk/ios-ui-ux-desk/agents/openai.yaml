@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS UI UX Desk
+  short_description: Plans iOS UI/UX, navigation, accessibility, localization, and input states.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

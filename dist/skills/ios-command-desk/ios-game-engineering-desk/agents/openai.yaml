@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Game Engineering Desk
+  short_description: Prepares iOS game, engine, Metal/engine runtime, and runtime handoffs.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt

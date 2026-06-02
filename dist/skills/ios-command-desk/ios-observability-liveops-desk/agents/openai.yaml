@@ -1,0 +1,8 @@
+interface:
+  display_name: iOS Observability Liveops Desk
+  short_description: Defines crash/main-thread stall monitoring, analytics, remote config, alerts, and live ops.
+  icon: 🤖
+  primary_color: '#0ea5e9'
+policy:
+  products:
+    - chatgpt
