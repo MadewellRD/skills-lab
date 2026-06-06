@@ -1,4 +1,4 @@
-﻿# Skills-Lab
+# Skills-Lab
 
 <p align="center">
   <img src="assets/repo_image.png" alt="Skills-Lab hero" width="100%" />
@@ -11,7 +11,7 @@
   <a href="MANIFEST.md"><img alt="Published suites" src="https://img.shields.io/badge/published%20suites-7-22c55e.svg"></a>
   <a href="MANIFEST.md"><img alt="Packaged skills" src="https://img.shields.io/badge/packaged%20skills-108-06b6d4.svg"></a>
   <a href=".github/workflows/validate-release-assets.yml"><img alt="Release validation" src="https://img.shields.io/badge/release%20validation-manual-8b5cf6.svg"></a>
-  <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue.svg"></a>
+  <a href="LICENSE"><img alt="License: AGPL-3.0-only" src="https://img.shields.io/badge/license-AGPL--3.0--only-blue.svg"></a>
 </p>
 
 <p align="center"><strong>Think in chat. Execute in the CLI. Ship like you already know the process.</strong></p>

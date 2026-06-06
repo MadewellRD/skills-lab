@@ -81,4 +81,4 @@ Do not include credentials, private data, production logs, proprietary content, 
 
 ## License
 
-By contributing to this repository, you agree that your contribution is submitted under the repository's Apache-2.0 license unless explicitly stated otherwise in the contribution and accepted by maintainers.
+By contributing to this repository, you agree that your contribution is submitted under the repository's AGPL-3.0-only license unless explicitly stated otherwise in the contribution and accepted by maintainers.
