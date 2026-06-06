@@ -1,0 +1,77 @@
+name: Bug report
+description: Report a repository, documentation, packaging, or Desk Suite defect.
+title: "Bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for reproducible defects. Do not include secrets, private data, or security-sensitive exploit details.
+  - type: input
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Name the suite, desk, package, release, tool, or document.
+      placeholder: "Example: ios-command-desk / tools/validate_release_assets.py / MANIFEST.md"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest reliable reproduction path.
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Paste non-sensitive logs, validation output, links, or screenshots.
+      render: shell
+    validations:
+      required: false
+  - type: dropdown
+    id: release-impact
+    attributes:
+      label: Release impact
+      options:
+        - No release impact
+        - Source skill content only
+        - Generated dist package affected
+        - Release artifact/checksum affected
+        - Unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Reporter checks
+      options:
+        - label: I searched existing issues before filing this.
+          required: true
+        - label: I did not include secrets, credentials, private data, or exploit details.
+          required: true

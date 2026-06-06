@@ -1,0 +1,74 @@
+name: Desk Suite change
+description: Propose a new suite, desk, taxonomy change, or skill improvement.
+title: "Desk Suite: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for new Desk Suites, desk additions, taxonomy changes, skill refinements, and workflow coverage requests.
+  - type: input
+    id: suite
+    attributes:
+      label: Suite or desk
+      description: Name the existing or proposed suite/desk.
+      placeholder: "Example: Platform Engineering Command Desk / web-security-secops-desk"
+    validations:
+      required: true
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change type
+      options:
+        - New Desk Suite
+        - New specialist desk
+        - Existing desk improvement
+        - Taxonomy or naming change
+        - Documentation change
+        - Packaging or release change
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or gap
+      description: What workflow gap does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-shape
+    attributes:
+      label: Proposed shape
+      description: Describe folders, desk names, source files, dist output, package output, or manifest changes.
+      placeholder: |
+        Source path:
+        Dist path:
+        Package path:
+        Release naming:
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source basis
+      description: List public documentation, standards, repos, papers, or existing repo conventions that support the change.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: How should this be validated before merge?
+      placeholder: "Example: regenerate suite packages, run python tools/validate_release_assets.py, update MANIFEST.md"
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints acknowledged
+      options:
+        - label: This proposal preserves existing naming and taxonomy unless explicitly requesting a convention change.
+          required: true
+        - label: This proposal avoids private data, secrets, and unsafe destructive instructions.
+          required: true

@@ -1,0 +1,70 @@
+name: Release integrity
+description: Report a package, manifest, checksum, or release asset inconsistency.
+title: "Release integrity: "
+labels:
+  - release
+  - integrity
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when a release package, checksum, manifest entry, or generated artifact appears inconsistent.
+  - type: input
+    id: release
+    attributes:
+      label: Release or tag
+      placeholder: "Example: ios-command-desk-v0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: Affected asset or file
+      placeholder: "Example: dist/packages/...zip / CHECKSUMS-ios-command-desk-v0.1.0.txt / MANIFEST.md"
+    validations:
+      required: true
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue type
+      options:
+        - Checksum mismatch
+        - Missing asset
+        - Unexpected asset
+        - Manifest mismatch
+        - Release notes mismatch
+        - Package contents mismatch
+        - Validation tooling mismatch
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: validation-output
+    attributes:
+      label: Validation output
+      description: Paste the command and non-sensitive output.
+      render: shell
+      placeholder: "python tools/validate_release_assets.py"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed result
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Reporter checks
+      options:
+        - label: I verified that I am comparing against the correct tag or branch.
+          required: true
+        - label: I did not include secrets, credentials, or private data.
+          required: true
