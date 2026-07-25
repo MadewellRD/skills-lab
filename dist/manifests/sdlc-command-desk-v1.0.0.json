@@ -9,43 +9,43 @@
       "order": 0,
       "skill": "sdlc-command-desk",
       "archive": "000-sdlc-command-desk-skill.zip",
-      "sha256": "6fe1ebec0497a7cd44b84d82494e7da304817646fa9a1c0b8f95053100e5ac15",
-      "bytes": 29827
+      "sha256": "a065fa95c8395709e13af345a448d1aa0de87f1ecb62801599c54a2dbe510933",
+      "bytes": 30161
     },
     {
       "order": 1,
       "skill": "architecture-design-desk",
       "archive": "001-architecture-design-desk-skill.zip",
-      "sha256": "cae30b8434e8250aff4f7dad2c4e649b1bb9e5c9e543aa9c649b387eafd9f663",
-      "bytes": 22705
+      "sha256": "93885d836c85037b3eba042b4cecb75d78659c32294ff675b97df6376272916f",
+      "bytes": 23010
     },
     {
       "order": 2,
       "skill": "ci-failure-desk",
       "archive": "002-ci-failure-desk-skill.zip",
-      "sha256": "ea0a7267ce4967a775a2705ff2574d1fea8e46ad8e3d6ff83f175ac66f31f82c",
-      "bytes": 23419
+      "sha256": "c8ebe00c9ff38e5efee6166dd9d10a30fa062b88ab4e6d6258632bbf553b094c",
+      "bytes": 23724
     },
     {
       "order": 3,
       "skill": "decommissioning-desk",
       "archive": "003-decommissioning-desk-skill.zip",
-      "sha256": "dd9c87cff1c79c638f2a8f700a79b1ba90f342a69bb28c2bc5d01cbc74afa67d",
-      "bytes": 24792
+      "sha256": "8213177adcdda262840f1eb3e730a923f3968027d83b0b0ae58c7ddbefb3c9f2",
+      "bytes": 25097
     },
     {
       "order": 4,
       "skill": "deployment-desk",
       "archive": "004-deployment-desk-skill.zip",
-      "sha256": "eb1a338c333c98e8c05b23cbe0fd66de6e79cc921c05f944c48b57e05ad77ef6",
-      "bytes": 23046
+      "sha256": "53c216ed2c99a3fbae5f791445670a53b15c9da498f8cef40498fffcc3127aca",
+      "bytes": 23351
     },
     {
       "order": 5,
       "skill": "docs-traceability-desk",
       "archive": "005-docs-traceability-desk-skill.zip",
-      "sha256": "321940cf4e18a0086a19368796e2ba147c88dc2cf7c08d9022877923603e710f",
-      "bytes": 21990
+      "sha256": "a3d881d796f65fd5295948a153b77fa761fe9ceb7adb4309e53fa2f28312ee43",
+      "bytes": 22295
     },
     {
       "order": 6,
@@ -58,92 +58,92 @@
       "order": 7,
       "skill": "implementation-handoff-desk",
       "archive": "007-implementation-handoff-desk-skill.zip",
-      "sha256": "a27ca43847c0ad0cf74a2b152dce068613d0b89c253dcc6b4cb57d55edf82f0c",
-      "bytes": 63481
+      "sha256": "f94e367cf4eab2bdf0ac7ede785ffe26670dbb418b460c85b42cc4cf69fb332d",
+      "bytes": 63786
     },
     {
       "order": 8,
       "skill": "incident-response-desk",
       "archive": "008-incident-response-desk-skill.zip",
-      "sha256": "456a69608fe9d5a3ed6f2007465e68684a604d59f7bf59b73f9bc3a48ddbb673",
-      "bytes": 18352
+      "sha256": "1c537e12b058a6b4d0e22b1731766e84621350ac9ace778b760d9c27302482b8",
+      "bytes": 18657
     },
     {
       "order": 9,
       "skill": "issue-planning-desk",
       "archive": "009-issue-planning-desk-skill.zip",
-      "sha256": "310fcbfa0e9008731014a36ccce0d7dd0add78726a11865acfb55c3893798458",
-      "bytes": 19787
+      "sha256": "0e43badb77a67ed04cf74fb009f78b170d1fc0405e84206ce144ed6aba542bb7",
+      "bytes": 20092
     },
     {
       "order": 10,
       "skill": "maintenance-refactor-desk",
       "archive": "010-maintenance-refactor-desk-skill.zip",
-      "sha256": "78846d9b39c007d0b5459219669aacd7f61b789b8622f062edfff86ee5852c36",
-      "bytes": 24104
+      "sha256": "f263bb86aeb7370bcf928e8aea1dfc38921c1e2209b753795d0cb70dbc8ab6c5",
+      "bytes": 24409
     },
     {
       "order": 11,
       "skill": "observability-readiness-desk",
       "archive": "011-observability-readiness-desk-skill.zip",
-      "sha256": "606d3f67fc69138f38d214d549e46a3c221a157bee31286fa6d1ccf13aa3874d",
-      "bytes": 22143
+      "sha256": "7b14966084a3fafc4eabd9d00e038e33155887784c1f4e2544e59fd8e06c8c44",
+      "bytes": 22448
     },
     {
       "order": 12,
       "skill": "product-requirements-desk",
       "archive": "012-product-requirements-desk-skill.zip",
-      "sha256": "b4b789b47da48d2b9b88c1681c73378d1414af99b970077ba639d6e5b8efe823",
-      "bytes": 19269
+      "sha256": "261fb51b8c0024b2a92e13a24fb5018a7a43196c771d34039c62f563f63bec41",
+      "bytes": 19574
     },
     {
       "order": 13,
       "skill": "release-operations-desk",
       "archive": "013-release-operations-desk-skill.zip",
-      "sha256": "07dd8e6fba9ae0783cbab59bdc5dce60a1e1ad020036235b855b387b95d1922b",
-      "bytes": 21891
+      "sha256": "81d3d42260547e9ab1910262d6caa9ecf5affdf575183ce5ee4539792aa35b5c",
+      "bytes": 22196
     },
     {
       "order": 14,
       "skill": "retrospective-desk",
       "archive": "014-retrospective-desk-skill.zip",
-      "sha256": "d7f2821e385c41053544e6fc7d3f7eb412e3111e6c76f9c70b19c00640d328c5",
-      "bytes": 19781
+      "sha256": "6b9051906d3a411ea79cb3b18f88abe6748122ebeb5529cee640af28d53150cb",
+      "bytes": 20086
     },
     {
       "order": 15,
       "skill": "review-quality-desk",
       "archive": "015-review-quality-desk-skill.zip",
-      "sha256": "3fcbeb7058208b882d9eb6863c449c6ed13e627f1f224c1d0822d7f596cb0894",
-      "bytes": 18706
+      "sha256": "a3cf57c67d5ceba2b8d411a20954a297aeefdd6dddf9421b95518666c62d93df",
+      "bytes": 19011
     },
     {
       "order": 16,
       "skill": "security-threat-desk",
       "archive": "016-security-threat-desk-skill.zip",
-      "sha256": "5fea5aeb9ac4f1cc27d847eb1b0e4daf12ef3d1922fdde84da662c843b3d9019",
-      "bytes": 23033
+      "sha256": "72b160f62123a53cb8482d3946743d9d64e445b09f250dc73207e7042a0da50b",
+      "bytes": 23338
     },
     {
       "order": 17,
       "skill": "technical-discovery-desk",
       "archive": "017-technical-discovery-desk-skill.zip",
-      "sha256": "8906c2dcefe803550db70c30244239bd8d71341895184201f25211129014d7f8",
-      "bytes": 22267
+      "sha256": "8f9f71f473f0f9239abdc13e4532b3543197ce624906763bb8d5cdd66f0ca070",
+      "bytes": 22572
     },
     {
       "order": 18,
       "skill": "test-strategy-desk",
       "archive": "018-test-strategy-desk-skill.zip",
-      "sha256": "706dc03876e057dadb3933be3197e8e2303b8c765efaef0b55fe34b2fbd4cb5b",
-      "bytes": 23840
+      "sha256": "29deb2bea96b7e9147407a939cb862a3e488a3778bac75cfb12681457c87f1aa",
+      "bytes": 24145
     },
     {
       "order": 19,
       "skill": "verification-desk",
       "archive": "019-verification-desk-skill.zip",
-      "sha256": "ba5125d495722600327590d3a4881a36cd380bbffcd050101057c6be3f907166",
-      "bytes": 19896
+      "sha256": "7fc2f37a70f8c339bd55d93c4eab1ec09a6434714c2eface3f78a7b5291bc7b4",
+      "bytes": 20201
     }
   ]
 }

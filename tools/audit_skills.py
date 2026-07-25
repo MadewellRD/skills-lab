@@ -108,6 +108,29 @@ print(f"  em dashes                  : {sum(n for _, n in em)} (0 required)")
 for f, n in em[:6]: print(f"      {n:>3}  {f}")
 fail += len(em) > 0
 
+head("3d. COMPATIBILITY SHIMS")
+import importlib.util as _ilu
+_sp = _ilu.spec_from_file_location('bs', 'tools/build_skills.py')
+try:
+    _src = open('tools/build_skills.py', encoding='utf-8').read()
+    _ns = {}
+    exec(_src.split('def main(')[0], {'re': re, 'os': os, 'glob': glob}, _ns)
+    _files, _keys = _ns.get('COMPAT_SHIMS', {}), _ns.get('KEY_ALIASES', {})
+    _target = _ns.get('SHIM_REMOVED_IN', '?')
+except Exception:
+    _files, _keys, _target = {}, {}, '?'
+_shipped = len(glob.glob('dist/skills/*/*/references/**/*.md', recursive=True))
+_ptr = sum(1 for f in glob.glob('dist/skills/*/*/references/**/*.md', recursive=True)
+           if open(f, encoding='utf-8').read().startswith('# Moved: '))
+_alias = sum(1 for f in glob.glob('dist/skills/*/*/references/continuity-kernel.md')
+             if 'Deprecated keys' in open(f, encoding='utf-8').read())
+print(f"  file renames shimmed  : {len(_files)}  -> {_ptr} pointer files shipped")
+print(f"  schema keys aliased   : {len(_keys)}  -> {_alias} kernels carrying the alias table")
+print(f"  legacy agents/openai  : {len(glob.glob('dist/skills/*/*/agents/openai.yaml'))}")
+print(f"  scheduled removal     : {_target}")
+if not _files and not _keys:
+    print("  none active. Confirm the release notes no longer promise them.")
+
 head("4. GOVERNANCE INVARIANTS  (must survive every upgrade)")
 INV = {'never-invent rule': r'\b(never invent|do not invent|must not invent)\b',
        'fact vs assumption separation': r'\b(assumption|assumptions)\b',

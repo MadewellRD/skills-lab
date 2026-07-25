@@ -60,6 +60,9 @@ never a reason to remove governance.
 ## Breaking changes
 
 Compatibility shims ship for one release cycle and are removed in v1.1.0.
+Renamed files ship under their old names as pointers. Renamed schema keys cannot
+be shimmed with a file, so the continuity kernel declares them as read aliases:
+a pre-v1.0.0 packet still resolves, and the current name is always written back.
 
 | Was | Now | Shim |
 |---|---|---|
@@ -67,8 +70,8 @@ Compatibility shims ship for one release cycle and are removed in v1.1.0.
 | `references/low-token-policy.md` | `references/handoff-density-policy.md` | yes |
 | `references/*-low-token-policy.md` | `references/*-handoff-density-policy.md` | yes |
 | `agents/openai.yaml` | `agents/<vendor>.yaml` | yes |
-| `continuity_packet.codex_handoff` | `continuity_packet.implementation_handoff` | no, rename in place |
-| `max_context_policy: execution_packet_only` | `context_policy: relevance_density` | no, rename in place |
+| `continuity_packet.codex_handoff` | `continuity_packet.implementation_handoff` | yes, read alias |
+| `max_context_policy` | `context_policy` | yes, read alias |
 
 ## Artifacts
 

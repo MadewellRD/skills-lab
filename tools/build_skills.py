@@ -50,7 +50,32 @@ COMPAT_SHIMS = {
     'platform/ios-low-token-policy.md':      'platform/ios-handoff-density-policy.md',
     'platform/android-low-token-policy.md':  'platform/android-handoff-density-policy.md',
 }
+# Schema keys renamed in v1.0.0. These are not files, so a pointer file cannot shim them.
+# The continuity packet is produced and consumed by the model, so the shim is an
+# instruction: accept the old key on read, always emit the new one on write.
+# Injected into continuity-kernel.md at build time. Emptying this dict removes the
+# section, with no dangling citation left behind.
+KEY_ALIASES = {
+    'codex_handoff':      'implementation_handoff',
+    'max_context_policy': 'context_policy',
+}
 SHIM_REMOVED_IN = 'v1.1.0'
+
+
+def alias_section():
+    if not KEY_ALIASES:
+        return ''
+    rows = '\n'.join(f'| `{o}` | `{n}` |' for o, n in sorted(KEY_ALIASES.items()))
+    return (
+        '\n## Deprecated keys\n\n'
+        'A packet written before v1.0.0 may carry the older key names below. Accept them on '
+        'read and treat them as equivalent. Always write the current name.\n\n'
+        '| Accepted on read | Write this |\n|---|---|\n' + rows + '\n\n'
+        'Do not carry both spellings in the same packet, and do not rewrite a prior stage\'s '
+        'packet solely to rename a key: migrate it when you next write the packet, so a\n'
+        'resumed workflow is never blocked by a naming difference.\n\n'
+        f'These aliases are removed in {SHIM_REMOVED_IN}. After that a packet using the old '
+        'names is read as missing those fields, not as an error.\n')
 
 def shim_body(old, new):
     return (f"# Moved: `{old}`\n\n"
@@ -177,6 +202,9 @@ def main():
                 if not p:
                     unresolved.append((slug, ref)); continue
                 txt = subst(open(p, encoding='utf-8').read(), tokens)
+                if rel == 'continuity-kernel.md' and KEY_ALIASES:
+                    txt = txt.rstrip() + '\n' + alias_section()
+                    n_shim += 1
                 o = f'{dst}/references/{rel}'
                 os.makedirs(os.path.dirname(o), exist_ok=True)
                 open(o, 'w', encoding='utf-8', newline='').write(txt)
