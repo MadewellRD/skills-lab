@@ -1,9 +1,9 @@
 {
   "project": "Skills-Lab v1.1.0",
-  "generated_at": "2026-07-25T06:41:56+00:00",
-  "head": "c1e3d18",
+  "generated_at": "2026-07-25T07:32:55+00:00",
+  "head": "5e2cc93",
   "summary": {
-    "desks_authored": 154,
+    "desks_authored": 212,
     "desks_planned": 276,
     "suites_done": 0,
     "suites_total": 14
@@ -203,11 +203,11 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "10/20 desks; 5 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
       "metrics": {
-        "bodies": 10,
+        "bodies": 20,
         "planned": 20,
-        "yamls": 5,
+        "yamls": 20,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
@@ -226,11 +226,11 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/20 desks; 1 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 20,
         "planned": 20,
-        "yamls": 1,
+        "yamls": 20,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
@@ -249,11 +249,11 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/20 desks; 1 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 20,
         "planned": 20,
-        "yamls": 1,
+        "yamls": 20,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
@@ -295,9 +295,9 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/20 desks; 1 skill.yaml; packaged 0; gates clean",
+      "evidence": "11/20 desks; 1 skill.yaml; packaged 0; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 11,
         "planned": 20,
         "yamls": 1,
         "scaffolded": true,
@@ -427,6 +427,12 @@
   ],
   "commits": [
     {
+      "sha": "5e2cc93",
+      "message": "chore: refresh tracker.json (152/276 desks, 7 suites authored)",
+      "date": "2026-07-25T06:42:01+00:00",
+      "task": null
+    },
+    {
       "sha": "c1e3d18",
       "message": "feat: pinnable suite tracker with a reachable state source",
       "date": "2026-07-25T06:35:23+00:00",
@@ -490,12 +496,6 @@
       "sha": "f0cb1cd",
       "message": "chore: switch license to AGPL-3.0-only",
       "date": "2026-06-06T02:27:10-07:00",
-      "task": null
-    },
-    {
-      "sha": "a1998fa",
-      "message": "Add community health files",
-      "date": "2026-06-06T02:12:20-07:00",
       "task": null
     }
   ]
