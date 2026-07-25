@@ -24,6 +24,10 @@ python3 tools/validate_sdlc_suite.py
 
 If the audit passes, every skill in the repo now runs on the new baseline.
 
+`kernel/references/capability-baseline.md` is regenerated from the profile on every build
+and shipped into all 109 skills. That is what makes a profile bump propagate in substance
+rather than only stamping a new version string into metadata. Do not hand-edit it.
+
 ## Where things live
 
 | Layer | Path | Change it when |
@@ -34,6 +38,9 @@ If the audit passes, every skill in the repo now runs on the new baseline.
 | Suite reference (tier 2) | `skills/<Desk>/references/` | The change applies to one suite |
 | Skill reference (tier 3) | `skills/<Desk>/_skills/<slug>/references/` | The change applies to one skill |
 | Skill body | `skills/<Desk>/<slug>.md` | The desk's actual domain logic changed |
+
+`kernel/references/capability-baseline.md` is generated, not authored. It is committed so
+the active baseline is readable in source, but every build overwrites it from the profile.
 
 Resolution is most-specific-wins: skill → suite → kernel. Nothing is duplicated on disk;
 the build fans it out. That is why 277 source files produce 725+ packaged files.

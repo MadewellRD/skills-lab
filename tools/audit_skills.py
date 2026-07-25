@@ -39,6 +39,9 @@ fail += len(leak) > 0
 head("3. CAPABILITY DEBT  (stale assumptions vs active profile)")
 # Documented exceptions. Each needs a reason, so this list stays short and honest.
 ACCEPTED = {
+ 'kernel/references/capability-baseline.md':
+   'generated from the profile and necessarily QUOTES the banned verification phrasing '
+   'in order to prohibit it. The detector cannot distinguish instructing from forbidding.',
  'skills/SDLC Command Desk/implementation-handoff-desk.md':
    'frontmatter description is a TRIGGER surface; users still phrase it "low-token". '
    'Changing it would cost skill recall without changing model behavior.',
