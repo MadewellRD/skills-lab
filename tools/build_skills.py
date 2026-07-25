@@ -59,7 +59,11 @@ KEY_ALIASES = {
     'codex_handoff':      'implementation_handoff',
     'max_context_policy': 'context_policy',
 }
-SHIM_REMOVED_IN = 'v1.1.0'
+# Retirement is a DATE, not a version. A version number can arrive the week after the one
+# that introduced the shims, which gives forks no real adaptation window: the calendar is
+# what actually lets downstream consumers catch up, so the calendar is what we commit to.
+# tools/audit_skills.py reports when this date is near or past.
+SHIM_RETIRE_AFTER = '2026-11-01'
 
 
 def alias_section():
@@ -74,8 +78,9 @@ def alias_section():
         'Do not carry both spellings in the same packet, and do not rewrite a prior stage\'s '
         'packet solely to rename a key: migrate it when you next write the packet, so a\n'
         'resumed workflow is never blocked by a naming difference.\n\n'
-        f'These aliases are removed in {SHIM_REMOVED_IN}. After that a packet using the old '
-        'names is read as missing those fields, not as an error.\n')
+        f'These aliases are removed after {SHIM_RETIRE_AFTER}. Past that date a packet using '
+        'the old names is read as missing those fields rather than as an error, so migrate '
+        'before then.\n')
 
 def shim_body(old, new):
     return (f"# Moved: `{old}`\n\n"
@@ -84,8 +89,9 @@ def shim_body(old, new):
             f"The rename went with a change of premise, not just a name. Context is no longer "
             f"scarce, so the rule is no longer 'send less'. It is 'send the right thing': a "
             f"handoff is judged on whether it removes ambiguity, not on how short it is.\n\n"
-            f"This pointer exists so forks and vendored copies keep resolving through one "
-            f"release cycle. It is removed in {SHIM_REMOVED_IN}.\n")
+            f"This pointer exists so forks and vendored copies keep resolving while they "
+            f"catch up. It is removed after {SHIM_RETIRE_AFTER}; update any reference to the "
+            f"old name before then.\n")
 
 def render_capability_baseline(prof):
     """Render kernel/references/capability-baseline.md FROM the profile.
@@ -238,14 +244,15 @@ def main():
                 # pre-v1.0.0 consumers looked for agents/openai.yaml unconditionally
                 if vend['vendor'] != 'openai':
                     y2 = dict(y); y2['_deprecated'] = (
-                        f'Legacy path. Use agents/{vend["vendor"]}.yaml. Removed in {SHIM_REMOVED_IN}.')
+                        f'Legacy path. Use agents/{vend["vendor"]}.yaml. '
+                        f'Removed after {SHIM_RETIRE_AFTER}.')
                     yaml.safe_dump(y2, open(f'{dst}/agents/openai.yaml', 'w', encoding='utf-8'),
                                    sort_keys=False, allow_unicode=True)
 
     print(f"vendor={a.vendor}  profile={prof['profile']['id']}  ->  {out_root}")
     print(f"  skills built     : {n_sk}")
     print(f"  references shipped: {n_ref}")
-    print(f"  compat shims      : {n_shim}  (removed in {SHIM_REMOVED_IN})")
+    print(f"  compat shims      : {n_shim}  (retire after {SHIM_RETIRE_AFTER})")
     print(f"  unresolved refs  : {len(unresolved)}")
     for s, r in unresolved[:10]: print(f"      {s} -> {r}")
     return 1 if unresolved else 0

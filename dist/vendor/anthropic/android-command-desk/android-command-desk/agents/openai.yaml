@@ -13,4 +13,4 @@ policy:
 _generated:
   profile: frontier-2026-07
   vendor: anthropic
-_deprecated: Legacy path. Use agents/anthropic.yaml. Removed in v1.1.0.
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

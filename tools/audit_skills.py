@@ -116,7 +116,7 @@ try:
     _ns = {}
     exec(_src.split('def main(')[0], {'re': re, 'os': os, 'glob': glob}, _ns)
     _files, _keys = _ns.get('COMPAT_SHIMS', {}), _ns.get('KEY_ALIASES', {})
-    _target = _ns.get('SHIM_REMOVED_IN', '?')
+    _target = _ns.get('SHIM_RETIRE_AFTER', '?')
 except Exception:
     _files, _keys, _target = {}, {}, '?'
 _shipped = len(glob.glob('dist/skills/*/*/references/**/*.md', recursive=True))
@@ -127,7 +127,23 @@ _alias = sum(1 for f in glob.glob('dist/skills/*/*/references/continuity-kernel.
 print(f"  file renames shimmed  : {len(_files)}  -> {_ptr} pointer files shipped")
 print(f"  schema keys aliased   : {len(_keys)}  -> {_alias} kernels carrying the alias table")
 print(f"  legacy agents/openai  : {len(glob.glob('dist/skills/*/*/agents/openai.yaml'))}")
-print(f"  scheduled removal     : {_target}")
+print(f"  retire after          : {_target}")
+# A date only helps if something checks it, otherwise it is a string nobody reads.
+if _target != '?' and (_files or _keys):
+    from datetime import date as _d
+    try:
+        _y, _m, _dd = (int(x) for x in _target.split('-'))
+        _left = (_d(_y, _m, _dd) - _d.today()).days
+        if _left < 0:
+            print(f"  ACTION: retirement date passed {abs(_left)} days ago. Empty COMPAT_SHIMS")
+            print( "          and KEY_ALIASES in tools/build_skills.py, rebuild, and update")
+            print( "          the breaking-changes table in tools/cut_release.py.")
+        elif _left <= 30:
+            print(f"  due in {_left} days")
+        else:
+            print(f"  {_left} days remaining")
+    except ValueError:
+        print("  WARNING: retirement date is unparseable")
 if not _files and not _keys:
     print("  none active. Confirm the release notes no longer promise them.")
 

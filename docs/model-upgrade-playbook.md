@@ -124,6 +124,17 @@ prose semantics, it is mechanically decidable. Use a colon for list definitions
 (`- **Term**: definition`), a semicolon where two independent clauses join, and a comma for
 a genuine appositive.
 
+## Deprecation discipline
+
+Retire compatibility shims by **date**, never by version number. A version can ship the
+week after the one that introduced the shims, which leaves downstream forks no real
+adaptation window. The calendar is what actually gives consumers time, so the calendar is
+what gets committed to.
+
+`SHIM_RETIRE_AFTER` in `tools/build_skills.py` is the single source. `tools/audit_skills.py`
+counts down to it and tells you exactly what to empty when it passes, so the date is
+actionable rather than decorative.
+
 ## Release discipline
 
 `CHECKSUMS-*.txt` files pin published releases and are immutable. After a profile bump they
