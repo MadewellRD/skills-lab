@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills-Lab v1.1.0 Tracker</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#182029; --line:#243040;
+    --fg:#e6edf3; --dim:#8b98a5; --dim2:#5f6d7a;
+    --todo:#5f6d7a; --prog:#d29922; --block:#f85149; --done:#3fb950;
+    --accent:#58a6ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+  header{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;margin-bottom:6px}
+  h1{font-size:20px;margin:0;letter-spacing:-.01em}
+  .stamp{color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
+  .stale{color:var(--prog)}
+  .err{background:#2b1113;border:1px solid #6e2329;padding:14px 16px;border-radius:8px;margin:16px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .kpi .n{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .kpi .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+  .bar{height:8px;background:var(--panel2);border-radius:999px;overflow:hidden;display:flex}
+  .bar i{display:block;height:100%}
+  .i-done{background:var(--done)} .i-prog{background:var(--prog)}
+  .i-block{background:var(--block)} .i-todo{background:var(--todo)}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);
+    margin:28px 0 10px;font-weight:600}
+  .ms{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+  .msc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+    cursor:pointer;transition:border-color .12s,background .12s}
+  .msc:hover{border-color:var(--accent)}
+  .msc[aria-pressed="true"]{border-color:var(--accent);background:var(--panel2)}
+  .msc .t{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}
+  .msc .t b{font-weight:600;font-size:13px}
+  .msc .t span{color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
+  table{width:100%;border-collapse:collapse;margin-top:6px}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--dim);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
+  td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim);font-size:12px}
+  .chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+  .c-todo{background:#2a3138;color:#b6c2cd}
+  .c-in_progress{background:#3a2f10;color:#e3b341}
+  .c-blocked{background:#3d1518;color:#ff7b72}
+  .c-done{background:#12341f;color:#56d364}
+  .ev{color:var(--dim);font-size:12px;margin-top:4px;font-variant-numeric:tabular-nums}
+  .acc{color:var(--dim2);font-size:12px;margin-top:4px;max-width:60ch}
+  .mini{width:120px}
+  .commits{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .commit{display:flex;gap:12px;padding:9px 14px;border-bottom:1px solid var(--line);font-size:13px}
+  .commit:last-child{border-bottom:none}
+  .commit code{font-family:ui-monospace,Menlo,monospace;color:var(--accent);font-size:12px}
+  .commit .d{margin-left:auto;color:var(--dim2);font-size:12px;white-space:nowrap}
+  button.file{background:var(--accent);color:#04101f;border:0;padding:8px 14px;border-radius:7px;
+    font-weight:600;cursor:pointer;font-size:13px}
+  footer{margin-top:34px;color:var(--dim2);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="proj">Skills-Lab Tracker</h1>
+    <span class="stamp" id="stamp"></span>
+    <span class="stamp" id="src" style="color:var(--dim2)"></span>
+  </header>
+  <div id="err"></div>
+  <div class="grid" id="kpis"></div>
+  <div class="bar" id="overall" style="margin:4px 0 2px"></div>
+  <div class="stamp" id="legend"></div>
+
+  <h2>Milestones <span style="text-transform:none;letter-spacing:0">(click to filter)</span></h2>
+  <div class="ms" id="ms"></div>
+
+  <h2>Backlog <span id="filt" style="text-transform:none;letter-spacing:0"></span></h2>
+  <table><thead><tr><th style="width:66px">ID</th><th>Task</th>
+    <th style="width:112px">Status</th><th style="width:132px">Progress</th></tr></thead>
+    <tbody id="rows"></tbody></table>
+
+  <h2>Commits</h2>
+  <div class="commits" id="commits"></div>
+
+  <footer>
+    State lives in <code>tracker.json</code>. This page is only a view and holds no task
+    state of its own, so it cannot go stale independently of the file.
+    Regenerate with <code>python3 tools/track_suites.py</code>. Polls every 30s, preferring a
+    locally served copy and falling back to the committed copy on the repo default branch.
+    Pinned, the repo copy is the source, so freshness is bounded by the last push.
+  </footer>
+</div>
+<script>
+const ORDER = {blocked:0, in_progress:1, todo:2, done:3};
+let filter = null, lastStamp = null;
+
+function pct(a,b){ return b ? Math.round(100*a/b) : 0 }
+function esc(s){ return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])) }
+
+function segBar(counts, total){
+  const o = ['done','in_progress','blocked','todo'];
+  return o.map(k => counts[k] ? `<i class="i-${k==='in_progress'?'prog':k==='blocked'?'block':k}"
+    style="width:${100*counts[k]/total}%" title="${k}: ${counts[k]}"></i>` : '').join('');
+}
+
+function tally(tasks){
+  const c = {todo:0,in_progress:0,blocked:0,done:0};
+  tasks.forEach(t => c[t.status] = (c[t.status]||0)+1);
+  return c;
+}
+
+function render(d){
+  document.getElementById('err').innerHTML = '';
+  document.getElementById('proj').textContent = d.project || 'Tracker';
+  const st = d.generated_at ? new Date(d.generated_at) : null;
+  const age = st ? (Date.now()-st.getTime())/60000 : null;
+  document.getElementById('stamp').innerHTML = st
+    ? `generated ${esc(d.generated_at)} <span class="${age>30?'stale':''}">` +
+      `(${age<1?'just now':Math.round(age)+' min ago'})</span>` : '';
+
+  const s = d.summary || {};
+  const suites = d.tasks.filter(t => t.milestone === 'M2');
+  const kpi = [
+    ['desks authored', `${s.desks_authored||0}<span style="color:var(--dim);font-size:15px">/${s.desks_planned||0}</span>`],
+    ['suites complete', `${s.suites_done||0}<span style="color:var(--dim);font-size:15px">/${s.suites_total||0}</span>`],
+    ['desks remaining', (s.desks_planned||0)-(s.desks_authored||0)],
+    ['backlog items', d.tasks.length],
+  ];
+  document.getElementById('kpis').innerHTML = kpi.map(([l,n]) =>
+    `<div class="kpi"><div class="n">${n}</div><div class="l">${l}</div></div>`).join('');
+
+  const c = tally(d.tasks);
+  document.getElementById('overall').innerHTML = segBar(c, d.tasks.length);
+  document.getElementById('legend').textContent =
+    `${c.done} done, ${c.in_progress} in progress, ${c.blocked} blocked, ${c.todo} todo`;
+
+  document.getElementById('ms').innerHTML = (d.milestones||[]).map(m => {
+    const ts = d.tasks.filter(t => t.milestone === m.id);
+    const mc = tally(ts);
+    return `<div class="msc" role="button" tabindex="0" aria-pressed="${filter===m.id}"
+      data-ms="${m.id}"><div class="t"><b>${esc(m.name)}</b>
+      <span>${mc.done}/${ts.length}</span></div>
+      <div class="bar">${segBar(mc, ts.length||1)}</div></div>`;
+  }).join('');
+  document.querySelectorAll('.msc').forEach(el => {
+    const go = () => { filter = filter === el.dataset.ms ? null : el.dataset.ms; render(d) };
+    el.onclick = go;
+    el.onkeydown = e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go() } };
+  });
+
+  const shown = filter ? d.tasks.filter(t => t.milestone === filter) : d.tasks;
+  document.getElementById('filt').textContent =
+    filter ? `- ${shown.length} of ${d.tasks.length}, filtered` : `- all ${d.tasks.length}`;
+
+  // full backlog, never truncated or paginated
+  document.getElementById('rows').innerHTML = shown
+    .slice().sort((a,b)=> (ORDER[a.status]-ORDER[b.status]) || a.id.localeCompare(b.id))
+    .map(t => {
+      const m = t.metrics;
+      const p = m && m.planned ? `<div class="bar mini"><i class="i-done"
+        style="width:${pct(m.bodies,m.planned)}%"></i></div>
+        <div class="ev">${m.bodies}/${m.planned}</div>` : '';
+      return `<tr><td class="id">${esc(t.id)}</td>
+        <td><div>${esc(t.title)}</div>
+          <div class="ev">${esc(t.evidence||'')}</div>
+          ${t.blocked_on ? `<div class="ev" style="color:var(--block)">blocked on: ${esc(t.blocked_on)}</div>`:''}
+          <div class="acc">gate: ${esc(t.acceptance||'')}</div></td>
+        <td><span class="chip c-${t.status}">${t.status.replace('_',' ')}</span></td>
+        <td>${p}</td></tr>`;
+    }).join('');
+
+  document.getElementById('commits').innerHTML = (d.commits||[]).length
+    ? d.commits.map(c => `<div class="commit"><code>${esc(c.sha)}</code>
+        <span>${esc(c.message)}</span>
+        <span class="d">${esc((c.date||'').slice(0,16).replace('T',' '))}</span></div>`).join('')
+    : '<div class="commit"><span style="color:var(--dim)">no commits recorded</span></div>';
+}
+
+function fail(msg){
+  document.getElementById('err').innerHTML = `<div class="err"><b>Cannot read tracker.json.</b>
+    <div style="color:var(--dim);margin:6px 0 10px">${esc(msg)}. Browsers block local file reads
+    over file://. Serve the folder, or load the file directly.</div>
+    <div style="color:var(--dim);margin-bottom:10px"><code>python3 -m http.server -d docs/engineering-spec</code></div>
+    <button class="file" onclick="document.getElementById('pick').click()">Choose tracker.json</button>
+    <input id="pick" type="file" accept="application/json" style="display:none"></div>`;
+  document.getElementById('pick').onchange = e => {
+    const f = e.target.files[0]; if(!f) return;
+    const r = new FileReader();
+    r.onload = () => { try{ render(JSON.parse(r.result)) }catch(x){ fail(x.message) } };
+    r.readAsText(f);
+  };
+}
+
+// Sources are tried in order. A pinned artifact runs off-origin with no access to the
+// local disk, so the repo copy is what makes "reopen it later and see current truth"
+// actually work. Served locally, the relative path wins and is fresher.
+const SOURCES = [
+  {name:'local', url:'tracker.json'},
+  {name:'repo',  url:'https://raw.githubusercontent.com/MadewellRD/skills-lab/main/docs/engineering-spec/tracker.json'},
+];
+let source = null;
+
+async function tryFetch(src){
+  const u = src.url + (src.url.includes('?') ? '&' : '?') + 't=' + Date.now();
+  const r = await fetch(u, {cache:'no-store'});
+  if(!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+
+async function poll(){
+  const order = source ? [source, ...SOURCES.filter(s=>s!==source)] : SOURCES;
+  for(const src of order){
+    try{
+      const d = await tryFetch(src);
+      source = src;
+      if(d.generated_at !== lastStamp){ lastStamp = d.generated_at; render(d); tagSource(src) }
+      return;
+    }catch(e){ /* try the next source */ }
+  }
+  if(!lastStamp) fail('no reachable tracker.json');
+}
+
+function tagSource(src){
+  const el = document.getElementById('src');
+  if(el) el.textContent = src.name === 'repo' ? 'reading from repo' : 'reading local file';
+}
+
+poll(); setInterval(poll, 30000);
+</script>
+</body>
+</html>

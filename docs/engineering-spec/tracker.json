@@ -1,0 +1,502 @@
+{
+  "project": "Skills-Lab v1.1.0",
+  "generated_at": "2026-07-25T06:35:23+00:00",
+  "head": "62682e6",
+  "summary": {
+    "desks_authored": 145,
+    "desks_planned": 276,
+    "suites_done": 0,
+    "suites_total": 14
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "Suite design and scaffolding",
+      "sprint": 1
+    },
+    {
+      "id": "M2",
+      "name": "Desk authoring",
+      "sprint": 1
+    },
+    {
+      "id": "M3",
+      "name": "Verification",
+      "sprint": 1
+    },
+    {
+      "id": "M4",
+      "name": "Release",
+      "sprint": 1
+    }
+  ],
+  "tasks": [
+    {
+      "id": "SL-01",
+      "title": "Security Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 20,
+        "planned": 20,
+        "yamls": 20,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-02",
+      "title": "Platform Engineering Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 20,
+        "planned": 20,
+        "yamls": 20,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-03",
+      "title": "SRE Reliability Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 20,
+        "planned": 20,
+        "yamls": 20,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-04",
+      "title": "Cloud Infrastructure Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 20,
+        "planned": 20,
+        "yamls": 20,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-05",
+      "title": "Data Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 20,
+        "planned": 20,
+        "yamls": 20,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-06",
+      "title": "GRC Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "19/19 desks; 19 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 19,
+        "planned": 19,
+        "yamls": 19,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-07",
+      "title": "Privacy Data Protection Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "19/19 desks; 19 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 19,
+        "planned": 19,
+        "yamls": 19,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-08",
+      "title": "Legal Contracts Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/20 desks; 1 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 20,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-09",
+      "title": "FinOps Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/20 desks; 1 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 20,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-10",
+      "title": "Customer Success Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/20 desks; 1 skill.yaml; packaged 1; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 20,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 1
+      }
+    },
+    {
+      "id": "SL-11",
+      "title": "Customer Support Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/19 desks; 1 skill.yaml; packaged 0; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 19,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 0
+      }
+    },
+    {
+      "id": "SL-12",
+      "title": "Finance Accounting Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/20 desks; 1 skill.yaml; packaged 0; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 20,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 0
+      }
+    },
+    {
+      "id": "SL-13",
+      "title": "People Talent Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/20 desks; 1 skill.yaml; packaged 0; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 20,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 0
+      }
+    },
+    {
+      "id": "SL-14",
+      "title": "Procurement Vendor Management Command Desk",
+      "milestone": "M2",
+      "sprint": 1,
+      "status": "in_progress",
+      "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "1/19 desks; 1 skill.yaml; packaged 0; gates clean",
+      "metrics": {
+        "bodies": 1,
+        "planned": 19,
+        "yamls": 1,
+        "scaffolded": true,
+        "em": 0,
+        "vendor": 0,
+        "badcite": 0,
+        "packaged": 0
+      }
+    },
+    {
+      "id": "SL-15",
+      "title": "Audit gates across the whole corpus",
+      "milestone": "M3",
+      "sprint": 1,
+      "status": "todo",
+      "acceptance": "tools/audit_skills.py exits 0 with all 21 suites present",
+      "depends_on": [
+        "SL-01",
+        "SL-02",
+        "SL-03",
+        "SL-04",
+        "SL-05",
+        "SL-06",
+        "SL-07",
+        "SL-08",
+        "SL-09",
+        "SL-10",
+        "SL-11",
+        "SL-12",
+        "SL-13",
+        "SL-14"
+      ],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "not run"
+    },
+    {
+      "id": "SL-16",
+      "title": "SDLC suite structural validation",
+      "milestone": "M3",
+      "sprint": 1,
+      "status": "done",
+      "acceptance": "tools/validate_sdlc_suite.py exits 0",
+      "depends_on": [],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "SDLC validation passed"
+    },
+    {
+      "id": "SL-17",
+      "title": "Package and checksum every suite",
+      "milestone": "M4",
+      "sprint": 1,
+      "status": "todo",
+      "acceptance": "tools/cut_release.py writes 21 suite package sets and validate_release_assets.py exits 0",
+      "depends_on": [
+        "SL-15"
+      ],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "not run"
+    },
+    {
+      "id": "SL-18",
+      "title": "Publish v1.1.0",
+      "milestone": "M4",
+      "sprint": 1,
+      "status": "todo",
+      "acceptance": "21 suite releases plus repo-level v1.1.0 tagged, assets uploaded, README, MANIFEST and About reflect 21 suites",
+      "depends_on": [
+        "SL-17"
+      ],
+      "source": "recon",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "not run"
+    }
+  ],
+  "commits": [
+    {
+      "sha": "62682e6",
+      "message": "fix: retire compatibility shims by date, not by version",
+      "date": "2026-07-25T03:20:03+00:00",
+      "task": null
+    },
+    {
+      "sha": "a81bfde",
+      "message": "feat: complete compatibility shim coverage",
+      "date": "2026-07-25T03:07:49+00:00",
+      "task": null
+    },
+    {
+      "sha": "d5b1987",
+      "message": "release: repo-level v1.0.0 notes",
+      "date": "2026-07-24T19:50:39-07:00",
+      "task": null
+    },
+    {
+      "sha": "e3afe79",
+      "message": "chore: ignore transfer bundles and loose .skill drops",
+      "date": "2026-07-24T19:47:43-07:00",
+      "task": null
+    },
+    {
+      "sha": "16533a6",
+      "message": "release: v1.0.0 across all seven suites",
+      "date": "2026-07-25T02:46:22+00:00",
+      "task": null
+    },
+    {
+      "sha": "629b229",
+      "message": "fix: generate capability-baseline.md from the profile",
+      "date": "2026-07-25T02:30:04+00:00",
+      "task": null
+    },
+    {
+      "sha": "930e1a5",
+      "message": "style: remove em dashes repo-wide and gate on it",
+      "date": "2026-07-25T02:27:00+00:00",
+      "task": null
+    },
+    {
+      "sha": "8bbd77a",
+      "message": "feat: raise output contracts to complete-set-per-run",
+      "date": "2026-07-25T02:24:23+00:00",
+      "task": null
+    },
+    {
+      "sha": "630a0f2",
+      "message": "refactor: profile-driven skill architecture for frontier model upgrades",
+      "date": "2026-07-25T01:57:34+00:00",
+      "task": null
+    },
+    {
+      "sha": "f0cb1cd",
+      "message": "chore: switch license to AGPL-3.0-only",
+      "date": "2026-06-06T02:27:10-07:00",
+      "task": null
+    },
+    {
+      "sha": "a1998fa",
+      "message": "Add community health files",
+      "date": "2026-06-06T02:12:20-07:00",
+      "task": null
+    },
+    {
+      "sha": "208bbd1",
+      "message": "chore: normalize iOS release artifacts",
+      "date": "2026-06-02T16:04:25-07:00",
+      "task": null
+    }
+  ]
+}
