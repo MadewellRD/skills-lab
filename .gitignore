@@ -1,2 +1,8 @@
-
 /work
+
+# transfer artifacts, not source
+*.bundle
+
+# packaged skills are build output of tools/cut_release.py.
+# the loose skills/*.skill drop is superseded once a skill lands in source.
+skills/*.skill
