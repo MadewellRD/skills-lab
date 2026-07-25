@@ -44,26 +44,25 @@ def subst(text, tokens):
 
 # Reference files renamed in v1.0.0. The build emits the OLD name as a pointer for one
 # release cycle so forks and vendored copies keep resolving. Remove in v1.1.0.
-COMPAT_SHIMS = {
-    'codex-conservation-policy.md':          'handoff-density-policy.md',
-    'low-token-policy.md':                   'handoff-density-policy.md',
-    'platform/ios-low-token-policy.md':      'platform/ios-handoff-density-policy.md',
-    'platform/android-low-token-policy.md':  'platform/android-handoff-density-policy.md',
-}
+# Retired in v1.1.0 at the maintainer's direction. The old names no longer ship.
+# Anything still reading codex-conservation-policy.md, low-token-policy.md, or the
+# platform low-token variants must move to *-handoff-density-policy.md.
+COMPAT_SHIMS = {}
 # Schema keys renamed in v1.0.0. These are not files, so a pointer file cannot shim them.
 # The continuity packet is produced and consumed by the model, so the shim is an
 # instruction: accept the old key on read, always emit the new one on write.
 # Injected into continuity-kernel.md at build time. Emptying this dict removes the
 # section, with no dangling citation left behind.
-KEY_ALIASES = {
-    'codex_handoff':      'implementation_handoff',
-    'max_context_policy': 'context_policy',
-}
+# Retired in v1.1.0. A packet using codex_handoff or max_context_policy now reads as
+# missing those fields rather than as an error.
+KEY_ALIASES = {}
 # Retirement is a DATE, not a version. A version number can arrive the week after the one
 # that introduced the shims, which gives forks no real adaptation window: the calendar is
 # what actually lets downstream consumers catch up, so the calendar is what we commit to.
 # tools/audit_skills.py reports when this date is near or past.
-SHIM_RETIRE_AFTER = '2026-11-01'
+# Shims retired in v1.1.0. Kept as a marker of when, and so the audit can state that
+# nothing is being carried rather than leaving the reader to infer it from a zero.
+SHIM_RETIRE_AFTER = 'retired in v1.1.0'
 
 
 def alias_section():
@@ -174,6 +173,16 @@ def main():
         if not os.path.isdir(f'skills/{desk}'): continue
         if os.path.exists(f'skills/{desk}/DEPRECATED.yaml'):
             print(f'  skipped (deprecated): {desk}'); continue
+        # A suite mid-authoring would otherwise ship as a partial package. Compare the
+        # bodies on disk against the roster the suite declares in its stage contracts.
+        sc = f'skills/{desk}/references/stage-contracts.md'
+        if os.path.exists(sc):
+            roster = set(re.findall(r'([a-z0-9][a-z0-9-]*-desk)\b',
+                                    open(sc, encoding='utf-8').read()))
+            have = len([f for f in glob.glob(f'skills/{desk}/*.md')
+                        if os.path.basename(f) != 'README.md'])
+            if roster and have < len(roster):
+                print(f'  skipped (incomplete {have}/{len(roster)}): {desk}'); continue
         bodies = [f for f in glob.glob(f'skills/{desk}/*.md')
                   if os.path.basename(f) != 'README.md']
         if not bodies: continue
@@ -242,7 +251,7 @@ def main():
                 yaml.safe_dump(y, open(f'{dst}/agents/{vend["vendor"]}.yaml', 'w', encoding='utf-8'),
                                sort_keys=False, allow_unicode=True)
                 # pre-v1.0.0 consumers looked for agents/openai.yaml unconditionally
-                if vend['vendor'] != 'openai':
+                if False:  # legacy agents/openai.yaml retired in v1.1.0
                     y2 = dict(y); y2['_deprecated'] = (
                         f'Legacy path. Use agents/{vend["vendor"]}.yaml. '
                         f'Removed after {SHIM_RETIRE_AFTER}.')
@@ -252,7 +261,7 @@ def main():
     print(f"vendor={a.vendor}  profile={prof['profile']['id']}  ->  {out_root}")
     print(f"  skills built     : {n_sk}")
     print(f"  references shipped: {n_ref}")
-    print(f"  compat shims      : {n_shim}  (retire after {SHIM_RETIRE_AFTER})")
+    print(f"  compat shims      : {n_shim}  ({SHIM_RETIRE_AFTER})")
     print(f"  unresolved refs  : {len(unresolved)}")
     for s, r in unresolved[:10]: print(f"      {s} -> {r}")
     return 1 if unresolved else 0

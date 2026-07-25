@@ -9,134 +9,134 @@
       "order": 0,
       "skill": "procurement-vendor-management-command-desk",
       "archive": "000-procurement-vendor-management-command-desk-skill.zip",
-      "sha256": "076c7304a92476e0e97b50e42cffcb756a2ba9c0036fdceeca5b95f49f08110b",
-      "bytes": 51023
+      "sha256": "a2294e195b4bcb90979cd6a29ac0dc28639552d886902d0e71058dc2a73bb74a",
+      "bytes": 50321
     },
     {
       "order": 1,
       "skill": "bid-evaluation-desk",
       "archive": "001-bid-evaluation-desk-skill.zip",
-      "sha256": "029e44a887e9dddcf29de73d80a17a38e7f9e75730549e6b5138b5fa55985ef5",
-      "bytes": 40448
+      "sha256": "7a59b8065e678d1f6bac5e02bfb745e40927c6c2c690183ff9e0d5fa13517d63",
+      "bytes": 39965
     },
     {
       "order": 2,
       "skill": "category-strategy-desk",
       "archive": "002-category-strategy-desk-skill.zip",
-      "sha256": "bf41f35f8d7e67dedc019d98728126918b9cfe1bd8ac636181d5b3e2aa03ff52",
-      "bytes": 40383
+      "sha256": "136b28dd54afeb57c6cc15e0e98054203fa332397c1773c2f92a7b7e12eae858",
+      "bytes": 39902
     },
     {
       "order": 3,
       "skill": "contract-execution-routing-desk",
       "archive": "003-contract-execution-routing-desk-skill.zip",
-      "sha256": "3dddd5b66c2fb1ab7746310368ba50cf1e80d7205bfd73b7460d257d0fd22d70",
-      "bytes": 41457
+      "sha256": "9208f73d18274dd7cc13cf43d0ee9bcbb03d763b5fcc8115c2834ee829e78916",
+      "bytes": 40939
     },
     {
       "order": 4,
       "skill": "intake-triage-desk",
       "archive": "004-intake-triage-desk-skill.zip",
-      "sha256": "d544e2af20170074f068ca0b990970c016cb44cd89ed43260dbcff3c5e478789",
-      "bytes": 40133
+      "sha256": "1cfca97b3ad7471a875fb7ff420a823f3247615b670f921a0de8484633778d5b",
+      "bytes": 39649
     },
     {
       "order": 5,
       "skill": "pricing-negotiation-desk",
       "archive": "005-pricing-negotiation-desk-skill.zip",
-      "sha256": "7948a06def5f58ec1a6e4f12b1d0f68ce5a7cfc6fe96f734ca4a6b3037aef9d8",
-      "bytes": 41275
+      "sha256": "91b136a34accaed17cbaf86fc4c8cbc2b7db68b3462c2b847737f6072dde84f4",
+      "bytes": 40783
     },
     {
       "order": 6,
       "skill": "procurement-policy-desk",
       "archive": "006-procurement-policy-desk-skill.zip",
-      "sha256": "a903d91ab7b4632f26a14e91db2adf6f848c6d9ac5e8f09d6ccdb8fba64f8d51",
-      "bytes": 40155
+      "sha256": "ef77182f7cd2809bff9e2d4044ba02fec273dfbccf45782111afd6990b838f53",
+      "bytes": 39672
     },
     {
       "order": 7,
       "skill": "renewal-consolidation-desk",
       "archive": "007-renewal-consolidation-desk-skill.zip",
-      "sha256": "80ec18e2d4be4aacbf84f7037fbb95c93f0b390b1c22f23ececfe22c8ffc2e50",
-      "bytes": 41156
+      "sha256": "6e4a526c1c0624956989a3979b884dbf4a5a54d3806ebca9d6402b7a7e4864e2",
+      "bytes": 40667
     },
     {
       "order": 8,
       "skill": "requirements-specification-desk",
       "archive": "008-requirements-specification-desk-skill.zip",
-      "sha256": "e56a67d027bb0a4f3cf45421e91d18ad9d73b6d1d2d9d00d14bf7eb9d161ef35",
-      "bytes": 40400
+      "sha256": "e4128b2a010c79831578a1cba8978048d3129350c46f5e859ba8571d16c7852b",
+      "bytes": 39895
     },
     {
       "order": 9,
       "skill": "security-privacy-review-desk",
       "archive": "009-security-privacy-review-desk-skill.zip",
-      "sha256": "aef00e67708a267bf59922ebf7325897dadab67ca9fac4f0541e99ad3607cba2",
-      "bytes": 40931
+      "sha256": "ada016c32dfd1f1f3deec3d74ce82d25afe3fc949abad1bb378f5209cf2a131b",
+      "bytes": 40425
     },
     {
       "order": 10,
       "skill": "sourcing-event-desk",
       "archive": "010-sourcing-event-desk-skill.zip",
-      "sha256": "a155e0c4333b82d79fd1df47fd80765a71fc4ede86ad52e0d03de8369c72f658",
-      "bytes": 40513
+      "sha256": "9d97d64d550b9fbb36284b31695f401d1068da7bff8dcd2d572b5be3f4b947b8",
+      "bytes": 40025
     },
     {
       "order": 11,
       "skill": "spend-analysis-desk",
       "archive": "011-spend-analysis-desk-skill.zip",
-      "sha256": "2e1126ac4ddeb428448179e752810be288b67eefec7e008bed87ab140a75c9b4",
-      "bytes": 40955
+      "sha256": "6f38d5d7dd0f1a406d968b71d963669d8dd7b44b4c36a6720ec81520c92b29c4",
+      "bytes": 40481
     },
     {
       "order": 12,
       "skill": "supplier-discovery-desk",
       "archive": "012-supplier-discovery-desk-skill.zip",
-      "sha256": "7b7f47427a4908f32cb8e16b3cad04a09bbc86783f92290ff550425879d573e8",
-      "bytes": 40341
+      "sha256": "fe87b742046e6e50e924952611ec791a03a91be5d508aae55f9e8993977681cc",
+      "bytes": 39844
     },
     {
       "order": 13,
       "skill": "supplier-integrity-screening-desk",
       "archive": "013-supplier-integrity-screening-desk-skill.zip",
-      "sha256": "9c797502bdd780bfb8e157b163e9f12543402e16ad613f4a2ebb0ffd847b4660",
-      "bytes": 41423
+      "sha256": "b95c4d844968c1726d6359b47112a69230cc105025040a905c9cff9e0deb3f25",
+      "bytes": 40920
     },
     {
       "order": 14,
       "skill": "supplier-performance-sla-desk",
       "archive": "014-supplier-performance-sla-desk-skill.zip",
-      "sha256": "bf61b7080e11daa026787ea625fcbd6068561b39dab8ef1e86d43d71a8357daa",
-      "bytes": 41150
+      "sha256": "eeaefcd9d896d1a8cb30773119635815d59844173ed7110cdef76a545f7c1e3b",
+      "bytes": 40644
     },
     {
       "order": 15,
       "skill": "supplier-relationship-governance-desk",
       "archive": "015-supplier-relationship-governance-desk-skill.zip",
-      "sha256": "b78e9de63f3ace40e3f036aa29669de803e4ebecebd403ed1eef5a8f09b90b6d",
-      "bytes": 41373
+      "sha256": "21ec32c3128cce0bb4f75b111589f62cb813999b1db7555d05964cc5f5a9280b",
+      "bytes": 40856
     },
     {
       "order": 16,
       "skill": "vendor-offboarding-desk",
       "archive": "016-vendor-offboarding-desk-skill.zip",
-      "sha256": "e256bc4a44361dc49673351b95108f9e7aae84f728366e0cb9d1a25b823e7b04",
-      "bytes": 41550
+      "sha256": "8cc988501ca5e0b1b26b74db53f2f715d136ca0fc24390e0ed057c387bf31fd9",
+      "bytes": 41057
     },
     {
       "order": 17,
       "skill": "vendor-onboarding-provisioning-desk",
       "archive": "017-vendor-onboarding-provisioning-desk-skill.zip",
-      "sha256": "e49af20d19f1d8a249d3e6f5b266ce6a1199ce4ca55cfe0f7c9b1703630fb08e",
-      "bytes": 41401
+      "sha256": "552a547d9660205ffa82cc73e5d0058d22fcb2889104236b150ef97991b4bd6f",
+      "bytes": 40885
     },
     {
       "order": 18,
       "skill": "vendor-risk-tiering-desk",
       "archive": "018-vendor-risk-tiering-desk-skill.zip",
-      "sha256": "04f83ceca534f9ac2704c9b055844f66447d55d475bf5bda6ea7f76d12dba277",
-      "bytes": 40220
+      "sha256": "dde3aa1afe8a37f6e1fb7ab38bf88f5b787c86aa4c910efe9b0a6ee3c1ba3f1d",
+      "bytes": 39729
     }
   ]
 }

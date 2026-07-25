@@ -9,99 +9,99 @@
       "order": 0,
       "skill": "ios-command-desk",
       "archive": "000-ios-command-desk-skill.zip",
-      "sha256": "28ac31ea7e47cc41f8717c46b72318dbad56d2e6dc4933384ff09cbddf848a50",
-      "bytes": 9481
+      "sha256": "548ef27da888f7d9e2d63580c461504d4ebd230ebfb215f2410673d73171afc8",
+      "bytes": 8467
     },
     {
       "order": 1,
       "skill": "ios-app-engineering-desk",
       "archive": "001-ios-app-engineering-desk-skill.zip",
-      "sha256": "1e0be764947fd3b64d51fcaa1471b87ee71cdaf06b7758fc585f15520e0a011b",
-      "bytes": 7734
+      "sha256": "c4c0ee0d1a9832b79f7292855c3f081edba176365c9d0adcce96edd46d9803fa",
+      "bytes": 7286
     },
     {
       "order": 2,
       "skill": "ios-architecture-design-desk",
       "archive": "002-ios-architecture-design-desk-skill.zip",
-      "sha256": "eb730fb4746ead376f0d267ad9ad63d869ac523867f580756b16b1a732bfd0f8",
-      "bytes": 6791
+      "sha256": "f7d4e542376149a315407ae5cf4f3bf4a2b23aeb036c420d4c052fcc3fb7e451",
+      "bytes": 6314
     },
     {
       "order": 3,
       "skill": "ios-backend-integration-desk",
       "archive": "003-ios-backend-integration-desk-skill.zip",
-      "sha256": "5ade65d647a8a136d942d0af7a4740cc69f09c22aba6b762239461dc7d0d70be",
-      "bytes": 6590
+      "sha256": "4e0c62d7b53eb717b20638a255e908c187b136383dde6b432d0087331c1b4e8b",
+      "bytes": 6112
     },
     {
       "order": 4,
       "skill": "ios-game-engineering-desk",
       "archive": "004-ios-game-engineering-desk-skill.zip",
-      "sha256": "f6b1c50520ac20be0843d7f357108067c4e765874dafa50bb9b587e6786b1b7b",
-      "bytes": 7876
+      "sha256": "efd0db5ded68b541e9a7dc850b727205e439a9f3be69c70d6a20d154b8920672",
+      "bytes": 7415
     },
     {
       "order": 5,
       "skill": "ios-maintenance-growth-desk",
       "archive": "005-ios-maintenance-growth-desk-skill.zip",
-      "sha256": "e7a1b6216849c0664f7084f69091e645c711306686d2199443672d61000eacd4",
-      "bytes": 6923
+      "sha256": "36f728f90fd318ab704cf5e01826789506376216e2482fa73833d3726f88760f",
+      "bytes": 6442
     },
     {
       "order": 6,
       "skill": "ios-observability-liveops-desk",
       "archive": "006-ios-observability-liveops-desk-skill.zip",
-      "sha256": "736f3488b686585de3459a19e6ea4e2dd7f8cbcf4d80a678e84c6a06ba8dbe49",
-      "bytes": 6554
+      "sha256": "3140dee511ade8fe520c248b8c1fa5dfdafeea0717efd6ba99dcd1449f16705d",
+      "bytes": 6062
     },
     {
       "order": 7,
       "skill": "ios-performance-optimization-desk",
       "archive": "007-ios-performance-optimization-desk-skill.zip",
-      "sha256": "7b655cc97c71536352292d05fd710ee483d00f88be7af8f28b2a463d04946fb3",
-      "bytes": 6608
+      "sha256": "4d4656e6495a13e05e211fcc968c0a1a11873a1b1dea22873589bc411e6e33f8",
+      "bytes": 6118
     },
     {
       "order": 8,
       "skill": "ios-product-requirements-desk",
       "archive": "008-ios-product-requirements-desk-skill.zip",
-      "sha256": "049ed799741b4f28bd5f8985db2d2df67463a8821e3e3b807e5a16829cb97f9f",
-      "bytes": 6592
+      "sha256": "271dfaddeacb01c3e666c9b53dd4dab003b692da8dbff75644c4a4fc8d500e72",
+      "bytes": 6132
     },
     {
       "order": 9,
       "skill": "ios-release-app-store-ops-desk",
       "archive": "009-ios-release-app-store-ops-desk-skill.zip",
-      "sha256": "9b7d2989fbe751a64e121240bfe3d087d162ae3267cf3154d8ce207c8e985ff1",
-      "bytes": 7243
+      "sha256": "93f7406d3c8ef4416c2d9fe61775fb5266da991ca903a42e6198f09d7f425ce5",
+      "bytes": 6736
     },
     {
       "order": 10,
       "skill": "ios-security-privacy-desk",
       "archive": "010-ios-security-privacy-desk-skill.zip",
-      "sha256": "59f0bba9595ba4aa31d9e8a28645ea82c4712d76f17fc6760b133040c45a13c4",
-      "bytes": 7145
+      "sha256": "726195ced7bed581a65e795abae2a4b1a9ac8cf6b3c3ac7a3d25cacccfebb554",
+      "bytes": 6683
     },
     {
       "order": 11,
       "skill": "ios-technical-discovery-desk",
       "archive": "011-ios-technical-discovery-desk-skill.zip",
-      "sha256": "1184a3be7ba6cc6cab1bd8119800b917c7387a3a312f746046ef16d3eadbb816",
-      "bytes": 6659
+      "sha256": "69abe6f444faa4e06dbdda1e5bcdabef583cc715a13a640ac0a4261e49bedba0",
+      "bytes": 6185
     },
     {
       "order": 12,
       "skill": "ios-testing-qa-desk",
       "archive": "012-ios-testing-qa-desk-skill.zip",
-      "sha256": "099f17899abe75f9cff0cd845b35c861e462d66a4f31669ef0747be77115d6dd",
-      "bytes": 6554
+      "sha256": "35cbebd1950cbd61e1af7dccbff546b22a39f7208a54aa5fb3ad8316f66d4065",
+      "bytes": 6101
     },
     {
       "order": 13,
       "skill": "ios-ui-ux-desk",
       "archive": "013-ios-ui-ux-desk-skill.zip",
-      "sha256": "83148341b0064df4cf353cfe2afd119bd44311a0817d7465b310158b79f7bc04",
-      "bytes": 6715
+      "sha256": "12f4b2f3bbcc6a3948941ee46b7756d28a014f2f668bf007c6dfd380ed31457a",
+      "bytes": 6273
     }
   ]
 }

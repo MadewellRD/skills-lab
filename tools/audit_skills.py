@@ -127,9 +127,9 @@ _alias = sum(1 for f in glob.glob('dist/skills/*/*/references/continuity-kernel.
 print(f"  file renames shimmed  : {len(_files)}  -> {_ptr} pointer files shipped")
 print(f"  schema keys aliased   : {len(_keys)}  -> {_alias} kernels carrying the alias table")
 print(f"  legacy agents/openai  : {len(glob.glob('dist/skills/*/*/agents/openai.yaml'))}")
-print(f"  retire after          : {_target}")
+print(f"  status                : {_target}")
 # A date only helps if something checks it, otherwise it is a string nobody reads.
-if _target != '?' and (_files or _keys):
+if _target != '?' and (_files or _keys) and _target[0].isdigit():
     from datetime import date as _d
     try:
         _y, _m, _dd = (int(x) for x in _target.split('-'))

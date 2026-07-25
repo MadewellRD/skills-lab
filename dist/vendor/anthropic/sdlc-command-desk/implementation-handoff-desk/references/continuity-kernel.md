@@ -101,16 +101,3 @@ Rules:
 - Use typed hard halts for connector, source conflict, approval, security/privacy, production, and release integrity risks.
 - Child desks must emit both desk artifact output and an updated packet.
 
-## Deprecated keys
-
-A packet written before v1.0.0 may carry the older key names below. Accept them on read and treat them as equivalent. Always write the current name.
-
-| Accepted on read | Write this |
-|---|---|
-| `codex_handoff` | `implementation_handoff` |
-| `max_context_policy` | `context_policy` |
-
-Do not carry both spellings in the same packet, and do not rewrite a prior stage's packet solely to rename a key: migrate it when you next write the packet, so a
-resumed workflow is never blocked by a naming difference.
-
-These aliases are removed after 2026-11-01. Past that date a packet using the old names is read as missing those fields rather than as an error, so migrate before then.

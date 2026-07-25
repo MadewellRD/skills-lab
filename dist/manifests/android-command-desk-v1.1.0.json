@@ -9,99 +9,99 @@
       "order": 0,
       "skill": "android-command-desk",
       "archive": "000-android-command-desk-skill.zip",
-      "sha256": "a6f7d3a411ad6cd3c7d0d53628255000cdaaab6d87243256c9ebdcbaf748979b",
-      "bytes": 10198
+      "sha256": "96152806c0815cf58f30db98594cd63ee39d037e36c0ae57bf9facbae7e54556",
+      "bytes": 9152
     },
     {
       "order": 1,
       "skill": "android-app-engineering-desk",
       "archive": "001-android-app-engineering-desk-skill.zip",
-      "sha256": "c0705efb0d8cc4c3ad6a32899c22e8256486aeefe9d7bed392bab66d4750d963",
-      "bytes": 7725
+      "sha256": "f6fbf44f766bcf763f5eeabb17b9c1187acfeb02f4778dd7384840b3f1ead2be",
+      "bytes": 7266
     },
     {
       "order": 2,
       "skill": "android-architecture-design-desk",
       "archive": "002-android-architecture-design-desk-skill.zip",
-      "sha256": "9deb465f4caecf5da77678f5a6c7b3a66e49d6cbb098e2ffd9ce6b6424f24139",
-      "bytes": 6515
+      "sha256": "5276a12d374b9ec332c8ae6d7ed627d8f1e24b65fdc70315a3cf526d013f25fc",
+      "bytes": 6030
     },
     {
       "order": 3,
       "skill": "android-backend-integration-desk",
       "archive": "003-android-backend-integration-desk-skill.zip",
-      "sha256": "c0726c750fcb278277eb1b57ea648a372461461770e51346bedd6f0febde2e2b",
-      "bytes": 6304
+      "sha256": "dae02e630027e8f1adb5284da74831e92fb1b8117b663cc06af39d90ed4cec72",
+      "bytes": 5816
     },
     {
       "order": 4,
       "skill": "android-game-engineering-desk",
       "archive": "004-android-game-engineering-desk-skill.zip",
-      "sha256": "b922822ed67823a5055849bed670567a301e41d8e5fb608695eb6ecbb3d783f0",
-      "bytes": 7768
+      "sha256": "8e48b1cc5d4404a9c75119e3cd3e8d23bd70e0369a388f698e9b6a5bd7b5af78",
+      "bytes": 7296
     },
     {
       "order": 5,
       "skill": "android-maintenance-growth-desk",
       "archive": "005-android-maintenance-growth-desk-skill.zip",
-      "sha256": "8445208f8717525db06e26a005a705109609585f779330136bdc7b95ec816ac9",
-      "bytes": 6602
+      "sha256": "af0b2548c4b27602cf7047645ab17cedc020881da45fdf88c772119766419b9e",
+      "bytes": 6109
     },
     {
       "order": 6,
       "skill": "android-observability-liveops-desk",
       "archive": "006-android-observability-liveops-desk-skill.zip",
-      "sha256": "cef551b3096eb8badb46c4381a5bef8b339acce03a53ca806650b2cf0e1cbf93",
-      "bytes": 6239
+      "sha256": "db852ada8a503c96670f019c93ce4abc5608eaab8398921dc0cc3ef489fead2c",
+      "bytes": 5741
     },
     {
       "order": 7,
       "skill": "android-performance-optimization-desk",
       "archive": "007-android-performance-optimization-desk-skill.zip",
-      "sha256": "ede3581797f40799509dd17c452f6f4def961bbe9f35c4e884d9b2db37b91ccf",
-      "bytes": 6297
+      "sha256": "0b135aa2057849cb3a78f16c8794f7da9b643c7cbf1525cee225881fd6197312",
+      "bytes": 5796
     },
     {
       "order": 8,
       "skill": "android-product-requirements-desk",
       "archive": "008-android-product-requirements-desk-skill.zip",
-      "sha256": "e8d428c04c1433bd08b05c876f391f93118d88bcef998f5b26c45f598fd57f53",
-      "bytes": 6326
+      "sha256": "367929a337bb79e3f35a75f7cc25c1e688bd69fd7965e715bdd2e63779c8f4c3",
+      "bytes": 5856
     },
     {
       "order": 9,
       "skill": "android-release-store-ops-desk",
       "archive": "009-android-release-store-ops-desk-skill.zip",
-      "sha256": "11259da535fa55b217790216c54cab33dc1b9364a93ff2bdf6b77209ca57967a",
-      "bytes": 6790
+      "sha256": "89df3b1d4c462af5cd1f04def9525b95bc239847528a9bccc7e5b28acdbb644b",
+      "bytes": 6302
     },
     {
       "order": 10,
       "skill": "android-security-privacy-desk",
       "archive": "010-android-security-privacy-desk-skill.zip",
-      "sha256": "5ea5f5c9e48fde50652a9422cbb9d1205086fc0c3a612e82d37035b9a65f7975",
-      "bytes": 6742
+      "sha256": "bef7664bb61d18c66e3742ee0788f6dcb4dbbb45e8f82aae3c849d741d2c58ba",
+      "bytes": 6266
     },
     {
       "order": 11,
       "skill": "android-technical-discovery-desk",
       "archive": "011-android-technical-discovery-desk-skill.zip",
-      "sha256": "f057114aa29e5bae686e0a403a94d550c98e743c7f6e091ec11f4e21c7cc6fd1",
-      "bytes": 6314
+      "sha256": "485b1f15c8526fd114c32a2545f53791c27d31718711e478f7dde75a8cd5700d",
+      "bytes": 5829
     },
     {
       "order": 12,
       "skill": "android-testing-qa-desk",
       "archive": "012-android-testing-qa-desk-skill.zip",
-      "sha256": "c5c7e68501d52fca35d4d5dca5e18279c1bb50020f0baf2c13c6f9ec57fc8797",
-      "bytes": 6283
+      "sha256": "2be3faf7afa740ea71c8b5b9de0de21d7dd837cbe1338f7dea8bd61c25447cb8",
+      "bytes": 5819
     },
     {
       "order": 13,
       "skill": "android-ui-ux-desk",
       "archive": "013-android-ui-ux-desk-skill.zip",
-      "sha256": "3d603eb1451020af5901a626108ad31b9c8556974b18f25d653bee4f120f7f2a",
-      "bytes": 6334
+      "sha256": "b57a70c48c9b5f4e886c71abc650f714131cf596d60c7173ae48c11ef6cc9275",
+      "bytes": 5879
     }
   ]
 }

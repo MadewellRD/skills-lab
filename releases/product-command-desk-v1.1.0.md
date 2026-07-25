@@ -55,22 +55,17 @@ never a reason to remove governance.
 
 ## Breaking changes
 
-Compatibility shims are retired by DATE, not by version number: they are
-removed after 2026-11-01. A version can arrive the week after the one that
-introduced them, which would leave forks no real window, so the commitment is
-to the calendar instead.
-Renamed files ship under their old names as pointers. Renamed schema keys cannot
-be shimmed with a file, so the continuity kernel declares them as read aliases:
-a pre-v1.0.0 packet still resolves, and the current name is always written back.
+Compatibility shims are RETIRED as of v1.1.0. The pre-v1.0.0 names no longer
+ship, so anything still reading them must move to the current names.
 
-| Was | Now | Shim |
-|---|---|---|
-| `references/codex-conservation-policy.md` | `references/handoff-density-policy.md` | yes |
-| `references/low-token-policy.md` | `references/handoff-density-policy.md` | yes |
-| `references/*-low-token-policy.md` | `references/*-handoff-density-policy.md` | yes |
-| `agents/openai.yaml` | `agents/<vendor>.yaml` | yes |
-| `continuity_packet.codex_handoff` | `continuity_packet.implementation_handoff` | yes, read alias |
-| `max_context_policy` | `context_policy` | yes, read alias |
+| Was | Now |
+|---|---|
+| `references/codex-conservation-policy.md` | `references/handoff-density-policy.md` |
+| `references/low-token-policy.md` | `references/handoff-density-policy.md` |
+| `references/*-low-token-policy.md` | `references/*-handoff-density-policy.md` |
+| `agents/openai.yaml` | `agents/<vendor>.yaml` |
+| `continuity_packet.codex_handoff` | `continuity_packet.implementation_handoff` |
+| `max_context_policy` | `context_policy` |
 
 ## Artifacts
 
