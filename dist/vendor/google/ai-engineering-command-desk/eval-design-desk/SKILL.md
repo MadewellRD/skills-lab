@@ -47,13 +47,13 @@ Eval cases and dataset slices are independent. Authoring cases, assembling slice
 
 ## Outputs
 
-A complete run delivers a runnable eval, which means all five artifacts together — a rubric with no thresholds, or a plan with no dataset requirements, is not something anyone can execute:
+A complete run delivers a runnable eval, which means all five artifacts together; a rubric with no thresholds, or a plan with no dataset requirements, is not something anyone can execute:
 
-- eval plan — the behavior contracts under test, the slices exercising each, the grader per slice, and the rerun cadence.
-- rubric — scoring criteria with anchored levels, worked examples at the boundaries, and the tie-breaking rule.
-- dataset requirements — per slice: what the cases must cover, how many, where they come from, and what disqualifies a case.
-- pass/fail gates — numeric thresholds fixed before results are seen, bound to the named regression slices they apply to.
-- reporting template — the fields every run reports, so two runs are comparable.
+- eval plan: the behavior contracts under test, the slices exercising each, the grader per slice, and the rerun cadence.
+- rubric: scoring criteria with anchored levels, worked examples at the boundaries, and the tie-breaking rule.
+- dataset requirements: per slice: what the cases must cover, how many, where they come from, and what disqualifies a case.
+- pass/fail gates: numeric thresholds fixed before results are seen, bound to the named regression slices they apply to.
+- reporting template: the fields every run reports, so two runs are comparable.
 
 The bar is reproducibility: someone who did not write the plan gets the same answer from it. Cases, slices, and graders are the parallel-safe unit; threshold setting and the pass/fail rollup remain aggregate.
 
@@ -78,12 +78,12 @@ Completeness of this set never extends to results. A baseline number, a prior ev
 
 Default posture is to proceed and label the assumption inline. A missing sample count or an undecided rerun cadence is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — the plan would set or relax a release threshold that an owner must authorize.
-- Production or destructive — running the eval would execute against production systems, live user data, or real side-effecting tools.
-- Security or privacy — eval inputs, transcripts, or grading exports would expose personal, regulated, or customer-confidential data, including to a grading model.
-- Source conflict — requirements, prior eval results, and stakeholder expectations disagree on what correct behavior is.
-- Release integrity — the eval would stand as release evidence while resting only on demo examples, or while safety and high-impact behavior lack explicit thresholds.
-- Connector unreachable — required datasets, prior eval runs, or baseline results exist but cannot be read.
+- Approval: the plan would set or relax a release threshold that an owner must authorize.
+- Production or destructive: running the eval would execute against production systems, live user data, or real side-effecting tools.
+- Security or privacy: eval inputs, transcripts, or grading exports would expose personal, regulated, or customer-confidential data, including to a grading model.
+- Source conflict: requirements, prior eval results, and stakeholder expectations disagree on what correct behavior is.
+- Release integrity: the eval would stand as release evidence while resting only on demo examples, or while safety and high-impact behavior lack explicit thresholds.
+- Connector unreachable: required datasets, prior eval runs, or baseline results exist but cannot be read.
 
 ## Downstream handoffs
 

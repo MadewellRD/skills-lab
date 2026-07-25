@@ -6,7 +6,7 @@ Prefer `SOFT_GAP_ASSUMPTION_ALLOWED`. Proceed, label the assumption inline, and 
 auditable so it is cheap to correct.
 
 Hard halts are exceptional. They exist for cases where being wrong is expensive or
-irreversible — not for cases where the answer is merely uncertain. Current models reason
+irreversible, not for cases where the answer is merely uncertain. Current models reason
 through ambiguity that older ones could not, so a halt a competent human would have worked
 through is now a defect, not a safeguard.
 
@@ -17,21 +17,21 @@ does not, it is a soft gap: continue and label it.
 
 Each is justified by consequence, not by uncertainty:
 
-- `HARD_HALT_APPROVAL` — a human must authorize before proceeding.
-- `HARD_HALT_PRODUCTION` — the action has irreversible or destructive side effects.
-- `HARD_HALT_SECURITY` — proceeding risks exposure of secrets, credentials, or personal data.
-- `HARD_HALT_SOURCE_CONFLICT` — sources genuinely disagree on a load-bearing fact, and
+- `HARD_HALT_APPROVAL`: a human must authorize before proceeding.
+- `HARD_HALT_PRODUCTION`: the action has irreversible or destructive side effects.
+- `HARD_HALT_SECURITY`: proceeding risks exposure of secrets, credentials, or personal data.
+- `HARD_HALT_SOURCE_CONFLICT`: sources genuinely disagree on a load-bearing fact, and
   picking one silently would launder a guess into a decision.
-- `HARD_HALT_RELEASE_INTEGRITY` — shipping something whose correctness cannot be established.
-- `HARD_HALT_CONNECTOR` — required evidence is *unreachable*. Evidence that is merely
+- `HARD_HALT_RELEASE_INTEGRITY`: shipping something whose correctness cannot be established.
+- `HARD_HALT_CONNECTOR`: required evidence is *unreachable*. Evidence that is merely
   *absent* is a soft gap. Unreachable means the source exists and cannot be read.
 
 ## Continuation outcomes
 
-- `SOFT_GAP_ASSUMPTION_ALLOWED` — default. Proceed with the assumption stated inline.
-- `AUTO_ROUTE_UPSTREAM` — a prior stage owns the missing decision; route without asking.
-- `AUTO_ROUTE_DOWNSTREAM` — this stage is complete; continue into the next.
-- `HANDOFF_BLOCKER` — implementation handoff facts are insufficient for a coding agent.
+- `SOFT_GAP_ASSUMPTION_ALLOWED`: default. Proceed with the assumption stated inline.
+- `AUTO_ROUTE_UPSTREAM`: a prior stage owns the missing decision; route without asking.
+- `AUTO_ROUTE_DOWNSTREAM`: this stage is complete; continue into the next.
+- `HANDOFF_BLOCKER`: implementation handoff facts are insufficient for a coding agent.
 
 ## Required fields
 

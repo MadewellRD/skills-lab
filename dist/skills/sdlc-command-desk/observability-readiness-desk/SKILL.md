@@ -40,7 +40,7 @@ If a required source is unavailable, state the limitation and produce either a s
 
 **Templates.** Select the output shape from `references/output-contract.md` and build with the relevant template: `references/observability-plan-template.md`, `references/telemetry-design-template.md`, `references/runbook-template.md`, `references/slo-alerting-template.md`, or `references/readiness-checklist.md`.
 
-**Parallel surface.** Services, endpoints, signals, dashboards, alert rules, and SLOs are independent review units — each one's coverage assessment stands on its own. Evaluate them in parallel rather than walking the list serially, then aggregate into one gap report.
+**Parallel surface.** Services, endpoints, signals, dashboards, alert rules, and SLOs are independent review units, each one's coverage assessment stands on its own. Evaluate them in parallel rather than walking the list serially, then aggregate into one gap report.
 
 **Runbooks are ordered content.** Recovery and mitigation steps inside a runbook are executed under pressure and in sequence. Keep them numbered and ordered; the operator following them must not have to derive the order.
 
@@ -75,14 +75,14 @@ For downloadable artifacts, use `scripts/write_observability_markdown.py` to wra
 
 ## Halt rules
 
-Proceed by default. An unclear service boundary or a missing dashboard is a gap to record, not a stop — name the assumption inline and continue the readiness assessment. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+Proceed by default. An unclear service boundary or a missing dashboard is a gap to record, not a stop; name the assumption inline and continue the readiness assessment. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the artifact would commit the organization to an SLO, error budget, or on-call obligation that a human owner must authorize.
-- **Production or destructive** — the request asks to change live alert rules, dashboards, or sampling configuration rather than plan the change.
-- **Security or privacy** — proposed telemetry would capture secrets, credentials, or personal data.
-- **Source conflict** — repo instrumentation, docs, dashboards, and incident notes genuinely disagree on what is actually monitored.
-- **Release integrity** — a go/no-go readiness verdict is requested while logs, metrics, traces, alerts, or rollback context needed to support it are missing.
-- **Connector unreachable** — a monitoring source exists but cannot be read, and the request depends on production claims. A source that is merely absent is a soft gap: produce a scoped user-fact-only artifact and continue.
+- **Approval**: the artifact would commit the organization to an SLO, error budget, or on-call obligation that a human owner must authorize.
+- **Production or destructive**: the request asks to change live alert rules, dashboards, or sampling configuration rather than plan the change.
+- **Security or privacy**: proposed telemetry would capture secrets, credentials, or personal data.
+- **Source conflict**: repo instrumentation, docs, dashboards, and incident notes genuinely disagree on what is actually monitored.
+- **Release integrity**: a go/no-go readiness verdict is requested while logs, metrics, traces, alerts, or rollback context needed to support it are missing.
+- **Connector unreachable**: a monitoring source exists but cannot be read, and the request depends on production claims. A source that is merely absent is a soft gap: produce a scoped user-fact-only artifact and continue.
 
 When the task turns into implementation changes, route to `implementation-handoff-desk` rather than halting.
 

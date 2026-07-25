@@ -34,7 +34,7 @@ Produce a runtime plan an operator can stand up: the request path end to end, wh
 
 Constraints:
 
-- Every provider failure mode — rate limit, timeout, quota exhaustion, degraded quality, hard outage — has a defined behavior. A path without a stated fallback is an incomplete plan.
+- Every provider failure mode: rate limit, timeout, quota exhaustion, degraded quality, hard outage, has a defined behavior. A path without a stated fallback is an incomplete plan.
 - Never invent provider quotas, rate limits, pricing, or availability figures. Cite the provider surface or record the limit as unverified and name the measurement that would confirm it.
 - Secrets, logging, retention, and data handling are bounded by the privacy requirements of the data class passing through inference.
 - SLOs are stated as measurable targets with the telemetry that observes them.
@@ -46,11 +46,11 @@ Provider surfaces and endpoints are independent. Gathering and assessing per-pro
 
 A full run delivers the whole operating design:
 
-- inference ops plan — the serving path end to end, with the capacity, concurrency, and cost assumptions it rests on.
-- runtime topology — providers, models, endpoints, regions, and the routing between them, with per-endpoint timeout and retry behavior.
-- SLO proposal — latency, availability, and error-rate targets with their measurement window and the consequence of a breach.
-- fallback policy — per failure class (rate limit, timeout, provider outage, content filter, degraded quality): what happens, in what order, and what the user sees.
-- runbook checklist — the operational actions for each failure class, written for whoever is paged rather than for whoever designed the system.
+- inference ops plan: the serving path end to end, with the capacity, concurrency, and cost assumptions it rests on.
+- runtime topology: providers, models, endpoints, regions, and the routing between them, with per-endpoint timeout and retry behavior.
+- SLO proposal: latency, availability, and error-rate targets with their measurement window and the consequence of a breach.
+- fallback policy: per failure class (rate limit, timeout, provider outage, content filter, degraded quality): what happens, in what order, and what the user sees.
+- runbook checklist: the operational actions for each failure class, written for whoever is paged rather than for whoever designed the system.
 
 Complete means operable: an on-call engineer could follow the runbook and an SRE could enforce the SLO without asking a follow-up question. Per-provider and per-endpoint design is parallel-safe; the shared SLO, secrets policy, and logging policy stay single decisions.
 
@@ -75,12 +75,12 @@ Provider facts are the risk point. Rate limits, quotas, context windows, pricing
 
 Default posture is to proceed and label the assumption inline. An unconfirmed traffic estimate or an unverified provider quota is a soft gap: state the assumed figure, mark it, name the measurement that would confirm it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — the plan would commit spend, quota, or a provider contract beyond what the owner has authorized.
-- Production or destructive — a topology, routing, or credential change would disrupt live inference traffic without a reversible path.
-- Security or privacy — secrets handling, log content, or retention would expose credentials or personal data, or would violate the data-handling terms of the deployment environment.
-- Source conflict — provider documentation, observed runtime behavior, and internal configuration disagree on limits, quotas, or failure semantics.
-- Release integrity — the capability would go to production with no fallback for a known provider failure mode, or with SLOs that no telemetry can observe.
-- Connector unreachable — runtime configuration, provider documentation, existing telemetry, or runbooks exist but cannot be read.
+- Approval: the plan would commit spend, quota, or a provider contract beyond what the owner has authorized.
+- Production or destructive: a topology, routing, or credential change would disrupt live inference traffic without a reversible path.
+- Security or privacy: secrets handling, log content, or retention would expose credentials or personal data, or would violate the data-handling terms of the deployment environment.
+- Source conflict: provider documentation, observed runtime behavior, and internal configuration disagree on limits, quotas, or failure semantics.
+- Release integrity: the capability would go to production with no fallback for a known provider failure mode, or with SLOs that no telemetry can observe.
+- Connector unreachable: runtime configuration, provider documentation, existing telemetry, or runbooks exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -102,7 +102,7 @@ Default posture is to proceed and label the assumption inline. An unconfirmed tr
 - State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
-- Passing means the request path, every provider failure mode with its fallback, the secrets and logging policy, and the SLO set with its observing telemetry are all stated — each traced to a source fact or a labeled assumption.
+- Passing means the request path, every provider failure mode with its fallback, the secrets and logging policy, and the SLO set with its observing telemetry are all stated, each traced to a source fact or a labeled assumption.
 
 ## Capability baseline
 

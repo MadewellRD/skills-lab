@@ -21,7 +21,7 @@ Plan Android maintenance and growth: dependency upgrades, Android Gradle Plugin/
 
 **Ordered content that stays ordered.** Where the plan responds to a Play policy deadline, a target-SDK level bump, or an on-device data migration, emit the sequence as ordered steps and keep it ordered. The order is externally imposed: Play policy deadlines are set by Google and missing one removes the app from distribution, target-SDK bumps gate on Play's published enforcement dates, and an on-device migration applied out of order against user data cannot be undone by a later release.
 
-**Parallel surface.** Individual dependency upgrades, separate growth experiments, distinct debt items, and per-module impact assessments are independent: assess them in parallel. Sequencing upgrades that share a build graph is aggregate and sequential — resolve version conflicts across the whole graph once, after the per-dependency assessments exist, rather than upgrading one at a time and re-resolving each round.
+**Parallel surface.** Individual dependency upgrades, separate growth experiments, distinct debt items, and per-module impact assessments are independent: assess them in parallel. Sequencing upgrades that share a build graph is aggregate and sequential, resolve version conflicts across the whole graph once, after the per-dependency assessments exist, rather than upgrading one at a time and re-resolving each round.
 
 **Acceptance bar.** The plan is sound when the trigger cites its source; affected modules are named from repo evidence; each dependency or SDK change states its breaking-change surface and the validation command that proves it; every experiment has a metric, guardrail, sample basis, rollback, and decision rule; and each item is either scheduled with an owner or explicitly marked owner-unknown.
 
@@ -40,11 +40,11 @@ Repo facts, dependency/SDK state, Play policy notices, crash/ANR/analytics trend
 
 ## Expected outputs
 
-A complete run delivers the set the classification calls for, in full: the maintenance or growth plan, the dependency and SDK update plan, the experiment brief, the debt register, the migration or refactor handoff, the halt conditions that apply, and the packet update. Where the work classification genuinely excludes one — a pure dependency-upgrade run has no growth experiment — that artifact is reported as not applicable with the reason, which is different from leaving it out or padding it with a generic experiment.
+A complete run delivers the set the classification calls for, in full: the maintenance or growth plan, the dependency and SDK update plan, the experiment brief, the debt register, the migration or refactor handoff, the halt conditions that apply, and the packet update. Where the work classification genuinely excludes one; a pure dependency-upgrade run has no growth experiment; that artifact is reported as not applicable with the reason, which is different from leaving it out or padding it with a generic experiment.
 
 Each artifact is done when someone could pick it up and execute. The update plan names each dependency, its current and target version, the breaking changes, and the order forced by the shared build graph; the experiment brief states the hypothesis, the metric, the guardrail, and the stop condition; the debt register names each item, its cost, and what retiring it unblocks. A plan that says "upgrade dependencies" has not started.
 
-None of this is filled from convention. A version, a Play policy change, an SDK requirement, a metric baseline, or a debt cost that no source establishes is recorded as unknown with the check that would resolve it — an invented target version turns a maintenance plan into a build break. Individual upgrades, experiments, debt items, and per-module impact assessments are independent and part of the parallel surface declared in Workflow.
+None of this is filled from convention. A version, a Play policy change, an SDK requirement, a metric baseline, or a debt cost that no source establishes is recorded as unknown with the check that would resolve it; an invented target version turns a maintenance plan into a build break. Individual upgrades, experiments, debt items, and per-module impact assessments are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -62,12 +62,12 @@ None of this is filled from convention. A version, a Play policy change, an SDK 
 
 Proceed by default. An incomplete trigger or unclear scope is normally a labeled assumption plus an open question, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — an upgrade, migration, experiment launch, monetization change, or decommissioning decision requires a human owner to authorize it.
-- **Production or destructive** — the plan would act on live users, live economy state, or production data: launching an experiment, removing a feature or surface, or migrating on-device user data.
-- **Security or privacy** — a dependency, SDK, or policy change alters how personal data or credentials are handled, or the upgrade is a security fix whose details cannot be handled safely here.
-- **Source conflict** — repo state, release history, and telemetry genuinely disagree on current version, dependency state, or observed trend. Preserve the conflict.
-- **Release integrity** — a Play policy, dependency, SDK, engine, or store change has release impact and would be reported as handled with no owner, timeline, or validation path.
-- **Connector unreachable** — repo, release, telemetry, or policy sources exist but cannot be read.
+- **Approval**: an upgrade, migration, experiment launch, monetization change, or decommissioning decision requires a human owner to authorize it.
+- **Production or destructive**: the plan would act on live users, live economy state, or production data: launching an experiment, removing a feature or surface, or migrating on-device user data.
+- **Security or privacy**: a dependency, SDK, or policy change alters how personal data or credentials are handled, or the upgrade is a security fix whose details cannot be handled safely here.
+- **Source conflict**: repo state, release history, and telemetry genuinely disagree on current version, dependency state, or observed trend. Preserve the conflict.
+- **Release integrity**: a Play policy, dependency, SDK, engine, or store change has release impact and would be reported as handled with no owner, timeline, or validation path.
+- **Connector unreachable**: repo, release, telemetry, or policy sources exist but cannot be read.
 
 Otherwise proceed: a missing trigger detail, unknown affected module, or unvalidated path becomes a labeled assumption naming the evidence needed to confirm it, and the plan is scoped to what the known facts support.
 
@@ -82,7 +82,7 @@ A complete run writes all of these that the work classification puts in scope, a
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — takes the place of the set above when a hard halt fires, rather than being added to it.
+- `workflow-halt.md`: takes the place of the set above when a hard halt fires, rather than being added to it.
 
 ## Downstream handoff
 

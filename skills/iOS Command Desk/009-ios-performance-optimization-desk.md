@@ -44,7 +44,7 @@ A complete run delivers the performance package as a set: the plan, the measurem
 
 Each artifact is complete when someone else could reproduce it on the same hardware. The measurement matrix names device tiers, workload, scenario, and metric per cell with its current value or an explicit gap; each hypothesis names the evidence pointing at it and the measurement that would confirm or kill it; each success gate carries a number and the tier it binds to; the rollback criteria name the regression that reverts the change. "Make launch faster" is not a gate.
 
-None of this is a reason to supply a number nobody measured. A metric with no measurement behind it is reported as unmeasured alongside the Instruments run or benchmark that would produce it — an estimated baseline silently corrupts every comparison made against it afterwards. Device tiers, scenarios, and individual metrics are independent measurement axes inside the parallel surface declared in Workflow.
+None of this is a reason to supply a number nobody measured. A metric with no measurement behind it is reported as unmeasured alongside the Instruments run or benchmark that would produce it; an estimated baseline silently corrupts every comparison made against it afterwards. Device tiers, scenarios, and individual metrics are independent measurement axes inside the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -63,12 +63,12 @@ None of this is a reason to supply a number nobody measured. A metric with no me
 
 Proceed by default. Absent measurement is normally recorded as a measurement gap plus the command that would close it, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — profiling or benchmarking requires running against a device, account, or environment the user has not authorized.
-- **Production or destructive** — the work would profile against production traffic or real user data, or ship a change behind a performance gate with no rollback path.
-- **Security or privacy** — traces, logs, MetricKit payloads, or profiler output would carry personal data or credentials.
-- **Source conflict** — benchmark output, CI reports, and telemetry genuinely disagree about the current baseline. Preserve the conflict rather than averaging it away.
-- **Release integrity** — a release gate depends on performance evidence that has not been collected, or an optimization would be reported as effective without a before-and-after measurement.
-- **Connector unreachable** — a benchmark, CI, or profiler source exists but cannot be read.
+- **Approval**: profiling or benchmarking requires running against a device, account, or environment the user has not authorized.
+- **Production or destructive**: the work would profile against production traffic or real user data, or ship a change behind a performance gate with no rollback path.
+- **Security or privacy**: traces, logs, MetricKit payloads, or profiler output would carry personal data or credentials.
+- **Source conflict**: benchmark output, CI reports, and telemetry genuinely disagree about the current baseline. Preserve the conflict rather than averaging it away.
+- **Release integrity**: a release gate depends on performance evidence that has not been collected, or an optimization would be reported as effective without a before-and-after measurement.
+- **Connector unreachable**: a benchmark, CI, or profiler source exists but cannot be read.
 
 Otherwise proceed: an unknown device tier, workload, or test scenario becomes a labeled assumption, and unavailable profiler or benchmark output becomes a named measurement gap in the plan.
 
@@ -83,7 +83,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — returned instead of the set above when a hard halt fires. Measurements that could not be collected are recorded as gaps in the matrix rather than escalated into a halt.
+- `workflow-halt.md`: returned instead of the set above when a hard halt fires. Measurements that could not be collected are recorded as gaps in the matrix rather than escalated into a halt.
 
 ## Downstream handoff
 

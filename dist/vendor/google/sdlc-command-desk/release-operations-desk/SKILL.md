@@ -20,7 +20,7 @@ This skill does not deploy, tag, publish, or merge by itself. It creates release
 
 ## Workflow
 
-**Outcome.** The release artifact the request calls for — release readiness, release notes, a version or tag plan, a rollback plan, a go/no-go checklist, a post-release verification plan, or a downstream handoff — containing source facts, scope, exclusions, evidence, risks, rollback path, gates, owners where known, and handoff notes.
+**Outcome.** The release artifact the request calls for, release readiness, release notes, a version or tag plan, a rollback plan, a go/no-go checklist, a post-release verification plan, or a downstream handoff, containing source facts, scope, exclusions, evidence, risks, rollback path, gates, owners where known, and handoff notes.
 
 **Grounding.** Use GitHub for merged pull requests, commits, branches, tags, releases, CI checks, changed files, issues, milestones, and release history. Use document sources for roadmap, changelog, policy, runbooks, and compliance context. Use communication sources only for decision history and incident/release coordination when available.
 
@@ -44,7 +44,7 @@ If required release facts are unavailable, produce a connector diagnostic or a s
 
 ## Output rules
 
-A release run delivers the set for that release: readiness with every gate classified, the release notes, the version and tag plan, the rollback plan, and the post-release verification plan, plus handoff notes when follow-up work is required. These describe one release from different angles and are not useful apart — notes without a gate assessment tell nobody whether to ship, and a go decision without a rollback plan is not a decision anyone should sign.
+A release run delivers the set for that release: readiness with every gate classified, the release notes, the version and tag plan, the rollback plan, and the post-release verification plan, plus handoff notes when follow-up work is required. These describe one release from different angles and are not useful apart; notes without a gate assessment tell nobody whether to ship, and a go decision without a rollback plan is not a decision anyone should sign.
 
 Default to downloadable Markdown artifacts when the user asks for a runbook, release notes, plan, checklist, evidence packet, or handoff. Use concise prose and decision tables. Keep assumptions explicit.
 
@@ -58,14 +58,14 @@ The set being complete is not a reason for any gate to read `pass`. Versions, ta
 
 ## Halt rules
 
-Proceed by default when drafting notes, plans, and readiness reports: an unknown gate is classified `unknown` with the missing evidence named, not turned into a stop. Release decisions are different — a go decision is a release-integrity act. Reserve hard halts for these consequence classes from `references/halt-taxonomy.md`:
+Proceed by default when drafting notes, plans, and readiness reports: an unknown gate is classified `unknown` with the missing evidence named, not turned into a stop. Release decisions are different; a go decision is a release-integrity act. Reserve hard halts for these consequence classes from `references/halt-taxonomy.md`:
 
-- **Approval** — a release, tag, publish, or merge is requested without explicit execution authority.
-- **Production or destructive** — the user asks this desk to actually deploy, tag, publish, or merge rather than produce the decision material. This desk does not execute.
-- **Security or privacy** — a release decision depends on unresolved security, compliance, or privacy risk.
-- **Source conflict** — release scope conflicts across sources, or the target version, tag, branch, or commit range cannot be established from repo state.
-- **Release integrity** — a go decision would be issued while CI or verification evidence is missing for a gated release, or a rollback path is requested and the deployment surface is unknown.
-- **Connector unreachable** — GitHub or a required release-doc source exists but cannot be read. A merely absent source is a soft gap: produce a source-limited draft marked as such and continue.
+- **Approval**: a release, tag, publish, or merge is requested without explicit execution authority.
+- **Production or destructive**: the user asks this desk to actually deploy, tag, publish, or merge rather than produce the decision material. This desk does not execute.
+- **Security or privacy**: a release decision depends on unresolved security, compliance, or privacy risk.
+- **Source conflict**: release scope conflicts across sources, or the target version, tag, branch, or commit range cannot be established from repo state.
+- **Release integrity**: a go decision would be issued while CI or verification evidence is missing for a gated release, or a rollback path is requested and the deployment surface is unknown.
+- **Connector unreachable**: GitHub or a required release-doc source exists but cannot be read. A merely absent source is a soft gap: produce a source-limited draft marked as such and continue.
 
 ## References
 

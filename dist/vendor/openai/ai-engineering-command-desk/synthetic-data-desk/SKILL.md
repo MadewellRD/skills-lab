@@ -44,13 +44,13 @@ Generation batches are independent. Producing, filtering, and reviewing each bat
 
 ## Outputs
 
-A full run delivers the generation system and its controls together — constraints without contamination controls are how a synthetic set quietly poisons an eval:
+A full run delivers the generation system and its controls together; constraints without contamination controls are how a synthetic set quietly poisons an eval:
 
-- synthetic data plan — what is generated, why generation beats collection here, the volume, and the seed strategy.
-- generation constraints — the generator, the prompt or procedure, the diversity targets, and the distribution the output must match, stated so a run is repeatable.
-- review workflow — what is sampled for human review, at what rate, against what acceptance criteria, and who signs off.
-- contamination controls — deduplication against seeds, against training data, and against held-out eval sets, each with the check that enforces it.
-- validation checklist — the pass conditions before the set is usable, including the distribution check against the stated diversity targets.
+- synthetic data plan: what is generated, why generation beats collection here, the volume, and the seed strategy.
+- generation constraints: the generator, the prompt or procedure, the diversity targets, and the distribution the output must match, stated so a run is repeatable.
+- review workflow: what is sampled for human review, at what rate, against what acceptance criteria, and who signs off.
+- contamination controls: deduplication against seeds, against training data, and against held-out eval sets, each with the check that enforces it.
+- validation checklist: the pass conditions before the set is usable, including the distribution check against the stated diversity targets.
 
 Depth bar: someone could run generation and know whether the output is acceptable without asking a follow-up question. Batches, seed clusters, and scenario categories fan out in parallel; deduplication and the final distribution check stay global.
 
@@ -75,12 +75,12 @@ Delivering all five is not permission to describe data that does not exist. Yiel
 
 Default posture is to proceed and label the assumption inline. An undecided batch size or an unset generation temperature is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — generated data would be used for a purpose, or derived from seeds, beyond what the data owner authorized.
-- Production or destructive — generated records would be merged into a dataset or split that existing eval baselines depend on, without a reversible path.
-- Security or privacy — sensitive, regulated, or personal content in the seeds could survive into generated output, or generation would send that content to an uncleared surface.
-- Source conflict — seed provenance, consent scope, or usage limits are documented inconsistently.
-- Release integrity — synthetic data would stand as release evidence for a claim that requires real-world validation, or contamination controls are absent for eval or benchmark use.
-- Connector unreachable — seed data, provenance records, or existing split definitions exist but cannot be read.
+- Approval: generated data would be used for a purpose, or derived from seeds, beyond what the data owner authorized.
+- Production or destructive: generated records would be merged into a dataset or split that existing eval baselines depend on, without a reversible path.
+- Security or privacy: sensitive, regulated, or personal content in the seeds could survive into generated output, or generation would send that content to an uncleared surface.
+- Source conflict: seed provenance, consent scope, or usage limits are documented inconsistently.
+- Release integrity: synthetic data would stand as release evidence for a claim that requires real-world validation, or contamination controls are absent for eval or benchmark use.
+- Connector unreachable: seed data, provenance records, or existing split definitions exist but cannot be read.
 
 ## Downstream handoffs
 

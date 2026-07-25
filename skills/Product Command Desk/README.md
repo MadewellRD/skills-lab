@@ -23,22 +23,22 @@ Do not place generated package output in this folder.
 
 ## Desk inventory
 
-- `product-command-desk.md` — suite orchestrator and workflow entrypoint.
-- `market-discovery-desk.md` — market context, category dynamics, customer segments, and opportunity framing.
-- `user-research-desk.md` — user interviews, research plans, synthesis, findings, and evidence-backed insights.
-- `persona-segmentation-desk.md` — persona, segment, ICP, use-case, and journey segmentation.
-- `opportunity-sizing-desk.md` — TAM/SAM/SOM, revenue potential, adoption constraints, and confidence notes.
-- `competitive-analysis-desk.md` — competitor, alternative, substitute, positioning, and differentiation analysis.
-- `prd-desk.md` — product requirements, acceptance criteria, non-goals, risks, and downstream handoffs.
-- `roadmap-planning-desk.md` — roadmap themes, sequencing, dependencies, milestones, and tradeoffs.
-- `feature-prioritization-desk.md` — ranking, scoring, impact/effort tradeoffs, and decision records.
-- `pricing-packaging-desk.md` — pricing hypotheses, packages, entitlements, monetization risk, and experiments.
-- `gtm-brief-desk.md` — go-to-market brief, audiences, messaging, channels, sales/support enablement, and launch handoff.
-- `launch-readiness-desk.md` — product launch gate, release scope, comms, support, docs, metrics, and rollback readiness.
-- `experiment-design-desk.md` — product experiments, hypotheses, metrics, cohorts, guardrails, and decision rules.
-- `feedback-synthesis-desk.md` — feedback intake, clustering, severity, source weighting, and product action mapping.
-- `churn-retention-analysis-desk.md` — churn drivers, retention opportunities, cohorts, lifecycle gaps, and intervention planning.
-- `product-retrospective-desk.md` — product post-launch or cycle retrospectives, lessons, metric outcomes, and improvement actions.
+- `product-command-desk.md`: suite orchestrator and workflow entrypoint.
+- `market-discovery-desk.md`: market context, category dynamics, customer segments, and opportunity framing.
+- `user-research-desk.md`: user interviews, research plans, synthesis, findings, and evidence-backed insights.
+- `persona-segmentation-desk.md`: persona, segment, ICP, use-case, and journey segmentation.
+- `opportunity-sizing-desk.md`: TAM/SAM/SOM, revenue potential, adoption constraints, and confidence notes.
+- `competitive-analysis-desk.md`: competitor, alternative, substitute, positioning, and differentiation analysis.
+- `prd-desk.md`: product requirements, acceptance criteria, non-goals, risks, and downstream handoffs.
+- `roadmap-planning-desk.md`: roadmap themes, sequencing, dependencies, milestones, and tradeoffs.
+- `feature-prioritization-desk.md`: ranking, scoring, impact/effort tradeoffs, and decision records.
+- `pricing-packaging-desk.md`: pricing hypotheses, packages, entitlements, monetization risk, and experiments.
+- `gtm-brief-desk.md`: go-to-market brief, audiences, messaging, channels, sales/support enablement, and launch handoff.
+- `launch-readiness-desk.md`: product launch gate, release scope, comms, support, docs, metrics, and rollback readiness.
+- `experiment-design-desk.md`: product experiments, hypotheses, metrics, cohorts, guardrails, and decision rules.
+- `feedback-synthesis-desk.md`: feedback intake, clustering, severity, source weighting, and product action mapping.
+- `churn-retention-analysis-desk.md`: churn drivers, retention opportunities, cohorts, lifecycle gaps, and intervention planning.
+- `product-retrospective-desk.md`: product post-launch or cycle retrospectives, lessons, metric outcomes, and improvement actions.
 
 ## Workflow path
 

@@ -19,7 +19,7 @@ Assess Android security and privacy before implementation or release: permission
 
 **Grounding.** Work from manifest files, dependency files, auth and API docs, the data inventory, Play policy notes, the privacy policy, security findings, app/game design, and the telemetry plan. Ground every privacy and Play policy claim in source evidence, and map each data-safety claim to the implementation evidence and the user-facing disclosure that supports it. Do not invent permissions, data safety declarations, Play policy obligations, auth, storage, network, dependency, or release facts.
 
-**Compliance constraints — requirements, not guidance.** Every declared permission must have a named justification and a code path that requires it. Every data type in the Play Data safety declaration must match what the app actually collects, shares, and transmits. Policy-sensitive surfaces — monetization, ads, child-directed content, health, financial, location, and game economy — carry their own Play policy obligations, and those obligations are stated in the artifact whether or not the current implementation satisfies them.
+**Compliance constraints, requirements, not guidance.** Every declared permission must have a named justification and a code path that requires it. Every data type in the Play Data safety declaration must match what the app actually collects, shares, and transmits. Policy-sensitive surfaces, monetization, ads, child-directed content, health, financial, location, and game economy, carry their own Play policy obligations, and those obligations are stated in the artifact whether or not the current implementation satisfies them.
 
 **Parallel surface.** Individual permissions, third-party SDKs, exported components, deep links, network security settings, and dependency findings are independent review items: review them in parallel. The data-safety mapping and the privacy disclosure are aggregate and must stay internally consistent across every item, so assemble them once, after the per-item review.
 
@@ -40,11 +40,11 @@ Manifest files, dependency files, auth/API docs, data inventory, Play policy not
 
 ## Expected outputs
 
-A complete run delivers the full assessment together: the security and privacy review, the threat notes, the Play Data safety mapping, the permission review, the risk register, the release gates with their dispositions, the halt conditions that apply, and the packet update. A permission review without the data-safety mapping it feeds, or release gates without the findings behind them, cannot support a release decision — the set is what makes the assessment usable, so it is produced as a whole.
+A complete run delivers the full assessment together: the security and privacy review, the threat notes, the Play Data safety mapping, the permission review, the risk register, the release gates with their dispositions, the halt conditions that apply, and the packet update. A permission review without the data-safety mapping it feeds, or release gates without the findings behind them, cannot support a release decision; the set is what makes the assessment usable, so it is produced as a whole.
 
 Depth is judged by whether a reviewer could accept or reject the release from the artifact alone. Every declared permission is listed against its named justification and the code path that requires it, or explicitly flagged as unjustified; every data type in the Data safety declaration is matched to the implementation evidence and the user-facing disclosure that supports it; every third-party SDK is enumerated with what it collects or marked unknown; every finding carries a severity and an explicit pass, waive-with-rationale, or halt disposition. The compliance constraints stated in Workflow are requirements, and the artifact does not report a gate as passed on their behalf.
 
-Completeness of the set is exactly the point at which fabrication would be most damaging here. A permission justification, a collected data type, an SDK behaviour, or a Play policy obligation that no source establishes is reported as unverified or unassessed with the artifact needed to settle it — never written in because the declaration would otherwise look incomplete. A data-safety declaration assembled from a guess is a policy violation with the user's data behind it, not a formatting defect. Per-permission, per-SDK, per-component, and per-dependency review are independent items in the parallel surface declared in Workflow.
+Completeness of the set is exactly the point at which fabrication would be most damaging here. A permission justification, a collected data type, an SDK behaviour, or a Play policy obligation that no source establishes is reported as unverified or unassessed with the artifact needed to settle it, never written in because the declaration would otherwise look incomplete. A data-safety declaration assembled from a guess is a policy violation with the user's data behind it, not a formatting defect. Per-permission, per-SDK, per-component, and per-dependency review are independent items in the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -60,14 +60,14 @@ Completeness of the set is exactly the point at which fabrication would be most 
 
 ## Halt conditions
 
-Proceed by default on assessment work: an unreviewed area is recorded as unassessed with its risk named, not turned into a stop. Security and privacy conclusions are different — declaring a surface clear is itself a consequence-bearing act. Reserve hard halts for these consequence classes:
+Proceed by default on assessment work: an unreviewed area is recorded as unassessed with its risk named, not turned into a stop. Security and privacy conclusions are different; declaring a surface clear is itself a consequence-bearing act. Reserve hard halts for these consequence classes:
 
-- **Approval** — a risk acceptance, policy waiver, or data-handling decision requires a human owner to authorize it.
-- **Production or destructive** — the request would change production security configuration, rotate or publish keys, or alter a live data-safety declaration.
-- **Security or privacy** — the work requires handling secrets, keys, or personal data without safe instructions, or would expose them in an artifact.
-- **Source conflict** — the manifest, the data inventory, and the privacy policy genuinely disagree about what is collected or shared. Preserve the conflict: a data-safety declaration cannot be assembled from a guess.
-- **Release integrity** — a security, privacy, permissions, or Play policy gate would be reported as passed while its evidence is missing, or policy-sensitive monetization, ads, child-directed, health, financial, location, or game economy behavior is unresolved for release work.
-- **Connector unreachable** — a manifest, dependency file, or policy source exists but cannot be read.
+- **Approval**: a risk acceptance, policy waiver, or data-handling decision requires a human owner to authorize it.
+- **Production or destructive**: the request would change production security configuration, rotate or publish keys, or alter a live data-safety declaration.
+- **Security or privacy**: the work requires handling secrets, keys, or personal data without safe instructions, or would expose them in an artifact.
+- **Source conflict**: the manifest, the data inventory, and the privacy policy genuinely disagree about what is collected or shared. Preserve the conflict: a data-safety declaration cannot be assembled from a guess.
+- **Release integrity**: a security, privacy, permissions, or Play policy gate would be reported as passed while its evidence is missing, or policy-sensitive monetization, ads, child-directed, health, financial, location, or game economy behavior is unresolved for release work.
+- **Connector unreachable**: a manifest, dependency file, or policy source exists but cannot be read.
 
 Otherwise proceed: manifest, exported-component, deep-link, or auth risks that cannot be assessed from available evidence are recorded as unassessed with the artifact needed to assess them, and the review continues across the areas that can be assessed.
 
@@ -79,10 +79,10 @@ A complete run writes all of these:
 - `android-permission-data-safety-map.md`
 - `android-threat-notes.md`
 
-Mode-specific alternatives — each replaces the clean disposition rather than adding to it:
+Mode-specific alternatives; each replaces the clean disposition rather than adding to it:
 
-- `android-policy-halt.md` — when a Play policy or data-safety obligation blocks the release gate and the gate cannot be reported as passed or waived.
-- `workflow-halt.md` — when a hard halt fires for any other consequence class.
+- `android-policy-halt.md`: when a Play policy or data-safety obligation blocks the release gate and the gate cannot be reported as passed or waived.
+- `workflow-halt.md`: when a hard halt fires for any other consequence class.
 
 No file here is completed with claimed permission, data-type, SDK, or Play policy content. An entry the evidence does not support is written as unverified or unassessed, because a declaration filled in to look finished is a false statement about user data.
 

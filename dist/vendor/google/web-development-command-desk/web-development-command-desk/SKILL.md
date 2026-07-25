@@ -57,7 +57,7 @@ site-product-requirements
 
 Run only the stages required to satisfy the target outcome. Do not run design, CMS, backend, security, SEO, or release stages when they are irrelevant. Do not skip them when the source facts show they are launch-critical.
 
-The chain above is ordered by dependency: each stage consumes the packet the previous stage produced, so do not run a downstream stage ahead of the packet state it needs. Work *within* a stage is not ordered that way. Fan-out over independent items — routes, pages, components, breakpoints, browsers, devices, endpoints, locales, content types, dependencies — is parallel-safe, and so is connector preflight across independent sources such as repo, docs, design, and analytics.
+The chain above is ordered by dependency: each stage consumes the packet the previous stage produced, so do not run a downstream stage ahead of the packet state it needs. Work *within* a stage is not ordered that way. Fan-out over independent items; routes, pages, components, breakpoints, browsers, devices, endpoints, locales, content types, dependencies; is parallel-safe, and so is connector preflight across independent sources such as repo, docs, design, and analytics.
 
 ## Stage selection rules
 
@@ -89,7 +89,7 @@ A handoff to a coding agent or to SDLC implementation handoff passes when each o
 - Test and validation expectations.
 - Rollback or halt conditions for drift, missing state, or unsafe execution.
 
-If items are missing, continue upstream to resolve them rather than producing a coding-agent prompt. If upstream work cannot resolve the gap, proceed with each missing item named explicitly in the handoff so the coding agent inherits a labeled gap instead of rediscovering it — unless the gap falls in a hard-halt class (missing approval, production-affecting or destructive action, security or privacy exposure, source conflict, release integrity, unreachable connector), where the correct response is `Workflow Halt`.
+If items are missing, continue upstream to resolve them rather than producing a coding-agent prompt. If upstream work cannot resolve the gap, proceed with each missing item named explicitly in the handoff so the coding agent inherits a labeled gap instead of rediscovering it; unless the gap falls in a hard-halt class (missing approval, production-affecting or destructive action, security or privacy exposure, source conflict, release integrity, unreachable connector), where the correct response is `Workflow Halt`.
 
 
 ## Suite workflow mode

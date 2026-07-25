@@ -6,9 +6,9 @@ origin/main is at c6f40f0 (post PR #87). Working tree on main is clean. Use the 
 
 If the branch or worktree path exists, halt and report.
 
-Background — two failures observed at runtime, captured from [player-diag] / [wgpu-diag] output:
+Background; two failures observed at runtime, captured from [player-diag] / [wgpu-diag] output:
 
-FAILURE 1 — recursive ternary not rewritten:
+FAILURE 1; recursive ternary not rewritten:
 
   [player-diag] composite shader translation failed
   reason=wgsl-parse: error: expected ')', found '?'
@@ -16,24 +16,24 @@ FAILURE 1 — recursive ternary not rewritten:
     var rainAmount: f32 = select(0.0, 1.0, iMouse.z>0. ? M.y : sin(T*0.05)*0.3+0.7);
                                                        ^ expected ')'
 
-Diagnosis: the HLSL→WGSL ternary rewriter converted the OUTER `?:` to `select()` but did not recurse into the third argument. The third argument `iMouse.z>0. ? M.y : sin(T*0.05)*0.3+0.7` is itself an HLSL ternary that needs the same rewrite. The WGSL emitted is invalid because WGSL has no `?:` operator — every ternary must become a `select()` call.
+Diagnosis: the HLSL→WGSL ternary rewriter converted the OUTER `?:` to `select()` but did not recurse into the third argument. The third argument `iMouse.z>0. ? M.y : sin(T*0.05)*0.3+0.7` is itself an HLSL ternary that needs the same rewrite. The WGSL emitted is invalid because WGSL has no `?:` operator; every ternary must become a `select()` call.
 
-FAILURE 2 — right-hand operand lost in tex2D-prefixed multiply:
+FAILURE 2; right-hand operand lost in tex2D-prefixed multiply:
 
   [player-diag] composite shader translation failed
   reason=wgsl-parse: error: expected expression, found ')'
   wgsl:319:34
     ret = (legacy_tex2d(uv).xyz * .xyz
 
-Diagnosis: the right-hand operand of the `*` was truncated to bare `.xyz` — the identifier preceding the swizzle was eaten by whichever rewrite produces `legacy_tex2d`. The original HLSL was almost certainly `tex2D(samp, uv).xyz * <something>.xyz` and the `<something>` got consumed during the tex2D-call rewrite.
+Diagnosis: the right-hand operand of the `*` was truncated to bare `.xyz`; the identifier preceding the swizzle was eaten by whichever rewrite produces `legacy_tex2d`. The original HLSL was almost certainly `tex2D(samp, uv).xyz * <something>.xyz` and the `<something>` got consumed during the tex2D-call rewrite.
 
-Naga validation also surfaced `InvalidBinaryOperandTypes(Multiply, [9], [33])` on a separate `mask_rect_angle` expression in the same screenshot — that's likely a vector-width mismatch the typed pass should be broadcasting. Address it if and only if Failure 2's fix doesn't already cover it; otherwise leave it as a follow-up and explicitly note it in the PR body as a known remaining issue.
+Naga validation also surfaced `InvalidBinaryOperandTypes(Multiply, [9], [33])` on a separate `mask_rect_angle` expression in the same screenshot; that's likely a vector-width mismatch the typed pass should be broadcasting. Address it if and only if Failure 2's fix doesn't already cover it; otherwise leave it as a follow-up and explicitly note it in the PR body as a known remaining issue.
 
 What to build:
 
 This is a single PR with three commits. Open a worktree as above. Do all work in that worktree.
 
-Commit 1 — failing corpus regressions (RED):
+Commit 1; failing corpus regressions (RED):
 
   test: add corpus regressions for ternary recursion and tex2D multiply
 
@@ -56,9 +56,9 @@ Add two new translator tests to engine/crates/md-render-wgpu/src/legacy_shader.r
     - contains the substring "baseColor.xyz" or its expected normalized form
     - does NOT contain the malformed pattern "* .xyz" (literal "asterisk space dot")
 
-Both tests should FAIL on the unfixed translator. Confirm this before moving to commit 2: run cargo test -p md-render-wgpu translator_recursively and translator_preserves_right_hand and verify both panic with the expected error shapes. If they pass on the unfixed translator, you have not constructed minimal repros that match the actual bugs — stop and report rather than weakening the asserts.
+Both tests should FAIL on the unfixed translator. Confirm this before moving to commit 2: run cargo test -p md-render-wgpu translator_recursively and translator_preserves_right_hand and verify both panic with the expected error shapes. If they pass on the unfixed translator, you have not constructed minimal repros that match the actual bugs; stop and report rather than weakening the asserts.
 
-Commit 2 — fix recursive ternary rewrite (GREEN for test 1):
+Commit 2; fix recursive ternary rewrite (GREEN for test 1):
 
   fix: recursively rewrite ternaries in HLSL→WGSL translation
 
@@ -69,7 +69,7 @@ Locate the ternary rewriter in engine/crates/md-render-wgpu/src/legacy_shader.rs
 
 After the fix, translator_recursively_rewrites_nested_ternaries_inside_select_arguments must pass. Confirm. Do not proceed to commit 3 if test 1 is still red.
 
-Commit 3 — fix tex2D multiply operand preservation (GREEN for test 2):
+Commit 3; fix tex2D multiply operand preservation (GREEN for test 2):
 
   fix: preserve right-hand operand in tex2D-prefixed multiply rewrites
 
@@ -93,7 +93,7 @@ Per-PR guardrails:
   cargo clippy -p md-render-wgpu --all-targets -- -D warnings must exit zero
   cargo fmt --all -- --check must exit zero
   No #[ignore] on either new test
-  Do not modify the parity scoreboard, claim-proof map, or status-parity in this PR — those get amended in a follow-up after the fixes are proven against the broader corpus
+  Do not modify the parity scoreboard, claim-proof map, or status-parity in this PR; those get amended in a follow-up after the fixes are proven against the broader corpus
   Do not modify any other crate
   Do not silently weaken the failing tests if a fix proves harder than expected; halt and report instead
 

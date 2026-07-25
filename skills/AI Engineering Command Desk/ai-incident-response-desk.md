@@ -43,11 +43,11 @@ Within step 2 the evidence sources are independent: collecting logs, traces, pro
 
 An incident run delivers the full response package in one pass. Waiting for a second request before producing the containment plan or the follow-ups is the failure mode here:
 
-- incident triage report — severity with its justification, blast radius, affected capability and users, and the timeline reconstructed from evidence with each entry attributed.
-- containment plan — the specific actions, in order, with owners and approval state.
-- rollback recommendation — a decision either way, with the trigger, the target version or config, and the cost of each option. "No rollback" is a valid recommendation and is stated as one.
-- follow-up issue list — each item scoped enough to be opened as written, with the failure it prevents.
-- post-incident review inputs — contributing factors, detection and response gaps, and what remains unanswered.
+- incident triage report: severity with its justification, blast radius, affected capability and users, and the timeline reconstructed from evidence with each entry attributed.
+- containment plan: the specific actions, in order, with owners and approval state.
+- rollback recommendation: a decision either way, with the trigger, the target version or config, and the cost of each option. "No rollback" is a valid recommendation and is stated as one.
+- follow-up issue list: each item scoped enough to be opened as written, with the failure it prevents.
+- post-incident review inputs: contributing factors, detection and response gaps, and what remains unanswered.
 
 Each is complete when a responder can act from it directly. A timeline with a gap says so; it does not close the gap with a likely sequence. The evidence sources already named as parallel-safe fan out into this set.
 
@@ -74,12 +74,12 @@ Producing every section is not permission to fill one. An unestablished root cau
 
 Default posture during an incident is to proceed on the best available evidence and label the assumption inline. An incomplete timeline or an unknown affected-user count is a soft gap and does not justify stalling triage. Halt only when one of the six hard-halt classes applies.
 
-- Approval — the containment, rollback, or customer-communication action requires an owner authorization that has not been given.
-- Production or destructive — the mitigation would alter or destroy production state or incident evidence irreversibly, including a rollback that overwrites the record of the failure.
-- Security or privacy — data leakage, unauthorized tool action, or exposure of personal or credential data is suspected. Escalate immediately rather than continuing routine triage.
-- Source conflict — telemetry, deploy records, and provider status disagree about what changed or when.
-- Release integrity — a fix or rollback would ship without evidence that it resolves the incident rather than masking its symptom.
-- Connector unreachable — logs, traces, deploy history, or provider status exist but cannot be read.
+- Approval: the containment, rollback, or customer-communication action requires an owner authorization that has not been given.
+- Production or destructive: the mitigation would alter or destroy production state or incident evidence irreversibly, including a rollback that overwrites the record of the failure.
+- Security or privacy: data leakage, unauthorized tool action, or exposure of personal or credential data is suspected. Escalate immediately rather than continuing routine triage.
+- Source conflict: telemetry, deploy records, and provider status disagree about what changed or when.
+- Release integrity: a fix or rollback would ship without evidence that it resolves the incident rather than masking its symptom.
+- Connector unreachable: logs, traces, deploy history, or provider status exist but cannot be read.
 
 ## Downstream handoffs
 

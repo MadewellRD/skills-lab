@@ -42,16 +42,16 @@ Use this skill to turn CI, build, workflow, test, and deployment-check failures 
 
 Proceed by default. When a CI fact is missing or ambiguous, take the most defensible reading, label it inline as an assumption, and continue the diagnosis. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — a rerun, escalation, or permission change needs human authorization.
-- **Production or destructive** — the recommended action re-triggers a deployment job or deletes branches, caches, or artifacts.
-- **Security or privacy** — logs expose secrets, tokens, or personal data, or the failure is itself a credential or permission leak.
-- **Source conflict** — live check state and user-supplied facts genuinely disagree on a load-bearing fact.
-- **Release integrity** — a gate would be reported as passing when its result cannot be established.
-- **Connector unreachable** — GitHub or the log source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector-needed diagnostic or a user-fact-only artifact and continue.
+- **Approval**: a rerun, escalation, or permission change needs human authorization.
+- **Production or destructive**: the recommended action re-triggers a deployment job or deletes branches, caches, or artifacts.
+- **Security or privacy**: logs expose secrets, tokens, or personal data, or the failure is itself a credential or permission leak.
+- **Source conflict**: live check state and user-supplied facts genuinely disagree on a load-bearing fact.
+- **Release integrity**: a gate would be reported as passing when its result cannot be established.
+- **Connector unreachable**: GitHub or the log source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector-needed diagnostic or a user-fact-only artifact and continue.
 
 ## Output requirements
 
-A triage run on a failing pipeline delivers the set, not the first useful piece of it: the diagnostic covering every failing check by identifier, the flake classification for any test with intermittent history in the retrieved evidence, the rerun-versus-fix decision with the reasoning that produced it, and the fix-scope handoff for whichever desk picks the work up next. Pipeline-health review is a different scope — a read across recent runs rather than one failure — and stays its own artifact rather than being folded in.
+A triage run on a failing pipeline delivers the set, not the first useful piece of it: the diagnostic covering every failing check by identifier, the flake classification for any test with intermittent history in the retrieved evidence, the rerun-versus-fix decision with the reasoning that produced it, and the fix-scope handoff for whichever desk picks the work up next. Pipeline-health review is a different scope; a read across recent runs rather than one failure; and stays its own artifact rather than being folded in.
 
 Depth is measured against the person who has to act. A diagnostic is finished when someone can go straight to the failing job and the failing line without re-reading logs: exact run and job identifiers, the quoted error signature, the commit and changed files in play, and the classification with its confidence. "Tests are failing in CI" restates the input.
 

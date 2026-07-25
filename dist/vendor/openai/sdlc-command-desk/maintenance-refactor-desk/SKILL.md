@@ -26,7 +26,7 @@ Use this skill to turn maintenance intent into bounded, evidence-backed refactor
 
 **Artifact selection.** Maintenance assessments use `references/maintenance-assessment-template.md`. Refactor plans use `references/refactor-plan-template.md`. Dependency upgrade plans use `references/dependency-upgrade-template.md`. Migration sequences use `references/migration-sequence-template.md`. Dead-code cleanups use `references/dead-code-cleanup-template.md`. Regression controls use `references/regression-control-template.md`.
 
-**Parallel surface.** Assessment fans out: dead-code candidates, dependency entries, modules, and debt items are independent to analyze, and reference-searching each candidate across the repo is independent work. Assess them in parallel. Sequencing is not parallel — upgrade order, migration steps, and cutover ordering are dependency-constrained content and must be emitted as an ordered sequence, not a set.
+**Parallel surface.** Assessment fans out: dead-code candidates, dependency entries, modules, and debt items are independent to analyze, and reference-searching each candidate across the repo is independent work. Assess them in parallel. Sequencing is not parallel, upgrade order, migration steps, and cutover ordering are dependency-constrained content and must be emitted as an ordered sequence, not a set.
 
 **Packaging.** When a downloadable artifact is useful, use `scripts/write_maintenance_markdown.py` to wrap the content with a title, use instructions, source facts, and assumptions. If the user needs implementation, continue into the implementation handoff stage after the maintenance scope is bounded.
 
@@ -34,7 +34,7 @@ Use this skill to turn maintenance intent into bounded, evidence-backed refactor
 
 ## Required outputs
 
-A maintenance run delivers the assessment, the plan, and the controls together: the scoped assessment of what is actually there, the change plan in the shape the work calls for, the regression controls that make the change safe, and the downstream handoff when implementation follows. The plan shape is genuinely target-specific — a refactor plan, a dependency upgrade plan, a migration sequence, or a dead-code cleanup, chosen by what is being changed rather than produced as a set. The assessment and the regression controls are not optional companions to it.
+A maintenance run delivers the assessment, the plan, and the controls together: the scoped assessment of what is actually there, the change plan in the shape the work calls for, the regression controls that make the change safe, and the downstream handoff when implementation follows. The plan shape is genuinely target-specific; a refactor plan, a dependency upgrade plan, a migration sequence, or a dead-code cleanup, chosen by what is being changed rather than produced as a set. The assessment and the regression controls are not optional companions to it.
 
 Every maintenance artifact must include:
 
@@ -66,14 +66,14 @@ Classify changes as:
 
 ## Halt conditions
 
-Proceed by default. Unknown scope is bounded with a labeled assumption and a narrower plan, not a stop — scope creep, not uncertainty, is this desk's failure mode. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+Proceed by default. Unknown scope is bounded with a labeled assumption and a narrower plan, not a stop; scope creep, not uncertainty, is this desk's failure mode. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the plan would accept behavioral risk, waive regression coverage, or expand agreed scope, and a human owner must authorize it.
-- **Production or destructive** — deletion is proposed on inferential dead-code evidence with no confirming gate available, or the change would cross a release, deployment, or data-migration boundary without the relevant downstream desk.
-- **Security or privacy** — an upgrade carries a known vulnerability decision, or the change touches authentication, authorization, secrets, or crypto without security review.
-- **Source conflict** — GitHub, docs, and tickets genuinely disagree on the current state or the intended target.
-- **Release integrity** — the plan would be presented as safe when required tests or CI gates cannot be identified, or the upgrade target and compatibility matrix are unknown.
-- **Connector unreachable** — required repo or dependency evidence exists but cannot be read. Evidence that is merely absent is a soft gap: mark the finding a candidate rather than proven, and continue.
+- **Approval**: the plan would accept behavioral risk, waive regression coverage, or expand agreed scope, and a human owner must authorize it.
+- **Production or destructive**: deletion is proposed on inferential dead-code evidence with no confirming gate available, or the change would cross a release, deployment, or data-migration boundary without the relevant downstream desk.
+- **Security or privacy**: an upgrade carries a known vulnerability decision, or the change touches authentication, authorization, secrets, or crypto without security review.
+- **Source conflict**: GitHub, docs, and tickets genuinely disagree on the current state or the intended target.
+- **Release integrity**: the plan would be presented as safe when required tests or CI gates cannot be identified, or the upgrade target and compatibility matrix are unknown.
+- **Connector unreachable**: required repo or dependency evidence exists but cannot be read. Evidence that is merely absent is a soft gap: mark the finding a candidate rather than proven, and continue.
 
 A requested refactor that includes feature changes is a scoping problem: split the feature work out, say that you did, and continue with the structure-preserving portion.
 

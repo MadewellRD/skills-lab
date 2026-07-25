@@ -32,9 +32,9 @@ Size product opportunities using appropriate methods such as TAM, SAM, SOM, acco
 
 **Outcome.** A sizing memo that states the method, the inputs, an explicit assumption table, a range rather than a point estimate, the sensitivity of that range, and how the opportunity compares against the alternatives it is competing with.
 
-**Constraints.** Name the sizing method and why it fits the decision — the method is part of the answer. Every input is either a sourced figure or a labeled assumption; never let an assumed conversion rate, price point, or adoption rate pass as data because it appears inside a calculation. Output ranges with confidence, not false precision: a number carried to three digits from a guessed input is a fabrication with arithmetic attached.
+**Constraints.** Name the sizing method and why it fits the decision, the method is part of the answer. Every input is either a sourced figure or a labeled assumption; never let an assumed conversion rate, price point, or adoption rate pass as data because it appears inside a calculation. Output ranges with confidence, not false precision: a number carried to three digits from a guessed input is a fabrication with arithmetic attached.
 
-**Parallel surface.** Segments, geographies, customer types, and alternative sizing scenarios are independent — size each in parallel rather than in sequence. The roll-up, the sensitivity analysis, and the comparison against alternatives are a single aggregate pass once every segment is sized, because they depend on the complete set and on consistent assumptions across it.
+**Parallel surface.** Segments, geographies, customer types, and alternative sizing scenarios are independent, size each in parallel rather than in sequence. The roll-up, the sensitivity analysis, and the comparison against alternatives are a single aggregate pass once every segment is sized, because they depend on the complete set and on consistent assumptions across it.
 
 **Acceptance bar.** Every figure traces to a source or a labeled assumption, the assumption table is complete enough that a reader could re-run the estimate with their own inputs, and the sensitivity section names which assumptions actually move the answer. A range whose width is dominated by one assumption says so explicitly.
 
@@ -42,15 +42,15 @@ Size product opportunities using appropriate methods such as TAM, SAM, SOM, acco
 
 A sizing run delivers the estimate together with everything needed to argue with it:
 
-- **opportunity sizing memo** — the question being sized, the method, the scope boundary, and the answer.
-- **assumption table** — every input with its value, its source or its labeled-assumption status, and who could confirm it.
-- **range estimate** — low, expected, and high, each traceable to the assumption set that produces it. A lone point estimate hides exactly the uncertainty that matters.
-- **sensitivity notes** — which assumptions move the answer most, and the threshold at which the conclusion flips.
-- **prioritization input** — this estimate in the comparable form used to weigh it against other opportunities.
+- **opportunity sizing memo**: the question being sized, the method, the scope boundary, and the answer.
+- **assumption table**: every input with its value, its source or its labeled-assumption status, and who could confirm it.
+- **range estimate**: low, expected, and high, each traceable to the assumption set that produces it. A lone point estimate hides exactly the uncertainty that matters.
+- **sensitivity notes**: which assumptions move the answer most, and the threshold at which the conclusion flips.
+- **prioritization input**: this estimate in the comparable form used to weigh it against other opportunities.
 
 Depth bar: a reader could challenge any figure by pointing at the assumption behind it and recompute from a corrected value. Segments, geographies, and scenarios size in parallel across the surface already declared; the roll-up and sensitivity analysis are one aggregate pass with assumptions kept consistent across the set.
 
-A sizing model is a stack of numbers, and one fabricated number at the bottom invalidates everything above it. Population counts, pricing, conversion rates, and market data are cited or explicitly marked as assumptions with a named owner — never presented as researched values. Where a driving input cannot be sourced, report the range as blocked on it rather than producing a confident number resting on an invented base.
+A sizing model is a stack of numbers, and one fabricated number at the bottom invalidates everything above it. Population counts, pricing, conversion rates, and market data are cited or explicitly marked as assumptions with a named owner, never presented as researched values. Where a driving input cannot be sourced, report the range as blocked on it rather than producing a confident number resting on an invented base.
 
 ## Workflow packet fields
 
@@ -72,14 +72,14 @@ A sizing model is a stack of numbers, and one fabricated number at the bottom in
 
 Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — the estimate is being used to commit revenue, headcount, budget, or an external financial statement and needs its named owner.
-- **Production or destructive** — the request is to act on the sizing rather than to produce it.
-- **Security or privacy** — the inputs include confidential financial, contract, or customer-identifying data that would be exposed in the artifact.
-- **Source conflict** — market, usage, and revenue sources genuinely disagree on a load-bearing input such as customer count, price point, or conversion rate. Size both readings; do not split the difference silently.
-- **Release integrity** — a precise or authoritative-looking figure is requested that the data cannot support. Produce a range with its assumptions rather than a number that will be quoted as fact.
-- **Connector unreachable** — a required analytics, billing, CRM, or market source exists but cannot be read.
+- **Approval**: the estimate is being used to commit revenue, headcount, budget, or an external financial statement and needs its named owner.
+- **Production or destructive**: the request is to act on the sizing rather than to produce it.
+- **Security or privacy**: the inputs include confidential financial, contract, or customer-identifying data that would be exposed in the artifact.
+- **Source conflict**: market, usage, and revenue sources genuinely disagree on a load-bearing input such as customer count, price point, or conversion rate. Size both readings; do not split the difference silently.
+- **Release integrity**: a precise or authoritative-looking figure is requested that the data cannot support. Produce a range with its assumptions rather than a number that will be quoted as fact.
+- **Connector unreachable**: a required analytics, billing, CRM, or market source exists but cannot be read.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing data is exactly what the assumption table exists for — state the assumption, widen the range, mark the confidence, and continue. An estimate dominated by assumptions is valid output as long as the assumptions are labeled and the sensitivity says so; an unlabeled assumption is the defect, not the assumption itself.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing data is exactly what the assumption table exists for; state the assumption, widen the range, mark the confidence, and continue. An estimate dominated by assumptions is valid output as long as the assumptions are labeled and the sensitivity says so; an unlabeled assumption is the defect, not the assumption itself.
 
 ## Downstream handoffs
 

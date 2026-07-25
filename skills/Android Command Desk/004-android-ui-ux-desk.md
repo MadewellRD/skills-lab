@@ -19,7 +19,7 @@ Plan Android UI/UX for native apps and games: navigation, screen states, Compose
 
 **Grounding.** Work from requirements, architecture, design files, screenshots, game design docs, existing UI code, and navigation files. Do not invent screens, flows, design sources, input models, accessibility targets, or localization requirements: label an assumption as an assumption and name the design artifact that would settle it.
 
-**Coverage constraint.** Every screen carries its full state set — loading, empty, success, error, offline, permission denied, purchase failure, save conflict, and gameplay pause/resume where applicable. Choose the implementation-facing UI lane explicitly: Compose, View/XML, hybrid, engine UI, native overlay, or store/listing asset workflow.
+**Coverage constraint.** Every screen carries its full state set, loading, empty, success, error, offline, permission denied, purchase failure, save conflict, and gameplay pause/resume where applicable. Choose the implementation-facing UI lane explicitly: Compose, View/XML, hybrid, engine UI, native overlay, or store/listing asset workflow.
 
 **Permission request flows stay ordered.** Where a screen or flow requests an Android runtime permission, emit the request sequence as ordered steps and keep it ordered: rationale before request, request before the protected call, and a defined denied and permanently-denied path. Android itself enforces this ordering, and a permission the user denies twice cannot be re-requested from inside the app, so getting the order wrong is not recoverable in-session.
 
@@ -42,11 +42,11 @@ Requirements, architecture, design files, screenshots, game design docs, existin
 
 ## Expected outputs
 
-A complete run delivers the whole UI/UX scope together: the screen and flow inventory, the UI state matrix, the navigation notes, the accessibility and localization gates, the input requirements, the risks, the halt conditions that apply, and the packet update. A state matrix without the navigation model, or accessibility gates without the screens they bind to, cannot be implemented against — the set is the deliverable, not a menu of one.
+A complete run delivers the whole UI/UX scope together: the screen and flow inventory, the UI state matrix, the navigation notes, the accessibility and localization gates, the input requirements, the risks, the halt conditions that apply, and the packet update. A state matrix without the navigation model, or accessibility gates without the screens they bind to, cannot be implemented against; the set is the deliverable, not a menu of one.
 
-The bar per artifact is that a Compose or View/XML engineer could build from it without asking what a state means. Every screen in the inventory carries its states — loading, empty, error, offline, permission-denied, and the content states that actually exist — rather than a row with the name filled in; every accessibility and localization gate states the concrete requirement and how it is judged; every input requirement names the device classes it covers. An outline of headings is not a UI scope.
+The bar per artifact is that a Compose or View/XML engineer could build from it without asking what a state means. Every screen in the inventory carries its states; loading, empty, error, offline, permission-denied, and the content states that actually exist, rather than a row with the name filled in; every accessibility and localization gate states the concrete requirement and how it is judged; every input requirement names the device classes it covers. An outline of headings is not a UI scope.
 
-Completing the set never justifies inventing design intent. Where no design source, spec, or product decision establishes a screen, a flow, a locale, or a state, record it as an open design gap with the decision owner named — never fill it with a plausible screen nobody designed. Screens, flows, device classes, and locales are independent items and belong to the parallel surface declared in Workflow.
+Completing the set never justifies inventing design intent. Where no design source, spec, or product decision establishes a screen, a flow, a locale, or a state, record it as an open design gap with the decision owner named, never fill it with a plausible screen nobody designed. Screens, flows, device classes, and locales are independent items and belong to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -65,12 +65,12 @@ Completing the set never justifies inventing design intent. Where no design sour
 
 Proceed by default. A missing design detail is normally a labeled assumption plus a named gap, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — a brand, design-system, or accessibility-target decision requires a human owner to authorize it.
-- **Production or destructive** — the request would publish or overwrite store listing assets, screenshots, or live UI copy.
-- **Security or privacy** — a flow would surface personal data, request a sensitive runtime permission, or present consent wording that no source establishes.
-- **Source conflict** — design files, product requirements, and existing UI code genuinely disagree on a screen, flow, or state. Preserve the conflict.
-- **Release integrity** — accessibility or localization coverage would be reported as met when no evidence supports it.
-- **Connector unreachable** — a design source exists but cannot be read. A design artifact that simply does not exist yet is a soft gap.
+- **Approval**: a brand, design-system, or accessibility-target decision requires a human owner to authorize it.
+- **Production or destructive**: the request would publish or overwrite store listing assets, screenshots, or live UI copy.
+- **Security or privacy**: a flow would surface personal data, request a sensitive runtime permission, or present consent wording that no source establishes.
+- **Source conflict**: design files, product requirements, and existing UI code genuinely disagree on a screen, flow, or state. Preserve the conflict.
+- **Release integrity**: accessibility or localization coverage would be reported as met when no evidence supports it.
+- **Connector unreachable**: a design source exists but cannot be read. A design artifact that simply does not exist yet is a soft gap.
 
 Otherwise proceed: unresolved screens, flows, input models, accessibility targets, localization scope, or HUD/menu/controller behavior become labeled assumptions in the brief plus open questions for the design owner.
 
@@ -85,7 +85,7 @@ A complete run writes all of these:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — replaces the set above when a hard halt fires. A finished run does not emit it alongside the scope.
+- `workflow-halt.md`: replaces the set above when a hard halt fires. A finished run does not emit it alongside the scope.
 
 A file with nothing sourced behind it records the design gap and its owner. It does not invent screens or states to justify its own existence.
 

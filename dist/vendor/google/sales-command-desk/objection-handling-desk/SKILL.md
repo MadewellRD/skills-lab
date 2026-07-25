@@ -30,11 +30,11 @@ Classify sales objections and draft evidence-backed responses, clarifying questi
 
 ## Workflow
 
-**Outcome.** For each objection: a classification, a core response grounded in approved proof points, the clarifying questions that should precede it, the supporting evidence list, a talk track, and an email draft — drafts only.
+**Outcome.** For each objection: a classification, a core response grounded in approved proof points, the clarifying questions that should precede it, the supporting evidence list, a talk track, and an email draft, drafts only.
 
 **Constraints.** Carry the sales workflow packet forward and update it in place. Approved proof points and first-party collateral are authoritative; a response may not assert a capability, result, customer reference, timeline, or commercial concession that no approved source supports. Where the honest answer is that the claim cannot be made, the response says so and names what would be needed rather than reaching for adjacent language. Competitive and technical claims stay scoped to what is evidenced. Nothing here is sent to the customer without approval.
 
-**Parallel surface.** Objections are independent — classify each one and draft its response, questions, and evidence list in parallel rather than one objection at a time. The consistency pass is aggregate and runs once over the complete set, because contradictions only appear across responses: two individually defensible answers can promise incompatible things about timeline, scope, or price, and that is only visible when they are read together against the current proposal.
+**Parallel surface.** Objections are independent, classify each one and draft its response, questions, and evidence list in parallel rather than one objection at a time. The consistency pass is aggregate and runs once over the complete set, because contradictions only appear across responses: two individually defensible answers can promise incompatible things about timeline, scope, or price, and that is only visible when they are read together against the current proposal.
 
 **Acceptance bar.** Every response names the approved proof point or source it rests on, every unsupported claim the customer raised is answered without adopting it, and every follow-up question targets a specific unknown. A response that requires legal, security, or pricing authority to make is marked as pending that approval rather than softened until it reads as approved.
 
@@ -53,7 +53,7 @@ The talk track and the email draft are the same answer in the two channels a rep
 
 Each is done when a rep could use it live without rewriting it. The core response answers the objection as raised rather than an easier version of it; the follow-up questions target the specific unknown behind it; the evidence list names the approved proof point supporting each claim; the talk track is speakable and the email draft is sendable as written. Bullets gesturing at a rebuttal are not a response.
 
-This is exactly where completeness invites overreach, and it does not license a claim the evidence cannot carry. A capability, result, customer reference, timeline, benchmark, or commercial concession with no approved source behind it is not softened until it reads as supportable — the response states that the claim cannot be made and names what would be needed, or that part is marked not applicable. A fabricated customer proof point is something a rep will repeat to a prospect in good faith. Anything requiring legal, security, or pricing authority is marked pending that approval, and nothing here reaches the customer without approval. Objections are independent items inside the parallel surface declared in Workflow.
+This is exactly where completeness invites overreach, and it does not license a claim the evidence cannot carry. A capability, result, customer reference, timeline, benchmark, or commercial concession with no approved source behind it is not softened until it reads as supportable; the response states that the claim cannot be made and names what would be needed, or that part is marked not applicable. A fabricated customer proof point is something a rep will repeat to a prospect in good faith. Anything requiring legal, security, or pricing authority is marked pending that approval, and nothing here reaches the customer without approval. Objections are independent items inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 
@@ -72,14 +72,14 @@ This is exactly where completeness invites overreach, and it does not license a 
 
 Proceed by default on drafting and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — a customer-facing send is requested without approval, or the response would make a legal, security, compliance, or pricing commitment that requires its named authority. Hard halt: a concession offered in an objection response is a concession the customer will hold you to.
-- **Production or destructive** — the request is to send the response rather than to draft it.
-- **Security or privacy** — the response would disclose security posture, architecture, audit findings, customer references, or contractual detail that has not been cleared for this audience.
-- **Source conflict** — approved proof points and the deal record genuinely disagree about what the customer was told or what was committed. Resolve that before answering, because the response will be read as the company's position.
-- **Release integrity** — the requested claim is unsupported and would go to the customer as fact. Answer without the claim and name what would be needed to make it; do not reach for adjacent language that implies it.
-- **Connector unreachable** — a required collateral, CRM, or notes source exists but cannot be read, so approved proof points cannot be checked at all.
+- **Approval**: a customer-facing send is requested without approval, or the response would make a legal, security, compliance, or pricing commitment that requires its named authority. Hard halt: a concession offered in an objection response is a concession the customer will hold you to.
+- **Production or destructive**: the request is to send the response rather than to draft it.
+- **Security or privacy**: the response would disclose security posture, architecture, audit findings, customer references, or contractual detail that has not been cleared for this audience.
+- **Source conflict**: approved proof points and the deal record genuinely disagree about what the customer was told or what was committed. Resolve that before answering, because the response will be read as the company's position.
+- **Release integrity**: the requested claim is unsupported and would go to the customer as fact. Answer without the claim and name what would be needed to make it; do not reach for adjacent language that implies it.
+- **Connector unreachable**: a required collateral, CRM, or notes source exists but cannot be read, so approved proof points cannot be checked at all.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing deal context or an unclear objection is a labeled assumption in the draft plus a clarifying question in the talk track. Where no approved proof point covers the topic, the draft says so plainly and routes it — that is a usable answer, not a blocked one.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing deal context or an unclear objection is a labeled assumption in the draft plus a clarifying question in the talk track. Where no approved proof point covers the topic, the draft says so plainly and routes it; that is a usable answer, not a blocked one.
 
 ## Downstream handoffs
 

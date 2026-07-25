@@ -29,7 +29,7 @@ Scour public GitHub and adjacent public skill indexes for skills, agent definiti
 
 ## Seed sources discovered
 
-### Ed-Fi Alliance OSS — AI Tools for Ed-Fi SDLC
+### Ed-Fi Alliance OSS; AI Tools for Ed-Fi SDLC
 
 Repository: https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC
 
@@ -47,7 +47,7 @@ Extraction targets:
 - Contribution and installation guidance.
 - Claude Code / Copilot interoperability patterns.
 
-### kcenon — AD-SDLC / claude_code_agent
+### kcenon; AD-SDLC / claude_code_agent
 
 Repository: https://github.com/kcenon/claude_code_agent
 
@@ -70,7 +70,7 @@ Extraction targets:
 - Codebase analyzer, doc-code comparator, and impact analyzer.
 - CI fixer and regression tester.
 
-### VoltAgent — Awesome Agent Skills
+### VoltAgent; Awesome Agent Skills
 
 Repository: https://github.com/VoltAgent/awesome-agent-skills
 

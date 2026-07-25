@@ -20,7 +20,7 @@ This desk is an upstream SDLC skill. Do not write implementation prompts, branch
 
 ## Workflow
 
-**Outcome.** A connector-grounded requirements artifact — a new PRD from a raw idea, a PRD refined from existing docs or issues, generated acceptance criteria, a requirement normalization or review, or a connector diagnostic when required context cannot be reached.
+**Outcome.** A connector-grounded requirements artifact, a new PRD from a raw idea, a PRD refined from existing docs or issues, generated acceptance criteria, a requirement normalization or review, or a connector diagnostic when required context cannot be reached.
 
 **Grounding.** Use GitHub issues and repo context for product-facing bugs, feature requests, milestones, related code boundaries, and existing issue labels. Use docs connectors or uploaded files for roadmap, customer, policy, architecture, or stakeholder decision context. Use communication connectors only for decision-bearing messages, and record speaker, date, and context when available.
 
@@ -28,7 +28,7 @@ This desk is an upstream SDLC skill. Do not write implementation prompts, branch
 
 **Templates.** Use `references/prd-template.md` for PRDs, `references/output-contract.md` for output modes and file wrappers, and `references/downstream-handoff.md` when preparing the next SDLC desk handoff.
 
-**Parallel surface.** Evidence retrieval across independent sources — GitHub issues, docs, uploaded files, decision messages — carries no ordering dependency, and acceptance criteria for distinct requirement IDs are independent of each other. Fan out over both rather than iterating serially.
+**Parallel surface.** Evidence retrieval across independent sources, GitHub issues, docs, uploaded files, decision messages, carries no ordering dependency, and acceptance criteria for distinct requirement IDs are independent of each other. Fan out over both rather than iterating serially.
 
 **Acceptance bar.** The PRD is done when every requirement carries a stable ID; each requirement has acceptance criteria that are testable without further product input; non-goals, risks, and open questions are explicit rather than implied; every load-bearing fact is attributed to its source; and assumptions are labeled inline as assumptions. Do not invent users, acceptance criteria, issue IDs, roadmap commitments, release dates, dependencies, owners, or compliance requirements.
 
@@ -36,12 +36,12 @@ This desk is an upstream SDLC skill. Do not write implementation prompts, branch
 
 Proceed by default. A requirement gap is normally recorded as an open question with a labeled working assumption, not a stop. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — a scope, commitment, or policy decision requires a human owner to authorize.
-- **Production or destructive** — the request would write to a live tracker, roadmap, or customer-facing commitment.
-- **Security or privacy** — the requirements would encode handling of secrets or personal data that is not sourced.
-- **Source conflict** — stakeholder decisions, docs, or issues genuinely disagree on a load-bearing requirement.
-- **Release integrity** — acceptance criteria would be stated as agreed when no source establishes agreement.
-- **Connector unreachable** — a required source exists but cannot be read. Context that is merely absent is a soft gap: continue with a labeled assumption or emit `connector-diagnostic.md`.
+- **Approval**: a scope, commitment, or policy decision requires a human owner to authorize.
+- **Production or destructive**: the request would write to a live tracker, roadmap, or customer-facing commitment.
+- **Security or privacy**: the requirements would encode handling of secrets or personal data that is not sourced.
+- **Source conflict**: stakeholder decisions, docs, or issues genuinely disagree on a load-bearing requirement.
+- **Release integrity**: acceptance criteria would be stated as agreed when no source establishes agreement.
+- **Connector unreachable**: a required source exists but cannot be read. Context that is merely absent is a soft gap: continue with a labeled assumption or emit `connector-diagnostic.md`.
 
 See `references/halt-conditions.md` for the artifact format a halt must take.
 
@@ -58,7 +58,7 @@ They are one deliverable in three files: the PRD states the requirements, the ac
 Two modes are genuine alternatives rather than members of that set:
 
 - `requirements-review.md` when the request is to assess requirements that already exist rather than author new ones.
-- `connector-diagnostic.md` when the sources needed to ground requirements cannot be reached — produced instead of the set, not beside it.
+- `connector-diagnostic.md` when the sources needed to ground requirements cannot be reached, produced instead of the set, not beside it.
 
 Every downloadable Markdown artifact must start with a short "How to use this file" section.
 
@@ -66,7 +66,7 @@ Depth is the point of the set. Every requirement carries a stable ID and criteri
 
 Acceptance criteria for distinct requirement IDs are independent, so the artifacts in the set are drafted on the parallel surface the workflow declares.
 
-Producing all three never means completing one from imagination. A requirement with no stakeholder, document, or issue behind it is recorded as a proposal labeled as such, or raised as an open question. Users, dates, dependencies, owners, and compliance obligations are sourced or absent — a PRD is where invented facts do the most damage, because every later stage treats it as settled.
+Producing all three never means completing one from imagination. A requirement with no stakeholder, document, or issue behind it is recorded as a proposal labeled as such, or raised as an open question. Users, dates, dependencies, owners, and compliance obligations are sourced or absent; a PRD is where invented facts do the most damage, because every later stage treats it as settled.
 
 ## Downstream handoff density
 
@@ -74,13 +74,13 @@ Keep downstream handoffs compact. The goal is to reduce ambiguity before coding 
 
 ## Bundled resources
 
-- `references/prd-template.md` — canonical PRD structure.
-- `references/connector-routing.md` — which connectors to use and what facts to retrieve.
-- `references/source-hierarchy.md` — source priority and conflict behavior.
-- `references/output-contract.md` — artifact names and wrappers.
-- `references/halt-conditions.md` — missing-context and conflict halts.
-- `references/downstream-handoff.md` — handoff format for later SDLC desks.
-- `scripts/write_prd_markdown.py` — deterministic Markdown wrapper for PRD artifacts.
+- `references/prd-template.md`: canonical PRD structure.
+- `references/connector-routing.md`: which connectors to use and what facts to retrieve.
+- `references/source-hierarchy.md`: source priority and conflict behavior.
+- `references/output-contract.md`: artifact names and wrappers.
+- `references/halt-conditions.md`: missing-context and conflict halts.
+- `references/downstream-handoff.md`: handoff format for later SDLC desks.
+- `scripts/write_prd_markdown.py`: deterministic Markdown wrapper for PRD artifacts.
 
 ## Continuity Kernel Adoption
 

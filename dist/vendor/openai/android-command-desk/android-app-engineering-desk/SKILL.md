@@ -23,7 +23,7 @@ Use `references/platform/android-app-baseline.md` for modern app defaults when t
 
 **Grounding.** Resolve accepted requirements, architecture, target repo and branch, modules, UI framework, platform APIs, dependencies, permissions, and validation commands from source. Build the source-fact map from Gradle files, manifests, source modules, CI, tests, and existing architecture conventions. Do not invent repo state, Android target versions, module ownership, package names, permissions, validation commands, or release targets.
 
-**Constraints.** Express scope as boundaries — exact files and modules, expected changes, and what must not be touched. Every permission in scope names the code path that requires it.
+**Constraints.** Express scope as boundaries, exact files and modules, expected changes, and what must not be touched. Every permission in scope names the code path that requires it.
 
 **Parallel surface.** Target modules and files are independent units of scope: map changes, constraints, and validation per module in parallel. Cross-module contracts, the shared dependency and permission set, and the forbidden-scope boundary are aggregate and settle once, after the per-module maps exist.
 
@@ -47,7 +47,7 @@ A complete run delivers the engineering scope as a set: the app engineering plan
 
 Depth is judged by whether a coding agent could start without a clarifying round trip. The change map names real modules and file paths with the expected change per file, not a module list; the constraints state what must not change as well as what must; every validation command is runnable against this repo as written. A plan that describes the work in the abstract has not met the bar.
 
-Producing the full set is not permission to invent the repo. A module, file path, API, permission, or command that no source establishes is recorded as unknown with the discovery step that would resolve it — never guessed into a change map, where a wrong path costs an agent a whole run. Per-module scoping is independent work and belongs to the parallel surface declared in Workflow.
+Producing the full set is not permission to invent the repo. A module, file path, API, permission, or command that no source establishes is recorded as unknown with the discovery step that would resolve it, never guessed into a change map, where a wrong path costs an agent a whole run. Per-module scoping is independent work and belongs to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -66,12 +66,12 @@ Producing the full set is not permission to invent the repo. A module, file path
 
 Proceed by default. A missing implementation detail is normally a labeled assumption plus a named source, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — the change requires authorization to act on a repo, branch, or release surface the user has not granted.
-- **Production or destructive** — the plan would modify a shared branch, delete code, migrate on-device user data, or alter signing or release configuration.
-- **Security or privacy** — implementation requires handling secrets, credentials, or personal data without safe instructions, or adds a permission whose justification no source establishes.
-- **Source conflict** — requirements, architecture, and repo state genuinely disagree on target module, ownership, or intended behavior. Preserve the conflict.
-- **Release integrity** — the handoff would declare work implementable and validated when no validation command exists for it.
-- **Connector unreachable** — repo or branch access exists but cannot be read.
+- **Approval**: the change requires authorization to act on a repo, branch, or release surface the user has not granted.
+- **Production or destructive**: the plan would modify a shared branch, delete code, migrate on-device user data, or alter signing or release configuration.
+- **Security or privacy**: implementation requires handling secrets, credentials, or personal data without safe instructions, or adds a permission whose justification no source establishes.
+- **Source conflict**: requirements, architecture, and repo state genuinely disagree on target module, ownership, or intended behavior. Preserve the conflict.
+- **Release integrity**: the handoff would declare work implementable and validated when no validation command exists for it.
+- **Connector unreachable**: repo or branch access exists but cannot be read.
 
 Otherwise proceed: an unclear platform API, lifecycle behavior, backend dependency, policy detail, or file scope becomes a labeled assumption in the plan plus an open question, and the scope boundary is tightened rather than the work stopped.
 
@@ -86,7 +86,7 @@ A complete run writes all of these:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — produced instead of the set above when a hard halt fires, not appended to it.
+- `workflow-halt.md`: produced instead of the set above when a hard halt fires, not appended to it.
 
 If a file has no source basis, it says so and names the discovery step that would close it. An invented change map costs more than a missing one.
 

@@ -94,11 +94,11 @@ Treat GitHub as source of truth for repository state, branches, commits, pull re
 
 ## Output contract
 
-Orchestrated work returns the full account rather than the next instruction: workflow mode, target surface, completed stages, skipped stages and why, source facts, decisions, risks and halt conditions, the current `ios_delivery_packet`, the next continuation target, and the downstream SDLC handoff where one applies. The run also carries the artifacts each stage it ran was meant to produce — a stage listed as complete without its artifacts present was not completed.
+Orchestrated work returns the full account rather than the next instruction: workflow mode, target surface, completed stages, skipped stages and why, source facts, decisions, risks and halt conditions, the current `ios_delivery_packet`, the next continuation target, and the downstream SDLC handoff where one applies. The run also carries the artifacts each stage it ran was meant to produce; a stage listed as complete without its artifacts present was not completed.
 
 The orchestration record is held to the same depth as the stage artifacts beneath it: an iOS engineer picking it up cold should be able to continue without re-deriving what has already been settled. Skipped stages appear with the reason they were skipped rather than being absent; decisions name the evidence behind them; risks name what would retire them. A list of stage names with nothing behind it is a routing note, which is the failure this desk exists to prevent.
 
-Running more stages is not permission to assert more. A stage whose evidence the connectors could not supply is reported as blocked or not applicable with the missing source named — never written up as though it ran, and its packet fields stay empty rather than plausibly populated. `Workflow Halt` is a mode-specific alternative: it is returned in place of the continuation when one of the six consequence classes applies, and it carries exact resume requirements rather than a partial result presented as a finished one. Stages that share no artifacts are independent, so those stages and their outputs sit in the same parallel surface as the gate evidence described below.
+Running more stages is not permission to assert more. A stage whose evidence the connectors could not supply is reported as blocked or not applicable with the missing source named, never written up as though it ran, and its packet fields stay empty rather than plausibly populated. `Workflow Halt` is a mode-specific alternative: it is returned in place of the continuation when one of the six consequence classes applies, and it carries exact resume requirements rather than a partial result presented as a finished one. Stages that share no artifacts are independent, so those stages and their outputs sit in the same parallel surface as the gate evidence described below.
 
 ## iOS-specific quality gates
 
@@ -120,7 +120,7 @@ Gate evidence is independent per gate, so evidence collection across all eleven 
 
 ## Handoff density policy
 
-Follow `references/platform/ios-handoff-density-policy.md`. Judge a handoff by whether it removes iOS ambiguity, not by how short it is: context is no longer the scarce resource, ambiguity is. Send the right context rather than less context — exact files and modules, constraints, validation commands, source facts, acceptance gates, open questions, and halt conditions. Include the evidence a coding agent would otherwise have to rediscover, and leave out material that does not bear on the decision at hand.
+Follow `references/platform/ios-handoff-density-policy.md`. Judge a handoff by whether it removes iOS ambiguity, not by how short it is: context is no longer the scarce resource, ambiguity is. Send the right context rather than less context; exact files and modules, constraints, validation commands, source facts, acceptance gates, open questions, and halt conditions. Include the evidence a coding agent would otherwise have to rediscover, and leave out material that does not bear on the decision at hand.
 
 ## iOS research grounding
 

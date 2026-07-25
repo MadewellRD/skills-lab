@@ -44,11 +44,11 @@ Within steps 2 and 3 the levers are independent: assessing model routing, cachin
 
 A full run delivers the complete optimization case, not a single recommendation:
 
-- optimization plan — the selected levers with expected effect, the mechanism each acts on, and what each one costs elsewhere.
-- baseline metric summary — current cost and latency along the dimensions that matter (route, model, stage, percentile), each figure attributed to its measurement source.
-- tradeoff matrix — every lever considered, including the rejected ones and the reason for rejection, scored against the same baseline.
-- validation gates — the quality and safety thresholds that must still hold after the change, stated numerically.
-- rollout recommendations — sequencing, traffic exposure, the monitoring signal per lever, and the rollback trigger.
+- optimization plan: the selected levers with expected effect, the mechanism each acts on, and what each one costs elsewhere.
+- baseline metric summary: current cost and latency along the dimensions that matter (route, model, stage, percentile), each figure attributed to its measurement source.
+- tradeoff matrix: every lever considered, including the rejected ones and the reason for rejection, scored against the same baseline.
+- validation gates: the quality and safety thresholds that must still hold after the change, stated numerically.
+- rollout recommendations: sequencing, traffic exposure, the monitoring signal per lever, and the rollback trigger.
 
 Depth bar: an engineer should be able to implement and gate the first lever without returning for detail. A lever with an expected effect but no measurement method is unfinished. Levers are the parallel-safe unit, each measured against the same baseline.
 
@@ -73,12 +73,12 @@ Numbers carry the whole argument here, so none may be manufactured. Where a base
 
 Default posture is to proceed and label the assumption inline. An unconfirmed traffic mix or an estimated cache hit rate is a soft gap, provided it is marked as an estimate and the measurement that would confirm it is named. Halt only when one of the six hard-halt classes applies.
 
-- Approval — the change would move spend tier, provider commitment, or user-visible behavior beyond what the owner has authorized.
-- Production or destructive — the optimization would change live routing, caching, or runtime topology without a rollback trigger.
-- Security or privacy — context pruning, caching, or logging would retain or expose personal, regulated, or cross-tenant data, or would weaken an existing redaction boundary.
-- Source conflict — telemetry, provider billing, and internal cost models disagree on where the cost or latency actually is.
-- Release integrity — the optimization would ship without evidence that quality, grounding, and safety thresholds still hold, or no baseline exists against which improvement could be established.
-- Connector unreachable — baseline telemetry, cost data, or runtime configuration exists but cannot be read.
+- Approval: the change would move spend tier, provider commitment, or user-visible behavior beyond what the owner has authorized.
+- Production or destructive: the optimization would change live routing, caching, or runtime topology without a rollback trigger.
+- Security or privacy: context pruning, caching, or logging would retain or expose personal, regulated, or cross-tenant data, or would weaken an existing redaction boundary.
+- Source conflict: telemetry, provider billing, and internal cost models disagree on where the cost or latency actually is.
+- Release integrity: the optimization would ship without evidence that quality, grounding, and safety thresholds still hold, or no baseline exists against which improvement could be established.
+- Connector unreachable: baseline telemetry, cost data, or runtime configuration exists but cannot be read.
 
 ## Downstream handoffs
 

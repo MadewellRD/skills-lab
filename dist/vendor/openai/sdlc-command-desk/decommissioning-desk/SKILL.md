@@ -26,7 +26,7 @@ Use this skill to plan safe retirement of software assets. The output must be co
 
 **Artifact selection.** Decommission plans use `references/decommission-plan-template.md`. API sunset plans use `references/api-sunset-template.md`. Migration and cutover plans use `references/cutover-plan-template.md`. Data retention and archive plans use `references/data-retention-template.md`. Communication plans use `references/communication-plan-template.md`. Risk and rollback checklists use `references/rollback-risk-template.md`.
 
-**Parallel surface.** Consumer discovery fans out: code references, dependent services, API callers, docs mentions, dashboards, and open issues touching the target are independent searches. Run them in parallel to build the dependency picture. The cutover sequence the plan produces is not parallel — see below.
+**Parallel surface.** Consumer discovery fans out: code references, dependent services, API callers, docs mentions, dashboards, and open issues touching the target are independent searches. Run them in parallel to build the dependency picture. The cutover sequence the plan produces is not parallel, see below.
 
 **Cutover order is content, not scaffolding.** Pre-cutover, cutover, post-cutover, and rollback gates are externally mandated order and the consequence of getting them wrong is irreversible. Emit them as ordered, numbered steps in the artifact. Never reorder, merge, or collapse them, and never present deletion before the traffic-absence and dependency-absence gates that authorize it.
 
@@ -48,7 +48,7 @@ Use this skill to plan safe retirement of software assets. The output must be co
 
 A retirement run delivers a set, not a single plan: the retirement plan itself, the consumer and dependency map that justifies it, the communication plan for whoever depends on the target, the retention and archive decision for its data, and the rollback and risk checklist. They belong to the same run because a plan without its consumer map cannot be evaluated and a cutover without its rollback cannot be approved.
 
-Two things in that set are genuinely conditional rather than optional. The plan shape follows the target classification: an API, webhook, event, or SDK surface takes the sunset shape in `references/api-sunset-template.md`, and every other target takes `references/decommission-plan-template.md` — one or the other, never both. A cutover plan joins the set when a replacement exists to migrate onto, and is correctly absent when nothing is replacing the target.
+Two things in that set are genuinely conditional rather than optional. The plan shape follows the target classification: an API, webhook, event, or SDK surface takes the sunset shape in `references/api-sunset-template.md`, and every other target takes `references/decommission-plan-template.md`; one or the other, never both. A cutover plan joins the set when a replacement exists to migrate onto, and is correctly absent when nothing is replacing the target.
 
 Each piece is finished when an operator could run it. Deletion scope is enumerated resource by resource. Each gate has an owner and an observable pass condition. The communication plan names the audience, the channel, the notice period, and who sends it. The rollback checklist states what is reversible, for how long, and by whom. Cutover ordering stays exactly as the workflow requires.
 
@@ -69,14 +69,14 @@ For final user-facing artifacts, produce downloadable Markdown whenever tools al
 
 ## Halt conditions
 
-This desk plans irreversible work, so its halt surface is deliberately wide. Proceed and label the assumption for planning-level unknowns — an ambiguous naming question or an undetermined sunset date is a soft gap. Hard-halt for these consequence classes from `references/halt-taxonomy.md`, and do not soften them:
+This desk plans irreversible work, so its halt surface is deliberately wide. Proceed and label the assumption for planning-level unknowns; an ambiguous naming question or an undetermined sunset date is a soft gap. Hard-halt for these consequence classes from `references/halt-taxonomy.md`, and do not soften them:
 
-- **Approval** — retirement affects customers, external consumers, or contractual commitments and no human has authorized it.
-- **Production or destructive** — rollback paths are impossible or unproven, deletion scope reaches unrelated files, systems, or dependencies, or the request asks to execute the retirement rather than plan it.
-- **Security or privacy** — data retention or compliance obligations for the affected data are unknown.
-- **Source conflict** — the requested retirement conflicts with public docs, API contracts, customer commitments, or active issues.
-- **Release integrity** — the plan would declare the target safe to remove while live consumers or owners cannot be determined, or usage and traffic evidence is required and unavailable.
-- **Connector unreachable** — a source needed to establish consumers or usage exists but cannot be read. Absence of evidence is not evidence of no consumers: treat unproven non-use as blocking, and prefer staged retirement over deletion whenever usage or ownership is uncertain.
+- **Approval**: retirement affects customers, external consumers, or contractual commitments and no human has authorized it.
+- **Production or destructive**: rollback paths are impossible or unproven, deletion scope reaches unrelated files, systems, or dependencies, or the request asks to execute the retirement rather than plan it.
+- **Security or privacy**: data retention or compliance obligations for the affected data are unknown.
+- **Source conflict**: the requested retirement conflicts with public docs, API contracts, customer commitments, or active issues.
+- **Release integrity**: the plan would declare the target safe to remove while live consumers or owners cannot be determined, or usage and traffic evidence is required and unavailable.
+- **Connector unreachable**: a source needed to establish consumers or usage exists but cannot be read. Absence of evidence is not evidence of no consumers: treat unproven non-use as blocking, and prefer staged retirement over deletion whenever usage or ownership is uncertain.
 
 ## References
 

@@ -45,7 +45,7 @@ Game design scope, engine project, Xcode/native runtime/CMake facts, asset pipel
 
 ## Expected outputs
 
-A complete run delivers the game scope whole: the game engineering plan, the engine and native boundary map, the iOS wrapper scope, the asset and runtime risks, the profiling expectations, the validation commands, the gameplay smoke plan, the packet update, and the downstream handoff. A boundary map with no wrapper scope, or a frame budget with no smoke plan that exercises it, hands the next stage a guess — this is one package built from parts.
+A complete run delivers the game scope whole: the game engineering plan, the engine and native boundary map, the iOS wrapper scope, the asset and runtime risks, the profiling expectations, the validation commands, the gameplay smoke plan, the packet update, and the downstream handoff. A boundary map with no wrapper scope, or a frame budget with no smoke plan that exercises it, hands the next stage a guess; this is one package built from parts.
 
 Each part is complete when it is actionable at the boundary it describes. The boundary map says which code lives in the engine, which in native or Metal layers, and which in the iOS wrapper, with the call direction across each seam; the frame, thermal, and performance budget carries numbers per target device tier; the gameplay smoke plan names the scenes, inputs, and pass conditions someone would run on a real device. Naming the engine and stopping is not a scope.
 
@@ -69,12 +69,12 @@ Delivering all of it is not a reason to supply runtime facts nobody has. An engi
 
 Proceed by default. An unresolved engine or asset detail is normally a labeled assumption plus a named source, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — a store, multiplayer, economy, live-ops, or production-impacting action is requested without explicit authorization.
-- **Production or destructive** — the plan would touch live game economy state, player saves, published asset packs, or release configuration.
-- **Security or privacy** — anti-tamper, entitlement, purchase, or player-data handling requires secrets or credentials that cannot be handled safely here.
-- **Source conflict** — engine project state, repo packaging, and design docs genuinely disagree on runtime, asset delivery, or input model. Preserve the conflict.
-- **Release integrity** — the handoff would declare a gameplay or engine change shippable when no validation path exists for it.
-- **Connector unreachable** — repo, engine project, or build access exists but cannot be read.
+- **Approval**: a store, multiplayer, economy, live-ops, or production-impacting action is requested without explicit authorization.
+- **Production or destructive**: the plan would touch live game economy state, player saves, published asset packs, or release configuration.
+- **Security or privacy**: anti-tamper, entitlement, purchase, or player-data handling requires secrets or credentials that cannot be handled safely here.
+- **Source conflict**: engine project state, repo packaging, and design docs genuinely disagree on runtime, asset delivery, or input model. Preserve the conflict.
+- **Release integrity**: the handoff would declare a gameplay or engine change shippable when no validation path exists for it.
+- **Connector unreachable**: repo, engine project, or build access exists but cannot be read.
 
 Otherwise proceed: an unknown engine/runtime, native toolchain, gameplay scope, device tier, input model, frame budget, or build/package path becomes a labeled assumption with the evidence needed to confirm it, and scope narrows to what the known facts support.
 
@@ -90,7 +90,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — stands in for the set above when a hard halt fires, rather than joining it.
+- `workflow-halt.md`: stands in for the set above when a hard halt fires, rather than joining it.
 
 If the engine or repo evidence cannot support a file, it names what is missing instead of reconstructing plausible runtime facts.
 

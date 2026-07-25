@@ -42,12 +42,12 @@ Use this skill to turn requirements, architecture, repo state, dependency contex
 
 Proceed by default. An unresolved security question is normally a finding to record, not a reason to stop: state the assumption inline and continue the assessment. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — a mitigation, exception, or risk acceptance needs human authorization.
-- **Production or destructive** — the recommended action touches production systems, credentials, or live access control.
-- **Security or privacy** — proceeding would expose secrets, credentials, or personal data, or the request asks for material that increases attacker capability.
-- **Source conflict** — repo state and policy or compliance documentation genuinely disagree on a load-bearing control.
-- **Release integrity** — a security gate would be reported as cleared when its result cannot be established.
-- **Connector unreachable** — a required source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector-needed diagnostic or a user-fact-only artifact and continue.
+- **Approval**: a mitigation, exception, or risk acceptance needs human authorization.
+- **Production or destructive**: the recommended action touches production systems, credentials, or live access control.
+- **Security or privacy**: proceeding would expose secrets, credentials, or personal data, or the request asks for material that increases attacker capability.
+- **Source conflict**: repo state and policy or compliance documentation genuinely disagree on a load-bearing control.
+- **Release integrity**: a security gate would be reported as cleared when its result cannot be established.
+- **Connector unreachable**: a required source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector-needed diagnostic or a user-fact-only artifact and continue.
 
 ## Output requirements
 
@@ -57,7 +57,7 @@ Depth is where security artifacts fail quietly. A finding names the asset, the a
 
 Trust boundaries, entry points, auth surfaces, and dependency manifests are independent analysis units, so the pieces of the set are examined and drafted in parallel, then reconciled into one ranked risk set.
 
-Completing the set never justifies asserting a control. Code paths, auth behavior, data classes, secret exposure, dependency versions, compliance obligations, and CI status come from sources or are marked absent, and a control whose state could not be established is `unverified` rather than in place. When required connector facts are missing, mark the artifact user-fact-only and let it be short — a confidently wrong security claim gets a real risk closed on paper.
+Completing the set never justifies asserting a control. Code paths, auth behavior, data classes, secret exposure, dependency versions, compliance obligations, and CI status come from sources or are marked absent, and a control whose state could not be established is `unverified` rather than in place. When required connector facts are missing, mark the artifact user-fact-only and let it be short; a confidently wrong security claim gets a real risk closed on paper.
 
 Default to downloadable Markdown artifacts when producing reports, models, checklists, handoffs, or diagnostics. Include a `How to use this file` section when the artifact is intended for another agent or reviewer.
 

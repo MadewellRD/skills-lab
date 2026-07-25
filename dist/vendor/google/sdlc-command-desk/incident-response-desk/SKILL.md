@@ -24,7 +24,7 @@ Use this skill to create incident-response and production-support artifacts that
 
 **Templates.** Use `references/output-contract.md` with the matching template: `incident-triage-template.md`, `rca-template.md`, `bug-triage-template.md`, `hotfix-handoff-template.md`, `post-incident-review-template.md`, or `follow-up-issues-template.md`.
 
-**Parallel surface.** Evidence collection across independent sources — alerts, dashboards, log streams, recent deploys, affected services, linked issues and PRs — has no ordering dependency. Gather them in parallel and reconcile into one timeline. Building the timeline itself stays a single ordered narrative.
+**Parallel surface.** Evidence collection across independent sources, alerts, dashboards, log streams, recent deploys, affected services, linked issues and PRs, has no ordering dependency. Gather them in parallel and reconcile into one timeline. Building the timeline itself stays a single ordered narrative.
 
 **Handoff.** When remediation requires code, continue into the implementation handoff stage if facts are sufficient. When CI is failing, continue into the CI failure stage. When monitoring or runbooks are missing, continue into observability readiness or docs traceability as appropriate.
 
@@ -44,18 +44,18 @@ Apply `references/source-hierarchy.md`. Current user instruction can set priorit
 
 Proceed by default. An incomplete picture is normal during an incident: state what is unknown, label the working hypothesis as a hypothesis, and continue the triage. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — rollback, hotfix, or customer-communication authority is unclear or unassigned.
-- **Production or destructive** — the proposed remediation could increase blast radius, touch production data, or is otherwise irreversible.
-- **Security or privacy** — security or privacy exposure is suspected but not bounded.
-- **Source conflict** — telemetry, deploy state, and incident reports genuinely disagree on a load-bearing fact such as what shipped or when impact began.
-- **Release integrity** — the incident would be declared resolved or mitigated without recovery evidence.
-- **Connector unreachable** — the incident is still active and the status source exists but cannot be read. Evidence that is merely absent is a soft gap: mark the artifact's confidence accordingly and continue.
+- **Approval**: rollback, hotfix, or customer-communication authority is unclear or unassigned.
+- **Production or destructive**: the proposed remediation could increase blast radius, touch production data, or is otherwise irreversible.
+- **Security or privacy**: security or privacy exposure is suspected but not bounded.
+- **Source conflict**: telemetry, deploy state, and incident reports genuinely disagree on a load-bearing fact such as what shipped or when impact began.
+- **Release integrity**: the incident would be declared resolved or mitigated without recovery evidence.
+- **Connector unreachable**: the incident is still active and the status source exists but cannot be read. Evidence that is merely absent is a soft gap: mark the artifact's confidence accordingly and continue.
 
 Use `references/halt-conditions.md` for the diagnostic and resume format a halt must take.
 
 ## Output standards
 
-A live-incident run delivers the set: the triage brief, the evidence-anchored timeline, the mitigation and action plan, a hotfix handoff when code is required, and the follow-up issues with their verification gates. For a resolved incident the RCA or post-incident review takes the place of the triage brief — that substitution is driven by the incident's state, not by convenience — and the rest of the set still ships. A bug triage and reproduction plan is the equivalent set when the subject is a reported defect rather than an outage.
+A live-incident run delivers the set: the triage brief, the evidence-anchored timeline, the mitigation and action plan, a hotfix handoff when code is required, and the follow-up issues with their verification gates. For a resolved incident the RCA or post-incident review takes the place of the triage brief; that substitution is driven by the incident's state, not by convenience; and the rest of the set still ships. A bug triage and reproduction plan is the equivalent set when the subject is a reported defect rather than an outage.
 
 Every incident artifact must include:
 

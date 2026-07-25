@@ -26,30 +26,30 @@ Do not place generated package output in this folder.
 
 ## Desk inventory
 
-- `ai-engineering-command-desk.md` — suite orchestrator and workflow entrypoint.
-- `model-selection-desk.md` — model choice, routing constraints, fallback posture, and model tradeoff evidence.
-- `prompt-systems-desk.md` — prompt architecture, instruction hierarchy, context assembly, and prompt test fixtures.
-- `tool-schema-design-desk.md` — tool and resource contracts, argument validation, permission boundaries, and error semantics.
-- `agent-architecture-desk.md` — agent loop, planning boundary, state strategy, approval gates, and halt behavior.
-- `retrieval-rag-design-desk.md` — indexing, chunking, retrieval, citation, freshness, and permission-filtered grounding.
-- `eval-design-desk.md` — evaluation objectives, datasets, rubrics, thresholds, slices, and review protocol.
-- `eval-run-analysis-desk.md` — completed eval analysis, failure taxonomy, regression deltas, and release implications.
-- `dataset-curation-desk.md` — dataset sourcing, labeling, splits, privacy, provenance, consent, and retention.
-- `synthetic-data-desk.md` — synthetic data generation, diversity controls, contamination prevention, and validation gates.
-- `fine-tuning-desk.md` — fine-tuning justification, training data readiness, eval gates, rollout, and rollback.
-- `inference-ops-desk.md` — production inference topology, quotas, retries, caching, secrets, logging, and SLOs.
-- `ai-safety-review-desk.md` — misuse, privacy, security, hallucination harm, autonomy, and launch mitigation review.
-- `red-team-eval-desk.md` — adversarial testing for jailbreaks, prompt injection, data exfiltration, and tool misuse.
-- `agent-observability-desk.md` — traces, prompts, model calls, tool calls, retrieval events, state transitions, and alerts.
-- `cost-latency-optimization-desk.md` — model routing, caching, context pruning, batching, retrieval tuning, and quality-preserving optimization.
-- `ai-release-readiness-desk.md` — go/no-go gate for evals, safety, ops, observability, rollback, docs, and support readiness.
-- `ai-incident-response-desk.md` — production AI incident triage, containment, rollback, evidence preservation, and follow-up.
+- `ai-engineering-command-desk.md`: suite orchestrator and workflow entrypoint.
+- `model-selection-desk.md`: model choice, routing constraints, fallback posture, and model tradeoff evidence.
+- `prompt-systems-desk.md`: prompt architecture, instruction hierarchy, context assembly, and prompt test fixtures.
+- `tool-schema-design-desk.md`: tool and resource contracts, argument validation, permission boundaries, and error semantics.
+- `agent-architecture-desk.md`: agent loop, planning boundary, state strategy, approval gates, and halt behavior.
+- `retrieval-rag-design-desk.md`: indexing, chunking, retrieval, citation, freshness, and permission-filtered grounding.
+- `eval-design-desk.md`: evaluation objectives, datasets, rubrics, thresholds, slices, and review protocol.
+- `eval-run-analysis-desk.md`: completed eval analysis, failure taxonomy, regression deltas, and release implications.
+- `dataset-curation-desk.md`: dataset sourcing, labeling, splits, privacy, provenance, consent, and retention.
+- `synthetic-data-desk.md`: synthetic data generation, diversity controls, contamination prevention, and validation gates.
+- `fine-tuning-desk.md`: fine-tuning justification, training data readiness, eval gates, rollout, and rollback.
+- `inference-ops-desk.md`: production inference topology, quotas, retries, caching, secrets, logging, and SLOs.
+- `ai-safety-review-desk.md`: misuse, privacy, security, hallucination harm, autonomy, and launch mitigation review.
+- `red-team-eval-desk.md`: adversarial testing for jailbreaks, prompt injection, data exfiltration, and tool misuse.
+- `agent-observability-desk.md`: traces, prompts, model calls, tool calls, retrieval events, state transitions, and alerts.
+- `cost-latency-optimization-desk.md`: model routing, caching, context pruning, batching, retrieval tuning, and quality-preserving optimization.
+- `ai-release-readiness-desk.md`: go/no-go gate for evals, safety, ops, observability, rollback, docs, and support readiness.
+- `ai-incident-response-desk.md`: production AI incident triage, containment, rollback, evidence preservation, and follow-up.
 
 ## Shared references
 
-- `references/suite-workflow-contract.md` — AI workflow packet, stage advancement, continuation, and halt contract.
-- `references/standards-source-map.md` — authoritative standards and industry references used to harden this suite.
-- `references/desk-hardening-matrix.md` — desk-by-desk hardening expectations and downstream handoff map.
+- `references/suite-workflow-contract.md`: AI workflow packet, stage advancement, continuation, and halt contract.
+- `references/standards-source-map.md`: authoritative standards and industry references used to harden this suite.
+- `references/desk-hardening-matrix.md`: desk-by-desk hardening expectations and downstream handoff map.
 
 ## Workflow path
 

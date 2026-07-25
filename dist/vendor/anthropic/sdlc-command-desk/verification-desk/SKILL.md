@@ -36,7 +36,7 @@ Use this skill to turn requirements, implementation evidence, test results, CI/c
 
 **Parallel surface.** Each requirement is verified against its own evidence and no requirement's status depends on another's. Retrieve evidence and classify requirements in parallel across the requirement set rather than walking the matrix row by row. Blocker aggregation and the overall release verdict are a single pass at the end, once every row is classified.
 
-**Acceptance bar.** The artifact is done when every requirement in the inventory has exactly one status and every non-`not applicable` status names the specific evidence supporting it — a test name, check, commit, PR, or QA note. Blockers must state what would clear them. Passing CI alone is not proof that every requirement is satisfied, and a merged PR alone is not proof of validation; a `verified` status that rests on either without a requirement-specific link is not acceptable.
+**Acceptance bar.** The artifact is done when every requirement in the inventory has exactly one status and every non-`not applicable` status names the specific evidence supporting it, a test name, check, commit, PR, or QA note. Blockers must state what would clear them. Passing CI alone is not proof that every requirement is satisfied, and a merged PR alone is not proof of validation; a `verified` status that rests on either without a requirement-specific link is not acceptable.
 
 ## Connector requirements
 
@@ -54,11 +54,11 @@ Default requirements:
 
 A verification run produces these together, not one of them:
 
-- `verification-report.md` — the verdict and what it rests on.
-- `requirements-traceability-matrix.md` — every requirement with exactly one status.
-- `evidence-map.md` — each piece of evidence and the requirements it actually supports.
-- `acceptance-gate-review.md` — each gate assessed against that evidence.
-- `release-blocker-report.md` — what blocks release and what would clear it, or an explicit statement that nothing does.
+- `verification-report.md`: the verdict and what it rests on.
+- `requirements-traceability-matrix.md`: every requirement with exactly one status.
+- `evidence-map.md`: each piece of evidence and the requirements it actually supports.
+- `acceptance-gate-review.md`: each gate assessed against that evidence.
+- `release-blocker-report.md`: what blocks release and what would clear it, or an explicit statement that nothing does.
 
 `verification-handoff.md` is the conditional one: it is produced when verification finds work another desk has to pick up, and is correctly absent when everything verified clean.
 
@@ -98,14 +98,14 @@ Do not mark work as verified unless there is direct evidence. Passing CI alone i
 
 ## Halt behavior
 
-Proceed by default. A requirement that cannot be proven is classified `unverified` or `blocked` with the missing evidence named — that is this desk's product, not a reason to stop. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+Proceed by default. A requirement that cannot be proven is classified `unverified` or `blocked` with the missing evidence named; that is this desk's product, not a reason to stop. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — accepting a gap, waiving a gate, or signing off on partial coverage needs a human owner.
-- **Production or destructive** — establishing evidence would require running against production systems or data.
-- **Security or privacy** — the evidence trail would require reproducing secrets, credentials, or personal data in the artifact.
-- **Source conflict** — requirement sources and evidence genuinely disagree, or requirement identity is ambiguous across sources such that the same ID means different things.
-- **Release integrity** — a release-readiness verdict is requested and would rest on unsupported assumptions, or CI status that gates the release cannot be established. This is the primary halt class for this desk: do not issue a ready verdict that the evidence cannot carry.
-- **Connector unreachable** — a required requirement or evidence source exists but cannot be read. A merely absent source is a soft gap: classify the affected requirements `unverified`, note the limitation, and complete the matrix.
+- **Approval**: accepting a gap, waiving a gate, or signing off on partial coverage needs a human owner.
+- **Production or destructive**: establishing evidence would require running against production systems or data.
+- **Security or privacy**: the evidence trail would require reproducing secrets, credentials, or personal data in the artifact.
+- **Source conflict**: requirement sources and evidence genuinely disagree, or requirement identity is ambiguous across sources such that the same ID means different things.
+- **Release integrity**: a release-readiness verdict is requested and would rest on unsupported assumptions, or CI status that gates the release cannot be established. This is the primary halt class for this desk: do not issue a ready verdict that the evidence cannot carry.
+- **Connector unreachable**: a required requirement or evidence source exists but cannot be read. A merely absent source is a soft gap: classify the affected requirements `unverified`, note the limitation, and complete the matrix.
 
 Use `references/halt-conditions.md` for the halt artifact format.
 

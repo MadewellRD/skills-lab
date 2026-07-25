@@ -1,6 +1,6 @@
 # Capability Baseline
 
-Generated from `profiles/frontier-2026-07.yaml`. Do not edit by hand — edit the profile
+Generated from `profiles/frontier-2026-07.yaml`. Do not edit by hand; edit the profile
 and rebuild, or the next model release will silently overwrite your changes.
 
 This file tells a desk what it may assume about the model executing it. It exists so that
@@ -24,7 +24,7 @@ every skill body.
 numbered micro-steps a capable model derives on its own.
 
 Keep numbered steps only where **order is externally mandated and getting it wrong is
-unsafe or irreversible** — deploy gates, rollback sequences, approval chains, destructive
+unsafe or irreversible**; deploy gates, rollback sequences, approval chains, destructive
 cutovers. Ordered procedure is content. Ordered hand-holding is scaffolding. Only the
 second one goes.
 

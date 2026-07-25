@@ -2,7 +2,7 @@ You are operating on the MilkDropX repo at c:\opt\milkdropx (working folder /mnt
 
 State summary:
 - Current branch should be a fresh branch off origin/main at e6574da (or later if newer commits have landed when you start). Create it as: chore/legacy-import-tests
-- Do not touch or commit the uncommitted shader translator work (typed_pass.rs and the modified legacy_shader.rs) — those belong in their own commit, not this one. If they're in your working tree when you branch, stash them first: git stash push -m "shader-translator-wip" -- engine/crates/md-render-wgpu/ assets/
+- Do not touch or commit the uncommitted shader translator work (typed_pass.rs and the modified legacy_shader.rs), those belong in their own commit, not this one. If they're in your working tree when you branch, stash them first: git stash push -m "shader-translator-wip" -- engine/crates/md-render-wgpu/ assets/
 - After tests land and CI is green, you can git stash pop to restore the shader work.
 
 What needs testing:
@@ -11,8 +11,8 @@ The public surface in legacy_import.rs:
 - pub fn inspect_install(root) -> Result<LegacyInstallManifest, String>
 - pub fn is_preset_path(path: &Path) -> bool
 - pub fn resolve_install_relative(install_root, content_dir, base_dir, entry) -> PathBuf
-- pub fn coverage_timestamp() -> u64  (skip — trivial)
-- pub fn default_coverage_output_dir() -> PathBuf  (skip — trivial)
+- pub fn coverage_timestamp() -> u64  (skip: trivial)
+- pub fn default_coverage_output_dir() -> PathBuf  (skip: trivial)
 
 The internal behavior exercised by inspect_install (test through the public API):
 - resolve_install_dirs (root-vs-content-dir disambiguation)
@@ -99,7 +99,7 @@ INTEGRATION TESTS (use fixture builder):
     Sum up the per-bucket counts in the assertion. Verify manifest.total_file_count and manifest.total_bytes are the sums.
 
 23. inspect_install_handles_unicode_paths
-    Place presets/日本語.milk. Verify it appears in manifest.presets and is included in the presets bucket. (If the host filesystem can't store this name, gate on cfg(unix) or tolerate skip — comment the rationale.)
+    Place presets/日本語.milk. Verify it appears in manifest.presets and is included in the presets bucket. (If the host filesystem can't store this name, gate on cfg(unix) or tolerate skip; comment the rationale.)
 
 24. inspect_install_treats_ini_keys_and_sections_case_insensitively
     Write settings.ini with [SETTINGS] StartPreset=foo.milk (uppercase section, mixed-case key). Verify start_preset still resolves correctly. The parser lowercases section and key names; this is the regression test for that behavior.
@@ -125,10 +125,10 @@ Per-PR guardrails:
 
 - cargo build -p player-desktop must exit zero
 - cargo test -p player-desktop must exit zero (run with --nocapture if a test panics so you can see the diagnostic)
-- cargo clippy -p player-desktop --all-targets -- -D warnings must exit zero — no allow-attribute additions
+- cargo clippy -p player-desktop --all-targets -- -D warnings must exit zero: no allow-attribute additions
 - cargo fmt -p player-desktop --check must exit zero
 - Every test must run without #[ignore]
-- No mocks of std::fs — use real tempfile directories
+- No mocks of std::fs, use real tempfile directories
 - Do not edit legacy_import.rs production code in this commit. If a test reveals a real bug, STOP and report it before touching the production code; that's a separate change
 - Do not touch any other crate
 - Do not modify the parity scoreboard, claim-proof map, or status-parity in this PR
@@ -148,4 +148,4 @@ Commit message:
 
 Open the PR with title: "test: cover legacy install import module" and base: main. PR body should list the 25 test names by group (unit / integration / edge-case) and note that this closes the test-coverage gap surfaced in the post-e6574da audit.
 
-Stop at "PR opened, CI running." Do not merge. If any cargo command fails, halt and report — do not paper over.
+Stop at "PR opened, CI running." Do not merge. If any cargo command fails, halt and report; do not paper over.

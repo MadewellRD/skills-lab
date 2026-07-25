@@ -44,11 +44,11 @@ Within steps 2 and 4 the attack categories are independent: authoring scenarios,
 
 A red-team run delivers the plan and the results of running it, together:
 
-- red-team plan — scope, the system boundary under test, the attack categories in and out of scope, the severity scale, and the stop rule.
-- adversarial scenario matrix — concrete scenarios per category with the exact input, the target behavior, and what counts as a failure. A category name with no scenarios under it is not coverage.
-- failure report — every observed failure with its reproduction input, its severity against the declared scale, and the boundary it crossed.
-- mitigation recommendations — per failure: the control and the layer that should enforce it, separating what prompt text can hold from what must move to tools, retrieval, or runtime policy.
-- regression eval candidates — the cases that should become permanent slices, shaped for `eval-design-desk` to consume.
+- red-team plan: scope, the system boundary under test, the attack categories in and out of scope, the severity scale, and the stop rule.
+- adversarial scenario matrix: concrete scenarios per category with the exact input, the target behavior, and what counts as a failure. A category name with no scenarios under it is not coverage.
+- failure report: every observed failure with its reproduction input, its severity against the declared scale, and the boundary it crossed.
+- mitigation recommendations: per failure: the control and the layer that should enforce it, separating what prompt text can hold from what must move to tools, retrieval, or runtime policy.
+- regression eval candidates: the cases that should become permanent slices, shaped for `eval-design-desk` to consume.
 
 Where the run is design-only because the scenarios have not been executed against a real system, the failure report and the mitigations that depend on it are the mode-specific alternative: they are reported as not yet run, the plan and matrix are delivered in full, and execution is named as the next step. They are never populated with failures nobody observed.
 
@@ -75,12 +75,12 @@ This is where invention does the most damage. A hypothesized jailbreak written u
 
 Default posture is to proceed and label the assumption inline; an unconfirmed reviewer roster or an undecided sample size is a soft gap. Halt only when one of the six hard-halt classes applies.
 
-- Approval — testing would reach a system, tenant, dataset, or user population that has not been authorized as in scope.
-- Production or destructive — an adversarial scenario would execute a real side-effecting action against production systems, real users, or live data.
-- Security or privacy — testing would require producing genuinely harmful operational content outside defensive scope, or would expose real personal, regulated, or credential data.
-- Source conflict — safety policy, system prompt, and tool contracts disagree about what the system is permitted to do, leaving "failure" undefinable.
-- Release integrity — findings would be closed without mitigation evidence, or a release would proceed on red-team coverage that never exercised the material attack surface.
-- Connector unreachable — the system prompt, tool contracts, eval harness, or prior incident records exist but cannot be read.
+- Approval: testing would reach a system, tenant, dataset, or user population that has not been authorized as in scope.
+- Production or destructive: an adversarial scenario would execute a real side-effecting action against production systems, real users, or live data.
+- Security or privacy: testing would require producing genuinely harmful operational content outside defensive scope, or would expose real personal, regulated, or credential data.
+- Source conflict: safety policy, system prompt, and tool contracts disagree about what the system is permitted to do, leaving "failure" undefinable.
+- Release integrity: findings would be closed without mitigation evidence, or a release would proceed on red-team coverage that never exercised the material attack surface.
+- Connector unreachable: the system prompt, tool contracts, eval harness, or prior incident records exist but cannot be read.
 
 A finding that indicates active exploitation, live data exposure, or ongoing user harm is an immediate escalation to `ai-incident-response-desk`, not a test result to file.
 

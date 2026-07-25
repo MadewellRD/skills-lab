@@ -20,11 +20,11 @@ Retrospective outputs must separate facts from interpretation, cite or list sour
 
 ## Workflow
 
-**Outcome.** An evidence-backed retrospective for the scope in question — sprint or milestone, release or deployment, incident or hotfix, PR train or implementation cycle, CI or quality gate, or skill and workflow — delivered by default as a downloadable Markdown report with a source-facts section and downstream handoff notes.
+**Outcome.** An evidence-backed retrospective for the scope in question, sprint or milestone, release or deployment, incident or hotfix, PR train or implementation cycle, CI or quality gate, or skill and workflow, delivered by default as a downloadable Markdown report with a source-facts section and downstream handoff notes.
 
 **Grounding.** Use GitHub for PRs, commits, issues, milestones, review discussion, checks, CI status, and release history. Use docs sources for PRDs, plans, release notes, runbooks, decision records, parity docs, and prior retrospectives. Use communication sources for decision-bearing team updates or halt reports when available. Use observability or incident sources when production behavior, telemetry, or customer impact is part of the retrospective.
 
-**Evidence timeline.** Capture the sequence of events, decisions, commits, PRs, failures, releases, incidents, and handoffs. Mark uncertain timestamps and missing evidence explicitly. The timeline is ordered content — preserve its sequence in the artifact.
+**Evidence timeline.** Capture the sequence of events, decisions, commits, PRs, failures, releases, incidents, and handoffs. Mark uncertain timestamps and missing evidence explicitly. The timeline is ordered content, preserve its sequence in the artifact.
 
 **Parallel surface.** Evidence collection fans out cleanly: PRs, issues, CI runs, incidents, and documents in the retrospective window are independent and carry no ordering dependency during retrieval. Gather them in parallel, then assemble the ordered timeline in one pass.
 
@@ -34,7 +34,7 @@ Retrospective outputs must separate facts from interpretation, cite or list sour
 
 ## Required outputs
 
-A retrospective run delivers the report, the cycle-metrics summary, and the action plan together — one evidence base viewed three ways. Splitting them across turns loses the link between a finding, the number behind it, and the action it produced.
+A retrospective run delivers the report, the cycle-metrics summary, and the action plan together; one evidence base viewed three ways. Splitting them across turns loses the link between a finding, the number behind it, and the action it produced.
 
 For normal retrospectives, produce:
 
@@ -66,7 +66,7 @@ Each entry is written to be used. A finding names the PR, run, commit, or incide
 
 Evidence collection across PRs, issues, CI runs, incidents, and documents is parallel-safe as the workflow describes; the timeline is assembled in a single ordered pass.
 
-Filling out the full list is not a reason to go past what the evidence supports. Owners, due dates, metrics, incident impact, PR and CI state, and decision history are sourced or marked unverified. A section with nothing behind it says so — a retrospective that manufactures a lesson to fill "what failed" teaches the team something that did not happen.
+Filling out the full list is not a reason to go past what the evidence supports. Owners, due dates, metrics, incident impact, PR and CI state, and decision history are sourced or marked unverified. A section with nothing behind it says so; a retrospective that manufactures a lesson to fill "what failed" teaches the team something that did not happen.
 
 ## Connector rules
 
@@ -94,12 +94,12 @@ Use `references/handoff-rules.md` to route follow-up work:
 
 Proceed by default. A retrospective with gaps is still useful: downgrade confidence, label the assumption inline, mark unverifiable metrics as unverified, and deliver the report. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — an action item would assign work or commit a named owner who has not agreed to it.
-- **Production or destructive** — a proposed improvement would change live process, tooling, or configuration rather than recommend the change.
-- **Security or privacy** — the timeline would need to reproduce secrets, credentials, or personal data, or the retrospective would attribute fault to a named individual on unsourced evidence.
-- **Source conflict** — timelines or accounts of what happened genuinely disagree on a load-bearing event. Preserve both rather than picking the tidier story.
-- **Release integrity** — the retrospective would assert that a release or incident was handled correctly when the evidence cannot establish it.
-- **Connector unreachable** — a required repo or incident source exists but cannot be read. Absent evidence is a soft gap: produce a retrospective marked as user-provided-context only and continue.
+- **Approval**: an action item would assign work or commit a named owner who has not agreed to it.
+- **Production or destructive**: a proposed improvement would change live process, tooling, or configuration rather than recommend the change.
+- **Security or privacy**: the timeline would need to reproduce secrets, credentials, or personal data, or the retrospective would attribute fault to a named individual on unsourced evidence.
+- **Source conflict**: timelines or accounts of what happened genuinely disagree on a load-bearing event. Preserve both rather than picking the tidier story.
+- **Release integrity**: the retrospective would assert that a release or incident was handled correctly when the evidence cannot establish it.
+- **Connector unreachable**: a required repo or incident source exists but cannot be read. Absent evidence is a soft gap: produce a retrospective marked as user-provided-context only and continue.
 
 Use `references/halt-conditions.md` for the halt artifact format.
 

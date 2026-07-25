@@ -47,11 +47,11 @@ Tool schemas are independent. Designing each tool's argument schema, result cont
 
 A complete run delivers the full contract for every tool in scope:
 
-- tool contract — per tool: purpose, when the model should and should not call it, preconditions, side effects, and idempotency.
-- schema specification — argument and result schemas with types, required fields, constraints, defaults, and enums, specified so an implementer is left no decisions to make.
-- permission model — the authorization boundary per tool, the tenancy rule, which calls require approval, and what is audited.
-- error contract — the error cases, their shapes, which are retryable, and what the model is expected to do with each. An unmodeled error case becomes an improvised recovery at runtime.
-- tool test matrix — per tool: happy path, boundary arguments, permission denial, and failure-mode cases.
+- tool contract: per tool: purpose, when the model should and should not call it, preconditions, side effects, and idempotency.
+- schema specification: argument and result schemas with types, required fields, constraints, defaults, and enums, specified so an implementer is left no decisions to make.
+- permission model: the authorization boundary per tool, the tenancy rule, which calls require approval, and what is audited.
+- error contract: the error cases, their shapes, which are retryable, and what the model is expected to do with each. An unmodeled error case becomes an improvised recovery at runtime.
+- tool test matrix: per tool: happy path, boundary arguments, permission denial, and failure-mode cases.
 
 The bar is that a backend engineer could implement the tool and a prompt engineer could describe it from these without a follow-up round trip. Tools are the parallel-safe unit; the auth model, tenancy rule, and audit event format are decided once across the set.
 
@@ -75,12 +75,12 @@ The set is delivered whole; individual fields are never guessed. An existing end
 
 Default posture is to proceed and label the assumption inline. An unconfirmed retry count or an undecided field name is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — a tool can mutate state and no approval policy or approval owner exists for it.
-- Production or destructive — the tool would delete, overwrite, dispatch, or otherwise irreversibly act on production systems without a gate in front of it.
-- Security or privacy — the auth boundary, tenancy rule, or data exposure surface is unresolved, or the schema would carry secrets, credentials, or personal data.
-- Source conflict — API documentation, observed behavior, and stated requirements disagree on what the external system actually does.
-- Release integrity — a tool would ship with error semantics or idempotency behavior that cannot be established as correct.
-- Connector unreachable — the external API definition, permission model, or existing tool implementation exists but cannot be read.
+- Approval: a tool can mutate state and no approval policy or approval owner exists for it.
+- Production or destructive: the tool would delete, overwrite, dispatch, or otherwise irreversibly act on production systems without a gate in front of it.
+- Security or privacy: the auth boundary, tenancy rule, or data exposure surface is unresolved, or the schema would carry secrets, credentials, or personal data.
+- Source conflict: API documentation, observed behavior, and stated requirements disagree on what the external system actually does.
+- Release integrity: a tool would ship with error semantics or idempotency behavior that cannot be established as correct.
+- Connector unreachable: the external API definition, permission model, or existing tool implementation exists but cannot be read.
 
 ## Downstream handoffs
 
@@ -102,4 +102,4 @@ Default posture is to proceed and label the assumption inline. An unconfirmed re
 - State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
-- Passing means every tool carries a complete argument and result schema, a stated permission and tenancy boundary, an explicit destructive-action gate where it mutates state, modeled error cases, and a test matrix — each traced to a source fact or a labeled assumption.
+- Passing means every tool carries a complete argument and result schema, a stated permission and tenancy boundary, an explicit destructive-action gate where it mutates state, modeled error cases, and a test matrix, each traced to a source fact or a labeled assumption.

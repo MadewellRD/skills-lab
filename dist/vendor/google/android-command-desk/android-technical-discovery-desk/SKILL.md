@@ -19,7 +19,7 @@ Collect Android source truth before design or implementation: repo layout, modul
 
 **Grounding.** Start from a connector preflight over repo, branch, issues, PRs, workflows, docs, and uploaded files. Do not invent Gradle, AGP, SDK, NDK/CMake, engine, CI, or validation facts: a fact that cannot be read is recorded as unknown.
 
-**Stack classification.** Classify the app/game stack explicitly — Compose or View/XML, Kotlin or Java, native/AGDK, Unity, Unreal, Godot, custom engine, or mixed — because every downstream desk branches on it.
+**Stack classification.** Classify the app/game stack explicitly, Compose or View/XML, Kotlin or Java, native/AGDK, Unity, Unreal, Godot, custom engine, or mixed, because every downstream desk branches on it.
 
 **Parallel surface.** Build files, module manifests, dependency catalogs, CI workflow definitions, and test targets are independent artifacts; inspect them in parallel rather than walking the tree serially. The module graph, feasibility assessment, and risk list are aggregate and assemble after the per-artifact reads.
 
@@ -40,11 +40,11 @@ Repo access, file tree, Gradle/settings/build files, AndroidManifest files, CI w
 
 ## Expected outputs
 
-One run delivers the discovery set as a unit: the technical discovery memo, the source-facts table, the feasibility assessment, the validation commands, the unknowns list, the risks, the halt conditions that apply, and the `android_delivery_packet` update. The memo alone is not designable against — the facts, the commands that prove them, and the unknowns that bound them are what make it usable downstream, so they ship together rather than one per turn.
+One run delivers the discovery set as a unit: the technical discovery memo, the source-facts table, the feasibility assessment, the validation commands, the unknowns list, the risks, the halt conditions that apply, and the `android_delivery_packet` update. The memo alone is not designable against; the facts, the commands that prove them, and the unknowns that bound them are what make it usable downstream, so they ship together rather than one per turn.
 
 Depth is measured by whether the architecture desk can design without re-reading the repo. Every fact resolves to a file path, command output, or named source; every validation command is one an engineer could run against this repo as written; every unknown states the downstream decision it blocks. A memo listing categories with nothing under them has not finished.
 
-None of that licenses closing a gap by inference. A Gradle, AGP, SDK, NDK, engine, signing, or CI fact that cannot be read stays recorded as unknown and never becomes a plausible Android default — substituting one is the exact failure this desk exists to prevent. The independent per-artifact reads described above are part of the parallel surface declared in Workflow.
+None of that licenses closing a gap by inference. A Gradle, AGP, SDK, NDK, engine, signing, or CI fact that cannot be read stays recorded as unknown and never becomes a plausible Android default; substituting one is the exact failure this desk exists to prevent. The independent per-artifact reads described above are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -62,12 +62,12 @@ None of that licenses closing a gap by inference. A Gradle, AGP, SDK, NDK, engin
 
 Proceed by default. A missing build fact is normally recorded as an unknown with its downstream impact named, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — discovery would require running commands, writing to the repo, or touching Play Console state that has not been authorized.
-- **Production or destructive** — inspecting or reproducing the build would mutate a shared branch, a release artifact, or signing material.
-- **Security or privacy** — discovery surfaces secrets, keystores, or credentials that cannot be handled safely in this context.
-- **Source conflict** — repo state and documentation genuinely disagree on build system, SDK level, engine, or module ownership. Preserve the conflict.
-- **Release integrity** — the memo would declare a build reproducible or a change feasible when no validation command supports it.
-- **Connector unreachable** — repo, branch, or workflow access exists but cannot be read. A file that is merely absent is a soft gap: record it as unknown and continue.
+- **Approval**: discovery would require running commands, writing to the repo, or touching Play Console state that has not been authorized.
+- **Production or destructive**: inspecting or reproducing the build would mutate a shared branch, a release artifact, or signing material.
+- **Security or privacy**: discovery surfaces secrets, keystores, or credentials that cannot be handled safely in this context.
+- **Source conflict**: repo state and documentation genuinely disagree on build system, SDK level, engine, or module ownership. Preserve the conflict.
+- **Release integrity**: the memo would declare a build reproducible or a change feasible when no validation command supports it.
+- **Connector unreachable**: repo, branch, or workflow access exists but cannot be read. A file that is merely absent is a soft gap: record it as unknown and continue.
 
 Otherwise proceed: missing Gradle, SDK, NDK, engine, signing, package ID, or Play track facts are logged as unknowns, each with the downstream decision it blocks.
 
@@ -82,7 +82,7 @@ A complete run writes all of these:
 
 Mode-specific alternative:
 
-- `connector-diagnostic.md` — produced instead of the set above when required repo, branch, or workflow access exists but cannot be read, so no source facts can be established at all.
+- `connector-diagnostic.md`: produced instead of the set above when required repo, branch, or workflow access exists but cannot be read, so no source facts can be established at all.
 
 A file the evidence cannot support states what could not be read; it is never populated with Android defaults so the set looks whole.
 

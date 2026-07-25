@@ -19,7 +19,7 @@ Collect iOS source truth before design or implementation: repo layout, modules, 
 
 **Grounding.** Start from a connector preflight over repo, branch, issues, PRs, workflows, docs, and uploaded files. Do not invent repo, Xcode, SDK, native runtime, engine, CI, device, or validation facts: a fact that cannot be read is recorded as unknown.
 
-**Stack classification.** Classify the app/game stack explicitly — SwiftUI, UIKit, Swift or Objective-C, native/Metal tooling, Unity, Unreal, Godot, custom engine, or mixed — because every downstream desk branches on it.
+**Stack classification.** Classify the app/game stack explicitly, SwiftUI, UIKit, Swift or Objective-C, native/Metal tooling, Unity, Unreal, Godot, custom engine, or mixed, because every downstream desk branches on it.
 
 **Parallel surface.** Build and settings files, module manifests, dependency catalogs, CI workflow definitions, and test targets are independent artifacts; inspect them in parallel rather than walking the tree serially. The module graph, feasibility assessment, and risk list are aggregate and assemble after the per-artifact reads.
 
@@ -40,11 +40,11 @@ Repo access, file tree, Xcode/settings/build files, iOSManifest files, CI workfl
 
 ## Expected outputs
 
-A run that finishes hands over the discovery set whole: the technical discovery memo, the source-facts table, the feasibility assessment, the validation commands, the unknowns, the risks, any halt conditions that apply, and the `ios_delivery_packet` update. The memo on its own cannot be designed against — what makes it usable is the facts behind it, the commands that demonstrate them, and the explicit boundary of what is still unknown.
+A run that finishes hands over the discovery set whole: the technical discovery memo, the source-facts table, the feasibility assessment, the validation commands, the unknowns, the risks, any halt conditions that apply, and the `ios_delivery_packet` update. The memo on its own cannot be designed against; what makes it usable is the facts behind it, the commands that demonstrate them, and the explicit boundary of what is still unknown.
 
 The standard is that the architecture desk should not need to reopen the repo. Each fact traces to a file path, a command's output, or a named source; each validation command runs against this project as written, with the scheme, destination, or target it needs; each unknown states which downstream decision it holds up. A memo that lists categories and leaves the values blank has not finished.
 
-That standard is not met by inference. An Xcode version, toolchain, deployment target, Swift or Objective-C detail, dependency, signing fact, or CI setting that cannot be read stays an unknown — never a plausible iOS default, which would read as evidence and be treated as one. Build and settings files, manifests, dependency catalogs, CI definitions, and test targets are independent reads and belong to the parallel surface declared in Workflow.
+That standard is not met by inference. An Xcode version, toolchain, deployment target, Swift or Objective-C detail, dependency, signing fact, or CI setting that cannot be read stays an unknown, never a plausible iOS default, which would read as evidence and be treated as one. Build and settings files, manifests, dependency catalogs, CI definitions, and test targets are independent reads and belong to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -62,12 +62,12 @@ That standard is not met by inference. An Xcode version, toolchain, deployment t
 
 Proceed by default. A missing build fact is normally recorded as an unknown with its downstream impact named, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — discovery would require running commands, writing to the repo, or touching App Store Connect state that has not been authorized.
-- **Production or destructive** — inspecting or reproducing the build would mutate a shared branch, a release artifact, or signing and provisioning material.
-- **Security or privacy** — discovery surfaces secrets, signing certificates, provisioning profiles, or credentials that cannot be handled safely in this context.
-- **Source conflict** — repo state and documentation genuinely disagree on build system, SDK level, engine, or module ownership. Preserve the conflict.
-- **Release integrity** — the memo would declare a build reproducible or a change feasible when no validation command supports it.
-- **Connector unreachable** — repo, branch, or workflow access exists but cannot be read. A file that is merely absent is a soft gap: record it as unknown and continue.
+- **Approval**: discovery would require running commands, writing to the repo, or touching App Store Connect state that has not been authorized.
+- **Production or destructive**: inspecting or reproducing the build would mutate a shared branch, a release artifact, or signing and provisioning material.
+- **Security or privacy**: discovery surfaces secrets, signing certificates, provisioning profiles, or credentials that cannot be handled safely in this context.
+- **Source conflict**: repo state and documentation genuinely disagree on build system, SDK level, engine, or module ownership. Preserve the conflict.
+- **Release integrity**: the memo would declare a build reproducible or a change feasible when no validation command supports it.
+- **Connector unreachable**: repo, branch, or workflow access exists but cannot be read. A file that is merely absent is a soft gap: record it as unknown and continue.
 
 Otherwise proceed: missing Xcode, SDK, native runtime, engine, signing, bundle ID, or TestFlight and App Store release-state facts are logged as unknowns, each with the downstream decision it blocks.
 
@@ -82,7 +82,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `connector-diagnostic.md` — takes the place of the set above when required repo, branch, or workflow access exists but cannot be read, leaving no source facts to establish.
+- `connector-diagnostic.md`: takes the place of the set above when required repo, branch, or workflow access exists but cannot be read, leaving no source facts to establish.
 
 Where the evidence could not be read, the file says exactly that. It is never completed with iOS defaults so the set appears finished.
 

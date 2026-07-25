@@ -29,7 +29,7 @@ reference_models:
   - {vendor: moonshot,  model: kimi-k3,              role: floor_check}
 
 # ---------------------------------------------------------------------------
-# CAPABILITIES — what the floor model can now do.
+# CAPABILITIES; what the floor model can now do.
 # Each carries `evidence` so a future maintainer can re-verify instead of trusting.
 # ---------------------------------------------------------------------------
 capabilities:
@@ -76,7 +76,7 @@ capabilities:
     degrade: sequential_tool_calls
     evidence: "OpenAI: model composes and runs JavaScript that orchestrates tool calls."
     implication: >
-      Optional accelerator. Never a hard dependency — must degrade to ordinary tool calls.
+      Optional accelerator. Never a hard dependency; must degrade to ordinary tool calls.
 
   effort_dial:
     value: available
@@ -85,7 +85,7 @@ capabilities:
     implication: Desks may name a suggested effort tier per stage; never required.
 
 # ---------------------------------------------------------------------------
-# AUTHORING RULES — how the capabilities above translate into skill prose.
+# AUTHORING RULES; how the capabilities above translate into skill prose.
 # The build audits these; violations surface in `tools/audit_skills.py`.
 # ---------------------------------------------------------------------------
 authoring_rules:
@@ -154,7 +154,7 @@ authoring_rules:
       fan out. Do not prescribe serial iteration over independent work.
 
 # ---------------------------------------------------------------------------
-# INVARIANTS — governance that does NOT relax as models improve.
+# INVARIANTS; governance that does NOT relax as models improve.
 # A more capable model does not make fabrication, unapproved action, or
 # unsourced claims acceptable. These survive every profile bump, permanently.
 # ---------------------------------------------------------------------------

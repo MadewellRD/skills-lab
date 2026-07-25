@@ -36,7 +36,7 @@ If required source facts are unavailable, produce a deployment diagnostic or cle
 
 **Grounding.** Run connector preflight per `references/connector-routing.md` to identify required and optional sources. Establish release scope, target environment, deployment mechanism, validation evidence, rollback method, observability coverage, known incidents, and approval requirements.
 
-**Ordered content is not scaffolding.** The gate sequences this desk produces — pre-deploy checks, approval, cutover, post-deploy verification, rollback — are externally mandated order. Emit them as ordered, numbered steps in the artifact and never reorder, merge, or collapse them for brevity.
+**Ordered content is not scaffolding.** The gate sequences this desk produces, pre-deploy checks, approval, cutover, post-deploy verification, rollback, are externally mandated order. Emit them as ordered, numbered steps in the artifact and never reorder, merge, or collapse them for brevity.
 
 **Parallel surface.** Reading the evidence is parallel-safe even though executing the deploy is not. Retrieve deployment config, CI check state, release notes, feature-flag state, observability coverage, and approval status concurrently; assess independent services, regions, or environments in parallel when the rollout treats them as independent. The rollout gate sequence itself remains strictly ordered.
 
@@ -46,7 +46,7 @@ If required source facts are unavailable, produce a deployment diagnostic or cle
 
 ## Output rules
 
-A deployment run delivers the whole plan, not the piece the request named: the deployment plan with its gate sequence, the go/no-go review with every gate classified, the rollback path, and the post-deploy verification checklist. A staged rollout or feature-flag plan joins that set whenever the deploy is staged or flag-gated, and is legitimately absent for a single-shot deploy. A change-management record is the genuinely conditional one — produced when the organization's process requires it, skipped when no source establishes such a process.
+A deployment run delivers the whole plan, not the piece the request named: the deployment plan with its gate sequence, the go/no-go review with every gate classified, the rollback path, and the post-deploy verification checklist. A staged rollout or feature-flag plan joins that set whenever the deploy is staged or flag-gated, and is legitimately absent for a single-shot deploy. A change-management record is the genuinely conditional one; produced when the organization's process requires it, skipped when no source establishes such a process.
 
 The bar is execution under pressure by someone who did not plan it. Every gate names its owner and a pass condition that needs no interpretation. Every command is exact. Post-deploy checks name the signal, the threshold, the observation window, and the action when the threshold trips. Rollback states the path and whether it has been verified. A checklist whose steps read "verify deployment succeeded" has not reached that bar.
 
@@ -62,12 +62,12 @@ For agent handoffs, write the content so it can be pasted into an execution agen
 
 Proceed by default when producing planning artifacts: an unknown that can be marked and worked around is a labeled assumption, not a stop. Deployment carries more hard-halt surface than most desks, so reserve halts for these consequence classes from `references/halt-taxonomy.md` and do not soften them:
 
-- **Approval** — a required approval is missing, unrecorded, or the approver is unidentified.
-- **Production or destructive** — the request asks to execute a deploy, cutover, flag flip, or data migration rather than plan one, or the rollback path is unknown or unprovable.
-- **Security or privacy** — the deploy would move secrets, credentials, or personal data across a trust boundary that sources do not establish as intended.
-- **Source conflict** — repo state, release docs, and deployment configuration genuinely disagree on what ships or where it ships to.
-- **Release integrity** — a go decision would be issued while required checks are red, stale, or unverifiable.
-- **Connector unreachable** — a required deployment, CI, or approval source exists but cannot be read. A source that is merely absent is a soft gap: mark the artifact source-limited and continue.
+- **Approval**: a required approval is missing, unrecorded, or the approver is unidentified.
+- **Production or destructive**: the request asks to execute a deploy, cutover, flag flip, or data migration rather than plan one, or the rollback path is unknown or unprovable.
+- **Security or privacy**: the deploy would move secrets, credentials, or personal data across a trust boundary that sources do not establish as intended.
+- **Source conflict**: repo state, release docs, and deployment configuration genuinely disagree on what ships or where it ships to.
+- **Release integrity**: a go decision would be issued while required checks are red, stale, or unverifiable.
+- **Connector unreachable**: a required deployment, CI, or approval source exists but cannot be read. A source that is merely absent is a soft gap: mark the artifact source-limited and continue.
 
 Use `references/halt-conditions.md` for the halt artifact format.
 

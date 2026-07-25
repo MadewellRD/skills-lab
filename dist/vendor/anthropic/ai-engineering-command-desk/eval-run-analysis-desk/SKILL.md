@@ -33,7 +33,7 @@ Produce a decision about the run: whether it is trustworthy, how it moved agains
 
 Constraints:
 
-- Establish the run's own trustworthiness before drawing conclusions from it — completeness, scoring consistency, and grader reliability. This is analysis of the eval artifact itself, and a run that cannot be trusted yields no verdict, only a rerun requirement.
+- Establish the run's own trustworthiness before drawing conclusions from it: completeness, scoring consistency, and grader reliability. This is analysis of the eval artifact itself, and a run that cannot be trusted yields no verdict, only a rerun requirement.
 - Never invent baselines, deltas, or thresholds, and never report a delta against a baseline that does not exist.
 - Failure clusters name a behavior and a likely cause and cite the failing cases that support them. An unsupported cluster is a hypothesis and is labeled as one.
 - Blocker, warning, and pass status are assigned against pre-existing thresholds, never against thresholds inferred from the results.
@@ -46,15 +46,15 @@ Cases and slices are independent. Per-case scoring review, per-slice baseline co
 
 A run over eval results delivers the full analysis in one pass:
 
-- eval analysis report — per-slice results against threshold and against baseline, grader reliability wherever grading was subjective, and what changed since the comparison run.
-- failure taxonomy — clusters with a defining characteristic, a representative case each, frequency, and the suspected mechanism labeled as suspected.
-- release blocker list — which failures cross a gate and what clearing each requires. "No blockers" is stated explicitly alongside the gates evaluated.
-- rerun plan — what to rerun, under what change, and what result would resolve the question. Where no rerun is warranted, that conclusion is stated with its reason rather than left blank.
-- downstream fix recommendations — each routed to the desk that owns the fix, carrying the evidence that desk needs.
+- eval analysis report: per-slice results against threshold and against baseline, grader reliability wherever grading was subjective, and what changed since the comparison run.
+- failure taxonomy: clusters with a defining characteristic, a representative case each, frequency, and the suspected mechanism labeled as suspected.
+- release blocker list: which failures cross a gate and what clearing each requires. "No blockers" is stated explicitly alongside the gates evaluated.
+- rerun plan: what to rerun, under what change, and what result would resolve the question. Where no rerun is warranted, that conclusion is stated with its reason rather than left blank.
+- downstream fix recommendations: each routed to the desk that owns the fix, carrying the evidence that desk needs.
 
 Depth bar: an owner should be able to act on any cluster without reopening the raw results. Per-case and per-slice work is the parallel-safe unit; grader reliability across the run, the gate verdict, and the rerun decision are aggregate.
 
-The one thing this desk must never produce is a number the run did not return. Missing baselines, unreadable run artifacts, and slices that were never executed are reported as such, and a cluster with too few cases to support a mechanism says so instead of naming a cause. An invented pass rate does not stay in this report — it propagates straight into a release decision.
+The one thing this desk must never produce is a number the run did not return. Missing baselines, unreadable run artifacts, and slices that were never executed are reported as such, and a cluster with too few cases to support a mechanism says so instead of naming a cause. An invented pass rate does not stay in this report; it propagates straight into a release decision.
 
 ## Workflow packet fields
 
@@ -75,12 +75,12 @@ The one thing this desk must never produce is a number the run did not return. M
 
 Default posture is to proceed and label the assumption inline. A partially annotated failure case or an unknown reviewer identity is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — the analysis would waive, relax, or reinterpret a release threshold that an owner must authorize.
-- Production or destructive — a recommended rerun or remediation would act against production systems or overwrite a stored baseline run.
-- Security or privacy — failure examples, transcripts, or exports contain personal, regulated, or customer-confidential data, or the failures themselves indicate data leakage.
-- Source conflict — run metadata, baseline records, and threshold definitions disagree on what was measured or on what it was measured against.
-- Release integrity — a release decision would rest on this run while scoring reliability is too weak to support it, or while thresholds or baseline are undefined.
-- Connector unreachable — raw results, run metadata, or baseline runs exist but cannot be read.
+- Approval: the analysis would waive, relax, or reinterpret a release threshold that an owner must authorize.
+- Production or destructive: a recommended rerun or remediation would act against production systems or overwrite a stored baseline run.
+- Security or privacy: failure examples, transcripts, or exports contain personal, regulated, or customer-confidential data, or the failures themselves indicate data leakage.
+- Source conflict: run metadata, baseline records, and threshold definitions disagree on what was measured or on what it was measured against.
+- Release integrity: a release decision would rest on this run while scoring reliability is too weak to support it, or while thresholds or baseline are undefined.
+- Connector unreachable: raw results, run metadata, or baseline runs exist but cannot be read.
 
 ## Downstream handoffs
 

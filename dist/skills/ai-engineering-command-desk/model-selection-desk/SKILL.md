@@ -45,11 +45,11 @@ Candidate models are independent. Evaluating each candidate against task slices,
 
 A selection run delivers the whole decision, not just its conclusion:
 
-- model comparison matrix — every candidate scored on the same dimensions, each cell carrying its source, and every candidate not carried forward carrying its exclusion reason.
-- recommended model set — the selection, the tradeoff it accepts, and the constraint that bounds it.
-- routing policy — which request classes go to which model, and the rule that decides.
-- fallback plan — per failure or degradation condition, the next model and the behavior change a user would experience.
-- eval requirements — what still has to be tested before the decision is trusted, expressed as slices and thresholds.
+- model comparison matrix: every candidate scored on the same dimensions, each cell carrying its source, and every candidate not carried forward carrying its exclusion reason.
+- recommended model set: the selection, the tradeoff it accepts, and the constraint that bounds it.
+- routing policy: which request classes go to which model, and the rule that decides.
+- fallback plan: per failure or degradation condition, the next model and the behavior change a user would experience.
+- eval requirements: what still has to be tested before the decision is trusted, expressed as slices and thresholds.
 
 The bar is that someone could implement the routing and defend the choice in review without re-running the comparison. A shortlist with no exclusion reasons is an incomplete matrix. Candidate scoring is the parallel-safe unit; only ranking and routing depend on the complete set.
 
@@ -73,12 +73,12 @@ Every cell in that matrix is a factual claim. Benchmark scores, context limits, 
 
 Default posture is to proceed and label the assumption inline. A missing budget figure, latency target, or deployment detail is a soft gap: state the assumed value, mark it as an assumption, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — the change would move spend tier, data-residency posture, or provider commitment beyond what the owner has authorized.
-- Production or destructive — swapping or retiring a model in a live routing path would break running traffic irreversibly.
-- Security or privacy — a candidate would send regulated, personal, or customer-confidential data to a provider surface not cleared for it.
-- Source conflict — provider documentation, internal evals, and user-stated constraints disagree on a load-bearing fact such as context limit, pricing, modality support, tool support, or data handling.
-- Release integrity — a high-impact model choice would ship with no eval or acceptance threshold capable of establishing that it is correct.
-- Connector unreachable — required eval runs, telemetry, or provider documentation exist but cannot be read.
+- Approval: the change would move spend tier, data-residency posture, or provider commitment beyond what the owner has authorized.
+- Production or destructive: swapping or retiring a model in a live routing path would break running traffic irreversibly.
+- Security or privacy: a candidate would send regulated, personal, or customer-confidential data to a provider surface not cleared for it.
+- Source conflict: provider documentation, internal evals, and user-stated constraints disagree on a load-bearing fact such as context limit, pricing, modality support, tool support, or data handling.
+- Release integrity: a high-impact model choice would ship with no eval or acceptance threshold capable of establishing that it is correct.
+- Connector unreachable: required eval runs, telemetry, or provider documentation exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -101,7 +101,7 @@ Default posture is to proceed and label the assumption inline. A missing budget 
 - State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
-- Passing means a reader can name the recommended model, the rejected candidates and why, the routing and fallback rule, and the eval that would falsify the choice — each traced to a source fact or a labeled assumption.
+- Passing means a reader can name the recommended model, the rejected candidates and why, the routing and fallback rule, and the eval that would falsify the choice, each traced to a source fact or a labeled assumption.
 
 ## Execution handoff density
 

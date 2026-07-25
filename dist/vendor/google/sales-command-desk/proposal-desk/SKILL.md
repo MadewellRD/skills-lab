@@ -31,13 +31,13 @@ Create customer-facing proposals, scopes, and commercial response packages from 
 
 ## Workflow
 
-**Outcome.** A proposal outline and draft in the requested format, with an artifact checklist, approval notes, open questions, and a handoff-ready package — a draft awaiting approval, never a document that has been sent.
+**Outcome.** A proposal outline and draft in the requested format, with an artifact checklist, approval notes, open questions, and a handoff-ready package, a draft awaiting approval, never a document that has been sent.
 
-**Ordered gate (mandated — keep this order).** Confirm pricing and scope against approved commercial terms, then complete the internal pricing, legal, and brand review, then obtain the named approver's authorization, and only then may the proposal be shared externally. Each step precedes the next. This order is mandated because a proposal that reaches a customer is a commercial position: a price cannot be un-quoted, a scope statement becomes the thing the customer expects, and withdrawing either costs trust or money. Never share externally to save a round trip.
+**Ordered gate (mandated, keep this order).** Confirm pricing and scope against approved commercial terms, then complete the internal pricing, legal, and brand review, then obtain the named approver's authorization, and only then may the proposal be shared externally. Each step precedes the next. This order is mandated because a proposal that reaches a customer is a commercial position: a price cannot be un-quoted, a scope statement becomes the thing the customer expects, and withdrawing either costs trust or money. Never share externally to save a round trip.
 
-**Constraints.** Carry the sales workflow packet forward and update it in place. CRM and user-provided commercial terms define scope; approved templates and brand rules control presentation. Never write a price, discount, term, SLA, delivery date, or customer reference that no approved source states — an unresolved commercial value stays visibly unresolved in the draft rather than being filled with something plausible. Proposal claims stay within verified opportunity, product, and pricing evidence.
+**Constraints.** Carry the sales workflow packet forward and update it in place. CRM and user-provided commercial terms define scope; approved templates and brand rules control presentation. Never write a price, discount, term, SLA, delivery date, or customer reference that no approved source states, an unresolved commercial value stays visibly unresolved in the draft rather than being filled with something plausible. Proposal claims stay within verified opportunity, product, and pricing evidence.
 
-**Parallel surface.** Proposal sections are independent drafting units — problem framing, proposed approach, scope, timeline, team, references, and terms can be written in parallel rather than front to back. The pricing table, the total commercial summary, the internal consistency check, and the approval package are aggregate passes over the complete document, because a commercial total is defined by all of the scope at once and a contradiction between the scope section and the terms section is only visible when they are read together.
+**Parallel surface.** Proposal sections are independent drafting units, problem framing, proposed approach, scope, timeline, team, references, and terms can be written in parallel rather than front to back. The pricing table, the total commercial summary, the internal consistency check, and the approval package are aggregate passes over the complete document, because a commercial total is defined by all of the scope at once and a contradiction between the scope section and the terms section is only visible when they are read together.
 
 **Acceptance bar.** Every commercial figure traces to an approved source or is visibly marked unresolved; every scope statement matches what the opportunity record and the approved terms support; the artifact meets the requested format and brand rules; and the approval package names the approver, the reviews that apply, and exactly what is awaiting authorization.
 
@@ -56,7 +56,7 @@ The outline is the structure of the draft, not a substitute for it. A run that s
 
 Each artifact is done when the approver could review it as the document that would actually go out. Every section is written in the voice and format the customer will receive; every commercial figure traces to an approved source or is visibly marked unresolved; every scope statement matches what the opportunity record and the approved terms support; the approval notes name the approver, the reviews that apply, and exactly what awaits authorization. Headings over filler text are a failure here, and in a customer-facing document it is a failure that can escape the building.
 
-A complete draft is still a draft. Writing every section does not share it externally — the confirm-terms, internal-review, approval, then-share order in Workflow holds, and a finished package is not authorization to send it to save a round trip. Completeness also does not license invention: a price, discount, term, SLA, delivery date, headcount, or customer reference that no approved source states stays visibly unresolved in the draft. A plausible price becomes a quoted price the instant the document reaches the customer, and it cannot be un-quoted. Proposal sections are independent drafting units inside the parallel surface declared in Workflow.
+A complete draft is still a draft. Writing every section does not share it externally; the confirm-terms, internal-review, approval, then-share order in Workflow holds, and a finished package is not authorization to send it to save a round trip. Completeness also does not license invention: a price, discount, term, SLA, delivery date, headcount, or customer reference that no approved source states stays visibly unresolved in the draft. A plausible price becomes a quoted price the instant the document reaches the customer, and it cannot be un-quoted. Proposal sections are independent drafting units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 
@@ -75,14 +75,14 @@ A complete draft is still a draft. Writing every section does not share it exter
 
 Proceed by default on drafting and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — external sharing is requested without approval, or the draft commits pricing, discount, terms, or scope that its named approver has not cleared. Hard halt: a proposal is a commercial position and a shared price cannot be un-quoted.
-- **Production or destructive** — the request is to send, share, or publish the proposal rather than to draft it.
-- **Security or privacy** — the proposal would include another customer's confidential detail, an unapproved reference, or security and contractual material not cleared for this audience.
-- **Source conflict** — the CRM, the approved commercial terms, and the user's instructions genuinely disagree on price, scope, or duration. Do not resolve a commercial conflict by choosing; surface it to the approver, because the wrong resolution ships as a quote.
-- **Release integrity** — a proposal claim exceeds verified opportunity, product, or pricing evidence. Remove it or mark it unresolved; never let an unverifiable promise reach a customer document.
-- **Connector unreachable** — a required CRM, pricing, or template source exists but cannot be read, so the commercial baseline cannot be established.
+- **Approval**: external sharing is requested without approval, or the draft commits pricing, discount, terms, or scope that its named approver has not cleared. Hard halt: a proposal is a commercial position and a shared price cannot be un-quoted.
+- **Production or destructive**: the request is to send, share, or publish the proposal rather than to draft it.
+- **Security or privacy**: the proposal would include another customer's confidential detail, an unapproved reference, or security and contractual material not cleared for this audience.
+- **Source conflict**: the CRM, the approved commercial terms, and the user's instructions genuinely disagree on price, scope, or duration. Do not resolve a commercial conflict by choosing; surface it to the approver, because the wrong resolution ships as a quote.
+- **Release integrity**: a proposal claim exceeds verified opportunity, product, or pricing evidence. Remove it or mark it unresolved; never let an unverifiable promise reach a customer document.
+- **Connector unreachable**: a required CRM, pricing, or template source exists but cannot be read, so the commercial baseline cannot be established.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing pricing or scope inputs produce a draft with those sections visibly marked unresolved and listed in the approval notes — never filled with a plausible figure. An unavailable brand template means drafting in a clean neutral structure and flagging that the template must be applied before sharing.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing pricing or scope inputs produce a draft with those sections visibly marked unresolved and listed in the approval notes, never filled with a plausible figure. An unavailable brand template means drafting in a clean neutral structure and flagging that the template must be applied before sharing.
 
 ## Downstream handoffs
 

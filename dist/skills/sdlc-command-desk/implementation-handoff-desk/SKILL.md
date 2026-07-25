@@ -34,7 +34,7 @@ When multiple sources conflict, do not smooth over the conflict. Preserve the co
 
 ## Required output behavior
 
-A run delivers a prompt for every piece of scoped work it was handed, not the first one. Three issues in scope means three prompt files; a merge train of six PRs means six prompts plus the order they run in. The halt-resume prompt is the genuine exception — it is produced *instead of* the original prompt for the stalled work, not in addition to it.
+A run delivers a prompt for every piece of scoped work it was handed, not the first one. Three issues in scope means three prompt files; a merge train of six PRs means six prompts plus the order they run in. The halt-resume prompt is the genuine exception; it is produced *instead of* the original prompt for the stalled work, not in addition to it.
 
 Every generated prompt must be delivered as a downloadable `.md` file.
 
@@ -113,12 +113,12 @@ Two different halts live in this desk. Keep them separate.
 
 **Halts this desk itself takes.** Default to producing the prompt. A missing fact becomes an explicit placeholder plus a halt instruction for the implementing agent, not a refusal to draft. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the user asks this desk to execute, push, or merge rather than draft the handoff.
-- **Production or destructive** — the prompt would direct irreversible action on a shared branch, production system, or credential without an established rollback.
-- **Security or privacy** — grounding the prompt would require embedding secrets, tokens, or personal data in the artifact.
-- **Source conflict** — live connector state conflicts with pasted facts on a load-bearing point. Preserve the conflict as a pre-flight halt condition in the generated prompt rather than resolving it.
-- **Release integrity** — the request is to chain a prompt against an unmerged or unverified predecessor. Draft a merge/verification prompt, a post-merge re-rank prompt, or a resume-from-halt prompt instead.
-- **Connector unreachable** — a required source exists but cannot be read. A source that is merely absent is a soft gap: draft a scoped, user-fact-grounded prompt marked as such, or emit `connector-diagnostic.md`.
+- **Approval**: the user asks this desk to execute, push, or merge rather than draft the handoff.
+- **Production or destructive**: the prompt would direct irreversible action on a shared branch, production system, or credential without an established rollback.
+- **Security or privacy**: grounding the prompt would require embedding secrets, tokens, or personal data in the artifact.
+- **Source conflict**: live connector state conflicts with pasted facts on a load-bearing point. Preserve the conflict as a pre-flight halt condition in the generated prompt rather than resolving it.
+- **Release integrity**: the request is to chain a prompt against an unmerged or unverified predecessor. Draft a merge/verification prompt, a post-merge re-rank prompt, or a resume-from-halt prompt instead.
+- **Connector unreachable**: a required source exists but cannot be read. A source that is merely absent is a soft gap: draft a scoped, user-fact-grounded prompt marked as such, or emit `connector-diagnostic.md`.
 
 Use `HANDOFF_BLOCKER` when the facts available are insufficient for a coding agent to act.
 

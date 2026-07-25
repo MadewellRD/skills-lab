@@ -48,12 +48,12 @@ If required source facts are unavailable, either produce a clearly marked user-f
 
 Proceed by default. A requirement whose coverage cannot be determined is classified `needs clarification` and the plan continues. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — deferring coverage on a material requirement needs a human owner to accept the risk.
-- **Production or destructive** — the plan would run tests against production data or systems, or fixtures would require copying live data.
-- **Security or privacy** — fixtures or scenarios would require real secrets, credentials, or personal data.
-- **Source conflict** — requirements, issue scope, and existing tests genuinely disagree on intended behavior.
-- **Release integrity** — the plan would be presented as release-gating coverage when the evidence cannot establish that the gates pass.
-- **Connector unreachable** — a required repo, CI, or spec source exists but cannot be read. A source that is merely absent is a soft gap: produce a user-fact-only draft marked as such and continue.
+- **Approval**: deferring coverage on a material requirement needs a human owner to accept the risk.
+- **Production or destructive**: the plan would run tests against production data or systems, or fixtures would require copying live data.
+- **Security or privacy**: fixtures or scenarios would require real secrets, credentials, or personal data.
+- **Source conflict**: requirements, issue scope, and existing tests genuinely disagree on intended behavior.
+- **Release integrity**: the plan would be presented as release-gating coverage when the evidence cannot establish that the gates pass.
+- **Connector unreachable**: a required repo, CI, or spec source exists but cannot be read. A source that is merely absent is a soft gap: produce a user-fact-only draft marked as such and continue.
 
 Use `references/halt-conditions.md` for the halt artifact format.
 

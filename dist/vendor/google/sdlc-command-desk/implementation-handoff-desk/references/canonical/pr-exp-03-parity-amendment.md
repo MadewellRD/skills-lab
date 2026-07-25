@@ -6,7 +6,7 @@ State summary:
 - Use the worktree pattern: git worktree add -b docs/parity-amendment-post-pr86 C:\opt\worktrees\parity-amendment-post-pr86 origin/main
 - If branch or worktree path exists, halt and report.
 
-Files to touch — exactly these, nothing else:
+Files to touch; exactly these, nothing else:
 - docs/parity-scoreboard.md
 - docs/parity-scoreboard.json
 - docs/compatibility-claim-proof-map.md
@@ -14,7 +14,7 @@ Files to touch — exactly these, nothing else:
 
 What changes:
 
-ONE — strengthen the warp_shader_execution and composite_shader_execution rows.
+ONE; strengthen the warp_shader_execution and composite_shader_execution rows.
 
 Current state: both rows cite legacy_shader.rs by file path with no named tests. After PR #86, the translator now has 29 named tests in legacy_shader.rs plus a new typed_pass.rs module plus an intrinsics.rs module with its own tests.
 
@@ -51,15 +51,15 @@ Translator tests in engine/crates/md-render-wgpu/src/legacy_shader.rs:
   translator_validates_fire1_comp_regression
   translator_widens_simple_scalar_declarations_to_vectors_when_needed
 
-Also cite the new modules by path: engine/crates/md-render-wgpu/src/legacy_shader/typed_pass.rs and engine/crates/md-render-wgpu/src/legacy_shader/intrinsics.rs. Grep those two files for their internal #[test] functions and cite them too — I haven't enumerated them; you'll find them yourself.
+Also cite the new modules by path: engine/crates/md-render-wgpu/src/legacy_shader/typed_pass.rs and engine/crates/md-render-wgpu/src/legacy_shader/intrinsics.rs. Grep those two files for their internal #[test] functions and cite them too; I haven't enumerated them; you'll find them yourself.
 
-Note in the row text that the translator now performs a typed pass with WgslType inference and includes corpus regression tests against named real presets (fire1_comp, carnival_ride). Two named-preset regressions are the strongest signal in the citation list — make sure they're surfaced in the row description, not just buried in the test list.
+Note in the row text that the translator now performs a typed pass with WgslType inference and includes corpus regression tests against named real presets (fire1_comp, carnival_ride). Two named-preset regressions are the strongest signal in the citation list; make sure they're surfaced in the row description, not just buried in the test list.
 
 The current_status text for both rows should be updated to reflect that translation now includes typed-pass disambiguation and named corpus regressions, not just generic compile-or-fallback diagnostics.
 
 Update docs/compatibility-claim-proof-map.md row "Warp/composite shader source-backed execution path" to cite the same new tests and modules. Same proof citations, same expanded current-state language.
 
-TWO — add a new row for legacy install import coverage.
+TWO; add a new row for legacy install import coverage.
 
 Insert a new row in BOTH parity-scoreboard.md and parity-scoreboard.json. Place it AFTER host_window_monitor_device_behaviors and BEFORE studio_host_editor_product_parity_surface. The new row matches the scoreboard's existing tone and structure.
 
@@ -67,7 +67,7 @@ Suggested fields:
 - id: legacy_install_import_coverage
 - domain: "Legacy install layout import and coverage reporting"
 - legacy_source: "legacy/upstream-milkdrop3/README.md" (install layout description) and "legacy/upstream-milkdrop3/code/vis_milk2/plugin.cpp" (runtime install discovery)
-- current_status: describe what hosts/player-desktop/src/legacy_import.rs does — discovers a legacy install root, distinguishes content-dir-as-root from parent-dir-as-root, recursively enumerates presets by extension, parses settings.ini for StartPreset, parses sprites.ini for [img*] sections with case-insensitive lookup, parses .txt/.m3u/.m3u8/.pls playlists with missing-entry tracking, builds typed asset buckets (presets, playlist, sprites, textures, shapes, waves, data, cache, docs) with extension histograms and byte totals, resolves install-relative references with install_root → content_dir → base_dir fallback chain. Coverage reports extend with per-preset issue classification (parse, load, render, warp-translation, comp-translation, visual-drift) and severity (error, degraded), plus capture-checksum + diagnostic-snapshot artifacts.
+- current_status: describe what hosts/player-desktop/src/legacy_import.rs does, discovers a legacy install root, distinguishes content-dir-as-root from parent-dir-as-root, recursively enumerates presets by extension, parses settings.ini for StartPreset, parses sprites.ini for [img*] sections with case-insensitive lookup, parses .txt/.m3u/.m3u8/.pls playlists with missing-entry tracking, builds typed asset buckets (presets, playlist, sprites, textures, shapes, waves, data, cache, docs) with extension histograms and byte totals, resolves install-relative references with install_root → content_dir → base_dir fallback chain. Coverage reports extend with per-preset issue classification (parse, load, render, warp-translation, comp-translation, visual-drift) and severity (error, degraded), plus capture-checksum + diagnostic-snapshot artifacts.
 - parity_status: pick "exact" if the import faithfully reads the canonical legacy layout as documented in the README; pick "intentionally modernized" if the coverage-report layer is positioned as additive modernization. Read the code and decide. Document the decision in the row text.
 - proof_artifacts: cite hosts/player-desktop/src/legacy_import.rs, the 25 named tests from PR #85 (listed below), and any coverage-report-extension tests added in commit 952b84a (grep hosts/player-desktop/src/lib.rs and main.rs for new tests touching coverage; cite what you find).
 - resolution_path: "n/a" if exact, or "Maintain alignment with legacy install layout as documented in upstream README" if a soft hedge is needed.
@@ -101,14 +101,14 @@ The 25 import tests in hosts/player-desktop/src/legacy_import.rs:
 
 Add a corresponding row to docs/compatibility-claim-proof-map.md following the existing column structure (Claim Domain | Legacy Source | Code Path Proof | Test/Fixture Proof | Known Exclusions). Place it adjacent to the host-window/audio-device row for consistency with the scoreboard ordering.
 
-THREE — sync checks must pass.
+THREE; sync checks must pass.
 
 After edits:
 
   python3 scripts/check_parity_scoreboard_sync.py
   python3 scripts/check_parity_truth_consistency.py
 
-Both must exit zero. The sync script verifies markdown and JSON have matching rows, statuses, and ordering. The truth-consistency script verifies status-parity.md text agrees with scoreboard outcomes — if it complains, you may need to update status-parity.md's gaps or status sections to mention the new row.
+Both must exit zero. The sync script verifies markdown and JSON have matching rows, statuses, and ordering. The truth-consistency script verifies status-parity.md text agrees with scoreboard outcomes; if it complains, you may need to update status-parity.md's gaps or status sections to mention the new row.
 
 Also confirm row count went from 17 to 18 in both .md and .json.
 
@@ -116,11 +116,11 @@ Guardrails:
 
 - Docs-only change. Do not modify any .rs file. Do not modify any test. Do not modify Cargo.toml/Cargo.lock.
 - Status taxonomy is exactly one of: exact, partial, missing, intentionally modernized. No other strings allowed.
-- Do not change any existing row's parity_status. The two shader rows stay "exact" — you're only enriching their proof citations and current_status text.
+- Do not change any existing row's parity_status. The two shader rows stay "exact": you're only enriching their proof citations and current_status text.
 - Do not invent test names. Only cite tests that exist on origin/main as fn definitions. Verify every name you cite by grep before committing.
 - Do not touch other rows or other files. The blast radius is the four files listed above.
-- No #[ignore]; no allow-attributes; n/a — this is docs-only.
-- Run cargo fmt --check and cargo clippy --workspace --all-targets -- -D warnings as a final smoke. Both should be clean since you didn't touch source — if either fails, that's a sign you did touch source by mistake. Halt and investigate.
+- No #[ignore]; no allow-attributes; n/a: this is docs-only.
+- Run cargo fmt --check and cargo clippy --workspace --all-targets -- -D warnings as a final smoke. Both should be clean since you didn't touch source, if either fails, that's a sign you did touch source by mistake. Halt and investigate.
 
 Commit message:
 
@@ -141,6 +141,6 @@ Commit message:
 
 PR title: "docs: amend parity scoreboard for translator and install-import coverage"
 PR base: main
-PR body: list the three change groups (warp citations, composite citations, new install-import row), note that both Python sync checks pass locally, note that hosted CI may be unstable due to ongoing GitHub Actions billing — local docs-only verification is sufficient evidence for this PR.
+PR body: list the three change groups (warp citations, composite citations, new install-import row), note that both Python sync checks pass locally, note that hosted CI may be unstable due to ongoing GitHub Actions billing; local docs-only verification is sufficient evidence for this PR.
 
 Stop at "PR opened, sync checks green locally." Do not merge.

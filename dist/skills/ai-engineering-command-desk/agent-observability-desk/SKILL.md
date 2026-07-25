@@ -46,11 +46,11 @@ Individual signals are independent. Designing each trace event, metric, log fiel
 
 A complete run produces the full instrumentation design, not one layer of it:
 
-- observability design — the questions the telemetry must answer, and which signal answers each one.
-- event schema — named trace events and metrics with fields, types, cardinality expectations, and the redaction rule for each field that can carry user or prompt content.
-- dashboard plan — panels with their query intent, their audience, and what a healthy reading looks like.
-- alert plan — per alert: condition, threshold, window, severity, owner, and first action on fire. An alert with no owner and no first action is noise, not coverage.
-- runbook inputs — the diagnostic path each alert hands to whoever is paged.
+- observability design: the questions the telemetry must answer, and which signal answers each one.
+- event schema: named trace events and metrics with fields, types, cardinality expectations, and the redaction rule for each field that can carry user or prompt content.
+- dashboard plan: panels with their query intent, their audience, and what a healthy reading looks like.
+- alert plan: per alert: condition, threshold, window, severity, owner, and first action on fire. An alert with no owner and no first action is noise, not coverage.
+- runbook inputs: the diagnostic path each alert hands to whoever is paged.
 
 Depth bar: an on-call engineer should be able to instrument, wire, and respond from these without a follow-up round trip. Headings without contents fail that bar. The independent signals named above are the fan-out unit for this set.
 
@@ -76,12 +76,12 @@ None of this licenses inventing telemetry. Where an existing metric, trace field
 
 Default posture is to proceed and label the assumption inline. A missing baseline for an alert threshold is a soft gap: propose a provisional threshold, mark it as provisional, name the measurement that would confirm it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — telemetry would be enabled in an environment, or at a retention level, the data owner has not authorized.
-- Production or destructive — the change would alter or drop an existing production telemetry stream that incident response or audit depends on.
-- Security or privacy — proposed signals would capture secrets, credentials, personal data, or customer content without redaction and access control.
-- Source conflict — architecture docs, runtime configuration, and existing dashboards disagree on the runtime path actually being instrumented.
-- Release integrity — a capability would reach production with no signal capable of detecting its known failure modes.
-- Connector unreachable — existing telemetry, dashboards, or runbooks exist but cannot be read.
+- Approval: telemetry would be enabled in an environment, or at a retention level, the data owner has not authorized.
+- Production or destructive: the change would alter or drop an existing production telemetry stream that incident response or audit depends on.
+- Security or privacy: proposed signals would capture secrets, credentials, personal data, or customer content without redaction and access control.
+- Source conflict: architecture docs, runtime configuration, and existing dashboards disagree on the runtime path actually being instrumented.
+- Release integrity: a capability would reach production with no signal capable of detecting its known failure modes.
+- Connector unreachable: existing telemetry, dashboards, or runbooks exist but cannot be read.
 
 ## Downstream handoffs
 

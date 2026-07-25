@@ -22,11 +22,11 @@ This skill does not implement fixes. When a change needs coding work, continue i
 
 **Outcome.** One of the output artifacts in `references/output-contract.md`, carrying a review decision, risk-tagged findings, and evidence blocks or source notes for every source-dependent claim.
 
-**Review target.** Establish what is under review — PR number, branch, commit range, patch, or pasted diff — before drawing conclusions about it.
+**Review target.** Establish what is under review, PR number, branch, commit range, patch, or pasted diff, before drawing conclusions about it.
 
 **Grounding.** Run connector preflight using `references/connector-routing.md` and establish source hierarchy using `references/source-hierarchy.md`. Inspect PR metadata, changed files, patch, checks, linked issue, review comments, and relevant code paths when available. Compare the change against stated requirements, acceptance criteria, tests, docs, and existing project conventions.
 
-**Parallel surface.** Changed files, hunks, findings, and check results are independent review units — no file's assessment depends on another's. Read the changed files and evaluate findings in parallel rather than walking the diff serially. Reserve a single pass at the end for cross-file concerns: blast radius, scope creep against the linked issue, and contradictory findings.
+**Parallel surface.** Changed files, hunks, findings, and check results are independent review units, no file's assessment depends on another's. Read the changed files and evaluate findings in parallel rather than walking the diff serially. Reserve a single pass at the end for cross-file concerns: blast radius, scope creep against the linked issue, and contradictory findings.
 
 **Acceptance bar.** The review is done when the decision is one of the four below and is defensible from cited evidence; every substantive finding carries severity, category, evidence, impact, and an exact recommended action; findings are anchored to a file and line where a specific line is at fault; and acceptance criteria from the linked issue are each addressed or explicitly noted as unverifiable. A review that lists observations without a decision is incomplete.
 
@@ -72,11 +72,11 @@ Use inline review comments only when the finding points to a specific changed li
 
 A full review of a PR delivers the set, not one report drawn from it:
 
-- `pr-review-report.md` — the decision and the findings behind it.
-- `diff-risk-assessment.md` — blast radius, regression surface, and scope creep against the linked issue.
-- `missing-test-assessment.md` — what the change alters and what does not cover it.
-- `quality-gate-summary.md` — check state, acceptance criteria, and what each gate rests on.
-- `review-comment-plan.md` — the comments to leave, anchored to file and line wherever a specific line is at fault.
+- `pr-review-report.md`: the decision and the findings behind it.
+- `diff-risk-assessment.md`: blast radius, regression surface, and scope creep against the linked issue.
+- `missing-test-assessment.md`: what the change alters and what does not cover it.
+- `quality-gate-summary.md`: check state, acceptance criteria, and what each gate rests on.
+- `review-comment-plan.md`: the comments to leave, anchored to file and line wherever a specific line is at fault.
 
 `review-to-pr-command-handoff.md` is genuinely conditional: it exists to convert requested changes into follow-up implementation work, so it is produced on a `request changes` decision or when the user asks for the follow-up, and is correctly absent from an `approve`.
 
@@ -92,12 +92,12 @@ Producing five files is not a reason to produce five findings. A clean file gets
 
 Proceed by default. Review a diff you can see even when surrounding context is thin: state what could not be assessed, label the assumption, and issue the decision the evidence supports. `insufficient evidence` is a review decision, not a halt, and is the right answer when the diff itself cannot be read. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the user asks this desk to submit an approving review or merge, rather than produce the review material.
-- **Production or destructive** — acting on the review would push, merge, or close work rather than comment on it.
-- **Security or privacy** — the diff exposes secrets or credentials, or reviewing it further would require handling personal data.
-- **Source conflict** — connector facts conflict with pasted context on a load-bearing point such as what the diff actually contains.
-- **Release integrity** — an `approve` would be issued while required checks are red, stale, or unverifiable.
-- **Connector unreachable** — the PR or diff exists but cannot be fetched. Missing linked acceptance criteria or absent review comments are soft gaps: review what is present and mark the unverified dimensions.
+- **Approval**: the user asks this desk to submit an approving review or merge, rather than produce the review material.
+- **Production or destructive**: acting on the review would push, merge, or close work rather than comment on it.
+- **Security or privacy**: the diff exposes secrets or credentials, or reviewing it further would require handling personal data.
+- **Source conflict**: connector facts conflict with pasted context on a load-bearing point such as what the diff actually contains.
+- **Release integrity**: an `approve` would be issued while required checks are red, stale, or unverifiable.
+- **Connector unreachable**: the PR or diff exists but cannot be fetched. Missing linked acceptance criteria or absent review comments are soft gaps: review what is present and mark the unverified dimensions.
 
 Follow `references/halt-conditions.md` for the halt artifact format.
 

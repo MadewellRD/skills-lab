@@ -36,7 +36,7 @@ Constraints:
 
 - Permission filtering happens at retrieval time against the asking identity. Never rely on ranking, prompt wording, or post-hoc filtering to keep private or cross-tenant content out of an answer.
 - Citation and freshness policy are part of the contract: state what must be cited, what staleness is tolerable, and how stale results are detected.
-- Define grounding failure behavior explicitly — what the system says when evidence is absent, conflicting, or below the relevance floor. Never let an ungrounded answer pass as a grounded one.
+- Define grounding failure behavior explicitly: what the system says when evidence is absent, conflicting, or below the relevance floor. Never let an ungrounded answer pass as a grounded one.
 - Never invent corpus ownership, document counts, permission models, or freshness guarantees.
 - Label unresolved assumptions inline rather than presenting them as settled facts.
 
@@ -46,11 +46,11 @@ Corpora are independent. Per-corpus ingestion design, chunking strategy, permiss
 
 A complete run delivers the retrieval system design as one package:
 
-- RAG design spec — ingestion, chunking, embedding and index strategy, ranking, and how retrieved context is assembled into the prompt, with the reason behind each choice.
-- corpus map — per corpus: contents, size, owner, update path, permission model, and format handling.
-- retrieval eval plan — the query set, relevance judgments, the retrieval metrics used, and the relevance floor below which the system defers instead of answering.
-- citation policy — what must be cited, at what granularity, and what the system does when it cannot cite.
-- freshness policy — per corpus: staleness tolerance, reindex trigger, and behavior when content is known stale.
+- RAG design spec: ingestion, chunking, embedding and index strategy, ranking, and how retrieved context is assembled into the prompt, with the reason behind each choice.
+- corpus map: per corpus: contents, size, owner, update path, permission model, and format handling.
+- retrieval eval plan: the query set, relevance judgments, the retrieval metrics used, and the relevance floor below which the system defers instead of answering.
+- citation policy: what must be cited, at what granularity, and what the system does when it cannot cite.
+- freshness policy: per corpus: staleness tolerance, reindex trigger, and behavior when content is known stale.
 
 Complete means implementable and testable without a follow-up round trip. A chunking strategy with no size and no overlap rule, or a citation policy with no uncitable-answer behavior, has specified nothing. Per-corpus work is the parallel-safe unit; ranking policy, citation contract, and the relevance floor are single decisions across the system.
 
@@ -75,12 +75,12 @@ Permissions and corpus facts are asserted only from evidence. Where a corpus's a
 
 Default posture is to proceed and label the assumption inline. An undecided chunk size, embedding model, or index parameter is a soft gap: state the assumed value, mark it, and name the eval that would settle it. Halt only when one of the six hard-halt classes applies.
 
-- Approval — a corpus would be indexed or exposed to a user population its owner has not authorized.
-- Production or destructive — a reindex, schema change, or corpus migration would overwrite or invalidate an index that production traffic depends on.
-- Security or privacy — the design could surface private, regulated, or cross-tenant content, or permission filtering cannot be enforced at retrieval time.
-- Source conflict — corpus ownership, access policy, or freshness guarantees are documented inconsistently across sources.
-- Release integrity — the system would ship with no eval capable of establishing retrieval quality, grounding, or citation correctness.
-- Connector unreachable — the corpus, its permission model, or the existing index definition exists but cannot be read.
+- Approval: a corpus would be indexed or exposed to a user population its owner has not authorized.
+- Production or destructive: a reindex, schema change, or corpus migration would overwrite or invalidate an index that production traffic depends on.
+- Security or privacy: the design could surface private, regulated, or cross-tenant content, or permission filtering cannot be enforced at retrieval time.
+- Source conflict: corpus ownership, access policy, or freshness guarantees are documented inconsistently across sources.
+- Release integrity: the system would ship with no eval capable of establishing retrieval quality, grounding, or citation correctness.
+- Connector unreachable: the corpus, its permission model, or the existing index definition exists but cannot be read.
 
 ## Downstream handoffs
 
@@ -103,7 +103,7 @@ Default posture is to proceed and label the assumption inline. An undecided chun
 - State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
-- Passing means every corpus carries an owner and a permission rule enforced at retrieval time, the citation and freshness policy is stated, grounding failure behavior is defined, and retrieval quality has a named eval — each traced to a source fact or a labeled assumption.
+- Passing means every corpus carries an owner and a permission rule enforced at retrieval time, the citation and freshness policy is stated, grounding failure behavior is defined, and retrieval quality has a named eval, each traced to a source fact or a labeled assumption.
 
 ## Capability baseline
 

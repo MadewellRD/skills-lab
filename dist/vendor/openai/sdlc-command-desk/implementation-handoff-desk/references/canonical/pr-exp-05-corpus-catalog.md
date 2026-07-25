@@ -7,7 +7,7 @@ Halt and report if branch or path exists.
 Tool location: add as a new subcommand on engine/tools/md-compat-harness, invoked as:
   cargo run -p md-compat-harness -- corpus-catalog --root <PRESET_DIR> --output <DIR>
 
-Output: writes <DIR>/corpus-catalog.json (machine-readable) and <DIR>/corpus-catalog.md (human-readable summary). Both files written deterministically — same input always produces identical output (sort keys, stable iteration order, no timestamps).
+Output: writes <DIR>/corpus-catalog.json (machine-readable) and <DIR>/corpus-catalog.md (human-readable summary). Both files written deterministically; same input always produces identical output (sort keys, stable iteration order, no timestamps).
 
 What the tool analyzes per preset:
 
@@ -29,7 +29,7 @@ HLSL SHADER SOURCES (use existing inspect_legacy_shader_source from md-render-wg
 For each warp_1 and comp_1 source:
 - Observed intrinsics (Rewrite-mode and Helper-mode classification)
 - Unknown function calls (the LegacyShaderInstrumentation.unknown_function_calls field)
-- Type constructors used (float, float2, float3, float4, float2x2, float3x3, float4x3, float4x4) — write a small tokenizer that finds these as call-shape identifiers
+- Type constructors used (float, float2, float3, float4, float2x2, float3x3, float4x3, float4x4), write a small tokenizer that finds these as call-shape identifiers
 - Swizzle patterns (count distinct swizzle masks: .x, .xy, .xyz, .xyzw, .rgb, .yzx, etc.)
 - Ternary nesting depth (parse expressions and find max nesting of ?: operators)
 - Preprocessor directives (#define, #ifdef, #pragma, etc.)
@@ -47,10 +47,10 @@ Across all EEL scripts and HLSL sources combined, tally references to:
 
 CROSS-REFERENCE AGAINST SUPPORT TABLES:
 After aggregation, generate gap reports:
-- HLSL function calls in corpus but NOT in legacy_shader_intrinsic_specs() Rewrite/Helper catalog AND not in ALLOWED_FUNCTION_CALLS pass-through list AND not in ALLOWED_TYPE_CONSTRUCTORS — these are the unknown intrinsics that need translator coverage. List with frequency and example preset path.
-- EEL function calls in corpus but NOT in md-eel's evaluator function table — these are unknown EEL builtins. List with frequency and example preset path.
-- Q-bank references where any preset uses q33..q64 — flags presets that require extended q profile.
-- Any preset that fails md-core parsing — list with file path and parse error.
+- HLSL function calls in corpus but NOT in legacy_shader_intrinsic_specs() Rewrite/Helper catalog AND not in ALLOWED_FUNCTION_CALLS pass-through list AND not in ALLOWED_TYPE_CONSTRUCTORS, these are the unknown intrinsics that need translator coverage. List with frequency and example preset path.
+- EEL function calls in corpus but NOT in md-eel's evaluator function table: these are unknown EEL builtins. List with frequency and example preset path.
+- Q-bank references where any preset uses q33..q64: flags presets that require extended q profile.
+- Any preset that fails md-core parsing: list with file path and parse error.
 
 OUTPUT FORMAT for corpus-catalog.json:
 {
@@ -112,7 +112,7 @@ Per-PR guardrails:
 - cargo test -p md-compat-harness must exit zero
 - cargo clippy -p md-compat-harness --all-targets -- -D warnings must exit zero
 - cargo fmt --all -- --check must exit zero
-- The tool must be deterministic — running twice on the same input produces byte-identical JSON output (this is testable: in the test suite, run on a small fixture corpus twice and assert hash equality)
+- The tool must be deterministic: running twice on the same input produces byte-identical JSON output (this is testable: in the test suite, run on a small fixture corpus twice and assert hash equality)
 - Add at least 3 unit tests:
   1. corpus_catalog_aggregates_eel_function_frequencies_across_presets
   2. corpus_catalog_surfaces_unknown_hlsl_calls_with_example_preset_path

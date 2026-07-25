@@ -46,11 +46,11 @@ Sources and shards are independent. Per-source rights review, quality assessment
 
 One run delivers the whole curation package:
 
-- dataset curation plan — sources, volumes, inclusion and exclusion rules, rights status per source, and the assembly order.
-- labeling guide — label schema, definitions, boundary cases, adjudication rule, and the agreement expectation. Complete when two labelers using it independently resolve the same edge case the same way.
-- split policy — train, validation, and test construction, the leakage controls between them, and what keeps a held-out split held out.
-- privacy review inputs — sensitive-field classification, retention, access, and the handling constraint per source.
-- dataset validation checklist — the checks that must pass before the set is used, each with an explicit pass condition.
+- dataset curation plan: sources, volumes, inclusion and exclusion rules, rights status per source, and the assembly order.
+- labeling guide: label schema, definitions, boundary cases, adjudication rule, and the agreement expectation. Complete when two labelers using it independently resolve the same edge case the same way.
+- split policy: train, validation, and test construction, the leakage controls between them, and what keeps a held-out split held out.
+- privacy review inputs: sensitive-field classification, retention, access, and the handling constraint per source.
+- dataset validation checklist: the checks that must pass before the set is used, each with an explicit pass condition.
 
 Per-source review is the parallel-safe unit; split assignment and cross-source deduplication stay a single global pass over the combined set.
 
@@ -75,12 +75,12 @@ Delivering all five is not license to assert facts about data nobody inspected. 
 
 Default posture is to proceed and label the assumption inline. An unknown record count or an undecided balancing ratio is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — a source would be used beyond the consent, license, or contractual scope its owner granted.
-- Production or destructive — a curation step would overwrite, delete, or re-split a dataset that a shipped eval baseline depends on.
-- Security or privacy — regulated, personal, or customer-confidential records would be included, exported, or sent for labeling without the controls that data class requires.
-- Source conflict — license, consent, or provenance records disagree about whether a source may be used or for what purpose.
-- Release integrity — a dataset would be used as release evidence while a contamination path between training data and held-out splits remains open.
-- Connector unreachable — the source data, license records, or existing split definitions exist but cannot be read.
+- Approval: a source would be used beyond the consent, license, or contractual scope its owner granted.
+- Production or destructive: a curation step would overwrite, delete, or re-split a dataset that a shipped eval baseline depends on.
+- Security or privacy: regulated, personal, or customer-confidential records would be included, exported, or sent for labeling without the controls that data class requires.
+- Source conflict: license, consent, or provenance records disagree about whether a source may be used or for what purpose.
+- Release integrity: a dataset would be used as release evidence while a contamination path between training data and held-out splits remains open.
+- Connector unreachable: the source data, license records, or existing split definitions exist but cannot be read.
 
 ## Downstream handoffs
 

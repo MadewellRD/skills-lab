@@ -30,11 +30,11 @@ Research named prospects or prospect lists and produce concise, source-backed le
 
 ## Workflow
 
-**Outcome.** A ranked lead list with per-lead briefs: fit against the stated ICP, the evidence behind that fit, a recommended angle, the missing data, and a next-step recommendation — ready for outreach that this desk does not itself send.
+**Outcome.** A ranked lead list with per-lead briefs: fit against the stated ICP, the evidence behind that fit, a recommended angle, the missing data, and a next-step recommendation, ready for outreach that this desk does not itself send.
 
-**Constraints.** Carry the sales workflow packet forward and update it in place rather than re-deriving state already recorded. Every contact detail, title, reporting line, company fact, and buying signal is either sourced or absent — never fabricate contact data, org structure, or intent, and label any enrichment field whose confidence is low. Respect exclusion rules, suppression lists, and regional data-protection constraints on personal data at research time, not later at send time. This desk produces drafts and lists; it does not write to the CRM and does not send outbound.
+**Constraints.** Carry the sales workflow packet forward and update it in place rather than re-deriving state already recorded. Every contact detail, title, reporting line, company fact, and buying signal is either sourced or absent, never fabricate contact data, org structure, or intent, and label any enrichment field whose confidence is low. Respect exclusion rules, suppression lists, and regional data-protection constraints on personal data at research time, not later at send time. This desk produces drafts and lists; it does not write to the CRM and does not send outbound.
 
-**Parallel surface.** Leads and prospect accounts are independent research units — enrich, source, and score each in parallel rather than working down the list. Dedupe against existing CRM records, cross-lead ranking, and account-level roll-up are aggregate passes over the complete set, because a duplicate is a relationship between records and a ranking is a property of the whole list.
+**Parallel surface.** Leads and prospect accounts are independent research units, enrich, source, and score each in parallel rather than working down the list. Dedupe against existing CRM records, cross-lead ranking, and account-level roll-up are aggregate passes over the complete set, because a duplicate is a relationship between records and a ranking is a property of the whole list.
 
 **Acceptance bar.** Every lead carries a fit score against the stated ICP criteria, every asserted fact names its source, every low-confidence field is labeled, and every lead is marked as new or already present in the CRM. A lead whose contact data could not be sourced appears with the gap named rather than with a plausible guess in the field.
 
@@ -49,11 +49,11 @@ A complete run returns the full research set across the whole list, not a sample
 - missing data and risk notes
 - next-step recommendation
 
-Ranking is a property of the complete list, so a partial pass does not produce an incomplete ranking — it produces a wrong one.
+Ranking is a property of the complete list, so a partial pass does not produce an incomplete ranking; it produces a wrong one.
 
 Each brief is done when someone could act on it without repeating the research. It carries the fit score against the stated ICP criteria and the evidence behind it, the recommended angle and why it fits this account, the named gaps, and whether the lead is new or already present in the CRM. A brief that restates the company's own marketing copy is not research.
 
-Producing a brief for every lead is never a reason to invent one. Contact details, titles, reporting lines, company facts, and buying signals are either sourced or absent; a low-confidence enrichment field is labelled as such, and a lead whose contact data could not be sourced ships with the gap named rather than a guessed email pattern in the field. Wrong contact data is not a formatting error — it reaches a real person, and a fabricated title or funding event survives into the first call. Exclusion rules, suppression lists, and regional data-protection constraints apply at research time. This desk produces lists and drafts: a full set does not write to the CRM and does not send outbound. Leads and prospect accounts are independent research units inside the parallel surface declared in Workflow.
+Producing a brief for every lead is never a reason to invent one. Contact details, titles, reporting lines, company facts, and buying signals are either sourced or absent; a low-confidence enrichment field is labelled as such, and a lead whose contact data could not be sourced ships with the gap named rather than a guessed email pattern in the field. Wrong contact data is not a formatting error; it reaches a real person, and a fabricated title or funding event survives into the first call. Exclusion rules, suppression lists, and regional data-protection constraints apply at research time. This desk produces lists and drafts: a full set does not write to the CRM and does not send outbound. Leads and prospect accounts are independent research units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 
@@ -72,14 +72,14 @@ Producing a brief for every lead is never a reason to invent one. Contact detail
 
 Proceed by default on reversible work and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — an outbound send, a sequence enrollment, or a customer-facing action is requested without explicit approval. Hard halt: this desk researches and ranks, it does not contact.
-- **Production or destructive** — the request is to write leads into the CRM, enrich existing records in place, or import a list rather than to produce one.
-- **Security or privacy** — sourcing or storing the requested personal data would breach consent, regional data-protection rules, or a suppression or do-not-contact instruction. This applies at research time, not only at send time.
-- **Source conflict** — CRM records and enrichment sources genuinely disagree on identity, employment, or ownership such that the lead may be a duplicate of an existing relationship. Flag the collision; do not create a second record path.
-- **Release integrity** — a lead brief is about to present unverified contact data, reporting lines, or buying intent as established fact.
-- **Connector unreachable** — a required CRM or enrichment source exists but cannot be read, so dedupe against existing records is impossible.
+- **Approval**: an outbound send, a sequence enrollment, or a customer-facing action is requested without explicit approval. Hard halt: this desk researches and ranks, it does not contact.
+- **Production or destructive**: the request is to write leads into the CRM, enrich existing records in place, or import a list rather than to produce one.
+- **Security or privacy**: sourcing or storing the requested personal data would breach consent, regional data-protection rules, or a suppression or do-not-contact instruction. This applies at research time, not only at send time.
+- **Source conflict**: CRM records and enrichment sources genuinely disagree on identity, employment, or ownership such that the lead may be a duplicate of an existing relationship. Flag the collision; do not create a second record path.
+- **Release integrity**: a lead brief is about to present unverified contact data, reporting lines, or buying intent as established fact.
+- **Connector unreachable**: a required CRM or enrichment source exists but cannot be read, so dedupe against existing records is impossible.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing ICP means proposing one from the accounts already in the CRM, labeling it as proposed, and ranking against it. Unavailable or low-confidence contact detail is reported as missing or labeled low confidence — never filled with a plausible address, title, or reporting line.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing ICP means proposing one from the accounts already in the CRM, labeling it as proposed, and ranking against it. Unavailable or low-confidence contact detail is reported as missing or labeled low confidence, never filled with a plausible address, title, or reporting line.
 
 ## Downstream handoffs
 

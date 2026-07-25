@@ -19,7 +19,7 @@ Plan iOS backend integration for app/game work: APIs, auth, sync, push, payments
 
 **Grounding.** Work from architecture, API docs, OpenAPI/schema files, auth docs, backend service configuration facts, backend issues, credentials policy, and existing integration code. Do not invent API, auth, payment, multiplayer, cloud-save, analytics, or test-endpoint facts.
 
-**Parallel surface.** Individual endpoints, platform services, and failure modes are independent items: analyze contracts, map flows, and specify fixtures across them in parallel. The auth and session model, the shared retry and offline policy, and the assembled failure-mode matrix are aggregate — they must hold consistently across every call, so settle them once the per-item analysis exists.
+**Parallel surface.** Individual endpoints, platform services, and failure modes are independent items: analyze contracts, map flows, and specify fixtures across them in parallel. The auth and session model, the shared retry and offline policy, and the assembled failure-mode matrix are aggregate, they must hold consistently across every call, so settle them once the per-item analysis exists.
 
 **Acceptance bar.** Integration scope is clear when every call the app or game makes is tied to a named contract or marked unspecified; the auth and session model states refresh and failure behavior; each failure mode has a defined client behavior; fixtures or mocks exist for every contract a test must exercise; and no credential, endpoint, or platform-service fact is asserted without a source.
 
@@ -42,7 +42,7 @@ A complete run delivers the integration set in one pass: the contract notes, the
 
 The bar is that a client engineer can implement the calls and their failure paths without asking a question. Each endpoint or platform service carries its request and response shape, its auth requirement, its retry and offline behaviour, and what the app does on each failure; the failure-mode matrix covers timeout, connection loss, token expiry, partial data, version skew, and the push, purchase, or game-service failures that actually apply; each fixture names the case it pins. Rows with empty cells are not a matrix.
 
-Completing the set is not permission to invent an interface. An endpoint, field, error code, entitlement, scope, quota, or platform-service behaviour that no contract, doc, or repo evidence establishes is marked unverified with the source that would confirm it — an invented error code ships as a failure path nobody handles. Endpoints, platform services, and failure modes are independent items in the parallel surface declared in Workflow.
+Completing the set is not permission to invent an interface. An endpoint, field, error code, entitlement, scope, quota, or platform-service behaviour that no contract, doc, or repo evidence establishes is marked unverified with the source that would confirm it; an invented error code ships as a failure path nobody handles. Endpoints, platform services, and failure modes are independent items in the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -61,12 +61,12 @@ Completing the set is not permission to invent an interface. An endpoint, field,
 
 Proceed by default. A missing contract detail is normally a labeled assumption plus an open question for the backend owner, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — the work requires provisioning, configuring, or calling a live service the user has not authorized.
-- **Production or destructive** — the request would write to production data, a live payment or entitlement system, a real player's cloud save, or a production remote-config value.
-- **Security or privacy** — the integration requires real credentials, tokens, or keys, or moves personal data whose handling no source establishes.
-- **Source conflict** — API docs, schema files, and existing integration code genuinely disagree on a contract. Preserve the conflict rather than picking one.
-- **Release integrity** — an integration would be reported as verified when no fixture, contract test, or environment exists to exercise it.
-- **Connector unreachable** — an API doc, schema, or repo source exists but cannot be read.
+- **Approval**: the work requires provisioning, configuring, or calling a live service the user has not authorized.
+- **Production or destructive**: the request would write to production data, a live payment or entitlement system, a real player's cloud save, or a production remote-config value.
+- **Security or privacy**: the integration requires real credentials, tokens, or keys, or moves personal data whose handling no source establishes.
+- **Source conflict**: API docs, schema files, and existing integration code genuinely disagree on a contract. Preserve the conflict rather than picking one.
+- **Release integrity**: an integration would be reported as verified when no fixture, contract test, or environment exists to exercise it.
+- **Connector unreachable**: an API doc, schema, or repo source exists but cannot be read.
 
 Otherwise proceed: unknown endpoints, auth details, payment or store service behavior, multiplayer, leaderboard or cloud-save dependencies, test endpoints, or fixture strategy become labeled assumptions in the contract notes, each with the exact question that resolves it.
 
@@ -81,7 +81,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — issued in place of the set above when a hard halt fires, never as an extra file beside it.
+- `workflow-halt.md`: issued in place of the set above when a hard halt fires, never as an extra file beside it.
 
 A file no contract or repo evidence supports names the unverified surface rather than describing an interface nobody confirmed.
 

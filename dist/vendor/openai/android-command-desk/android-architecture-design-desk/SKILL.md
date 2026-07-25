@@ -19,7 +19,7 @@ Define Android architecture for app and game work: modules, layers, state, data 
 
 **Grounding.** Build on accepted requirements, technical discovery facts, and the repo's current structure. Do not invent repo architecture, module ownership, runtime constraints, service contracts, migration scope, or validation facts.
 
-**Ordered content that stays ordered.** Where the design includes an on-device data migration — a schema change, a storage-engine swap, or a save-format change — emit its steps as an ordered sequence and keep them ordered. The order is mandated by the device, not by this desk: a migration applied out of order against user data on a shipped install is irreversible and cannot be undone by a subsequent release. Do not collapse those steps into prose.
+**Ordered content that stays ordered.** Where the design includes an on-device data migration, a schema change, a storage-engine swap, or a save-format change, emit its steps as an ordered sequence and keep them ordered. The order is mandated by the device, not by this desk: a migration applied out of order against user data on a shipped install is irreversible and cannot be undone by a subsequent release. Do not collapse those steps into prose.
 
 **Parallel surface.** Candidate module boundaries, individual service contracts, and per-alternative trade-off analysis are independent and can be evaluated in parallel. Lane selection, the module graph, and the ADR set are aggregate: they reconcile the parallel results and run once.
 
@@ -40,11 +40,11 @@ Android PRD, discovery memo, repo facts, existing architecture docs, service con
 
 ## Expected outputs
 
-A complete run produces the full design package in one pass: the architecture brief, the ADR notes, the module and interface map, the migration plan, the risks, the validation expectations, and the packet update. They interlock — an ADR without the module map it constrains, or a migration plan without the risks that gate it, is not something an engineer can build against, so treat them as one deliverable rather than a list to choose from.
+A complete run produces the full design package in one pass: the architecture brief, the ADR notes, the module and interface map, the migration plan, the risks, the validation expectations, and the packet update. They interlock; an ADR without the module map it constrains, or a migration plan without the risks that gate it, is not something an engineer can build against, so treat them as one deliverable rather than a list to choose from.
 
 Each artifact is done when implementation could start from it. The brief names the selected lane and the alternatives that lost and why; the module map names real modules, real ownership, and the interfaces between them rather than boxes labelled by layer; the migration plan states the sequence, the reversible points, and what breaks if a step is skipped. Section headings with nothing decided underneath are a failed artifact, not a first draft.
 
-Producing everything is not licence to design past the evidence. Where no source establishes a module boundary, a dependency direction, a concurrency constraint, or a migration dependency, mark that part blocked on the named missing fact — a convincing architecture invented to fill the gap is worse than an acknowledged hole. Independent per-boundary and per-contract work is part of the parallel surface declared in Workflow.
+Producing everything is not licence to design past the evidence. Where no source establishes a module boundary, a dependency direction, a concurrency constraint, or a migration dependency, mark that part blocked on the named missing fact; a convincing architecture invented to fill the gap is worse than an acknowledged hole. Independent per-boundary and per-contract work is part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -62,12 +62,12 @@ Producing everything is not licence to design past the evidence. Where no source
 
 Proceed by default. An unresolved design detail is normally a labeled assumption plus an open question, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — the architecture commits to a platform, vendor, or cost decision that a human owner must authorize.
-- **Production or destructive** — the design requires a data migration, storage swap, or schema change against live user data with no approved rollback path.
-- **Security or privacy** — a boundary decision determines how personal data, credentials, or keys are stored or transmitted and no source establishes the requirement.
-- **Source conflict** — repo structure, existing architecture docs, and stated requirements genuinely disagree on a load-bearing boundary. Preserve the conflict.
-- **Release integrity** — an ADR would record a decision as accepted when no source shows it was accepted, or validation gates cannot be tied to any evidence.
-- **Connector unreachable** — repo or architecture-doc access exists but cannot be read.
+- **Approval**: the architecture commits to a platform, vendor, or cost decision that a human owner must authorize.
+- **Production or destructive**: the design requires a data migration, storage swap, or schema change against live user data with no approved rollback path.
+- **Security or privacy**: a boundary decision determines how personal data, credentials, or keys are stored or transmitted and no source establishes the requirement.
+- **Source conflict**: repo structure, existing architecture docs, and stated requirements genuinely disagree on a load-bearing boundary. Preserve the conflict.
+- **Release integrity**: an ADR would record a decision as accepted when no source shows it was accepted, or validation gates cannot be tied to any evidence.
+- **Connector unreachable**: repo or architecture-doc access exists but cannot be read.
 
 Otherwise proceed: an unknown API contract, runtime constraint, architecture lane, or migration scope becomes a labeled assumption in the ADR plus an open question routed to the desk that can resolve it.
 
@@ -82,7 +82,7 @@ A complete run writes all of these:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — stands in place of the set above when a hard halt fires, rather than accompanying a finished design. Where no migration is in scope, say so in the brief instead of writing an empty migration plan.
+- `workflow-halt.md`: stands in place of the set above when a hard halt fires, rather than accompanying a finished design. Where no migration is in scope, say so in the brief instead of writing an empty migration plan.
 
 Where a file has no evidential basis, it names what is missing. A design document is never padded out to fill its slot in the list.
 

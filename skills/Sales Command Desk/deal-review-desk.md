@@ -32,11 +32,11 @@ Prepare internal deal review artifacts with clear risks, asks, commercial impact
 
 **Outcome.** A deal review memo: the current deal state, the risks with their evidence, the specific executive asks, the commercial impact, a decision log, and the recommended next actions.
 
-**Ordered gate (mandated — keep this order).** A stage, amount, close-date, or forecast-category change is recommended in the memo and executed only after the approval it requires — recommendation, then approval, then mutation. The order is mandated because these fields drive the forecast that leadership commits on; a field changed ahead of its approval silently rewrites a number other people have already reported.
+**Ordered gate (mandated, keep this order).** A stage, amount, close-date, or forecast-category change is recommended in the memo and executed only after the approval it requires, recommendation, then approval, then mutation. The order is mandated because these fields drive the forecast that leadership commits on; a field changed ahead of its approval silently rewrites a number other people have already reported.
 
-**Constraints.** Carry the sales workflow packet forward and update it in place. The CRM opportunity record is primary for amount, stage, close date, and owner; deal notes explain risk but do not override explicit fields. Keep facts separate from recommendations throughout — an executive ask is only actionable if the reader can see which part is evidence and which is judgment. Never state a commercial impact figure that no source supports.
+**Constraints.** Carry the sales workflow packet forward and update it in place. The CRM opportunity record is primary for amount, stage, close date, and owner; deal notes explain risk but do not override explicit fields. Keep facts separate from recommendations throughout, an executive ask is only actionable if the reader can see which part is evidence and which is judgment. Never state a commercial impact figure that no source supports.
 
-**Parallel surface.** Deals in the review set are independent — assemble the state, risks, asks, and commercial impact for each in parallel rather than one deal at a time. The portfolio roll-up, cross-deal risk themes, and the prioritization of executive asks are a single aggregate pass once every deal is assembled, because concentration risk and ask prioritization are properties of the whole set.
+**Parallel surface.** Deals in the review set are independent, assemble the state, risks, asks, and commercial impact for each in parallel rather than one deal at a time. The portfolio roll-up, cross-deal risk themes, and the prioritization of executive asks are a single aggregate pass once every deal is assembled, because concentration risk and ask prioritization are properties of the whole set.
 
 **Acceptance bar.** Every deal fact names its source and its recency, every risk names the evidence behind it and what would retire it, every ask names the decision owner and what is being asked for, and every recommendation is distinguishable from the facts it rests on. A commercial impact that cannot be quantified is stated as unquantified with the missing input named.
 
@@ -55,7 +55,7 @@ An ask without its risk and its commercial impact is not decidable, so the revie
 
 Each part is done when an executive could decide from it inside the meeting. Every deal fact names its source and its recency; every risk names the evidence behind it and what would retire it; every ask names the decision owner and exactly what is being asked for; every recommendation is separable from the facts it rests on. A memo that summarizes the deal without stating the decision required has not finished.
 
-Completeness is not permission to quantify what is unquantified. A commercial impact figure, amount, close date, or committed customer position that no source supports is stated as unquantified or unknown with the missing input named — a fabricated number in a deal review travels straight into the forecast and gets reported upward before anyone traces it back. The memo recommends stage, amount, close-date, and forecast-category changes; it does not execute them, and the recommendation-then-approval-then-mutation order in Workflow holds no matter how obvious the recommendation looks. Deals in the review set are independent and part of the parallel surface declared there.
+Completeness is not permission to quantify what is unquantified. A commercial impact figure, amount, close date, or committed customer position that no source supports is stated as unquantified or unknown with the missing input named; a fabricated number in a deal review travels straight into the forecast and gets reported upward before anyone traces it back. The memo recommends stage, amount, close-date, and forecast-category changes; it does not execute them, and the recommendation-then-approval-then-mutation order in Workflow holds no matter how obvious the recommendation looks. Deals in the review set are independent and part of the parallel surface declared there.
 
 ## Workflow packet fields
 
@@ -74,14 +74,14 @@ Completeness is not permission to quantify what is unquantified. A commercial im
 
 Proceed by default on reversible work and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — a stage, amount, close-date, or forecast-category mutation is requested without approval, or an executive ask would commit discount, resources, or terms. Hard halt: these fields feed a forecast other people have already reported.
-- **Production or destructive** — the request is to execute the field changes rather than to recommend them.
-- **Security or privacy** — the memo would expose customer-confidential commercial terms or personal data to an audience beyond the review.
-- **Source conflict** — deal amount, close date, forecast category, or owner genuinely conflicts across sources. Hard halt on mutating the field; present both readings in the memo with their sources and let the review resolve it. Do not reconcile a forecast-bearing field on your own judgment.
-- **Release integrity** — a commercial impact figure or a deal verdict would be stated as established when the evidence cannot carry it.
-- **Connector unreachable** — a required CRM, notes, or pricing source exists but cannot be read, so deal state cannot be established.
+- **Approval**: a stage, amount, close-date, or forecast-category mutation is requested without approval, or an executive ask would commit discount, resources, or terms. Hard halt: these fields feed a forecast other people have already reported.
+- **Production or destructive**: the request is to execute the field changes rather than to recommend them.
+- **Security or privacy**: the memo would expose customer-confidential commercial terms or personal data to an audience beyond the review.
+- **Source conflict**: deal amount, close date, forecast category, or owner genuinely conflicts across sources. Hard halt on mutating the field; present both readings in the memo with their sources and let the review resolve it. Do not reconcile a forecast-bearing field on your own judgment.
+- **Release integrity**: a commercial impact figure or a deal verdict would be stated as established when the evidence cannot carry it.
+- **Connector unreachable**: a required CRM, notes, or pricing source exists but cannot be read, so deal state cannot be established.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. An unknown approval owner is recorded as an open question naming the decision that needs one — the memo is still produced, and nothing requiring that approval is executed. A commercial impact that cannot be quantified is stated as unquantified with the missing input named, rather than estimated into the memo.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. An unknown approval owner is recorded as an open question naming the decision that needs one; the memo is still produced, and nothing requiring that approval is executed. A commercial impact that cannot be quantified is stated as unquantified with the missing input named, rather than estimated into the memo.
 
 ## Downstream handoffs
 

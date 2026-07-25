@@ -32,9 +32,9 @@ Synthesize feedback from customers, users, sales, support, community, stakeholde
 
 **Outcome.** A feedback synthesis with themed clusters, explicit source weighting, retained outliers and conflicts, and a mapping from each theme to a roadmap, bug, research, or support action.
 
-**Constraints.** Weighting rules are stated before they are applied, so a reader can see why one segment counted more than another. Conflicting signals are preserved as conflicts — a theme that only holds because a dissenting source was dropped is a fabrication with citations attached. Keep the volume of a theme separate from its severity and separate again from its business impact; they are three different claims. Strip or aggregate personal data when quoting verbatims.
+**Constraints.** Weighting rules are stated before they are applied, so a reader can see why one segment counted more than another. Conflicting signals are preserved as conflicts, a theme that only holds because a dissenting source was dropped is a fabrication with citations attached. Keep the volume of a theme separate from its severity and separate again from its business impact; they are three different claims. Strip or aggregate personal data when quoting verbatims.
 
-**Parallel surface.** Feedback sources and individual feedback items are independent — normalize, tag, and code them in parallel across sources rather than processing one channel at a time. Theme clustering, source weighting, outlier detection, and conflict identification are an aggregate pass once the full corpus is coded, because a theme is defined by the whole corpus and an outlier only exists relative to it.
+**Parallel surface.** Feedback sources and individual feedback items are independent, normalize, tag, and code them in parallel across sources rather than processing one channel at a time. Theme clustering, source weighting, outlier detection, and conflict identification are an aggregate pass once the full corpus is coded, because a theme is defined by the whole corpus and an outlier only exists relative to it.
 
 **Acceptance bar.** Every theme names its contributing sources, segments, and item count; every recommended action names the theme it answers; and every conflicting signal is still visible in the output. A theme supported by a single item is labeled as such rather than presented as a pattern.
 
@@ -42,15 +42,15 @@ Synthesize feedback from customers, users, sales, support, community, stakeholde
 
 A full run delivers the synthesis and everything that makes it actionable:
 
-- **feedback synthesis** — what the corpus says, the volume and channels behind it, and the period covered.
-- **theme clusters** — each theme with its defining characteristic, frequency, representative verbatims, and the segments it comes from.
-- **severity/source weighting** — how themes are weighted by severity, source credibility, and segment, with the weighting stated openly enough that a reader can disagree with it explicitly.
-- **product action map** — per theme: the candidate response, the desk that owns it, and what it would take.
-- **open question list** — what the feedback cannot settle, what evidence would settle it, and who owns getting that evidence.
+- **feedback synthesis**: what the corpus says, the volume and channels behind it, and the period covered.
+- **theme clusters**: each theme with its defining characteristic, frequency, representative verbatims, and the segments it comes from.
+- **severity/source weighting**: how themes are weighted by severity, source credibility, and segment, with the weighting stated openly enough that a reader can disagree with it explicitly.
+- **product action map**: per theme: the candidate response, the desk that owns it, and what it would take.
+- **open question list**: what the feedback cannot settle, what evidence would settle it, and who owns getting that evidence.
 
 Depth bar: a PM could take any cluster into a prioritization conversation without rereading the raw feedback. Sources and individual items are coded in parallel across the surface already declared; clustering, weighting, and outlier detection are the aggregate pass over the full corpus.
 
-Themes are only as real as the feedback underneath them. Never write a verbatim, a customer name, a count, or a source that the corpus did not produce. A theme supported by too few items says so and stays a signal rather than a finding, and a channel that could not be read is listed as uncovered — fabricated customer voice is the fastest way to send a roadmap somewhere no customer asked for.
+Themes are only as real as the feedback underneath them. Never write a verbatim, a customer name, a count, or a source that the corpus did not produce. A theme supported by too few items says so and stays a signal rather than a finding, and a channel that could not be read is listed as uncovered; fabricated customer voice is the fastest way to send a roadmap somewhere no customer asked for.
 
 ## Workflow packet fields
 
@@ -72,12 +72,12 @@ Themes are only as real as the feedback underneath them. Never write a verbatim,
 
 Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — the synthesis is being turned into customer-facing communication, a commitment back to a customer, or a roadmap change that needs its named owner.
-- **Production or destructive** — the request is to act on the feedback by contacting customers, closing tickets, or changing account state rather than to synthesize it.
-- **Security or privacy** — verbatims, account names, or contact details would expose personal or confidential data in the artifact, **or** the feedback surfaces an active incident, user-safety, or data-exposure signal. Route that signal immediately; do not let it wait inside a synthesis pass.
-- **Source conflict** — sources materially disagree on what users are reporting. Preserve both signals with their weights; a theme built by discarding the dissenting source is not a finding.
-- **Release integrity** — a theme is about to be presented as a validated user need on evidence that cannot carry it.
-- **Connector unreachable** — a required support, CRM, research, or community source exists but cannot be read.
+- **Approval**: the synthesis is being turned into customer-facing communication, a commitment back to a customer, or a roadmap change that needs its named owner.
+- **Production or destructive**: the request is to act on the feedback by contacting customers, closing tickets, or changing account state rather than to synthesize it.
+- **Security or privacy**: verbatims, account names, or contact details would expose personal or confidential data in the artifact, **or** the feedback surfaces an active incident, user-safety, or data-exposure signal. Route that signal immediately; do not let it wait inside a synthesis pass.
+- **Source conflict**: sources materially disagree on what users are reporting. Preserve both signals with their weights; a theme built by discarding the dissenting source is not a finding.
+- **Release integrity**: a theme is about to be presented as a validated user need on evidence that cannot carry it.
+- **Connector unreachable**: a required support, CRM, research, or community source exists but cannot be read.
 
 Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A partial corpus, unknown source context, or unassigned product area is stated as a coverage limitation with the affected themes marked low confidence, not a stop.
 

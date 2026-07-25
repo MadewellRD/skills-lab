@@ -19,7 +19,7 @@ Define iOS app and game QA strategy: unit tests, instrumented tests, UI tests, s
 
 **Grounding.** Work from the PRD, architecture, implementation scope, validation commands, CI status, test files, simulator and device availability, benchmark output, issue and bug history, and gameplay scope. Do not invent test commands, device coverage, CI status, QA evidence, gameplay smoke results, or release gates.
 
-**Parallel surface.** Test cases, device and OS matrix cells, locales, and app versus game surfaces are independent: design, assign, and execute across them in parallel. Two things are not parallel — the local and CI validation sequence has real ordering constraints (build before UI test run, install before a device-driven test), and the release pass/fail roll-up is aggregate and runs once, after the per-cell results exist.
+**Parallel surface.** Test cases, device and OS matrix cells, locales, and app versus game surfaces are independent: design, assign, and execute across them in parallel. Two things are not parallel, the local and CI validation sequence has real ordering constraints (build before UI test run, install before a device-driven test), and the release pass/fail roll-up is aggregate and runs once, after the per-cell results exist.
 
 **Acceptance bar.** The QA plan is complete when every acceptance criterion maps to at least one named test or an explicit manual check; every matrix cell states whether it is covered, uncovered, or waived with rationale; each validation command is runnable as written against the repo; defect triage rules define severity and the release-blocking threshold; and each release gate names the evidence artifact that satisfies it rather than the intent behind it.
 
@@ -38,7 +38,7 @@ PRD, architecture, implementation scope, validation commands, CI status, test fi
 
 ## Expected outputs
 
-A complete run delivers the QA package together: the strategy, the test matrix, the validation command plan, the release evidence checklist, the defect triage notes, any halt conditions, and the packet update. A matrix with no commands to execute it, or an evidence checklist with no triage rules to interpret a failure, gives QA nothing to sign off against — so the set is the unit of delivery, not one item from it.
+A complete run delivers the QA package together: the strategy, the test matrix, the validation command plan, the release evidence checklist, the defect triage notes, any halt conditions, and the packet update. A matrix with no commands to execute it, or an evidence checklist with no triage rules to interpret a failure, gives QA nothing to sign off against; so the set is the unit of delivery, not one item from it.
 
 Each artifact is done when a QA engineer could execute it without inferring intent. The requirement-to-test map ties each requirement ID to the cases covering it or marks it uncovered; the device and OS matrix names real simulator and physical coverage per cell rather than a device family; the validation plan lists runnable commands in the order the build actually requires; the triage rules state severity thresholds and what blocks a submission. Physical device testing, store pre-launch coverage, and manual exploratory passes are deliverables of this desk and stay in the plan.
 
@@ -60,12 +60,12 @@ The set is never completed by claiming coverage. A test that does not exist is a
 
 Proceed by default. Missing coverage is normally recorded as a named coverage gap, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — testing requires accounts, devices, paid test infrastructure, or environments the user has not authorized.
-- **Production or destructive** — the plan would run tests against production services, real payment flows, or live player data.
-- **Security or privacy** — tests require real credentials, personal data, or production secrets as fixtures.
-- **Source conflict** — acceptance criteria, implementation scope, and existing tests genuinely disagree on expected behavior. Preserve the conflict rather than encoding one side as the assertion.
-- **Release integrity** — a release gate would be reported as passed while its evidence is absent, unrunnable, or drawn from a different build than the one shipping.
-- **Connector unreachable** — CI, test output, or repo test sources exist but cannot be read.
+- **Approval**: testing requires accounts, devices, paid test infrastructure, or environments the user has not authorized.
+- **Production or destructive**: the plan would run tests against production services, real payment flows, or live player data.
+- **Security or privacy**: tests require real credentials, personal data, or production secrets as fixtures.
+- **Source conflict**: acceptance criteria, implementation scope, and existing tests genuinely disagree on expected behavior. Preserve the conflict rather than encoding one side as the assertion.
+- **Release integrity**: a release gate would be reported as passed while its evidence is absent, unrunnable, or drawn from a different build than the one shipping.
+- **Connector unreachable**: CI, test output, or repo test sources exist but cannot be read.
 
 Otherwise proceed: an unavailable device or OS version, an unidentified validation command, or an undefined gameplay smoke path becomes a labeled coverage gap naming the evidence needed to close it, and the plan covers what can be covered.
 
@@ -80,7 +80,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — returned in place of the set above when a hard halt fires. Known defects belong in the triage notes and are not themselves a reason to halt the package.
+- `workflow-halt.md`: returned in place of the set above when a hard halt fires. Known defects belong in the triage notes and are not themselves a reason to halt the package.
 
 A file with no evidence behind it records what was not run. It never asserts coverage that did not happen in order to complete the set.
 

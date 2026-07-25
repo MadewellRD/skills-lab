@@ -32,11 +32,11 @@ Frame pricing and packaging decisions. Define packages, entitlements, monetizati
 
 **Outcome.** A pricing and packaging proposal: the decision being made, the value metric, package boundaries and entitlements, the customer/revenue/retention/operational risks, and either a rollout plan or the experiment that would resolve the remaining uncertainty.
 
-**Ordered gate (mandated — keep this order).** A pricing or entitlement change is a proposal until the named approval owner accepts it, and legal, tax, and compliance review clears *before* the change is presented as decided, published, quoted, or handed to implementation. The sequence is mandated because a price that has reached a customer cannot be un-quoted and a shipped entitlement boundary cannot be silently withdrawn. This desk produces the proposal and the approval package; it does not commit the price.
+**Ordered gate (mandated, keep this order).** A pricing or entitlement change is a proposal until the named approval owner accepts it, and legal, tax, and compliance review clears *before* the change is presented as decided, published, quoted, or handed to implementation. The sequence is mandated because a price that has reached a customer cannot be un-quoted and a shipped entitlement boundary cannot be silently withdrawn. This desk produces the proposal and the approval package; it does not commit the price.
 
 **Constraints.** Anchor packaging on a value metric that the product can actually meter and that the customer recognizes. Willingness-to-pay signals, competitor prices, and internal targets are three different inputs and stay labeled as such. Never state a price, discount, entitlement limit, or margin figure that no source provides.
 
-**Parallel surface.** Candidate packages, segments, and entitlement options are independent — evaluate the economics, risk, and customer fit of each in parallel rather than one package at a time. Plan-boundary coherence, migration impact on existing customers, and the combined revenue and retention risk assessment are an aggregate pass over the full set, because a boundary problem exists only between packages and cannibalization is only visible across the whole lineup.
+**Parallel surface.** Candidate packages, segments, and entitlement options are independent, evaluate the economics, risk, and customer fit of each in parallel rather than one package at a time. Plan-boundary coherence, migration impact on existing customers, and the combined revenue and retention risk assessment are an aggregate pass over the full set, because a boundary problem exists only between packages and cannibalization is only visible across the whole lineup.
 
 **Acceptance bar.** Every package states its value metric, entitlements, target segment, and the evidence behind its price point or the labeled assumption standing in for it. Every risk names who absorbs it. The approval package names the owner, the review gates that apply, and exactly what is being asked for.
 
@@ -44,11 +44,11 @@ Frame pricing and packaging decisions. Define packages, entitlements, monetizati
 
 A pricing run delivers the whole proposal, because a price without its entitlement map and migration risk is not something anyone can approve:
 
-- **pricing hypothesis** — the model, the value metric, the price points, and the reasoning and evidence behind each.
-- **packaging proposal** — the plan lineup, what distinguishes each tier, and the upgrade trigger between them.
-- **entitlement map** — per plan: features, limits, overage behavior, and what happens at the boundary.
-- **risk assessment** — cannibalization, existing-customer migration impact, discount and contract exposure, and likely competitive response.
-- **experiment or rollout plan** — how the change is validated or staged, the segments affected first, grandfathering, and the rollback posture.
+- **pricing hypothesis**: the model, the value metric, the price points, and the reasoning and evidence behind each.
+- **packaging proposal**: the plan lineup, what distinguishes each tier, and the upgrade trigger between them.
+- **entitlement map**: per plan: features, limits, overage behavior, and what happens at the boundary.
+- **risk assessment**: cannibalization, existing-customer migration impact, discount and contract exposure, and likely competitive response.
+- **experiment or rollout plan**: how the change is validated or staged, the segments affected first, grandfathering, and the rollback posture.
 
 Complete means a pricing owner could take this into an approval conversation without a follow-up round trip. An entitlement map with tier names and no limits has specified nothing. Candidate packages, segments, and entitlement options evaluate in parallel across the surface already declared; boundary coherence and cannibalization are the aggregate pass over the lineup.
 
@@ -75,16 +75,16 @@ Delivering the full proposal never licenses inventing its inputs. Willingness-to
 
 Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — a price, discount, entitlement limit, or packaging boundary is being treated as decided, quoted, published, or handed to implementation without its named approval owner. Hard halt: this desk proposes and does not commit.
-- **Production or destructive** — the request is to publish pricing, change entitlements on live accounts, quote a customer, or alter billing configuration rather than to propose.
-- **Security or privacy** — the analysis would expose customer contract terms, negotiated rates, or confidential commercial data in the artifact.
-- **Source conflict** — billing, CRM, and product sources genuinely disagree on current plans, entitlements, or realized price. A packaging proposal built on a contested baseline moves real revenue.
-- **Release integrity** — a pricing change would go external on willingness-to-pay or margin evidence that cannot carry it.
-- **Connector unreachable** — a required billing, CRM, usage, or contract source exists but cannot be read.
+- **Approval**: a price, discount, entitlement limit, or packaging boundary is being treated as decided, quoted, published, or handed to implementation without its named approval owner. Hard halt: this desk proposes and does not commit.
+- **Production or destructive**: the request is to publish pricing, change entitlements on live accounts, quote a customer, or alter billing configuration rather than to propose.
+- **Security or privacy**: the analysis would expose customer contract terms, negotiated rates, or confidential commercial data in the artifact.
+- **Source conflict**: billing, CRM, and product sources genuinely disagree on current plans, entitlements, or realized price. A packaging proposal built on a contested baseline moves real revenue.
+- **Release integrity**: a pricing change would go external on willingness-to-pay or margin evidence that cannot carry it.
+- **Connector unreachable**: a required billing, CRM, usage, or contract source exists but cannot be read.
 
 Legal, tax, and compliance review remains a hard gate whenever it applies; it is not waived by confidence in the analysis.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. An unknown business model detail, buyer definition, or operational limit is a labeled assumption plus an open question — model the packaging with the assumption visible rather than stopping, and never fill a price, rate, or limit that no source provides.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. An unknown business model detail, buyer definition, or operational limit is a labeled assumption plus an open question; model the packaging with the assumption visible rather than stopping, and never fill a price, rate, or limit that no source provides.
 
 ## Downstream handoffs
 

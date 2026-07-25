@@ -15,7 +15,7 @@ This desk coordinates model, prompt, tool, agent, retrieval/RAG, dataset, synthe
 
 Do not stop with a bare next-desk recommendation when the next stage can be completed from available facts. Complete the current stage, preserve the workflow packet, and continue when `ready_to_continue: true`.
 
-Return `Workflow Halt` only for the six hard-halt classes: a missing approval, a production or destructive action, a security or privacy exposure, a genuine source conflict on a load-bearing fact, a release-integrity gap, or a required connector that is unreachable. Everything else — including evidence that is merely absent rather than unreachable — is a soft gap: proceed and label the assumption inline so it stays auditable and cheap to correct.
+Return `Workflow Halt` only for the six hard-halt classes: a missing approval, a production or destructive action, a security or privacy exposure, a genuine source conflict on a load-bearing fact, a release-integrity gap, or a required connector that is unreachable. Everything else; including evidence that is merely absent rather than unreachable; is a soft gap: proceed and label the assumption inline so it stays auditable and cheap to correct.
 
 ## Workflow modes
 
@@ -76,7 +76,7 @@ Treat conflicts in this order: repo evidence and eval/telemetry first, explicit 
 
 ## Output behavior
 
-The workflow mode selects which artifact set a run delivers — it does not license producing the least. Two artifacts are constant in every mode: the workflow packet, updated in place and carrying source facts, decisions, assumptions, and halt state forward, and a report-out under `work/reports-out/` when that path is available.
+The workflow mode selects which artifact set a run delivers; it does not license producing the least. Two artifacts are constant in every mode: the workflow packet, updated in place and carrying source facts, decisions, assumptions, and halt state forward, and a report-out under `work/reports-out/` when that path is available.
 
 On top of that constant pair, the mode's own set ships whole in the same run:
 

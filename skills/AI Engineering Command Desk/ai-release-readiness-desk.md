@@ -44,15 +44,15 @@ Within step 2 the gates are independent: assessing eval status, safety review st
 
 A readiness run returns the whole decision package together, since a verdict without its gate evidence is not reviewable:
 
-- go/no-go report — the verdict, the per-gate status behind it, and the evidence each status rests on.
-- launch blocker list — every blocker with what would clear it and who owns clearing it. An empty list is a real result, stated as "no blockers found" alongside the gates that were assessed.
-- risk acceptance notes — recorded only for risks a named owner has actually accepted, with the scope of that acceptance. Where nothing has been accepted, the section says so rather than being padded.
-- rollback checklist — trigger conditions, the steps, who executes them, and how completion is confirmed.
-- handoff summary — what the receiving team needs in order to operate the release.
+- go/no-go report: the verdict, the per-gate status behind it, and the evidence each status rests on.
+- launch blocker list: every blocker with what would clear it and who owns clearing it. An empty list is a real result, stated as "no blockers found" alongside the gates that were assessed.
+- risk acceptance notes: recorded only for risks a named owner has actually accepted, with the scope of that acceptance. Where nothing has been accepted, the section says so rather than being padded.
+- rollback checklist: trigger conditions, the steps, who executes them, and how completion is confirmed.
+- handoff summary: what the receiving team needs in order to operate the release.
 
 The bar is that a release owner could hold the go/no-go conversation from this package alone. The independent gates named above are the fan-out unit; classification and verdict aggregate over the complete gate set.
 
-Completeness applies to the set, never to the contents of a gate. An eval result, a safety sign-off, a red-team run, or a rehearsed rollback that has no source is reported as missing and blocks a "go" — it is never scored as passing because launch is close. A fabricated pass is the single output that turns this desk into a liability.
+Completeness applies to the set, never to the contents of a gate. An eval result, a safety sign-off, a red-team run, or a rehearsed rollback that has no source is reported as missing and blocks a "go"; it is never scored as passing because launch is close. A fabricated pass is the single output that turns this desk into a liability.
 
 ## Workflow packet fields
 
@@ -74,12 +74,12 @@ Completeness applies to the set, never to the contents of a gate. An eval result
 
 Default posture is to proceed and label the assumption inline. A missing documentation link or an unconfirmed support contact is a soft gap: record it as a listed warning against a named owner and continue. Halt only when one of the six hard-halt classes applies.
 
-- Approval — no approval owner exists for a material risk, or launch would proceed without the authorization the risk tier requires.
-- Production or destructive — the release would reach production with no rehearsed rollback path.
-- Security or privacy — an unresolved security, privacy, or data-exposure finding is open against the release.
-- Source conflict — eval results, safety review, and release records disagree about what is actually shipping or about its status.
-- Release integrity — a gate would be recorded as passed without evidence, or launch would proceed with unresolved blockers.
-- Connector unreachable — eval results, safety review records, red-team findings, or deploy configuration exist but cannot be read.
+- Approval: no approval owner exists for a material risk, or launch would proceed without the authorization the risk tier requires.
+- Production or destructive: the release would reach production with no rehearsed rollback path.
+- Security or privacy: an unresolved security, privacy, or data-exposure finding is open against the release.
+- Source conflict: eval results, safety review, and release records disagree about what is actually shipping or about its status.
+- Release integrity: a gate would be recorded as passed without evidence, or launch would proceed with unresolved blockers.
+- Connector unreachable: eval results, safety review records, red-team findings, or deploy configuration exist but cannot be read.
 
 ## Downstream handoffs
 

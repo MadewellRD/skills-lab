@@ -93,6 +93,18 @@ print("  set-per-run + guard        : verified semantically, not regex-gated")
 print("                               (see docs/model-upgrade-playbook.md)")
 fail += len(regressed) > 0
 
+head("3c. HOUSE STYLE")
+# Mechanically decidable, unlike the prose checks above, so this one is gated.
+em = []
+for f in (glob.glob('skills/**/*.md', recursive=True) + glob.glob('kernel/**/*.md', recursive=True)
+          + glob.glob('docs/*.md') + glob.glob('profiles/**/*.yaml', recursive=True)
+          + glob.glob('dist/**/*.md', recursive=True)):
+    n = open(f, encoding='utf-8').read().count('\u2014')
+    if n: em.append((f, n))
+print(f"  em dashes                  : {sum(n for _, n in em)} (0 required)")
+for f, n in em[:6]: print(f"      {n:>3}  {f}")
+fail += len(em) > 0
+
 head("4. GOVERNANCE INVARIANTS  (must survive every upgrade)")
 INV = {'never-invent rule': r'\b(never invent|do not invent|must not invent)\b',
        'fact vs assumption separation': r'\b(assumption|assumptions)\b',

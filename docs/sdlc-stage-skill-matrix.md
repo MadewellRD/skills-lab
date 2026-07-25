@@ -11,10 +11,10 @@ This document defines the full software development lifecycle coverage map for t
 
 Initial seed sources:
 
-- `MadewellRD/skills-lab/docs/sdlc-skills-research-map.md` — local project research map and operating principles.
-- `Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC` — public repo explicitly containing prompts, skills, hooks, agents, and docs for an SDLC workflow.
-- `kcenon/claude_code_agent` — AD-SDLC source describing greenfield, enhancement, and GitHub issue import pipelines, plus 35 specialized agents across the lifecycle.
-- `VoltAgent/awesome-agent-skills` — curated index of public agent skills from official teams and community sources.
+- `MadewellRD/skills-lab/docs/sdlc-skills-research-map.md`: local project research map and operating principles.
+- `Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`: public repo explicitly containing prompts, skills, hooks, agents, and docs for an SDLC workflow.
+- `kcenon/claude_code_agent`: AD-SDLC source describing greenfield, enhancement, and GitHub issue import pipelines, plus 35 specialized agents across the lifecycle.
+- `VoltAgent/awesome-agent-skills`: curated index of public agent skills from official teams and community sources.
 - Additional public GitHub searches for PRD, code-review, threat-modeling, security, CI/CD, validation, and lifecycle-specific skills.
 
 ## Naming convention
@@ -357,7 +357,7 @@ Purpose: convert scoped work into executable coding-agent instructions.
 
 Candidate skills:
 
-- `pr-command-desk` — completed anchor
+- `pr-command-desk`: completed anchor
 - `branch-hygiene-desk`
 - `merge-train-desk`
 - `halt-resume-desk` if later split out; otherwise keep inside `pr-command-desk`
@@ -727,28 +727,28 @@ Connector grounding:
 
 Do not build all skills simultaneously. Build in dependency order.
 
-### Sprint A — Lifecycle foundation
+### Sprint A; Lifecycle foundation
 
 1. `product-requirements-desk`
 2. `technical-discovery-desk`
 3. `architecture-design-desk`
 4. `issue-planning-desk`
 
-### Sprint B — Existing implementation lane
+### Sprint B; Existing implementation lane
 
 5. `review-quality-desk`
 6. `test-strategy-desk`
 7. `verification-desk`
 8. `docs-traceability-desk`
 
-### Sprint C — Security and delivery lane
+### Sprint C; Security and delivery lane
 
 9. `security-threat-desk`
 10. `ci-failure-desk`
 11. `release-operations-desk`
 12. `deployment-desk`
 
-### Sprint D — Operations and lifecycle hardening
+### Sprint D; Operations and lifecycle hardening
 
 13. `observability-readiness-desk`
 14. `incident-response-desk`

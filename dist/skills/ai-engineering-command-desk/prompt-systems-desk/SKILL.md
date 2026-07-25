@@ -79,7 +79,7 @@ Treat prompt text as one control layer, not as an authorization system. If a pro
 
 ## Output behavior
 
-The workflow mode selects which artifact set a complete run delivers — not how little of it to produce. In every mode short of a halt, the core prompt system ships whole:
+The workflow mode selects which artifact set a complete run delivers, not how little of it to produce. In every mode short of a halt, the core prompt system ships whole:
 
 - prompt architecture
 - instruction hierarchy
@@ -92,7 +92,7 @@ Mode adds to that core rather than replacing it. `prompt_revision` and `prompt_r
 
 The `Workflow Halt` report is the one true alternative: it is returned *instead of* the artifact set when a hard halt class applies, naming the exact missing evidence and the resume requirements rather than shipping a partial system.
 
-Each artifact is done when a prompt engineer could apply it without a follow-up round trip — the instruction hierarchy states precedence between layers, the context assembly contract states order and delimiters, the output contract states both the shape and the failure shape, and every behavior contract has at least one fixture that exercises it. A named section with no contract under it is a gap, not a draft. Variants, fixtures, and cases fan out across the parallel surface already declared.
+Each artifact is done when a prompt engineer could apply it without a follow-up round trip; the instruction hierarchy states precedence between layers, the context assembly contract states order and delimiters, the output contract states both the shape and the failure shape, and every behavior contract has at least one fixture that exercises it. A named section with no contract under it is a gap, not a draft. Variants, fixtures, and cases fan out across the parallel surface already declared.
 
 Shipping the full set never means inventing its contents. A shipped prompt version, a prior eval result, a policy, or a tool boundary that is not in evidence is recorded as unverified. Where a fixture would need an expected output nobody has established, the fixture is marked as needing one rather than handed a plausible answer.
 
@@ -138,12 +138,12 @@ Shipping the full set never means inventing its contents. A shipped prompt versi
 
 Each class below is justified by consequence, not by uncertainty. Anything outside these six is a soft gap: proceed and label the assumption inline.
 
-- Approval — a prompt change affects high-impact behavior and has no approval owner or rollback plan.
-- Production or destructive — the change would alter a live production prompt whose current version cannot be captured for rollback.
-- Security or privacy — the prompt would be the sole control for access, authorization, destructive actions, private-data filtering, or policy enforcement; or tool, retrieval, memory, or authorization behavior is undefined and prompt text would mask that gap.
-- Source conflict — sources disagree on shipped prompt behavior, production prompt version, or the required output contract.
-- Release integrity — a prompt change affecting high-impact behavior would ship with no eval coverage capable of establishing that it is correct.
-- Connector unreachable — prompt files, prior versions, eval artifacts, or telemetry exist but cannot be read.
+- Approval: a prompt change affects high-impact behavior and has no approval owner or rollback plan.
+- Production or destructive: the change would alter a live production prompt whose current version cannot be captured for rollback.
+- Security or privacy: the prompt would be the sole control for access, authorization, destructive actions, private-data filtering, or policy enforcement; or tool, retrieval, memory, or authorization behavior is undefined and prompt text would mask that gap.
+- Source conflict: sources disagree on shipped prompt behavior, production prompt version, or the required output contract.
+- Release integrity: a prompt change affecting high-impact behavior would ship with no eval coverage capable of establishing that it is correct.
+- Connector unreachable: prompt files, prior versions, eval artifacts, or telemetry exist but cannot be read.
 
 ## Soft halt conditions
 

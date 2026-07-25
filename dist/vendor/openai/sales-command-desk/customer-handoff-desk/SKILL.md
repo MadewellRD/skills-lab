@@ -33,11 +33,11 @@ Prepare complete post-sale handoff packages that preserve customer goals, promis
 
 **Outcome.** A post-sale handoff package: the customer summary and their goals, the committed scope, the promised deliverables, the open risks, the owner and action list, and a DOCX/PDF-ready artifact the receiving team can work from.
 
-**Ordered gate (mandated — keep this order).** Confirm closed-won state against the signed commercial artifact before the package asserts any committed scope, and route any CRM note or task write through the dry-run diff and approval sequence before it is written. The order is mandated because a handoff package is the document onboarding, support, and delivery plan against: committed scope stated ahead of the signature triggers real spend against a deal that may still change, and it hands the customer expectations nobody agreed to.
+**Ordered gate (mandated, keep this order).** Confirm closed-won state against the signed commercial artifact before the package asserts any committed scope, and route any CRM note or task write through the dry-run diff and approval sequence before it is written. The order is mandated because a handoff package is the document onboarding, support, and delivery plan against: committed scope stated ahead of the signature triggers real spend against a deal that may still change, and it hands the customer expectations nobody agreed to.
 
 **Constraints.** Carry the sales workflow packet forward and update it in place. Signed commercial artifacts and the CRM define committed scope; proposal files and meeting notes provide context and do not alter commitments. A promise made in a call but absent from the signed artifact is surfaced as an unresolved commitment with its source, never quietly promoted into scope or quietly dropped. Never invent a deliverable, date, owner, or contractual term.
 
-**Parallel surface.** Where several accounts are being handed off, each is independent, and within a package the individual promised deliverables, open risks, and workstreams are independently assembled — work them in parallel. Reconciling the promised-deliverable set against the signed commercial artifact is deliberately an aggregate pass over the complete set, because the failure it catches — a commitment that appears in notes or the proposal but not in the contract — is a gap between two lists and cannot be detected one item at a time.
+**Parallel surface.** Where several accounts are being handed off, each is independent, and within a package the individual promised deliverables, open risks, and workstreams are independently assembled, work them in parallel. Reconciling the promised-deliverable set against the signed commercial artifact is deliberately an aggregate pass over the complete set, because the failure it catches, a commitment that appears in notes or the proposal but not in the contract, is a gap between two lists and cannot be detected one item at a time.
 
 **Acceptance bar.** Every committed deliverable cites the signed artifact or contract clause that carries it; every unresolved commitment is listed separately with its source and its status; every risk and action names an owner and a date or an explicit gap. The package states the deal state it was built from, and a reader in onboarding can tell what was sold apart from what was discussed without going back to the seller.
 
@@ -52,11 +52,11 @@ A complete run delivers the full handoff package rather than one section of it:
 - owner/action list
 - DOCX/PDF-ready package
 
-The DOCX/PDF artifact is the same content rendered for the receiving team, not an alternative to the brief — a run that writes the brief and stops has finished half the job.
+The DOCX/PDF artifact is the same content rendered for the receiving team, not an alternative to the brief; a run that writes the brief and stops has finished half the job.
 
 Each part is complete when onboarding, support, or delivery could start on it without going back to the seller. Every committed deliverable cites the signed artifact or contract clause carrying it; every unresolved commitment is listed separately with its source and its status; every risk and action names an owner and a date or an explicit gap; the package states the deal state it was built from. A heading over "TBD" is a defect in a document other teams will plan real spend against.
 
-None of that licenses closing a gap by writing something reasonable. A deliverable, date, owner, price, or contractual term that no signed artifact or CRM record supports is surfaced as an unresolved commitment, or that section is marked not applicable — an invented commitment in a handoff becomes a promise the customer is later told was made to them. Producing the package does not distribute it: routing any CRM note or task through the dry-run diff and approval sequence, and any external sharing, stay gated exactly as Workflow and Halt conditions specify. Accounts, promised deliverables, risks, and workstreams are independent units inside the parallel surface declared there.
+None of that licenses closing a gap by writing something reasonable. A deliverable, date, owner, price, or contractual term that no signed artifact or CRM record supports is surfaced as an unresolved commitment, or that section is marked not applicable; an invented commitment in a handoff becomes a promise the customer is later told was made to them. Producing the package does not distribute it: routing any CRM note or task through the dry-run diff and approval sequence, and any external sharing, stay gated exactly as Workflow and Halt conditions specify. Accounts, promised deliverables, risks, and workstreams are independent units inside the parallel surface declared there.
 
 ## Workflow packet fields
 
@@ -75,14 +75,14 @@ None of that licenses closing a gap by writing something reasonable. A deliverab
 
 Proceed by default on reversible work and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — a CRM note or task write, or any customer-facing send of the handoff material, lacks approval.
-- **Production or destructive** — the request is to write to the CRM, notify the customer, or trigger onboarding rather than to prepare the package.
-- **Security or privacy** — the package would carry contract terms, pricing detail, or personal data to a receiving team that should not have them.
-- **Source conflict** — the signed commercial artifact, the proposal, and the meeting notes genuinely disagree on scope or promised deliverables. Hard halt: the signed artifact governs, and a conflict here is exactly what the handoff exists to surface. List both versions with their sources and route the discrepancy; never reconcile a commitment conflict silently in either direction.
-- **Release integrity** — the package would assert committed scope for an opportunity that is not closed-won. Hard halt: a handoff read as final triggers real onboarding spend and sets customer expectations against a deal that may still change. Where a provisional package is genuinely wanted, mark the deal state on every page and label the scope as not yet committed.
-- **Connector unreachable** — a required CRM, contract, or proposal source exists but cannot be read, so committed scope cannot be established.
+- **Approval**: a CRM note or task write, or any customer-facing send of the handoff material, lacks approval.
+- **Production or destructive**: the request is to write to the CRM, notify the customer, or trigger onboarding rather than to prepare the package.
+- **Security or privacy**: the package would carry contract terms, pricing detail, or personal data to a receiving team that should not have them.
+- **Source conflict**: the signed commercial artifact, the proposal, and the meeting notes genuinely disagree on scope or promised deliverables. Hard halt: the signed artifact governs, and a conflict here is exactly what the handoff exists to surface. List both versions with their sources and route the discrepancy; never reconcile a commitment conflict silently in either direction.
+- **Release integrity**: the package would assert committed scope for an opportunity that is not closed-won. Hard halt: a handoff read as final triggers real onboarding spend and sets customer expectations against a deal that may still change. Where a provisional package is genuinely wanted, mark the deal state on every page and label the scope as not yet committed.
+- **Connector unreachable**: a required CRM, contract, or proposal source exists but cannot be read, so committed scope cannot be established.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing handoff owner is an open question at the top of the package naming the role that must be assigned — the package is still produced so the receiving team is not waiting on an org decision. Missing risk or timeline detail is a named gap, never a reconstructed commitment.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing handoff owner is an open question at the top of the package naming the role that must be assigned; the package is still produced so the receiving team is not waiting on an org decision. Missing risk or timeline detail is a named gap, never a reconstructed commitment.
 
 ## Downstream handoffs
 

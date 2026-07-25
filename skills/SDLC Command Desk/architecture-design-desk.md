@@ -20,7 +20,7 @@ Use this skill to turn requirements and technical discovery into architecture ar
 
 Before drafting any design artifact, perform connector preflight.
 
-**Outcome.** A Markdown design artifact in the mode the request calls for — new architecture, incremental design, migration design, interface contract, ADR set, or implementation handoff — built from the appropriate reference template and carrying source facts, unresolved risks, and downstream handoff notes.
+**Outcome.** A Markdown design artifact in the mode the request calls for, new architecture, incremental design, migration design, interface contract, ADR set, or implementation handoff, built from the appropriate reference template and carrying source facts, unresolved risks, and downstream handoff notes.
 
 **Constraints.** Gather source facts from the highest-trust available connectors. Keep facts, inferences, decisions, assumptions, and open questions visibly separate throughout the artifact; do not merge them into a single confident narrative.
 
@@ -36,7 +36,7 @@ Apply `references/source-hierarchy.md` when sources conflict. If current user in
 
 ## Artifact selection
 
-A design run normally draws on several of these at once rather than one: the architecture spec carries the design, the ADRs carry the decisions inside it, and the interface contracts carry what the change depends on. Load a template when the artifact it shapes is genuinely in scope, and mark a shape not applicable when the change does not involve it — a migration plan for a change that moves nothing is padding, not completeness.
+A design run normally draws on several of these at once rather than one: the architecture spec carries the design, the ADRs carry the decisions inside it, and the interface contracts carry what the change depends on. Load a template when the artifact it shapes is genuinely in scope, and mark a shape not applicable when the change does not involve it; a migration plan for a change that moves nothing is padding, not completeness.
 
 - `references/architecture-template.md` for solution architecture and software design specs.
 - `references/adr-template.md` for architecture decision records.
@@ -48,7 +48,7 @@ A design run normally draws on several of these at once rather than one: the arc
 
 ## Required output properties
 
-A complete design run delivers, together: the design artifact itself, an ADR for every decision it makes that a maintainer would otherwise have to reverse-engineer, the interface or data contracts the change depends on, and the downstream handoff notes for issue planning and implementation. Migration and rollout notes join that set whenever the change moves an existing system rather than adding to it. These are not alternatives to pick between — a design that records no decisions and specifies no contracts has not finished.
+A complete design run delivers, together: the design artifact itself, an ADR for every decision it makes that a maintainer would otherwise have to reverse-engineer, the interface or data contracts the change depends on, and the downstream handoff notes for issue planning and implementation. Migration and rollout notes join that set whenever the change moves an existing system rather than adding to it. These are not alternatives to pick between; a design that records no decisions and specifies no contracts has not finished.
 
 Every design artifact must include:
 
@@ -78,12 +78,12 @@ Producing the whole set is not a reason to produce any part of it from imaginati
 
 Proceed by default. Design work is inherently underdetermined: where a fact is missing, choose the most defensible option, label it inline as an assumption, and record it as an open question. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the design commits to a decision that a named human owner must authorize, such as a platform, vendor, or data-residency choice.
-- **Production or destructive** — the design implies an irreversible migration or data-destructive cutover whose rollback path is not established.
-- **Security or privacy** — the design would require speculation about security controls, data retention, or compliance obligations that no source supports.
-- **Source conflict** — repo state, PRD/SRS, and stakeholder decisions genuinely disagree on a load-bearing constraint. Preserve the conflict explicitly and halt rather than choosing silently.
-- **Release integrity** — the artifact would present an unreviewable design as accepted.
-- **Connector unreachable** — a required repo or spec source exists but cannot be read for a repo-aware design. A source that is merely absent is a soft gap: produce a scoped design marked user-fact-only, with the unknown architecture stated as an open question, and continue.
+- **Approval**: the design commits to a decision that a named human owner must authorize, such as a platform, vendor, or data-residency choice.
+- **Production or destructive**: the design implies an irreversible migration or data-destructive cutover whose rollback path is not established.
+- **Security or privacy**: the design would require speculation about security controls, data retention, or compliance obligations that no source supports.
+- **Source conflict**: repo state, PRD/SRS, and stakeholder decisions genuinely disagree on a load-bearing constraint. Preserve the conflict explicitly and halt rather than choosing silently.
+- **Release integrity**: the artifact would present an unreviewable design as accepted.
+- **Connector unreachable**: a required repo or spec source exists but cannot be read for a repo-aware design. A source that is merely absent is a soft gap: produce a scoped design marked user-fact-only, with the unknown architecture stated as an open question, and continue.
 
 When requested scope is too broad for one reviewable artifact, narrow it and say what was excluded rather than halting.
 

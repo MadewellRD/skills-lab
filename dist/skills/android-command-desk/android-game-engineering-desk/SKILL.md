@@ -45,11 +45,11 @@ Game design scope, engine project, Gradle/NDK/CMake facts, asset pipeline, targe
 
 ## Expected outputs
 
-A complete run delivers the whole game scope together: the game engineering plan, the engine and native boundary map, the Android wrapper scope, the asset and runtime risks, the profiling expectations, the validation commands, the gameplay smoke plan, the packet update, and the downstream handoff. A boundary map without the wrapper scope, or a frame budget without the smoke plan that exercises it, leaves the next stage guessing — this is one deliverable assembled from parts, not a set of options.
+A complete run delivers the whole game scope together: the game engineering plan, the engine and native boundary map, the Android wrapper scope, the asset and runtime risks, the profiling expectations, the validation commands, the gameplay smoke plan, the packet update, and the downstream handoff. A boundary map without the wrapper scope, or a frame budget without the smoke plan that exercises it, leaves the next stage guessing; this is one deliverable assembled from parts, not a set of options.
 
 Each part is complete when it is actionable at the engine boundary. The boundary map names which code lives in the engine, which in native libraries, and which in the Android wrapper, with the call direction across each boundary; the frame and performance budget states numbers per target device tier; the gameplay smoke plan names the scenes, inputs, and pass conditions someone would actually run on a device. Naming an engine and stopping there is not a scope.
 
-Delivering all of it is never a reason to invent runtime facts. An engine version, plugin, asset pipeline step, AGDK or NDK detail, or device tier that no source establishes is recorded as unknown with the artifact that would settle it — never filled in from how such projects usually look. Engine code, wrapper, native libraries, asset pipeline, and device tiers are independent surfaces and are part of the parallel surface declared in Workflow.
+Delivering all of it is never a reason to invent runtime facts. An engine version, plugin, asset pipeline step, AGDK or NDK detail, or device tier that no source establishes is recorded as unknown with the artifact that would settle it, never filled in from how such projects usually look. Engine code, wrapper, native libraries, asset pipeline, and device tiers are independent surfaces and are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,12 +69,12 @@ Delivering all of it is never a reason to invent runtime facts. An engine versio
 
 Proceed by default. An unresolved engine or asset detail is normally a labeled assumption plus a named source, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — a Play, multiplayer, economy, live-ops, or production-impacting action is requested without explicit authorization.
-- **Production or destructive** — the plan would touch live game economy state, player saves, published asset packs, or release configuration.
-- **Security or privacy** — anti-tamper, entitlement, purchase, or player-data handling requires secrets or credentials that cannot be handled safely here.
-- **Source conflict** — engine project state, repo packaging, and design docs genuinely disagree on runtime, asset delivery, or input model. Preserve the conflict.
-- **Release integrity** — the handoff would declare a gameplay or engine change shippable when no validation path exists for it.
-- **Connector unreachable** — repo, engine project, or build access exists but cannot be read.
+- **Approval**: a Play, multiplayer, economy, live-ops, or production-impacting action is requested without explicit authorization.
+- **Production or destructive**: the plan would touch live game economy state, player saves, published asset packs, or release configuration.
+- **Security or privacy**: anti-tamper, entitlement, purchase, or player-data handling requires secrets or credentials that cannot be handled safely here.
+- **Source conflict**: engine project state, repo packaging, and design docs genuinely disagree on runtime, asset delivery, or input model. Preserve the conflict.
+- **Release integrity**: the handoff would declare a gameplay or engine change shippable when no validation path exists for it.
+- **Connector unreachable**: repo, engine project, or build access exists but cannot be read.
 
 Otherwise proceed: an unknown engine/runtime, native toolchain, gameplay scope, device tier, input model, frame budget, or build/package path becomes a labeled assumption with the evidence needed to confirm it, and scope narrows to what the known facts support.
 
@@ -90,7 +90,7 @@ A complete run writes all of these:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — takes the place of the set above when a hard halt fires, rather than joining it.
+- `workflow-halt.md`: takes the place of the set above when a hard halt fires, rather than joining it.
 
 A file the engine and repo evidence cannot support states what is missing instead of being written from how such projects usually look.
 

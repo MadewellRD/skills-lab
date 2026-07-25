@@ -30,7 +30,7 @@ Do not stop with a bare next-desk instruction when the next stage can be perform
 
 **Stage order is content.** Execute stage contracts in lifecycle order. Each stage produces its artifact and updates the workflow packet before the next stage consumes it; a stage that runs on stale packet state produces work the next stage cannot trust. Continue into the next stage automatically when the packet says `ready_to_continue: true` and no halt condition applies.
 
-**Parallel surface.** The quality gates that sit at the same lifecycle position operate on the same change but assess independent dimensions: review, test strategy, verification, and security threat modeling carry no ordering dependency on each other and are parallel-safe to run as a group before release readiness. Within any stage, evidence retrieval across independent sources is likewise parallel-safe. Sequential lifecycle progression — requirements before design, design before implementation handoff — is not.
+**Parallel surface.** The quality gates that sit at the same lifecycle position operate on the same change but assess independent dimensions: review, test strategy, verification, and security threat modeling carry no ordering dependency on each other and are parallel-safe to run as a group before release readiness. Within any stage, evidence retrieval across independent sources is likewise parallel-safe. Sequential lifecycle progression, requirements before design, design before implementation handoff, is not.
 
 **Acceptance bar.** A workflow run is complete when the user's target outcome exists as an artifact, every stage that ran emitted its artifact and updated the packet, skipped stages are named with the reason they were skipped, and the packet states either the completed outcome or the exact resume requirement. A bare recommendation to use another desk is not a completed run. For reusable work, create a downloadable Markdown artifact using `references/output-contract.md`.
 
@@ -71,12 +71,12 @@ If those facts are missing, continue upstream instead of producing a coding-agen
 
 The orchestrator's default is continuation. A stage that a competent engineer would have worked through is not a halt: complete it, label the assumption inline, carry it in the packet, and advance. Return `Workflow Halt` only for these consequence classes from `references/halt-taxonomy.md`:
 
-- **Approval** — a human approval gate is reached and no authorization is present.
-- **Production or destructive** — the next action has irreversible or production side effects.
-- **Security or privacy** — advancing risks exposure of secrets, credentials, or personal data.
-- **Source conflict** — sources genuinely disagree on a load-bearing fact and choosing silently would launder a guess into a lifecycle decision.
-- **Release integrity** — the workflow would ship or declare ready something whose correctness cannot be established.
-- **Connector unreachable** — required evidence exists but cannot be read. Evidence that is merely absent is a soft gap: continue with a labeled assumption.
+- **Approval**: a human approval gate is reached and no authorization is present.
+- **Production or destructive**: the next action has irreversible or production side effects.
+- **Security or privacy**: advancing risks exposure of secrets, credentials, or personal data.
+- **Source conflict**: sources genuinely disagree on a load-bearing fact and choosing silently would launder a guess into a lifecycle decision.
+- **Release integrity**: the workflow would ship or declare ready something whose correctness cannot be established.
+- **Connector unreachable**: required evidence exists but cannot be read. Evidence that is merely absent is a soft gap: continue with a labeled assumption.
 
 Every halt must state the exact fact needed, what was already attempted to obtain it, and the prompt that resumes the workflow.
 
@@ -88,7 +88,7 @@ If a required connector is unreachable, produce a connector diagnostic rather th
 
 ## Output behavior
 
-A workflow run delivers two things, both of them: the full artifact set of every stage that ran, as each stage's own desk defines it, and the workflow-level record over the top. Stages are not rationed one per turn — if the packet supports running five stages, five stages run and five artifact sets exist when the run reports.
+A workflow run delivers two things, both of them: the full artifact set of every stage that ran, as each stage's own desk defines it, and the workflow-level record over the top. Stages are not rationed one per turn; if the packet supports running five stages, five stages run and five artifact sets exist when the run reports.
 
 The workflow record includes:
 

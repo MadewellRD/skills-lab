@@ -19,7 +19,7 @@ Define iOS observability and live ops for app/game launches and operations: cras
 
 **Grounding.** Work from the release plan, analytics plan, crash and main-thread-stall tooling, monitoring docs, feature flag and remote config docs, game live-ops docs, the incident process, and the rollout plan. Do not invent telemetry stacks, dashboards, alert owners, remote config, production signals, game economy controls, or incident hooks.
 
-**Parallel surface.** Individual events, metrics, dashboards, and alert definitions are independent: specify them in parallel. Threshold coherence across the alert set, the rollout monitoring plan, and the rollback trigger set are aggregate — they must not contradict one another, so reconcile them once after the per-signal work.
+**Parallel surface.** Individual events, metrics, dashboards, and alert definitions are independent: specify them in parallel. Threshold coherence across the alert set, the rollout monitoring plan, and the rollback trigger set are aggregate, they must not contradict one another, so reconcile them once after the per-signal work.
 
 **Acceptance bar.** The plan is complete when every release gate maps to at least one observable signal; each alert names a threshold, a window, and an owner or marks the owner unknown; each rollback trigger names the signal and value that fires it; instrumentation that does not yet exist is listed as an instrumentation gap rather than assumed present; and the incident handoff states who receives it and with what context.
 
@@ -38,11 +38,11 @@ Release plan, analytics plan, crash/main-thread stall tooling, monitoring docs, 
 
 ## Expected outputs
 
-A complete run delivers the operating picture in full: the observability plan, the event and metric map, the dashboard and alert checklist, the live-ops plan, the rollback triggers, the incident handoff, any halt conditions, and the packet update. Alerts with no rollback triggers behind them, or a live-ops plan with no signals to say whether it is working, is not an operable release — these ship as one package.
+A complete run delivers the operating picture in full: the observability plan, the event and metric map, the dashboard and alert checklist, the live-ops plan, the rollback triggers, the incident handoff, any halt conditions, and the packet update. Alerts with no rollback triggers behind them, or a live-ops plan with no signals to say whether it is working, is not an operable release; these ship as one package.
 
 The bar is that an on-call engineer can act at 3am without asking what an alert means. Each event carries its schema and the question it answers; each metric names its owner, its source, and its threshold; each alert states its firing condition, who it pages, and the first response; each rollback trigger names the concrete signal and the action it authorizes. A dashboard mentioned but not specified is not a deliverable.
 
-Completing the set is never a licence to invent telemetry. An event, metric, threshold, or dashboard that no instrumentation or telemetry plan supports is recorded as a gap with the instrumentation it needs — a threshold chosen to fill a row yields either an alert nobody trusts or silence where a page belonged. Individual events, metrics, dashboards, and alert definitions are independent and part of the parallel surface declared in Workflow.
+Completing the set is never a licence to invent telemetry. An event, metric, threshold, or dashboard that no instrumentation or telemetry plan supports is recorded as a gap with the instrumentation it needs; a threshold chosen to fill a row yields either an alert nobody trusts or silence where a page belonged. Individual events, metrics, dashboards, and alert definitions are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -60,12 +60,12 @@ Completing the set is never a licence to invent telemetry. An event, metric, thr
 
 Proceed by default. An unknown telemetry detail is normally an instrumentation gap plus the fact needed to close it, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — changing alerting, remote config, feature flags, or live-ops controls in a real environment requires authorization.
-- **Production or destructive** — the request would flip a production flag, push remote config, alter a live game economy or event, or silence a production alert.
-- **Security or privacy** — proposed telemetry would capture personal data, credentials, or content whose collection no source establishes, or would exceed what the privacy label and privacy manifest declare.
-- **Source conflict** — monitoring docs, the analytics plan, and observed production signals genuinely disagree on what is instrumented. Preserve the conflict.
-- **Release integrity** — a production rollout would proceed with no monitoring coverage or rollback triggers, or launch health would be reported as observable when the instrumentation does not exist.
-- **Connector unreachable** — a monitoring, analytics, or crash-reporting source exists but cannot be read.
+- **Approval**: changing alerting, remote config, feature flags, or live-ops controls in a real environment requires authorization.
+- **Production or destructive**: the request would flip a production flag, push remote config, alter a live game economy or event, or silence a production alert.
+- **Security or privacy**: proposed telemetry would capture personal data, credentials, or content whose collection no source establishes, or would exceed what the privacy label and privacy manifest declare.
+- **Source conflict**: monitoring docs, the analytics plan, and observed production signals genuinely disagree on what is instrumented. Preserve the conflict.
+- **Release integrity**: a production rollout would proceed with no monitoring coverage or rollback triggers, or launch health would be reported as observable when the instrumentation does not exist.
+- **Connector unreachable**: a monitoring, analytics, or crash-reporting source exists but cannot be read.
 
 Otherwise proceed: an unknown telemetry stack, owner, dashboard, or live-ops control becomes a labeled assumption plus an open question, and the plan states what becomes observable once the gap is closed.
 
@@ -80,7 +80,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — produced in place of the set above when a hard halt fires, not alongside it.
+- `workflow-halt.md`: produced in place of the set above when a hard halt fires, not alongside it.
 
 Where the telemetry plan cannot support a file, it names the instrumentation gap instead of listing signals and thresholds nobody set.
 

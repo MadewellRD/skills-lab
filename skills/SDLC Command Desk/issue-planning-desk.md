@@ -28,15 +28,15 @@ Create planning artifacts only after grounding the scope in available sources. G
 
 **Templates.** Full planning uses `references/issue-plan-template.md`. GitHub issue drafts use `references/github-issue-template.md`. Dependency sequencing uses `references/dependency-graph.md`. Milestone work uses `references/milestone-planning.md`. Downstream implementation uses `references/handoff-rules.md`.
 
-**Parallel surface.** Once the decomposition is set, drafting the individual issue bodies is independent work — each issue's title, scope, acceptance criteria, and labels stand alone. Draft them in parallel rather than one at a time. Dependency ordering across issues is the one part that must be resolved in a single pass, and the resulting sequence is content: preserve it as ordered output.
+**Parallel surface.** Once the decomposition is set, drafting the individual issue bodies is independent work, each issue's title, scope, acceptance criteria, and labels stand alone. Draft them in parallel rather than one at a time. Dependency ordering across issues is the one part that must be resolved in a single pass, and the resulting sequence is content: preserve it as ordered output.
 
 **Evidence and uncertainty.** Include source facts and assumptions. Mark unverified facts rather than presenting them as known.
 
-**Acceptance bar.** The plan is done when each issue is independently actionable — a single owner could pick it up, implement it, test it, and close it without asking what was meant — and carries the elements in `Issue quality rules` below. Dependency order must be explicit, and parallelizable issues must be marked as such so downstream work can fan out. Do not invent requirement IDs, issue numbers, labels, milestones, owners, file paths, or acceptance criteria.
+**Acceptance bar.** The plan is done when each issue is independently actionable, a single owner could pick it up, implement it, test it, and close it without asking what was meant, and carries the elements in `Issue quality rules` below. Dependency order must be explicit, and parallelizable issues must be marked as such so downstream work can fan out. Do not invent requirement IDs, issue numbers, labels, milestones, owners, file paths, or acceptance criteria.
 
 ## Output rules
 
-A planning run delivers the whole plan, not one layer of it: the issue plan, a drafted body for every issue in it, the dependency order across them, and the downstream handoff for `implementation-handoff-desk`. Milestone or sprint assignment joins that set when the request has a milestone to assign against. A backlog cleanup or re-triage is a different scope — it operates on issues that already exist — and is produced instead of a greenfield plan rather than alongside one.
+A planning run delivers the whole plan, not one layer of it: the issue plan, a drafted body for every issue in it, the dependency order across them, and the downstream handoff for `implementation-handoff-desk`. Milestone or sprint assignment joins that set when the request has a milestone to assign against. A backlog cleanup or re-triage is a different scope; it operates on issues that already exist; and is produced instead of a greenfield plan rather than alongside one.
 
 Default to downloadable Markdown artifacts when creating issue plans, issue batches, milestone plans, or handoff notes. Use `scripts/write_issue_plan_markdown.py` when a local file artifact is needed.
 
@@ -73,12 +73,12 @@ Do not create vague issues such as "improve backend" or "fix UI". Split broad wo
 
 Proceed by default. A thin requirement is decomposed with the gap named in the issue body and the assumption labeled; that is cheaper to correct than a stalled plan. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the user asks to create, edit, or close live GitHub issues and permission or the target repo is unavailable, or the change needs a human to authorize scope.
-- **Production or destructive** — the request would write to or re-triage a live tracker rather than produce draft issue bodies.
-- **Security or privacy** — issue bodies would need to embed secrets, credentials, or personal data to be actionable.
-- **Source conflict** — requirements are contradictory, or design scope and product scope genuinely disagree. Preserve the conflict rather than picking a reading.
-- **Release integrity** — acceptance gates would be presented as agreed when no source establishes them, or acceptance criteria cannot be derived without inventing product behavior.
-- **Connector unreachable** — GitHub exists but cannot be read for issues, labels, milestones, or repo files the plan depends on. Absent context is a soft gap: draft against user-provided facts, mark the plan source-limited, and continue.
+- **Approval**: the user asks to create, edit, or close live GitHub issues and permission or the target repo is unavailable, or the change needs a human to authorize scope.
+- **Production or destructive**: the request would write to or re-triage a live tracker rather than produce draft issue bodies.
+- **Security or privacy**: issue bodies would need to embed secrets, credentials, or personal data to be actionable.
+- **Source conflict**: requirements are contradictory, or design scope and product scope genuinely disagree. Preserve the conflict rather than picking a reading.
+- **Release integrity**: acceptance gates would be presented as agreed when no source establishes them, or acceptance criteria cannot be derived without inventing product behavior.
+- **Connector unreachable**: GitHub exists but cannot be read for issues, labels, milestones, or repo files the plan depends on. Absent context is a soft gap: draft against user-provided facts, mark the plan source-limited, and continue.
 
 When decomposition would require architectural decisions not present in sources, route to `architecture-design-desk` rather than halting.
 

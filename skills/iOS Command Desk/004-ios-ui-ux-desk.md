@@ -19,9 +19,9 @@ Plan iOS UI/UX for native apps and games: navigation, screen states, SwiftUI/UIK
 
 **Grounding.** Work from requirements, architecture, design files, screenshots, game design docs, existing UI code, and navigation files. Do not invent screens, flows, design sources, input models, accessibility targets, or localization requirements: label an assumption as an assumption and name the design artifact that would settle it.
 
-**Coverage constraint.** Every screen carries its full state set — loading, empty, success, error, offline, permission denied, purchase failure, save conflict, and gameplay pause/resume where applicable. Choose the implementation-facing UI lane explicitly: SwiftUI, UIKit, hybrid, engine UI, native overlay, or store/listing asset workflow.
+**Coverage constraint.** Every screen carries its full state set, loading, empty, success, error, offline, permission denied, purchase failure, save conflict, and gameplay pause/resume where applicable. Choose the implementation-facing UI lane explicitly: SwiftUI, UIKit, hybrid, engine UI, native overlay, or store/listing asset workflow.
 
-**Permission request flows stay ordered.** Where a screen or flow requests an iOS permission, emit the request sequence as ordered steps and keep it ordered: the Info.plist usage-description string must exist before the API call, the in-context rationale precedes the system prompt, the prompt precedes the protected call, and a defined denied path follows. iOS itself enforces this ordering — an app calling a protected API without its usage-description string is terminated, and the system permission alert is shown only once, after which the user must change the setting in Settings. Getting the order wrong is not recoverable in-session.
+**Permission request flows stay ordered.** Where a screen or flow requests an iOS permission, emit the request sequence as ordered steps and keep it ordered: the Info.plist usage-description string must exist before the API call, the in-context rationale precedes the system prompt, the prompt precedes the protected call, and a defined denied path follows. iOS itself enforces this ordering, an app calling a protected API without its usage-description string is terminated, and the system permission alert is shown only once, after which the user must change the setting in Settings. Getting the order wrong is not recoverable in-session.
 
 **Parallel surface.** Screens, user flows, device classes, and locales are independent items: build the state matrix, accessibility annotations, and localization notes across them in parallel rather than walking screen by screen. The navigation model and the UI framework lane are aggregate decisions that reconcile the per-screen results and are made once.
 
@@ -42,9 +42,9 @@ Requirements, architecture, design files, screenshots, game design docs, existin
 
 ## Expected outputs
 
-A complete run hands over the UI/UX scope in full: screen and flow inventory, UI state matrix, navigation notes, accessibility and localization gates, input requirements, risks, any halt conditions, and the packet update. Delivering the matrix without the navigation model, or the accessibility gates without the screens they attach to, leaves a SwiftUI or UIKit engineer unable to start — the package is the deliverable.
+A complete run hands over the UI/UX scope in full: screen and flow inventory, UI state matrix, navigation notes, accessibility and localization gates, input requirements, risks, any halt conditions, and the packet update. Delivering the matrix without the navigation model, or the accessibility gates without the screens they attach to, leaves a SwiftUI or UIKit engineer unable to start; the package is the deliverable.
 
-The depth bar: an engineer builds from it without asking what a state means. Every screen carries its real states — loading, empty, error, offline, permission-denied, and whatever content states exist — not just a name in a row; every accessibility and localization gate states the concrete requirement, including Dynamic Type, VoiceOver, and right-to-left behaviour where they apply, and how each is judged; every input requirement names the device classes and interaction modes it covers. An outline is not a scope.
+The depth bar: an engineer builds from it without asking what a state means. Every screen carries its real states; loading, empty, error, offline, permission-denied, and whatever content states exist, not just a name in a row; every accessibility and localization gate states the concrete requirement, including Dynamic Type, VoiceOver, and right-to-left behaviour where they apply, and how each is judged; every input requirement names the device classes and interaction modes it covers. An outline is not a scope.
 
 None of this authorizes inventing design intent. A screen, flow, locale, or state that no design source, spec, or product decision establishes is logged as an open design gap with the owner who can decide it, rather than filled with something that looks like a reasonable screen. Screens, flows, device classes, and locales are independent and are part of the parallel surface declared in Workflow.
 
@@ -65,12 +65,12 @@ None of this authorizes inventing design intent. A screen, flow, locale, or stat
 
 Proceed by default. A missing design detail is normally a labeled assumption plus a named gap, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — a brand, Human Interface Guidelines, design-system, or accessibility-target decision requires a human owner to authorize it.
-- **Production or destructive** — the request would publish or overwrite store listing assets, screenshots, or live UI copy.
-- **Security or privacy** — a flow would surface personal data, request a sensitive permission, or present consent or usage-description wording that no source establishes.
-- **Source conflict** — design files, product requirements, and existing UI code genuinely disagree on a screen, flow, or state. Preserve the conflict.
-- **Release integrity** — accessibility or localization coverage would be reported as met when no evidence supports it.
-- **Connector unreachable** — a design source exists but cannot be read. A design artifact that simply does not exist yet is a soft gap.
+- **Approval**: a brand, Human Interface Guidelines, design-system, or accessibility-target decision requires a human owner to authorize it.
+- **Production or destructive**: the request would publish or overwrite store listing assets, screenshots, or live UI copy.
+- **Security or privacy**: a flow would surface personal data, request a sensitive permission, or present consent or usage-description wording that no source establishes.
+- **Source conflict**: design files, product requirements, and existing UI code genuinely disagree on a screen, flow, or state. Preserve the conflict.
+- **Release integrity**: accessibility or localization coverage would be reported as met when no evidence supports it.
+- **Connector unreachable**: a design source exists but cannot be read. A design artifact that simply does not exist yet is a soft gap.
 
 Otherwise proceed: unresolved screens, flows, input models, accessibility targets, localization scope, or HUD/menu/controller behavior become labeled assumptions in the brief plus open questions for the design owner.
 
@@ -85,7 +85,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — returned instead of the set above when a hard halt fires; a finished scope does not carry it.
+- `workflow-halt.md`: returned instead of the set above when a hard halt fires; a finished scope does not carry it.
 
 Where nothing establishes a file's content, it records the design gap and who owns the decision rather than inventing screens to populate it.
 

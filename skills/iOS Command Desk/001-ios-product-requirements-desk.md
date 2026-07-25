@@ -21,7 +21,7 @@ Turn iOS app/game intent into source-grounded requirements with requirement IDs,
 
 **Constraints.** Acceptance criteria must be checkable on iOS devices, simulators, CI, benchmark output, or release gates, or be marked explicitly non-automatable. Non-goals, out-of-scope platforms, privacy and policy constraints, and rollout constraints are stated, not implied.
 
-**Parallel surface.** Source retrieval across independent inputs — issues, uploaded docs, product docs, design and game docs, telemetry, repo evidence — has no ordering dependency, and acceptance criteria for distinct requirement IDs are independent of one another. Fan out over both. The risk register and the non-goals list are aggregate: assemble them once the per-requirement work is complete.
+**Parallel surface.** Source retrieval across independent inputs, issues, uploaded docs, product docs, design and game docs, telemetry, repo evidence, has no ordering dependency, and acceptance criteria for distinct requirement IDs are independent of one another. Fan out over both. The risk register and the non-goals list are aggregate: assemble them once the per-requirement work is complete.
 
 **Acceptance bar.** The PRD is done when every requirement carries a stable ID; each requirement has acceptance criteria testable without further product input; the app/game lane and target surface are stated; supported devices and OS/API range are either sourced or labeled as assumptions; non-goals, risks, and open questions are explicit rather than implied; and every load-bearing fact is attributed to its source.
 
@@ -40,7 +40,7 @@ Product brief, user story, GitHub issue, roadmap item, uploaded research, design
 
 ## Expected outputs
 
-Treat these as one deliverable rather than a list to pick from: a finished run hands over the iOS PRD, the acceptance criteria, the non-goals, the risk register, the open questions, the source-fact summary, and the `ios_delivery_packet` update, all in the same pass. They answer one question between them — what is being built and how anyone will know it was — and separating them just costs the reader another round trip.
+Treat these as one deliverable rather than a list to pick from: a finished run hands over the iOS PRD, the acceptance criteria, the non-goals, the risk register, the open questions, the source-fact summary, and the `ios_delivery_packet` update, all in the same pass. They answer one question between them; what is being built and how anyone will know it was; and separating them just costs the reader another round trip.
 
 "Finished" means a product owner or an iOS engineer can act on it as written. Requirement IDs are stable, acceptance criteria are checkable on a device, simulator, CI, or release gate, risks carry a trigger and an impact, and open questions name the person who can close them. Headings over placeholder text are an incomplete artifact, not an early draft.
 
@@ -62,12 +62,12 @@ Nothing above is a reason to write requirements the sources do not support. If n
 
 Proceed by default. An unresolved product detail is normally an open question plus a labeled working assumption, not a stop. Reserve hard halts for these consequence classes:
 
-- **Approval** — scope, monetization, or a policy commitment needs a human owner to authorize it.
-- **Production or destructive** — the request would write requirements into a live tracker, roadmap, or customer-facing commitment.
-- **Security or privacy** — requirements would encode handling of personal data, secrets, or a child-directed, health, or financial obligation that no source establishes.
-- **Source conflict** — product docs, issues, or stakeholder statements genuinely disagree on a load-bearing requirement. Preserve the conflict rather than resolving it silently.
-- **Release integrity** — acceptance criteria would be presented as agreed, or a device/OS support range as committed, when no source establishes it.
-- **Connector unreachable** — a required source exists but cannot be read. A merely absent source is a soft gap: continue with a labeled assumption.
+- **Approval**: scope, monetization, or a policy commitment needs a human owner to authorize it.
+- **Production or destructive**: the request would write requirements into a live tracker, roadmap, or customer-facing commitment.
+- **Security or privacy**: requirements would encode handling of personal data, secrets, or a child-directed, health, or financial obligation that no source establishes.
+- **Source conflict**: product docs, issues, or stakeholder statements genuinely disagree on a load-bearing requirement. Preserve the conflict rather than resolving it silently.
+- **Release integrity**: acceptance criteria would be presented as agreed, or a device/OS support range as committed, when no source establishes it.
+- **Connector unreachable**: a required source exists but cannot be read. A merely absent source is a soft gap: continue with a labeled assumption.
 
 Otherwise proceed: an unresolved goal, audience, app/game lane, device or OS range, monetization assumption, or policy constraint is recorded as an open question alongside the assumption used in its place.
 
@@ -82,7 +82,7 @@ The set a complete run writes:
 
 Mode-specific alternative:
 
-- `workflow-halt.md` — returned instead of the four files above when a hard halt fires, never as a fifth file beside them.
+- `workflow-halt.md`: returned instead of the four files above when a hard halt fires, never as a fifth file beside them.
 
 A file with no source behind it is a short not-applicable note naming what is missing, not a document written to fill its slot.
 

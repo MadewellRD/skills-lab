@@ -40,17 +40,17 @@ This skill is evidence-first. It must not invent source facts, test names, file 
 
 A traceability run delivers a set rather than the smallest artifact that satisfies the request:
 
-- `claim-map.md` — every claim extracted from the documents in scope, each carrying exactly one status.
-- `proof-map.md` — each claim tied to the specific file, test, PR, issue, or commit that proves it or fails to.
-- `doc-code-consistency-report.md` — the drift those two maps expose, classified by impact.
-- `documentation-update-plan.md` — the scoped change that would close the drift, per document.
-- `docs-handoff-notes.md` — what implementation, verification, or issue planning inherits, with target files and acceptance gates.
+- `claim-map.md`: every claim extracted from the documents in scope, each carrying exactly one status.
+- `proof-map.md`: each claim tied to the specific file, test, PR, issue, or commit that proves it or fails to.
+- `doc-code-consistency-report.md`: the drift those two maps expose, classified by impact.
+- `documentation-update-plan.md`: the scoped change that would close the drift, per document.
+- `docs-handoff-notes.md`: what implementation, verification, or issue planning inherits, with target files and acceptance gates.
 
 Three artifact types are genuinely mode-specific and are produced instead of that set, or beside it only when asked for by name:
 
 - `knowledge-index.md` when the request is for a durable source catalog rather than a claim audit.
 - `audit-evidence-packet.md` when governance or release evidence is what was asked for.
-- `connector-diagnostic.md` when grounding is insufficient — it replaces the set rather than shipping next to one built on nothing.
+- `connector-diagnostic.md` when grounding is insufficient: it replaces the set rather than shipping next to one built on nothing.
 
 Depth is what makes the set worth producing. A claim entry names the document, the location inside it, the claim as written, the status, and the artifact that establishes that status. An update plan says what the document should say instead, not that it needs updating. A row reading "unverified, needs investigation" without naming the investigation is an unfinished row.
 
@@ -77,12 +77,12 @@ Load only the reference needed for the current artifact:
 
 Proceed by default. A claim that cannot be proven is a result, not a blocker: mark it `unsupported` or `unverified`, name the missing evidence, and continue mapping the rest. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the request would publish, overwrite, or retire documentation that a human owner must authorize.
-- **Production or destructive** — the plan would delete or rewrite canonical source-of-truth documents rather than propose changes.
-- **Security or privacy** — proving a claim would require reproducing secrets, credentials, or personal data in the artifact.
-- **Source conflict** — documentation and repository state genuinely disagree on a load-bearing fact. Record it as `conflicting` and halt rather than picking a side.
-- **Release integrity** — an audit or evidence packet would assert coverage that available evidence cannot establish.
-- **Connector unreachable** — a required repo or doc source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector diagnostic or continue with the claim marked `unverified`.
+- **Approval**: the request would publish, overwrite, or retire documentation that a human owner must authorize.
+- **Production or destructive**: the plan would delete or rewrite canonical source-of-truth documents rather than propose changes.
+- **Security or privacy**: proving a claim would require reproducing secrets, credentials, or personal data in the artifact.
+- **Source conflict**: documentation and repository state genuinely disagree on a load-bearing fact. Record it as `conflicting` and halt rather than picking a side.
+- **Release integrity**: an audit or evidence packet would assert coverage that available evidence cannot establish.
+- **Connector unreachable**: a required repo or doc source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector diagnostic or continue with the claim marked `unverified`.
 
 ## Quality bar
 

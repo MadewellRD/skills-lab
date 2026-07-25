@@ -44,15 +44,15 @@ Within steps 1 through 3 the risk surfaces are independent: enumerating harms, m
 
 A safety review delivers all five artifacts as one assessment:
 
-- safety risk register — each identified harm with its surface, plausible trigger, affected party, severity, and the basis for its likelihood.
-- mitigation map — every register entry mapped to a control, the layer that enforces it (prompt, tool, retrieval, runtime, policy, human review), and the evidence that the control exists rather than is merely proposed.
-- approval gate list — what must be authorized before launch, and by whom.
-- blocked launch criteria — the conditions under which this capability does not ship, written so a reader applies them without reinterpretation.
-- residual risk notes — what remains after mitigation, and who carries it.
+- safety risk register: each identified harm with its surface, plausible trigger, affected party, severity, and the basis for its likelihood.
+- mitigation map: every register entry mapped to a control, the layer that enforces it (prompt, tool, retrieval, runtime, policy, human review), and the evidence that the control exists rather than is merely proposed.
+- approval gate list: what must be authorized before launch, and by whom.
+- blocked launch criteria: the conditions under which this capability does not ship, written so a reader applies them without reinterpretation.
+- residual risk notes: what remains after mitigation, and who carries it.
 
 An entry is complete when a reviewer could act on it. A risk with no stated trigger and no mitigation owner has not been assessed, whatever its heading says. Risk surfaces are the parallel-safe unit; the tier judgment and the gates are aggregate over the complete register.
 
-The set is mandatory; its contents are not free. A control that cannot be shown to exist is recorded as unimplemented or unverified, never as an in-place mitigation, and a harm surface with no evidence either way is listed as unassessed with what is missing. Inventing a safety finding and inventing the control that would answer it are equally corrosive — both make the review read as done when nothing was established.
+The set is mandatory; its contents are not free. A control that cannot be shown to exist is recorded as unimplemented or unverified, never as an in-place mitigation, and a harm surface with no evidence either way is listed as unassessed with what is missing. Inventing a safety finding and inventing the control that would answer it are equally corrosive; both make the review read as done when nothing was established.
 
 ## Workflow packet fields
 
@@ -71,14 +71,14 @@ The set is mandatory; its contents are not free. A control that cannot be shown 
 
 ## Halt conditions
 
-Default posture is to proceed and label the assumption inline; an unquantified likelihood or an incomplete user-segment breakdown is a soft gap. Halt only when one of the six hard-halt classes applies. In this desk a halt is a normal outcome rather than a failure — surfacing a material risk that has no owner is the point.
+Default posture is to proceed and label the assumption inline; an unquantified likelihood or an incomplete user-segment breakdown is a soft gap. Halt only when one of the six hard-halt classes applies. In this desk a halt is a normal outcome rather than a failure; surfacing a material risk that has no owner is the point.
 
-- Approval — a material risk has no approval owner, or the capability would ship at a risk tier the owner has not accepted.
-- Production or destructive — the capability could take irreversible real-world action and the gate in front of that action is missing or unproven.
-- Security or privacy — data exposure, tool authority, or cross-tenant reach is unresolved, or the capability could leak personal, regulated, or credential data.
-- Source conflict — capability documentation, eval evidence, and stated intended use disagree on what the system can actually do, or to whom.
-- Release integrity — eval or red-team evidence is insufficient to support the release, or a mitigation is claimed without evidence that it works.
-- Connector unreachable — eval results, red-team findings, incident history, or policy documentation exist but cannot be read.
+- Approval: a material risk has no approval owner, or the capability would ship at a risk tier the owner has not accepted.
+- Production or destructive: the capability could take irreversible real-world action and the gate in front of that action is missing or unproven.
+- Security or privacy: data exposure, tool authority, or cross-tenant reach is unresolved, or the capability could leak personal, regulated, or credential data.
+- Source conflict: capability documentation, eval evidence, and stated intended use disagree on what the system can actually do, or to whom.
+- Release integrity: eval or red-team evidence is insufficient to support the release, or a mitigation is claimed without evidence that it works.
+- Connector unreachable: eval results, red-team findings, incident history, or policy documentation exist but cannot be read.
 
 ## Downstream handoffs
 

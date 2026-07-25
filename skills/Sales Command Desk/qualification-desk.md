@@ -32,13 +32,13 @@ Evaluate whether an opportunity satisfies the team's qualification framework and
 
 **Outcome.** A qualification assessment against the team's framework: a per-criterion score with its evidence, the missing evidence named, a stage-readiness recommendation, next actions, and any escalation flags.
 
-**Ordered gate (mandated — keep this order).** A stage-readiness recommendation is produced first and a CRM stage change happens only after explicit approval — assessment, then approval, then write, never a write that follows from the score automatically. The order is mandated because deal stage drives forecast, reporting, and process gates downstream; a stage advanced on an inferred score corrupts the pipeline for everyone reading it.
+**Ordered gate (mandated, keep this order).** A stage-readiness recommendation is produced first and a CRM stage change happens only after explicit approval, assessment, then approval, then write, never a write that follows from the score automatically. The order is mandated because deal stage drives forecast, reporting, and process gates downstream; a stage advanced on an inferred score corrupts the pipeline for everyone reading it.
 
-**Constraints.** Carry the sales workflow packet forward and update it in place. Score only what is evidenced. Unknowns remain unknowns — budget, authority, decision process, and close plan are never inferred from deal momentum, seniority, or enthusiasm, and an unscored criterion is reported as unscored rather than given a middling value to complete the matrix.
+**Constraints.** Carry the sales workflow packet forward and update it in place. Score only what is evidenced. Unknowns remain unknowns, budget, authority, decision process, and close plan are never inferred from deal momentum, seniority, or enthusiasm, and an unscored criterion is reported as unscored rather than given a middling value to complete the matrix.
 
-**Parallel surface.** The framework criteria are independent assessments against their own evidence, and where several opportunities are in scope each opportunity is independent — evaluate them in parallel rather than walking the framework in order. The composite score, the stage-readiness recommendation, and the escalation flags are a single aggregate pass once every criterion is assessed, because readiness is defined over the complete criterion set.
+**Parallel surface.** The framework criteria are independent assessments against their own evidence, and where several opportunities are in scope each opportunity is independent, evaluate them in parallel rather than walking the framework in order. The composite score, the stage-readiness recommendation, and the escalation flags are a single aggregate pass once every criterion is assessed, because readiness is defined over the complete criterion set.
 
-**Acceptance bar.** Every criterion carries a score or an explicit `unknown`, and every score names the note, email, meeting, or record that supports it. The missing-evidence list is specific enough to act on — who to ask and what to ask for. The stage recommendation follows from the criterion set rather than from overall impression.
+**Acceptance bar.** Every criterion carries a score or an explicit `unknown`, and every score names the note, email, meeting, or record that supports it. The missing-evidence list is specific enough to act on, who to ask and what to ask for. The stage recommendation follows from the criterion set rather than from overall impression.
 
 ## Outputs
 
@@ -51,11 +51,11 @@ A complete run assesses every criterion in the framework and returns the full se
 - next actions
 - escalation flags
 
-A score without the per-criterion assessment behind it cannot be argued with, and the missing-evidence list is the part that actually moves the deal — so the set travels together.
+A score without the per-criterion assessment behind it cannot be argued with, and the missing-evidence list is the part that actually moves the deal; so the set travels together.
 
 Each artifact is done when the rep knows what to do next. Every criterion carries a score or an explicit `unknown` and names the note, email, meeting, or record supporting it; the missing-evidence list says who to ask and what to ask for; the stage recommendation follows from the criterion set rather than from overall impression; each escalation flag names what is escalated and to whom. A filled matrix with no evidence column is a scored guess.
 
-Scoring every criterion is not the same as filling every criterion. Budget, authority, decision process, timeline, and close plan are never inferred from deal momentum, seniority, or enthusiasm — an unscored criterion is reported as unscored rather than given a middling value so the matrix looks finished, and inventing a champion or a budget figure creates a deal that exists only in the CRM. The recommendation stays a recommendation: the assessment-then-approval-then-write order in Workflow holds, and a strong score never advances a CRM stage on its own. Framework criteria, and each opportunity where several are in scope, are independent inside the parallel surface declared there.
+Scoring every criterion is not the same as filling every criterion. Budget, authority, decision process, timeline, and close plan are never inferred from deal momentum, seniority, or enthusiasm; an unscored criterion is reported as unscored rather than given a middling value so the matrix looks finished, and inventing a champion or a budget figure creates a deal that exists only in the CRM. The recommendation stays a recommendation: the assessment-then-approval-then-write order in Workflow holds, and a strong score never advances a CRM stage on its own. Framework criteria, and each opportunity where several are in scope, are independent inside the parallel surface declared there.
 
 ## Workflow packet fields
 
@@ -74,14 +74,14 @@ Scoring every criterion is not the same as filling every criterion. Budget, auth
 
 Proceed by default on reversible work and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — a deal stage change, forecast category change, or CRM write is requested without explicit approval. Hard halt: stage drives forecast and process gates that other people rely on.
-- **Production or destructive** — the request is to advance the opportunity in the CRM rather than to assess whether it should advance.
-- **Security or privacy** — the assessment would expose confidential customer commercial detail or personal data in the artifact.
-- **Source conflict** — CRM fields, discovery notes, and stakeholder evidence genuinely disagree on budget, authority, timeline, or decision process. Record both readings against the criterion and mark it contested; a qualification score that averages a conflict hides the thing the review needs to see.
-- **Release integrity** — a qualified verdict or stage-readiness recommendation would rest on inferred budget, authority, or close plan rather than on evidence. Report the criterion as `unknown` instead — an honest gap is this desk's product.
-- **Connector unreachable** — a required CRM, email, or notes source exists but cannot be read, so the evidence base cannot be assembled at all.
+- **Approval**: a deal stage change, forecast category change, or CRM write is requested without explicit approval. Hard halt: stage drives forecast and process gates that other people rely on.
+- **Production or destructive**: the request is to advance the opportunity in the CRM rather than to assess whether it should advance.
+- **Security or privacy**: the assessment would expose confidential customer commercial detail or personal data in the artifact.
+- **Source conflict**: CRM fields, discovery notes, and stakeholder evidence genuinely disagree on budget, authority, timeline, or decision process. Record both readings against the criterion and mark it contested; a qualification score that averages a conflict hides the thing the review needs to see.
+- **Release integrity**: a qualified verdict or stage-readiness recommendation would rest on inferred budget, authority, or close plan rather than on evidence. Report the criterion as `unknown` instead, an honest gap is this desk's product.
+- **Connector unreachable**: a required CRM, email, or notes source exists but cannot be read, so the evidence base cannot be assembled at all.
 
-Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing qualification framework means adopting a named standard one, stating which and why, and scoring against it. Absent evidence for a criterion is scored `unknown` with the specific missing evidence named — that gap list is the most useful part of the output, not a reason to withhold it.
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing qualification framework means adopting a named standard one, stating which and why, and scoring against it. Absent evidence for a criterion is scored `unknown` with the specific missing evidence named; that gap list is the most useful part of the output, not a reason to withhold it.
 
 ## Downstream handoffs
 

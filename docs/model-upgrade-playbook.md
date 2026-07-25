@@ -3,7 +3,7 @@
 How to upgrade every skill in this repo when a new frontier model ships.
 
 The point of this design: a model release should be a **config change and a rebuild**, not
-217 hand edits. If you find yourself editing skill bodies one by one for a model release,
+109 hand edits. If you find yourself editing skill bodies one by one for a model release,
 something has leaked out of the profile and back into the corpus. Fix the leak instead.
 
 ## The one-page version
@@ -63,7 +63,7 @@ Work through these four axes. Each maps to a section of the profile.
 
 **1. Capability assumptions.** What can the floor model now do that it could not before?
 Context size, self-verification, autonomy horizon, parallelism, tool use. Update
-`capabilities:` with an `evidence:` string for each — a future maintainer needs to
+`capabilities:` with an `evidence:` string for each; a future maintainer needs to
 re-verify your claim, not trust it.
 
 **2. Authoring rules.** How does each capability change how skills should be *written*?
@@ -88,7 +88,7 @@ a single run - but raising the set never licenses inventing the contents of one.
 
 Scaffolding compensates for a model's weakness: numbered micro-steps, token rationing,
 halt-on-uncertainty, "verify your work". A stronger model makes these unnecessary, and
-keeping them actively costs quality — vendor guidance is now explicit that carried-over
+keeping them actively costs quality; vendor guidance is now explicit that carried-over
 verification instructions cause over-verification.
 
 Governance constrains what a model is *allowed* to do regardless of how good it is: never
@@ -105,15 +105,22 @@ Two practical corollaries:
 
 - **Ordered procedure is content; ordered hand-holding is scaffolding.** A numbered list is
   only scaffolding if the order is derivable. Deploy gates, rollback sequences, evidence
-  capture before containment, dry-run before CRM write — those orders are load-bearing and
+  capture before containment, dry-run before CRM write; those orders are load-bearing and
   survive. When you keep one, write down *why* so the next pass does not strip it.
 - **Absent evidence is a soft gap; unreachable evidence is a hard halt.** The difference is
   whether continuing would launder a guess into a decision.
 
+## House style
+
+No em dashes anywhere in the repo. `tools/audit_skills.py` gates on this because, unlike
+prose semantics, it is mechanically decidable. Use a colon for list definitions
+(`- **Term**: definition`), a semicolon where two independent clauses join, and a comma for
+a genuine appositive.
+
 ## Release discipline
 
 `CHECKSUMS-*.txt` files pin published releases and are immutable. After a profile bump they
-*should* mismatch — the content genuinely changed. Do not overwrite them. Cut a new version
+*should* mismatch, the content genuinely changed. Do not overwrite them. Cut a new version
 and generate new checksums via `tools/generate_*_release.py`.
 
 ## Failure modes to watch

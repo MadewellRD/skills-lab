@@ -30,13 +30,13 @@ Draft and optimize outbound sequences across email and meeting-request workflows
 
 ## Workflow
 
-**Outcome.** A drafted multi-step sequence with subject lines, personalization tokens, CTA options, explicit compliance notes, and a send approval package — drafts, never sends.
+**Outcome.** A drafted multi-step sequence with subject lines, personalization tokens, CTA options, explicit compliance notes, and a send approval package, drafts, never sends.
 
-**Ordered gate (mandated — keep this order).** Draft the full sequence, then run the compliance review over it (consent basis, opt-out and unsubscribe language, regional and jurisdictional rules, suppression and do-not-contact lists), then present the send approval package to the named approver, and only then may a send occur. Each step must complete before the next begins. This order is externally mandated, not stylistic: outbound email is regulated, a message that has been sent cannot be recalled, and a compliance defect discovered after the send is an incident rather than an edit. No emails are sent by default and no sequence is enrolled in a sending tool without explicit approval.
+**Ordered gate (mandated, keep this order).** Draft the full sequence, then run the compliance review over it (consent basis, opt-out and unsubscribe language, regional and jurisdictional rules, suppression and do-not-contact lists), then present the send approval package to the named approver, and only then may a send occur. Each step must complete before the next begins. This order is externally mandated, not stylistic: outbound email is regulated, a message that has been sent cannot be recalled, and a compliance defect discovered after the send is an incident rather than an edit. No emails are sent by default and no sequence is enrolled in a sending tool without explicit approval.
 
-**Constraints.** Carry the sales workflow packet forward and update it in place. Approved messaging and user-provided constraints outrank generic copywriting instincts. Every personalization token resolves against verified account or lead evidence — a token that would render an invented fact is a fabrication that arrives in the customer's inbox. Claims about product behavior, results, customers, or pricing stay inside approved proof points.
+**Constraints.** Carry the sales workflow packet forward and update it in place. Approved messaging and user-provided constraints outrank generic copywriting instincts. Every personalization token resolves against verified account or lead evidence, a token that would render an invented fact is a fabrication that arrives in the customer's inbox. Claims about product behavior, results, customers, or pricing stay inside approved proof points.
 
-**Parallel surface.** Personas, segments, and target accounts are independent — draft the per-persona variants, angles, and personalization in parallel rather than one persona at a time. The compliance review, the suppression and consent check, and the send approval package are deliberately **not** parallel: they run once over the complete sequence set, because a per-message check cannot catch cadence violations, contact-frequency limits, or a suppressed recipient reached through a different variant.
+**Parallel surface.** Personas, segments, and target accounts are independent, draft the per-persona variants, angles, and personalization in parallel rather than one persona at a time. The compliance review, the suppression and consent check, and the send approval package are deliberately **not** parallel: they run once over the complete sequence set, because a per-message check cannot catch cadence violations, contact-frequency limits, or a suppressed recipient reached through a different variant.
 
 **Acceptance bar.** Every step in the sequence has a stated purpose, a CTA, and personalization tokens that resolve against named evidence. Compliance notes state the consent basis, the opt-out mechanism, and the regional rules applied. The approval package names the approver, the audience, the send window, and the exact content awaiting authorization.
 
@@ -51,11 +51,11 @@ A complete run produces the whole sequence package in one pass:
 - compliance notes
 - send approval package
 
-Every step of the sequence is written, not step one plus an outline of the rest — cadence, contact frequency, and compliance cannot be reviewed against a partial draft.
+Every step of the sequence is written, not step one plus an outline of the rest; cadence, contact frequency, and compliance cannot be reviewed against a partial draft.
 
 Each artifact is done when the approver could authorize it exactly as it stands. Every step states its purpose, its CTA, and its send offset; every personalization token names the verified account or lead field it resolves against; the compliance notes state the consent basis, the opt-out mechanism, and the regional rules applied; the approval package names the approver, the audience, the send window, and the precise content awaiting authorization. Placeholder body copy is not a draft.
 
-A full package is still a draft package. Writing every step does not send, schedule, or enroll anyone: the draft, then compliance review, then approval order in Workflow holds without exception, and a finished sequence is never a reason to treat approval as implied. Nor does completeness license invention — a token that would render an unverified fact, or a claim about product behaviour, results, customers, or pricing outside the approved proof points, is removed and named rather than written plausibly. A fabricated personalization detail does not fail quietly; it lands in a prospect's inbox with the sender's name on it. Personas, segments, and target accounts are independent drafting units inside the parallel surface declared in Workflow.
+A full package is still a draft package. Writing every step does not send, schedule, or enroll anyone: the draft, then compliance review, then approval order in Workflow holds without exception, and a finished sequence is never a reason to treat approval as implied. Nor does completeness license invention; a token that would render an unverified fact, or a claim about product behaviour, results, customers, or pricing outside the approved proof points, is removed and named rather than written plausibly. A fabricated personalization detail does not fail quietly; it lands in a prospect's inbox with the sender's name on it. Personas, segments, and target accounts are independent drafting units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 
@@ -74,14 +74,14 @@ A full package is still a draft package. Writing every step does not send, sched
 
 Proceed by default on drafting and label the assumption inline. Reserve hard halts for these consequence classes:
 
-- **Approval** — a send is requested without explicit approval. Hard halt, without exception: no message leaves this desk on inferred consent from the user, and a request to "just send it" is a request, not an approval of the content.
-- **Production or destructive** — the request is to send, schedule, or enroll contacts in a sequencing tool rather than to draft. Sending is irreversible; drafting is not.
-- **Security or privacy** — the required compliance language is unavailable, the consent basis for the audience is unestablished, opt-out handling is undefined, or the audience has not been checked against suppression and do-not-contact lists. Hard halt: these are regulatory controls on the send, not stylistic preferences, and a compliance defect found after the send is an incident.
-- **Source conflict** — approved messaging and the personalization evidence genuinely disagree about the customer's situation, so the sequence would open on a premise the account will recognize as wrong.
-- **Release integrity** — a claim about product behavior, results, customers, or pricing exceeds the approved proof points. Remove the claim; do not soften it until it reads as supportable.
-- **Connector unreachable** — a required CRM, suppression-list, or enrichment source exists but cannot be read, so the audience cannot be validated before a send.
+- **Approval**: a send is requested without explicit approval. Hard halt, without exception: no message leaves this desk on inferred consent from the user, and a request to "just send it" is a request, not an approval of the content.
+- **Production or destructive**: the request is to send, schedule, or enroll contacts in a sequencing tool rather than to draft. Sending is irreversible; drafting is not.
+- **Security or privacy**: the required compliance language is unavailable, the consent basis for the audience is unestablished, opt-out handling is undefined, or the audience has not been checked against suppression and do-not-contact lists. Hard halt: these are regulatory controls on the send, not stylistic preferences, and a compliance defect found after the send is an incident.
+- **Source conflict**: approved messaging and the personalization evidence genuinely disagree about the customer's situation, so the sequence would open on a premise the account will recognize as wrong.
+- **Release integrity**: a claim about product behavior, results, customers, or pricing exceeds the approved proof points. Remove the claim; do not soften it until it reads as supportable.
+- **Connector unreachable**: a required CRM, suppression-list, or enrichment source exists but cannot be read, so the audience cannot be validated before a send.
 
-Everything else is a soft gap: proceed with the draft, name the gap, and label what it affects. A missing persona, CTA, or offer is a labeled assumption in the draft plus an explicit question in the approval package — drafting on an assumption is reversible, and the send gate above catches it before anything reaches a customer.
+Everything else is a soft gap: proceed with the draft, name the gap, and label what it affects. A missing persona, CTA, or offer is a labeled assumption in the draft plus an explicit question in the approval package; drafting on an assumption is reversible, and the send gate above catches it before anything reaches a customer.
 
 ## Downstream handoffs
 

@@ -22,13 +22,13 @@ Do not write implementation prompts with this skill. When the user is ready for 
 
 **Outcome.** The discovery artifact the request calls for:
 
-- Repo reconnaissance report — code structure, build system, tests, dependencies, ownership, and recent change history. Default for unfamiliar codebases.
-- Feasibility assessment — whether a product requirement can be implemented under current constraints. Default for "can we build this?" questions.
-- Integration discovery — external APIs, SDKs, service boundaries, auth, rate limits, and failure modes.
-- Spike plan — a bounded investigation with questions, commands, expected artifacts, and stop conditions. Default when implementation is premature.
-- Risk and unknowns analysis — proven facts separated from assumptions, blockers, and decisions needed.
-- Technical discovery memo — default for broad investigation.
-- Connector diagnostic — when required sources are unreachable.
+- Repo reconnaissance report: code structure, build system, tests, dependencies, ownership, and recent change history. Default for unfamiliar codebases.
+- Feasibility assessment: whether a product requirement can be implemented under current constraints. Default for "can we build this?" questions.
+- Integration discovery: external APIs, SDKs, service boundaries, auth, rate limits, and failure modes.
+- Spike plan: a bounded investigation with questions, commands, expected artifacts, and stop conditions. Default when implementation is premature.
+- Risk and unknowns analysis: proven facts separated from assumptions, blockers, and decisions needed.
+- Technical discovery memo: default for broad investigation.
+- Connector diagnostic: when required sources are unreachable.
 
 **Grounding.** Use GitHub for repo facts, files, commits, PRs, issues, CI checks, dependency manifests, tests, and build scripts. Use docs connectors or uploaded docs for PRDs, roadmaps, architecture docs, design notes, audit packs, and decisions. Use issue/project connectors for ticket scope, acceptance criteria, priority, labels, owners, and blockers. Use communication connectors only for recent decision context or agent halt reports. Use public web only for external APIs, SDKs, standards, vendor docs, or current tool behavior not present in repo or docs.
 
@@ -42,13 +42,13 @@ Do not write implementation prompts with this skill. When the user is ready for 
 
 ## Output rules
 
-A discovery run delivers the memo and everything it rests on, together: the reconnaissance detail behind it, the risk and unknowns analysis with likelihood and impact, and the explicit handoff decision. Three artifact types stay genuinely their own scope rather than joining that set — a feasibility assessment answers a specific can-we-build-this question, a spike plan is produced when the memo's own conclusion is that implementation is premature, and a connector diagnostic replaces the set when required sources are unreachable.
+A discovery run delivers the memo and everything it rests on, together: the reconnaissance detail behind it, the risk and unknowns analysis with likelihood and impact, and the explicit handoff decision. Three artifact types stay genuinely their own scope rather than joining that set; a feasibility assessment answers a specific can-we-build-this question, a spike plan is produced when the memo's own conclusion is that implementation is premature, and a connector diagnostic replaces the set when required sources are unreachable.
 
 When producing a discovery artifact, create a downloadable Markdown file when tools allow it. Use the wrapper in `references/output-contract.md`. Include source facts, unverified assumptions, risks, open questions, and explicit next-step routing.
 
 The set is finished when the next stage does not have to repeat the investigation. Every load-bearing claim names the file, path, manifest, or commit behind it. Every unknown is stated as a question with the investigation that would answer it. A spike plan carries its bounding conditions and its stop rule. A memo describing the repository in general terms has not done discovery, it has summarized an impression of one.
 
-Repository areas, manifests, test suites, external API surfaces, and open questions are independent lines of investigation — the widest fan-out in the lifecycle — so the artifacts in the set are built from parallel work and reconciled once.
+Repository areas, manifests, test suites, external API surfaces, and open questions are independent lines of investigation; the widest fan-out in the lifecycle; so the artifacts in the set are built from parallel work and reconciled once.
 
 Do not cite or claim code facts that were not retrieved from connectors or supplied by the user. Do not invent file paths, dependency versions, test names, architecture decisions, CI status, owners, or issue IDs.
 
@@ -71,12 +71,12 @@ Load these references when relevant:
 
 Proceed by default. Discovery exists to surface unknowns, so an unknown is the expected output, not a stop: record it, label the working assumption, and continue investigating. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- **Approval** — the investigation would require credentials, access, or spend that a human must grant.
-- **Production or destructive** — the request asks to run commands against production systems or data to establish a fact.
-- **Security or privacy** — the memo would require security, legal, privacy, or production-risk assumptions that no source supports.
-- **Source conflict** — live repo state conflicts with pasted facts on a load-bearing point. Preserve the conflict and halt rather than choosing.
-- **Release integrity** — a feasibility verdict would be presented as established when the evidence cannot support it.
-- **Connector unreachable** — GitHub or a required spec source exists but cannot be read, or external API behavior is current-sensitive and the source is unreachable. A source that is merely absent, or a repo that has not been selected yet, is a soft gap: proceed on user-provided facts, mark the artifact source-limited, and name what would confirm it.
+- **Approval**: the investigation would require credentials, access, or spend that a human must grant.
+- **Production or destructive**: the request asks to run commands against production systems or data to establish a fact.
+- **Security or privacy**: the memo would require security, legal, privacy, or production-risk assumptions that no source supports.
+- **Source conflict**: live repo state conflicts with pasted facts on a load-bearing point. Preserve the conflict and halt rather than choosing.
+- **Release integrity**: a feasibility verdict would be presented as established when the evidence cannot support it.
+- **Connector unreachable**: GitHub or a required spec source exists but cannot be read, or external API behavior is current-sensitive and the source is unreachable. A source that is merely absent, or a repo that has not been selected yet, is a soft gap: proceed on user-provided facts, mark the artifact source-limited, and name what would confirm it.
 
 When the user asks for implementation before discovery is bounded, route upstream or narrow the scope and say so; that is a routing decision, not a halt.
 
