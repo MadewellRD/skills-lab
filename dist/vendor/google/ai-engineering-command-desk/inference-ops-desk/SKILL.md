@@ -44,11 +44,17 @@ Provider surfaces and endpoints are independent. Gathering and assessing per-pro
 
 ## Outputs
 
-- inference ops plan
-- runtime topology
-- SLO proposal
-- fallback policy
-- runbook checklist
+A full run delivers the whole operating design:
+
+- inference ops plan — the serving path end to end, with the capacity, concurrency, and cost assumptions it rests on.
+- runtime topology — providers, models, endpoints, regions, and the routing between them, with per-endpoint timeout and retry behavior.
+- SLO proposal — latency, availability, and error-rate targets with their measurement window and the consequence of a breach.
+- fallback policy — per failure class (rate limit, timeout, provider outage, content filter, degraded quality): what happens, in what order, and what the user sees.
+- runbook checklist — the operational actions for each failure class, written for whoever is paged rather than for whoever designed the system.
+
+Complete means operable: an on-call engineer could follow the runbook and an SRE could enforce the SLO without asking a follow-up question. Per-provider and per-endpoint design is parallel-safe; the shared SLO, secrets policy, and logging policy stay single decisions.
+
+Provider facts are the risk point. Rate limits, quotas, context windows, pricing, and regional availability are cited to provider documentation or to observed telemetry, and recorded as unverified when neither is reachable. A fallback policy built on an invented quota fails at precisely the moment it is needed.
 
 ## Workflow packet fields
 

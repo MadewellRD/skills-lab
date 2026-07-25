@@ -36,7 +36,7 @@ Apply `references/source-hierarchy.md` when sources conflict. If current user in
 
 ## Artifact selection
 
-Use these references as needed:
+A design run normally draws on several of these at once rather than one: the architecture spec carries the design, the ADRs carry the decisions inside it, and the interface contracts carry what the change depends on. Load a template when the artifact it shapes is genuinely in scope, and mark a shape not applicable when the change does not involve it — a migration plan for a change that moves nothing is padding, not completeness.
 
 - `references/architecture-template.md` for solution architecture and software design specs.
 - `references/adr-template.md` for architecture decision records.
@@ -47,6 +47,8 @@ Use these references as needed:
 - `references/halt-conditions.md` when input or connector facts are insufficient.
 
 ## Required output properties
+
+A complete design run delivers, together: the design artifact itself, an ADR for every decision it makes that a maintainer would otherwise have to reverse-engineer, the interface or data contracts the change depends on, and the downstream handoff notes for issue planning and implementation. Migration and rollout notes join that set whenever the change moves an existing system rather than adding to it. These are not alternatives to pick between — a design that records no decisions and specifies no contracts has not finished.
 
 Every design artifact must include:
 
@@ -64,7 +66,13 @@ Every design artifact must include:
 - migration and rollout notes when relevant;
 - downstream handoff notes for issue planning and implementation.
 
+Each of those carries weight only at implementable depth. A contract states its operations, payloads, error behavior, and compatibility expectations. An ADR states the context, the options weighed, the choice, and what the choice costs. A boundary states what sits on each side of it and what crosses. A section heading with a sentence of intent underneath is not the property being asked for.
+
+Components and ADRs are independent once boundaries are set, which is what the parallel surface above refers to: the artifacts in the set are drafted concurrently, then reconciled in one pass.
+
 Do not bury unknowns. Open questions and assumptions must be visible and actionable.
+
+Producing the whole set is not a reason to produce any part of it from imagination. Where the repository, an existing contract, or an ownership fact could not be established, the artifact says the contract is unspecified and names what would specify it. An invented interface costs more than a missing one, because issue planning and implementation will both build on it.
 
 ## Halt behavior
 

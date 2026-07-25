@@ -40,11 +40,17 @@ Analyze churn and retention signals. Identify cohorts, usage patterns, lifecycle
 
 ## Outputs
 
-- retention analysis
-- churn driver taxonomy
-- cohort insight summary
-- intervention map
-- experiment recommendations
+A complete run delivers all five together — a driver taxonomy with no intervention map leaves the reader exactly where they started:
+
+- **retention analysis** — retention and churn by cohort and segment over a stated window, with the churn definition used and the population each figure covers.
+- **churn driver taxonomy** — named drivers with the evidence behind each, its strength, and whether the relationship is observed correlation or inferred cause, labeled as such.
+- **cohort insight summary** — what actually differs between the cohorts that retain and those that do not.
+- **intervention map** — per driver: the candidate intervention, the mechanism it acts on, the owning team, and the expected effect with its basis.
+- **experiment recommendations** — the interventions worth testing first, each with the metric that would confirm it, shaped for `experiment-design-desk` to pick up.
+
+Depth bar: a retention owner could choose an intervention and brief a team from this without a follow-up round trip. Cohorts fan out across the parallel surface already declared; the taxonomy and cross-cohort ranking are the aggregate pass once every cohort is profiled.
+
+Completing the set is never a reason to produce a number. Retention rates, cohort sizes, churn reasons, and revenue impact come from the analytics, billing, or research evidence actually available. Where a cut cannot be computed, it is reported as unavailable and the driver that depended on it stays a hypothesis — a plausible churn rate is indistinguishable from a real one on the page, and will be acted on as real.
 
 ## Workflow packet fields
 

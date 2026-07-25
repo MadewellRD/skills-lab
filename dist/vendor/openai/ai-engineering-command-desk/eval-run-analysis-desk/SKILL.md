@@ -44,11 +44,17 @@ Cases and slices are independent. Per-case scoring review, per-slice baseline co
 
 ## Outputs
 
-- eval analysis report
-- failure taxonomy
-- release blocker list
-- rerun plan
-- downstream fix recommendations
+A run over eval results delivers the full analysis in one pass:
+
+- eval analysis report — per-slice results against threshold and against baseline, grader reliability wherever grading was subjective, and what changed since the comparison run.
+- failure taxonomy — clusters with a defining characteristic, a representative case each, frequency, and the suspected mechanism labeled as suspected.
+- release blocker list — which failures cross a gate and what clearing each requires. "No blockers" is stated explicitly alongside the gates evaluated.
+- rerun plan — what to rerun, under what change, and what result would resolve the question. Where no rerun is warranted, that conclusion is stated with its reason rather than left blank.
+- downstream fix recommendations — each routed to the desk that owns the fix, carrying the evidence that desk needs.
+
+Depth bar: an owner should be able to act on any cluster without reopening the raw results. Per-case and per-slice work is the parallel-safe unit; grader reliability across the run, the gate verdict, and the rerun decision are aggregate.
+
+The one thing this desk must never produce is a number the run did not return. Missing baselines, unreadable run artifacts, and slices that were never executed are reported as such, and a cluster with too few cases to support a mechanism says so instead of naming a cause. An invented pass rate does not stay in this report — it propagates straight into a release decision.
 
 ## Workflow packet fields
 

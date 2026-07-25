@@ -40,7 +40,11 @@ iOS PRD, discovery memo, repo facts, existing architecture docs, service contrac
 
 ## Expected outputs
 
-Architecture brief, ADR notes, module/interface map, migration plan, risks, validation expectations, and packet update.
+One run produces the design package entire: architecture brief, ADR notes, module and interface map, migration plan, risks, validation expectations, and the packet update. These constrain each other — an ADR is only meaningful against the module map it governs, and a migration plan is only safe against the risks that gate it — so they are delivered together rather than selected between.
+
+Each is complete when implementation could begin from it. The brief names the chosen lane and the alternatives that were rejected and why; the module map names actual modules, their owners, and the interfaces between them instead of layer-shaped boxes; the migration plan gives the sequence, the points that can still be reversed, and the consequence of skipping a step; the validation expectations say what proves the design held. Empty sections under real headings mean the artifact failed, not that it is early.
+
+Delivering all of it does not extend permission to design beyond the evidence. Where nothing establishes a module boundary, a dependency direction, a concurrency model, or a migration constraint, that part is marked blocked on the named missing fact — a fluent architecture invented to complete the map is more expensive than an acknowledged gap, because the next desk will build on it. Candidate boundaries, service contracts, and per-alternative analysis are independent and sit in the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: an unknown API contract, runtime constraint, architecture lan
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-architecture-brief.md`
 - `ios-adr.md`
 - `ios-module-map.md`
 - `ios-migration-plan.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned in place of the set above when a hard halt fires. If no migration is in scope, record that in the brief rather than shipping an empty migration plan.
+
+A file without an evidential basis names the missing decision input instead of presenting an invented design as settled.
 
 ## Downstream handoff
 

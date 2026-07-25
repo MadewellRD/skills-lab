@@ -40,11 +40,17 @@ Prioritize features or initiatives with explicit criteria. Compare impact, effor
 
 ## Outputs
 
-- prioritization matrix
-- ranked feature list
-- decision record
-- tradeoff notes
-- handoff recommendations
+A complete run delivers the full decision package rather than a ranked list on its own:
+
+- **prioritization matrix** — every candidate scored on the same criteria, with the evidence or labeled assumption behind each score.
+- **ranked feature list** — the ordering, with dependencies resolved and the constraint that produced it stated.
+- **decision record** — what was decided, by whom, on what basis, and what was explicitly deferred or dropped with its reason.
+- **tradeoff notes** — what the ranking gives up, and the conditions under which it should be revisited.
+- **handoff recommendations** — the top items routed onward with what the receiving desk needs to start.
+
+Complete means someone could defend this ranking in a planning meeting and start the top item without asking for detail. A score with no basis under it is an unfinished cell. Candidates score in parallel across the surface already declared; ranking, dependency resolution, and opportunity-cost tradeoffs are the aggregate pass.
+
+Producing every artifact is not permission to supply a score nobody sourced. Effort estimates, revenue impact, customer demand counts, and confidence levels trace to evidence or are marked as assumptions with a named owner to confirm them. An invented effort estimate or demand figure sets a roadmap and is treated as fact long after its origin is forgotten.
 
 ## Workflow packet fields
 

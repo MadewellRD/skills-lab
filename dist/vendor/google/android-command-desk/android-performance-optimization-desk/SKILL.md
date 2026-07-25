@@ -40,7 +40,11 @@ Benchmark output, traces, profiler results, CI reports, crash/ANR data, device m
 
 ## Expected outputs
 
-Performance plan, measurement matrix, bottleneck hypotheses, validation commands, success gates, optimization handoff, halt conditions, and packet update.
+A complete run delivers the performance package as a set: the plan, the measurement matrix, the ranked bottleneck hypotheses, the validation commands, the success gates, the optimization handoff, the halt conditions that apply, and the packet update. A hypothesis without the measurement that produced it, or a success gate without the command that checks it, is not something anyone can optimize against, so these ship together rather than one per run.
+
+The bar per artifact is reproducibility by someone else on the same hardware. The measurement matrix names the device tiers, the workload, the scenario, and the metric per cell with its current value or an explicit gap; each hypothesis names the evidence that suggests it and the measurement that would confirm or kill it; each success gate states a number and the tier it applies to; the rollback criteria state what regression reverts the change. "Improve startup time" is not a gate.
+
+Producing the full set never justifies inventing a number. A metric with no measurement behind it is reported as unmeasured with the profiling run that would produce it — never estimated into the matrix, because a fabricated baseline makes every later comparison wrong in a way nobody can see. Device tiers, scenarios, and individual metrics are independent measurement axes and are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -70,11 +74,16 @@ Otherwise proceed: an unknown device tier, workload, or test scenario becomes a 
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-performance-plan.md`
 - `android-benchmark-matrix.md`
 - `android-profile-summary.md`
 - `android-performance-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — replaces the set above when a hard halt fires. Where measurements could not be collected, the matrix records the gap; it does not become a halt.
 
 ## Downstream handoff
 

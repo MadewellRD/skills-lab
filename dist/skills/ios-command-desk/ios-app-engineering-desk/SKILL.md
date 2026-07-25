@@ -43,7 +43,11 @@ Accepted requirements, architecture brief, UI/UX brief, technical discovery memo
 
 ## Expected outputs
 
-App engineering plan, file/module change map, implementation constraints, validation commands, risks, halt conditions, packet update, and downstream SDLC implementation handoff when ready.
+A complete run produces the engineering scope as a set: the app engineering plan, the file and module change map, the implementation constraints, the validation commands, the risks, any halt conditions, the packet update, and the downstream SDLC implementation handoff. The handoff belongs to the set whenever the implementation readiness facts are present; where they are not, it is emitted as an explicit not-ready note naming the missing facts, which is different from quietly dropping it or writing a generic one.
+
+The bar is that a coding agent can start without a clarifying exchange. The change map gives real modules and file paths with the expected change per file rather than a list of targets; the constraints say what must not change as well as what must; every validation command runs against this project as written, with its scheme and destination. A plan that describes the work in general terms has not cleared the bar.
+
+Producing the whole set is not licence to invent the project. A module, path, API, entitlement, permission, or command that no source establishes is recorded as unknown next to the discovery step that would settle it — a fabricated file path costs a coding agent an entire run before anyone notices. Per-module scoping is independent work inside the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -73,11 +77,18 @@ Otherwise proceed: an unclear platform API, lifecycle behavior, backend dependen
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-app-engineering-plan.md`
 - `ios-app-source-facts.md`
 - `ios-app-validation-commands.md`
 - `ios-app-implementation-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned in place of the set above when a hard halt fires, not added to it.
+
+A file with no source basis states that and names the discovery step that would close it. A fabricated path is worse than an absent one.
 
 ## Downstream handoff
 

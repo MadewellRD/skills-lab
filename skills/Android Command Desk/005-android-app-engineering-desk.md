@@ -43,7 +43,11 @@ Accepted requirements, architecture brief, UI/UX brief, technical discovery memo
 
 ## Expected outputs
 
-App engineering plan, file/module change map, implementation constraints, validation commands, risks, halt conditions, packet update, and downstream SDLC implementation handoff when ready.
+A complete run delivers the engineering scope as a set: the app engineering plan, the file and module change map, the implementation constraints, the validation commands, the risks, the halt conditions that apply, the packet update, and the downstream SDLC implementation handoff. The handoff is part of the set whenever the implementation readiness facts are present; when they are not, it is emitted as an explicit not-ready note listing exactly which facts are missing, rather than silently omitted or padded out.
+
+Depth is judged by whether a coding agent could start without a clarifying round trip. The change map names real modules and file paths with the expected change per file, not a module list; the constraints state what must not change as well as what must; every validation command is runnable against this repo as written. A plan that describes the work in the abstract has not met the bar.
+
+Producing the full set is not permission to invent the repo. A module, file path, API, permission, or command that no source establishes is recorded as unknown with the discovery step that would resolve it — never guessed into a change map, where a wrong path costs an agent a whole run. Per-module scoping is independent work and belongs to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -73,11 +77,18 @@ Otherwise proceed: an unclear platform API, lifecycle behavior, backend dependen
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-app-engineering-plan.md`
 - `android-app-source-facts.md`
 - `android-app-validation-commands.md`
 - `android-app-implementation-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — produced instead of the set above when a hard halt fires, not appended to it.
+
+If a file has no source basis, it says so and names the discovery step that would close it. An invented change map costs more than a missing one.
 
 ## Downstream handoff
 

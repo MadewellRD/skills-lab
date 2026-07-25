@@ -42,11 +42,17 @@ Design product experiments that answer decision-relevant uncertainty. Define hyp
 
 ## Outputs
 
-- experiment plan
-- hypothesis and metric tree
-- cohort and variant design
-- guardrail list
-- decision rules
+A complete run delivers the experiment as a runnable design. These ship together because the design is only valid as a whole:
+
+- **experiment plan** — what is being tested, on whom, for how long, and what happens at the end.
+- **hypothesis and metric tree** — the falsifiable hypothesis, the single primary metric, the secondary metrics, and how each is computed.
+- **cohort and variant design** — assignment unit, randomization, exposure, exclusions, and sample size with the effect size and power it assumes.
+- **guardrail list** — the metrics that must not degrade, their thresholds, and the stop rule if one breaches.
+- **decision rules** — written before the experiment runs: what result ships, what result kills, what result is inconclusive, and who decides.
+
+The bar is that an analyst could instrument and run this without a follow-up round trip, and that nobody could reinterpret the outcome after seeing it. Variants and candidate metric definitions fan out across the parallel surface already declared; power, duration, and traffic allocation are the aggregate pass over the settled set.
+
+Every section is delivered and none is fabricated. Baseline conversion rates, traffic volumes, and historical effect sizes come from analytics evidence or are recorded as unavailable. Where the baseline is unknown, the sample size is stated as blocked on it rather than computed from an invented figure — an experiment powered off a made-up baseline returns a confident wrong answer that nobody questions.
 
 ## Workflow packet fields
 

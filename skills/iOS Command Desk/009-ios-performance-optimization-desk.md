@@ -40,7 +40,11 @@ Benchmark output, traces, profiler results, CI reports, crash/main-thread stall 
 
 ## Expected outputs
 
-Performance plan, measurement matrix, bottleneck hypotheses, validation commands, success gates, optimization handoff, halt conditions, and packet update.
+A complete run delivers the performance package as a set: the plan, the measurement matrix, the ranked bottleneck hypotheses, the validation commands, the success gates, the optimization handoff, any halt conditions, and the packet update. A hypothesis without the measurement that produced it, or a gate without the command that checks it, gives nobody anything to optimize against, so these arrive together.
+
+Each artifact is complete when someone else could reproduce it on the same hardware. The measurement matrix names device tiers, workload, scenario, and metric per cell with its current value or an explicit gap; each hypothesis names the evidence pointing at it and the measurement that would confirm or kill it; each success gate carries a number and the tier it binds to; the rollback criteria name the regression that reverts the change. "Make launch faster" is not a gate.
+
+None of this is a reason to supply a number nobody measured. A metric with no measurement behind it is reported as unmeasured alongside the Instruments run or benchmark that would produce it — an estimated baseline silently corrupts every comparison made against it afterwards. Device tiers, scenarios, and individual metrics are independent measurement axes inside the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -70,11 +74,16 @@ Otherwise proceed: an unknown device tier, workload, or test scenario becomes a 
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-performance-plan.md`
 - `ios-benchmark-matrix.md`
 - `ios-profile-summary.md`
 - `ios-performance-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned instead of the set above when a hard halt fires. Measurements that could not be collected are recorded as gaps in the matrix rather than escalated into a halt.
 
 ## Downstream handoff
 

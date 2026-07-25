@@ -44,11 +44,17 @@ Sources and shards are independent. Per-source rights review, quality assessment
 
 ## Outputs
 
-- dataset curation plan
-- labeling guide
-- split policy
-- privacy review inputs
-- dataset validation checklist
+One run delivers the whole curation package:
+
+- dataset curation plan — sources, volumes, inclusion and exclusion rules, rights status per source, and the assembly order.
+- labeling guide — label schema, definitions, boundary cases, adjudication rule, and the agreement expectation. Complete when two labelers using it independently resolve the same edge case the same way.
+- split policy — train, validation, and test construction, the leakage controls between them, and what keeps a held-out split held out.
+- privacy review inputs — sensitive-field classification, retention, access, and the handling constraint per source.
+- dataset validation checklist — the checks that must pass before the set is used, each with an explicit pass condition.
+
+Per-source review is the parallel-safe unit; split assignment and cross-source deduplication stay a single global pass over the combined set.
+
+Delivering all five is not license to assert facts about data nobody inspected. Rights status, license terms, PII presence, provenance, and record counts are reported from evidence or reported as unverified. A source marked cleared for training without a basis is a legal exposure wearing the shape of a completed field.
 
 ## Workflow packet fields
 

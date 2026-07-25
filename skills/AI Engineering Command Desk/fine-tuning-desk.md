@@ -42,11 +42,22 @@ Within step 1 the alternatives are independent: assessing prompting, retrieval, 
 
 ## Outputs
 
-- fine-tuning decision memo
-- training data readiness report
-- eval gate plan
-- rollout and rollback plan
-- monitoring requirements
+The decision comes first, and it determines which set the run delivers. Every run produces:
+
+- fine-tuning decision memo — the failure the tune is meant to fix, the cheaper alternatives assessed against it (prompting, retrieval, tooling, routing), the recommendation, and the exclusion reason for each rejected option.
+
+When the recommendation is to fine-tune, the remaining four ship with it in the same run rather than in later turns:
+
+- training data readiness report — per source: volume, rights status, quality, contamination against eval sets, and what blocks use.
+- eval gate plan — the pre-tune baseline, the slices that must improve, and the regression slices that must not degrade, each with a numeric threshold.
+- rollout and rollback plan — exposure sequence, the comparison against the base model in production, the rollback trigger, and the artifact rolled back to.
+- monitoring requirements — the signals that would show the tuned model degrading, and their owners.
+
+When the recommendation is *not* to fine-tune, those four are genuinely not applicable. The memo plus the recommended alternative path is then the complete run, and each omitted artifact is named with the decision that made it unnecessary — not produced for symmetry.
+
+Depth bar for whichever set applies: a practitioner could begin the work from it without a follow-up round trip.
+
+No part of this is filled in from expectation. Base-model performance, training-set size, tuning cost, and provider tuning limits are cited or recorded as unknown. A projected improvement with no measured baseline behind it is not a gate, and presenting one as a gate puts an untested model on a rollout path.
 
 ## Workflow packet fields
 

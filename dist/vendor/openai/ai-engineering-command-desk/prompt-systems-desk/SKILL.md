@@ -79,18 +79,22 @@ Treat prompt text as one control layer, not as an authorization system. If a pro
 
 ## Output behavior
 
-Produce the smallest complete artifact needed for the workflow mode:
+The workflow mode selects which artifact set a complete run delivers — not how little of it to produce. In every mode short of a halt, the core prompt system ships whole:
 
 - prompt architecture
 - instruction hierarchy
 - context assembly contract
 - output contract
-- prompt variants or patch instructions
 - prompt fixture set
 - regression and safety cases
-- implementation handoff
-- prompt change log
-- `Workflow Halt` report when required evidence is missing
+
+Mode adds to that core rather than replacing it. `prompt_revision` and `prompt_regression` also deliver the prompt variants or patch instructions and the prompt change log recording the behavior delta. `prompt_eval_handoff` adds the fixtures, rubrics, and acceptance expectations in the shape `eval-design-desk` consumes. `implementation_handoff` adds the patch-shaped handoff with exact paths, commands, allowed and forbidden files, validation gates, and stop line.
+
+The `Workflow Halt` report is the one true alternative: it is returned *instead of* the artifact set when a hard halt class applies, naming the exact missing evidence and the resume requirements rather than shipping a partial system.
+
+Each artifact is done when a prompt engineer could apply it without a follow-up round trip — the instruction hierarchy states precedence between layers, the context assembly contract states order and delimiters, the output contract states both the shape and the failure shape, and every behavior contract has at least one fixture that exercises it. A named section with no contract under it is a gap, not a draft. Variants, fixtures, and cases fan out across the parallel surface already declared.
+
+Shipping the full set never means inventing its contents. A shipped prompt version, a prior eval result, a policy, or a tool boundary that is not in evidence is recorded as unverified. Where a fixture would need an expected output nobody has established, the fixture is marked as needing one rather than handed a plausible answer.
 
 ## Workflow packet fields
 

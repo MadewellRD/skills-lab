@@ -40,7 +40,11 @@ Repo access, file tree, Xcode/settings/build files, iOSManifest files, CI workfl
 
 ## Expected outputs
 
-Technical discovery memo, source-facts table, feasibility assessment, validation commands, unknowns, risks, halt conditions, and packet update.
+A run that finishes hands over the discovery set whole: the technical discovery memo, the source-facts table, the feasibility assessment, the validation commands, the unknowns, the risks, any halt conditions that apply, and the `ios_delivery_packet` update. The memo on its own cannot be designed against — what makes it usable is the facts behind it, the commands that demonstrate them, and the explicit boundary of what is still unknown.
+
+The standard is that the architecture desk should not need to reopen the repo. Each fact traces to a file path, a command's output, or a named source; each validation command runs against this project as written, with the scheme, destination, or target it needs; each unknown states which downstream decision it holds up. A memo that lists categories and leaves the values blank has not finished.
+
+That standard is not met by inference. An Xcode version, toolchain, deployment target, Swift or Objective-C detail, dependency, signing fact, or CI setting that cannot be read stays an unknown — never a plausible iOS default, which would read as evidence and be treated as one. Build and settings files, manifests, dependency catalogs, CI definitions, and test targets are independent reads and belong to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -52,7 +56,7 @@ Technical discovery memo, source-facts table, feasibility assessment, validation
 
 ## Packet fields to update
 
-`repo`, `modules`, `build_system`, `xcode`, `kotlin_java`, `min_sdk`, `target_sdk`, `compile_sdk`, `ndk_cmake`, `engine_runtime`, `permissions`, `dependencies`, `ci`, `validation_commands`, `source_facts`, `risks`, `open_questions`, `ready_to_continue`
+`repo`, `modules`, `build_system`, `xcode`, `swift_objc`, `min_ios_version`, `target_sdk`, `deployment_target`, `xcframework_cmake`, `engine_runtime`, `permissions`, `dependencies`, `ci`, `validation_commands`, `source_facts`, `risks`, `open_questions`, `ready_to_continue`
 
 ## Halt conditions
 
@@ -69,11 +73,18 @@ Otherwise proceed: missing Xcode, SDK, native runtime, engine, signing, bundle I
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-technical-discovery.md`
 - `ios-source-facts.md`
 - `ios-validation-commands.md`
 - `ios-feasibility-risks.md`
-- `connector-diagnostic.md`
+
+Mode-specific alternative:
+
+- `connector-diagnostic.md` — takes the place of the set above when required repo, branch, or workflow access exists but cannot be read, leaving no source facts to establish.
+
+Where the evidence could not be read, the file says exactly that. It is never completed with iOS defaults so the set appears finished.
 
 ## Downstream handoff
 

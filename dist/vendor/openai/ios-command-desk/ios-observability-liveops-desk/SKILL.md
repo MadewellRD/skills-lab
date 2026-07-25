@@ -38,7 +38,11 @@ Release plan, analytics plan, crash/main-thread stall tooling, monitoring docs, 
 
 ## Expected outputs
 
-Observability plan, event/metric map, dashboard/alert checklist, live-ops plan, rollback triggers, incident handoff, halt conditions, and packet update.
+A complete run delivers the operating picture in full: the observability plan, the event and metric map, the dashboard and alert checklist, the live-ops plan, the rollback triggers, the incident handoff, any halt conditions, and the packet update. Alerts with no rollback triggers behind them, or a live-ops plan with no signals to say whether it is working, is not an operable release — these ship as one package.
+
+The bar is that an on-call engineer can act at 3am without asking what an alert means. Each event carries its schema and the question it answers; each metric names its owner, its source, and its threshold; each alert states its firing condition, who it pages, and the first response; each rollback trigger names the concrete signal and the action it authorizes. A dashboard mentioned but not specified is not a deliverable.
+
+Completing the set is never a licence to invent telemetry. An event, metric, threshold, or dashboard that no instrumentation or telemetry plan supports is recorded as a gap with the instrumentation it needs — a threshold chosen to fill a row yields either an alert nobody trusts or silence where a page belonged. Individual events, metrics, dashboards, and alert definitions are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -67,11 +71,18 @@ Otherwise proceed: an unknown telemetry stack, owner, dashboard, or live-ops con
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-observability-plan.md`
 - `ios-event-metric-map.md`
 - `ios-liveops-plan.md`
 - `ios-incident-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — produced in place of the set above when a hard halt fires, not alongside it.
+
+Where the telemetry plan cannot support a file, it names the instrumentation gap instead of listing signals and thresholds nobody set.
 
 ## Downstream handoff
 

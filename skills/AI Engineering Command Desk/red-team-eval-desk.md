@@ -42,11 +42,19 @@ Within steps 2 and 4 the attack categories are independent: authoring scenarios,
 
 ## Outputs
 
-- red-team plan
-- adversarial scenario matrix
-- failure report
-- mitigation recommendations
-- regression eval candidates
+A red-team run delivers the plan and the results of running it, together:
+
+- red-team plan — scope, the system boundary under test, the attack categories in and out of scope, the severity scale, and the stop rule.
+- adversarial scenario matrix — concrete scenarios per category with the exact input, the target behavior, and what counts as a failure. A category name with no scenarios under it is not coverage.
+- failure report — every observed failure with its reproduction input, its severity against the declared scale, and the boundary it crossed.
+- mitigation recommendations — per failure: the control and the layer that should enforce it, separating what prompt text can hold from what must move to tools, retrieval, or runtime policy.
+- regression eval candidates — the cases that should become permanent slices, shaped for `eval-design-desk` to consume.
+
+Where the run is design-only because the scenarios have not been executed against a real system, the failure report and the mitigations that depend on it are the mode-specific alternative: they are reported as not yet run, the plan and matrix are delivered in full, and execution is named as the next step. They are never populated with failures nobody observed.
+
+Depth bar: another red-teamer could reproduce any listed failure from the record alone. Attack categories fan out in parallel; scope and the severity scale are set once before that fan-out begins.
+
+This is where invention does the most damage. A hypothesized jailbreak written up as an observed one, a severity assigned without a reproduction, or a mitigation described as in place without evidence each corrupt the safety record that later releases lean on. Report the gap instead.
 
 ## Workflow packet fields
 

@@ -40,7 +40,11 @@ Manifest files, dependency files, auth/API docs, data inventory, App Review poli
 
 ## Expected outputs
 
-Security/privacy review, threat notes, privacy-label mapping, permission review, risk register, release gates, halt conditions, and packet update.
+A complete run delivers the assessment whole: the security and privacy review, the threat notes, the privacy-label and privacy-manifest mapping, the permission review, the risk register, the release gates with their dispositions, any halt conditions, and the packet update. A permission review with no privacy-label mapping downstream of it, or release gates with no findings behind them, cannot support an App Review submission decision, so the set is the unit of work.
+
+Depth is measured by whether a reviewer could accept or reject the submission from the artifact alone. Every requested permission appears with its named justification, its usage-description string, and the code path that requires it, or is flagged unjustified; every data type in the privacy label is matched to implementation evidence and the user-facing disclosure behind it; the privacy manifest covers the app's and each bundled SDK's collected data types, tracking domains, and required-reason API usage; every SDK is enumerated with what it collects or marked unknown; every finding carries a severity and an explicit pass, waive-with-rationale, or halt disposition. The compliance constraints in Workflow are requirements, and no artifact reports a gate as passed on their behalf.
+
+This is precisely where completing the set would do the most harm if it meant guessing. A permission justification, a collected data type, an SDK behaviour, a required-reason API, or an App Review obligation that no source establishes is reported as unverified or unassessed with the artifact needed to settle it — never written in so the declaration reads as finished. A privacy label or manifest assembled from plausible content is a false statement to Apple and to users, not a tidy-up. Per-permission, per-SDK, per-scheme, per-link, and per-dependency review are independent items within the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: Info.plist, URL scheme, universal-link, or auth risks that ca
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-security-privacy-review.md`
 - `ios-permission-privacy-label-map.md`
 - `ios-threat-notes.md`
-- `ios-policy-halt.md`
-- `workflow-halt.md`
+
+Mode-specific alternatives — each replaces a clean disposition rather than adding to it:
+
+- `ios-policy-halt.md` — when an App Review policy, privacy-label, or privacy-manifest obligation blocks the release gate and that gate cannot be reported as passed or waived.
+- `workflow-halt.md` — when a hard halt fires for any other consequence class.
+
+No file here is completed with claimed permission, data-type, tracking-domain, required-reason API, or App Review content. An entry the evidence does not support is written as unverified or unassessed — a declaration filled in to look finished is a false statement to Apple and to users.
 
 ## Downstream handoff
 

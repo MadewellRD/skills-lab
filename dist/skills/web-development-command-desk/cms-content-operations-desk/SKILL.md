@@ -102,7 +102,11 @@ Acceptance bar: every content type has fields, validation, an owner, and a publi
 
 ## Expected outputs
 
-Content model, editorial workflow, publishing rules, governance plan, localization plan, content debt backlog, migration notes.
+These ship together as one deliverable set: content model, editorial workflow, publishing rules, governance plan, localization plan, content debt backlog, and migration notes.
+
+Each has to be operable by an editor and an implementer without a second conversation. The content model lists every type with its fields, field types, validation, required or optional status, and owner. The editorial workflow names the actual roles that author, review, approve, publish, and revert. Migration notes state what moves, from where, in what order, and what happens to whatever does not move. A content model given as a list of type names is a stub, not a model.
+
+Migration notes are the sharpest case for restraint. If the existing content inventory could not be reached, say the migration is unplanned and name the inventory as the blocker. Do not project a field mapping onto content nobody has counted.
 
 ## Evidence packet additions
 
@@ -129,11 +133,18 @@ Unknown CMS or platform constraints, and gaps in a planning-only inventory, are 
 
 ## Default output modes
 
-- `cms-content-operations.md`
-- `cms-content-operations-source-facts.md`
-- `cms-content-operations-risk-register.md`
-- `cms-content-operations-downstream-handoff.md`
-- `connector-diagnostic.md`
+A run delivers all of these:
+
+- `cms-content-operations.md`: content model, editorial workflow, publishing and localization rules, governance cadence.
+- `cms-content-operations-source-facts.md`: CMS capabilities, existing types, inventory counts, and role assignments, each attributed.
+- `cms-content-operations-risk-register.md`: governance, localization, migration, and content-debt risks with likelihood and blast radius.
+- `cms-content-operations-downstream-handoff.md`: the content contract `accessibility-seo-desk` and the frontend stage build against.
+
+`connector-diagnostic.md` replaces the set when the CMS, repo, or content inventory cannot be reached. It is the alternative outcome of a run, not a fifth file.
+
+Content types and locales are independent units, so drafting across these artifacts falls inside the parallel surface the Workflow section declares.
+
+A full set is not a licence to guess. Locale rules, approval owners, and inventory counts that no source supplies are marked unknown and carried into `open_questions`. Plausible editorial process is still fabricated editorial process.
 
 ## Downstream handoff
 

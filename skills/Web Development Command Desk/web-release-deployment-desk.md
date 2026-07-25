@@ -101,7 +101,11 @@ Acceptance bar: the release plan names the environment promotion order, the exac
 
 ## Expected outputs
 
-Release plan, deployment checklist, rollback plan, environment documentation, launch checklist, post-release validation plan.
+A release run delivers every one of these: release plan, deployment checklist, rollback plan, environment documentation, launch checklist, and post-release validation plan. A release plan without its rollback plan is not a partial delivery, it is an unsafe one.
+
+Each item is written to be executed under time pressure by someone who did not write it. The deployment checklist gives the commands, in order, with the owner and the pass condition per step. The rollback plan gives the exact reversal path, who runs it, how long it takes, and what it does not undo. Post-release validation names the signals watched, for how long, and the threshold that triggers the rollback. Gate ordering stays exactly as the Workflow section requires it.
+
+None of this may be reconstructed. Deploy commands, environment names, rollback procedures, and approval status are either sourced or recorded as missing, and a missing rollback path is a halt rather than a blank to fill with a reasonable-sounding sequence.
 
 ## Evidence packet additions
 
@@ -131,11 +135,18 @@ Planning-only gaps that touch no live environment, such as an undecided launch c
 
 ## Default output modes
 
-- `web-release-deployment.md`
-- `web-release-deployment-source-facts.md`
-- `web-release-deployment-risk-register.md`
-- `web-release-deployment-downstream-handoff.md`
-- `connector-diagnostic.md`
+One run produces the set:
+
+- `web-release-deployment.md`: environment map, promotion and cutover sequence, launch checklist, rollback path, post-release validation.
+- `web-release-deployment-source-facts.md`: CI, hosting, CDN, config, and approval facts with their sources.
+- `web-release-deployment-risk-register.md`: release risks with the gate that catches each and the fallback if it does not.
+- `web-release-deployment-downstream-handoff.md`: what `web-observability-desk` monitors once the release stands.
+
+`connector-diagnostic.md` is what the run returns instead when the CI, hosting, or configuration source cannot be reached. Deployment content is not drafted around unreachable evidence.
+
+Gathering environment and configuration facts across environments is parallel-safe per the Workflow section. The promotion, invalidation, and rollback sequences those artifacts contain stay strictly ordered.
+
+Completing the set does not soften anything above it. An unsourced deploy command or approval is left as a named gap and the affected gate is marked blocking, never filled in so the checklist reads finished.
 
 ## Downstream handoff
 

@@ -70,16 +70,23 @@ Use inline review comments only when the finding points to a specific changed li
 
 ## Output rules
 
+A full review of a PR delivers the set, not one report drawn from it:
+
+- `pr-review-report.md` — the decision and the findings behind it.
+- `diff-risk-assessment.md` — blast radius, regression surface, and scope creep against the linked issue.
+- `missing-test-assessment.md` — what the change alters and what does not cover it.
+- `quality-gate-summary.md` — check state, acceptance criteria, and what each gate rests on.
+- `review-comment-plan.md` — the comments to leave, anchored to file and line wherever a specific line is at fault.
+
+`review-to-pr-command-handoff.md` is genuinely conditional: it exists to convert requested changes into follow-up implementation work, so it is produced on a `request changes` decision or when the user asks for the follow-up, and is correctly absent from an `approve`.
+
 For user-facing artifacts, follow `references/output-contract.md` and create downloadable Markdown when file tools are available. Use `scripts/write_review_markdown.py` when a deterministic wrapper is useful.
 
-Default artifact names:
+Depth is the difference between a review and a reaction. Every finding carries severity, category, evidence, impact, and the exact next action. The risk assessment names the callers and paths the change reaches. The missing-test assessment names the specific behavior left uncovered rather than saying more tests are needed. A findings list with no decision, or a decision with no findings supporting it, is incomplete either way.
 
-- `pr-review-report.md`
-- `diff-risk-assessment.md`
-- `missing-test-assessment.md`
-- `review-comment-plan.md`
-- `quality-gate-summary.md`
-- `review-to-pr-command-handoff.md`
+Changed files, hunks, and findings are independent review units, so the artifacts in the set come out of parallel reading, with the single final pass reserved for cross-file concerns.
+
+Producing five files is not a reason to produce five findings. A clean file gets no invented nit, an unreachable check is reported as unverifiable rather than assessed, and `insufficient evidence` remains a legitimate decision. Padding a review with speculative issues costs the author more time than a short honest one.
 
 ## Halt behavior
 

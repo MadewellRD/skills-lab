@@ -40,11 +40,17 @@ Create product retrospectives after launches, experiments, roadmap cycles, or in
 
 ## Outputs
 
-- product retrospective
-- outcome summary
-- lesson list
-- action-item tracker
-- next-cycle recommendations
+A retrospective run delivers all five, since lessons without owned actions are how the same retrospective gets written again next cycle:
+
+- **product retrospective** — the period, what was committed, what shipped, and the gap between them.
+- **outcome summary** — each original goal or success metric against its actual result, with the measurement source and window.
+- **lesson list** — each lesson stated as a pattern with the evidence across cases that supports it, distinguished from a single anecdote.
+- **action-item tracker** — per action: the owner, the change it makes, the by-when, and the lesson it answers. An action with no owner is a wish.
+- **next-cycle recommendations** — what to do differently, routed to the desk or process that owns it.
+
+Depth bar: the team could pick up the tracker and start on Monday. Per-goal comparisons and the separate evidence streams gather in parallel across the surface already declared; lesson synthesis, theme grouping, and the action list are the aggregate pass.
+
+Producing every section never means constructing the record. Metric outcomes, ship dates, incident counts, and customer reactions come from delivery, analytics, and support evidence. A goal with no measured outcome is reported as unmeasured, and a lesson without evidence across cases stays an observation — a retrospective that invents its outcomes teaches the wrong lesson to everyone who reads it.
 
 ## Workflow packet fields
 

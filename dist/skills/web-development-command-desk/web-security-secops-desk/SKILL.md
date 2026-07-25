@@ -102,7 +102,11 @@ Acceptance bar: every required control is named with its enforcement point, ever
 
 ## Expected outputs
 
-Security control list, hardening checklist, threat assumptions, third-party risk notes, security validation plan, incident hooks.
+One run delivers the set: security control list, hardening checklist, threat assumptions, third-party risk notes, security validation plan, and incident hooks.
+
+A control entry names the control, its enforcement point, its current state, and how that state was established. The hardening checklist gives the actual header, policy, or configuration value rather than the category it belongs to. Third-party risk notes cover every script and dependency found, each with a disposition. The validation plan says what evidence would show a control is live. "Add a CSP" is a category; a control list is where the directive set goes.
+
+Security text is the most dangerous place in this suite to sound confident. A control whose state no source establishes is recorded as unverified, never as configured, and an unidentified third-party script is named as unidentified rather than attributed to a likely vendor. The set is complete when every control has an honest state, including unknown.
 
 ## Evidence packet additions
 
@@ -131,11 +135,18 @@ Missing deployment environment facts for hardening are not a halt. Proceed with 
 
 ## Default output modes
 
-- `web-security-secops.md`
-- `web-security-secops-source-facts.md`
-- `web-security-secops-risk-register.md`
-- `web-security-secops-downstream-handoff.md`
-- `connector-diagnostic.md`
+A complete run produces:
+
+- `web-security-secops.md`: controls, enforcement points, hardening checklist, abuse cases, security gates.
+- `web-security-secops-source-facts.md`: repo, manifest, header, and configuration evidence with the exact source of each.
+- `web-security-secops-risk-register.md`: risks with severity, exposure path, and the mitigation that closes each.
+- `web-security-secops-downstream-handoff.md`: the gates `accessibility-seo-desk` and the release stage inherit, with unresolved risk acceptances named.
+
+`connector-diagnostic.md` is the alternative when the repo, dependency manifest, or configuration source cannot be reached. Control claims are not drafted without that evidence.
+
+Dependencies, third-party scripts, headers, and abuse cases are independent review units per the Workflow section, so these artifacts share that parallel surface.
+
+Nothing about delivering four files relaxes the rule above. An unevidenced control is unverified in writing, and a risk register that is honestly short is correct output.
 
 ## Downstream handoff
 

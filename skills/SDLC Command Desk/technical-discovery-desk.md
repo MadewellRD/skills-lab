@@ -42,9 +42,17 @@ Do not write implementation prompts with this skill. When the user is ready for 
 
 ## Output rules
 
+A discovery run delivers the memo and everything it rests on, together: the reconnaissance detail behind it, the risk and unknowns analysis with likelihood and impact, and the explicit handoff decision. Three artifact types stay genuinely their own scope rather than joining that set — a feasibility assessment answers a specific can-we-build-this question, a spike plan is produced when the memo's own conclusion is that implementation is premature, and a connector diagnostic replaces the set when required sources are unreachable.
+
 When producing a discovery artifact, create a downloadable Markdown file when tools allow it. Use the wrapper in `references/output-contract.md`. Include source facts, unverified assumptions, risks, open questions, and explicit next-step routing.
 
+The set is finished when the next stage does not have to repeat the investigation. Every load-bearing claim names the file, path, manifest, or commit behind it. Every unknown is stated as a question with the investigation that would answer it. A spike plan carries its bounding conditions and its stop rule. A memo describing the repository in general terms has not done discovery, it has summarized an impression of one.
+
+Repository areas, manifests, test suites, external API surfaces, and open questions are independent lines of investigation — the widest fan-out in the lifecycle — so the artifacts in the set are built from parallel work and reconciled once.
+
 Do not cite or claim code facts that were not retrieved from connectors or supplied by the user. Do not invent file paths, dependency versions, test names, architecture decisions, CI status, owners, or issue IDs.
+
+A complete set does not mean a complete picture and must not be made to look like one. An area that could not be read is named as unread, and a risk register with three sourced risks beats one with ten plausible ones. Discovery that honestly reports what it could not reach is more useful than discovery that reads finished, because the next stage will plan against whatever it is handed.
 
 ## Reference loading
 

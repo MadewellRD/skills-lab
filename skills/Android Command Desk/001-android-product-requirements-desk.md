@@ -40,7 +40,11 @@ Product brief, user story, GitHub issue, roadmap item, uploaded research, design
 
 ## Expected outputs
 
-Android PRD, acceptance criteria, non-goals, risk register, open questions, source-fact summary, and packet update.
+A complete run delivers the whole requirements package together, not one piece of it per turn: the Android PRD, the acceptance criteria, the non-goals, the risk register, the open-questions list, the source-fact summary, and the `android_delivery_packet` update. These are facets of one requirements decision and are only usable together — acceptance criteria detached from their requirement IDs, or a risk register without the non-goals that bound it, sends the reader back for another round.
+
+Each piece is finished when a product owner or an Android engineer could act on it without a follow-up question: every requirement carries a stable ID and criteria checkable on a device, emulator, CI, benchmark output, or release gate; every risk names its trigger and its impact; every open question names who can answer it. A heading with a placeholder under it is an unfinished artifact, not a draft.
+
+Delivering the full set is never a reason to fill a piece in. Where the sources establish nothing about monetization, device support, or a Play policy obligation, that piece is reported as not-applicable or blocked with the missing source named — never populated with a plausible-sounding requirement. The independent pieces above are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: an unresolved goal, audience, app/game lane, device or API ra
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-prd.md`
 - `android-acceptance-gates.md`
 - `android-risk-register.md`
 - `android-product-open-questions.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — replaces the set above when a hard halt fires. It is not a fifth file appended to a finished run.
+
+Any file in the set with no source basis is written as a short not-applicable note naming the missing source, rather than a document filled out until it looks complete.
 
 ## Downstream handoff
 

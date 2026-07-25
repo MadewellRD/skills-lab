@@ -42,12 +42,20 @@ Generate forecast narratives, confidence scores, and spreadsheet models from CRM
 
 ## Outputs
 
+A complete run delivers the full forecast package, not a single view from it:
+
 - forecast summary
 - commit/best-case/pipeline views
 - risk-adjusted model
 - spreadsheet artifact
 - segment commentary
 - slippage and concentration risks
+
+The three views and the risk-adjusted model are read against each other; producing one alone hides exactly the spread between them that a forecast review exists to examine. Where a spreadsheet would add nothing over the written views, say so rather than generating an empty workbook.
+
+Each artifact is done when someone else could reproduce the number. Every view states the snapshot date, the forecast rules applied, and the assumptions carried; every risk-adjusted figure derives from the stated inputs and rules; spreadsheet formulas stay dynamic rather than pasted as computed values; excluded or incomplete records are listed with the reason instead of dropping out of the total. A summary with a number and no derivation is not a forecast.
+
+Completing the package is not permission to supply a missing input. A conversion rate, historical close rate, probability weighting, or stage definition that no source establishes is labelled as an assumption wherever it appears, or that view is marked blocked on it — an invented conversion rate produces a number that looks authoritative, gets committed on, and is wrong in a direction nobody can see. Producing the package does not submit the forecast: committing a number to the system of record, or changing a deal's forecast category to make the number work, stays behind the approval in Workflow. Opportunities, segments, territories, and owners are independent inside the parallel surface declared there.
 
 ## Workflow packet fields
 

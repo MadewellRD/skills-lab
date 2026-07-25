@@ -42,11 +42,17 @@ Within steps 1 through 3 the risk surfaces are independent: enumerating harms, m
 
 ## Outputs
 
-- safety risk register
-- mitigation map
-- approval gate list
-- blocked launch criteria
-- residual risk notes
+A safety review delivers all five artifacts as one assessment:
+
+- safety risk register — each identified harm with its surface, plausible trigger, affected party, severity, and the basis for its likelihood.
+- mitigation map — every register entry mapped to a control, the layer that enforces it (prompt, tool, retrieval, runtime, policy, human review), and the evidence that the control exists rather than is merely proposed.
+- approval gate list — what must be authorized before launch, and by whom.
+- blocked launch criteria — the conditions under which this capability does not ship, written so a reader applies them without reinterpretation.
+- residual risk notes — what remains after mitigation, and who carries it.
+
+An entry is complete when a reviewer could act on it. A risk with no stated trigger and no mitigation owner has not been assessed, whatever its heading says. Risk surfaces are the parallel-safe unit; the tier judgment and the gates are aggregate over the complete register.
+
+The set is mandatory; its contents are not free. A control that cannot be shown to exist is recorded as unimplemented or unverified, never as an in-place mitigation, and a harm surface with no evidence either way is listed as unassessed with what is missing. Inventing a safety finding and inventing the control that would answer it are equally corrosive — both make the review read as done when nothing was established.
 
 ## Workflow packet fields
 

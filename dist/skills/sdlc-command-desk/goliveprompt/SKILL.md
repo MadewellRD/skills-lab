@@ -75,6 +75,12 @@ Report status by GL id against repo state. Never report progress from chat memor
 
 In `emit` mode, write `{project}-golive-prompt.md` containing the filled template and present it.
 
-In `run` and `resume` mode, the outputs are the artifacts the phases produce: the recon record, the status assessment, the populated `SPEC_DIR`, the audit coverage table, the GL backlog, `tracker.json`, the tracker artifact, and the merged PRs.
+In `run` and `resume` mode, the outputs are the artifacts the phases produce: the recon record, the status assessment, the populated `SPEC_DIR`, the audit coverage table, the GL backlog, `tracker.json`, the tracker artifact, and the merged PRs. That is one set from one protocol run, not a menu. The mode chooses between emitting the prompt and running it; nothing inside the run list is optional.
+
+Each artifact is finished at the depth the next phase needs. The recon record covers the repo, not a sample of it. The status assessment states what is done, what is claimed done, and the difference. The audit coverage table has a row per suite in `references/audit-coverage.md` with a real result, and a suite that was not run says so. Every GL id carries an acceptance gate specific enough to pass or fail. `tracker.json` matches the schema in `references/tracker-contract.md`, because the next session's artifact is built from it. A phase output that exists as a heading has not been produced.
+
+Phase 0 subtrees and Phase 3 suites are parallel-safe, so those artifacts come out of concurrent work. The aggregate passes named under Parallel surface still run once.
+
+The set being fixed is what makes invention tempting here. An audit suite that could not run is recorded as not run, never as passed. A GL id with no repo evidence behind it does not go in the backlog. A task whose gate has not been checked stays `in_progress`, and one blocked on a human stays `blocked` with the exact action written down. A complete-looking tracker built on unverified status is the single failure this protocol exists to prevent.
 
 Written artifacts follow the user's house style: no em dashes, plain direct prose, no corporate filler. Files written into the repo match the line ending convention already used in that file.

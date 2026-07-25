@@ -42,12 +42,20 @@ Draft and optimize outbound sequences across email and meeting-request workflows
 
 ## Outputs
 
+A complete run produces the whole sequence package in one pass:
+
 - multi-step sequence
 - subject lines
 - personalization tokens
 - CTA options
 - compliance notes
 - send approval package
+
+Every step of the sequence is written, not step one plus an outline of the rest — cadence, contact frequency, and compliance cannot be reviewed against a partial draft.
+
+Each artifact is done when the approver could authorize it exactly as it stands. Every step states its purpose, its CTA, and its send offset; every personalization token names the verified account or lead field it resolves against; the compliance notes state the consent basis, the opt-out mechanism, and the regional rules applied; the approval package names the approver, the audience, the send window, and the precise content awaiting authorization. Placeholder body copy is not a draft.
+
+A full package is still a draft package. Writing every step does not send, schedule, or enroll anyone: the draft, then compliance review, then approval order in Workflow holds without exception, and a finished sequence is never a reason to treat approval as implied. Nor does completeness license invention — a token that would render an unverified fact, or a claim about product behaviour, results, customers, or pricing outside the approved proof points, is removed and named rather than written plausibly. A fabricated personalization detail does not fail quietly; it lands in a prospect's inbox with the sender's name on it. Personas, segments, and target accounts are independent drafting units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 

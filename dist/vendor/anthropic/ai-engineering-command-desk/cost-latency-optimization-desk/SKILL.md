@@ -42,11 +42,17 @@ Within steps 2 and 3 the levers are independent: assessing model routing, cachin
 
 ## Outputs
 
-- optimization plan
-- baseline metric summary
-- tradeoff matrix
-- validation gates
-- rollout recommendations
+A full run delivers the complete optimization case, not a single recommendation:
+
+- optimization plan — the selected levers with expected effect, the mechanism each acts on, and what each one costs elsewhere.
+- baseline metric summary — current cost and latency along the dimensions that matter (route, model, stage, percentile), each figure attributed to its measurement source.
+- tradeoff matrix — every lever considered, including the rejected ones and the reason for rejection, scored against the same baseline.
+- validation gates — the quality and safety thresholds that must still hold after the change, stated numerically.
+- rollout recommendations — sequencing, traffic exposure, the monitoring signal per lever, and the rollback trigger.
+
+Depth bar: an engineer should be able to implement and gate the first lever without returning for detail. A lever with an expected effect but no measurement method is unfinished. Levers are the parallel-safe unit, each measured against the same baseline.
+
+Numbers carry the whole argument here, so none may be manufactured. Where a baseline cost, token count, latency percentile, or provider price cannot be read from telemetry, billing, or provider documentation, it is recorded as unmeasured and the dependent estimate is marked blocked on it. A confident projected saving resting on an invented baseline is worse than reporting that the baseline is missing.
 
 ## Workflow packet fields
 

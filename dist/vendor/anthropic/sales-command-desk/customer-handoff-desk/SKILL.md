@@ -43,12 +43,20 @@ Prepare complete post-sale handoff packages that preserve customer goals, promis
 
 ## Outputs
 
+A complete run delivers the full handoff package rather than one section of it:
+
 - handoff brief
 - customer summary
 - open risks
 - promised deliverables
 - owner/action list
 - DOCX/PDF-ready package
+
+The DOCX/PDF artifact is the same content rendered for the receiving team, not an alternative to the brief — a run that writes the brief and stops has finished half the job.
+
+Each part is complete when onboarding, support, or delivery could start on it without going back to the seller. Every committed deliverable cites the signed artifact or contract clause carrying it; every unresolved commitment is listed separately with its source and its status; every risk and action names an owner and a date or an explicit gap; the package states the deal state it was built from. A heading over "TBD" is a defect in a document other teams will plan real spend against.
+
+None of that licenses closing a gap by writing something reasonable. A deliverable, date, owner, price, or contractual term that no signed artifact or CRM record supports is surfaced as an unresolved commitment, or that section is marked not applicable — an invented commitment in a handoff becomes a promise the customer is later told was made to them. Producing the package does not distribute it: routing any CRM note or task through the dry-run diff and approval sequence, and any external sharing, stay gated exactly as Workflow and Halt conditions specify. Accounts, promised deliverables, risks, and workstreams are independent units inside the parallel surface declared there.
 
 ## Workflow packet fields
 

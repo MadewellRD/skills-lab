@@ -51,6 +51,14 @@ Proceed by default. When a CI fact is missing or ambiguous, take the most defens
 
 ## Output requirements
 
+A triage run on a failing pipeline delivers the set, not the first useful piece of it: the diagnostic covering every failing check by identifier, the flake classification for any test with intermittent history in the retrieved evidence, the rerun-versus-fix decision with the reasoning that produced it, and the fix-scope handoff for whichever desk picks the work up next. Pipeline-health review is a different scope — a read across recent runs rather than one failure — and stays its own artifact rather than being folded in.
+
+Depth is measured against the person who has to act. A diagnostic is finished when someone can go straight to the failing job and the failing line without re-reading logs: exact run and job identifiers, the quoted error signature, the commit and changed files in play, and the classification with its confidence. "Tests are failing in CI" restates the input.
+
+Failing checks and jobs are independent, so the pieces of the set are produced concurrently on the parallel surface described in the core workflow.
+
+Delivering the whole set never means completing it by inference. A check whose logs could not be retrieved is reported as unretrieved rather than diagnosed, a flake claim with no failure history behind it is stated as a hypothesis, and a rerun recommendation with no supporting pattern is not made at all. When GitHub or log facts are simply absent, the artifact is marked user-fact-only and stays short.
+
 Default to downloadable Markdown artifacts when producing diagnostics, pipeline reports, rerun decisions, handoffs, or connector diagnostics. Include a `How to use this file` section when the artifact is intended for another agent, reviewer, or release operator.
 
 For deterministic file wrapping, use `scripts/write_ci_failure_markdown.py` when a local artifact file is requested.

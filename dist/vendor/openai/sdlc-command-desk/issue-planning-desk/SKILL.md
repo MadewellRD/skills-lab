@@ -36,6 +36,8 @@ Create planning artifacts only after grounding the scope in available sources. G
 
 ## Output rules
 
+A planning run delivers the whole plan, not one layer of it: the issue plan, a drafted body for every issue in it, the dependency order across them, and the downstream handoff for `implementation-handoff-desk`. Milestone or sprint assignment joins that set when the request has a milestone to assign against. A backlog cleanup or re-triage is a different scope — it operates on issues that already exist — and is produced instead of a greenfield plan rather than alongside one.
+
 Default to downloadable Markdown artifacts when creating issue plans, issue batches, milestone plans, or handoff notes. Use `scripts/write_issue_plan_markdown.py` when a local file artifact is needed.
 
 Every issue plan must include:
@@ -47,6 +49,10 @@ Every issue plan must include:
 - risk and validation notes
 - downstream handoff guidance for `implementation-handoff-desk`
 - explicit open questions and halt conditions
+
+An issue body is finished when the assignee needs nothing else: the problem, the scope boundary, the files or areas involved where sources establish them, the acceptance criteria, and the validation. Ten issues with one-line bodies is not a decomposition of the work, it is a restatement of it. Drafting bodies is independent work across issues, which is the parallel surface the workflow describes; dependency ordering is the single pass.
+
+Delivering a full plan does not license inventing what it plans against. Requirement IDs, issue numbers, labels, milestones, owners, and file paths come from sources or are marked as proposed. An acceptance criterion nobody stated is a proposal labeled as one, and an issue whose scope has no requirement behind it is raised as an open question rather than written as agreed work.
 
 ## Issue quality rules
 

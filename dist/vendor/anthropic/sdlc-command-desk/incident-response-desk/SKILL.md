@@ -55,6 +55,8 @@ Use `references/halt-conditions.md` for the diagnostic and resume format a halt 
 
 ## Output standards
 
+A live-incident run delivers the set: the triage brief, the evidence-anchored timeline, the mitigation and action plan, a hotfix handoff when code is required, and the follow-up issues with their verification gates. For a resolved incident the RCA or post-incident review takes the place of the triage brief — that substitution is driven by the incident's state, not by convenience — and the rest of the set still ships. A bug triage and reproduction plan is the equivalent set when the subject is a reported defect rather than an outage.
+
 Every incident artifact must include:
 
 - Source facts used.
@@ -64,7 +66,13 @@ Every incident artifact must include:
 - Verification gates for recovery or remediation.
 - Downstream handoff notes when the next step belongs to another SDLC desk skill.
 
+Those elements have to carry operational weight. The timeline gives timestamps against retrieved evidence. Actions name who does what and what tells them it worked. Follow-up issues are scoped tightly enough to file as written. A hotfix handoff names the files, the change, and the validation. A brief whose impact section says "under investigation" with nothing underneath it has not been delivered.
+
+Evidence collection across alerts, dashboards, deploys, and linked issues is parallel-safe as the workflow describes; the timeline itself is assembled once.
+
 Never state that an incident is resolved unless the recovery evidence is present.
+
+Filling out the set is not permission to fill in the incident. Cause, impact, and affected-user counts stay labeled confirmed or suspected against real evidence, an unknown owner stays unknown, and a section with nothing behind it says so. During an incident a plausible cause written as a finding sends people to the wrong system.
 
 ## Continuity Kernel Adoption
 

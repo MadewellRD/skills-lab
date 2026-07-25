@@ -45,7 +45,11 @@ Game design scope, engine project, Gradle/NDK/CMake facts, asset pipeline, targe
 
 ## Expected outputs
 
-Game engineering plan, engine/native boundary map, Android wrapper scope, asset/runtime risks, profiling expectations, validation commands, gameplay smoke plan, packet update, and downstream handoff.
+A complete run delivers the whole game scope together: the game engineering plan, the engine and native boundary map, the Android wrapper scope, the asset and runtime risks, the profiling expectations, the validation commands, the gameplay smoke plan, the packet update, and the downstream handoff. A boundary map without the wrapper scope, or a frame budget without the smoke plan that exercises it, leaves the next stage guessing — this is one deliverable assembled from parts, not a set of options.
+
+Each part is complete when it is actionable at the engine boundary. The boundary map names which code lives in the engine, which in native libraries, and which in the Android wrapper, with the call direction across each boundary; the frame and performance budget states numbers per target device tier; the gameplay smoke plan names the scenes, inputs, and pass conditions someone would actually run on a device. Naming an engine and stopping there is not a scope.
+
+Delivering all of it is never a reason to invent runtime facts. An engine version, plugin, asset pipeline step, AGDK or NDK detail, or device tier that no source establishes is recorded as unknown with the artifact that would settle it — never filled in from how such projects usually look. Engine code, wrapper, native libraries, asset pipeline, and device tiers are independent surfaces and are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -76,12 +80,19 @@ Otherwise proceed: an unknown engine/runtime, native toolchain, gameplay scope, 
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-game-engineering-plan.md`
 - `android-game-engine-integration-map.md`
 - `android-game-validation-commands.md`
 - `android-gameplay-smoke-plan.md`
 - `android-game-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — takes the place of the set above when a hard halt fires, rather than joining it.
+
+A file the engine and repo evidence cannot support states what is missing instead of being written from how such projects usually look.
 
 ## Downstream handoff
 

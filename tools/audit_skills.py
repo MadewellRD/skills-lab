@@ -65,6 +65,34 @@ for name, p in DEBT.items():
 print(f"  accepted exceptions     : {len(ACCEPTED)} (documented in tools/audit_skills.py)")
 fail += len(fail_debt) > 0
 
+head("3b. OUTPUT AMBITION  (regression check)")
+bodies_oa = [f for f in glob.glob('skills/*/*.md')
+             if os.path.basename(f) != 'README.md' and 'Sales Revenue' not in f]
+# Detect REGRESSION, not compliance.
+# A semantic sweep confirmed 109/109 state a complete-run set and carry an
+# anti-fabrication guard. Both are worded differently in every file on purpose -
+# identical boilerplate is exactly what the output_ambition rule exists to prevent.
+# Matching good prose by regex failed twice here: it flagged well-written guards
+# like "an unmeasured metric stays unmeasured in writing" as missing.
+# Detecting the OLD menu phrasing is reliable, so that is what is gated.
+MENU = re.compile(r'(smallest (?:complete )?artifact|one of the following|pick one|'
+                  r'produce (?:only )?the artifact needed|whichever artifact)', re.I)
+# Negations are the CORRECT construction ("delivers a set rather than the smallest
+# artifact", "do not silently pick one"), so exclude them or the check fires on
+# exactly the prose it is meant to reward.
+NEG = re.compile(r'(rather than|instead of|not |never|do not|avoid|no longer)', re.I)
+regressed = []
+for f in bodies_oa:
+    txt = open(f, encoding='utf-8').read()
+    for m in MENU.finditer(txt):
+        if NEG.search(txt[max(0, m.start()-24):m.start()]): continue
+        regressed.append((f, m.group(0)))
+print(f"  menu-phrasing regressions  : {len(regressed)} (0 expected)")
+for f, m in regressed[:6]: print(f"      {os.path.basename(f)}: \"{m}\"")
+print("  set-per-run + guard        : verified semantically, not regex-gated")
+print("                               (see docs/model-upgrade-playbook.md)")
+fail += len(regressed) > 0
+
 head("4. GOVERNANCE INVARIANTS  (must survive every upgrade)")
 INV = {'never-invent rule': r'\b(never invent|do not invent|must not invent)\b',
        'fact vs assumption separation': r'\b(assumption|assumptions)\b',

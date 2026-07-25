@@ -38,7 +38,11 @@ PRD, architecture, implementation scope, validation commands, CI status, test fi
 
 ## Expected outputs
 
-QA strategy, test matrix, validation command plan, release evidence checklist, defect triage notes, halt conditions, and packet update.
+A complete run delivers the QA package together: the strategy, the test matrix, the validation command plan, the release evidence checklist, the defect triage notes, any halt conditions, and the packet update. A matrix with no commands to execute it, or an evidence checklist with no triage rules to interpret a failure, gives QA nothing to sign off against — so the set is the unit of delivery, not one item from it.
+
+Each artifact is done when a QA engineer could execute it without inferring intent. The requirement-to-test map ties each requirement ID to the cases covering it or marks it uncovered; the device and OS matrix names real simulator and physical coverage per cell rather than a device family; the validation plan lists runnable commands in the order the build actually requires; the triage rules state severity thresholds and what blocks a submission. Physical device testing, store pre-launch coverage, and manual exploratory passes are deliverables of this desk and stay in the plan.
+
+The set is never completed by claiming coverage. A test that does not exist is a named gap against the requirement it would cover; a result nobody produced is reported as not-run rather than passing. Coverage asserted but never executed is how an untested build reaches TestFlight and then users. Test cases, matrix cells, locales, and app-versus-game surfaces are independent and belong to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -67,11 +71,18 @@ Otherwise proceed: an unavailable device or OS version, an unidentified validati
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-qa-strategy.md`
 - `ios-test-matrix.md`
 - `ios-release-evidence-checklist.md`
 - `ios-defect-triage.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned in place of the set above when a hard halt fires. Known defects belong in the triage notes and are not themselves a reason to halt the package.
+
+A file with no evidence behind it records what was not run. It never asserts coverage that did not happen in order to complete the set.
 
 ## Downstream handoff
 

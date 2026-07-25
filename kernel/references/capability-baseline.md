@@ -40,6 +40,16 @@ verify". Per current vendor guidance this causes over-verification and degrades 
 **Parallelism.** Where a stage operates over independent items, say so explicitly so the
 runtime can fan out. Do not prescribe serial iteration over independent work.
 
+**Output ambition.** State the artifact set a complete run delivers, not a menu of
+alternatives to pick one from. Output contracts were written when finishing one artifact
+per turn was the ceiling; it no longer is. Raise expected depth too: an artifact is complete
+when a practitioner could act on it without a follow-up round trip, not when its headings
+exist.
+
+This never licenses invention. An artifact with no source basis is reported as
+not-applicable or blocked, never filled with plausible text. Completeness of the *set* is
+not permission to fabricate the *contents* of one.
+
 ## What does NOT change
 
 These are governance boundaries, not model scaffolding. They do not relax as models

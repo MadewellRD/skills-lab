@@ -42,7 +42,11 @@ Requirements, architecture, design files, screenshots, game design docs, existin
 
 ## Expected outputs
 
-Screen/flow inventory, UI state matrix, navigation notes, accessibility/localization gates, input requirements, risks, halt conditions, and packet update.
+A complete run hands over the UI/UX scope in full: screen and flow inventory, UI state matrix, navigation notes, accessibility and localization gates, input requirements, risks, any halt conditions, and the packet update. Delivering the matrix without the navigation model, or the accessibility gates without the screens they attach to, leaves a SwiftUI or UIKit engineer unable to start — the package is the deliverable.
+
+The depth bar: an engineer builds from it without asking what a state means. Every screen carries its real states — loading, empty, error, offline, permission-denied, and whatever content states exist — not just a name in a row; every accessibility and localization gate states the concrete requirement, including Dynamic Type, VoiceOver, and right-to-left behaviour where they apply, and how each is judged; every input requirement names the device classes and interaction modes it covers. An outline is not a scope.
+
+None of this authorizes inventing design intent. A screen, flow, locale, or state that no design source, spec, or product decision establishes is logged as an open design gap with the owner who can decide it, rather than filled with something that looks like a reasonable screen. Screens, flows, device classes, and locales are independent and are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -72,11 +76,18 @@ Otherwise proceed: unresolved screens, flows, input models, accessibility target
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-ui-ux-brief.md`
 - `ios-screen-state-matrix.md`
 - `ios-accessibility-localization-gates.md`
 - `ios-ui-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned instead of the set above when a hard halt fires; a finished scope does not carry it.
+
+Where nothing establishes a file's content, it records the design gap and who owns the decision rather than inventing screens to populate it.
 
 ## Downstream handoff
 

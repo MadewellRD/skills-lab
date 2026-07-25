@@ -42,12 +42,20 @@ Prepare internal deal review artifacts with clear risks, asks, commercial impact
 
 ## Outputs
 
+A complete run assembles the entire review, not one component of it:
+
 - deal review memo
 - risk summary
 - executive asks
 - commercial impact
 - decision log
 - next actions
+
+An ask without its risk and its commercial impact is not decidable, so the review is delivered whole.
+
+Each part is done when an executive could decide from it inside the meeting. Every deal fact names its source and its recency; every risk names the evidence behind it and what would retire it; every ask names the decision owner and exactly what is being asked for; every recommendation is separable from the facts it rests on. A memo that summarizes the deal without stating the decision required has not finished.
+
+Completeness is not permission to quantify what is unquantified. A commercial impact figure, amount, close date, or committed customer position that no source supports is stated as unquantified or unknown with the missing input named — a fabricated number in a deal review travels straight into the forecast and gets reported upward before anyone traces it back. The memo recommends stage, amount, close-date, and forecast-category changes; it does not execute them, and the recommendation-then-approval-then-mutation order in Workflow holds no matter how obvious the recommendation looks. Deals in the review set are independent and part of the parallel surface declared there.
 
 ## Workflow packet fields
 

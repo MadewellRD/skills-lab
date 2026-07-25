@@ -100,7 +100,11 @@ Acceptance bar: the route tree covers every in-scope page with no orphans, dead 
 
 ## Expected outputs
 
-Sitemap or route tree, navigation model, URL taxonomy, content hierarchy, cross-linking plan, IA decisions, findability risks.
+All of it, in one run: sitemap or route tree, navigation model, URL taxonomy, content hierarchy, cross-linking plan, IA decision log, and findability risks.
+
+The route tree is complete when every in-scope page appears in it with its URL, its parent, and its owner wherever sources name one, not when the top two levels are sketched. The URL taxonomy states rules that resolve new cases such as casing, separators, depth, localization prefixes, trailing slashes, and parameter handling, because a taxonomy that only lists today's URLs cannot govern tomorrow's. Each IA decision records what was chosen and what it displaced.
+
+Routes that no source establishes stay out of the tree. Where the page inventory is partial, mark the tree as covering the known inventory and record the gap. A sitemap padded with pages a site of this type usually has is a fabricated sitemap, however reasonable each entry looks on its own.
 
 ## Evidence packet additions
 
@@ -127,11 +131,18 @@ An unaccepted target surface, unscoped routes, or a missing content inventory is
 
 ## Default output modes
 
-- `information-architecture.md`
-- `information-architecture-source-facts.md`
-- `information-architecture-risk-register.md`
-- `information-architecture-downstream-handoff.md`
-- `connector-diagnostic.md`
+A complete run produces:
+
+- `information-architecture.md`: route tree, navigation model, URL rules, content relationships, cross-linking plan.
+- `information-architecture-source-facts.md`: existing routes, analytics, and content-inventory facts with their sources, kept apart from proposed structure.
+- `information-architecture-risk-register.md`: orphan, dead-end, duplicate-URL, redirect, and findability risks with the routes each affects.
+- `information-architecture-downstream-handoff.md`: the structure `ux-ui-design-system-desk` and later stages build on, with unresolved hierarchy questions named.
+
+`connector-diagnostic.md` is produced instead of that set when the repo, sitemap, or content source cannot be reached.
+
+Auditing independent subtrees is parallel-safe per the Workflow section, and so is drafting these artifacts. Only the final hierarchy reconciliation needs a single pass.
+
+Four files is the target, not the point. A risk register with no sourced findability risk should say so rather than acquire generic IA warnings to look substantial.
 
 ## Downstream handoff
 

@@ -44,11 +44,17 @@ Individual signals are independent. Designing each trace event, metric, log fiel
 
 ## Outputs
 
-- observability design
-- event schema
-- dashboard plan
-- alert plan
-- runbook inputs
+A complete run produces the full instrumentation design, not one layer of it:
+
+- observability design — the questions the telemetry must answer, and which signal answers each one.
+- event schema — named trace events and metrics with fields, types, cardinality expectations, and the redaction rule for each field that can carry user or prompt content.
+- dashboard plan — panels with their query intent, their audience, and what a healthy reading looks like.
+- alert plan — per alert: condition, threshold, window, severity, owner, and first action on fire. An alert with no owner and no first action is noise, not coverage.
+- runbook inputs — the diagnostic path each alert hands to whoever is paged.
+
+Depth bar: an on-call engineer should be able to instrument, wire, and respond from these without a follow-up round trip. Headings without contents fail that bar. The independent signals named above are the fan-out unit for this set.
+
+None of this licenses inventing telemetry. Where an existing metric, trace field, dashboard, or alert threshold cannot be read from source, it is reported as unverified or not-applicable. A plausible-sounding baseline value, or a "current" threshold no system actually emits, is worse than an empty field.
 
 ## Workflow packet fields
 

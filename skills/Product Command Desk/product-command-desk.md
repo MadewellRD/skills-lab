@@ -40,12 +40,18 @@ Act as the Product workflow orchestrator. Classify the request, select the start
 
 ## Outputs
 
-- product workflow plan
-- stage sequence
-- source fact summary
-- decision log
-- open questions
-- downstream handoff packet
+A run delivers the coordination record *and* the artifacts the stages produced. Routing without running is not a completed run:
+
+- **product workflow plan** — the target outcome, the stages selected, and the entry point with the reason for it.
+- **stage sequence** — each stage with its status: the artifact it produced, or the named reason it was skipped.
+- **source fact summary** — the facts established across stages, each attributed, kept separate from assumptions and inferences.
+- **decision log** — what was decided at each stage, on what basis or by whom, and what it commits.
+- **open questions** — each with a named owner and the stage it blocks.
+- **downstream handoff packet** — everything the next desk needs in order to act without rediscovering scope.
+
+Alongside these, every specialist desk invoked in the sequence returns its own complete artifact set to its own standard; the coordination record does not substitute for them. A stage entry naming an artifact nobody produced is an unfinished sequence. Independent stages fan out across the parallel surface already declared, and the sequence, decision log, and handoff packet are the aggregate pass once that fan-out returns.
+
+Carrying a workflow across many stages is not permission to supply what a stage could not establish. A stage whose evidence is unreachable is recorded as blocked with the missing input named, and its dependent stages are marked as waiting on it rather than advanced on a plausible stand-in. A fabricated fact entered into the packet is inherited by every later stage as settled.
 
 ## Workflow packet fields
 

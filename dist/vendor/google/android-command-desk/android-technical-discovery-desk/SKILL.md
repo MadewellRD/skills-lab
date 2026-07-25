@@ -40,7 +40,11 @@ Repo access, file tree, Gradle/settings/build files, AndroidManifest files, CI w
 
 ## Expected outputs
 
-Technical discovery memo, source-facts table, feasibility assessment, validation commands, unknowns, risks, halt conditions, and packet update.
+One run delivers the discovery set as a unit: the technical discovery memo, the source-facts table, the feasibility assessment, the validation commands, the unknowns list, the risks, the halt conditions that apply, and the `android_delivery_packet` update. The memo alone is not designable against — the facts, the commands that prove them, and the unknowns that bound them are what make it usable downstream, so they ship together rather than one per turn.
+
+Depth is measured by whether the architecture desk can design without re-reading the repo. Every fact resolves to a file path, command output, or named source; every validation command is one an engineer could run against this repo as written; every unknown states the downstream decision it blocks. A memo listing categories with nothing under them has not finished.
+
+None of that licenses closing a gap by inference. A Gradle, AGP, SDK, NDK, engine, signing, or CI fact that cannot be read stays recorded as unknown and never becomes a plausible Android default — substituting one is the exact failure this desk exists to prevent. The independent per-artifact reads described above are part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: missing Gradle, SDK, NDK, engine, signing, package ID, or Pla
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-technical-discovery.md`
 - `android-source-facts.md`
 - `android-validation-commands.md`
 - `android-feasibility-risks.md`
-- `connector-diagnostic.md`
+
+Mode-specific alternative:
+
+- `connector-diagnostic.md` — produced instead of the set above when required repo, branch, or workflow access exists but cannot be read, so no source facts can be established at all.
+
+A file the evidence cannot support states what could not be read; it is never populated with Android defaults so the set looks whole.
 
 ## Downstream handoff
 

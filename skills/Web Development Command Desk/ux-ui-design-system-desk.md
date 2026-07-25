@@ -101,7 +101,11 @@ Acceptance bar: every component in the inventory has its variants and interactio
 
 ## Expected outputs
 
-Design-system plan, component inventory, token guidance, responsive patterns, interaction-state matrix, design debt, implementation handoff notes.
+The whole set comes out of one run: design-system plan, component inventory, token guidance, responsive patterns, interaction-state matrix, design debt register, and implementation handoff notes.
+
+The interaction-state matrix is the depth anchor. Every component in the inventory gets a row, and every row covers default, hover, focus, active, disabled, loading, empty, error, and success with the actual behavior rather than a checkmark. Token guidance states the rule that decides which token applies, so an implementer can resolve a case the matrix does not list. Responsive patterns give behavior at each named breakpoint rather than a list of breakpoints.
+
+An existing component library or brand guideline that could not be retrieved does not become a described one. Say the inventory is derived from the requirements and IA rather than from the live system, and let the gap stand. A token scale invented to complete a table will be implemented as if it were real.
 
 ## Evidence packet additions
 
@@ -127,11 +131,18 @@ A missing design baseline, unknown device mix, or unstated accessibility constra
 
 ## Default output modes
 
-- `ux-ui-design-system.md`
-- `ux-ui-design-system-source-facts.md`
-- `ux-ui-design-system-risk-register.md`
-- `ux-ui-design-system-downstream-handoff.md`
-- `connector-diagnostic.md`
+A complete run delivers all four:
+
+- `ux-ui-design-system.md`: component inventory, token rules, responsive patterns, state matrix, governance.
+- `ux-ui-design-system-source-facts.md`: brand rules, existing components, and framework constraints with their sources.
+- `ux-ui-design-system-risk-register.md`: design-debt, consistency, and accessibility-pattern risks with the components they touch.
+- `ux-ui-design-system-downstream-handoff.md`: what `backend-integration-desk` and the frontend stage need from the system, with unresolved brand or scope decisions named.
+
+`connector-diagnostic.md` takes the place of the set when the brand guideline, design file, or component library cannot be reached at all.
+
+Components and breakpoints are independent, so drafting across these artifacts uses the parallel surface the Workflow section declares.
+
+Producing all four is a floor on effort, not a licence on content. A component nobody has specified and no source implies stays out of the inventory rather than being invented to round it out.
 
 ## Downstream handoff
 

@@ -100,7 +100,11 @@ Acceptance bar: the accessibility standard is stated explicitly (WCAG 2.2 AA unl
 
 ## Expected outputs
 
-Accessibility checklist, SEO checklist, metadata requirements, structured-data requirements, launch acceptance criteria, remediation backlog.
+One run delivers all of these together rather than one of them: the accessibility checklist, the SEO checklist, metadata requirements, structured-data requirements, launch acceptance criteria, and the remediation backlog.
+
+Each is written to be worked from directly. The accessibility checklist names the criterion, the page types it applies to, and the observable pass condition, not "check headings". Metadata and structured-data requirements state the field, its source, and the rule per page type. The remediation backlog carries a severity and an owner per item wherever sources name one. A checklist that lists only WCAG section numbers, or a backlog of one-line labels, is unfinished work.
+
+Where a page type has no source basis for a requirement, because no content model, analytics, or existing markup could be inspected, record it as not applicable or as an open question. Do not populate it with a requirement that merely sounds right for a page of that kind.
 
 ## Evidence packet additions
 
@@ -127,11 +131,18 @@ A missing page or route inventory, and a missing content model for metadata gove
 
 ## Default output modes
 
-- `accessibility-seo.md`
-- `accessibility-seo-source-facts.md`
-- `accessibility-seo-risk-register.md`
-- `accessibility-seo-downstream-handoff.md`
-- `connector-diagnostic.md`
+A complete run produces this set in one pass:
+
+- `accessibility-seo.md`: the standard, the per-page-type requirements, and the launch acceptance gates.
+- `accessibility-seo-source-facts.md`: every audit result, existing-markup fact, and analytics or search-console figure with the source it came from, kept separate from inference.
+- `accessibility-seo-risk-register.md`: conformance and indexation risks with severity, affected page types, and what would clear each one.
+- `accessibility-seo-downstream-handoff.md`: what `web-performance-desk` or the next selected stage inherits, including unresolved gaps named individually.
+
+`connector-diagnostic.md` is not a fifth member of that set. It is what the run produces instead when a required connector is unreachable and the route inventory or audit evidence cannot be established at all.
+
+These four are independent once the page-type inventory is fixed, so they belong to the parallel surface the Workflow section declares. Draft them concurrently rather than in sequence.
+
+Producing four files is not the same as having four artifacts. If the risk register has no sourced risk to record, say that and leave it there. An empty section with an honest reason is better than a plausible one, and the same holds for handoff notes with nothing to hand off.
 
 ## Downstream handoff
 

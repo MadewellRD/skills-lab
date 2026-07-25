@@ -38,7 +38,11 @@ Release plan, analytics plan, crash/ANR tooling, monitoring docs, feature flag/r
 
 ## Expected outputs
 
-Observability plan, event/metric map, dashboard/alert checklist, live-ops plan, rollback triggers, incident handoff, halt conditions, and packet update.
+A complete run delivers the whole operating picture: the observability plan, the event and metric map, the dashboard and alert checklist, the live-ops plan, the rollback triggers, the incident handoff, the halt conditions that apply, and the packet update. An alert set without the rollback triggers it should fire, or a live-ops plan without the signals that tell you it is working, is not an operable release — these are produced as one package.
+
+Depth is judged by whether an on-call engineer could act at 3am without asking what an alert means. Every event carries its schema and the question it answers; every metric names its owner, its source, and its threshold; every alert states what it fires on, who it pages, and what the first response is; every rollback trigger states the concrete signal and the action it authorizes. A dashboard named but not specified is not a deliverable.
+
+Completing the set is never a licence to invent telemetry. An event, metric, threshold, or dashboard that no instrumentation or telemetry plan supports is recorded as a gap with the instrumentation work it needs — a threshold picked because the row looked empty produces either an alert nobody trusts or silence where there should be a page. Individual events, metrics, dashboards, and alert definitions are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -67,11 +71,18 @@ Otherwise proceed: an unknown telemetry stack, owner, dashboard, or live-ops con
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-observability-plan.md`
 - `android-event-metric-map.md`
 - `android-liveops-plan.md`
 - `android-incident-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — produced instead of the set above when a hard halt fires, not alongside it.
+
+A file the telemetry plan cannot support names the instrumentation gap rather than listing signals and thresholds nobody chose.
 
 ## Downstream handoff
 

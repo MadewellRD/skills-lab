@@ -40,7 +40,11 @@ Android PRD, discovery memo, repo facts, existing architecture docs, service con
 
 ## Expected outputs
 
-Architecture brief, ADR notes, module/interface map, migration plan, risks, validation expectations, and packet update.
+A complete run produces the full design package in one pass: the architecture brief, the ADR notes, the module and interface map, the migration plan, the risks, the validation expectations, and the packet update. They interlock — an ADR without the module map it constrains, or a migration plan without the risks that gate it, is not something an engineer can build against, so treat them as one deliverable rather than a list to choose from.
+
+Each artifact is done when implementation could start from it. The brief names the selected lane and the alternatives that lost and why; the module map names real modules, real ownership, and the interfaces between them rather than boxes labelled by layer; the migration plan states the sequence, the reversible points, and what breaks if a step is skipped. Section headings with nothing decided underneath are a failed artifact, not a first draft.
+
+Producing everything is not licence to design past the evidence. Where no source establishes a module boundary, a dependency direction, a concurrency constraint, or a migration dependency, mark that part blocked on the named missing fact — a convincing architecture invented to fill the gap is worse than an acknowledged hole. Independent per-boundary and per-contract work is part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: an unknown API contract, runtime constraint, architecture lan
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-architecture-brief.md`
 - `android-adr.md`
 - `android-module-map.md`
 - `android-migration-plan.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — stands in place of the set above when a hard halt fires, rather than accompanying a finished design. Where no migration is in scope, say so in the brief instead of writing an empty migration plan.
+
+Where a file has no evidential basis, it names what is missing. A design document is never padded out to fill its slot in the list.
 
 ## Downstream handoff
 

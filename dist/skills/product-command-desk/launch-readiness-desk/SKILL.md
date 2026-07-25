@@ -42,11 +42,17 @@ Assess readiness to launch a product capability. Check scope, release state, GTM
 
 ## Outputs
 
-- launch readiness report
-- go/no-go recommendation
-- blocker list
-- risk acceptance notes
-- post-launch monitoring plan
+A readiness run delivers the entire package in one pass, since the recommendation means nothing without the gate evidence beneath it:
+
+- **launch readiness report** — per gate (GTM, docs, support, customer success, analytics and instrumentation, rollback): status, the evidence behind it, and the owner.
+- **go/no-go recommendation** — the verdict, the gates that drove it, and the conditions that would change it.
+- **blocker list** — each blocker with what clears it and who owns clearing it. No blockers is a real finding, stated alongside the gates that were assessed.
+- **risk acceptance notes** — recorded only where a named owner has actually accepted a risk, with the scope of that acceptance. Nothing accepted means the section says so.
+- **post-launch monitoring plan** — the signals watched after launch, their thresholds, the owner, and the rollback trigger.
+
+The bar is that a launch owner could run the go/no-go meeting from this alone. Gates fan out across the parallel surface already declared; classification and verdict are the aggregate pass.
+
+Delivering every gate row is not permission to fill one. A sign-off, a completed doc, a support-readiness confirmation, or an instrumentation check with no source is reported as unverified and never defaults to passing because launch is close. The whole value of this artifact is that a "go" means something.
 
 ## Workflow packet fields
 

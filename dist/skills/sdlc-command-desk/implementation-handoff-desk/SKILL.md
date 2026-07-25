@@ -34,12 +34,20 @@ When multiple sources conflict, do not smooth over the conflict. Preserve the co
 
 ## Required output behavior
 
+A run delivers a prompt for every piece of scoped work it was handed, not the first one. Three issues in scope means three prompt files; a merge train of six PRs means six prompts plus the order they run in. The halt-resume prompt is the genuine exception — it is produced *instead of* the original prompt for the stalled work, not in addition to it.
+
 Every generated prompt must be delivered as a downloadable `.md` file.
 
 - Name the file with a descriptive slug, such as `pr-prompt-corpus-catalog.md`, `pr-halt-resume-translator-tex2d.md`, or `merge-train-s2-pr6-rating.md`.
 - The file must contain a title heading, a short `How to use this file` section, and the copy-paste-ready implementation prompt under `## Prompt`.
 - The chat response provides the file link and one direct usage sentence. Do not paste the full prompt in chat unless the user explicitly asks for inline text.
 - When a file-writing tool is unavailable, output the complete markdown file content in a fenced `markdown` block and tell the user to save it as the specified filename.
+
+Each prompt has to be executable on its own. Files to touch and files not to touch are named. The validation command and its pass condition are stated. Commit structure, PR title, PR base, PR body requirements, and the exact stop line are present. A prompt that tells the agent to "implement the feature described in the issue" has moved the work rather than done it.
+
+Prompts for issues whose file scopes do not overlap are independent and belong to the parallel surface described below. Chained PRs against a shared base do not.
+
+Producing the whole batch is never a reason to invent what one prompt needs. A branch name, PR number, file path, or command that no connector or user supplied is left as an explicit placeholder the executing agent must halt on, not filled with a plausible value so the prompt reads complete. A prompt whose repo could not be reached is reported as blocked: the coding agent has no way to tell an invented fact from a retrieved one and will act on whatever it is given.
 
 Use this file wrapper:
 

@@ -45,11 +45,17 @@ Tool schemas are independent. Designing each tool's argument schema, result cont
 
 ## Outputs
 
-- tool contract
-- schema specification
-- permission model
-- error contract
-- tool test matrix
+A complete run delivers the full contract for every tool in scope:
+
+- tool contract — per tool: purpose, when the model should and should not call it, preconditions, side effects, and idempotency.
+- schema specification — argument and result schemas with types, required fields, constraints, defaults, and enums, specified so an implementer is left no decisions to make.
+- permission model — the authorization boundary per tool, the tenancy rule, which calls require approval, and what is audited.
+- error contract — the error cases, their shapes, which are retryable, and what the model is expected to do with each. An unmodeled error case becomes an improvised recovery at runtime.
+- tool test matrix — per tool: happy path, boundary arguments, permission denial, and failure-mode cases.
+
+The bar is that a backend engineer could implement the tool and a prompt engineer could describe it from these without a follow-up round trip. Tools are the parallel-safe unit; the auth model, tenancy rule, and audit event format are decided once across the set.
+
+The set is delivered whole; individual fields are never guessed. An existing endpoint's real parameters, permission scopes, rate limits, and error codes come from source. Where the API cannot be read, the schema is marked as proposed and unverified against the implementation rather than presented as the current contract.
 
 ## Workflow packet fields
 

@@ -40,11 +40,19 @@ Plan and synthesize user research. Convert interviews, surveys, usability sessio
 
 ## Outputs
 
-- research plan
-- research synthesis
-- finding clusters
-- confidence notes
-- product implication map
+A complete run delivers the plan, the synthesis, and what to do about it together:
+
+- **research plan** — the question, the method, who is recruited and by what screen, the sample, and what result would change the decision.
+- **research synthesis** — what was learned across the corpus, the sessions and sources behind it, and where they disagree.
+- **finding clusters** — each with its defining characteristic, the number of participants supporting it, representative verbatims, and the segments it appears in.
+- **confidence notes** — per finding: strength of evidence, whether saturation was reached, and the sampling bias that limits it.
+- **product implication map** — what each finding implies for the product, and the desk that owns the response.
+
+Where the research has not been run yet, the plan is the honest deliverable and the synthesis, clusters, and confidence notes are reported as pending execution — that is the one genuine alternative in this set, and it is never resolved by writing them anyway.
+
+Depth bar: a PM could act on a finding, or knows exactly why they should not act yet. A cluster with no participant count and no confidence note cannot be weighed against anything. Sessions, transcripts, and participants code in parallel across the surface already declared; clustering, theme naming, and saturation are aggregate over the full corpus.
+
+Never write a verbatim, a participant, a count, or a behavior that no session produced, and never raise a finding's confidence above what the sample supports. Invented user evidence is the most expensive artifact this desk can emit, because everything downstream treats it as the voice of the customer.
 
 ## Workflow packet fields
 

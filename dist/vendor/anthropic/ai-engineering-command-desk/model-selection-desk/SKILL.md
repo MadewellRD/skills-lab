@@ -43,11 +43,17 @@ Candidate models are independent. Evaluating each candidate against task slices,
 
 ## Outputs
 
-- model comparison matrix
-- recommended model set
-- routing policy
-- fallback plan
-- eval requirements
+A selection run delivers the whole decision, not just its conclusion:
+
+- model comparison matrix — every candidate scored on the same dimensions, each cell carrying its source, and every candidate not carried forward carrying its exclusion reason.
+- recommended model set — the selection, the tradeoff it accepts, and the constraint that bounds it.
+- routing policy — which request classes go to which model, and the rule that decides.
+- fallback plan — per failure or degradation condition, the next model and the behavior change a user would experience.
+- eval requirements — what still has to be tested before the decision is trusted, expressed as slices and thresholds.
+
+The bar is that someone could implement the routing and defend the choice in review without re-running the comparison. A shortlist with no exclusion reasons is an incomplete matrix. Candidate scoring is the parallel-safe unit; only ranking and routing depend on the complete set.
+
+Every cell in that matrix is a factual claim. Benchmark scores, context limits, pricing, rate limits, modality support, and latency figures come from provider documentation, first-party eval evidence, or a user-stated constraint. An unavailable value stays unknown and its dimension is marked undecidable on current evidence, because a fabricated benchmark number is a routing decision made on fiction.
 
 ## Workflow packet fields
 

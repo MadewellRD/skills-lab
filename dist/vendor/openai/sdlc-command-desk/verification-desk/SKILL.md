@@ -52,16 +52,23 @@ Default requirements:
 
 ## Output artifacts
 
-Default outputs:
+A verification run produces these together, not one of them:
 
-- `verification-report.md`
-- `requirements-traceability-matrix.md`
-- `acceptance-gate-review.md`
-- `release-blocker-report.md`
-- `evidence-map.md`
-- `verification-handoff.md`
+- `verification-report.md` — the verdict and what it rests on.
+- `requirements-traceability-matrix.md` — every requirement with exactly one status.
+- `evidence-map.md` — each piece of evidence and the requirements it actually supports.
+- `acceptance-gate-review.md` — each gate assessed against that evidence.
+- `release-blocker-report.md` — what blocks release and what would clear it, or an explicit statement that nothing does.
+
+`verification-handoff.md` is the conditional one: it is produced when verification finds work another desk has to pick up, and is correctly absent when everything verified clean.
 
 Use `scripts/write_verification_markdown.py` when a wrapped Markdown file is useful.
+
+Depth here is the difference between traceability and a table. Every non-`not applicable` status names the specific test, check, commit, PR, or QA note behind it. Every blocker states what would clear it and who can. A matrix whose evidence column reads "CI passing" on every row has recorded one fact many times, not verified many requirements.
+
+Requirements are verified independently of one another, so the artifacts in the set come out of parallel classification, with blocker aggregation and the release verdict as the single pass at the end.
+
+Producing all five is never a reason to resolve one. A requirement with no evidence is `unverified` or `blocked`, and the report says so at the top rather than burying it in a row. Completing the set is the easy part; the set is worth nothing unless `verified` means verified.
 
 ## Quality bar
 

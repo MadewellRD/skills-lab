@@ -42,7 +42,11 @@ Requirements, architecture, design files, screenshots, game design docs, existin
 
 ## Expected outputs
 
-Screen/flow inventory, UI state matrix, navigation notes, accessibility/localization gates, input requirements, risks, halt conditions, and packet update.
+A complete run delivers the whole UI/UX scope together: the screen and flow inventory, the UI state matrix, the navigation notes, the accessibility and localization gates, the input requirements, the risks, the halt conditions that apply, and the packet update. A state matrix without the navigation model, or accessibility gates without the screens they bind to, cannot be implemented against — the set is the deliverable, not a menu of one.
+
+The bar per artifact is that a Compose or View/XML engineer could build from it without asking what a state means. Every screen in the inventory carries its states — loading, empty, error, offline, permission-denied, and the content states that actually exist — rather than a row with the name filled in; every accessibility and localization gate states the concrete requirement and how it is judged; every input requirement names the device classes it covers. An outline of headings is not a UI scope.
+
+Completing the set never justifies inventing design intent. Where no design source, spec, or product decision establishes a screen, a flow, a locale, or a state, record it as an open design gap with the decision owner named — never fill it with a plausible screen nobody designed. Screens, flows, device classes, and locales are independent items and belong to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -72,11 +76,18 @@ Otherwise proceed: unresolved screens, flows, input models, accessibility target
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-ui-ux-brief.md`
 - `android-screen-state-matrix.md`
 - `android-accessibility-localization-gates.md`
 - `android-ui-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — replaces the set above when a hard halt fires. A finished run does not emit it alongside the scope.
+
+A file with nothing sourced behind it records the design gap and its owner. It does not invent screens or states to justify its own existence.
 
 ## Downstream handoff
 

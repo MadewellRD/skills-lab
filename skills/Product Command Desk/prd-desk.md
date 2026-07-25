@@ -40,13 +40,19 @@ Create product requirements documents that are ready for technical discovery, de
 
 ## Outputs
 
-- PRD
-- requirement IDs
-- acceptance criteria
-- non-goals
-- risk list
-- open question list
-- handoff notes
+A complete run delivers the whole document, not a section of it. These are parts of one PRD and ship together:
+
+- **PRD** — problem, users, goals, and the requirement set, written so a downstream desk needs no interview.
+- **requirement IDs** — unique and stable, assigned across the complete set so nothing collides.
+- **acceptance criteria** — at least one per requirement, testable and about observable behavior rather than restating the requirement.
+- **non-goals** — specific enough to refuse work with. A PRD that only states scope has bounded nothing.
+- **risk list** — each risk with its impact and what would mitigate or detect it.
+- **open question list** — each with a named decision owner and what it blocks.
+- **handoff notes** — what discovery, architecture, issue planning, or test strategy needs from this document.
+
+Depth bar: no requirement is a heading with an intent underneath it. A requirement a downstream desk would have to come back and ask about is unfinished. Requirements draft in parallel across the surface already declared; ID assignment, the dependency map, and the consistency pass are the single aggregate step.
+
+Filling every section is never a reason to invent one. A requirement ID, an owner, a date, a metric target, or an acceptance threshold that no source states becomes an open question with a named owner, not a plausible value. A fabricated success metric propagates through issue planning into what actually gets built and measured.
 
 ## Workflow packet fields
 

@@ -44,9 +44,17 @@ If required release facts are unavailable, produce a connector diagnostic or a s
 
 ## Output rules
 
+A release run delivers the set for that release: readiness with every gate classified, the release notes, the version and tag plan, the rollback plan, and the post-release verification plan, plus handoff notes when follow-up work is required. These describe one release from different angles and are not useful apart — notes without a gate assessment tell nobody whether to ship, and a go decision without a rollback plan is not a decision anyone should sign.
+
 Default to downloadable Markdown artifacts when the user asks for a runbook, release notes, plan, checklist, evidence packet, or handoff. Use concise prose and decision tables. Keep assumptions explicit.
 
 For release notes, separate user-facing changes from internal changes. For readiness reports, classify each gate as pass, fail, blocked, unknown, or not applicable. For rollback plans, distinguish verified rollback steps from unverified fallback ideas.
+
+Each piece is finished at operator depth. Release scope is bounded by a real commit range, tag, or branch. Every gate classification names the evidence that produced it. Release notes describe the change in terms a reader outside the repo can use. Rollback gives the command sequence and its owner. Version-and-tag ordering and gate ordering stay exactly as the workflow requires.
+
+Merged pull requests, changelog entries, closed issues, and per-gate evidence checks are independent, so the artifacts in the set are assembled from parallel retrieval and classification.
+
+The set being complete is not a reason for any gate to read `pass`. Versions, tags, commit SHAs, merged PRs, CI status, deployment status, owners, rollback commands, and approvals come from sources or are marked `unknown` and blocking. A go decision traceable only to the absence of known problems is not traceable to evidence.
 
 ## Halt rules
 

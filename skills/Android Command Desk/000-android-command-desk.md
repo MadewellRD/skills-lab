@@ -94,7 +94,11 @@ Treat GitHub as source of truth for repository state, branches, commits, pull re
 
 ## Output contract
 
-For orchestrated work, include workflow mode, target surface, completed stages, skipped stages and why, source facts, decisions, risks and halt conditions, current `android_delivery_packet`, next continuation target, and downstream SDLC handoff if needed.
+An orchestrated run returns the whole picture, not the next instruction: workflow mode, target surface, completed stages, skipped stages and why, source facts, decisions, risks and halt conditions, the current `android_delivery_packet`, the next continuation target, and the downstream SDLC handoff where one applies. Alongside it, the run carries the artifacts each stage it ran was supposed to produce — a stage counted as completed without its artifacts present is not a completed stage.
+
+The depth bar is the same for the orchestration record as for the stage artifacts underneath it: an Android engineer picking this up cold should be able to continue without re-deriving what was already established. Every skipped stage names the reason it was skipped rather than being absent from the list; every decision names the evidence behind it; every risk names what would retire it. A stage list with no content behind it is a routing note, which is the failure mode this desk exists to avoid.
+
+Running more stages never means asserting more. A stage whose evidence the connectors could not supply is reported as blocked or not applicable with the missing source named — it is not written up as though it ran, and its packet fields stay empty rather than plausible. `Workflow Halt` is a mode-specific alternative: it is returned in place of the continuation when one of the six consequence classes above applies, and it carries the exact resume requirements rather than a partial result dressed as one. Stage work that shares no artifacts is independent, so those stages and their outputs belong to the same parallel surface as the gate evidence described below.
 
 ## Android-specific quality gates
 

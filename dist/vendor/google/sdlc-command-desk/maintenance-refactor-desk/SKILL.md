@@ -34,6 +34,8 @@ Use this skill to turn maintenance intent into bounded, evidence-backed refactor
 
 ## Required outputs
 
+A maintenance run delivers the assessment, the plan, and the controls together: the scoped assessment of what is actually there, the change plan in the shape the work calls for, the regression controls that make the change safe, and the downstream handoff when implementation follows. The plan shape is genuinely target-specific — a refactor plan, a dependency upgrade plan, a migration sequence, or a dead-code cleanup, chosen by what is being changed rather than produced as a set. The assessment and the regression controls are not optional companions to it.
+
 Every maintenance artifact must include:
 
 - Scope statement and non-goals.
@@ -44,6 +46,12 @@ Every maintenance artifact must include:
 - Rollback or revert considerations.
 - Explicit halt conditions.
 - Downstream handoff notes when implementation work is required.
+
+These are only useful at the granularity of the change. Affected files are listed, not characterized. Verification names the command and what its passing proves. Rollback says what reverting actually restores and what it does not. A scope statement an implementer could read two ways has not bounded anything.
+
+Candidates, dependency entries, modules, and debt items are independent to analyze, which is the parallel surface the operating model describes; the ordered sequence the plan produces is not.
+
+A complete artifact is still bounded by its evidence. A dead-code or unused-dependency claim without the search behind it stays a candidate with its confirming gate attached, versions and compatibility facts are sourced or absent, and ownership nobody established is left blank. Completing the required list is never a reason to promote a candidate to a finding.
 
 ## Risk controls
 

@@ -46,6 +46,16 @@ Use this skill to plan safe retirement of software assets. The output must be co
 
 ## Output rules
 
+A retirement run delivers a set, not a single plan: the retirement plan itself, the consumer and dependency map that justifies it, the communication plan for whoever depends on the target, the retention and archive decision for its data, and the rollback and risk checklist. They belong to the same run because a plan without its consumer map cannot be evaluated and a cutover without its rollback cannot be approved.
+
+Two things in that set are genuinely conditional rather than optional. The plan shape follows the target classification: an API, webhook, event, or SDK surface takes the sunset shape in `references/api-sunset-template.md`, and every other target takes `references/decommission-plan-template.md` — one or the other, never both. A cutover plan joins the set when a replacement exists to migrate onto, and is correctly absent when nothing is replacing the target.
+
+Each piece is finished when an operator could run it. Deletion scope is enumerated resource by resource. Each gate has an owner and an observable pass condition. The communication plan names the audience, the channel, the notice period, and who sends it. The rollback checklist states what is reversible, for how long, and by whom. Cutover ordering stays exactly as the workflow requires.
+
+Consumer discovery fans out across independent searches, so the evidence behind these artifacts is gathered in parallel; the cutover sequence inside the plan is not.
+
+None of this authorizes filling a gap to finish the set. Consumers, usage volume, retention obligations, owners, and cutover dates are sourced or named as unknown, and a retention decision with no policy behind it is flagged undetermined rather than assumed. An invented consumer list is the failure that gets a live dependency deleted.
+
 For final user-facing artifacts, produce downloadable Markdown whenever tools allow. Use `scripts/write_decommissioning_markdown.py` to wrap a generated plan into a file with a `How to use this file` section. Include source facts and unverified assumptions either in the artifact or in a companion source-notes section.
 
 ## Composition with other desks

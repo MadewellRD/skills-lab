@@ -41,11 +41,15 @@ Continue to backend integration, security/privacy, performance, testing, or rele
 
 ## Expected inputs
 
-Game design scope, engine project, Xcode/native runtime/CMake facts, asset pipeline, target devices, Play Games/on-demand resources and asset delivery requirements, profiling data, gameplay QA expectations, release constraints, and prior `ios_delivery_packet`.
+Game design scope, engine project, Xcode/native runtime/CMake facts, asset pipeline, target devices, Game Center/on-demand resources and asset delivery requirements, profiling data, gameplay QA expectations, release constraints, and prior `ios_delivery_packet`.
 
 ## Expected outputs
 
-Game engineering plan, engine/native boundary map, iOS wrapper scope, asset/runtime risks, profiling expectations, validation commands, gameplay smoke plan, packet update, and downstream handoff.
+A complete run delivers the game scope whole: the game engineering plan, the engine and native boundary map, the iOS wrapper scope, the asset and runtime risks, the profiling expectations, the validation commands, the gameplay smoke plan, the packet update, and the downstream handoff. A boundary map with no wrapper scope, or a frame budget with no smoke plan that exercises it, hands the next stage a guess — this is one package built from parts.
+
+Each part is complete when it is actionable at the boundary it describes. The boundary map says which code lives in the engine, which in native or Metal layers, and which in the iOS wrapper, with the call direction across each seam; the frame, thermal, and performance budget carries numbers per target device tier; the gameplay smoke plan names the scenes, inputs, and pass conditions someone would run on a real device. Naming the engine and stopping is not a scope.
+
+Delivering all of it is not a reason to supply runtime facts nobody has. An engine version, plugin, asset pipeline step, on-demand-resource or asset-delivery detail, or device tier that no source establishes is recorded as unknown with the artifact that would settle it, not reconstructed from how such projects usually look. Engine code, wrapper, native libraries, asset pipeline, and device tiers are independent surfaces within the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -76,12 +80,19 @@ Otherwise proceed: an unknown engine/runtime, native toolchain, gameplay scope, 
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-game-engineering-plan.md`
 - `ios-game-engine-integration-map.md`
 - `ios-game-validation-commands.md`
 - `ios-gameplay-smoke-plan.md`
 - `ios-game-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — stands in for the set above when a hard halt fires, rather than joining it.
+
+If the engine or repo evidence cannot support a file, it names what is missing instead of reconstructing plausible runtime facts.
 
 ## Downstream handoff
 

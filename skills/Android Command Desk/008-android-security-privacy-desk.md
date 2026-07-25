@@ -40,7 +40,11 @@ Manifest files, dependency files, auth/API docs, data inventory, Play policy not
 
 ## Expected outputs
 
-Security/privacy review, threat notes, data-safety mapping, permission review, risk register, release gates, halt conditions, and packet update.
+A complete run delivers the full assessment together: the security and privacy review, the threat notes, the Play Data safety mapping, the permission review, the risk register, the release gates with their dispositions, the halt conditions that apply, and the packet update. A permission review without the data-safety mapping it feeds, or release gates without the findings behind them, cannot support a release decision — the set is what makes the assessment usable, so it is produced as a whole.
+
+Depth is judged by whether a reviewer could accept or reject the release from the artifact alone. Every declared permission is listed against its named justification and the code path that requires it, or explicitly flagged as unjustified; every data type in the Data safety declaration is matched to the implementation evidence and the user-facing disclosure that supports it; every third-party SDK is enumerated with what it collects or marked unknown; every finding carries a severity and an explicit pass, waive-with-rationale, or halt disposition. The compliance constraints stated in Workflow are requirements, and the artifact does not report a gate as passed on their behalf.
+
+Completeness of the set is exactly the point at which fabrication would be most damaging here. A permission justification, a collected data type, an SDK behaviour, or a Play policy obligation that no source establishes is reported as unverified or unassessed with the artifact needed to settle it — never written in because the declaration would otherwise look incomplete. A data-safety declaration assembled from a guess is a policy violation with the user's data behind it, not a formatting defect. Per-permission, per-SDK, per-component, and per-dependency review are independent items in the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: manifest, exported-component, deep-link, or auth risks that c
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-security-privacy-review.md`
 - `android-permission-data-safety-map.md`
 - `android-threat-notes.md`
-- `android-policy-halt.md`
-- `workflow-halt.md`
+
+Mode-specific alternatives — each replaces the clean disposition rather than adding to it:
+
+- `android-policy-halt.md` — when a Play policy or data-safety obligation blocks the release gate and the gate cannot be reported as passed or waived.
+- `workflow-halt.md` — when a hard halt fires for any other consequence class.
+
+No file here is completed with claimed permission, data-type, SDK, or Play policy content. An entry the evidence does not support is written as unverified or unassessed, because a declaration filled in to look finished is a false statement about user data.
 
 ## Downstream handoff
 

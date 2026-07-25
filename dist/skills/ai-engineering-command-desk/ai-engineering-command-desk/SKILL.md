@@ -76,18 +76,23 @@ Treat conflicts in this order: repo evidence and eval/telemetry first, explicit 
 
 ## Output behavior
 
-Produce the smallest complete artifact for the current workflow mode:
+The workflow mode selects which artifact set a run delivers — it does not license producing the least. Two artifacts are constant in every mode: the workflow packet, updated in place and carrying source facts, decisions, assumptions, and halt state forward, and a report-out under `work/reports-out/` when that path is available.
 
-- workflow packet
-- desk research plan
-- direct desk patch
-- implementation handoff
-- validation report
-- release readiness report
-- incident triage report
-- report-out under `work/reports-out/`
+On top of that constant pair, the mode's own set ships whole in the same run:
+
+- research or design work delivers the desk research plan together with the specialist desk artifacts it called for;
+- implementation work delivers the direct desk patch and the implementation handoff together, not the patch alone;
+- validation work delivers the validation report with the gate status behind its verdict;
+- release work delivers the release readiness report with its blockers and rollback posture;
+- incident work delivers the incident triage report with containment and follow-ups.
+
+The `Workflow Halt` report is the genuine alternative in this list: it replaces the mode's artifact set when a hard halt class applies, rather than accompanying a partial one.
 
 When generating handoffs, use patch-shaped instructions with exact paths, exact commands, allowed and forbidden files, validation gates, halt conditions, PR title/body, and stop line.
+
+An artifact is finished when the receiving desk or agent can act on it without a return trip for scope. Headings present with the specifics missing is an unfinished artifact, not a draft. Independent artifacts within a mode's set belong to the parallel surface already declared and need not be produced in sequence.
+
+Producing the full set never licenses filling one from inference. Where a desk's input evidence does not exist, that artifact is returned as not-applicable or blocked with the missing evidence named. An eval result, benchmark figure, safety finding, or telemetry number that no source produced is never written into a report to make it look complete.
 
 ## Execution handoff density
 

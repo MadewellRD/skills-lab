@@ -40,11 +40,17 @@ Analyze competitors, substitutes, and alternatives. Convert evidence about posit
 
 ## Outputs
 
-- competitive analysis brief
-- comparison matrix
-- differentiation map
-- threat/opportunity list
-- product implication notes
+One run delivers the complete analysis, not a single competitor profile:
+
+- **competitive analysis brief** — the set analyzed, why each was included, and what the analysis concludes.
+- **comparison matrix** — every competitor scored on the same dimensions, each cell attributed and dated, with gaps left visible as gaps.
+- **differentiation map** — where the product genuinely differs, where it is at parity, and where it is behind, kept separate from one another.
+- **threat/opportunity list** — each item with its evidence, its time horizon, and what would make it material.
+- **product implication notes** — what this should change in roadmap, positioning, or pricing, routed to the desk that owns the change.
+
+An entry is complete when a PM could take it into a roadmap or positioning conversation without re-researching it. Competitors are the fan-out unit across the parallel surface already declared; the matrix and ranking are one aggregate pass so dimensions stay consistent between entries.
+
+Competitor claims are the easiest thing here to invent and the hardest to catch later. Pricing, feature availability, customer counts, funding, and roadmap intent carry their source and date, or are recorded as unknown. A matrix cell filled from expectation rather than evidence quietly becomes an internal fact, and a competitor that could not be researched is listed as unassessed rather than characterized.
 
 ## Workflow packet fields
 

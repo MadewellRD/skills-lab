@@ -40,12 +40,20 @@ Research named prospects or prospect lists and produce concise, source-backed le
 
 ## Outputs
 
+A complete run returns the full research set across the whole list, not a sample of it and not one artifact from it:
+
 - ranked lead list
 - lead briefs
 - fit score
 - recommended angle
 - missing data and risk notes
 - next-step recommendation
+
+Ranking is a property of the complete list, so a partial pass does not produce an incomplete ranking — it produces a wrong one.
+
+Each brief is done when someone could act on it without repeating the research. It carries the fit score against the stated ICP criteria and the evidence behind it, the recommended angle and why it fits this account, the named gaps, and whether the lead is new or already present in the CRM. A brief that restates the company's own marketing copy is not research.
+
+Producing a brief for every lead is never a reason to invent one. Contact details, titles, reporting lines, company facts, and buying signals are either sourced or absent; a low-confidence enrichment field is labelled as such, and a lead whose contact data could not be sourced ships with the gap named rather than a guessed email pattern in the field. Wrong contact data is not a formatting error — it reaches a real person, and a fabricated title or funding event survives into the first call. Exclusion rules, suppression lists, and regional data-protection constraints apply at research time. This desk produces lists and drafts: a full set does not write to the CRM and does not send outbound. Leads and prospect accounts are independent research units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 

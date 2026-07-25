@@ -103,7 +103,11 @@ Acceptance bar: every critical journey has a monitored signal, every alert has a
 
 ## Expected outputs
 
-Observability plan, dashboard requirements, alert thresholds, RUM and synthetic plan, incident hooks, launch-day monitoring checklist.
+The full set from one run: observability plan, dashboard requirements, alert thresholds, RUM and synthetic plan, incident hooks, and the launch-day monitoring checklist.
+
+An alert entry is complete when it names the signal, the threshold, the evaluation window, the owner, the routing destination, and the action expected of whoever is paged. A synthetic check names the journey, the frequency, the assertion, and the environment. Dashboards are specified by the decision they support and the panels that support it. A list of metric names is an inventory, not an observability plan.
+
+Thresholds and SLO targets are the invention risk here, because a plausible number reads like a decided one. If no source establishes a baseline, state the threshold as proposed and unvalidated, or record the baseline as the blocking gap. Never report telemetry as live when nothing confirmed that it is.
 
 ## Evidence packet additions
 
@@ -131,11 +135,18 @@ A missing critical-journey list and an unknown observability stack are not halts
 
 ## Default output modes
 
-- `web-observability.md`
-- `web-observability-source-facts.md`
-- `web-observability-risk-register.md`
-- `web-observability-downstream-handoff.md`
-- `connector-diagnostic.md`
+One run delivers:
+
+- `web-observability.md`: monitoring plan, dashboards, alerts, synthetic and RUM coverage, launch checklist.
+- `web-observability-source-facts.md`: existing telemetry, tooling, ownership, and SLO facts with their sources.
+- `web-observability-risk-register.md`: blind spots and unowned alerts with the failure each one would miss.
+- `web-observability-downstream-handoff.md`: what `web-maintenance-growth-desk` and incident response inherit.
+
+`connector-diagnostic.md` replaces the set when the monitoring, analytics, or repo source cannot be reached.
+
+Journeys, signals, dashboards, and alert rules are independent review units per the Workflow section, so these artifacts belong to the same parallel surface.
+
+The set is complete; its contents are only as complete as the evidence. Coverage that exists stays distinguished from coverage that is proposed, and an unmonitored journey is named as uncovered rather than given a threshold to fill the row.
 
 ## Downstream handoff
 

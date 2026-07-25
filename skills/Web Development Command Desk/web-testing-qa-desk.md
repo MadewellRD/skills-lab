@@ -100,7 +100,11 @@ Acceptance bar: every high-risk flow has at least one test with an owner and an 
 
 ## Expected outputs
 
-Test strategy, test matrix, environment/data needs, launch signoff checklist, defect triage priorities, regression watchlist.
+The set ships together: test strategy, test matrix, environment and data needs, launch signoff checklist, defect triage priorities, and regression watchlist.
+
+A matrix cell is complete when it names the flow, the browser or device, the environment, the owner, whether it is automated or manual, and the pass condition. Environment and data needs state what has to exist before execution starts, including who provisions it. Triage priorities define severity in terms someone can apply to a defect they are looking at, and blocker rules make it unambiguous which defects stop a release. A matrix of axis labels with empty intersections is not coverage design.
+
+Coverage is claimed only where it exists. Tests that have not been executed are not reported as passing, existing automation that was not observed is not counted, and a high-risk flow with no test is listed as uncovered rather than assigned a plausible one.
 
 ## Evidence packet additions
 
@@ -127,11 +131,18 @@ A missing test environment, missing test data, an unaccepted high-risk flow list
 
 ## Default output modes
 
-- `web-testing-qa.md`
-- `web-testing-qa-source-facts.md`
-- `web-testing-qa-risk-register.md`
-- `web-testing-qa-downstream-handoff.md`
-- `connector-diagnostic.md`
+One run delivers all of these:
+
+- `web-testing-qa.md`: strategy, coverage matrix, environment and data needs, signoff checklist, triage rules.
+- `web-testing-qa-source-facts.md`: existing tests, CI results, and environment facts with their sources.
+- `web-testing-qa-risk-register.md`: uncovered risk areas with the failure each one would let through.
+- `web-testing-qa-downstream-handoff.md`: the signoff evidence `web-release-deployment-desk` gates on.
+
+`connector-diagnostic.md` is the alternative when the CI, test-report, or environment source cannot be reached, not an extra item in the set.
+
+Browsers, devices, viewports, routes, flows, roles, and locales are independent axes per the Workflow section, so building these artifacts is parallel-safe across them.
+
+A complete set is not a coverage claim. Where evidence for a cell does not exist, the cell says so, and the signoff checklist reflects that rather than reading clean.
 
 ## Downstream handoff
 

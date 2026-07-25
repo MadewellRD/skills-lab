@@ -102,7 +102,11 @@ Acceptance bar: every budgeted route carries a numeric threshold per metric, lab
 
 ## Expected outputs
 
-Performance budget, optimization plan, measurement plan, launch gate criteria, regression watchlist, improvement backlog.
+A run delivers all of it: performance budget, optimization plan, measurement plan, launch gate criteria, regression watchlist, and improvement backlog.
+
+The budget is a table with a numeric threshold per metric per budgeted route, not a target for the site as a whole. The optimization plan names the specific cost, meaning this bundle, this font, this third-party script, this waterfall, and the change that reduces it. The measurement plan states which tool produces each number, in which environment, and how often. A budget of "good Core Web Vitals" cannot gate a release and does not count as delivered.
+
+Numbers are the whole substance of this artifact, which is why none of them may be produced from expectation. Where no baseline exists, budgets are marked proposed rather than measured, lab and field figures stay separately labeled, and a route with no measurement is listed as unmeasured. A regression watchlist with nothing observed behind it says so.
 
 ## Evidence packet additions
 
@@ -129,11 +133,18 @@ A missing baseline, unknown device or network mix, and unknown hosting or CDN be
 
 ## Default output modes
 
-- `web-performance.md`
-- `web-performance-source-facts.md`
-- `web-performance-risk-register.md`
-- `web-performance-downstream-handoff.md`
-- `connector-diagnostic.md`
+A complete run produces:
+
+- `web-performance.md`: budgets by route, optimization plan, measurement plan, launch gates, regression watchlist.
+- `web-performance-source-facts.md`: every baseline, RUM figure, and hosting or CDN fact with its source and capture context.
+- `web-performance-risk-register.md`: regression and budget-breach risks with the route and the change that would cause each.
+- `web-performance-downstream-handoff.md`: the thresholds `web-testing-qa-desk` and the release stage enforce.
+
+`connector-diagnostic.md` is the alternative when the analytics, RUM, or CI performance source cannot be reached, not a companion to the set.
+
+Routes, page types, device classes, and network classes are independent per the Workflow section, so budget derivation across these artifacts is parallel-safe.
+
+Filling the set never means filling a cell. An unmeasured metric stays unmeasured in writing, whatever that does to the shape of the table.
 
 ## Downstream handoff
 

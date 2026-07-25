@@ -102,7 +102,11 @@ Acceptance bar: every backlog item is traceable to telemetry, analytics, feedbac
 
 ## Expected outputs
 
-Iteration backlog, growth experiment plan, content refresh plan, refactor priorities, lifecycle health notes, retirement triggers.
+One run delivers the set: iteration backlog, growth experiment plan, content refresh plan, refactor priorities, lifecycle health notes, and retirement triggers.
+
+Backlog items carry the signal that produced them, an effort or risk sense, and a stated outcome, not a title. Each experiment names its hypothesis, primary metric, guardrail metric, minimum run condition, and stop rule, because an experiment without a stop rule cannot be run. Refactor priorities name the modules and the cost of leaving them alone.
+
+This desk works from telemetry, which is exactly what gets invented under pressure to look thorough. A number that no analytics or observability source produced does not appear as a measurement anywhere in the set. Where an opportunity is unmeasured, it is a hypothesis with that word attached, and a backlog that is honestly short beats one padded to length.
 
 ## Evidence packet additions
 
@@ -130,11 +134,18 @@ An unsourced growth opportunity, and maintenance work whose implementation facts
 
 ## Default output modes
 
-- `web-maintenance-growth.md`
-- `web-maintenance-growth-source-facts.md`
-- `web-maintenance-growth-risk-register.md`
-- `web-maintenance-growth-downstream-handoff.md`
-- `connector-diagnostic.md`
+A run produces this set together:
+
+- `web-maintenance-growth.md`: backlog, experiments, content and refactor plans, retirement triggers.
+- `web-maintenance-growth-source-facts.md`: analytics, telemetry, incident, and feedback facts with source and time window.
+- `web-maintenance-growth-risk-register.md`: regression, experiment-interaction, dependency, and debt risks with what would trip each.
+- `web-maintenance-growth-downstream-handoff.md`: what returns to `site-product-requirements-desk` or another selected stage as accepted work.
+
+`connector-diagnostic.md` is the alternative when the analytics, observability, or repo source cannot be reached. The set does not get produced blind alongside it.
+
+Backlog candidates, content items, and dependency upgrades are independent per the Workflow section, so these artifacts share that parallel surface. Concurrent live experiments are the exception noted there and stay sequenced.
+
+Every artifact in the set is still bounded by its evidence. An empty experiment plan with the missing signal named is a correct output. One filled with untested hypotheses presented as opportunities is not.
 
 ## Downstream handoff
 

@@ -42,11 +42,17 @@ Within step 2 the gates are independent: assessing eval status, safety review st
 
 ## Outputs
 
-- go/no-go report
-- launch blocker list
-- risk acceptance notes
-- rollback checklist
-- handoff summary
+A readiness run returns the whole decision package together, since a verdict without its gate evidence is not reviewable:
+
+- go/no-go report — the verdict, the per-gate status behind it, and the evidence each status rests on.
+- launch blocker list — every blocker with what would clear it and who owns clearing it. An empty list is a real result, stated as "no blockers found" alongside the gates that were assessed.
+- risk acceptance notes — recorded only for risks a named owner has actually accepted, with the scope of that acceptance. Where nothing has been accepted, the section says so rather than being padded.
+- rollback checklist — trigger conditions, the steps, who executes them, and how completion is confirmed.
+- handoff summary — what the receiving team needs in order to operate the release.
+
+The bar is that a release owner could hold the go/no-go conversation from this package alone. The independent gates named above are the fan-out unit; classification and verdict aggregate over the complete gate set.
+
+Completeness applies to the set, never to the contents of a gate. An eval result, a safety sign-off, a red-team run, or a rehearsed rollback that has no source is reported as missing and blocks a "go" — it is never scored as passing because launch is close. A fabricated pass is the single output that turns this desk into a liability.
 
 ## Workflow packet fields
 

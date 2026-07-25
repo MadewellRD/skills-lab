@@ -40,11 +40,17 @@ Create go-to-market briefs for product launches or major changes. Translate prod
 
 ## Outputs
 
-- GTM brief
-- messaging pillars
-- audience map
-- enablement checklist
-- launch risk notes
+A complete run delivers the whole go-to-market package, since the pieces only hold up against each other:
+
+- **GTM brief** — the launch, its positioning, the audiences, the channels, and the success measures.
+- **messaging pillars** — each claim with the proof point behind it and the objection it has to survive.
+- **audience map** — per audience: who they are, what they do today, the message, and the channel that reaches them.
+- **enablement checklist** — what sales, support, and success each need before launch, with owners.
+- **launch risk notes** — what could go wrong in market, the early signal for each, and the response.
+
+Complete means a marketer could brief a channel and a seller could hold the conversation without a follow-up round trip. A pillar with no proof point is an unfinished claim. Audiences, personas, and channels fan out across the parallel surface already declared; the positioning consistency check runs once across the whole brief.
+
+Every claim needs a basis. Customer proof points, competitive comparisons, performance numbers, and availability dates come from evidence, or are flagged unconfirmed and held out of anything customer-facing. A proof point invented to complete a pillar does not stay internal — it becomes a public claim the company cannot support.
 
 ## Workflow packet fields
 

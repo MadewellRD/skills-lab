@@ -51,6 +51,14 @@ Proceed by default. An unresolved security question is normally a finding to rec
 
 ## Output requirements
 
+A security run delivers the set: the trust-boundary and data-flow picture, the threat model built on it, the dependency and secrets review, the ranked findings with severity and likelihood, and the mitigation backlog mapped to those findings, plus handoff notes when code changes follow. A threat model without a mitigation backlog leaves the reader holding risk and no route out of it; a findings list with no boundary map cannot be checked for what it missed.
+
+Depth is where security artifacts fail quietly. A finding names the asset, the actor, the entry point, and the boundary crossed, and its mitigation names the control and where it is enforced. A dependency review names the package, the version observed, and the exposure, rather than saying dependencies should be updated. Advice that would apply to any system is not a finding about this one.
+
+Trust boundaries, entry points, auth surfaces, and dependency manifests are independent analysis units, so the pieces of the set are examined and drafted in parallel, then reconciled into one ranked risk set.
+
+Completing the set never justifies asserting a control. Code paths, auth behavior, data classes, secret exposure, dependency versions, compliance obligations, and CI status come from sources or are marked absent, and a control whose state could not be established is `unverified` rather than in place. When required connector facts are missing, mark the artifact user-fact-only and let it be short — a confidently wrong security claim gets a real risk closed on paper.
+
 Default to downloadable Markdown artifacts when producing reports, models, checklists, handoffs, or diagnostics. Include a `How to use this file` section when the artifact is intended for another agent or reviewer.
 
 For deterministic file wrapping, use `scripts/write_security_markdown.py` when a local artifact file is requested.

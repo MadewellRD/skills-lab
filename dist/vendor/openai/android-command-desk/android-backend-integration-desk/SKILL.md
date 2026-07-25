@@ -38,7 +38,11 @@ Architecture brief, API docs, OpenAPI/schema files, auth docs, Firebase/Play ser
 
 ## Expected outputs
 
-Integration contract notes, data-flow map, failure-mode matrix, fixture/test plan, observability notes, risks, halt conditions, and packet update.
+A complete run delivers the integration set in one pass: the contract notes, the data-flow map, the failure-mode matrix, the fixture and test plan, the observability notes, the risks, the halt conditions that apply, and the packet update. The matrix is only meaningful against the contracts it covers, and the fixture plan is only meaningful against the matrix, so producing one without the others is an unfinished run rather than a valid mode.
+
+The depth bar is that a client engineer could implement the calls and their failure paths without asking. Each endpoint or platform service carries its request and response shape, auth requirement, retry and offline behaviour, and what the app does on each failure; the failure-mode matrix covers timeout, network loss, auth expiry, partial data, version skew, and the platform-service failures that actually apply; each fixture names the case it pins. A matrix with rows and empty cells is not a matrix.
+
+Filling the set is not permission to invent an API. An endpoint, field, error code, scope, quota, or platform-service behaviour that no contract, doc, or repo evidence establishes is marked unverified with the source that would confirm it — an invented error code reaches production as a silent failure path. Endpoints, platform services, and failure modes are independent items in the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -68,11 +72,18 @@ Otherwise proceed: unknown endpoints, auth details, payment or store service beh
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-backend-integration.md`
 - `android-failure-mode-matrix.md`
 - `android-api-contract-test-plan.md`
 - `android-integration-handoff.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — issued in place of the set above when a hard halt fires, not as an extra file beside it.
+
+Where no contract or repo evidence backs a file, it names the unverified surface rather than describing an API nobody confirmed.
 
 ## Downstream handoff
 

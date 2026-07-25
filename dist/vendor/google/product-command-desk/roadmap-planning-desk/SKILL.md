@@ -40,11 +40,17 @@ Plan product roadmaps by translating strategy, requirements, capacity, dependenc
 
 ## Outputs
 
-- roadmap plan
-- theme map
-- sequencing rationale
-- milestone proposal
-- risk and dependency list
+A planning run delivers the complete roadmap, not a themed list:
+
+- **roadmap plan** — the initiatives, their order, and the horizon each sits in, with what the plan is optimizing for stated.
+- **theme map** — initiatives grouped under the outcome each serves, so the plan reads as strategy rather than as a queue.
+- **sequencing rationale** — why this order: the dependency, capacity, risk, or value reason behind each placement, including what was deliberately deferred.
+- **milestone proposal** — the checkpoints, what is true at each, and the decision each one enables.
+- **risk and dependency list** — cross-initiative dependencies, external dependencies, and the risks that would break the sequence, each with an owner.
+
+Complete means a delivery lead could plan against this and a stakeholder could see what they are not getting. An initiative on a timeline with no value, effort, or dependency behind it has not been planned. Initiatives characterize in parallel across the surface already declared; sequencing, capacity fit, milestone assignment, and dependency resolution are the aggregate pass.
+
+Delivering the full plan is not permission to invent its inputs. Capacity, team availability, effort estimates, delivery dates, and dependency commitments come from evidence or are labeled as assumptions with the owner who can confirm them. A milestone date presented as planned when no team committed to it becomes an external promise made on nobody's authority.
 
 ## Workflow packet fields
 

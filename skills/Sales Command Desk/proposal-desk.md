@@ -43,12 +43,20 @@ Create customer-facing proposals, scopes, and commercial response packages from 
 
 ## Outputs
 
+A complete run produces the whole proposal package, not the outline alone:
+
 - proposal outline
 - proposal draft
 - artifact checklist
 - approval notes
 - open questions
 - handoff-ready package
+
+The outline is the structure of the draft, not a substitute for it. A run that stops at the outline has produced a plan for the deliverable rather than the deliverable.
+
+Each artifact is done when the approver could review it as the document that would actually go out. Every section is written in the voice and format the customer will receive; every commercial figure traces to an approved source or is visibly marked unresolved; every scope statement matches what the opportunity record and the approved terms support; the approval notes name the approver, the reviews that apply, and exactly what awaits authorization. Headings over filler text are a failure here, and in a customer-facing document it is a failure that can escape the building.
+
+A complete draft is still a draft. Writing every section does not share it externally — the confirm-terms, internal-review, approval, then-share order in Workflow holds, and a finished package is not authorization to send it to save a round trip. Completeness also does not license invention: a price, discount, term, SLA, delivery date, headcount, or customer reference that no approved source states stays visibly unresolved in the draft. A plausible price becomes a quoted price the instant the document reaches the customer, and it cannot be un-quoted. Proposal sections are independent drafting units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 

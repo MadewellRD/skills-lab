@@ -40,11 +40,17 @@ Synthesize feedback from customers, users, sales, support, community, stakeholde
 
 ## Outputs
 
-- feedback synthesis
-- theme clusters
-- severity/source weighting
-- product action map
-- open question list
+A full run delivers the synthesis and everything that makes it actionable:
+
+- **feedback synthesis** — what the corpus says, the volume and channels behind it, and the period covered.
+- **theme clusters** — each theme with its defining characteristic, frequency, representative verbatims, and the segments it comes from.
+- **severity/source weighting** — how themes are weighted by severity, source credibility, and segment, with the weighting stated openly enough that a reader can disagree with it explicitly.
+- **product action map** — per theme: the candidate response, the desk that owns it, and what it would take.
+- **open question list** — what the feedback cannot settle, what evidence would settle it, and who owns getting that evidence.
+
+Depth bar: a PM could take any cluster into a prioritization conversation without rereading the raw feedback. Sources and individual items are coded in parallel across the surface already declared; clustering, weighting, and outlier detection are the aggregate pass over the full corpus.
+
+Themes are only as real as the feedback underneath them. Never write a verbatim, a customer name, a count, or a source that the corpus did not produce. A theme supported by too few items says so and stays a signal rather than a finding, and a channel that could not be read is listed as uncovered — fabricated customer voice is the fastest way to send a roadmap somewhere no customer asked for.
 
 ## Workflow packet fields
 

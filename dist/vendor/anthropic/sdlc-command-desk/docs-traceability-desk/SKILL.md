@@ -38,16 +38,25 @@ This skill is evidence-first. It must not invent source facts, test names, file 
 
 ## Default artifact types
 
-Use the smallest artifact that satisfies the request:
+A traceability run delivers a set rather than the smallest artifact that satisfies the request:
 
-- `proof-map.md` for claims tied to source evidence.
-- `claim-map.md` for claim extraction and status classification.
-- `doc-code-consistency-report.md` for stale or unsupported docs.
-- `knowledge-index.md` for durable source catalogs.
-- `documentation-update-plan.md` for scoped doc changes.
-- `audit-evidence-packet.md` for governance or release evidence.
-- `docs-handoff-notes.md` for downstream implementation or verification workflows.
-- `connector-diagnostic.md` when grounding is insufficient.
+- `claim-map.md` — every claim extracted from the documents in scope, each carrying exactly one status.
+- `proof-map.md` — each claim tied to the specific file, test, PR, issue, or commit that proves it or fails to.
+- `doc-code-consistency-report.md` — the drift those two maps expose, classified by impact.
+- `documentation-update-plan.md` — the scoped change that would close the drift, per document.
+- `docs-handoff-notes.md` — what implementation, verification, or issue planning inherits, with target files and acceptance gates.
+
+Three artifact types are genuinely mode-specific and are produced instead of that set, or beside it only when asked for by name:
+
+- `knowledge-index.md` when the request is for a durable source catalog rather than a claim audit.
+- `audit-evidence-packet.md` when governance or release evidence is what was asked for.
+- `connector-diagnostic.md` when grounding is insufficient — it replaces the set rather than shipping next to one built on nothing.
+
+Depth is what makes the set worth producing. A claim entry names the document, the location inside it, the claim as written, the status, and the artifact that establishes that status. An update plan says what the document should say instead, not that it needs updating. A row reading "unverified, needs investigation" without naming the investigation is an unfinished row.
+
+Claims are independent units, which is exactly the parallel surface the workflow describes: extract, evaluate, and write across the set concurrently.
+
+None of that makes an unproven claim provable. A claim with no evidence stays `unsupported` or `unverified` however awkward it looks in the table, conflicting sources stay conflicting, and a proof map with more gaps than proofs is an accurate proof map. The set is complete when every claim has an honest status, not when every status is green.
 
 ## Required references
 

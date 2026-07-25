@@ -44,11 +44,17 @@ Corpora are independent. Per-corpus ingestion design, chunking strategy, permiss
 
 ## Outputs
 
-- RAG design spec
-- corpus map
-- retrieval eval plan
-- citation policy
-- freshness policy
+A complete run delivers the retrieval system design as one package:
+
+- RAG design spec — ingestion, chunking, embedding and index strategy, ranking, and how retrieved context is assembled into the prompt, with the reason behind each choice.
+- corpus map — per corpus: contents, size, owner, update path, permission model, and format handling.
+- retrieval eval plan — the query set, relevance judgments, the retrieval metrics used, and the relevance floor below which the system defers instead of answering.
+- citation policy — what must be cited, at what granularity, and what the system does when it cannot cite.
+- freshness policy — per corpus: staleness tolerance, reindex trigger, and behavior when content is known stale.
+
+Complete means implementable and testable without a follow-up round trip. A chunking strategy with no size and no overlap rule, or a citation policy with no uncitable-answer behavior, has specified nothing. Per-corpus work is the parallel-safe unit; ranking policy, citation contract, and the relevance floor are single decisions across the system.
+
+Permissions and corpus facts are asserted only from evidence. Where a corpus's access model, document count, update cadence, or sensitivity classification cannot be read, it is recorded as unknown and the permission filter is treated as unresolved rather than assumed permissive. A retrieval design that assumes an access boundary it never established is how a corpus leaks.
 
 ## Workflow packet fields
 

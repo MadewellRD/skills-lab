@@ -44,11 +44,17 @@ Once the agency level is fixed, per-tool-route design — schema boundary, permi
 
 ## Outputs
 
-- agent architecture
-- state model
-- approval map
-- tool routing plan
-- halt policy
+One run delivers the whole design, not a piece of it. All five ship together:
+
+- agent architecture — agency level, loop structure, decomposition into agents or steps, and the reason each boundary sits where it does. Complete when someone could implement the control flow from it without asking what happens between steps.
+- state model — what is held, where, for how long, what survives a restart, and what is deliberately not persisted.
+- approval map — every action requiring human authorization, who authorizes it, and what the agent does while it waits.
+- tool routing plan — per route: which tool, under what condition, with what permission, timeout, retry, and failure behavior.
+- halt policy — the conditions that stop the loop, and the state the agent leaves behind when it stops.
+
+Each is done when a competent implementer could act on it without a follow-up round trip. A heading with nothing under it is an incomplete artifact, not a draft. Because routes and failure modes are already parallel-safe, the per-route sections and the per-failure-mode entries of the halt policy develop concurrently rather than in sequence.
+
+Delivering the full set never means filling a gap with plausible text. Where no source establishes a tool's permission boundary, an owner for an approval gate, or an existing state store, that entry is recorded as unknown or blocked with the missing evidence named — never as an invented route, owner, or limit.
 
 ## Workflow packet fields
 

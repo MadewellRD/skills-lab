@@ -155,7 +155,7 @@ For multi-stage workflows, return a concise stage-by-stage report or a reusable 
 
 ## Output contract
 
-For orchestrated work, include:
+An orchestrated run delivers two layers, both of them, in one pass. Every stage that runs emits its own full artifact set as that desk defines it, and the run emits the workflow-level record over the top. The workflow record includes:
 
 - workflow mode
 - target surface
@@ -167,6 +167,12 @@ For orchestrated work, include:
 - current `web_delivery_packet`
 - next continuation target
 - downstream SDLC handoff, if needed
+
+Stages are not rationed one per turn. If the packet supports running four stages, four stages run and four artifact sets exist when the run reports. A stage counts as complete only when its artifact would survive being handed to the next stage without a follow-up round trip; a stage that emitted headings and deferred their contents is reported as incomplete, because the packet is what later stages trust.
+
+Independent stage artifacts belong to the parallel surface described under Default workflow. The ordering constraint is between stages that consume each other's packet state, not across the artifacts a run produces.
+
+Running more stages is never a reason to soften what any of them says. A stage with no source basis for its artifact is recorded as skipped with the reason, or halted under its own halt conditions. It is not completed with content that reads as though the stage ran. The workflow record has to be an accurate account of what happened, including the parts that did not.
 
 ## Web-specific quality gates
 

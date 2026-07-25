@@ -129,6 +129,24 @@ authoring_rules:
       Never author "add a verification step" or "use a subagent to verify" into a skill.
       Author the acceptance bar instead. Per vendor guidance this now causes over-verification.
 
+  output_ambition:
+    mode: complete_artifact_set_per_run
+    was: one_artifact_per_turn
+    rule: >
+      Output contracts were calibrated to what a weaker model could finish in one turn, so
+      desks list artifacts as alternatives ("produce one of these"). Long-horizon capability
+      makes the full set achievable in a single run. State the artifact set a complete run
+      delivers, not a menu to pick from. Where artifacts are independent, they are part of
+      the parallel surface.
+    depth_rule: >
+      Raise expected depth per artifact too. An artifact is complete when a competent
+      practitioner could act on it without a follow-up round trip - not when its section
+      headings exist. Skeletons with placeholder sections are a failure, not a draft.
+    guard: >
+      Completeness is not padding. Producing every artifact does not license inventing
+      content for one: an artifact with no source basis is reported as not-applicable or
+      blocked, never filled with plausible text. INV-01 outranks this rule.
+
   parallelism:
     mode: declare_parallel_surface
     rule: >

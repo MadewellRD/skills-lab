@@ -46,6 +46,14 @@ If required source facts are unavailable, produce a deployment diagnostic or cle
 
 ## Output rules
 
+A deployment run delivers the whole plan, not the piece the request named: the deployment plan with its gate sequence, the go/no-go review with every gate classified, the rollback path, and the post-deploy verification checklist. A staged rollout or feature-flag plan joins that set whenever the deploy is staged or flag-gated, and is legitimately absent for a single-shot deploy. A change-management record is the genuinely conditional one — produced when the organization's process requires it, skipped when no source establishes such a process.
+
+The bar is execution under pressure by someone who did not plan it. Every gate names its owner and a pass condition that needs no interpretation. Every command is exact. Post-deploy checks name the signal, the threshold, the observation window, and the action when the threshold trips. Rollback states the path and whether it has been verified. A checklist whose steps read "verify deployment succeeded" has not reached that bar.
+
+Evidence retrieval across environments, services, and regions is parallel-safe as the workflow describes, so the artifacts in the set are built concurrently. The gate sequence inside them stays ordered.
+
+Completeness of the set is bounded by the evidence under it. Environment names, deploy commands, owners, approvals, flags, rollback procedures, health checks, and CI status are sourced or explicitly missing. A gate whose status could not be established is `unknown` and blocking, never `pass`, and a rollback path nobody has confirmed is marked unverified rather than written as though it were.
+
 When creating a deployment artifact, return a downloadable markdown file when the environment supports file output. Use the wrapper and artifact contracts in `references/output-contract.md`. Include source facts and unverified assumptions unless the user explicitly asks for a terse inline answer.
 
 For agent handoffs, write the content so it can be pasted into an execution agent without losing guardrails. Keep halt conditions intact.

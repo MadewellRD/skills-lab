@@ -40,11 +40,17 @@ Map the market context around a product opportunity. Identify category dynamics,
 
 ## Outputs
 
-- market discovery brief
-- category map
-- customer and buyer hypothesis
-- demand signal summary
-- research gap list
+One run delivers the full discovery picture:
+
+- **market discovery brief** — the market as currently understood, what is established, and what remains hypothesis.
+- **category map** — segments, adjacent categories, alternatives and substitutes, and where the product sits among them.
+- **customer and buyer hypothesis** — who has the problem, who buys, who blocks, and the evidence for each, with hypotheses labeled as hypotheses.
+- **demand signal summary** — the signals found, their source and date, and how strongly each supports demand.
+- **research gap list** — what is not known, why it matters to the decision, and the research that would close it.
+
+Complete means a PM could decide whether to pursue this market, or knows precisely what to learn first. A category map that lists names without placing the product among them has answered nothing. Segments, buyer roles, alternatives, and trend sources fan out across the parallel surface already declared; the framing, synthesis, and gap list are the aggregate pass.
+
+Market numbers are unusually easy to state and hard to source. Market size, growth rate, adoption figures, and competitor traction carry their source and date or are recorded as unknown, because a plausible TAM figure with no citation gets quoted in a funding conversation. Where the evidence is thin, report the demand signal as weak rather than describing a market nobody measured.
 
 ## Workflow packet fields
 

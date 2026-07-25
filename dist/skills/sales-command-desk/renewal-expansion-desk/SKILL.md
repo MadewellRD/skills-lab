@@ -42,12 +42,20 @@ Support renewals, upsell, and cross-sell motions with risk analysis, expansion h
 
 ## Outputs
 
+A complete run delivers the full renewal package rather than one artifact from it:
+
 - renewal risk memo
 - expansion hypotheses
 - stakeholder plan
 - follow-up drafts
 - forecast impact note
 - open issue list
+
+Retention and expansion compete for the same customer conversation, so both are produced and kept visibly separate rather than one being chosen and the other quietly assumed.
+
+Each is done when the account owner could run the renewal from it. The memo states the contract date and terms with the source named; every risk names its evidence, its freshness, and what would retire it; every expansion hypothesis names the usage or stakeholder signal behind it and what would confirm it; the follow-up drafts are sendable text rather than bullet outlines; the forecast impact note separates recorded figures from proposed ones. A memo asserting the account is at risk without saying why is not a risk memo.
+
+Completing the set never means asserting a renewal fact. A contract date, term, renewal amount, usage figure, or support history that no record supports is reported as unknown, or that section marked not applicable — and a quiet account is an open question, not a churn signal. Getting a renewal date or an entitlement wrong in a customer conversation costs the relationship the memo exists to protect. The follow-up drafts stay drafts: they are approved before they are sent, and a renewal commit or forecast change is recorded only after its approval, exactly as Workflow specifies. Renewal accounts, expansion hypotheses, and product lines are independent units inside the parallel surface declared there.
 
 ## Workflow packet fields
 

@@ -40,7 +40,11 @@ Repo facts, dependency/SDK state, App Review policy notices, crash/main-thread s
 
 ## Expected outputs
 
-Maintenance/growth plan, dependency/SDK update plan, experiment brief, debt register, migration/refactor handoff, halt conditions, and packet update.
+A complete run delivers everything the work classification puts in scope, in full: the maintenance or growth plan, the dependency and SDK update plan, the experiment brief, the debt register, the migration or refactor handoff, any halt conditions, and the packet update. Where the classification genuinely rules one out — a straight toolchain upgrade has no growth experiment — that artifact is reported as not applicable with the reason, which is different from dropping it silently or writing a generic one to fill the slot.
+
+Each artifact is done when someone could pick it up and execute it. The update plan names each dependency with its current and target version, its breaking changes, and the ordering forced by the shared dependency graph; the experiment brief states the hypothesis, the metric, the guardrail, and the stop condition; the debt register names each item, what it costs, and what retiring it unblocks. "Update dependencies" is not a plan.
+
+None of it gets filled in from convention. A version, an App Review policy change, an SDK requirement, a metric baseline, or a debt cost that no source establishes is recorded as unknown with the check that would resolve it — a guessed target version turns a maintenance plan into a broken build. Individual upgrades, experiments, debt items, and per-module impact assessments are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,16 @@ Otherwise proceed: a missing trigger detail, unknown affected module, or unvalid
 
 ## Default output modes
 
+A complete run writes each of these that the work classification puts in scope, and marks the rest not applicable with the reason:
+
 - `ios-maintenance-plan.md`
 - `ios-sdk-dependency-update-plan.md`
 - `ios-growth-experiment-brief.md`
 - `ios-debt-register.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — stands in for the set above when a hard halt fires, rather than being added to it.
 
 ## Downstream handoff
 

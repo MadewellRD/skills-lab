@@ -40,12 +40,20 @@ Prepare call briefs, agendas, discovery questions, risk notes, and follow-up sca
 
 ## Outputs
 
+A complete run delivers the whole prep package before the call, not one section of it:
+
 - call prep brief
 - suggested agenda
 - attendee map
 - discovery questions
 - objection watchlist
 - follow-up checklist
+
+The follow-up checklist belongs to the prep rather than to a later stage — it is what the rep completes in the ten minutes after the call, and it is written before the call happens.
+
+Each artifact is done when the rep could walk in on it. Every attendee is classified internal or external and carries the context sourced for them; every agenda item has a purpose and an owner; every discovery question names the specific gap it closes instead of being a generic list; the watchlist names the objections this account is likely to raise and where the response lives. A brief that recaps the CRM record is not preparation.
+
+Producing all of it does not authorize filling in the people. An attendee's role, seniority, priorities, or history that could not be retrieved is named as a gap rather than reconstructed into something plausible — being wrong about someone's job in front of that person is a credibility loss the meeting does not recover from. The internal/external split stays a hard boundary: deal risk, forecast commentary, competitive positioning, and pricing latitude live in the internal-only sections and out of anything shareable in the room, and a complete package never makes internal assessment shareable. Attendees, and each meeting where several are in scope, are independent research units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 

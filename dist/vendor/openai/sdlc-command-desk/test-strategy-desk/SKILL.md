@@ -59,7 +59,15 @@ Use `references/halt-conditions.md` for the halt artifact format.
 
 ## Output rules
 
+A strategy run delivers the set together: the test strategy, the requirement-to-coverage map with every material requirement classified, the scenario matrix, the fixture plan, the ranked coverage-gap report, and the handoff to whichever desk consumes it next. A coverage-gap report without the scenarios that would close the gaps is a list of complaints; a scenario matrix with no requirement mapping cannot be checked for completeness. A targeted regression plan is this same set narrowed to a specific change, not a lighter substitute for it.
+
 Prefer concise, audit-ready artifacts. Include source facts and assumptions. Separate verified facts from recommendations. Do not claim local or CI validation unless the connector or user provided the result.
+
+Depth is measured by whether a tester can execute without redesigning. A scenario states preconditions, steps, and the expected result. A fixture names its data shape, its provenance, and how it is reset. A gap carries its risk rank from `references/risk-rubric.md` rather than sitting in an undifferentiated list. "Add integration tests for the checkout flow" is a gap, not a scenario.
+
+Requirements, changed files, and scenario families are independent, so the artifacts in the set are mapped in parallel and assembled into the ranked view once.
+
+Producing the whole set never converts absence into coverage. Test names, file paths, coverage claims, CI status, and defect history are sourced or absent, existing coverage stays separate from proposed coverage, and a requirement with no test is classified `not covered` rather than given a plausible one. A strategy that overstates coverage is worse than no strategy, because it retires a risk nobody is actually watching.
 
 When creating a file for the user, use `scripts/write_test_strategy_markdown.py` to wrap the artifact with:
 

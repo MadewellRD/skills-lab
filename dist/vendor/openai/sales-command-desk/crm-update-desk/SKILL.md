@@ -42,12 +42,23 @@ Create safe, auditable CRM updates from meetings, emails, files, and user instru
 
 ## Outputs
 
+A complete run produces the whole reviewable package, not one part of it:
+
 - proposed CRM diff
 - notes and tasks
 - field update package
 - approval request
 - audit log
-- write result when approved
+
+The diff shows what would change, the notes and tasks show what would be created, and the approval request is the thing a human actually authorizes. Producing them together is what lets an approver see the full blast radius at once.
+
+One artifact is deliberately outside that set:
+
+- write result when approved — produced only after the ordered gate in Workflow has cleared, and only for the rows that were approved. A complete draft package never advances the write; it is what the approver reads before authorizing, not evidence that authorization happened.
+
+Depth is judged by whether an approver can decide without opening the CRM themselves. Every proposed change shows the current value, the proposed value, and the evidence for it; every material field — stage, amount, close date, owner, or anything creating an external commitment — is flagged as requiring approval; the audit log states what was approved, by whom, what was written, and what was not. A diff naming fields without showing values has not met the bar.
+
+Completing the package is not permission to populate it. A record ID, field name, picklist value, owner, or date that no source establishes appears as a labelled assumption for the approver to confirm and that row's write stays blocked — never as a guessed value. A plausible-looking CRM write destroys a preimage nobody can reconstruct and propagates into forecasts other people have already committed on. Diff computation across independent records is part of the parallel surface declared in Workflow; the approval and the commit deliberately are not.
 
 ## Workflow packet fields
 

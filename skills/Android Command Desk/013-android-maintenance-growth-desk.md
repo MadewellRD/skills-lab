@@ -40,7 +40,11 @@ Repo facts, dependency/SDK state, Play policy notices, crash/ANR/analytics trend
 
 ## Expected outputs
 
-Maintenance/growth plan, dependency/SDK update plan, experiment brief, debt register, migration/refactor handoff, halt conditions, and packet update.
+A complete run delivers the set the classification calls for, in full: the maintenance or growth plan, the dependency and SDK update plan, the experiment brief, the debt register, the migration or refactor handoff, the halt conditions that apply, and the packet update. Where the work classification genuinely excludes one — a pure dependency-upgrade run has no growth experiment — that artifact is reported as not applicable with the reason, which is different from leaving it out or padding it with a generic experiment.
+
+Each artifact is done when someone could pick it up and execute. The update plan names each dependency, its current and target version, the breaking changes, and the order forced by the shared build graph; the experiment brief states the hypothesis, the metric, the guardrail, and the stop condition; the debt register names each item, its cost, and what retiring it unblocks. A plan that says "upgrade dependencies" has not started.
+
+None of this is filled from convention. A version, a Play policy change, an SDK requirement, a metric baseline, or a debt cost that no source establishes is recorded as unknown with the check that would resolve it — an invented target version turns a maintenance plan into a build break. Individual upgrades, experiments, debt items, and per-module impact assessments are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,16 @@ Otherwise proceed: a missing trigger detail, unknown affected module, or unvalid
 
 ## Default output modes
 
+A complete run writes all of these that the work classification puts in scope, and records the rest as not applicable with the reason:
+
 - `android-maintenance-plan.md`
 - `android-sdk-dependency-update-plan.md`
 - `android-growth-experiment-brief.md`
 - `android-debt-register.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — takes the place of the set above when a hard halt fires, rather than being added to it.
 
 ## Downstream handoff
 

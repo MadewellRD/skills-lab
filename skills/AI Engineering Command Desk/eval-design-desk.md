@@ -47,11 +47,17 @@ Eval cases and dataset slices are independent. Authoring cases, assembling slice
 
 ## Outputs
 
-- eval plan
-- rubric
-- dataset requirements
-- pass/fail gates
-- reporting template
+A complete run delivers a runnable eval, which means all five artifacts together — a rubric with no thresholds, or a plan with no dataset requirements, is not something anyone can execute:
+
+- eval plan — the behavior contracts under test, the slices exercising each, the grader per slice, and the rerun cadence.
+- rubric — scoring criteria with anchored levels, worked examples at the boundaries, and the tie-breaking rule.
+- dataset requirements — per slice: what the cases must cover, how many, where they come from, and what disqualifies a case.
+- pass/fail gates — numeric thresholds fixed before results are seen, bound to the named regression slices they apply to.
+- reporting template — the fields every run reports, so two runs are comparable.
+
+The bar is reproducibility: someone who did not write the plan gets the same answer from it. Cases, slices, and graders are the parallel-safe unit; threshold setting and the pass/fail rollup remain aggregate.
+
+Completeness of this set never extends to results. A baseline number, a prior eval outcome, or a historical threshold that no source states is recorded as absent, and the eval is designed around that gap rather than around a plausible figure. Designing the eval is this desk's deliverable; asserting what it would have returned is not.
 
 ## Workflow packet fields
 

@@ -101,7 +101,11 @@ Acceptance bar: every integration the surface depends on has a named owner, a re
 
 ## Expected outputs
 
-Integration map, API contract checklist, auth/session requirements, failure-mode plan, caching/data-consistency notes, backend dependency risks.
+A complete run delivers the whole list, not the most convenient item on it: integration map, API contract checklist, auth/session requirements, failure-mode plan, caching and data-consistency notes, and backend dependency risks.
+
+Depth is what makes these usable. A contract entry states method, path, request and response shape, status codes, and validation rules, enough that a frontend engineer can code against it. The failure-mode plan says what the surface renders on timeout, 4xx, 5xx, partial data, and empty state, per integration. "Handle errors gracefully" is not a failure-mode plan.
+
+An integration whose contract nothing in the sources describes gets listed with its gap named, not with a contract reconstructed from convention. An invented endpoint shape is worse than an acknowledged unknown, because the next stage will build against it.
 
 ## Evidence packet additions
 
@@ -128,11 +132,18 @@ An unknown dependency owner, or an unsourced contract for a non-sensitive integr
 
 ## Default output modes
 
-- `backend-integration.md`
-- `backend-integration-source-facts.md`
-- `backend-integration-risk-register.md`
-- `backend-integration-downstream-handoff.md`
-- `connector-diagnostic.md`
+One run produces the set:
+
+- `backend-integration.md`: integration map, contracts, auth and session boundaries, failure modes, caching rules.
+- `backend-integration-source-facts.md`: each contract, schema, and auth fact with the repo path, doc, or spec it came from.
+- `backend-integration-risk-register.md`: coupling, ownership, rate-limit, consistency, and dependency-availability risks with impact and the evidence behind each.
+- `backend-integration-downstream-handoff.md`: what `frontend-engineering-desk` needs in order to consume the contracts without rediscovering them.
+
+`connector-diagnostic.md` stands in place of that set rather than joining it, and only when the repo, API docs, or schema source cannot be reached at all.
+
+Endpoints and services are independent, so these artifacts are part of the parallel surface named in the Workflow section.
+
+Delivering all four does not authorize filling one. A contract, an owner, or a rate limit that no source establishes is recorded as unknown in the artifact and as an open question in the packet, never written in because a table had a blank cell.
 
 ## Downstream handoff
 

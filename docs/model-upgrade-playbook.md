@@ -75,8 +75,12 @@ every "keep it short" instruction in the corpus. Write the translation down in
 detector to `DEBT` in `tools/audit_skills.py` so the next person can find it mechanically
 instead of by reading 109 skills.
 
-**4. New surfaces.** What can desks now do that they could not before? Parallel fan-out and
-long-horizon continuation both landed this way.
+**4. New surfaces.** What can desks now do that they could not before? Parallel fan-out,
+long-horizon continuation, and raised output ambition all landed this way. Output contracts
+in particular were calibrated to what a weaker model could finish in one turn, so they read
+as menus ("produce one of these"). Long-horizon capability makes the full set achievable in
+a single run - but raising the set never licenses inventing the contents of one. See
+`output_ambition.guard` in the profile.
 
 ## The line that matters most
 
@@ -121,3 +125,18 @@ and generate new checksums via `tools/generate_*_release.py`.
   models or skills silently assume capability a user's model does not have.
 - **Audit noise.** If the audit reports the same known-good hits every run, people stop
   reading it. Add them to `ACCEPTED` with a reason, or fix them. Never leave them dangling.
+
+- **Regex-gating prose semantics.** Do not gate the audit on whether well-written prose
+  contains an idea. This was tried for the anti-fabrication guard and failed twice: it
+  flagged *better* writing as missing, because good guards are worded to their domain
+  ("an unmeasured metric stays unmeasured in writing", "a declaration filled in to look
+  finished is a false statement to Apple and to users") and no pattern covers that space.
+  A compliance regex punishes voice and rewards pasted boilerplate - the exact thing the
+  rule exists to prevent.
+
+  Gate on what is mechanically decidable. For prose properties, detect **regression**
+  instead of compliance: the superseded phrasing is a small closed set ("smallest artifact",
+  "one of the following") and is easy to match. Verify the positive property semantically
+  once per upgrade and record the result. And make regression checks negation-aware, or
+  they fire on the corrected sentence: "delivers a set **rather than** the smallest
+  artifact" contains the banned phrase and is the fix, not the defect.

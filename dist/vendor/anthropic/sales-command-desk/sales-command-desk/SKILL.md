@@ -42,12 +42,20 @@ Act as the Sales Revenue workflow orchestrator. Classify the request, select the
 
 ## Outputs
 
+A complete run returns the whole orchestration record together with the artifacts of every stage it ran:
+
 - sales workflow plan
 - stage sequence
 - source fact summary
 - decision and approval log
 - deliverables or drafts
 - downstream handoff packet
+
+"Deliverables or drafts" means the full set each stage that ran was responsible for, not a representative sample. A stage marked complete without its artifacts present was not completed, and a run that returns only the plan has routed rather than run.
+
+Depth is judged by whether the next person can continue without re-deriving what is already settled. Every stage has either a produced artifact or a named reason it was skipped; every irreversible action is either approved and logged, or listed as pending with its approver named; the source fact summary keeps verified facts, assumptions, and open questions distinct; the handoff packet carries all of it forward without loss. A stage sequence with nothing behind it is a routing note.
+
+Running the whole sequence is not permission to assert more. A stage whose evidence the connectors could not supply is reported as blocked or not applicable with the missing source named, never written up as though it ran — and in revenue work an invented customer fact, price, metric, or commitment is a commercial liability, not an untidy artifact. Completeness never moves a gate: CRM writes, customer-facing sends, external shares, sequence enrollment, and pricing commitments stay behind their approvals and run last in the sequence, exactly as the ordered gate in Workflow specifies. A finished draft set is what an approver reviews; it is not evidence that approval occurred. Stages that do not consume each other's artifacts, and a single stage fanned out across accounts, are independent inside the parallel surface declared there.
 
 ## Workflow packet fields
 

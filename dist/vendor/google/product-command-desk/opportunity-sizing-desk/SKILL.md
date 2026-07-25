@@ -40,11 +40,17 @@ Size product opportunities using appropriate methods such as TAM, SAM, SOM, acco
 
 ## Outputs
 
-- opportunity sizing memo
-- assumption table
-- range estimate
-- sensitivity notes
-- prioritization input
+A sizing run delivers the estimate together with everything needed to argue with it:
+
+- **opportunity sizing memo** — the question being sized, the method, the scope boundary, and the answer.
+- **assumption table** — every input with its value, its source or its labeled-assumption status, and who could confirm it.
+- **range estimate** — low, expected, and high, each traceable to the assumption set that produces it. A lone point estimate hides exactly the uncertainty that matters.
+- **sensitivity notes** — which assumptions move the answer most, and the threshold at which the conclusion flips.
+- **prioritization input** — this estimate in the comparable form used to weigh it against other opportunities.
+
+Depth bar: a reader could challenge any figure by pointing at the assumption behind it and recompute from a corrected value. Segments, geographies, and scenarios size in parallel across the surface already declared; the roll-up and sensitivity analysis are one aggregate pass with assumptions kept consistent across the set.
+
+A sizing model is a stack of numbers, and one fabricated number at the bottom invalidates everything above it. Population counts, pricing, conversion rates, and market data are cited or explicitly marked as assumptions with a named owner — never presented as researched values. Where a driving input cannot be sourced, report the range as blocked on it rather than producing a confident number resting on an invented base.
 
 ## Workflow packet fields
 

@@ -41,11 +41,17 @@ Within step 2 the evidence sources are independent: collecting logs, traces, pro
 
 ## Outputs
 
-- incident triage report
-- containment plan
-- rollback recommendation
-- follow-up issue list
-- post-incident review inputs
+An incident run delivers the full response package in one pass. Waiting for a second request before producing the containment plan or the follow-ups is the failure mode here:
+
+- incident triage report — severity with its justification, blast radius, affected capability and users, and the timeline reconstructed from evidence with each entry attributed.
+- containment plan — the specific actions, in order, with owners and approval state.
+- rollback recommendation — a decision either way, with the trigger, the target version or config, and the cost of each option. "No rollback" is a valid recommendation and is stated as one.
+- follow-up issue list — each item scoped enough to be opened as written, with the failure it prevents.
+- post-incident review inputs — contributing factors, detection and response gaps, and what remains unanswered.
+
+Each is complete when a responder can act from it directly. A timeline with a gap says so; it does not close the gap with a likely sequence. The evidence sources already named as parallel-safe fan out into this set.
+
+Producing every section is not permission to fill one. An unestablished root cause is recorded as undetermined with the evidence still needed, never as a plausible narrative. Invented timestamps, deploy SHAs, error rates, or user-impact counts are the most damaging output this desk can emit, because an incident record is what everyone downstream treats as what happened.
 
 ## Workflow packet fields
 

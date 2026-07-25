@@ -101,7 +101,11 @@ Acceptance bar: every in-scope route has a rendering decision and a data-fetchin
 
 ## Expected outputs
 
-Frontend architecture brief, rendering strategy, component implementation plan, route/layout map, state and data-flow notes, engineering handoff packet.
+The set is delivered in full: frontend architecture brief, rendering strategy, component implementation plan, route/layout map, state and data-flow notes, and the engineering handoff packet.
+
+The bar is that a coding agent or a new engineer can start work from these without asking a question. Every in-scope route carries its rendering mode and its data-fetching path. Every planned component names its file location, its props or inputs, its states, and the design-system entry it maps to. The handoff packet names the validation command and its pass condition. A component plan that is a list of component names does not clear this bar.
+
+Nothing here is worth inventing. If the repo could not be read, the framework, directory layout, and package facts stay labeled as assumptions rather than being written as though inspected, and a route with no source-backed requirement is listed as out of scope instead of being given a rendering decision to complete the table.
 
 ## Evidence packet additions
 
@@ -128,11 +132,18 @@ An unnamed target repo or framework, unaccepted component scope, or an unsourced
 
 ## Default output modes
 
-- `frontend-engineering.md`
-- `frontend-engineering-source-facts.md`
-- `frontend-engineering-risk-register.md`
-- `frontend-engineering-downstream-handoff.md`
-- `connector-diagnostic.md`
+One run produces the set together:
+
+- `frontend-engineering.md`: architecture brief, rendering decisions, route and layout map, component plan, state and data flow.
+- `frontend-engineering-source-facts.md`: framework, package, routing, and existing-component facts with the file or manifest each came from.
+- `frontend-engineering-risk-register.md`: implementation risks with the route or component each attaches to and what would retire it.
+- `frontend-engineering-downstream-handoff.md`: the execution-ready scope for `web-security-secops-desk` and for any coding agent, including forbidden files and validation gates.
+
+`connector-diagnostic.md` is the alternative when the target repo is unreachable, not an additional deliverable alongside the four.
+
+Routes and components are independent, so these artifacts sit on the parallel surface the Workflow section already declares.
+
+Completeness of the set never converts an assumption into a fact. Repo state that was not read stays labeled as assumed, and a risk with no evidence behind it does not go into the register just to fill it.
 
 ## Downstream handoff
 

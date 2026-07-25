@@ -102,7 +102,11 @@ Acceptance bar: every in-scope page type and journey has acceptance criteria, ea
 
 ## Expected outputs
 
-Requirements packet, page or screen inventory, user journey map, acceptance criteria matrix, success metrics, analytics event candidates, scope exclusions, open questions.
+A run delivers the full set: requirements packet, page or screen inventory, user journey map, acceptance criteria matrix, success metrics, analytics event candidates, scope exclusions, and open questions.
+
+Acceptance criteria are the depth test here. Each one has to be checkable by someone who was not in the conversation: a stated condition and an observable result, tied to a requirement ID. Journeys name entry point, steps, decision points, and exit or failure states. Analytics events name the trigger and the properties they carry. A matrix of requirement IDs with "TBD" in the criteria column is not a draft of this artifact, it is the absence of one.
+
+Success metrics and business goals are the easiest things here to write convincingly without evidence. Where no source states a target, record the metric as proposed and unbaselined, or leave it out with the gap noted. Filling every row of the matrix is not the objective. Filling it honestly is.
 
 ## Evidence packet additions
 
@@ -128,11 +132,18 @@ A missing business goal, audience, launch scope, or success metric is not a halt
 
 ## Default output modes
 
-- `site-product-requirements.md`
-- `site-product-requirements-source-facts.md`
-- `site-product-requirements-risk-register.md`
-- `site-product-requirements-downstream-handoff.md`
-- `connector-diagnostic.md`
+One run produces these together:
+
+- `site-product-requirements.md`: scope, page and journey inventory, requirements with IDs, acceptance criteria, non-goals.
+- `site-product-requirements-source-facts.md`: brief, stakeholder, analytics, and existing-surface facts with attribution and date where known.
+- `site-product-requirements-risk-register.md`: scope, dependency, and measurement risks with the requirement each threatens.
+- `site-product-requirements-downstream-handoff.md`: what `information-architecture-desk` inherits, including which requirements are accepted and which are assumed.
+
+`connector-diagnostic.md` is the alternative outcome when a required brief, doc, analytics, or repo source cannot be reached. It stands in for the set rather than extending it.
+
+Page types and journeys are independent drafting units per the Workflow section, so these artifacts belong to that same parallel surface.
+
+The set being complete is not evidence that its contents are. An audience, a metric target, or a launch date with no source stays labeled as an assumption in the artifact and as a question in the packet.
 
 ## Downstream handoff
 

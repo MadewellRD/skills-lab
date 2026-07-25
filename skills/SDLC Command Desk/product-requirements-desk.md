@@ -47,13 +47,26 @@ See `references/halt-conditions.md` for the artifact format a halt must take.
 
 ## Default output modes
 
+A requirements run produces these three together:
+
 - `product-requirements-document.md`
 - `acceptance-criteria.md`
-- `requirements-review.md`
 - `requirements-source-facts.md`
-- `connector-diagnostic.md`
+
+They are one deliverable in three files: the PRD states the requirements, the acceptance criteria make each one testable, and the source-facts file records what each rests on. A PRD handed over without its acceptance criteria pushes the same work downstream at a higher price.
+
+Two modes are genuine alternatives rather than members of that set:
+
+- `requirements-review.md` when the request is to assess requirements that already exist rather than author new ones.
+- `connector-diagnostic.md` when the sources needed to ground requirements cannot be reached — produced instead of the set, not beside it.
 
 Every downloadable Markdown artifact must start with a short "How to use this file" section.
+
+Depth is the point of the set. Every requirement carries a stable ID and criteria a tester could execute without asking what was meant. Non-goals are stated as exclusions, not left as omissions. Open questions name who can answer them. A requirement reading "the system should handle errors appropriately" has an ID and no content.
+
+Acceptance criteria for distinct requirement IDs are independent, so the artifacts in the set are drafted on the parallel surface the workflow declares.
+
+Producing all three never means completing one from imagination. A requirement with no stakeholder, document, or issue behind it is recorded as a proposal labeled as such, or raised as an open question. Users, dates, dependencies, owners, and compliance obligations are sourced or absent — a PRD is where invented facts do the most damage, because every later stage treats it as settled.
 
 ## Downstream handoff density
 

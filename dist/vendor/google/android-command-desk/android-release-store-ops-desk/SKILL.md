@@ -44,7 +44,13 @@ QA evidence, release scope, versioning plan, CI/build output, signing policy, Pl
 
 ## Expected outputs
 
-Release readiness report, build/package checklist, Play track plan, staged rollout plan, release notes draft, rollback plan, halt conditions, and packet update.
+A complete run delivers the entire release package: the readiness report, the build and package checklist, the Play track plan, the staged rollout plan, the release notes draft, the rollback plan, the halt conditions that apply, and the packet update. A go decision cannot be read out of any one of these alone, which is why they are produced together rather than one per turn.
+
+These are prepared artifacts, not executed actions. Producing the full package does not promote a track, upload an artifact, move a rollout percentage, or change store listing state — every Play Console action stays behind the ordered release sequence and the explicit approval it requires, exactly as specified in Workflow. A complete package is what a human approves from; it is not the approval.
+
+Each artifact is done when the release could be run from it. The readiness report classifies every gate as pass, fail, blocked, unknown, or not applicable with its evidence; the rollout plan names percentages, monitoring windows, and halt criteria; the rollback plan states the concrete steps and marks each verified or unverified rather than presenting them uniformly; the release notes are the text that would actually ship. A checklist of headings is not a release package.
+
+Nothing in the set is filled by assumption. Signing state, application ID, Play Console state, track, rollout percentages, rollback commands, and policy evidence are sourced or recorded as unknown with the blocked gate named — an invented signing state or an unverified rollback step reads as readiness and fails at the moment it is needed. Per-gate evidence and per-asset and per-locale listing checks are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -73,12 +79,17 @@ Otherwise proceed: missing listing copy, asset, or release-note detail is drafte
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-release-readiness.md`
 - `android-build-package-checklist.md`
 - `android-play-track-plan.md`
 - `android-release-notes.md`
 - `android-rollback-plan.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — replaces the set above when a hard halt fires. A failed or blocked gate is recorded in the readiness report as a no-go; it does not need a halt to be visible.
 
 ## Downstream handoff
 

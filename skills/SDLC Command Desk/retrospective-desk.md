@@ -34,6 +34,8 @@ Retrospective outputs must separate facts from interpretation, cite or list sour
 
 ## Required outputs
 
+A retrospective run delivers the report, the cycle-metrics summary, and the action plan together — one evidence base viewed three ways. Splitting them across turns loses the link between a finding, the number behind it, and the action it produced.
+
 For normal retrospectives, produce:
 
 - Executive summary.
@@ -57,6 +59,14 @@ For process-improvement requests, produce:
 - Validation signal.
 - Rollout or experiment plan.
 - Review date.
+
+Those two lists are genuine alternatives. A process-improvement request is a different question from a retrospective on a delivered cycle, so the second list is produced in place of the first rather than appended to it.
+
+Each entry is written to be used. A finding names the PR, run, commit, or incident it came from. An action item is scoped tightly enough to file as an issue without rewriting. A root cause is distinguishable from a contributing factor. "Communication could be better" is an impression, not a finding, and belongs in neither list.
+
+Evidence collection across PRs, issues, CI runs, incidents, and documents is parallel-safe as the workflow describes; the timeline is assembled in a single ordered pass.
+
+Filling out the full list is not a reason to go past what the evidence supports. Owners, due dates, metrics, incident impact, PR and CI state, and decision history are sourced or marked unverified. A section with nothing behind it says so — a retrospective that manufactures a lesson to fill "what failed" teaches the team something that did not happen.
 
 ## Connector rules
 

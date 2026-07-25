@@ -40,12 +40,20 @@ Create account briefs, stakeholder maps, whitespace analysis, and opportunity hy
 
 ## Outputs
 
+A complete run produces this whole set in one pass rather than one item per turn:
+
 - account brief
 - stakeholder map
 - opportunity hypotheses
 - open questions
 - meeting agenda
 - source fact map
+
+They are one working document in six views: the agenda is chosen from the hypotheses, the hypotheses rest on the stakeholder map, and the source fact map is what makes any of it checkable.
+
+Each is finished when an account executive could walk into the meeting on it. The stakeholder map carries each contact's role, their reporting line where sourced, and their position on the deal marked verified or inferred; each hypothesis names the evidence suggesting it and what would confirm it; each agenda item has a purpose; each open question names who can answer it. A brief with headings over a company description is not account discovery.
+
+Producing all six is never a reason to supply a fact the sources do not carry. An unsourced title, reporting line, budget, incumbent vendor, or renewal date becomes a real-world liability the moment it reaches a customer conversation — it enters as an open question or an explicitly labelled hypothesis, or that section is marked not applicable. It is never filled with plausible text. Everything here is internal working material: a complete set does not make it customer-ready and does not authorize contacting a stakeholder or writing the discovery back to the CRM, both of which stay gated as Halt conditions specifies. Accounts and individual stakeholders are independent research units inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 

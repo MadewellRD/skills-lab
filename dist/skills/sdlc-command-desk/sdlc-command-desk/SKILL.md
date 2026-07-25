@@ -88,7 +88,9 @@ If a required connector is unreachable, produce a connector diagnostic rather th
 
 ## Output behavior
 
-For multi-stage workflows, return either a complete Markdown workflow artifact or a concise stage-by-stage report. Include:
+A workflow run delivers two things, both of them: the full artifact set of every stage that ran, as each stage's own desk defines it, and the workflow-level record over the top. Stages are not rationed one per turn — if the packet supports running five stages, five stages run and five artifact sets exist when the run reports.
+
+The workflow record includes:
 
 - workflow mode
 - completed stages
@@ -101,6 +103,12 @@ For multi-stage workflows, return either a complete Markdown workflow artifact o
 - next continuation target, if any
 
 Do not return a bare recommendation to use another desk.
+
+A stage counts as completed when its artifact would survive being handed to the next stage without a follow-up round trip. A stage that emitted headings and deferred their contents is reported as incomplete rather than done: the packet is what later stages trust, and a stage marked complete on an empty artifact corrupts everything downstream of it.
+
+Quality gates sitting at the same lifecycle position are independent, as the parallel surface in the workflow describes, so their artifacts are produced concurrently rather than in sequence.
+
+Running more stages is not permission to write more. A stage whose sources could not be reached is recorded as skipped with the reason, or halted under its own conditions, never completed with content that reads as though it ran. The workflow record has to be an accurate account of what happened, including the parts that did not.
 
 Use `scripts/route_sdlc_request.py` only as a deterministic aid for first-pass classification. Use `scripts/run_sdlc_workflow.py` to produce a stage sequence and workflow packet scaffold. Use judgment and connector evidence for final workflow execution.
 

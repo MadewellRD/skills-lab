@@ -42,11 +42,17 @@ Frame pricing and packaging decisions. Define packages, entitlements, monetizati
 
 ## Outputs
 
-- pricing hypothesis
-- packaging proposal
-- entitlement map
-- risk assessment
-- experiment or rollout plan
+A pricing run delivers the whole proposal, because a price without its entitlement map and migration risk is not something anyone can approve:
+
+- **pricing hypothesis** — the model, the value metric, the price points, and the reasoning and evidence behind each.
+- **packaging proposal** — the plan lineup, what distinguishes each tier, and the upgrade trigger between them.
+- **entitlement map** — per plan: features, limits, overage behavior, and what happens at the boundary.
+- **risk assessment** — cannibalization, existing-customer migration impact, discount and contract exposure, and likely competitive response.
+- **experiment or rollout plan** — how the change is validated or staged, the segments affected first, grandfathering, and the rollback posture.
+
+Complete means a pricing owner could take this into an approval conversation without a follow-up round trip. An entitlement map with tier names and no limits has specified nothing. Candidate packages, segments, and entitlement options evaluate in parallel across the surface already declared; boundary coherence and cannibalization are the aggregate pass over the lineup.
+
+Delivering the full proposal never licenses inventing its inputs. Willingness-to-pay data, competitor pricing, current ARPU, contract terms, and cost-to-serve are sourced or reported as unknown, with the dependent recommendation marked provisional. A packaging decision built on an invented competitor price reaches customers and cannot be quietly withdrawn.
 
 ## Workflow packet fields
 

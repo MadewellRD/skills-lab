@@ -42,12 +42,20 @@ Evaluate whether an opportunity satisfies the team's qualification framework and
 
 ## Outputs
 
+A complete run assesses every criterion in the framework and returns the full set:
+
 - qualification score
 - criteria assessment
 - missing evidence
 - stage readiness recommendation
 - next actions
 - escalation flags
+
+A score without the per-criterion assessment behind it cannot be argued with, and the missing-evidence list is the part that actually moves the deal — so the set travels together.
+
+Each artifact is done when the rep knows what to do next. Every criterion carries a score or an explicit `unknown` and names the note, email, meeting, or record supporting it; the missing-evidence list says who to ask and what to ask for; the stage recommendation follows from the criterion set rather than from overall impression; each escalation flag names what is escalated and to whom. A filled matrix with no evidence column is a scored guess.
+
+Scoring every criterion is not the same as filling every criterion. Budget, authority, decision process, timeline, and close plan are never inferred from deal momentum, seniority, or enthusiasm — an unscored criterion is reported as unscored rather than given a middling value so the matrix looks finished, and inventing a champion or a budget figure creates a deal that exists only in the CRM. The recommendation stays a recommendation: the assessment-then-approval-then-write order in Workflow holds, and a strong score never advances a CRM stage on its own. Framework criteria, and each opportunity where several are in scope, are independent inside the parallel surface declared there.
 
 ## Workflow packet fields
 

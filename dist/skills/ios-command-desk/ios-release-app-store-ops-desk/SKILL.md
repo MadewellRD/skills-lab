@@ -44,7 +44,13 @@ QA evidence, release scope, versioning plan, CI/build output, signing policy, Ap
 
 ## Expected outputs
 
-Release readiness report, build/package checklist, TestFlight group or App Store release state plan, staged rollout plan, release notes draft, rollback plan, halt conditions, and packet update.
+A complete run delivers the entire release package: the readiness report, the build and package checklist, the TestFlight group or App Store release state plan, the staged rollout plan, the release notes draft, the rollback plan, any halt conditions, and the packet update. No single one of these carries a go decision on its own, which is why they are produced together rather than one per turn.
+
+These are prepared artifacts, not performed actions. Having the full package does not upload a build, distribute to a TestFlight group, submit for App Review, change release state, or advance a phased release percentage — every App Store Connect action stays behind the ordered release sequence and the explicit approval it requires, exactly as Workflow specifies. A complete package is what a human approves from; it is not itself the approval.
+
+Each artifact is done when the release could be executed from it. The readiness report classifies every gate pass, fail, blocked, unknown, or not applicable with its evidence; the rollout plan names phases, monitoring windows, and halt criteria; the rollback plan gives concrete steps, each marked verified or unverified rather than presented uniformly; the release notes are the text that would actually ship. A page of headings is not a release package.
+
+No part of the set is completed by assumption. Signing and provisioning state, bundle ID, App Store Connect state, track, rollout phases, rollback commands, and policy evidence are sourced or recorded as unknown against the gate they block — an assumed provisioning state reads as readiness and fails at upload, and an unverified rollback step fails when it is the only thing left. Per-gate evidence and per-asset and per-locale listing checks are independent and part of the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -73,12 +79,17 @@ Otherwise proceed: missing listing copy, asset, or release-note detail is drafte
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-release-readiness.md`
 - `ios-build-package-checklist.md`
-- `ios-play-track-plan.md`
+- `ios-testflight-phased-release-plan.md`
 - `ios-release-notes.md`
 - `ios-rollback-plan.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned instead of the set above when a hard halt fires. A failed or blocked gate is recorded in the readiness report as a no-go and does not need a halt to be visible.
 
 ## Downstream handoff
 

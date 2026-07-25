@@ -40,12 +40,20 @@ Classify sales objections and draft evidence-backed responses, clarifying questi
 
 ## Outputs
 
+For every objection in scope, a complete run produces the whole response set rather than one piece of it:
+
 - objection classification
 - core response
 - follow-up questions
 - supporting evidence list
 - talk track
 - email draft
+
+The talk track and the email draft are the same answer in the two channels a rep actually needs, not alternatives to pick between.
+
+Each is done when a rep could use it live without rewriting it. The core response answers the objection as raised rather than an easier version of it; the follow-up questions target the specific unknown behind it; the evidence list names the approved proof point supporting each claim; the talk track is speakable and the email draft is sendable as written. Bullets gesturing at a rebuttal are not a response.
+
+This is exactly where completeness invites overreach, and it does not license a claim the evidence cannot carry. A capability, result, customer reference, timeline, benchmark, or commercial concession with no approved source behind it is not softened until it reads as supportable — the response states that the claim cannot be made and names what would be needed, or that part is marked not applicable. A fabricated customer proof point is something a rep will repeat to a prospect in good faith. Anything requiring legal, security, or pricing authority is marked pending that approval, and nothing here reaches the customer without approval. Objections are independent items inside the parallel surface declared in Workflow.
 
 ## Workflow packet fields
 

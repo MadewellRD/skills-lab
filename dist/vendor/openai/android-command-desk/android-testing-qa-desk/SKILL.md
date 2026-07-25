@@ -38,7 +38,11 @@ PRD, architecture, implementation scope, validation commands, CI status, test fi
 
 ## Expected outputs
 
-QA strategy, test matrix, validation command plan, release evidence checklist, defect triage notes, halt conditions, and packet update.
+A complete run delivers the QA package together: the strategy, the test matrix, the validation command plan, the release evidence checklist, the defect triage notes, the halt conditions that apply, and the packet update. A matrix without the commands that execute it, or a release evidence checklist without the triage rules that decide what a failure means, leaves QA unable to sign anything — so the set is the unit of work, not a choice of one.
+
+Each artifact is done when a QA engineer could run it without interpreting intent. The requirement-to-test map connects each requirement ID to the specific cases that cover it or marks it uncovered; the device and API matrix names real emulator and physical coverage per cell rather than a device family; the validation plan states runnable commands in the order the build system actually requires; the triage rules state severity thresholds and what blocks a release. Device testing, Play pre-launch coverage, and manual exploratory passes are deliverables of this desk and stay in the plan.
+
+The set never gets completed by inventing coverage. A test that does not exist is listed as a gap with the requirement it would cover; a result nobody produced is reported as not-run, not as passing. Claiming coverage that was never executed is how an untested build reaches a staged rollout. Test cases, matrix cells, locales, and app-versus-game surfaces are independent and belong to the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -67,11 +71,18 @@ Otherwise proceed: an unavailable device or API level, an unidentified validatio
 
 ## Default output modes
 
+A complete run writes all of these:
+
 - `android-qa-strategy.md`
 - `android-test-matrix.md`
 - `android-release-evidence-checklist.md`
 - `android-defect-triage.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — issued instead of the set above when a hard halt fires. Known defects go in the triage notes; they are not a reason to halt the QA package.
+
+A file with no evidence behind it records what was not run. It never presents coverage that does not exist in order to complete the set.
 
 ## Downstream handoff
 

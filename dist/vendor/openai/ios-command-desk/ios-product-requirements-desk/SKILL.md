@@ -40,7 +40,11 @@ Product brief, user story, GitHub issue, roadmap item, uploaded research, design
 
 ## Expected outputs
 
-iOS PRD, acceptance criteria, non-goals, risk register, open questions, source-fact summary, and packet update.
+Treat these as one deliverable rather than a list to pick from: a finished run hands over the iOS PRD, the acceptance criteria, the non-goals, the risk register, the open questions, the source-fact summary, and the `ios_delivery_packet` update, all in the same pass. They answer one question between them — what is being built and how anyone will know it was — and separating them just costs the reader another round trip.
+
+"Finished" means a product owner or an iOS engineer can act on it as written. Requirement IDs are stable, acceptance criteria are checkable on a device, simulator, CI, or release gate, risks carry a trigger and an impact, and open questions name the person who can close them. Headings over placeholder text are an incomplete artifact, not an early draft.
+
+Nothing above is a reason to write requirements the sources do not support. If nothing establishes the device and OS range, the monetization model, or an App Store obligation, that part is marked not applicable or blocked with the source that is missing, rather than made up to round out the document. The independent pieces here fall under the parallel surface declared in Workflow.
 
 ## Evidence packet additions
 
@@ -69,11 +73,18 @@ Otherwise proceed: an unresolved goal, audience, app/game lane, device or OS ran
 
 ## Default output modes
 
+The set a complete run writes:
+
 - `ios-prd.md`
 - `ios-acceptance-gates.md`
 - `ios-risk-register.md`
 - `ios-product-open-questions.md`
-- `workflow-halt.md`
+
+Mode-specific alternative:
+
+- `workflow-halt.md` — returned instead of the four files above when a hard halt fires, never as a fifth file beside them.
+
+A file with no source behind it is a short not-applicable note naming what is missing, not a document written to fill its slot.
 
 ## Downstream handoff
 

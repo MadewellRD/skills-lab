@@ -40,11 +40,17 @@ Define personas, segments, ICPs, use cases, jobs-to-be-done, and journey stages.
 
 ## Outputs
 
-- persona or segment map
-- ICP hypothesis
-- jobs-to-be-done summary
-- journey notes
-- segment implication matrix
+A complete run delivers the full segmentation, not one persona at a time:
+
+- **persona or segment map** — the clustering axes and why they were chosen, each segment with its defining attributes, its size or share where evidence supports one, and the boundary between it and its neighbors.
+- **ICP hypothesis** — which segment is the target, on what basis, and what would disconfirm the choice.
+- **jobs-to-be-done summary** — per segment: the job, the current alternative, and the trigger, in the customer's framing rather than the product's.
+- **journey notes** — where each segment enters, what they hit, and where they drop.
+- **segment implication matrix** — what each segment implies for product, messaging, and pricing.
+
+Complete means a PM or marketer could act on any single segment without a follow-up round trip. A persona with demographics and no job is decoration. Segments develop in parallel once the axes are fixed, across the surface already declared; axis choice, ICP selection, and de-duplication are aggregate over the full set.
+
+Delivering a persona for every segment is not license to write one. Personas are built from research, usage, sales, and support evidence. A segment with no evidence is listed as an unvalidated hypothesis with the research that would validate it, and it gets no quotes, no behaviors, and no size — an invented persona becomes a fiction the whole company then builds against.
 
 ## Workflow packet fields
 
