@@ -1,0 +1,17 @@
+# Default target. Produces fully vendor-neutral output.
+# This is what makes the repo's "frontier-agnostic" claim literally true:
+# the generic build mentions no vendor anywhere.
+vendor: generic
+display_name: Vendor-neutral
+tokens:
+  AGENT: the assistant
+  CODING_AGENT: the coding agent
+  PLATFORM: your assistant platform
+  INVOKE: "invoke <skill-name>"
+  BLOCKER_TAG: HANDOFF_BLOCKER
+  SUBAGENT_TERM: parallel worker
+supports:
+  parallel_subagents: true
+  programmatic_tool_calling: false
+  effort_dial: false
+  skills_format: folder

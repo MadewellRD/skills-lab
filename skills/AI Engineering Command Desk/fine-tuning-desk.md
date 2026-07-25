@@ -30,11 +30,15 @@ Assess and plan fine-tuning when evidence shows it is preferable to prompt chang
 
 ## Workflow
 
-- Compare fine-tuning against prompting, retrieval, tools, and routing.
-- Validate data readiness and training objective.
-- Define eval, safety, and release gates.
-- Plan rollout, fallback, rollback, and monitoring.
-- Document decision and unresolved risks.
+This order is mandated. Cheaper alternatives are ruled out before training is justified, data readiness is settled before an objective is committed to, and eval, safety, and rollback gates exist before any rollout is planned. A rollout planned ahead of its gates cannot be safely reversed.
+
+1. Compare fine-tuning against prompting, retrieval, tools, and routing, using cited baseline failure evidence.
+2. Establish training data readiness and the training objective.
+3. Define eval, safety, and release gates.
+4. Plan rollout, fallback, rollback triggers, and monitoring.
+5. Document the decision and unresolved risks.
+
+Within step 1 the alternatives are independent: assessing prompting, retrieval, tooling, and routing against the same baseline failures is parallel-safe. Within step 2, per-source data readiness assessment is parallel-safe across sources. Steps 3 through 5 depend on the step 1 decision and do not run alongside it.
 
 ## Outputs
 
@@ -61,9 +65,14 @@ Assess and plan fine-tuning when evidence shows it is preferable to prompt chang
 
 ## Halt conditions
 
-- No baseline or eval evidence justifies fine-tuning.
-- Training data rights, privacy, or quality are unclear.
-- Safety or rollback gates are missing.
+Default posture is to proceed and label the assumption inline. An unconfirmed training cost estimate or an undecided checkpoint cadence is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — training spend, data use, or model publication would exceed what the owner has authorized.
+- Production or destructive — a rollout would replace a serving model without a tested rollback path, or training would consume or overwrite data another system depends on.
+- Security or privacy — training data rights, consent, or sensitivity are unresolved, or personal or regulated data would be memorized into model weights.
+- Source conflict — baseline evidence, failure analysis, and stakeholder expectations disagree on whether the current approach actually fails.
+- Release integrity — no baseline or eval evidence establishes that fine-tuning is warranted, or safety and rollback gates are missing for a model intended to ship.
+- Connector unreachable — baseline evals, failure analyses, or training data exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -83,6 +92,7 @@ Assess and plan fine-tuning when evidence shows it is preferable to prompt chang
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means the decision states why fine-tuning beats prompting, retrieval, tooling, and routing against cited baseline evidence; training data carries a rights and quality status; eval, safety, and release gates are numeric; and the rollout plan names its fallback, rollback trigger, and monitoring.

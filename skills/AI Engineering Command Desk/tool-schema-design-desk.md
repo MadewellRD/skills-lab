@@ -31,11 +31,17 @@ Define safe, deterministic tool interfaces for assistants and agents. Specify sc
 
 ## Workflow
 
-- Classify tool purpose and risk.
-- Design argument and result schema.
-- Define permission and approval boundaries.
-- Specify validation, errors, retries, idempotency, and audit events.
-- Map tool tests and failure cases.
+Produce tool contracts an implementer can build against without inference: argument and result schema, the permission and tenancy boundary, which actions are destructive and what gates them, and the exact error semantics on every failure.
+
+Constraints:
+
+- Every mutating tool declares its destructive-action gate, approval requirement, and idempotency behavior. A tool that can mutate state without a stated gate is not finished.
+- Permission and tenancy boundaries are enforced by the tool and its runtime, never by prompt wording.
+- Never invent external API behavior, error codes, rate limits, or auth semantics. Cite the API source or record the behavior as unverified.
+- Result contracts are deterministic: same arguments, same shape, with errors modeled rather than returned as prose.
+- Label unresolved assumptions inline rather than presenting them as settled contract facts.
+
+Tool schemas are independent. Designing each tool's argument schema, result contract, permission boundary, validation rules, error cases, and test matrix is parallel-safe across tools. The shared auth model, tenancy rule, and audit event format are cross-cutting decisions and are made once.
 
 ## Outputs
 
@@ -61,9 +67,14 @@ Define safe, deterministic tool interfaces for assistants and agents. Specify sc
 
 ## Halt conditions
 
-- External system behavior or auth boundary is unclear.
-- The tool can mutate state but approval policy is missing.
-- Data exposure or tenancy rules are unresolved.
+Default posture is to proceed and label the assumption inline. An unconfirmed retry count or an undecided field name is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — a tool can mutate state and no approval policy or approval owner exists for it.
+- Production or destructive — the tool would delete, overwrite, dispatch, or otherwise irreversibly act on production systems without a gate in front of it.
+- Security or privacy — the auth boundary, tenancy rule, or data exposure surface is unresolved, or the schema would carry secrets, credentials, or personal data.
+- Source conflict — API documentation, observed behavior, and stated requirements disagree on what the external system actually does.
+- Release integrity — a tool would ship with error semantics or idempotency behavior that cannot be established as correct.
+- Connector unreachable — the external API definition, permission model, or existing tool implementation exists but cannot be read.
 
 ## Downstream handoffs
 
@@ -82,6 +93,7 @@ Define safe, deterministic tool interfaces for assistants and agents. Specify sc
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every tool carries a complete argument and result schema, a stated permission and tenancy boundary, an explicit destructive-action gate where it mutates state, modeled error cases, and a test matrix — each traced to a source fact or a labeled assumption.

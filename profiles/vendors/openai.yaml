@@ -1,0 +1,14 @@
+vendor: openai
+display_name: OpenAI ChatGPT
+tokens:
+  AGENT: ChatGPT
+  CODING_AGENT: Codex
+  PLATFORM: ChatGPT
+  INVOKE: "$<skill-name>"
+  BLOCKER_TAG: HANDOFF_BLOCKER
+  SUBAGENT_TERM: subagent
+supports:
+  parallel_subagents: true
+  programmatic_tool_calling: true
+  effort_dial: true
+  skills_format: folder

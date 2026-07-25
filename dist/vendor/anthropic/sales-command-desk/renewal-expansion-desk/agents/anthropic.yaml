@@ -1,0 +1,16 @@
+interface:
+  display_name: Renewal Expansion Desk
+  short_description: Support renewal, upsell, and cross-sell motions with churn risk,
+    expansion hypotheses, outreach, and forecast impact notes.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

@@ -1,0 +1,16 @@
+interface:
+  display_name: Incident Response Desk
+  short_description: Connector-grounded incident triage, RCA, hotfix handoff, and
+    production-support artifacts.
+  default_prompt: ''
+  icon: alert-triangle
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

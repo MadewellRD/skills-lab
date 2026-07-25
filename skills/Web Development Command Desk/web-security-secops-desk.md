@@ -10,7 +10,7 @@ description: review and plan web security and secops controls across auth, sessi
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Define web-specific security controls across auth, sessions, headers, dependenci
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `accessibility-seo-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Dependencies, third-party scripts, security headers, and abuse cases are independent review units and are parallel-safe.
+- Continue to `accessibility-seo-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every required control is named with its enforcement point, every third-party script and dependency has a risk disposition, and no security control is presented as verified without source evidence.
 
 ## Responsibilities
 
@@ -114,9 +118,16 @@ Security control list, hardening checklist, threat assumptions, third-party risk
 
 ## Halt conditions
 
-- Auth/session behavior not sourced.
-- Unknown third-party scripts for public pages.
-- Missing deployment environment facts for hardening.
+Halt only on a hard class:
+
+- Security or privacy: continuing would require asserting auth, session, cookie, token, secret, or data-exposure behavior as verified without source evidence, or would expose credentials or personal data.
+- Security or privacy: unidentified third-party scripts or tags run on public or authenticated pages and their origin cannot be established.
+- Production or destructive: the next action would change live security configuration, headers, CSP, or access control.
+- Missing approval: a control waiver or accepted-risk decision needs a human owner.
+- Source conflict: security requirements, compliance obligations, or configuration evidence genuinely disagree.
+- Connector unreachable: the repo, dependency manifest, or configuration source needed for control evidence cannot be reached.
+
+Missing deployment environment facts for hardening are not a halt. Proceed with the hardening recommendation stated conditionally, the assumption labeled inline, and the gap recorded in `open_questions`. Required security controls are compliance obligations: never relax, waive, or defer one to keep the workflow moving.
 
 ## Default output modes
 

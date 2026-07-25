@@ -15,11 +15,17 @@ Define Android architecture for app and game work: modules, layers, state, data 
 
 ## Workflow
 
-1. Start from accepted requirements and technical discovery facts.
-2. Choose or validate architecture lane: modern native app, legacy migration, modularization, native/game engine, Unity/Godot/Unreal integration, or mixed.
-3. Define module boundaries, data/state flow, threading/concurrency, storage, background work, service contracts, and engine/native boundaries.
-4. Record decisions and rejected alternatives with risks and validation gates.
-5. Continue to UI/UX, app engineering, or game engineering based on target outcome.
+**Outcome.** An Android architecture decision set ready for ADR capture: architecture lane, module boundaries and ownership, data and state flow, threading and concurrency, storage, networking, background work, service contracts, engine/native/plugin boundaries, migration impact, rejected alternatives, risks, and validation gates.
+
+**Grounding.** Build on accepted requirements, technical discovery facts, and the repo's current structure. Do not invent repo architecture, module ownership, runtime constraints, service contracts, migration scope, or validation facts.
+
+**Ordered content that stays ordered.** Where the design includes an on-device data migration — a schema change, a storage-engine swap, or a save-format change — emit its steps as an ordered sequence and keep them ordered. The order is mandated by the device, not by this desk: a migration applied out of order against user data on a shipped install is irreversible and cannot be undone by a subsequent release. Do not collapse those steps into prose.
+
+**Parallel surface.** Candidate module boundaries, individual service contracts, and per-alternative trade-off analysis are independent and can be evaluated in parallel. Lane selection, the module graph, and the ADR set are aggregate: they reconcile the parallel results and run once.
+
+**Acceptance bar.** The architecture is done when the lane is chosen with rejected alternatives and their reasons recorded; every module boundary names its owner or marks ownership unknown; each decision is tied to a requirement or a discovery fact rather than to general Android practice; migration impact is stated or explicitly ruled out; and every validation gate is tied to source evidence.
+
+Continue to UI/UX, app engineering, or game engineering based on target outcome.
 
 ## Responsibilities
 
@@ -50,10 +56,16 @@ Architecture brief, ADR notes, module/interface map, migration plan, risks, vali
 
 ## Halt conditions
 
-- Accepted requirements or discovery facts are missing.
-- Target framework, runtime, architecture lane, or migration scope is unresolved.
-- API/service contracts are unknown and architecture depends on them.
-- Validation gates cannot be tied to source evidence.
+Proceed by default. An unresolved design detail is normally a labeled assumption plus an open question, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — the architecture commits to a platform, vendor, or cost decision that a human owner must authorize.
+- **Production or destructive** — the design requires a data migration, storage swap, or schema change against live user data with no approved rollback path.
+- **Security or privacy** — a boundary decision determines how personal data, credentials, or keys are stored or transmitted and no source establishes the requirement.
+- **Source conflict** — repo structure, existing architecture docs, and stated requirements genuinely disagree on a load-bearing boundary. Preserve the conflict.
+- **Release integrity** — an ADR would record a decision as accepted when no source shows it was accepted, or validation gates cannot be tied to any evidence.
+- **Connector unreachable** — repo or architecture-doc access exists but cannot be read.
+
+Otherwise proceed: an unknown API contract, runtime constraint, architecture lane, or migration scope becomes a labeled assumption in the ADR plus an open question routed to the desk that can resolve it.
 
 ## Default output modes
 

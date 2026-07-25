@@ -30,11 +30,17 @@ Design synthetic data generation for AI development or evaluation. Specify seed 
 
 ## Workflow
 
-- Define generation scope and constraints.
-- Specify seed handling and diversity targets.
-- Design review, filtering, and validation gates.
-- Prevent contamination and sensitive data leakage.
-- Record provenance and usage limits.
+Produce a generation plan that states what will be generated, from what seeds, under what constraints, how it is reviewed and filtered, and what it may and may not be used for afterward.
+
+Constraints:
+
+- Contamination controls and sensitive-data handling are settled before any generation runs. Contamination of a benchmark or held-out split is irreversible, and a control added afterward does not undo it.
+- Seed provenance and usage limits travel with every generated record. Synthetic provenance is never recorded as real provenance.
+- Diversity targets are stated as measurable distribution properties, not as adjectives.
+- Synthetic data supplements real-world validation and never substitutes for it. State explicitly which claims it can and cannot support.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Generation batches are independent. Producing, filtering, and reviewing each batch, seed cluster, or scenario category is parallel-safe. Deduplication against seeds and against held-out splits, and the final distribution check against diversity targets, are global operations over the combined output.
 
 ## Outputs
 
@@ -61,9 +67,14 @@ Design synthetic data generation for AI development or evaluation. Specify seed 
 
 ## Halt conditions
 
-- Sensitive examples could leak into generated data.
-- Synthetic data would be used as proof without real validation.
-- Contamination controls are missing for eval or benchmark use.
+Default posture is to proceed and label the assumption inline. An undecided batch size or an unset generation temperature is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — generated data would be used for a purpose, or derived from seeds, beyond what the data owner authorized.
+- Production or destructive — generated records would be merged into a dataset or split that existing eval baselines depend on, without a reversible path.
+- Security or privacy — sensitive, regulated, or personal content in the seeds could survive into generated output, or generation would send that content to an uncleared surface.
+- Source conflict — seed provenance, consent scope, or usage limits are documented inconsistently.
+- Release integrity — synthetic data would stand as release evidence for a claim that requires real-world validation, or contamination controls are absent for eval or benchmark use.
+- Connector unreachable — seed data, provenance records, or existing split definitions exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -82,6 +93,7 @@ Design synthetic data generation for AI development or evaluation. Specify seed 
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means the generation objective, seed policy, measurable diversity targets, contamination controls, review gates, and usage limits are all stated, and every generated record can be traced to its seed and its permitted use.

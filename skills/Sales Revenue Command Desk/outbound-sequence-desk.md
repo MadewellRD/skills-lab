@@ -1,6 +1,6 @@
 ---
 name: outbound-sequence-desk
-description: draft outbound email and follow-up sequences with persona targeting, personalization, compliance controls, and approval gates. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: draft outbound email and follow-up sequences with persona targeting, personalization, compliance controls, and approval gates. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Outbound Sequence Desk

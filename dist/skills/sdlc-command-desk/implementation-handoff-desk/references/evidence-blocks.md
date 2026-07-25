@@ -53,7 +53,7 @@ If the prompt must remain clean for direct agent execution, create a companion f
 
 ## Citation handling
 
-When the environment supports citations, cite internal files or connector results in the chat response or source-notes file. Do not put tool-specific citation tokens inside a prompt intended to be pasted into Codex or Claude Code unless the user explicitly wants citations in the execution prompt.
+When the environment supports citations, cite internal files or connector results in the chat response or source-notes file. Do not put tool-specific citation tokens inside a prompt intended to be pasted into the coding agent unless the user explicitly wants citations in the execution prompt.
 
 ## Evidence discipline
 

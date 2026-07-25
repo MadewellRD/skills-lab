@@ -30,11 +30,15 @@ Assess whether an AI capability is ready to release. Check requirements, evals, 
 
 ## Workflow
 
-- Verify scope and release target.
-- Check eval, safety, red-team, ops, observability, and rollback gates.
-- Classify blockers, warnings, and accepted risks.
-- Produce go/no-go recommendation.
-- Prepare downstream release or deployment handoff.
+This order is mandated and must not be rearranged. Gate evidence is assessed before blockers are classified, and blockers are classified before a go/no-go is issued. A go/no-go produced ahead of its evidence is not a decision.
+
+1. Establish scope and release target.
+2. Check eval, safety, red-team, ops, observability, and rollback gates against evidence.
+3. Classify blockers, warnings, and accepted risks, each with a named owner.
+4. Produce the go/no-go recommendation.
+5. Prepare downstream release or deployment handoff.
+
+Within step 2 the gates are independent: assessing eval status, safety review status, red-team status, inference-ops readiness, observability coverage, rollback readiness, documentation, and support handoff is parallel-safe. Steps 3 through 5 are aggregate and depend on every gate result being in.
 
 ## Outputs
 
@@ -62,9 +66,14 @@ Assess whether an AI capability is ready to release. Check requirements, evals, 
 
 ## Halt conditions
 
-- Eval, safety, red-team, ops, observability, or rollback evidence is missing.
-- Approval owner is unclear for material risks.
-- Production launch would proceed with unresolved blockers.
+Default posture is to proceed and label the assumption inline. A missing documentation link or an unconfirmed support contact is a soft gap: record it as a listed warning against a named owner and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — no approval owner exists for a material risk, or launch would proceed without the authorization the risk tier requires.
+- Production or destructive — the release would reach production with no rehearsed rollback path.
+- Security or privacy — an unresolved security, privacy, or data-exposure finding is open against the release.
+- Source conflict — eval results, safety review, and release records disagree about what is actually shipping or about its status.
+- Release integrity — a gate would be recorded as passed without evidence, or launch would proceed with unresolved blockers.
+- Connector unreachable — eval results, safety review records, red-team findings, or deploy configuration exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -84,6 +93,7 @@ Assess whether an AI capability is ready to release. Check requirements, evals, 
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every gate carries a status and its supporting evidence, every blocker and accepted risk carries an owner, the go/no-go is stated plainly with its reasons, and the rollback path is named and rehearsed.

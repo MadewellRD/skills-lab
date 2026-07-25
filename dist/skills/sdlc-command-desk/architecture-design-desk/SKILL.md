@@ -1,6 +1,6 @@
 ---
 name: architecture-design-desk
-description: create connector-grounded architecture and solution design artifacts from product requirements, technical discovery, repository structure, constraints, and stakeholder decisions. use when chatgpt needs to produce software design specs, architecture decision records, component boundaries, interface contracts, migration plans, risk notes, source-fact evidence, or downstream implementation handoff notes for issue planning, verification, security, or implementation-handoff-desk workflows.
+description: create connector-grounded architecture and solution design artifacts from product requirements, technical discovery, repository structure, constraints, and stakeholder decisions. use when the assistant needs to produce software design specs, architecture decision records, component boundaries, interface contracts, migration plans, risk notes, source-fact evidence, or downstream implementation handoff notes for issue planning, verification, security, or implementation-handoff-desk workflows.
 ---
 
 # Architecture Design Desk
@@ -20,12 +20,13 @@ Use this skill to turn requirements and technical discovery into architecture ar
 
 Before drafting any design artifact, perform connector preflight.
 
-1. Identify the design mode: new architecture, incremental design, migration design, interface contract, ADR set, or implementation handoff.
-2. Gather source facts from the highest-trust available connectors.
-3. Separate facts, inferences, decisions, assumptions, and open questions.
-4. Produce the requested artifact as Markdown, using the appropriate reference template.
-5. Include source facts, unresolved risks, and downstream handoff notes.
-6. Halt or produce a connector diagnostic when required facts are missing.
+**Outcome.** A Markdown design artifact in the mode the request calls for — new architecture, incremental design, migration design, interface contract, ADR set, or implementation handoff — built from the appropriate reference template and carrying source facts, unresolved risks, and downstream handoff notes.
+
+**Constraints.** Gather source facts from the highest-trust available connectors. Keep facts, inferences, decisions, assumptions, and open questions visibly separate throughout the artifact; do not merge them into a single confident narrative.
+
+**Parallel surface.** Components, modules, interface contracts, and individual ADRs are independent design units once the boundaries are set. Gather evidence for them and draft them in parallel rather than serially, then reconcile for cross-component consistency in a single pass.
+
+**Acceptance bar.** The design is done when a competent implementer can act on it without re-deriving the decisions: component and module boundaries are named, every interface or data contract the change depends on is specified, tradeoffs and rejected options are stated with the reason, risks carry mitigations, and open questions are visible and actionable rather than buried. Do not invent repository structure, APIs, ownership, dependencies, constraints, or production behavior.
 
 ## Connector expectations
 
@@ -67,14 +68,18 @@ Do not bury unknowns. Open questions and assumptions must be visible and actiona
 
 ## Halt behavior
 
-Halt or produce a connector diagnostic instead of a confident design when any of these apply:
+Proceed by default. Design work is inherently underdetermined: where a fact is missing, choose the most defensible option, label it inline as an assumption, and record it as an open question. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- repo-aware design is requested but GitHub/repo facts are unavailable;
-- a required PRD/SRS/discovery source is missing;
-- existing architecture cannot be determined from the available sources;
-- source facts conflict and the user has not resolved the conflict;
-- the design would require unsafe speculation about security, data retention, compliance, or production behavior;
-- requested scope is too broad to produce a reviewable architecture artifact.
+- **Approval** — the design commits to a decision that a named human owner must authorize, such as a platform, vendor, or data-residency choice.
+- **Production or destructive** — the design implies an irreversible migration or data-destructive cutover whose rollback path is not established.
+- **Security or privacy** — the design would require speculation about security controls, data retention, or compliance obligations that no source supports.
+- **Source conflict** — repo state, PRD/SRS, and stakeholder decisions genuinely disagree on a load-bearing constraint. Preserve the conflict explicitly and halt rather than choosing silently.
+- **Release integrity** — the artifact would present an unreviewable design as accepted.
+- **Connector unreachable** — a required repo or spec source exists but cannot be read for a repo-aware design. A source that is merely absent is a soft gap: produce a scoped design marked user-fact-only, with the unknown architecture stated as an open question, and continue.
+
+When requested scope is too broad for one reviewable artifact, narrow it and say what was excluded rather than halting.
+
+Use `references/halt-conditions.md` for the halt artifact format.
 
 ## Composition with other SDLC skills
 
@@ -86,4 +91,4 @@ Use `scripts/write_design_markdown.py` when a downloadable Markdown artifact is 
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `HANDOFF_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

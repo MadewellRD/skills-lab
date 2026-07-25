@@ -10,7 +10,7 @@ description: define cms and content operations for web properties including stru
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Define structured content models, editorial workflows, publishing rules, localiz
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `accessibility-seo-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Content types and locales are independent: per-type field modeling and per-locale rule definition are parallel-safe.
+- Continue to `accessibility-seo-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every content type has fields, validation, an owner, and a publish path; the editorial workflow names who authors, approves, publishes, and rolls back; and localization and compliance rules are stated per type rather than globally assumed.
 
 ## Responsibilities
 
@@ -114,9 +118,14 @@ Content model, editorial workflow, publishing rules, governance plan, localizati
 
 ## Halt conditions
 
-- No content inventory for content migration.
-- Unknown CMS/platform constraints.
-- Compliance-sensitive publishing without approval owner.
+Halt only on a hard class:
+
+- Missing approval: compliance-sensitive or regulated content would publish without a named approval owner.
+- Production or destructive: a content migration, bulk republish, archive, or delete would run against live content without a source-backed inventory and a reversible path.
+- Source conflict: content model, taxonomy, or localization rules genuinely disagree across sources.
+- Connector unreachable: the CMS, repo, or content inventory source cannot be reached.
+
+Unknown CMS or platform constraints, and gaps in a planning-only inventory, are not halts. Proceed with the assumption labeled inline and recorded in `open_questions`.
 
 ## Default output modes
 

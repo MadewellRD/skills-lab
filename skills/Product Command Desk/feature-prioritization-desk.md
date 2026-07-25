@@ -30,11 +30,13 @@ Prioritize features or initiatives with explicit criteria. Compare impact, effor
 
 ## Workflow
 
-- Define prioritization criteria and decision boundary.
-- Score or rank candidates with evidence and confidence.
-- Identify dependencies, blockers, and risk-adjusted tradeoffs.
-- Record decisions and dissenting evidence.
-- Prepare roadmap, PRD, or issue-planning handoff.
+**Outcome.** A ranked candidate set with explicit criteria, per-candidate evidence and confidence, the dependencies and tradeoffs that shaped the order, and a decision record that survives the meeting.
+
+**Constraints.** State the criteria and the decision boundary before any ranking is asserted, and keep them stable across candidates — a score is only comparable if the scale was the same. Preserve dissenting evidence in the record rather than resolving it into the ranking. A ranking is an ordering of intent, not a delivery commitment; do not let it imply dates, staffing, or scope that has not been validated with delivery.
+
+**Parallel surface.** Candidates are independent for scoring — evaluate impact, effort, confidence, risk, and strategic fit for each candidate in parallel rather than walking the backlog in order. The ranking itself, dependency resolution, and opportunity-cost tradeoffs are a single aggregate pass once every candidate is scored, because ordering and dependency detection are cross-candidate operations.
+
+**Acceptance bar.** Every candidate has a score or rank on every stated criterion, every score names the evidence and confidence behind it, and every dependency or blocker names the candidates it links. An estimate carried in without a source is labeled an assumption, not treated as data.
 
 ## Outputs
 
@@ -62,9 +64,16 @@ Prioritize features or initiatives with explicit criteria. Compare impact, effor
 
 ## Halt conditions
 
-- Candidate list, criteria, effort, or decision owner is missing.
-- Ranking would imply commitment without delivery validation.
-- Evidence conflicts materially across customer, business, or technical sources.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — the ranking is being converted into a commitment, a roadmap change, or a customer-facing promise and needs its named decision owner.
+- **Production or destructive** — the request is to act on the ranking by closing, cancelling, or descoping committed work rather than to produce the ranking.
+- **Security or privacy** — candidate evidence carries customer-identifying or confidential material that would be exposed in the matrix.
+- **Source conflict** — customer, business, and technical evidence materially disagree on a candidate's impact or feasibility. Preserve the disagreement in the record and mark the candidate contested rather than averaging it away.
+- **Release integrity** — the ranking would be published as a delivery commitment without delivery validation behind it.
+- **Connector unreachable** — a required evidence source for a candidate exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing effort estimate, criterion weight, or decision owner is a labeled assumption plus an open question against that candidate — score it with the assumption visible and let the owner correct one cell rather than restarting the exercise.
 
 ## Downstream handoffs
 

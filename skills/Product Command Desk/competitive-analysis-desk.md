@@ -30,11 +30,13 @@ Analyze competitors, substitutes, and alternatives. Convert evidence about posit
 
 ## Workflow
 
-- Define competitive frame and customer decision context.
-- Map competitors, substitutes, and alternatives.
-- Compare capabilities, pricing, positioning, and GTM patterns.
-- Identify threats, openings, and differentiation claims.
-- Translate findings into product implications.
+**Outcome.** A competitive analysis that frames the customer decision, profiles the relevant competitors and substitutes on comparable dimensions, and converts the comparison into product implications, threats, and defensible differentiation claims.
+
+**Constraints.** Compare on dimensions the customer actually decides on, not on whatever the sources happen to publish. Date every external fact and treat public material as context that does not override first-party win/loss or sales evidence. A differentiation claim carries the evidence that supports it or is marked unsupported and kept out of customer-facing use — an attractive claim is not evidence for itself.
+
+**Parallel surface.** Competitors, substitutes, and alternatives are independent research targets — profile them in parallel rather than working down the list. The comparison matrix, differentiation map, and threat/opportunity ranking are a single aggregate pass once every profile is in, because a comparison is only meaningful across the complete set and dimensions must stay consistent between entries.
+
+**Acceptance bar.** Every cell of the comparison names its source and its recency, every differentiation claim is traceable to evidence or explicitly labeled as unsupported, and every product implication states which competitive fact drives it. Gaps in competitor coverage are stated rather than smoothed over.
 
 ## Outputs
 
@@ -62,9 +64,16 @@ Analyze competitors, substitutes, and alternatives. Convert evidence about posit
 
 ## Halt conditions
 
-- Competitor scope or decision target is unclear.
-- Current external facts are required but unavailable.
-- Differentiation claim lacks supporting evidence.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — a differentiation or competitive claim is destined for customer-facing messaging, sales enablement, or public material and needs its messaging, legal, or compliance owner.
+- **Production or destructive** — the request is to publish or distribute competitive material rather than to analyze.
+- **Security or privacy** — the request calls for confidential competitor information, material obtained improperly, or customer-identifying win/loss detail.
+- **Source conflict** — public sources and first-party win/loss or sales evidence genuinely disagree on a load-bearing capability, price, or positioning fact. Record both and mark the dimension contested.
+- **Release integrity** — a competitive claim would ship externally on evidence that cannot carry it.
+- **Connector unreachable** — a required first-party win/loss, CRM, or research source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Unclear competitor scope means choosing a frame, stating it as an assumption, and proceeding. Unavailable or stale external facts mean dating what you have and marking the dimension as low confidence. A differentiation claim without supporting evidence is not a halt and is not a claim either — it is recorded as unsupported and excluded from customer-facing use.
 
 ## Downstream handoffs
 

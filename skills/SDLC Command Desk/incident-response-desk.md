@@ -1,6 +1,6 @@
 ---
 name: incident-response-desk
-description: create connector-grounded incident response, bug triage, severity classification, root cause analysis, hotfix handoff, follow-up issue, post-incident review, and production-support artifacts from incidents, alerts, logs, metrics, traces, recent deploys, github issues, pull requests, ci evidence, runbooks, and stakeholder updates. use when chatgpt needs to triage a production failure, summarize an incident, draft an rca, plan a hotfix, map remediation work, or prepare downstream handoff notes for implementation-handoff-desk, ci-failure-desk, deployment-desk, observability-readiness-desk, release-operations-desk, verification-desk, or docs-traceability-desk workflows.
+description: create connector-grounded incident response, bug triage, severity classification, root cause analysis, hotfix handoff, follow-up issue, post-incident review, and production-support artifacts from incidents, alerts, logs, metrics, traces, recent deploys, github issues, pull requests, ci evidence, runbooks, and stakeholder updates. use when {{AGENT}} needs to triage a production failure, summarize an incident, draft an rca, plan a hotfix, map remediation work, or prepare downstream handoff notes for implementation-handoff-desk, ci-failure-desk, deployment-desk, observability-readiness-desk, release-operations-desk, verification-desk, or docs-traceability-desk workflows.
 ---
 
 # Incident Response Desk
@@ -16,37 +16,21 @@ Use this skill to create incident-response and production-support artifacts that
 
 ## Operating workflow
 
-1. Classify the request.
-   - Live incident or active degradation: produce an incident triage brief and action plan.
-   - Resolved incident: produce an RCA or post-incident review.
-   - Bug report or regression: produce a bug triage and reproduction plan.
-   - Hotfix needed: produce a hotfix handoff for `implementation-handoff-desk`.
-   - Follow-up work: produce remediation issues and verification gates.
+**Outcome.** The artifact the situation calls for: an incident triage brief and action plan for a live incident or active degradation; an RCA or post-incident review for a resolved incident; a bug triage and reproduction plan for a bug report or regression; a hotfix handoff for `implementation-handoff-desk`; or remediation issues and verification gates for follow-up work.
 
-2. Run connector preflight before producing operational claims.
-   - GitHub: issues, PRs, recent commits, release tags, CI/checks, changed files, hotfix branches.
-   - Observability sources, if available: alerts, dashboards, logs, metrics, traces, SLO/SLA status.
-   - Deployment/release docs: recent deploys, feature flags, rollback plans, release notes.
-   - Incident/comms sources: Slack, Teams, email, status page notes, paging context, stakeholder decisions.
-   - Product/docs sources: runbooks, support docs, architecture docs, known-issues docs.
+**Grounding.** Run connector preflight before producing operational claims. GitHub carries issues, PRs, recent commits, release tags, CI/checks, changed files, and hotfix branches. Observability sources, when available, carry alerts, dashboards, logs, metrics, traces, and SLO/SLA status. Deployment and release docs carry recent deploys, feature flags, rollback plans, and release notes. Incident and communication sources carry status page notes, paging context, and stakeholder decisions. Product and docs sources carry runbooks, support docs, architecture docs, and known-issues docs.
 
-3. Separate facts from inference.
-   State confirmed impact, suspected impact, confirmed cause, suspected cause, mitigations attempted, and unknowns separately. Do not collapse gaps into conclusions.
+**Fact separation.** State confirmed impact, suspected impact, confirmed cause, suspected cause, mitigations attempted, and unknowns separately. Do not collapse gaps into conclusions.
 
-4. Choose the artifact type.
-   Use `references/output-contract.md` and the relevant template:
-   - `incident-triage-template.md`
-   - `rca-template.md`
-   - `bug-triage-template.md`
-   - `hotfix-handoff-template.md`
-   - `post-incident-review-template.md`
-   - `follow-up-issues-template.md`
+**Templates.** Use `references/output-contract.md` with the matching template: `incident-triage-template.md`, `rca-template.md`, `bug-triage-template.md`, `hotfix-handoff-template.md`, `post-incident-review-template.md`, or `follow-up-issues-template.md`.
 
-5. Add handoff notes.
-   When remediation requires code, continue into the implementation handoff stage if facts are sufficient. When CI is failing, continue into the CI failure stage. When monitoring or runbooks are missing, continue into observability readiness or docs traceability as appropriate.
+**Parallel surface.** Evidence collection across independent sources — alerts, dashboards, log streams, recent deploys, affected services, linked issues and PRs — has no ordering dependency. Gather them in parallel and reconcile into one timeline. Building the timeline itself stays a single ordered narrative.
 
-6. Package artifact output.
-   For downloadable markdown artifacts, use `scripts/write_incident_markdown.py` or the wrapper in `references/output-contract.md`.
+**Handoff.** When remediation requires code, continue into the implementation handoff stage if facts are sufficient. When CI is failing, continue into the CI failure stage. When monitoring or runbooks are missing, continue into observability readiness or docs traceability as appropriate.
+
+**Packaging.** For downloadable markdown artifacts, use `scripts/write_incident_markdown.py` or the wrapper in `references/output-contract.md`.
+
+**Acceptance bar.** The artifact is done when it satisfies `Output standards` below, impact and cause each carry an explicit confirmed-versus-suspected label, and the timeline is anchored to retrieved evidence rather than recollection.
 
 ## Severity policy
 
@@ -58,7 +42,16 @@ Apply `references/source-hierarchy.md`. Current user instruction can set priorit
 
 ## Halt rules
 
-Use `references/halt-conditions.md`. Halt or produce a connector diagnostic when required facts are unavailable, when the incident is still active but no current status can be verified, when proposed remediation could increase blast radius, when rollback or hotfix authority is unclear, or when security/privacy exposure is suspected but not bounded.
+Proceed by default. An incomplete picture is normal during an incident: state what is unknown, label the working hypothesis as a hypothesis, and continue the triage. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — rollback, hotfix, or customer-communication authority is unclear or unassigned.
+- **Production or destructive** — the proposed remediation could increase blast radius, touch production data, or is otherwise irreversible.
+- **Security or privacy** — security or privacy exposure is suspected but not bounded.
+- **Source conflict** — telemetry, deploy state, and incident reports genuinely disagree on a load-bearing fact such as what shipped or when impact began.
+- **Release integrity** — the incident would be declared resolved or mitigated without recovery evidence.
+- **Connector unreachable** — the incident is still active and the status source exists but cannot be read. Evidence that is merely absent is a soft gap: mark the artifact's confidence accordingly and continue.
+
+Use `references/halt-conditions.md` for the diagnostic and resume format a halt must take.
 
 ## Output standards
 
@@ -75,4 +68,4 @@ Never state that an incident is resolved unless the recovery evidence is present
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Validate packaged SDLC Command Desk artifacts against the current suite layout."""
+"""Validate packaged SDLC Command Desk artifacts against the current suite layout.
+
+Reference and key names track the active capability profile
+(profiles/frontier-2026-07.yaml). If a profile bump renames a kernel reference,
+update REQ_REFS here in the same commit or this validator will report false failures.
+The generic (vendor-neutral) build is the validation target; vendor builds live
+under dist/vendor/<vendor>/ and carry agents/<vendor>.yaml instead.
+"""
 from pathlib import Path
 import sys
 
@@ -36,7 +43,8 @@ REQ_REFS = [
     "readiness-gates.md",
     "halt-taxonomy.md",
     "preflight-cache.md",
-    "codex-conservation-policy.md",
+    "handoff-density-policy.md",
+    "capability-baseline.md",
     "suite-workflow-contract.md",
 ]
 RUNNER_KEYS = [
@@ -45,7 +53,7 @@ RUNNER_KEYS = [
     "allowed_scope",
     "forbidden_scope",
     "validation_commands",
-    "codex_handoff",
+    "implementation_handoff",
 ]
 
 failures: list[str] = []
@@ -67,12 +75,12 @@ for name in EXPECTED:
     source_md = SOURCE / f"{name}.md"
     packaged = DIST / name
     skill_md = packaged / "SKILL.md"
-    agent_yaml = packaged / "agents" / "openai.yaml"
+    agent_yaml = packaged / "agents" / "generic.yaml"
 
     check(source_md.exists(), f"source markdown exists: {source_md.relative_to(REPO)}")
     check(packaged.exists(), f"packaged skill dir exists: {packaged.relative_to(REPO)}")
     check(skill_md.exists(), f"SKILL.md exists: {skill_md.relative_to(REPO)}")
-    check(agent_yaml.exists(), f"agents/openai.yaml exists: {agent_yaml.relative_to(REPO)}")
+    check(agent_yaml.exists(), f"agents/generic.yaml exists: {agent_yaml.relative_to(REPO)}")
 
     text = skill_md.read_text(encoding="utf-8") if skill_md.exists() else ""
     check("Suite workflow mode" in text, f"suite workflow mode text: {name}")

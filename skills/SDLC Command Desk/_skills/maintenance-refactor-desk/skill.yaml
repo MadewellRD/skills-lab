@@ -1,0 +1,11 @@
+interface:
+  display_name: Maintenance Refactor Desk
+  short_description: Plans safe refactors, upgrades, migrations, and technical-debt
+    work.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

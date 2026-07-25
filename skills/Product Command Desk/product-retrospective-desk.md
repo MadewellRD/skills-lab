@@ -30,11 +30,13 @@ Create product retrospectives after launches, experiments, roadmap cycles, or in
 
 ## Workflow
 
-- Reconstruct intended goals and decision context.
-- Compare outcomes against success metrics and expectations.
-- Identify what worked, what missed, and why.
-- Separate product, process, delivery, and GTM lessons.
-- Define follow-up actions and next-cycle inputs.
+**Outcome.** A retrospective that reconstructs what was intended, compares it against what happened, explains the gap, and converts the explanation into lessons and owned follow-up actions for the next cycle.
+
+**Constraints.** Reconstruct the original goals and decision context from the artifacts of the time, not from hindsight — a goal quietly rewritten to match the outcome makes the retrospective worthless. Keep product, process, delivery, and GTM lessons separate; they have different owners and different fixes. Where the evidence genuinely disagrees about whether something succeeded, record both readings rather than picking the flattering one. Never state an outcome metric that no source reports.
+
+**Parallel surface.** Each original goal, commitment, or success metric is an independent comparison against its own outcome evidence, and the evidence streams (product metrics, customer feedback, delivery facts, support and sales signal) are independently gatherable — work them in parallel rather than in sequence. Lesson synthesis, theme grouping, and the action list with owners are a single aggregate pass, because a lesson is a pattern across comparisons rather than a property of any one of them.
+
+**Acceptance bar.** Every outcome claim cites its metric or evidence source, every lesson names the specific event that produced it, and every action item has an owner and a next-cycle destination. A lesson with no evidence behind it is labeled an opinion of the room, not a finding.
 
 ## Outputs
 
@@ -63,9 +65,16 @@ Create product retrospectives after launches, experiments, roadmap cycles, or in
 
 ## Halt conditions
 
-- Original goals, metrics, or outcome evidence is missing.
-- Evidence conflicts on whether the launch or experiment succeeded.
-- Follow-up actions require owner approval or cross-functional commitment.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — a follow-up action commits another team's capacity, changes roadmap scope, or creates an external commitment and needs its named owner. Propose the action with the owner named; do not book the commitment.
+- **Production or destructive** — the request is to execute the follow-ups rather than to define them.
+- **Security or privacy** — the retrospective would expose personal data, customer-identifying incident detail, or individual performance material. Retrospectives describe systems and decisions, not people.
+- **Source conflict** — metrics, customer feedback, and delivery evidence genuinely disagree on whether the launch or experiment succeeded. Record both verdicts with their evidence and mark the outcome contested; a retrospective that resolves this silently teaches the wrong lesson.
+- **Release integrity** — a success or failure verdict is requested that the outcome evidence cannot carry.
+- **Connector unreachable** — a required analytics, issue, release, or feedback source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing original goals or outcome metrics mean reconstructing them from the artifacts available, labeling the reconstruction as such, and continuing — a retrospective with a stated evidence gap is more useful than no retrospective.
 
 ## Downstream handoffs
 

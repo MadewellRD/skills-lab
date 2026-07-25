@@ -1,6 +1,6 @@
 ---
 name: release-operations-desk
-description: create connector-grounded release readiness, release notes, version and tag plans, rollback plans, deployment handoff notes, and post-release verification artifacts from merged pull requests, changelogs, ci evidence, deployment configuration, issue milestones, and release history. use when chatgpt needs to prepare a release runbook, assess release blockers, package change summaries, define rollback or go/no-go gates, or hand off verified release work to implementation-handoff-desk, deployment-desk, verification-desk, ci-failure-desk, docs-traceability-desk, or incident-response-desk workflows.
+description: create connector-grounded release readiness, release notes, version and tag plans, rollback plans, deployment handoff notes, and post-release verification artifacts from merged pull requests, changelogs, ci evidence, deployment configuration, issue milestones, and release history. use when {{AGENT}} needs to prepare a release runbook, assess release blockers, package change summaries, define rollback or go/no-go gates, or hand off verified release work to implementation-handoff-desk, deployment-desk, verification-desk, ci-failure-desk, docs-traceability-desk, or incident-response-desk workflows.
 ---
 
 # Release Operations Desk
@@ -20,23 +20,21 @@ This skill does not deploy, tag, publish, or merge by itself. It creates release
 
 ## Workflow
 
-1. Classify the release request.
-   Determine whether the user needs release readiness, release notes, a version or tag plan, a rollback plan, a go/no-go checklist, a post-release verification plan, or a downstream handoff.
+**Outcome.** The release artifact the request calls for — release readiness, release notes, a version or tag plan, a rollback plan, a go/no-go checklist, a post-release verification plan, or a downstream handoff — containing source facts, scope, exclusions, evidence, risks, rollback path, gates, owners where known, and handoff notes.
 
-2. Run connector preflight.
-   Use GitHub for merged pull requests, commits, branches, tags, releases, CI checks, changed files, issues, milestones, and release history. Use document sources for roadmap, changelog, policy, runbooks, and compliance context. Use communication sources only for decision history and incident/release coordination when available.
+**Grounding.** Use GitHub for merged pull requests, commits, branches, tags, releases, CI checks, changed files, issues, milestones, and release history. Use document sources for roadmap, changelog, policy, runbooks, and compliance context. Use communication sources only for decision history and incident/release coordination when available.
 
-3. Resolve source truth.
-   Apply `references/source-hierarchy.md`. If repo facts, release docs, or user-provided facts conflict, preserve the conflict in the output and halt before giving a go decision unless the current user explicitly resolves it.
+**Source truth.** Apply `references/source-hierarchy.md`. If repo facts, release docs, or user-provided facts conflict, preserve the conflict in the output and halt before giving a go decision unless the current user explicitly resolves it.
 
-4. Select the artifact contract.
-   Use `references/output-contract.md` to choose the right Markdown artifact. Load the corresponding template only when needed.
+**Artifact contract.** Use `references/output-contract.md` to choose the right Markdown artifact. Load the corresponding template only when needed.
 
-5. Produce a release artifact.
-   Include source facts, scope, exclusions, evidence, risks, rollback path, gates, owners when known, and downstream handoff notes.
+**Ordered content is not scaffolding.** Version-and-tag sequences, gate ordering in a go/no-go checklist, and rollback steps are externally mandated order. Emit them as ordered, numbered steps and never reorder or collapse them.
 
-6. Hand off when execution is required.
-   If implementation, merge, tag, deployment, or hotfix work is required, prepare handoff notes for `implementation-handoff-desk`, `deployment-desk`, `verification-desk`, `ci-failure-desk`, or `incident-response-desk`.
+**Parallel surface.** Merged pull requests, individual changelog entries, closed issues in a milestone, and per-gate evidence checks are independent of one another. Retrieve and classify them in parallel, then assemble into the ordered release artifact.
+
+**Handoff.** If implementation, merge, tag, deployment, or hotfix work is required, prepare handoff notes for `implementation-handoff-desk`, `deployment-desk`, `verification-desk`, `ci-failure-desk`, or `incident-response-desk`.
+
+**Acceptance bar.** The artifact is done when the release scope is bounded by a verifiable commit range, tag, or branch; every gate is classified as pass, fail, blocked, unknown, or not applicable with the evidence that supports the classification; user-facing and internal changes are separated in release notes; rollback steps are marked verified or unverified rather than presented uniformly; and any go decision is traceable to gate evidence rather than to absence of known problems. Do not invent release versions, tags, commit SHAs, merged PRs, CI status, deployment status, owners, rollback commands, or release approvals.
 
 ## Connector rules
 
@@ -52,14 +50,14 @@ For release notes, separate user-facing changes from internal changes. For readi
 
 ## Halt rules
 
-Halt or produce a diagnostic when:
+Proceed by default when drafting notes, plans, and readiness reports: an unknown gate is classified `unknown` with the missing evidence named, not turned into a stop. Release decisions are different — a go decision is a release-integrity act. Reserve hard halts for these consequence classes from `references/halt-taxonomy.md`:
 
-- release scope is unclear or conflicts across sources
-- target version, tag, branch, or commit range cannot be verified
-- CI or verification evidence is missing for a gated release
-- deployment or rollback path is requested but the deployment surface is unknown
-- the user asks for actual deployment, tagging, publishing, or merging without explicit execution authority and available tooling
-- a release decision depends on unresolved security, compliance, or incident risk
+- **Approval** — a release, tag, publish, or merge is requested without explicit execution authority.
+- **Production or destructive** — the user asks this desk to actually deploy, tag, publish, or merge rather than produce the decision material. This desk does not execute.
+- **Security or privacy** — a release decision depends on unresolved security, compliance, or privacy risk.
+- **Source conflict** — release scope conflicts across sources, or the target version, tag, branch, or commit range cannot be established from repo state.
+- **Release integrity** — a go decision would be issued while CI or verification evidence is missing for a gated release, or a rollback path is requested and the deployment surface is unknown.
+- **Connector unreachable** — GitHub or a required release-doc source exists but cannot be read. A merely absent source is a soft gap: produce a source-limited draft marked as such and continue.
 
 ## References
 
@@ -81,4 +79,4 @@ Use `scripts/write_release_markdown.py` when a wrapped Markdown artifact file is
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

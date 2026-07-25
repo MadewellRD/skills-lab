@@ -1,6 +1,6 @@
 ---
 name: pipeline-forecast-desk
-description: generate forecast narratives, commit and best-case views, risk-adjusted models, and spreadsheet artifacts from pipeline data. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: generate forecast narratives, commit and best-case views, risk-adjusted models, and spreadsheet artifacts from pipeline data. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Pipeline Forecast Desk
@@ -30,12 +30,15 @@ Generate forecast narratives, confidence scores, and spreadsheet models from CRM
 
 ## Workflow
 
-- Classify the sales request and workflow mode.
-- Create or update the sales workflow packet.
-- Gather only the minimum additional evidence needed to complete the current stage.
-- Produce the stage artifact with source-grounded facts and labeled assumptions.
-- Continue to downstream desks when evidence is sufficient and no approval gate blocks progress.
-- Stop only at completed target outcome, explicit approval gate, or hard halt.
+**Outcome.** A forecast package: the summary narrative, commit / best-case / pipeline views, the risk-adjusted model, a spreadsheet artifact where useful, segment commentary, and the slippage and concentration risks.
+
+**Ordered gate (mandated — keep this order).** A forecast number is produced and reviewed before it is submitted, and committing a forecast to the system of record — or changing a deal's forecast category to make the number work — happens only after explicit approval. The order is mandated because a submitted commit number becomes the figure leadership reports on; retracting it costs credibility that the correction does not recover.
+
+**Constraints.** Carry the sales workflow packet forward and update it in place. The CRM snapshot defines pipeline state and its as-of timestamp is stated in the output. Forecast rules, stage definitions, and conversion assumptions are written explicitly into the artifact and preserved with it — a forecast whose rules are implicit cannot be audited or reproduced. Never invent a conversion rate, a historical close rate, or a probability weighting; an assumed input is labeled as an assumption wherever it appears. Where spreadsheet artifacts are generated, keep formulas dynamic rather than pasting computed values.
+
+**Parallel surface.** Opportunities are independent for scoring, and segments, territories, and owners are independent for modeling — score and model them in parallel rather than walking the pipeline record by record. The roll-up totals, the commit and best-case boundaries, concentration analysis, and slippage detection are a single aggregate pass once every opportunity is scored, because each is defined over the complete pipeline and a concentration risk is invisible from inside one deal.
+
+**Acceptance bar.** Every view states the snapshot date, the forecast rules applied, and the assumptions carried. Every risk-adjusted figure can be reproduced from the stated inputs and rules. Excluded or incomplete records are listed with the reason rather than silently dropped from the total, and the difference between what the data shows and what the model assumes is visible on the face of the artifact.
 
 ## Outputs
 
@@ -61,10 +64,16 @@ Generate forecast narratives, confidence scores, and spreadsheet models from CRM
 
 ## Halt conditions
 
-- forecast period is missing
-- stage definitions or forecast rules are unavailable
-- pipeline fields are incomplete
-- formula or model assumptions cannot be verified
+Proceed by default on the analysis and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — submitting or committing a forecast to the system of record, or changing a deal's forecast category or close date to make the number work, without explicit approval. Hard halt: a submitted commit becomes the figure leadership reports.
+- **Production or destructive** — the request is to write forecast categories, amounts, or close dates back to the CRM rather than to model them.
+- **Security or privacy** — the artifact would expose customer-confidential commercial terms or personal data to an audience beyond the forecast review.
+- **Source conflict** — the CRM snapshot and the stated forecast rules genuinely disagree on how a deal should be categorized, or two sources disagree on amount or close date. Model both and mark the deal contested rather than resolving it into the total.
+- **Release integrity** — a commit number is requested that the pipeline evidence and stated rules cannot support. This is the primary class for this desk: publish the range and the assumptions rather than a single figure the data cannot carry.
+- **Connector unreachable** — a required CRM or pipeline source exists but cannot be read, so no snapshot exists to forecast from.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing forecast period means assuming the current one and saying so. Unavailable stage definitions or forecast rules mean stating the rules you applied explicitly so the output stays reproducible and correctable. Incomplete pipeline fields mean listing the affected records with the reason rather than dropping them silently, and any assumed conversion or probability weighting is labeled as an assumption wherever it appears.
 
 ## Downstream handoffs
 

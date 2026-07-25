@@ -15,11 +15,17 @@ Plan Android performance work for app and game surfaces: startup, memory, batter
 
 ## Workflow
 
-1. Resolve performance goal, target devices, current measurements, workload, and validation commands.
-2. Classify performance lane: app startup/runtime, Compose/View rendering, background/battery, native/game rendering, asset loading, or release regression gate.
-3. Identify available evidence: benchmark reports, traces, CI results, ANRs/crashes, profiler output, telemetry, or user-observed symptoms.
-4. Define optimization hypotheses, measurement plan, device matrix, success gates, and rollback criteria.
-5. Continue to testing or implementation handoff when measurement is sufficient.
+**Outcome.** A measured Android performance plan: performance lane, target devices and tiers, current measurements, workload and test scenario, available evidence, optimization hypotheses tied to that evidence, measurement plan and commands, success gates, and rollback criteria.
+
+**Grounding.** Work from benchmark output, traces, profiler results, CI reports, crash and ANR data, the device matrix, requirements, performance budgets, and repo/build facts. Do not invent benchmarks, traces, device tiers, frame budgets, profiling output, or release-performance evidence: an unmeasured value is stated as unmeasured.
+
+**Constraints.** A bottleneck without evidence is a hypothesis and is labeled as one. Classify the performance lane explicitly: app startup or runtime, Compose/View rendering, background and battery, native or game rendering, asset loading, or release regression gate.
+
+**Parallel surface.** Device tiers, test scenarios, and individual metrics are independent measurement axes: plan and collect across them in parallel. Comparison against the budget, regression classification against a baseline, and the ranked bottleneck list are aggregate and run once the measurements are in.
+
+**Acceptance bar.** The plan is sound when every performance claim cites a measurement, a tool, and the device tier it was taken on; each hypothesis names the evidence that would confirm or kill it; success gates are numeric and tied to a runnable command; the device matrix states which tiers are covered and which are not; and rollback criteria are defined for any change shipping behind a performance gate.
+
+Continue to testing or implementation handoff when measurement is sufficient.
 
 ## Responsibilities
 
@@ -51,10 +57,16 @@ Performance plan, measurement matrix, bottleneck hypotheses, validation commands
 
 ## Halt conditions
 
-- No performance target or current measurement exists for optimization claims.
-- Device tier, workload, or test scenario is unknown.
-- Required profiler/benchmark output is unavailable.
-- Release gate depends on performance evidence that has not been collected.
+Proceed by default. Absent measurement is normally recorded as a measurement gap plus the command that would close it, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — profiling or benchmarking requires running against a device, account, or environment the user has not authorized.
+- **Production or destructive** — the work would profile against production traffic or real user data, or ship a change behind a performance gate with no rollback path.
+- **Security or privacy** — traces, logs, or profiler output would carry personal data or credentials.
+- **Source conflict** — benchmark output, CI reports, and telemetry genuinely disagree about the current baseline. Preserve the conflict rather than averaging it away.
+- **Release integrity** — a release gate depends on performance evidence that has not been collected, or an optimization would be reported as effective without a before-and-after measurement.
+- **Connector unreachable** — a benchmark, CI, or profiler source exists but cannot be read.
+
+Otherwise proceed: an unknown device tier, workload, or test scenario becomes a labeled assumption, and unavailable profiler or benchmark output becomes a named measurement gap in the plan.
 
 ## Default output modes
 

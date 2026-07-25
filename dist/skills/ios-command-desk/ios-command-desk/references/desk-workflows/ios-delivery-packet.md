@@ -1,6 +1,6 @@
 # iOS Delivery Packet
 
-The `ios_delivery_packet` is the shared state object carried across iOS Command Desk stages. Keep it compact, source-grounded, and safe for low-token handoff.
+The `ios_delivery_packet` is the shared state object carried across iOS Command Desk stages. Keep it compact, source-grounded, and safe for high-density handoff.
 
 ```yaml
 ios_delivery_packet:

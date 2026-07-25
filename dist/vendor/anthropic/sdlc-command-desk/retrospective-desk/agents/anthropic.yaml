@@ -1,0 +1,16 @@
+interface:
+  display_name: Retrospective Desk
+  short_description: Create evidence-backed retrospectives and process-improvement
+    plans for software delivery.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

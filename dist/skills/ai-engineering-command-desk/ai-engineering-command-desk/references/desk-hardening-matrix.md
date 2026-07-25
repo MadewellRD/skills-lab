@@ -13,7 +13,7 @@ Every desk must include:
 - Workflow packet fields.
 - Hard halt and soft gap behavior.
 - Downstream handoff targets.
-- Low-token execution policy.
+- Handoff density policy.
 - Continuity Kernel Adoption.
 - Validation gates when the desk emits implementation or release work.
 

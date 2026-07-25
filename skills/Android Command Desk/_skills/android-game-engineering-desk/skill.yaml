@@ -1,0 +1,10 @@
+interface:
+  display_name: Android Game Engineering Desk
+  short_description: Prepares Android game, engine, AGDK/NDK, and runtime handoffs.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#22c55e'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

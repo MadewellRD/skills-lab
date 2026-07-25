@@ -1,0 +1,16 @@
+interface:
+  display_name: Pipeline Forecast Desk
+  short_description: Generate forecast narratives, commit and best-case views, risk-adjusted
+    models, and spreadsheet artifacts from pipeline data.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

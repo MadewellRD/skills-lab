@@ -30,11 +30,16 @@ Choose and justify model candidates for an AI capability. Compare task fit, qual
 
 ## Workflow
 
-- Frame the model decision and constraints.
-- List candidate models and exclusion reasons.
-- Map candidates to task slices and eval expectations.
-- Define routing, fallback, and rollback posture.
-- Document unresolved assumptions and required tests.
+Produce a defensible model decision: which candidates were considered, which were excluded and why, how traffic routes between them, what happens on failure, and what still has to be tested.
+
+Constraints:
+
+- Ground every capability, cost, latency, and context claim in eval evidence, provider documentation, or a user-stated constraint. Never invent benchmark numbers, pricing, rate limits, or context limits.
+- Record exclusion reasons, not just the shortlist. A rejected candidate without a reason is an incomplete decision.
+- Every recommendation carries its routing rule, fallback model, and rollback posture.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Candidate models are independent. Evaluating each candidate against task slices, quality bar, latency, cost, safety profile, modality, and provider constraints is parallel-safe. Only the final ranking and routing decision depend on all candidates having been scored.
 
 ## Outputs
 
@@ -60,9 +65,14 @@ Choose and justify model candidates for an AI capability. Compare task fit, qual
 
 ## Halt conditions
 
-- Task requirements, safety tier, budget, latency target, or deployment environment is missing.
-- Required provider or model capability facts cannot be verified.
-- No eval or acceptance threshold exists for a high-impact model choice.
+Default posture is to proceed and label the assumption inline. A missing budget figure, latency target, or deployment detail is a soft gap: state the assumed value, mark it as an assumption, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — the change would move spend tier, data-residency posture, or provider commitment beyond what the owner has authorized.
+- Production or destructive — swapping or retiring a model in a live routing path would break running traffic irreversibly.
+- Security or privacy — a candidate would send regulated, personal, or customer-confidential data to a provider surface not cleared for it.
+- Source conflict — provider documentation, internal evals, and user-stated constraints disagree on a load-bearing fact such as context limit, pricing, modality support, tool support, or data handling.
+- Release integrity — a high-impact model choice would ship with no eval or acceptance threshold capable of establishing that it is correct.
+- Connector unreachable — required eval runs, telemetry, or provider documentation exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -82,18 +92,20 @@ Choose and justify model candidates for an AI capability. Compare task fit, qual
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means a reader can name the recommended model, the rejected candidates and why, the routing and fallback rule, and the eval that would falsify the choice — each traced to a source fact or a labeled assumption.
 
-## Low-token execution policy
+## Execution handoff density
 
 - Produce a compact model decision packet that includes task class, candidates, exclusion reasons, routing rules, fallback model, eval requirement, and unresolved assumptions.
-- Do not ask Codex or Claude Code to infer provider constraints, cost class, latency target, safety tier, or acceptance thresholds; require those facts or return `Workflow Halt`.
+- Do not ask {{CODING_AGENT}} to infer provider constraints, cost class, latency target, safety tier, or acceptance thresholds. Where a fact is genuinely unavailable, state the assumed value inline and mark it as an assumption to confirm before it takes effect; return `Workflow Halt` only when the gap is an approval, security, or release-integrity boundary.
 - When implementation is required, hand off exact model identifiers, configuration names, allowed provider surfaces, environment constraints, validation commands, and rollback expectations.
 
 ## Continuity Kernel Adoption
 
+- Read `references/capability-baseline.md` for the model-capability assumptions this desk is authored against.
 - Read and update `references/suite-workflow-contract.md` before advancing to another AI Engineering desk.
 - Set `ready_to_continue: true` only when the selected model path, fallback policy, required evals, and remaining risks are explicit enough for the next desk.
 - Preserve `source_facts`, `decisions`, `assumptions`, `open_questions`, `validation_gates`, and `downstream_handoff_targets` in the workflow packet.

@@ -1,0 +1,16 @@
+interface:
+  display_name: GTM Brief Desk
+  short_description: Write go-to-market briefs covering audiences, messaging, channels,
+    sales/support enablement, and launch handoff.
+  default_prompt: ''
+  icon: 📦
+  primary_color: '#7c3aed'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

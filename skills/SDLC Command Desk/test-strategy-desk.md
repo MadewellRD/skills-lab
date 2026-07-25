@@ -1,6 +1,6 @@
 ---
 name: test-strategy-desk
-description: create connector-grounded test strategies, qa scenario matrices, regression plans, fixture plans, coverage-gap reports, and verification handoff notes from product requirements, architecture specs, issue plans, pull requests, repository tests, ci results, bug reports, and known regressions. use when chatgpt needs to define what should be tested, map requirements to test coverage, identify missing tests, plan regression scope, design fixtures, classify test risk, or prepare downstream handoff notes for verification-desk, review-quality-desk, ci-failure-desk, or implementation-handoff-desk workflows.
+description: create connector-grounded test strategies, qa scenario matrices, regression plans, fixture plans, coverage-gap reports, and verification handoff notes from product requirements, architecture specs, issue plans, pull requests, repository tests, ci results, bug reports, and known regressions. use when {{AGENT}} needs to define what should be tested, map requirements to test coverage, identify missing tests, plan regression scope, design fixtures, classify test risk, or prepare downstream handoff notes for verification-desk, review-quality-desk, ci-failure-desk, or implementation-handoff-desk workflows.
 ---
 
 # Test Strategy Desk
@@ -28,26 +28,34 @@ If required source facts are unavailable, either produce a clearly marked user-f
 
 ## Workflow
 
-1. Classify the request.
-   Decide whether the user needs a full test strategy, targeted regression plan, QA scenario matrix, fixture design, coverage-gap report, or downstream PR handoff.
+**Outcome.** The test artifact the request calls for: a full test strategy, targeted regression plan, QA scenario matrix, fixture design, coverage-gap report, or downstream PR handoff.
 
-2. Gather source facts.
-   Follow `references/connector-routing.md` and `references/source-hierarchy.md`. Capture requirements, changed areas, existing tests, known failures, CI status, risk areas, and release constraints.
+**Grounding.** Follow `references/connector-routing.md` and `references/source-hierarchy.md`. Capture requirements, changed areas, existing tests, known failures, CI status, risk areas, and release constraints.
 
-3. Build the risk model.
-   Group risk by user impact, technical complexity, data migration risk, security/privacy exposure, integration surface, regression history, observability, and reversibility. Use `references/risk-rubric.md` when ranking coverage priority.
+**Risk model.** Group risk by user impact, technical complexity, data migration risk, security/privacy exposure, integration surface, regression history, observability, and reversibility. Use `references/risk-rubric.md` when ranking coverage priority.
 
-4. Map requirements to tests.
-   Use `references/test-strategy-template.md` and `references/coverage-gap-template.md`. Every material requirement should have one of: covered, partially covered, not covered, intentionally deferred, or needs clarification.
+**Requirement mapping.** Use `references/test-strategy-template.md` and `references/coverage-gap-template.md`. Every material requirement carries exactly one of: covered, partially covered, not covered, intentionally deferred, or needs clarification.
 
-5. Define scenarios and fixtures.
-   Use `references/scenario-matrix-template.md` and `references/fixture-plan-template.md`. Include positive, negative, edge, regression, integration, accessibility, security/privacy, performance, and migration scenarios only when relevant.
+**Scenarios and fixtures.** Use `references/scenario-matrix-template.md` and `references/fixture-plan-template.md`. Include positive, negative, edge, regression, integration, accessibility, security/privacy, performance, and migration scenarios only when relevant.
 
-6. Produce handoff notes.
-   For downstream implementation, verification, review, or CI work, include the exact artifact to hand off and state which skill should consume it next. Use `references/handoff-rules.md`.
+**Parallel surface.** Requirements, changed files, and scenario families are independent: each requirement's coverage classification and each file's existing-test discovery stand alone. Map them in parallel rather than iterating, then assemble the ranked coverage-gap view once.
 
-7. Apply halt behavior.
-   Use `references/halt-conditions.md` whenever missing source facts or conflicts would make the plan unsafe.
+**Handoff.** For downstream implementation, verification, review, or CI work, name the exact artifact to hand off and which skill consumes it next. Use `references/handoff-rules.md`.
+
+**Acceptance bar.** The strategy is done when every material requirement has a coverage classification with the specific test or gap named; each gap carries a risk rank from `references/risk-rubric.md` rather than an undifferentiated list; scenarios are concrete enough to execute without further design; fixtures name their data shape and provenance; and existing coverage is distinguished from proposed coverage. Do not invent test names, file paths, coverage claims, CI status, defect history, or acceptance criteria, and do not claim local or CI validation unless the connector or user supplied the result.
+
+## Halt behavior
+
+Proceed by default. A requirement whose coverage cannot be determined is classified `needs clarification` and the plan continues. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — deferring coverage on a material requirement needs a human owner to accept the risk.
+- **Production or destructive** — the plan would run tests against production data or systems, or fixtures would require copying live data.
+- **Security or privacy** — fixtures or scenarios would require real secrets, credentials, or personal data.
+- **Source conflict** — requirements, issue scope, and existing tests genuinely disagree on intended behavior.
+- **Release integrity** — the plan would be presented as release-gating coverage when the evidence cannot establish that the gates pass.
+- **Connector unreachable** — a required repo, CI, or spec source exists but cannot be read. A source that is merely absent is a soft gap: produce a user-fact-only draft marked as such and continue.
+
+Use `references/halt-conditions.md` for the halt artifact format.
 
 ## Output rules
 
@@ -89,4 +97,4 @@ Read only the references needed for the current request:
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

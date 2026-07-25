@@ -29,11 +29,15 @@ Triage and coordinate AI production incidents. Handle hallucination spikes, safe
 
 ## Workflow
 
-- Classify severity and impact.
-- Preserve evidence and identify recent changes.
-- Define containment, rollback, or mitigation.
-- Assign follow-up fixes and eval additions.
-- Prepare post-incident review inputs.
+This order is mandated and must not be rearranged. Containment and rollback destroy evidence, so evidence is captured before anything is changed, and severity determines whose authorization the containment action requires.
+
+1. Classify severity and impact.
+2. Preserve evidence and identify recent changes. Capture logs, traces, prompts, model and tool calls, component versions, and provider status before any mitigation alters them.
+3. Define containment, rollback, or mitigation, and obtain the approval the severity tier requires.
+4. Assign follow-up fixes and eval additions.
+5. Prepare post-incident review inputs.
+
+Within step 2 the evidence sources are independent: collecting logs, traces, prompt and model-call records, tool-call records, eval regressions, recent-change history, and provider status is parallel-safe and should fan out rather than run serially. Severity classification, the containment decision, and its approval are single ordered judgments and are not parallel.
 
 ## Outputs
 
@@ -62,9 +66,14 @@ Triage and coordinate AI production incidents. Handle hallucination spikes, safe
 
 ## Halt conditions
 
-- Impact, timeline, or production evidence is missing.
-- Potential data leakage, safety harm, or unauthorized tool action requires immediate escalation.
-- Containment cannot be selected without owner approval.
+Default posture during an incident is to proceed on the best available evidence and label the assumption inline. An incomplete timeline or an unknown affected-user count is a soft gap and does not justify stalling triage. Halt only when one of the six hard-halt classes applies.
+
+- Approval — the containment, rollback, or customer-communication action requires an owner authorization that has not been given.
+- Production or destructive — the mitigation would alter or destroy production state or incident evidence irreversibly, including a rollback that overwrites the record of the failure.
+- Security or privacy — data leakage, unauthorized tool action, or exposure of personal or credential data is suspected. Escalate immediately rather than continuing routine triage.
+- Source conflict — telemetry, deploy records, and provider status disagree about what changed or when.
+- Release integrity — a fix or rollback would ship without evidence that it resolves the incident rather than masking its symptom.
+- Connector unreachable — logs, traces, deploy history, or provider status exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -84,6 +93,7 @@ Triage and coordinate AI production incidents. Handle hallucination spikes, safe
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means severity, impact, and timeline are stated with cited evidence; preserved evidence is listed by location; the containment or rollback decision names its owner and approval state; and every follow-up has an owner and an eval that would catch a recurrence.

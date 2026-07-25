@@ -30,11 +30,17 @@ Design observability for AI agents and AI workflows. Define traces, prompts, mod
 
 ## Workflow
 
-- Identify observability questions and failure modes.
-- Map trace events, metrics, logs, and spans.
-- Define dashboards, alerts, runbooks, and ownership.
-- Apply privacy and retention constraints.
-- Connect telemetry to eval and incident workflows.
+Produce an observability design that answers named operational questions: what a trace must contain, which metrics and alerts exist, who owns each signal, what the runbook says, and what must never be logged.
+
+Constraints:
+
+- Start from the operational questions and failure modes the telemetry must answer. A signal with no question behind it is noise.
+- Privacy, redaction, retention, and access control are constraints on every signal, not a later pass.
+- Every alert names a threshold, an owner, and a runbook. Never invent a baseline to justify a threshold; where no baseline exists, say so and state the measurement that would produce one.
+- Telemetry connects to eval and incident workflows explicitly.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Individual signals are independent. Designing each trace event, metric, log field, dashboard panel, and alert is parallel-safe. The privacy, redaction, and retention policy is shared and applies uniformly across all of them.
 
 ## Outputs
 
@@ -62,9 +68,14 @@ Design observability for AI agents and AI workflows. Define traces, prompts, mod
 
 ## Halt conditions
 
-- Runtime architecture or operational ownership is unclear.
-- Telemetry would capture sensitive data without controls.
-- Alert thresholds cannot be set due to missing baselines.
+Default posture is to proceed and label the assumption inline. A missing baseline for an alert threshold is a soft gap: propose a provisional threshold, mark it as provisional, name the measurement that would confirm it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — telemetry would be enabled in an environment, or at a retention level, the data owner has not authorized.
+- Production or destructive — the change would alter or drop an existing production telemetry stream that incident response or audit depends on.
+- Security or privacy — proposed signals would capture secrets, credentials, personal data, or customer content without redaction and access control.
+- Source conflict — architecture docs, runtime configuration, and existing dashboards disagree on the runtime path actually being instrumented.
+- Release integrity — a capability would reach production with no signal capable of detecting its known failure modes.
+- Connector unreachable — existing telemetry, dashboards, or runbooks exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -84,6 +95,7 @@ Design observability for AI agents and AI workflows. Define traces, prompts, mod
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every named operational question maps to at least one signal, every alert carries a threshold, an owner, and a runbook, and every captured field carries a stated redaction and retention treatment.

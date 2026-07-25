@@ -30,11 +30,15 @@ Review AI capability risk and mitigation readiness. Cover misuse, policy complia
 
 ## Workflow
 
-- Classify risk surfaces and likely harms.
-- Map mitigations to each risk.
-- Check eval, red-team, and operational controls.
-- Define approval gates and blocked launch criteria.
-- Record residual risks and follow-ups.
+This is a safety review chain and the order is mandated. Risks are enumerated before mitigations are claimed, mitigations are evidenced before approval gates are set, and residual risk is recorded last so that nothing is closed out silently.
+
+1. Classify risk surfaces and likely harms.
+2. Map mitigations to each risk.
+3. Check eval, red-team, and operational controls against those mitigations.
+4. Define approval gates and blocked launch criteria.
+5. Record residual risks and follow-ups.
+
+Within steps 1 through 3 the risk surfaces are independent: enumerating harms, mapping mitigations, and gathering control evidence for each surface is parallel-safe across surfaces. The risk-tier judgment, the approval gates, and the blocked-launch criteria in steps 4 and 5 are aggregate and are set once against the complete risk set.
 
 ## Outputs
 
@@ -61,9 +65,14 @@ Review AI capability risk and mitigation readiness. Cover misuse, policy complia
 
 ## Halt conditions
 
-- Capability scope, data exposure, tool authority, or user impact is unclear.
-- Mitigations or approval owner are missing for material risks.
-- Eval or red-team evidence is insufficient for release.
+Default posture is to proceed and label the assumption inline; an unquantified likelihood or an incomplete user-segment breakdown is a soft gap. Halt only when one of the six hard-halt classes applies. In this desk a halt is a normal outcome rather than a failure — surfacing a material risk that has no owner is the point.
+
+- Approval — a material risk has no approval owner, or the capability would ship at a risk tier the owner has not accepted.
+- Production or destructive — the capability could take irreversible real-world action and the gate in front of that action is missing or unproven.
+- Security or privacy — data exposure, tool authority, or cross-tenant reach is unresolved, or the capability could leak personal, regulated, or credential data.
+- Source conflict — capability documentation, eval evidence, and stated intended use disagree on what the system can actually do, or to whom.
+- Release integrity — eval or red-team evidence is insufficient to support the release, or a mitigation is claimed without evidence that it works.
+- Connector unreachable — eval results, red-team findings, incident history, or policy documentation exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -83,6 +92,7 @@ Review AI capability risk and mitigation readiness. Cover misuse, policy complia
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every identified risk surface carries a likely harm, a mitigation, the evidence that the mitigation works, and an owner; approval gates and blocked-launch criteria are explicit; and residual risks are recorded rather than resolved by omission.

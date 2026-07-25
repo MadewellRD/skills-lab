@@ -1,0 +1,11 @@
+# Vendor adapter schema.
+# Skill bodies use neutral tokens; the build resolves them per target vendor.
+# Adding a vendor = one file here. No skill body changes, ever.
+#
+# tokens:
+#   AGENT            reasoning/chat surface the desk runs in
+#   CODING_AGENT     execution agent that receives implementation handoffs
+#   PLATFORM         product/platform name for install + invocation docs
+#   INVOKE           how a user invokes a skill on this platform
+#   BLOCKER_TAG      vendor-neutral name for a handoff-blocked signal
+#   SUBAGENT_TERM    what this vendor calls parallel workers

@@ -1,0 +1,11 @@
+interface:
+  display_name: iOS Game Engineering Desk
+  short_description: Prepares iOS game, engine, Metal/engine runtime, and runtime
+    handoffs.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#0ea5e9'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

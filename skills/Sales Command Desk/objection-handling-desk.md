@@ -1,6 +1,6 @@
 ---
 name: objection-handling-desk
-description: draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Objection Handling Desk
@@ -30,12 +30,13 @@ Classify sales objections and draft evidence-backed responses, clarifying questi
 
 ## Workflow
 
-- Classify the sales request and workflow mode.
-- Create or update the sales workflow packet.
-- Gather only the minimum additional evidence needed to complete the current stage.
-- Produce the stage artifact with source-grounded facts and labeled assumptions.
-- Continue to downstream desks when evidence is sufficient and no approval gate blocks progress.
-- Stop only at completed target outcome, explicit approval gate, or hard halt.
+**Outcome.** For each objection: a classification, a core response grounded in approved proof points, the clarifying questions that should precede it, the supporting evidence list, a talk track, and an email draft — drafts only.
+
+**Constraints.** Carry the sales workflow packet forward and update it in place. Approved proof points and first-party collateral are authoritative; a response may not assert a capability, result, customer reference, timeline, or commercial concession that no approved source supports. Where the honest answer is that the claim cannot be made, the response says so and names what would be needed rather than reaching for adjacent language. Competitive and technical claims stay scoped to what is evidenced. Nothing here is sent to the customer without approval.
+
+**Parallel surface.** Objections are independent — classify each one and draft its response, questions, and evidence list in parallel rather than one objection at a time. The consistency pass is aggregate and runs once over the complete set, because contradictions only appear across responses: two individually defensible answers can promise incompatible things about timeline, scope, or price, and that is only visible when they are read together against the current proposal.
+
+**Acceptance bar.** Every response names the approved proof point or source it rests on, every unsupported claim the customer raised is answered without adopting it, and every follow-up question targets a specific unknown. A response that requires legal, security, or pricing authority to make is marked as pending that approval rather than softened until it reads as approved.
 
 ## Outputs
 
@@ -61,10 +62,16 @@ Classify sales objections and draft evidence-backed responses, clarifying questi
 
 ## Halt conditions
 
-- approved proof points are missing
-- requested claim is unsupported
-- legal/security/pricing approval is required
-- customer-facing send is requested without approval
+Proceed by default on drafting and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — a customer-facing send is requested without approval, or the response would make a legal, security, compliance, or pricing commitment that requires its named authority. Hard halt: a concession offered in an objection response is a concession the customer will hold you to.
+- **Production or destructive** — the request is to send the response rather than to draft it.
+- **Security or privacy** — the response would disclose security posture, architecture, audit findings, customer references, or contractual detail that has not been cleared for this audience.
+- **Source conflict** — approved proof points and the deal record genuinely disagree about what the customer was told or what was committed. Resolve that before answering, because the response will be read as the company's position.
+- **Release integrity** — the requested claim is unsupported and would go to the customer as fact. Answer without the claim and name what would be needed to make it; do not reach for adjacent language that implies it.
+- **Connector unreachable** — a required collateral, CRM, or notes source exists but cannot be read, so approved proof points cannot be checked at all.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing deal context or an unclear objection is a labeled assumption in the draft plus a clarifying question in the talk track. Where no approved proof point covers the topic, the draft says so plainly and routes it — that is a usable answer, not a blocked one.
 
 ## Downstream handoffs
 

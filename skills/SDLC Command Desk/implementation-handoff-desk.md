@@ -1,6 +1,6 @@
 ---
 name: implementation-handoff-desk
-description: create, review, refine, and package connector-grounded implementation handoffs for coding agents after requirements, discovery, architecture, and issue planning are complete. use when the user asks for codex or claude code instructions, branch work, commit plans, pull request handoffs, halt-resume prompts, merge-train runbooks, repo cleanup prompts, docs/proof handoffs, or low-token coding-agent execution plans backed by github, issues, docs, ci checks, and source facts.
+description: create, review, refine, and package connector-grounded implementation handoffs for coding agents after requirements, discovery, architecture, and issue planning are complete. use when the user asks for {{CODING_AGENT}} instructions, branch work, commit plans, pull request handoffs, halt-resume prompts, merge-train runbooks, repo cleanup prompts, docs/proof handoffs, or low-token coding-agent execution plans backed by github, issues, docs, ci checks, and source facts.
 ---
 
 # Implementation Handoff Desk
@@ -36,13 +36,10 @@ When multiple sources conflict, do not smooth over the conflict. Preserve the co
 
 Every generated prompt must be delivered as a downloadable `.md` file.
 
-1. Create a markdown file named with a descriptive slug, such as `pr-prompt-corpus-catalog.md`, `pr-halt-resume-translator-tex2d.md`, or `merge-train-s2-pr6-rating.md`.
-2. The file must contain:
-   - a title heading,
-   - a short `How to use this file` section,
-   - the copy-paste-ready implementation prompt under `## Prompt`.
-3. The chat response should provide the file link and one direct usage sentence. Do not paste the full prompt in chat unless the user explicitly asks for inline text.
-4. When a file-writing tool is unavailable, output the complete markdown file content in a fenced `markdown` block and tell the user to save it as the specified filename.
+- Name the file with a descriptive slug, such as `pr-prompt-corpus-catalog.md`, `pr-halt-resume-translator-tex2d.md`, or `merge-train-s2-pr6-rating.md`.
+- The file must contain a title heading, a short `How to use this file` section, and the copy-paste-ready implementation prompt under `## Prompt`.
+- The chat response provides the file link and one direct usage sentence. Do not paste the full prompt in chat unless the user explicitly asks for inline text.
+- When a file-writing tool is unavailable, output the complete markdown file content in a fenced `markdown` block and tell the user to save it as the specified filename.
 
 Use this file wrapper:
 
@@ -51,16 +48,16 @@ Use this file wrapper:
 
 ## How to use this file
 
-Paste everything under `## Prompt` into Claude Code, Codex, or the target implementation agent. Keep the guardrails, halt conditions, commit instructions, PR title, PR body requirements, and final stop line intact.
+Paste everything under `## Prompt` into {{CODING_AGENT}} or the target implementation agent. Keep the guardrails, halt conditions, commit instructions, PR title, PR body requirements, and final stop line intact.
 
 ## Prompt
 
 prompt content
 ```
 
-## Low-token coding-agent policy
+## Handoff density policy
 
-Implementation handoffs must reduce the amount of original design/code structure a coding agent has to invent. Do not ask Codex, Claude Code, or another coding agent to "figure out the architecture" when upstream artifacts should already define it. Instead:
+Implementation handoffs must reduce the amount of original design/code structure a coding agent has to invent. Do not ask {{CODING_AGENT}} or another coding agent to "figure out the architecture" when upstream artifacts should already define it. Instead:
 
 - Carry forward concrete file paths, symbols, modules, interfaces, acceptance criteria, constraints, and validation commands from upstream desks.
 - Prefer patch-shaped instructions, file-by-file change plans, command sequences, and exact stop conditions over broad exploratory goals.
@@ -74,37 +71,48 @@ This skill owns coding-agent token efficiency at the execution boundary. Upstrea
 
 Use connectors as the grounding layer for every repo-aware or project-aware prompt. GitHub is mandatory when live repository facts are needed. Issue/project connectors are required when the prompt depends on ticket scope. Document connectors are required when the prompt depends on parity docs, audit packs, completion packs, architecture docs, or spec language. Communication connectors are required when the prompt depends on agent halt reports, team decisions, or recent policy choices that are not present in the current chat.
 
-Do not fabricate connector facts. If a required connector is unavailable, the repo is not selected, or the connector cannot return the needed state, produce either a scoped prompt based only on provided facts or a `connector-diagnostic.md` file that lists what is missing. If the user expects live grounding, tell them to connect or select the relevant source before relying on the prompt as fully grounded.
+Do not fabricate connector facts. If a required connector is unreachable, the repo is not selected, or the connector cannot return the needed state, produce either a scoped prompt based only on provided facts or a `connector-diagnostic.md` file that lists what is missing. State which of the two you produced. If the user expects live grounding, tell them to connect or select the relevant source before relying on the prompt as fully grounded.
 
 When connector facts are available, carry them into the markdown prompt or companion source-notes section: repo owner/name, base branch, branch/worktree state, PR number and merge state, relevant files, named tests discovered by search, issue IDs, acceptance criteria, commit SHAs, validation status, decision-bearing messages, and canonical docs used. Preserve the canonical halt style: if live connector state conflicts with pasted facts, the generated prompt must instruct the implementation agent to halt and report the drift before editing.
 
 ## Workflow
 
-1. Classify the request, select the required connector route, and load the closest canonical exemplar before drafting.
-   - Branch landing, rebase, push, and PR creation: use `references/canonical/pr-exp-01-merge-train.md`.
-   - Test-coverage PRs with fixture requirements: use `references/canonical/pr-exp-02-legacy-import-tests.md`.
-   - Docs-only parity/proof/scoreboard amendments: use `references/canonical/pr-exp-03-parity-amendment.md`.
-   - Translator/runtime regression PRs with RED/GREEN commits: use `references/canonical/pr-exp-04-translator-regressions.md`.
-   - Tooling/catalog/baseline-generation PRs: use `references/canonical/pr-exp-05-corpus-catalog.md`.
-   - Halt resume or narrowed follow-up after an agent stalls: use `references/canonical/pr-halt-resume-01.md` and `references/canonical/pr-halt-response-01.md`.
+**Outcome.** A copy-paste-ready implementation prompt in a downloadable markdown file, grounded in live connector facts, scoped to named files, and carrying its own guardrails and halt conditions. Return the link and one sentence explaining what to paste into the target agent.
 
-2. Run connector preflight.
-   Use `references/connector-routing.md` to identify required sources. Use GitHub before drafting repository-specific branch, PR, file, test, commit, or CI instructions. Use issue/project connectors before drafting ticket-derived acceptance criteria. Use document connectors before drafting parity/proof/spec/audit prompts. Use communication connectors before incorporating halt reports or team decisions. If a required source is missing, either mark the prompt as user-fact-grounded only or produce a connector diagnostic.
+**Exemplar selection.** Load the closest canonical exemplar before drafting. Branch landing, rebase, push, and PR creation use `references/canonical/pr-exp-01-merge-train.md`. Test-coverage PRs with fixture requirements use `references/canonical/pr-exp-02-legacy-import-tests.md`. Docs-only parity, proof, or scoreboard amendments use `references/canonical/pr-exp-03-parity-amendment.md`. Translator and runtime regression PRs with RED/GREEN commits use `references/canonical/pr-exp-04-translator-regressions.md`. Tooling, catalog, and baseline-generation PRs use `references/canonical/pr-exp-05-corpus-catalog.md`. Halt resume or narrowed follow-up after an agent stalls uses `references/canonical/pr-halt-resume-01.md` and `references/canonical/pr-halt-response-01.md`.
 
-3. Preserve the canonical voice.
-   Start with direct operational context such as `You are operating on...`, `Your job is...`, or `Continue work on branch...`. Prefer the canonical sections `State summary`, `Current state`, `Sequence`, `What needs testing`, `What changes`, `What to build`, `Commit N`, `Per-PR guardrails`, `Guardrails`, `Commit message`, `PR title`, `PR base`, `PR body`, and `Stop at...`.
+**Grounding.** Use `references/connector-routing.md` to identify required sources. Use GitHub before drafting repository-specific branch, PR, file, test, commit, or CI instructions. Use issue/project connectors before drafting ticket-derived acceptance criteria. Use document connectors before drafting parity, proof, spec, or audit prompts. Use communication connectors before incorporating halt reports or team decisions. Prefer live connector facts over memory whenever the relevant connector is available.
 
-4. Ground the prompt in current facts.
-   Prefer live connector facts over memory when the relevant connector is available. Include concrete repository path, GitHub repo, worktree path, base branch or commit, target branch, PR number/state, touched files, existing dirty state, expected command sequence, validation commands, PR title, PR body requirements, commit messages, and exact stop line when known. If facts are missing, use explicit placeholders only for the missing facts and keep the rest concrete.
+**Canonical voice.** Start with direct operational context such as `You are operating on...`, `Your job is...`, or `Continue work on branch...`. Prefer the canonical sections `State summary`, `Current state`, `Sequence`, `What needs testing`, `What changes`, `What to build`, `Commit N`, `Per-PR guardrails`, `Guardrails`, `Commit message`, `PR title`, `PR base`, `PR body`, and `Stop at...`.
 
-5. Keep scope narrow and enforce halt behavior.
-   Every prompt must define allowed files, forbidden files, validation gates, commit structure, push/PR behavior, and halt conditions. Use `STOP`, `halt and report`, and `Do not proceed past...` language when the exemplar uses it. Do not invite opportunistic fixes.
+**Concrete facts.** Include repository path, GitHub repo, worktree path, base branch or commit, target branch, PR number and state, touched files, existing dirty state, expected command sequence, validation commands, PR title, PR body requirements, commit messages, and the exact stop line when known. Where a fact is missing, use an explicit placeholder for that fact alone and keep everything else concrete.
 
-6. Preserve user policy choices.
-   Carry forward user-specific rules such as not rotating credentials, not modifying scoreboards, not touching unrelated branches, using worktrees, not merging PRs, and treating hosted CI instability as a local-verification exception only when the prompt explicitly allows it.
+**Scope and guardrails.** Every prompt defines allowed files, forbidden files, validation gates, commit structure, push and PR behavior, and halt conditions. Use `STOP`, `halt and report`, and `Do not proceed past...` language when the exemplar uses it. Do not invite opportunistic fixes.
 
-7. Package the output.
-   Write the final prompt to a downloadable markdown file using the required wrapper. Return the link and one sentence explaining what to paste into the target agent.
+**User policy.** Carry forward user-specific rules such as not rotating credentials, not modifying scoreboards, not touching unrelated branches, using worktrees, not merging PRs, and treating hosted CI instability as a local-verification exception only when the prompt explicitly allows it.
+
+**Ordered content in the generated prompt.** Commit sequences, `Commit N` ordering, merge-train PR order, and rebase-then-push sequences are externally mandated order inside the artifact this desk produces. Emit them as numbered, ordered steps and never reorder or collapse them for brevity. This constraint governs the generated prompt, not this desk's own procedure.
+
+**Parallel surface.** Connector retrieval is parallel-safe: repo state, PR metadata, check status, issue bodies, and canonical exemplars can be gathered concurrently. Drafting handoffs for separate issues whose file scopes do not overlap is also parallel-safe. Sequenced work is not: merge-train prompts, chained PRs against a shared base, and commit sequences within one prompt are strictly ordered and must be produced and executed in order.
+
+**Acceptance bar.** The prompt is ready when a coding agent can execute it without re-deriving the design: every file it may touch is named, every file it must not touch is named, the validation command and its pass condition are stated, commit and PR structure are specified, and the stop line is explicit. Any fact the agent would otherwise have to guess is either supplied or marked as a placeholder that the agent must halt on rather than invent.
+
+## Halt policy
+
+Two different halts live in this desk. Keep them separate.
+
+**Halts this desk authors into the generated prompt.** These stay as strict as the canonical exemplars. A halt condition is mandatory in every prompt, drift between live state and pasted facts must stop the implementing agent before it edits, and `STOP` lines survive verbatim. Do not relax them.
+
+**Halts this desk itself takes.** Default to producing the prompt. A missing fact becomes an explicit placeholder plus a halt instruction for the implementing agent, not a refusal to draft. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — the user asks this desk to execute, push, or merge rather than draft the handoff.
+- **Production or destructive** — the prompt would direct irreversible action on a shared branch, production system, or credential without an established rollback.
+- **Security or privacy** — grounding the prompt would require embedding secrets, tokens, or personal data in the artifact.
+- **Source conflict** — live connector state conflicts with pasted facts on a load-bearing point. Preserve the conflict as a pre-flight halt condition in the generated prompt rather than resolving it.
+- **Release integrity** — the request is to chain a prompt against an unmerged or unverified predecessor. Draft a merge/verification prompt, a post-merge re-rank prompt, or a resume-from-halt prompt instead.
+- **Connector unreachable** — a required source exists but cannot be read. A source that is merely absent is a soft gap: draft a scoped, user-fact-grounded prompt marked as such, or emit `connector-diagnostic.md`.
+
+Use `{{BLOCKER_TAG}}` when the facts available are insufficient for a coding agent to act.
 
 ## Core rules
 
@@ -137,4 +145,4 @@ When connector facts are available, carry them into the markdown prompt or compa
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

@@ -13,7 +13,7 @@ This skill is the lifecycle entrypoint. It does not start with pull requests. `i
 
 ## Non-negotiable continuity rule
 
-Do not stop with a bare next-desk instruction when the next stage can be performed from available facts. Continue the workflow by applying the next stage contract. If a required fact, connector, approval, or source conflict blocks continuation, return a `Workflow Halt` with exact resume requirements.
+Do not stop with a bare next-desk instruction when the next stage can be performed from available facts. Continue the workflow by applying the next stage contract. When a fact is missing but the stage can still be completed, proceed with the assumption labeled inline in the stage artifact and carried in the packet. Return a `Workflow Halt` with exact resume requirements only for the hard-halt classes in `Halt policy` below.
 
 ## Workflow modes
 
@@ -24,14 +24,15 @@ Do not stop with a bare next-desk instruction when the next stage can be perform
 
 ## Workflow
 
-1. Classify the request against `references/lifecycle-map.md`.
-2. Select the starting and target stages using `references/stage-contracts.md` and `references/child-skill-routing.md`.
-3. Run connector preflight using `references/connector-preflight.md`.
-4. Apply source hierarchy and conflict rules from `references/source-hierarchy.md`.
-5. Execute each stage contract in order, producing the stage artifact and updating the workflow packet.
-6. Continue into the next stage automatically when the packet says `ready_to_continue: true` and no halt condition applies.
-7. Stop only when the target outcome is complete, a human approval gate is reached, or a connector/source fact blocks progress.
-8. For reusable work, create a downloadable Markdown artifact using `references/output-contract.md`.
+**Outcome.** The user's target lifecycle outcome, reached by running the shortest safe sequence of stages, with a workflow packet that stays current across every stage.
+
+**Routing.** Classify the request against `references/lifecycle-map.md`. Select the starting and target stages using `references/stage-contracts.md` and `references/child-skill-routing.md`. Run connector preflight using `references/connector-preflight.md` and apply source hierarchy and conflict rules from `references/source-hierarchy.md`.
+
+**Stage order is content.** Execute stage contracts in lifecycle order. Each stage produces its artifact and updates the workflow packet before the next stage consumes it; a stage that runs on stale packet state produces work the next stage cannot trust. Continue into the next stage automatically when the packet says `ready_to_continue: true` and no halt condition applies.
+
+**Parallel surface.** The quality gates that sit at the same lifecycle position operate on the same change but assess independent dimensions: review, test strategy, verification, and security threat modeling carry no ordering dependency on each other and are parallel-safe to run as a group before release readiness. Within any stage, evidence retrieval across independent sources is likewise parallel-safe. Sequential lifecycle progression — requirements before design, design before implementation handoff — is not.
+
+**Acceptance bar.** A workflow run is complete when the user's target outcome exists as an artifact, every stage that ran emitted its artifact and updated the packet, skipped stages are named with the reason they were skipped, and the packet states either the completed outcome or the exact resume requirement. A bare recommendation to use another desk is not a completed run. For reusable work, create a downloadable Markdown artifact using `references/output-contract.md`.
 
 ## Stage advancement rules
 
@@ -66,11 +67,24 @@ Before running `implementation-handoff-desk`, verify that these facts are availa
 
 If those facts are missing, continue upstream instead of producing a coding-agent prompt. If upstream work cannot resolve the gap, stop with `Workflow Halt`.
 
+## Halt policy
+
+The orchestrator's default is continuation. A stage that a competent engineer would have worked through is not a halt: complete it, label the assumption inline, carry it in the packet, and advance. Return `Workflow Halt` only for these consequence classes from `references/halt-taxonomy.md`:
+
+- **Approval** — a human approval gate is reached and no authorization is present.
+- **Production or destructive** — the next action has irreversible or production side effects.
+- **Security or privacy** — advancing risks exposure of secrets, credentials, or personal data.
+- **Source conflict** — sources genuinely disagree on a load-bearing fact and choosing silently would launder a guess into a lifecycle decision.
+- **Release integrity** — the workflow would ship or declare ready something whose correctness cannot be established.
+- **Connector unreachable** — required evidence exists but cannot be read. Evidence that is merely absent is a soft gap: continue with a labeled assumption.
+
+Every halt must state the exact fact needed, what was already attempted to obtain it, and the prompt that resumes the workflow.
+
 ## Connector grounding
 
 Treat connectors as stage gates, not optional decoration. GitHub is source of truth for repo state, branches, commits, PRs, issues, checks, files, and tests. Docs are source of truth for product, policy, roadmap, architecture, and audit context. Communication sources are decision context but not repo-state truth.
 
-If required connector facts are unavailable, produce a connector diagnostic rather than inventing missing state.
+If a required connector is unreachable, produce a connector diagnostic rather than inventing missing state. If a connector is simply not needed for the stage at hand, continue.
 
 ## Output behavior
 
@@ -90,7 +104,7 @@ Do not return a bare recommendation to use another desk.
 
 Use `scripts/route_sdlc_request.py` only as a deterministic aid for first-pass classification. Use `scripts/run_sdlc_workflow.py` to produce a stage sequence and workflow packet scaffold. Use judgment and connector evidence for final workflow execution.
 
-## Low-token execution policy
+## Execution handoff density
 
 The command desk should reduce downstream coding-agent token use by resolving ambiguity before implementation. Upstream stages produce structured artifacts with IDs, facts, constraints, acceptance gates, and evidence. `implementation-handoff-desk` converts those artifacts into compact, code-heavy execution prompts with exact files, symbols, commands, commits, validation, and halt conditions.
 
@@ -105,14 +119,14 @@ Do not ask coding agents to rediscover lifecycle decisions that upstream stages 
 - `references/connector-preflight.md`: required and optional connector checks.
 - `references/source-hierarchy.md`: truth order and conflict behavior.
 - `references/output-contract.md`: route decision, lifecycle plan, handoff, diagnostic, and workflow packet output formats.
-- `references/low-token-policy.md`: how this suite reduces coding-agent token waste.
+- `references/handoff-density-policy.md`: how this suite reduces coding-agent token waste.
 - `scripts/route_sdlc_request.py`: deterministic first-pass route helper.
 - `scripts/run_sdlc_workflow.py`: deterministic workflow sequence and packet scaffold helper.
 - `scripts/write_command_markdown.py`: Markdown wrapper helper for reusable artifacts.
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.
 
 ## Suite workflow mode
 Use suite workflow routing with continuity packet updates.

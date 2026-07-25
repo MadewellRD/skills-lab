@@ -1,6 +1,6 @@
 ---
 name: pipeline-forecast-desk
-description: generate forecast narratives, commit and best-case views, risk-adjusted models, and spreadsheet artifacts from pipeline data. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: generate forecast narratives, commit and best-case views, risk-adjusted models, and spreadsheet artifacts from pipeline data. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Pipeline Forecast Desk

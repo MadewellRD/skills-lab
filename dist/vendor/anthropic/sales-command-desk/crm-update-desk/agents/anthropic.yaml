@@ -1,0 +1,16 @@
+interface:
+  display_name: CRM Update Desk
+  short_description: Create safe CRM note, task, field, and stage update packages
+    with dry-run diffs, approvals, and audit logs.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

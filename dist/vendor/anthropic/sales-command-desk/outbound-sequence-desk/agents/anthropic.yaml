@@ -1,0 +1,16 @@
+interface:
+  display_name: Outbound Sequence Desk
+  short_description: Draft outbound email and follow-up sequences with persona targeting,
+    personalization, compliance controls, and approval gates.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

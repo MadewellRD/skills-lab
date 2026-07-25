@@ -1,0 +1,11 @@
+interface:
+  display_name: Accessibility SEO Desk
+  short_description: Wcag, semantic structure, metadata, crawlability, and seo for
+    the Web Development Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

@@ -10,7 +10,7 @@ description: define web testing and qa strategy across browsers, devices, respon
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Define and coordinate browser, device, responsive, integration, accessibility, v
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `web-release-deployment-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Browsers, devices, viewports, routes, flows, roles, and locales are independent test-matrix axes: coverage design and execution across them are parallel-safe.
+- Continue to `web-release-deployment-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every high-risk flow has at least one test with an owner and an environment, the matrix states which cells are automated versus manual, and blocker rules make it unambiguous which defects stop a release.
 
 ## Responsibilities
 
@@ -112,9 +116,14 @@ Test strategy, test matrix, environment/data needs, launch signoff checklist, de
 
 ## Halt conditions
 
-- No environment or test data for validation.
-- Missing accepted high-risk flows.
-- Unknown browser/device support baseline.
+Halt only on a hard class:
+
+- Release integrity: release signoff would be given on coverage that has not been executed or evidenced.
+- Production or destructive: testing would run against production data or a live system without an agreed safe path.
+- Security or privacy: test data would carry real credentials or personal data.
+- Connector unreachable: the CI, test-report, or environment source needed for coverage evidence cannot be reached.
+
+A missing test environment, missing test data, an unaccepted high-risk flow list, and an unknown browser or device baseline are not halts for planning. Proceed with the assumed matrix labeled inline and recorded in `open_questions`.
 
 ## Default output modes
 

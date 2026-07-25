@@ -1,6 +1,6 @@
 ---
 name: renewal-expansion-desk
-description: support renewal, upsell, and cross-sell motions with churn risk, expansion hypotheses, outreach, and forecast impact notes. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: support renewal, upsell, and cross-sell motions with churn risk, expansion hypotheses, outreach, and forecast impact notes. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Renewal Expansion Desk

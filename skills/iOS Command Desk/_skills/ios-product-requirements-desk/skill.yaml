@@ -1,0 +1,10 @@
+interface:
+  display_name: iOS Product Requirements Desk
+  short_description: Defines iOS app/game requirements and acceptance gates.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#0ea5e9'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

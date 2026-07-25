@@ -1,6 +1,6 @@
 ---
 name: sales-call-prep-desk
-description: prepare agendas, discovery questions, attendee context, objection watchlists, and follow-up scaffolds for sales meetings. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: prepare agendas, discovery questions, attendee context, objection watchlists, and follow-up scaffolds for sales meetings. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Sales Call Prep Desk

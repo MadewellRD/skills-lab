@@ -1,6 +1,6 @@
 ---
 name: lead-research-desk
-description: research and rank prospects using icp, crm, enrichment, and public evidence before outreach. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: research and rank prospects using icp, crm, enrichment, and public evidence before outreach. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Lead Research Desk
@@ -30,12 +30,13 @@ Research named prospects or prospect lists and produce concise, source-backed le
 
 ## Workflow
 
-- Classify the sales request and workflow mode.
-- Create or update the sales workflow packet.
-- Gather only the minimum additional evidence needed to complete the current stage.
-- Produce the stage artifact with source-grounded facts and labeled assumptions.
-- Continue to downstream desks when evidence is sufficient and no approval gate blocks progress.
-- Stop only at completed target outcome, explicit approval gate, or hard halt.
+**Outcome.** A ranked lead list with per-lead briefs: fit against the stated ICP, the evidence behind that fit, a recommended angle, the missing data, and a next-step recommendation — ready for outreach that this desk does not itself send.
+
+**Constraints.** Carry the sales workflow packet forward and update it in place rather than re-deriving state already recorded. Every contact detail, title, reporting line, company fact, and buying signal is either sourced or absent — never fabricate contact data, org structure, or intent, and label any enrichment field whose confidence is low. Respect exclusion rules, suppression lists, and regional data-protection constraints on personal data at research time, not later at send time. This desk produces drafts and lists; it does not write to the CRM and does not send outbound.
+
+**Parallel surface.** Leads and prospect accounts are independent research units — enrich, source, and score each in parallel rather than working down the list. Dedupe against existing CRM records, cross-lead ranking, and account-level roll-up are aggregate passes over the complete set, because a duplicate is a relationship between records and a ranking is a property of the whole list.
+
+**Acceptance bar.** Every lead carries a fit score against the stated ICP criteria, every asserted fact names its source, every low-confidence field is labeled, and every lead is marked as new or already present in the CRM. A lead whose contact data could not be sourced appears with the gap named rather than with a plausible guess in the field.
 
 ## Outputs
 
@@ -61,10 +62,16 @@ Research named prospects or prospect lists and produce concise, source-backed le
 
 ## Halt conditions
 
-- ICP or target audience is missing
-- prospecting data cannot be verified
-- requested contact details are unavailable or low confidence
-- outbound send is requested without approval
+Proceed by default on reversible work and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — an outbound send, a sequence enrollment, or a customer-facing action is requested without explicit approval. Hard halt: this desk researches and ranks, it does not contact.
+- **Production or destructive** — the request is to write leads into the CRM, enrich existing records in place, or import a list rather than to produce one.
+- **Security or privacy** — sourcing or storing the requested personal data would breach consent, regional data-protection rules, or a suppression or do-not-contact instruction. This applies at research time, not only at send time.
+- **Source conflict** — CRM records and enrichment sources genuinely disagree on identity, employment, or ownership such that the lead may be a duplicate of an existing relationship. Flag the collision; do not create a second record path.
+- **Release integrity** — a lead brief is about to present unverified contact data, reporting lines, or buying intent as established fact.
+- **Connector unreachable** — a required CRM or enrichment source exists but cannot be read, so dedupe against existing records is impossible.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing ICP means proposing one from the accounts already in the CRM, labeling it as proposed, and ranking against it. Unavailable or low-confidence contact detail is reported as missing or labeled low confidence — never filled with a plausible address, title, or reporting line.
 
 ## Downstream handoffs
 

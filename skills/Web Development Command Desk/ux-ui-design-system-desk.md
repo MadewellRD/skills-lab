@@ -10,7 +10,7 @@ description: define ux/ui design system guidance for web surfaces including comp
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Define the experience model, component system, responsive behavior, interaction 
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `backend-integration-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Components and breakpoints are independent: component-by-component inventory and per-breakpoint responsive behavior are parallel-safe.
+- Continue to `backend-integration-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every component in the inventory has its variants and interaction states covered (default, hover, focus, active, disabled, loading, empty, error, success), responsive behavior is defined at each named breakpoint, and token usage is stated as a rule rather than a per-screen exception.
 
 ## Responsibilities
 
@@ -113,9 +117,13 @@ Design-system plan, component inventory, token guidance, responsive patterns, in
 
 ## Halt conditions
 
-- No brand/design baseline for brand-sensitive work.
-- Missing target devices or accessibility constraints.
-- Conflicting component rules without owner decision.
+Halt only on a hard class:
+
+- Source conflict: component, token, or brand rules genuinely disagree and no owner decision resolves them.
+- Missing approval: a brand-governed change needs signoff that has not been given.
+- Connector unreachable: the brand guideline, design file, or component library needed as evidence cannot be reached.
+
+A missing design baseline, unknown device mix, or unstated accessibility constraint is not a halt. Proceed against the packet default (WCAG 2.2 AA unless source facts require another standard), label the assumption inline, and record it in `open_questions`.
 
 ## Default output modes
 

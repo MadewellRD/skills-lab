@@ -1,6 +1,6 @@
 ---
 name: retrospective-desk
-description: create connector-grounded retrospectives and continuous-improvement artifacts for software delivery. use when chatgpt needs to synthesize sprint, release, incident, pull request, ci, deployment, product, or team evidence into a retrospective report, lessons-learned memo, process-improvement plan, cycle-metrics summary, action-item tracker, or downstream handoff notes for product, architecture, issue planning, implementation-handoff-desk, release, ci, incident, or documentation workflows.
+description: create connector-grounded retrospectives and continuous-improvement artifacts for software delivery. use when {{AGENT}} needs to synthesize sprint, release, incident, pull request, ci, deployment, product, or team evidence into a retrospective report, lessons-learned memo, process-improvement plan, cycle-metrics summary, action-item tracker, or downstream handoff notes for product, architecture, issue planning, implementation-handoff-desk, release, ci, incident, or documentation workflows.
 ---
 
 # Retrospective Desk
@@ -20,28 +20,17 @@ Retrospective outputs must separate facts from interpretation, cite or list sour
 
 ## Workflow
 
-1. Classify the retrospective scope.
-   - Sprint or milestone retrospective.
-   - Release or deployment retrospective.
-   - Incident or hotfix retrospective.
-   - PR train or implementation-cycle retrospective.
-   - CI or quality-gate retrospective.
-   - Skill/workflow retrospective.
+**Outcome.** An evidence-backed retrospective for the scope in question — sprint or milestone, release or deployment, incident or hotfix, PR train or implementation cycle, CI or quality gate, or skill and workflow — delivered by default as a downloadable Markdown report with a source-facts section and downstream handoff notes.
 
-2. Run connector preflight.
-   - Use GitHub for PRs, commits, issues, milestones, review discussion, checks, CI status, and release history.
-   - Use docs sources for PRDs, plans, release notes, runbooks, decision records, parity docs, and prior retrospectives.
-   - Use communication sources for decision-bearing team updates or halt reports when available.
-   - Use observability or incident sources when production behavior, telemetry, or customer impact is part of the retrospective.
+**Grounding.** Use GitHub for PRs, commits, issues, milestones, review discussion, checks, CI status, and release history. Use docs sources for PRDs, plans, release notes, runbooks, decision records, parity docs, and prior retrospectives. Use communication sources for decision-bearing team updates or halt reports when available. Use observability or incident sources when production behavior, telemetry, or customer impact is part of the retrospective.
 
-3. Build an evidence timeline.
-   Capture the sequence of events, decisions, commits, PRs, failures, releases, incidents, or handoffs. Mark uncertain timestamps and missing evidence explicitly.
+**Evidence timeline.** Capture the sequence of events, decisions, commits, PRs, failures, releases, incidents, and handoffs. Mark uncertain timestamps and missing evidence explicitly. The timeline is ordered content — preserve its sequence in the artifact.
 
-4. Classify outcomes.
-   Use the templates in `references/retrospective-template.md`, `references/cycle-metrics-template.md`, and `references/action-plan-template.md`.
+**Parallel surface.** Evidence collection fans out cleanly: PRs, issues, CI runs, incidents, and documents in the retrospective window are independent and carry no ordering dependency during retrieval. Gather them in parallel, then assemble the ordered timeline in one pass.
 
-5. Produce the artifact.
-   Default to a downloadable Markdown report. Include a source-facts section and downstream handoff notes.
+**Classification.** Use the templates in `references/retrospective-template.md`, `references/cycle-metrics-template.md`, and `references/action-plan-template.md`.
+
+**Acceptance bar.** The retrospective is done when observation is visibly separated from interpretation; each finding names the evidence behind it; every action item has an owner, priority, due window, and the evidence that motivated it; unresolved questions and risks are preserved rather than resolved for narrative tidiness; and metrics are either sourced or marked unverified. Do not invent owners, due dates, metrics, incident impact, PR status, CI state, release state, or decision history.
 
 ## Required outputs
 
@@ -93,9 +82,16 @@ Use `references/handoff-rules.md` to route follow-up work:
 
 ## Halt behavior
 
-Use `references/halt-conditions.md`. Halt or downgrade confidence when key facts are missing, timelines conflict, source ownership is unclear, metrics cannot be verified, or action items depend on unavailable repo or incident evidence.
+Proceed by default. A retrospective with gaps is still useful: downgrade confidence, label the assumption inline, mark unverifiable metrics as unverified, and deliver the report. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-Do not invent owners, due dates, metrics, incident impact, PR status, CI state, release state, or decision history.
+- **Approval** — an action item would assign work or commit a named owner who has not agreed to it.
+- **Production or destructive** — a proposed improvement would change live process, tooling, or configuration rather than recommend the change.
+- **Security or privacy** — the timeline would need to reproduce secrets, credentials, or personal data, or the retrospective would attribute fault to a named individual on unsourced evidence.
+- **Source conflict** — timelines or accounts of what happened genuinely disagree on a load-bearing event. Preserve both rather than picking the tidier story.
+- **Release integrity** — the retrospective would assert that a release or incident was handled correctly when the evidence cannot establish it.
+- **Connector unreachable** — a required repo or incident source exists but cannot be read. Absent evidence is a soft gap: produce a retrospective marked as user-provided-context only and continue.
+
+Use `references/halt-conditions.md` for the halt artifact format.
 
 ## Optional helper
 
@@ -103,4 +99,4 @@ Use `scripts/write_retrospective_markdown.py` when a local file artifact is need
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

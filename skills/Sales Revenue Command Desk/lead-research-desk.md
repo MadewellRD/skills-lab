@@ -1,6 +1,6 @@
 ---
 name: lead-research-desk
-description: research and rank prospects using icp, crm, enrichment, and public evidence before outreach. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: research and rank prospects using icp, crm, enrichment, and public evidence before outreach. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Lead Research Desk

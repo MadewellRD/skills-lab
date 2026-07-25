@@ -13,14 +13,14 @@ This suite owns web-specific delivery discipline. Use the SDLC Command Desk Suit
 
 ## Non-negotiable continuity rule
 
-Do not stop with a bare next-desk instruction when the next stage can be performed from available facts. Continue by applying the next stage contract. If a required fact, connector, approval, or source conflict blocks continuation, return a `Workflow Halt` with exact resume requirements.
+Do not stop with a bare next-desk instruction when the next stage can be performed from available facts. Continue by applying the next stage contract. Return a `Workflow Halt` with exact resume requirements only for a hard-halt class: missing human approval, a production-affecting or destructive next action, a security or privacy exposure, a genuine source conflict on a load-bearing fact, release integrity that would be asserted without evidence, or an unreachable required connector. Handle every other gap by proceeding and labeling the assumption inline.
 
 ## Workflow modes
 
-1. `workflow_run`: default when the user asks to build, ship, redesign, improve, validate, launch, operate, or migrate a web surface.
-2. `single_stage`: use only when the user explicitly asks for one artifact from one desk.
-3. `resume`: continue from a prior `web_delivery_packet` or halt-resume prompt.
-4. `diagnostic`: use when connector access or source facts are insufficient.
+- `workflow_run`: default when the user asks to build, ship, redesign, improve, validate, launch, operate, or migrate a web surface.
+- `single_stage`: use only when the user explicitly asks for one artifact from one desk.
+- `resume`: continue from a prior `web_delivery_packet` or halt-resume prompt.
+- `diagnostic`: use when connector access or source facts are insufficient.
 
 ## Target surfaces
 
@@ -57,6 +57,8 @@ site-product-requirements
 
 Run only the stages required to satisfy the target outcome. Do not run design, CMS, backend, security, SEO, or release stages when they are irrelevant. Do not skip them when the source facts show they are launch-critical.
 
+The chain above is ordered by dependency: each stage consumes the packet the previous stage produced, so do not run a downstream stage ahead of the packet state it needs. Work *within* a stage is not ordered that way. Fan-out over independent items — routes, pages, components, breakpoints, browsers, devices, endpoints, locales, content types, dependencies — is parallel-safe, and so is connector preflight across independent sources such as repo, docs, design, and analytics.
+
 ## Stage selection rules
 
 Start at the earliest stage that can safely answer the request:
@@ -77,7 +79,7 @@ Start at the earliest stage that can safely answer the request:
 
 ## Implementation readiness guard
 
-Before handing work to a coding agent or SDLC implementation handoff, verify that these facts are available or explicitly marked as missing:
+A handoff to a coding agent or to SDLC implementation handoff passes when each of the following is present in the packet or explicitly marked as missing:
 
 - Accepted web requirements or issue scope.
 - Target repo, branch, framework, package manager, and deployment target.
@@ -87,14 +89,14 @@ Before handing work to a coding agent or SDLC implementation handoff, verify tha
 - Test and validation expectations.
 - Rollback or halt conditions for drift, missing state, or unsafe execution.
 
-If those facts are missing, continue upstream instead of producing a coding-agent prompt. If upstream work cannot resolve the gap, stop with `Workflow Halt`.
+If items are missing, continue upstream to resolve them rather than producing a coding-agent prompt. If upstream work cannot resolve the gap, proceed with each missing item named explicitly in the handoff so the coding agent inherits a labeled gap instead of rediscovering it — unless the gap falls in a hard-halt class (missing approval, production-affecting or destructive action, security or privacy exposure, source conflict, release integrity, unreachable connector), where the correct response is `Workflow Halt`.
 
 
 ## Suite workflow mode
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -181,6 +183,6 @@ A release-oriented workflow is not ready until these gates are explicitly passed
 - Release/deployment and rollback gate.
 - Observability and post-launch monitoring gate.
 
-## Low-token execution policy
+## Execution handoff density
 
 Reduce downstream coding-agent token use by resolving ambiguity before implementation. Upstream stages must produce compact artifacts with IDs, facts, constraints, acceptance gates, source evidence, exact open questions, and halt conditions. Do not ask coding agents to rediscover web lifecycle decisions that this suite should have settled.

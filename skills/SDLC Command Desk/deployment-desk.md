@@ -1,6 +1,6 @@
 ---
 name: deployment-desk
-description: create connector-grounded deployment, rollout, feature-flag, change-management, go/no-go, post-deploy verification, and deployment handoff artifacts for software delivery. use when chatgpt needs to plan a deploy, assess rollout readiness, define staged rollout gates, map deployment risks, coordinate release-to-deploy handoff, prepare rollback or monitoring checkpoints, or produce downstream notes for release-operations-desk, observability-readiness-desk, incident-response-desk, ci-failure-desk, verification-desk, or implementation-handoff-desk workflows.
+description: create connector-grounded deployment, rollout, feature-flag, change-management, go/no-go, post-deploy verification, and deployment handoff artifacts for software delivery. use when {{AGENT}} needs to plan a deploy, assess rollout readiness, define staged rollout gates, map deployment risks, coordinate release-to-deploy handoff, prepare rollback or monitoring checkpoints, or produce downstream notes for release-operations-desk, observability-readiness-desk, incident-response-desk, ci-failure-desk, verification-desk, or implementation-handoff-desk workflows.
 ---
 
 # Deployment Desk
@@ -30,30 +30,38 @@ If required source facts are unavailable, produce a deployment diagnostic or cle
 
 ## Workflow
 
-1. Classify the request.
-   - Deployment plan: use `references/deployment-plan-template.md`.
-   - Staged rollout or feature flags: use `references/rollout-plan-template.md`.
-   - Change-management artifact: use `references/change-management-template.md`.
-   - Go/no-go review: use `references/go-no-go-template.md`.
-   - Post-deploy verification: use `references/post-deploy-checks.md`.
+**Outcome.** The smallest deployment artifact that satisfies the request, with concrete gates, commands, owners, timing, and evidence, and unknowns marked explicitly.
 
-2. Run connector preflight.
-   Use `references/connector-routing.md` to identify required and optional sources. Check for release scope, target environment, deployment mechanism, validation evidence, rollback method, observability coverage, known incidents, and approval requirements.
+**Artifact selection.** Deployment plans use `references/deployment-plan-template.md`. Staged rollout or feature-flag work uses `references/rollout-plan-template.md`. Change-management artifacts use `references/change-management-template.md`. Go/no-go reviews use `references/go-no-go-template.md`. Post-deploy verification uses `references/post-deploy-checks.md`.
 
-3. Build the artifact.
-   Use the smallest artifact that satisfies the request. Prefer concrete gates, commands, owners, timing, and evidence. Mark unknowns explicitly.
+**Grounding.** Run connector preflight per `references/connector-routing.md` to identify required and optional sources. Establish release scope, target environment, deployment mechanism, validation evidence, rollback method, observability coverage, known incidents, and approval requirements.
 
-4. Add downstream handoff.
-   When deployment depends on a PR, release, CI fix, verification gate, monitoring update, or incident response action, include a handoff note to the appropriate desk skill.
+**Ordered content is not scaffolding.** The gate sequences this desk produces — pre-deploy checks, approval, cutover, post-deploy verification, rollback — are externally mandated order. Emit them as ordered, numbered steps in the artifact and never reorder, merge, or collapse them for brevity.
 
-5. Halt when deployment safety is not knowable.
-   Use `references/halt-conditions.md` for missing approvals, red checks, unknown rollback path, unclear environment, unresolved blockers, or conflicting source truth.
+**Parallel surface.** Reading the evidence is parallel-safe even though executing the deploy is not. Retrieve deployment config, CI check state, release notes, feature-flag state, observability coverage, and approval status concurrently; assess independent services, regions, or environments in parallel when the rollout treats them as independent. The rollout gate sequence itself remains strictly ordered.
+
+**Downstream handoff.** When deployment depends on a PR, release, CI fix, verification gate, monitoring update, or incident response action, include a handoff note to the appropriate desk skill.
+
+**Acceptance bar.** The artifact is done when the target environment and deployment mechanism are named from sources; every gate has an owner and a pass condition that can be evaluated without further interpretation; a rollback path is stated and marked as verified or unverified; post-deploy checks name the specific signals to watch and the threshold that triggers rollback; and approval status is recorded rather than assumed. Do not invent environment names, deploy commands, owners, approvals, feature flags, rollback procedures, health checks, or CI/deployment status.
 
 ## Output rules
 
 When creating a deployment artifact, return a downloadable markdown file when the environment supports file output. Use the wrapper and artifact contracts in `references/output-contract.md`. Include source facts and unverified assumptions unless the user explicitly asks for a terse inline answer.
 
 For agent handoffs, write the content so it can be pasted into an execution agent without losing guardrails. Keep halt conditions intact.
+
+## Halt policy
+
+Proceed by default when producing planning artifacts: an unknown that can be marked and worked around is a labeled assumption, not a stop. Deployment carries more hard-halt surface than most desks, so reserve halts for these consequence classes from `references/halt-taxonomy.md` and do not soften them:
+
+- **Approval** — a required approval is missing, unrecorded, or the approver is unidentified.
+- **Production or destructive** — the request asks to execute a deploy, cutover, flag flip, or data migration rather than plan one, or the rollback path is unknown or unprovable.
+- **Security or privacy** — the deploy would move secrets, credentials, or personal data across a trust boundary that sources do not establish as intended.
+- **Source conflict** — repo state, release docs, and deployment configuration genuinely disagree on what ships or where it ships to.
+- **Release integrity** — a go decision would be issued while required checks are red, stale, or unverifiable.
+- **Connector unreachable** — a required deployment, CI, or approval source exists but cannot be read. A source that is merely absent is a soft gap: mark the artifact source-limited and continue.
+
+Use `references/halt-conditions.md` for the halt artifact format.
 
 ## Composition with other desks
 
@@ -81,4 +89,4 @@ For agent handoffs, write the content so it can be pasted into an execution agen
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

@@ -1,0 +1,158 @@
+# Capability profile: frontier wave, July 2026
+#
+# This file is the ONE place model-capability assumptions live.
+# A new frontier release = update this file + `python tools/build_skills.py` .
+# Skill bodies must never hardcode a model, vendor, or capability assumption.
+
+profile:
+  id: frontier-2026-07
+  status: active
+  established: 2026-07-25
+  supersedes: baseline-2025           # implicit profile the corpus was authored against
+  basis: >
+    Capability floor shared by the frontier wave released between 2026-05 and 2026-07.
+    A capability is only listed here if it holds across ALL reference models, so skills
+    built on this profile degrade gracefully rather than assuming a single vendor.
+
+# Models this profile was validated against. Adding a model must not lower a floor;
+# if a new model is weaker on an axis, open a narrower profile instead.
+reference_models:
+  - {vendor: anthropic, model: claude-opus-5,        role: reference_ceiling}
+  - {vendor: anthropic, model: claude-opus-4.8,      role: floor_check}
+  - {vendor: anthropic, model: claude-sonnet-5,      role: floor_check}
+  - {vendor: anthropic, model: claude-fable-5,       role: floor_check}
+  - {vendor: openai,    model: gpt-5.6-sol,          role: reference_ceiling}
+  - {vendor: openai,    model: gpt-5.6-terra,        role: floor_check}
+  - {vendor: openai,    model: gpt-5.6-luna,         role: floor_check}
+  - {vendor: google,    model: gemini-3.6-flash,     role: floor_check}
+  - {vendor: xai,       model: grok-4.5,             role: floor_check}
+  - {vendor: moonshot,  model: kimi-k3,              role: floor_check}
+
+# ---------------------------------------------------------------------------
+# CAPABILITIES — what the floor model can now do.
+# Each carries `evidence` so a future maintainer can re-verify instead of trusting.
+# ---------------------------------------------------------------------------
+capabilities:
+
+  context_class:
+    value: mega                       # >= 1M input tokens
+    input_tokens: 1000000
+    output_tokens: 128000
+    evidence: "GPT-5.6 Luna/Terra/Sol all 1M ctx / 128k out; Claude Opus 5 1M ctx / 128k out."
+    implication: >
+      Volume-based context rationing is obsolete. Evidence can be passed whole rather than
+      pre-compressed into lossy packets. Discipline shifts from HOW MUCH to WHAT IS RELEVANT.
+
+  self_verification:
+    value: native
+    evidence: >
+      Anthropic Opus 5 docs explicitly instruct removing carried-over verification
+      instructions ("include a final verification step", "use a subagent to verify")
+      because they cause OVER-verification.
+    implication: >
+      Do not author verification scaffolding into skills. State the acceptance bar;
+      the model checks its own work. Explicit verify-steps now cost quality, not add it.
+
+  long_horizon:
+    value: multi_file_end_to_end
+    evidence: >
+      Opus 5: "multi-file features, larger refactors, and end-to-end feature work without
+      leaving stubs or placeholders." GPT-5.6 Sol 53.6 on Agents' Last Exam.
+    implication: >
+      A desk may carry a workflow across several stages in one run. Stage-per-turn
+      hand-holding and premature stop-and-ask are now the failure mode, not the safeguard.
+
+  parallel_subagents:
+    value: native
+    evidence: >
+      OpenAI multi-agent API spins up subagents for parallel focused work;
+      Anthropic Opus 5 runs subagent teams with writer-verifier patterns.
+    implication: >
+      Desks that fan out over independent items (files, findings, accounts, endpoints)
+      should declare a parallel surface instead of prescribing a serial loop.
+
+  programmatic_tool_calling:
+    value: available
+    degrade: sequential_tool_calls
+    evidence: "OpenAI: model composes and runs JavaScript that orchestrates tool calls."
+    implication: >
+      Optional accelerator. Never a hard dependency — must degrade to ordinary tool calls.
+
+  effort_dial:
+    value: available
+    degrade: single_effort
+    evidence: "Sonnet 5 exposes effort levels as a cost/performance dial."
+    implication: Desks may name a suggested effort tier per stage; never required.
+
+# ---------------------------------------------------------------------------
+# AUTHORING RULES — how the capabilities above translate into skill prose.
+# The build audits these; violations surface in `tools/audit_skills.py`.
+# ---------------------------------------------------------------------------
+authoring_rules:
+
+  scaffolding:
+    mode: outcome_and_constraints
+    was: numbered_micro_steps
+    rule: >
+      State the outcome, the constraints, and the acceptance bar. Do not decompose into
+      numbered micro-steps that a capable model derives on its own.
+    keep_numbered_when: >
+      The order is externally mandated and getting it wrong is unsafe or irreversible
+      (deploy gates, rollback sequences, approval chains, data-destructive cutovers).
+      Ordered procedure is content. Ordered hand-holding is scaffolding. Only the second goes.
+
+  context_policy:
+    mode: relevance_density
+    was: volume_conservation
+    rule: >
+      Replace "send fewer tokens" with "send the right tokens." A handoff is judged by
+      whether it removes ambiguity, not by whether it is short.
+
+  halting:
+    mode: proceed_with_labeled_assumption
+    was: halt_on_uncertainty
+    rule: >
+      Halt only for the hard classes below. Otherwise proceed and label the assumption
+      inline so it is auditable and cheap to correct.
+    hard_halt_classes:
+      - missing_approval            # a human must authorize
+      - production_or_destructive   # irreversible side effects
+      - security_or_privacy         # exposure risk
+      - source_conflict             # sources genuinely disagree on a load-bearing fact
+      - release_integrity           # shipping something unverifiable
+      - connector_unavailable       # required evidence is unreachable, not merely absent
+
+  verification:
+    mode: state_acceptance_bar
+    was: prescribe_verification_steps
+    rule: >
+      Never author "add a verification step" or "use a subagent to verify" into a skill.
+      Author the acceptance bar instead. Per vendor guidance this now causes over-verification.
+
+  parallelism:
+    mode: declare_parallel_surface
+    rule: >
+      Where a stage operates over independent items, say so explicitly so the runtime can
+      fan out. Do not prescribe serial iteration over independent work.
+
+# ---------------------------------------------------------------------------
+# INVARIANTS — governance that does NOT relax as models improve.
+# A more capable model does not make fabrication, unapproved action, or
+# unsourced claims acceptable. These survive every profile bump, permanently.
+# ---------------------------------------------------------------------------
+invariants:
+  - id: INV-01
+    rule: Never invent source facts, IDs, owners, dates, commands, metrics, or citations.
+    rationale: >
+      Capability raises fluency of fabrication as fast as it raises accuracy.
+      This is a governance boundary, not model scaffolding. It never relaxes.
+  - id: INV-02
+    rule: Separate verified fact from assumption from inference in every artifact.
+  - id: INV-03
+    rule: Preserve source attribution and the declared source hierarchy.
+  - id: INV-04
+    rule: Preserve conflicts rather than silently resolving them.
+  - id: INV-05
+    rule: Respect approval gates and destructive-action boundaries regardless of confidence.
+  - id: INV-06
+    rule: Emit and carry the continuity packet; never silently drop prior stage state.

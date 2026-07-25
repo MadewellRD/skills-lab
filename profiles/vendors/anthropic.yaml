@@ -1,0 +1,14 @@
+vendor: anthropic
+display_name: Anthropic Claude
+tokens:
+  AGENT: Claude
+  CODING_AGENT: Claude Code
+  PLATFORM: Claude
+  INVOKE: "/<skill-name>"
+  BLOCKER_TAG: HANDOFF_BLOCKER
+  SUBAGENT_TERM: subagent
+supports:
+  parallel_subagents: true
+  programmatic_tool_calling: false
+  effort_dial: true
+  skills_format: folder            # SKILL.md + references/ + scripts/

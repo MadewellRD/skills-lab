@@ -70,7 +70,7 @@ Resume prompt:
 
 ## Child-desk behavior
 
-Each child desk must produce its normal artifact plus a compact workflow packet. If the next stage is obvious and source facts are sufficient, continue into the next stage contract rather than stopping at a recommendation. If the next stage requires a different specialist skill that is installed, ChatGPT may invoke it. If it is not available, use the stage contract summarized by `sdlc-command-desk`.
+Each child desk must produce its normal artifact plus a compact workflow packet. If the next stage is obvious and source facts are sufficient, continue into the next stage contract rather than stopping at a recommendation. If the next stage requires a different specialist skill that is installed, the assistant may invoke it. If it is not available, use the stage contract summarized by `sdlc-command-desk`.
 
 ## Continuity Packet
 

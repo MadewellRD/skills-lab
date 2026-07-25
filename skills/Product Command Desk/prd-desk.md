@@ -30,11 +30,13 @@ Create product requirements documents that are ready for technical discovery, de
 
 ## Workflow
 
-- Clarify problem, users, goals, and non-goals.
-- Extract requirements and acceptance criteria.
-- Map source evidence and risks.
-- Identify dependencies and open questions.
-- Prepare downstream handoff to SDLC or AI Engineering when ready.
+**Outcome.** A PRD that a downstream desk can act on without re-interviewing the author: problem, users, goals and non-goals, identified requirements with acceptance criteria, source evidence, risks, dependencies, open questions, and success metrics.
+
+**Constraints.** Non-goals are written explicitly — a PRD that only says what is in scope has not bounded anything. Acceptance criteria are testable statements about observable behavior, not restatements of the requirement. Keep the requirement (what must be true) separate from the design (how it is achieved) so architecture retains its decisions. Never invent a requirement ID, an owner, a date, or a metric target that no source states; an unresolved value is an open question with a named decision owner.
+
+**Parallel surface.** Requirements are independent drafting units — each user need or capability area can be written up with its own acceptance criteria, evidence links, and risks in parallel rather than walking the list top to bottom. Requirement ID assignment, the dependency map, the non-goals section, and the consistency pass across requirements are a single aggregate step, because IDs must not collide and a dependency or contradiction is only visible across the complete set.
+
+**Acceptance bar.** The PRD is done when every requirement has a unique ID and at least one testable acceptance criterion, every requirement traces to evidence or a labeled assumption, every open question names its decision owner, and the non-goals are specific enough to refuse work with. Ambiguity that survives is recorded as an open question rather than resolved silently.
 
 ## Outputs
 
@@ -64,9 +66,16 @@ Create product requirements documents that are ready for technical discovery, de
 
 ## Halt conditions
 
-- Target user, problem, or acceptance criteria are missing.
-- Evidence conflicts on scope or value.
-- The requirement would commit implementation before discovery or architecture is ready.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — the PRD is being accepted as committed scope, or it encodes a pricing, contractual, regulatory, or customer-facing commitment, and needs its named decision owner.
+- **Production or destructive** — the request is to act on the requirements — open issues, start implementation, change live configuration — rather than to specify them.
+- **Security or privacy** — the requirements involve personal data, credentials, or regulated material and the handling constraints are unresolved rather than merely unwritten.
+- **Source conflict** — stakeholder, research, and delivery sources genuinely disagree on scope or value. Record both positions against the affected requirement and name the decision owner; do not resolve a scope conflict by authorial choice.
+- **Release integrity** — the PRD would be handed downstream as implementation-ready while resting on discovery or architecture questions that are still open. Mark those requirements provisional instead.
+- **Connector unreachable** — a required research, analytics, issue, or repository source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing target user, problem statement, or acceptance criterion is a labeled assumption plus an open question with a named owner — write the requirement with the assumption visible so it can be corrected in one line rather than blocking the whole document.
 
 ## Downstream handoffs
 

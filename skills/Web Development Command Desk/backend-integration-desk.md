@@ -10,7 +10,7 @@ description: plan web backend integration across api contracts, auth, sessions, 
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Define how the web surface connects to backend services, APIs, auth systems, dat
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `frontend-engineering-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Endpoints, services, and third-party integrations are independent: contract, failure-mode, and ownership analysis across them is parallel-safe.
+- Continue to `frontend-engineering-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every integration the surface depends on has a named owner, a request/response contract, defined error and degraded-state behavior, and an auth/session boundary, each either sourced or labeled as an assumption.
 
 ## Responsibilities
 
@@ -113,9 +117,14 @@ Integration map, API contract checklist, auth/session requirements, failure-mode
 
 ## Halt conditions
 
-- No source for API/auth behavior.
-- Unknown owner for critical dependency.
-- Security-sensitive integration without review facts.
+Halt only on a hard class:
+
+- Security or privacy: an integration touches credentials, secrets, tokens, or personal data and continuing would require asserting auth, session, or exposure behavior that has no source.
+- Production or destructive: the next action would write to, migrate, or mutate a production data store or a live third-party system.
+- Source conflict: API docs, schema, and repo state genuinely disagree on a load-bearing contract.
+- Connector unreachable: the repo, API docs, or schema source needed for contract evidence cannot be reached.
+
+An unknown dependency owner, or an unsourced contract for a non-sensitive integration, is not a halt. Proceed with the contract labeled as an assumption inline and recorded in `open_questions`.
 
 ## Default output modes
 

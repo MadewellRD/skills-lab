@@ -1,0 +1,16 @@
+interface:
+  display_name: Product Requirements Desk
+  short_description: Connector-grounded PRDs, requirement IDs, acceptance criteria,
+    non-goals, risks, and downstream SDLC handoffs.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

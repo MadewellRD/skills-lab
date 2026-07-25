@@ -1,0 +1,16 @@
+interface:
+  display_name: PRD Desk
+  short_description: Write product requirements, acceptance criteria, non-goals, risks,
+    and downstream handoffs.
+  default_prompt: ''
+  icon: 📦
+  primary_color: '#7c3aed'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

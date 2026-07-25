@@ -1,0 +1,16 @@
+interface:
+  display_name: Issue Planning Desk
+  short_description: Turn requirements and designs into connector-grounded GitHub
+    issue plans.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

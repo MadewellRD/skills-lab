@@ -1,5 +1,0 @@
-interface:
-  display_name: "Test Strategy Desk"
-  short_description: "Create connector-grounded test strategies, QA matrices, regression plans, fixture plans, and coverage-gap reports."
-  icon: "check-square"
-  brand_color: "#2563EB"

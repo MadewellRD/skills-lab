@@ -20,38 +20,25 @@ Do not write implementation prompts with this skill. When the user is ready for 
 
 ## Workflow
 
-1. Classify the discovery request.
-   - Repo reconnaissance: inspect code structure, build system, tests, dependencies, ownership, and recent change history.
-   - Feasibility assessment: evaluate whether a product requirement can be implemented under current constraints.
-   - Integration discovery: inspect external APIs, SDKs, service boundaries, auth, rate limits, and failure modes.
-   - Spike planning: define a bounded investigation with questions, commands, expected artifacts, and stop conditions.
-   - Risk and unknowns analysis: separate proven facts from assumptions, blockers, and decisions needed.
+**Outcome.** The discovery artifact the request calls for:
 
-2. Run connector preflight.
-   - Use GitHub for repo facts, files, commits, PRs, issues, CI checks, dependency manifests, tests, and build scripts.
-   - Use docs connectors or uploaded docs for PRDs, roadmaps, architecture docs, design notes, audit packs, and decisions.
-   - Use issue/project connectors for ticket scope, acceptance criteria, priority, labels, owners, and blockers.
-   - Use communication connectors only for recent decision context or agent halt reports.
-   - Use public web only for external APIs, SDKs, standards, vendor docs, or current tool behavior not present in repo/docs.
+- Repo reconnaissance report — code structure, build system, tests, dependencies, ownership, and recent change history. Default for unfamiliar codebases.
+- Feasibility assessment — whether a product requirement can be implemented under current constraints. Default for "can we build this?" questions.
+- Integration discovery — external APIs, SDKs, service boundaries, auth, rate limits, and failure modes.
+- Spike plan — a bounded investigation with questions, commands, expected artifacts, and stop conditions. Default when implementation is premature.
+- Risk and unknowns analysis — proven facts separated from assumptions, blockers, and decisions needed.
+- Technical discovery memo — default for broad investigation.
+- Connector diagnostic — when required sources are unreachable.
 
-3. Apply the source hierarchy.
-   Prefer current user instruction, then live GitHub state, then live issue/project state, then canonical docs, then decision-bearing communications, then public web for external facts, then explicit assumptions. If sources conflict, preserve the conflict and either ask for resolution or produce a diagnostic rather than smoothing it over.
+**Grounding.** Use GitHub for repo facts, files, commits, PRs, issues, CI checks, dependency manifests, tests, and build scripts. Use docs connectors or uploaded docs for PRDs, roadmaps, architecture docs, design notes, audit packs, and decisions. Use issue/project connectors for ticket scope, acceptance criteria, priority, labels, owners, and blockers. Use communication connectors only for recent decision context or agent halt reports. Use public web only for external APIs, SDKs, standards, vendor docs, or current tool behavior not present in repo or docs.
 
-4. Produce the right artifact.
-   - Technical discovery memo: default for broad investigation.
-   - Repo reconnaissance report: default for unfamiliar codebases.
-   - Feasibility assessment: default for “can we build this?” questions.
-   - Spike plan: default when implementation is premature.
-   - Connector diagnostic: default when required sources are missing.
+**Source hierarchy.** Prefer current user instruction, then live GitHub state, then live issue/project state, then canonical docs, then decision-bearing communications, then public web for external facts, then explicit assumptions. If sources conflict, preserve the conflict rather than smoothing it over.
 
-5. Make downstream handoff explicit.
-   End with one of these decisions:
-   - Ready for `architecture-design-desk`.
-   - Ready for `issue-planning-desk`.
-   - Ready for `implementation-handoff-desk`.
-   - Needs product clarification.
-   - Needs spike.
-   - Blocked by missing connector facts.
+**Parallel surface.** Discovery is the widest fan-out stage in the lifecycle. Repository areas, dependency manifests, build scripts, test suites, external API surfaces, and individual open questions are independent lines of investigation. Pursue them in parallel rather than walking a serial checklist, then reconcile findings into one memo. Only reconciliation and conflict resolution need a single pass.
+
+**Downstream handoff.** End with one explicit decision: ready for `architecture-design-desk`, ready for `issue-planning-desk`, ready for `implementation-handoff-desk`, needs product clarification, needs spike, or blocked by unreachable connector facts.
+
+**Acceptance bar.** Discovery is done when the next stage can act without re-investigating: every load-bearing claim about the codebase names the file, path, manifest, or commit it came from; unknowns are stated as questions with the investigation that would answer them; risks carry likelihood and impact; and the handoff decision above is stated unambiguously. Do not invent file paths, dependency versions, test names, architecture decisions, CI status, owners, or issue IDs.
 
 ## Output rules
 
@@ -74,14 +61,16 @@ Load these references when relevant:
 
 ## Halt conditions
 
-Halt or produce a connector diagnostic when:
+Proceed by default. Discovery exists to surface unknowns, so an unknown is the expected output, not a stop: record it, label the working assumption, and continue investigating. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- The request depends on live repo facts and GitHub is unavailable or the repo is not selected.
-- The request depends on product/spec truth and no PRD, roadmap, issue, or user-provided source is available.
-- The repo state conflicts with pasted facts and the user has not resolved the conflict.
-- The user asks for implementation before discovery questions, risks, and constraints are sufficiently bounded.
-- External API or SDK behavior is current-sensitive and cannot be verified.
-- The request would require security, legal, privacy, or production-risk assumptions that are not supported by sources.
+- **Approval** — the investigation would require credentials, access, or spend that a human must grant.
+- **Production or destructive** — the request asks to run commands against production systems or data to establish a fact.
+- **Security or privacy** — the memo would require security, legal, privacy, or production-risk assumptions that no source supports.
+- **Source conflict** — live repo state conflicts with pasted facts on a load-bearing point. Preserve the conflict and halt rather than choosing.
+- **Release integrity** — a feasibility verdict would be presented as established when the evidence cannot support it.
+- **Connector unreachable** — GitHub or a required spec source exists but cannot be read, or external API behavior is current-sensitive and the source is unreachable. A source that is merely absent, or a repo that has not been selected yet, is a soft gap: proceed on user-provided facts, mark the artifact source-limited, and name what would confirm it.
+
+When the user asks for implementation before discovery is bounded, route upstream or narrow the scope and say so; that is a routing decision, not a halt.
 
 ## Composition with other SDLC skills
 
@@ -92,4 +81,4 @@ Halt or produce a connector diagnostic when:
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

@@ -13,7 +13,11 @@ Use the SDLC Command Desk Suite as the generic lifecycle backbone once Android-s
 
 ## Non-negotiable continuity rule
 
-Do not stop with a bare next-desk instruction when the next stage can be performed from available facts. Continue by applying the next stage contract. If a required fact, connector, approval, or source conflict blocks continuation, return `Workflow Halt` with exact resume requirements.
+Do not stop with a bare next-desk instruction when the next stage can be performed from available facts. Continue by applying the next stage contract.
+
+Halt only when continuing would cross one of six consequence classes: **approval** (a human must authorize the action), **production or destructive** (irreversible side effects, including Play Console writes), **security or privacy** (exposure of secrets, personal data, or an unresolved policy obligation), **source conflict** (sources genuinely disagree on a load-bearing fact), **release integrity** (shipping or declaring ready something the evidence does not support), or **connector unreachable** (required evidence exists but cannot be read). Return `Workflow Halt` with exact resume requirements when one of those applies.
+
+Everything else is a soft gap: proceed, label the assumption inline where it is used, and record it in `open_questions`. A halt that a competent Android engineer would have worked through is a defect, not a safeguard.
 
 ## Workflow modes
 
@@ -72,7 +76,7 @@ Run only the stages required to satisfy the target outcome. Do not over-trigger 
 
 ## Implementation readiness guard
 
-Before handing work to a coding agent or SDLC implementation handoff, verify that these facts are available or explicitly marked as missing:
+A coding-agent or SDLC implementation handoff is ready when these facts are present in the packet or explicitly marked as missing:
 
 - accepted Android requirements or issue scope
 - target repo, branch, modules, package/application ID, build system, and validation commands
@@ -108,6 +112,8 @@ A release-oriented workflow is not ready until these gates are explicitly passed
 - release/store operations and rollback gate
 - observability/live-ops monitoring gate
 
-## Low-token execution policy
+Gate evidence is independent per gate, so evidence collection across all eleven is parallel-safe. The pass/waive/halt roll-up is aggregate: it runs once, after the per-gate evidence exists.
 
-Follow `references/platform/android-low-token-policy.md`. Resolve Android ambiguity before implementation. Coding-agent handoffs must be compact and include exact files, constraints, validation commands, source facts, acceptance gates, open questions, and halt conditions.
+## Handoff density policy
+
+Follow `references/platform/android-handoff-density-policy.md`. Judge a handoff by whether it removes Android ambiguity, not by how short it is: context is no longer the scarce resource, ambiguity is. Send the right context rather than less context — exact files and modules, constraints, validation commands, source facts, acceptance gates, open questions, and halt conditions. Include the evidence a coding agent would otherwise have to rediscover, and leave out material that does not bear on the decision at hand.

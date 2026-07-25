@@ -30,11 +30,17 @@ Plan production inference operations. Define deployment topology, model access, 
 
 ## Workflow
 
-- Classify runtime requirements and provider constraints.
-- Design request path, retries, timeouts, caching, batching, and fallbacks.
-- Define secrets, logging, retention, and data handling.
-- Set SLOs and operational runbooks.
-- Prepare release and observability handoffs.
+Produce a runtime plan an operator can stand up: the request path end to end, what happens on every provider failure mode, how secrets and logs are handled, and the SLOs the system is committed to.
+
+Constraints:
+
+- Every provider failure mode — rate limit, timeout, quota exhaustion, degraded quality, hard outage — has a defined behavior. A path without a stated fallback is an incomplete plan.
+- Never invent provider quotas, rate limits, pricing, or availability figures. Cite the provider surface or record the limit as unverified and name the measurement that would confirm it.
+- Secrets, logging, retention, and data handling are bounded by the privacy requirements of the data class passing through inference.
+- SLOs are stated as measurable targets with the telemetry that observes them.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Provider surfaces and endpoints are independent. Gathering and assessing per-provider limits, quotas, failure behavior, and fallback candidates is parallel-safe, as is per-endpoint timeout and retry design. The shared SLO, secrets policy, and logging policy are single decisions across the runtime.
 
 ## Outputs
 
@@ -61,9 +67,14 @@ Plan production inference operations. Define deployment topology, model access, 
 
 ## Halt conditions
 
-- Production environment, traffic estimate, or reliability target is missing.
-- Provider constraints cannot be verified.
-- Logging or data retention would violate privacy requirements.
+Default posture is to proceed and label the assumption inline. An unconfirmed traffic estimate or an unverified provider quota is a soft gap: state the assumed figure, mark it, name the measurement that would confirm it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — the plan would commit spend, quota, or a provider contract beyond what the owner has authorized.
+- Production or destructive — a topology, routing, or credential change would disrupt live inference traffic without a reversible path.
+- Security or privacy — secrets handling, log content, or retention would expose credentials or personal data, or would violate the data-handling terms of the deployment environment.
+- Source conflict — provider documentation, observed runtime behavior, and internal configuration disagree on limits, quotas, or failure semantics.
+- Release integrity — the capability would go to production with no fallback for a known provider failure mode, or with SLOs that no telemetry can observe.
+- Connector unreachable — runtime configuration, provider documentation, existing telemetry, or runbooks exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -82,6 +93,7 @@ Plan production inference operations. Define deployment topology, model access, 
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means the request path, every provider failure mode with its fallback, the secrets and logging policy, and the SLO set with its observing telemetry are all stated — each traced to a source fact or a labeled assumption.

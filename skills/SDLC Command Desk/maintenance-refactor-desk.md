@@ -1,6 +1,6 @@
 ---
 name: maintenance-refactor-desk
-description: create connector-grounded maintenance, refactor, dependency-upgrade, dead-code removal, migration, and technical-debt reduction artifacts for software delivery. use when chatgpt needs to assess refactor scope, plan safe code cleanup, sequence dependency upgrades, evaluate migration risk, define regression controls, prevent scope creep, or prepare downstream handoff notes for implementation-handoff-desk, test-strategy-desk, verification-desk, ci-failure-desk, security-threat-desk, or release-operations-desk workflows.
+description: create connector-grounded maintenance, refactor, dependency-upgrade, dead-code removal, migration, and technical-debt reduction artifacts for software delivery. use when {{AGENT}} needs to assess refactor scope, plan safe code cleanup, sequence dependency upgrades, evaluate migration risk, define regression controls, prevent scope creep, or prepare downstream handoff notes for implementation-handoff-desk, test-strategy-desk, verification-desk, ci-failure-desk, security-threat-desk, or release-operations-desk workflows.
 ---
 
 # Maintenance Refactor Desk
@@ -18,33 +18,19 @@ Use this skill to turn maintenance intent into bounded, evidence-backed refactor
 
 ## Operating model
 
-1. Classify the maintenance request.
-   - Refactor: structure-preserving internal code change.
-   - Dependency upgrade: package, SDK, runtime, framework, or toolchain update.
-   - Migration: moved API, storage, framework, service, module, or architecture boundary.
-   - Dead-code cleanup: unused files, symbols, routes, flags, configs, docs, or tests.
-   - Technical-debt reduction: debt register, prioritization, sequencing, or risk controls.
+**Outcome.** A bounded, evidence-backed maintenance artifact for the request type: a refactor (structure-preserving internal code change), a dependency upgrade (package, SDK, runtime, framework, or toolchain), a migration (moved API, storage, framework, service, module, or architecture boundary), a dead-code cleanup (unused files, symbols, routes, flags, configs, docs, or tests), or technical-debt reduction (debt register, prioritization, sequencing, or risk controls).
 
-2. Run connector preflight.
-   - Use GitHub for repo files, dependency manifests, branches, PRs, issues, tests, CI, ownership, and commit history.
-   - Use issue/project connectors for maintenance tickets, acceptance criteria, labels, owners, and blockers.
-   - Use document connectors for architecture docs, migration notes, deprecation plans, runbooks, release policy, and prior audits.
-   - Use CI connectors or GitHub Actions data for pipeline failures, flaky tests, build matrix, and validation history.
-   - Use security/dependency scan evidence when an upgrade has security implications.
+**Grounding.** Use GitHub for repo files, dependency manifests, branches, PRs, issues, tests, CI, ownership, and commit history. Use issue/project connectors for maintenance tickets, acceptance criteria, labels, owners, and blockers. Use document connectors for architecture docs, migration notes, deprecation plans, runbooks, release policy, and prior audits. Use CI connectors or GitHub Actions data for pipeline failures, flaky tests, build matrix, and validation history. Use security or dependency scan evidence when an upgrade has security implications.
 
-3. Separate observation from recommendation.
-   Do not present inferred dead code, unused dependencies, or safe migrations as proven unless source evidence supports the claim. Mark uncertain findings as candidates and require verification gates.
+**Observation versus recommendation.** Do not present inferred dead code, unused dependencies, or safe migrations as proven unless source evidence supports the claim. Mark uncertain findings as candidates and attach the gate that would confirm them.
 
-4. Choose the artifact type.
-   - Maintenance assessment: use `references/maintenance-assessment-template.md`.
-   - Refactor plan: use `references/refactor-plan-template.md`.
-   - Dependency upgrade plan: use `references/dependency-upgrade-template.md`.
-   - Migration sequence: use `references/migration-sequence-template.md`.
-   - Dead-code cleanup: use `references/dead-code-cleanup-template.md`.
-   - Regression controls: use `references/regression-control-template.md`.
+**Artifact selection.** Maintenance assessments use `references/maintenance-assessment-template.md`. Refactor plans use `references/refactor-plan-template.md`. Dependency upgrade plans use `references/dependency-upgrade-template.md`. Migration sequences use `references/migration-sequence-template.md`. Dead-code cleanups use `references/dead-code-cleanup-template.md`. Regression controls use `references/regression-control-template.md`.
 
-5. Package output.
-   When a downloadable artifact is useful, use `scripts/write_maintenance_markdown.py` to wrap the content with a title, use instructions, source facts, and assumptions. If the user needs implementation, continue into the implementation handoff stage after the maintenance scope is bounded.
+**Parallel surface.** Assessment fans out: dead-code candidates, dependency entries, modules, and debt items are independent to analyze, and reference-searching each candidate across the repo is independent work. Assess them in parallel. Sequencing is not parallel — upgrade order, migration steps, and cutover ordering are dependency-constrained content and must be emitted as an ordered sequence, not a set.
+
+**Packaging.** When a downloadable artifact is useful, use `scripts/write_maintenance_markdown.py` to wrap the content with a title, use instructions, source facts, and assumptions. If the user needs implementation, continue into the implementation handoff stage after the maintenance scope is bounded.
+
+**Acceptance bar.** The artifact is done when scope and non-goals are stated tightly enough that an implementer cannot reasonably expand them; every dead-code or unused-dependency claim names the search evidence behind it and is labeled proven or candidate; each change carries its risk class from `Risk controls` below; regression coverage and rollback are named per change rather than in general; and the ordered sequence is explicit wherever order matters. Do not invent file paths, symbols, dependency versions, compatibility matrices, test names, CI status, or ownership.
 
 ## Required outputs
 
@@ -72,15 +58,16 @@ Classify changes as:
 
 ## Halt conditions
 
-Halt and report instead of drafting a confident plan when:
+Proceed by default. Unknown scope is bounded with a labeled assumption and a narrower plan, not a stop — scope creep, not uncertainty, is this desk's failure mode. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- Required repo or dependency evidence is unavailable.
-- Source facts conflict across GitHub, docs, and tickets.
-- The requested refactor includes feature changes.
-- The upgrade target or compatibility matrix is unknown.
-- Dead-code evidence is inferential only and no verification path exists.
-- Required tests or CI gates cannot be identified.
-- The change would cross release/deployment/security boundaries without the relevant downstream desk.
+- **Approval** — the plan would accept behavioral risk, waive regression coverage, or expand agreed scope, and a human owner must authorize it.
+- **Production or destructive** — deletion is proposed on inferential dead-code evidence with no confirming gate available, or the change would cross a release, deployment, or data-migration boundary without the relevant downstream desk.
+- **Security or privacy** — an upgrade carries a known vulnerability decision, or the change touches authentication, authorization, secrets, or crypto without security review.
+- **Source conflict** — GitHub, docs, and tickets genuinely disagree on the current state or the intended target.
+- **Release integrity** — the plan would be presented as safe when required tests or CI gates cannot be identified, or the upgrade target and compatibility matrix are unknown.
+- **Connector unreachable** — required repo or dependency evidence exists but cannot be read. Evidence that is merely absent is a soft gap: mark the finding a candidate rather than proven, and continue.
+
+A requested refactor that includes feature changes is a scoping problem: split the feature work out, say that you did, and continue with the structure-preserving portion.
 
 ## Composition with other SDLC skills
 
@@ -109,4 +96,4 @@ Halt and report instead of drafting a confident plan when:
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

@@ -30,11 +30,15 @@ Optimize cost and latency without weakening quality or safety. Evaluate model ro
 
 ## Workflow
 
-- Collect or verify baseline metrics.
-- Identify optimization levers and risks.
-- Estimate impact and required validation.
-- Define safe rollout, rollback, and monitoring.
-- Separate quick wins from architecture changes.
+This order is mandated. Optimization without a baseline cannot be shown to have helped, and a rollout planned before its validation and rollback path cannot be safely reversed when quality regresses.
+
+1. Collect the baseline metrics, or confirm that an existing baseline is still current.
+2. Identify optimization levers and the risk each carries to quality, grounding, and safety.
+3. Estimate impact per lever and state the validation each one requires.
+4. Define safe rollout, rollback triggers, and monitoring.
+5. Separate quick wins from architecture changes.
+
+Within steps 2 and 3 the levers are independent: assessing model routing, caching, prompt compression, context pruning, batching, streaming, parallelism, retrieval tuning, and fallback tiers is parallel-safe, each measured against the same baseline. Step 1 precedes all of them; steps 4 and 5 are aggregate over the selected set.
 
 ## Outputs
 
@@ -61,9 +65,14 @@ Optimize cost and latency without weakening quality or safety. Evaluate model ro
 
 ## Halt conditions
 
-- Baseline metrics or acceptance thresholds are missing.
-- Optimization would reduce safety, grounding, or quality evidence.
-- Provider constraints or traffic assumptions are unverified.
+Default posture is to proceed and label the assumption inline. An unconfirmed traffic mix or an estimated cache hit rate is a soft gap, provided it is marked as an estimate and the measurement that would confirm it is named. Halt only when one of the six hard-halt classes applies.
+
+- Approval — the change would move spend tier, provider commitment, or user-visible behavior beyond what the owner has authorized.
+- Production or destructive — the optimization would change live routing, caching, or runtime topology without a rollback trigger.
+- Security or privacy — context pruning, caching, or logging would retain or expose personal, regulated, or cross-tenant data, or would weaken an existing redaction boundary.
+- Source conflict — telemetry, provider billing, and internal cost models disagree on where the cost or latency actually is.
+- Release integrity — the optimization would ship without evidence that quality, grounding, and safety thresholds still hold, or no baseline exists against which improvement could be established.
+- Connector unreachable — baseline telemetry, cost data, or runtime configuration exists but cannot be read.
 
 ## Downstream handoffs
 
@@ -83,6 +92,7 @@ Optimize cost and latency without weakening quality or safety. Evaluate model ro
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means the baseline is stated with its measurement window, every proposed lever carries an estimated impact and the validation that confirms it, quality and safety thresholds are restated as preserved, and the rollout plan names its rollback trigger and monitoring.

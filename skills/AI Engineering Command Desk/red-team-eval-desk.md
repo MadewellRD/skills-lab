@@ -30,11 +30,15 @@ Plan and analyze adversarial testing for AI systems. Cover jailbreaks, prompt in
 
 ## Workflow
 
-- Define red-team objectives and scope boundaries.
-- Create adversarial scenarios and test categories.
-- Specify logging, review, and severity classification.
-- Analyze failures and map mitigations.
-- Convert repeatable attacks into regression evals.
+This order is mandated. Scope boundaries and authorization are fixed before any adversarial scenario is executed, and logging, review protocol, and severity classification exist before findings are produced, so that a live finding is never handled ad hoc.
+
+1. Define red-team objectives and scope boundaries, including what is explicitly out of bounds.
+2. Create adversarial scenarios and test categories within that scope.
+3. Specify logging, review protocol, and severity classification.
+4. Analyze failures and map mitigations.
+5. Convert repeatable attacks into regression evals.
+
+Within steps 2 and 4 the attack categories are independent: authoring scenarios, executing them, and analyzing results are parallel-safe across jailbreak, prompt-injection, data-exfiltration, harmful-instruction, tool-permission, and policy-evasion categories. Scope definition in step 1 and the severity scale in step 3 are shared and are set once, before that fan-out begins.
 
 ## Outputs
 
@@ -61,9 +65,16 @@ Plan and analyze adversarial testing for AI systems. Cover jailbreaks, prompt in
 
 ## Halt conditions
 
-- System target, allowed test boundaries, or safety policy is undefined.
-- Testing would require unsafe instructions outside defensive scope.
-- Failures indicate immediate containment or incident response is needed.
+Default posture is to proceed and label the assumption inline; an unconfirmed reviewer roster or an undecided sample size is a soft gap. Halt only when one of the six hard-halt classes applies.
+
+- Approval — testing would reach a system, tenant, dataset, or user population that has not been authorized as in scope.
+- Production or destructive — an adversarial scenario would execute a real side-effecting action against production systems, real users, or live data.
+- Security or privacy — testing would require producing genuinely harmful operational content outside defensive scope, or would expose real personal, regulated, or credential data.
+- Source conflict — safety policy, system prompt, and tool contracts disagree about what the system is permitted to do, leaving "failure" undefinable.
+- Release integrity — findings would be closed without mitigation evidence, or a release would proceed on red-team coverage that never exercised the material attack surface.
+- Connector unreachable — the system prompt, tool contracts, eval harness, or prior incident records exist but cannot be read.
+
+A finding that indicates active exploitation, live data exposure, or ongoing user harm is an immediate escalation to `ai-incident-response-desk`, not a test result to file.
 
 ## Downstream handoffs
 
@@ -83,6 +94,7 @@ Plan and analyze adversarial testing for AI systems. Cover jailbreaks, prompt in
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every in-scope attack category has scenarios and an executed result, every failure carries a severity against the stated scale and a mapped mitigation, and every repeatable attack has been converted into a named regression eval.

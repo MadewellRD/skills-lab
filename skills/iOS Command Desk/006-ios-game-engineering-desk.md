@@ -19,11 +19,17 @@ Use `references/platform/ios-game-baseline.md` for game defaults when the repo d
 
 ## Workflow
 
-1. Confirm the request is game runtime, engine integration, native performance, asset delivery, Play Games services, gameplay QA, or iOS wrapper work.
-2. Resolve engine/runtime, native toolchain, Xcode packaging, asset pipeline, input model, frame/performance budget, target devices, and validation commands.
-3. Separate engine code, iOS wrapper code, native libraries, Xcode packaging, Play-service integrations, and assets.
-4. Produce implementation boundaries, gameplay smoke coverage, profiling expectations, and validation commands.
-5. Continue to backend integration, security/privacy, performance, testing, or release store ops based on scope.
+**Outcome.** An implementation-ready iOS game scope: confirmed game-runtime lane, engine/runtime and version, native/Metal/engine runtime/CMake facts, iOS wrapper and package boundaries, asset pipeline and on-demand resources and asset delivery needs, input model, target device tiers, frame and performance budget, profiling expectations, gameplay smoke coverage, and validation commands.
+
+**Grounding.** Resolve engine/runtime, native toolchain, Xcode packaging, asset pipeline, input model, frame and performance budget, target devices, and validation commands from source. Do not invent engine/runtime state, iOS target versions, native toolchain facts, package names, asset delivery state, frame budgets, device coverage, validation commands, or release targets.
+
+**Boundary constraint.** Keep engine code, iOS wrapper code, native libraries, Xcode packaging, game-service integrations, and assets separated in the plan: a coding agent that cannot tell which side of the boundary a change lands on will cross it. Confirm the request is game runtime, engine integration, native performance, asset delivery, game services, gameplay QA, or iOS wrapper work before scoping.
+
+**Parallel surface.** Engine code, the iOS wrapper, native libraries, the asset pipeline, and each target device tier are independent work surfaces: scope and profile them in parallel. Reconciling the frame, thermal, and performance budget across tiers, and the packaging plan that spans all of them, are aggregate and run once.
+
+**Acceptance bar.** The plan is ready to hand off when engine, wrapper, and native boundaries are explicit and every change is placed on one side of them; the frame or performance budget is stated per device tier with the profiling tool that measures it; gameplay smoke coverage names the flows it exercises; validation commands are runnable as written; and store, economy, and live-ops risks are recorded rather than deferred.
+
+Continue to backend integration, security/privacy, performance, testing, or release store ops based on scope.
 
 ## Responsibilities
 
@@ -57,11 +63,16 @@ Game engineering plan, engine/native boundary map, iOS wrapper scope, asset/runt
 
 ## Halt conditions
 
-- Engine/runtime or native toolchain is unknown.
-- Gameplay scope, target devices, input model, or frame budget is missing.
-- Build/package/release path is unknown.
-- Requested Play, multiplayer, economy, live-ops, or production-impacting action lacks approval.
-- No validation path exists for the requested gameplay or engine change.
+Proceed by default. An unresolved engine or asset detail is normally a labeled assumption plus a named source, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — a store, multiplayer, economy, live-ops, or production-impacting action is requested without explicit authorization.
+- **Production or destructive** — the plan would touch live game economy state, player saves, published asset packs, or release configuration.
+- **Security or privacy** — anti-tamper, entitlement, purchase, or player-data handling requires secrets or credentials that cannot be handled safely here.
+- **Source conflict** — engine project state, repo packaging, and design docs genuinely disagree on runtime, asset delivery, or input model. Preserve the conflict.
+- **Release integrity** — the handoff would declare a gameplay or engine change shippable when no validation path exists for it.
+- **Connector unreachable** — repo, engine project, or build access exists but cannot be read.
+
+Otherwise proceed: an unknown engine/runtime, native toolchain, gameplay scope, device tier, input model, frame budget, or build/package path becomes a labeled assumption with the evidence needed to confirm it, and scope narrows to what the known facts support.
 
 ## Default output modes
 
@@ -82,7 +93,7 @@ Use the SDLC Command Desk Suite when this stage needs generic lifecycle support 
 
 ## iOS research grounding
 
-- Use progressive disclosure: keep routing metadata short, active desk instructions bounded, and references cold until needed.
+- Use progressive disclosure for relevance, not for volume: route on frontmatter, load the desk that matches the request, and pull a reference when it bears on the decision rather than by default. Context is not the scarce resource; ambiguity is.
 - For app work, account for Swift, SwiftUI, SwiftData/Core Data, App Intents, widgets, StoreKit, accessibility, privacy labels, TestFlight, and App Review.
 - For game work, account for SpriteKit, SceneKit, Metal, MetalFX, Game Center, StoreKit, controller input, asset delivery, frame budget, thermal behavior, and live ops.
 - Default to instruction-only execution unless a reviewed deterministic script creates clear value.

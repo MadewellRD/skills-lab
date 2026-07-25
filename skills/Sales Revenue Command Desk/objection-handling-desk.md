@@ -1,6 +1,6 @@
 ---
 name: objection-handling-desk
-description: draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Objection Handling Desk

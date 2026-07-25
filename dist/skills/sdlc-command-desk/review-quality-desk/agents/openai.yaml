@@ -1,5 +1,0 @@
-interface:
-  display_name: Review Quality Desk
-  short_description: Connector-grounded PR review, diff risk, quality gate, and missing-test assessment.
-  icon: 🧭
-  color: '#4b5563'

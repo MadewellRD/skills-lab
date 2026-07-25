@@ -1,6 +1,6 @@
 ---
 name: review-quality-desk
-description: create connector-grounded pull request review, diff risk, quality gate, missing-test, scope creep, and approve/comment/request-changes recommendations from github prs, changed files, checks, tests, code ownership, issues, and review comments. use when chatgpt needs to review a pr, assess implementation quality, identify regressions, draft review comments, summarize risk, verify acceptance criteria, or prepare review handoff notes for implementation-handoff-desk.
+description: create connector-grounded pull request review, diff risk, quality gate, missing-test, scope creep, and approve/comment/request-changes recommendations from github prs, changed files, checks, tests, code ownership, issues, and review comments. use when the assistant needs to review a pr, assess implementation quality, identify regressions, draft review comments, summarize risk, verify acceptance criteria, or prepare review handoff notes for implementation-handoff-desk.
 ---
 
 # Review Quality Desk
@@ -20,13 +20,15 @@ This skill does not implement fixes. When a change needs coding work, continue i
 
 ## Connector-first workflow
 
-1. Identify the review target: PR number, branch, commit range, patch, or pasted diff.
-2. Run connector preflight using `references/connector-routing.md`.
-3. Establish source hierarchy using `references/source-hierarchy.md`.
-4. Inspect the PR metadata, changed files, patch, checks, linked issue, review comments, and relevant code paths when available.
-5. Compare the change against stated requirements, acceptance criteria, tests, docs, and existing project conventions.
-6. Produce one of the output artifacts in `references/output-contract.md`.
-7. Include evidence blocks or source notes for all source-dependent claims.
+**Outcome.** One of the output artifacts in `references/output-contract.md`, carrying a review decision, risk-tagged findings, and evidence blocks or source notes for every source-dependent claim.
+
+**Review target.** Establish what is under review — PR number, branch, commit range, patch, or pasted diff — before drawing conclusions about it.
+
+**Grounding.** Run connector preflight using `references/connector-routing.md` and establish source hierarchy using `references/source-hierarchy.md`. Inspect PR metadata, changed files, patch, checks, linked issue, review comments, and relevant code paths when available. Compare the change against stated requirements, acceptance criteria, tests, docs, and existing project conventions.
+
+**Parallel surface.** Changed files, hunks, findings, and check results are independent review units — no file's assessment depends on another's. Read the changed files and evaluate findings in parallel rather than walking the diff serially. Reserve a single pass at the end for cross-file concerns: blast radius, scope creep against the linked issue, and contradictory findings.
+
+**Acceptance bar.** The review is done when the decision is one of the four below and is defensible from cited evidence; every substantive finding carries severity, category, evidence, impact, and an exact recommended action; findings are anchored to a file and line where a specific line is at fault; and acceptance criteria from the linked issue are each addressed or explicitly noted as unverifiable. A review that lists observations without a decision is incomplete.
 
 ## Review decision model
 
@@ -81,7 +83,16 @@ Default artifact names:
 
 ## Halt behavior
 
-Follow `references/halt-conditions.md`. Halt or mark the review as `insufficient evidence` when required source facts are unavailable, the PR cannot be fetched, the diff is missing, linked acceptance criteria are unavailable, checks are stale, or connector facts conflict with pasted context.
+Proceed by default. Review a diff you can see even when surrounding context is thin: state what could not be assessed, label the assumption, and issue the decision the evidence supports. `insufficient evidence` is a review decision, not a halt, and is the right answer when the diff itself cannot be read. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — the user asks this desk to submit an approving review or merge, rather than produce the review material.
+- **Production or destructive** — acting on the review would push, merge, or close work rather than comment on it.
+- **Security or privacy** — the diff exposes secrets or credentials, or reviewing it further would require handling personal data.
+- **Source conflict** — connector facts conflict with pasted context on a load-bearing point such as what the diff actually contains.
+- **Release integrity** — an `approve` would be issued while required checks are red, stale, or unverifiable.
+- **Connector unreachable** — the PR or diff exists but cannot be fetched. Missing linked acceptance criteria or absent review comments are soft gaps: review what is present and mark the unverified dimensions.
+
+Follow `references/halt-conditions.md` for the halt artifact format.
 
 ## Composition with other SDLC skills
 
@@ -93,4 +104,4 @@ Follow `references/halt-conditions.md`. Halt or mark the review as `insufficient
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `HANDOFF_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

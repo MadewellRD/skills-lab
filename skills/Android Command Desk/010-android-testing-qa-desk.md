@@ -15,11 +15,15 @@ Define Android app and game QA strategy: unit tests, instrumented tests, UI test
 
 ## Workflow
 
-1. Resolve acceptance criteria, changed scope, app/game lane, supported devices, available test commands, and current CI state.
-2. Map requirements to test types: unit, integration, instrumented, UI, screenshot, benchmark, smoke, gameplay, store/pre-launch, and manual exploratory checks.
-3. Define device/API matrix and local/CI validation sequence.
-4. Produce QA plan, evidence expectations, triage rules, and release pass/fail criteria.
-5. Continue to release store ops when QA gates are explicit.
+**Outcome.** An Android QA strategy and evidence plan: requirement-to-test map; unit, integration, instrumented, UI, screenshot, benchmark, smoke, gameplay, Play pre-launch, and manual exploratory coverage; device and API matrix with emulator and physical coverage; local and CI validation sequence; defect triage rules; and release pass/fail gates with the evidence each requires.
+
+**Grounding.** Work from the PRD, architecture, implementation scope, validation commands, CI status, test files, emulator and device availability, benchmark output, issue and bug history, and gameplay scope. Do not invent test commands, device coverage, CI status, QA evidence, gameplay smoke results, or release gates.
+
+**Parallel surface.** Test cases, device and API matrix cells, locales, and app versus game surfaces are independent: design, assign, and execute across them in parallel. Two things are not parallel — the local and CI validation sequence has real ordering constraints (build before instrumented run, install before an adb-driven test), and the release pass/fail roll-up is aggregate and runs once, after the per-cell results exist.
+
+**Acceptance bar.** The QA plan is complete when every acceptance criterion maps to at least one named test or an explicit manual check; every matrix cell states whether it is covered, uncovered, or waived with rationale; each validation command is runnable as written against the repo; defect triage rules define severity and the release-blocking threshold; and each release gate names the evidence artifact that satisfies it rather than the intent behind it.
+
+Continue to release store ops when QA gates are explicit.
 
 ## Responsibilities
 
@@ -50,11 +54,16 @@ QA strategy, test matrix, validation command plan, release evidence checklist, d
 
 ## Halt conditions
 
-- Accepted scope or acceptance criteria are missing.
-- No test/validation commands can be identified.
-- Required device/API coverage is unavailable.
-- Release work lacks evidence for critical paths.
-- Gameplay smoke cannot be defined for a game-facing change.
+Proceed by default. Missing coverage is normally recorded as a named coverage gap, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — testing requires accounts, devices, paid test infrastructure, or environments the user has not authorized.
+- **Production or destructive** — the plan would run tests against production services, real payment flows, or live player data.
+- **Security or privacy** — tests require real credentials, personal data, or production secrets as fixtures.
+- **Source conflict** — acceptance criteria, implementation scope, and existing tests genuinely disagree on expected behavior. Preserve the conflict rather than encoding one side as the assertion.
+- **Release integrity** — a release gate would be reported as passed while its evidence is absent, unrunnable, or drawn from a different build than the one shipping.
+- **Connector unreachable** — CI, test output, or repo test sources exist but cannot be read.
+
+Otherwise proceed: an unavailable device or API level, an unidentified validation command, or an undefined gameplay smoke path becomes a labeled coverage gap naming the evidence needed to close it, and the plan covers what can be covered.
 
 ## Default output modes
 

@@ -30,11 +30,17 @@ Design the control architecture for AI agents and AI workflows. Decide whether t
 
 ## Workflow
 
-- Classify the required level of agency.
-- Define loop, state, memory, tool routing, and approvals.
-- Set retry, timeout, fallback, and halt rules.
-- Map observability and eval requirements.
-- Prepare downstream implementation handoff when design is stable.
+Produce a bounded control architecture: the level of agency the task actually requires, the loop and state model that supports it, the tools the agent may reach, where a human must approve, and what happens on every failure path.
+
+Constraints:
+
+- Choose the least agency that satisfies the goal. Autonomy is added against evidence, never by default.
+- Approval gates, destructive-action boundaries, and tool permissions are runtime controls, not prompt wording. Never place a control in natural language that belongs in the runtime.
+- Every tool route states its retry, timeout, fallback, and halt behavior.
+- Memory, state, and retention behavior are explicit, including what persists and for how long.
+- Label unresolved assumptions inline rather than presenting them as settled design facts.
+
+Once the agency level is fixed, per-tool-route design — schema boundary, permission, retry, timeout, and failure semantics for each route — is parallel-safe across routes, as is per-failure-mode analysis. The agency classification and the shared state model are single decisions and are not.
 
 ## Outputs
 
@@ -60,9 +66,14 @@ Design the control architecture for AI agents and AI workflows. Decide whether t
 
 ## Halt conditions
 
-- Allowed actions, approval gates, or tool permissions are missing.
-- Memory or data retention behavior is unclear.
-- The architecture would create uncontrolled autonomy or unobservable production behavior.
+Default posture is to proceed and label the assumption inline. An unset timeout value or an unnamed observability owner is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — the design would grant the agent an action the owner has not authorized, or no approval owner exists for a high-impact action.
+- Production or destructive — the agent could mutate, delete, or dispatch against production systems without a gate in front of it.
+- Security or privacy — the design would expose secrets, credentials, cross-tenant data, or personal data to the model, a tool, or a memory store.
+- Source conflict — tool contracts, permission documentation, and stated requirements disagree on what the agent is actually allowed to do.
+- Release integrity — the architecture would ship autonomy whose behavior cannot be observed or evaluated in production.
+- Connector unreachable — tool contracts, permission definitions, or runtime configuration exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -82,6 +93,7 @@ Design the control architecture for AI agents and AI workflows. Decide whether t
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means a reader can name the agency level and its justification, every tool route with its permission and failure behavior, every approval gate, the state and retention model, and the halt policy — each traced to a source fact or a labeled assumption.

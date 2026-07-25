@@ -10,7 +10,7 @@ description: plan and gate web performance using core web vitals, performance bu
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Set and enforce performance budgets, rendering strategy, caching rules, asset op
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `web-testing-qa-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Routes, page types, device classes, and network classes are independent: budget derivation and cost analysis across them are parallel-safe.
+- Continue to `web-testing-qa-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every budgeted route carries a numeric threshold per metric, lab and field/RUM metrics are labeled separately and never merged, and no measurement is stated as observed unless it comes from a source.
 
 ## Responsibilities
 
@@ -114,9 +118,14 @@ Performance budget, optimization plan, measurement plan, launch gate criteria, r
 
 ## Halt conditions
 
-- No performance baseline for regression claim.
-- Missing target device/network assumptions.
-- Unknown hosting/CDN behavior for caching recommendations.
+Halt only on a hard class:
+
+- Release integrity: a performance launch gate would be marked passed without measurement evidence.
+- Production or destructive: the next action would change live cache, CDN, or edge configuration.
+- Source conflict: baseline measurements, budgets, or hosting behavior genuinely disagree across sources.
+- Connector unreachable: the analytics, RUM, or CI performance source needed for measurement evidence cannot be reached.
+
+A missing baseline, unknown device or network mix, and unknown hosting or CDN behavior are not halts. Proceed with budgets stated as proposed rather than measured, label the assumption inline, and record it in `open_questions`. Never state a metric or a regression as observed without a source.
 
 ## Default output modes
 

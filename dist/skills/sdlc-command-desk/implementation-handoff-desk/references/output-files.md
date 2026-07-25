@@ -36,7 +36,7 @@ Avoid spaces. Use hyphens. Do not include timestamps unless the user asks for ve
 
 ## How to use this file
 
-Paste everything under `## Prompt` into Claude Code, Codex, or the target implementation agent. Keep the guardrails, halt conditions, commit instructions, PR title, PR body requirements, and final stop line intact.
+Paste everything under `## Prompt` into the coding agent or the target implementation agent. Keep the guardrails, halt conditions, commit instructions, PR title, PR body requirements, and final stop line intact.
 
 ## Prompt
 
@@ -54,7 +54,7 @@ Return only:
 Example:
 
 ```markdown
-Created the downloadable prompt: [pr-prompt-corpus-catalog.md](sandbox:/mnt/data/pr-prompt-corpus-catalog.md). Paste everything under `## Prompt` into Claude Code or Codex.
+Created the downloadable prompt: [pr-prompt-corpus-catalog.md](sandbox:/mnt/data/pr-prompt-corpus-catalog.md). Paste everything under `## Prompt` into the coding agent.
 ```
 
 Do not paste the full prompt in chat unless the user explicitly asks for inline text.

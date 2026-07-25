@@ -15,10 +15,15 @@ Define Android observability and live ops for app/game launches and operations: 
 
 ## Workflow
 
-1. Resolve target release/feature, telemetry stack, event schema, dashboards, alert owners, feature flags, and remote config controls.
-2. Map product/release gates to observable signals: crashes, ANRs, sessions, funnels, purchases, retention, performance, and game economy health.
-3. Define rollout monitoring, alert thresholds, incident handoff, rollback triggers, and live-ops controls.
-4. Update packet with operational evidence and continue to maintenance/growth after launch readiness.
+**Outcome.** An Android observability and live-ops plan: telemetry stack and owners; event schema, metrics, dashboards, and alert thresholds; crash, ANR, session, funnel, purchase, retention, performance, and game economy signals; feature flags, remote config, and live-ops controls; rollout monitoring; rollback triggers; and incident handoff.
+
+**Grounding.** Work from the release plan, analytics plan, crash and ANR tooling, monitoring docs, feature flag and remote config docs, game live-ops docs, the incident process, and the rollout plan. Do not invent telemetry stacks, dashboards, alert owners, remote config, production signals, game economy controls, or incident hooks.
+
+**Parallel surface.** Individual events, metrics, dashboards, and alert definitions are independent: specify them in parallel. Threshold coherence across the alert set, the rollout monitoring plan, and the rollback trigger set are aggregate — they must not contradict one another, so reconcile them once after the per-signal work.
+
+**Acceptance bar.** The plan is complete when every release gate maps to at least one observable signal; each alert names a threshold, a window, and an owner or marks the owner unknown; each rollback trigger names the signal and value that fires it; instrumentation that does not yet exist is listed as an instrumentation gap rather than assumed present; and the incident handoff states who receives it and with what context.
+
+Update the packet with operational evidence and continue to maintenance/growth after launch readiness.
 
 ## Responsibilities
 
@@ -49,10 +54,16 @@ Observability plan, event/metric map, dashboard/alert checklist, live-ops plan, 
 
 ## Halt conditions
 
-- Telemetry stack or owner is unknown.
-- Required analytics, crash, ANR, or rollout evidence is unavailable.
-- Production rollout lacks monitoring or rollback triggers.
-- Game live-ops, economy, content, or event controls are required but unresolved.
+Proceed by default. An unknown telemetry detail is normally an instrumentation gap plus the fact needed to close it, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — changing alerting, remote config, feature flags, or live-ops controls in a real environment requires authorization.
+- **Production or destructive** — the request would flip a production flag, push remote config, alter a live game economy or event, or silence a production alert.
+- **Security or privacy** — proposed telemetry would capture personal data, credentials, or content whose collection no source establishes.
+- **Source conflict** — monitoring docs, the analytics plan, and observed production signals genuinely disagree on what is instrumented. Preserve the conflict.
+- **Release integrity** — a production rollout would proceed with no monitoring coverage or rollback triggers, or launch health would be reported as observable when the instrumentation does not exist.
+- **Connector unreachable** — a monitoring, analytics, or crash-reporting source exists but cannot be read.
+
+Otherwise proceed: an unknown telemetry stack, owner, dashboard, or live-ops control becomes a labeled assumption plus an open question, and the plan states what becomes observable once the gap is closed.
 
 ## Default output modes
 

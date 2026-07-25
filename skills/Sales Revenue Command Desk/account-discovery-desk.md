@@ -1,6 +1,6 @@
 ---
 name: account-discovery-desk
-description: build account briefs, stakeholder maps, whitespace hypotheses, and meeting agendas from crm, files, and public account evidence. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: build account briefs, stakeholder maps, whitespace hypotheses, and meeting agendas from crm, files, and public account evidence. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Account Discovery Desk

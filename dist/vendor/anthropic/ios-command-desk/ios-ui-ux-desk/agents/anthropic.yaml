@@ -1,0 +1,16 @@
+interface:
+  display_name: iOS UI UX Desk
+  short_description: Plans iOS UI/UX, navigation, accessibility, localization, and
+    input states.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#0ea5e9'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

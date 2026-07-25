@@ -30,11 +30,13 @@ Create go-to-market briefs for product launches or major changes. Translate prod
 
 ## Workflow
 
-- Define launch audience and product story.
-- Map positioning, differentiators, objections, and proof points.
-- List channel, sales, support, and success enablement needs.
-- Define success metrics and launch risks.
-- Prepare launch readiness handoff.
+**Outcome.** A GTM brief that states the audiences, the product story and positioning, the proof points behind each claim, the enablement each function needs, the success metrics, and the launch risks — ready to hand to launch readiness.
+
+**Constraints.** Every differentiator and proof point traces to product, customer, or competitive evidence; a claim that cannot be sourced does not ship in messaging, regardless of how well it reads. Keep positioning consistent across audiences — segment-specific emphasis is fine, contradictory promises are not. Messaging that touches pricing, legal, regulatory, or compliance language belongs to its named approver, not to this desk.
+
+**Parallel surface.** Audiences, personas, and channels are independent — develop the message, objections, and enablement needs for each in parallel rather than sequentially. The positioning consistency check, the shared messaging pillars, and the combined risk and metric set are a single aggregate pass once every audience is drafted, because contradictions between audiences are only visible across the whole brief.
+
+**Acceptance bar.** Every messaging claim names its evidence, every audience has a stated need and channel, every enablement item names the owning function, and every success metric has a source of truth for measurement. Unresolved pricing, legal, or support gates appear in the brief as named open items rather than being written around.
 
 ## Outputs
 
@@ -62,9 +64,16 @@ Create go-to-market briefs for product launches or major changes. Translate prod
 
 ## Halt conditions
 
-- Product scope, audience, or launch goal is unclear.
-- Differentiation claims lack evidence.
-- Pricing, support, or legal/compliance gates are unresolved.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — messaging, pricing language, or claims subject to legal, regulatory, or compliance review are being treated as final without their named approval owner.
+- **Production or destructive** — the request is to publish, send, or distribute launch material rather than to draft the brief.
+- **Security or privacy** — customer names, references, logos, or account detail would be used externally without confirmed permission.
+- **Source conflict** — product, pricing, and launch sources genuinely disagree on what is shipping, when, or at what price. A GTM brief that averages a scope conflict ships a promise nobody made.
+- **Release integrity** — a launch claim would go external on evidence that cannot carry it, or the brief would assert a launch date that the release evidence does not support.
+- **Connector unreachable** — a required product, pricing, competitive, or customer source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Unclear scope, audience, or launch goal is a labeled assumption plus an open question with a named owner. A differentiation claim without evidence is neither a halt nor a claim: it is recorded as unsupported and kept out of the messaging pillars until the evidence exists.
 
 ## Downstream handoffs
 

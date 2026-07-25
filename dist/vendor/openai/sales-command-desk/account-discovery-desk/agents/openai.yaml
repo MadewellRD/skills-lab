@@ -1,0 +1,16 @@
+interface:
+  display_name: Account Discovery Desk
+  short_description: Build account briefs, stakeholder maps, whitespace hypotheses,
+    and meeting agendas from CRM, files, and public account evidence.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

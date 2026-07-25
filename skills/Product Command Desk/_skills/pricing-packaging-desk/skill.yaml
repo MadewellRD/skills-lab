@@ -1,0 +1,11 @@
+interface:
+  display_name: Pricing & Packaging Desk
+  short_description: Develop pricing hypotheses, packages, entitlements, monetization
+    risk assessments, and pricing experiments.
+  default_prompt: ''
+  icon: 📦
+  primary_color: '#7c3aed'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

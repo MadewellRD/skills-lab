@@ -1,6 +1,6 @@
 ---
 name: issue-planning-desk
-description: create connector-grounded issue plans, github issue drafts, dependency graphs, milestone breakdowns, labels, sequencing, acceptance gates, and downstream handoff notes from prds, discovery memos, architecture specs, design docs, repo state, and stakeholder decisions. use when chatgpt needs to turn requirements or design intent into actionable implementation work, sprint scope, issue decomposition, issue bodies, dependency ordering, or implementation-handoff-desk handoff material.
+description: create connector-grounded issue plans, github issue drafts, dependency graphs, milestone breakdowns, labels, sequencing, acceptance gates, and downstream handoff notes from prds, discovery memos, architecture specs, design docs, repo state, and stakeholder decisions. use when the assistant needs to turn requirements or design intent into actionable implementation work, sprint scope, issue decomposition, issue bodies, dependency ordering, or implementation-handoff-desk handoff material.
 ---
 
 # Issue Planning Desk
@@ -20,36 +20,19 @@ Create planning artifacts only after grounding the scope in available sources. G
 
 ## Workflow
 
-1. Classify the planning request:
-   - greenfield issue plan from PRD or design spec
-   - milestone or sprint decomposition
-   - GitHub issue body drafting
-   - dependency graph or sequencing plan
-   - backlog cleanup or re-triage
-   - downstream handoff for `implementation-handoff-desk`
+**Outcome.** The planning artifact the request calls for: a greenfield issue plan from a PRD or design spec, a milestone or sprint decomposition, GitHub issue body drafts, a dependency graph or sequencing plan, a backlog cleanup or re-triage, or a downstream handoff for `implementation-handoff-desk`.
 
-2. Run connector preflight using `references/connector-routing.md`.
-   - Use GitHub before naming existing issues, labels, milestones, branches, PRs, files, or tests.
-   - Use docs or uploaded files before deriving requirements, acceptance criteria, or non-goals.
-   - Use communication sources only for recent decisions, priority, ownership, or policy context.
+**Grounding.** Run connector preflight using `references/connector-routing.md`. Use GitHub before naming existing issues, labels, milestones, branches, PRs, files, or tests. Use docs or uploaded files before deriving requirements, acceptance criteria, or non-goals. Use communication sources only for recent decisions, priority, ownership, or policy context.
 
-3. Build the issue model.
-   - Extract parent objective, requirement IDs, design components, risks, dependencies, and validation needs.
-   - Group work into coherent issues with clear boundaries.
-   - Identify dependency order, parallelizable work, blocked work, and follow-up work.
-   - Separate implementation issues from docs, tests, migration, release, security, and observability issues.
+**Issue model.** Extract the parent objective, requirement IDs, design components, risks, dependencies, and validation needs. Group work into coherent issues with clear boundaries. Identify dependency order, parallelizable work, blocked work, and follow-up work. Separate implementation issues from docs, tests, migration, release, security, and observability issues.
 
-4. Produce the requested artifact.
-   - For full planning, use `references/issue-plan-template.md`.
-   - For GitHub issue drafts, use `references/github-issue-template.md`.
-   - For dependency sequencing, use `references/dependency-graph.md`.
-   - For milestone work, use `references/milestone-planning.md`.
-   - For downstream implementation, use `references/pr-command-handoff.md`.
+**Templates.** Full planning uses `references/issue-plan-template.md`. GitHub issue drafts use `references/github-issue-template.md`. Dependency sequencing uses `references/dependency-graph.md`. Milestone work uses `references/milestone-planning.md`. Downstream implementation uses `references/handoff-rules.md`.
 
-5. Preserve evidence and uncertainty.
-   - Include source facts and assumptions.
-   - Mark unverified facts rather than presenting them as known.
-   - If required facts are unavailable, produce a connector diagnostic instead of an implementation-ready plan.
+**Parallel surface.** Once the decomposition is set, drafting the individual issue bodies is independent work — each issue's title, scope, acceptance criteria, and labels stand alone. Draft them in parallel rather than one at a time. Dependency ordering across issues is the one part that must be resolved in a single pass, and the resulting sequence is content: preserve it as ordered output.
+
+**Evidence and uncertainty.** Include source facts and assumptions. Mark unverified facts rather than presenting them as known.
+
+**Acceptance bar.** The plan is done when each issue is independently actionable — a single owner could pick it up, implement it, test it, and close it without asking what was meant — and carries the elements in `Issue quality rules` below. Dependency order must be explicit, and parallelizable issues must be marked as such so downstream work can fan out. Do not invent requirement IDs, issue numbers, labels, milestones, owners, file paths, or acceptance criteria.
 
 ## Output rules
 
@@ -82,14 +65,16 @@ Do not create vague issues such as "improve backend" or "fix UI". Split broad wo
 
 ## Halt behavior
 
-Halt or produce a connector diagnostic when:
+Proceed by default. A thin requirement is decomposed with the gap named in the issue body and the assumption labeled; that is cheaper to correct than a stalled plan. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- requirements are missing or contradictory
-- design scope and product scope disagree
-- GitHub state cannot verify existing issues, labels, milestones, or repo files that the plan depends on
-- issue decomposition would require architectural decisions not present in sources
-- acceptance criteria cannot be derived without inventing product behavior
-- the user asks to create live GitHub issues but permissions or target repo are unavailable
+- **Approval** — the user asks to create, edit, or close live GitHub issues and permission or the target repo is unavailable, or the change needs a human to authorize scope.
+- **Production or destructive** — the request would write to or re-triage a live tracker rather than produce draft issue bodies.
+- **Security or privacy** — issue bodies would need to embed secrets, credentials, or personal data to be actionable.
+- **Source conflict** — requirements are contradictory, or design scope and product scope genuinely disagree. Preserve the conflict rather than picking a reading.
+- **Release integrity** — acceptance gates would be presented as agreed when no source establishes them, or acceptance criteria cannot be derived without inventing product behavior.
+- **Connector unreachable** — GitHub exists but cannot be read for issues, labels, milestones, or repo files the plan depends on. Absent context is a soft gap: draft against user-provided facts, mark the plan source-limited, and continue.
+
+When decomposition would require architectural decisions not present in sources, route to `architecture-design-desk` rather than halting.
 
 ## Composition with other SDLC skills
 
@@ -99,4 +84,4 @@ Halt or produce a connector diagnostic when:
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `HANDOFF_BLOCKER` when implementation handoff facts are insufficient for a coding agent.

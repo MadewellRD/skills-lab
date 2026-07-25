@@ -1,0 +1,13 @@
+# This desk is a byte-identical clone of "Sales Command Desk" (13 skills, verified
+# by content hash on 2026-07-25). Only README.md differs. It was never packaged to
+# dist/ and has no _skills/ source assets.
+#
+# The build skips any desk containing this file. Content is preserved rather than
+# deleted so history and any external references stay intact.
+#
+# To retire it fully: delete the directory. To revive it: remove this file and
+# give it its own _skills/ assets.
+deprecated: true
+reason: duplicate-of
+canonical: Sales Command Desk
+verified: 2026-07-25

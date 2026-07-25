@@ -1,6 +1,6 @@
 ---
 name: qualification-desk
-description: score opportunities against meddicc, bant, or local qualification frameworks with evidence-backed gaps and next actions. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: score opportunities against meddicc, bant, or local qualification frameworks with evidence-backed gaps and next actions. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Qualification Desk

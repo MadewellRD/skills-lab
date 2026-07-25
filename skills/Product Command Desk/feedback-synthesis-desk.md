@@ -30,11 +30,13 @@ Synthesize feedback from customers, users, sales, support, community, stakeholde
 
 ## Workflow
 
-- Normalize and group feedback by product area and user need.
-- Weight sources by segment, recency, severity, and business impact.
-- Identify themes, outliers, and conflicting signals.
-- Map themes to roadmap, bugs, research, or support actions.
-- Prepare prioritization or retention handoff.
+**Outcome.** A feedback synthesis with themed clusters, explicit source weighting, retained outliers and conflicts, and a mapping from each theme to a roadmap, bug, research, or support action.
+
+**Constraints.** Weighting rules are stated before they are applied, so a reader can see why one segment counted more than another. Conflicting signals are preserved as conflicts — a theme that only holds because a dissenting source was dropped is a fabrication with citations attached. Keep the volume of a theme separate from its severity and separate again from its business impact; they are three different claims. Strip or aggregate personal data when quoting verbatims.
+
+**Parallel surface.** Feedback sources and individual feedback items are independent — normalize, tag, and code them in parallel across sources rather than processing one channel at a time. Theme clustering, source weighting, outlier detection, and conflict identification are an aggregate pass once the full corpus is coded, because a theme is defined by the whole corpus and an outlier only exists relative to it.
+
+**Acceptance bar.** Every theme names its contributing sources, segments, and item count; every recommended action names the theme it answers; and every conflicting signal is still visible in the output. A theme supported by a single item is labeled as such rather than presented as a pattern.
 
 ## Outputs
 
@@ -62,9 +64,16 @@ Synthesize feedback from customers, users, sales, support, community, stakeholde
 
 ## Halt conditions
 
-- Feedback corpus, source context, or product area is missing.
-- Sources conflict materially and cannot be reconciled.
-- Feedback suggests active incident, safety, or support escalation.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — the synthesis is being turned into customer-facing communication, a commitment back to a customer, or a roadmap change that needs its named owner.
+- **Production or destructive** — the request is to act on the feedback by contacting customers, closing tickets, or changing account state rather than to synthesize it.
+- **Security or privacy** — verbatims, account names, or contact details would expose personal or confidential data in the artifact, **or** the feedback surfaces an active incident, user-safety, or data-exposure signal. Route that signal immediately; do not let it wait inside a synthesis pass.
+- **Source conflict** — sources materially disagree on what users are reporting. Preserve both signals with their weights; a theme built by discarding the dissenting source is not a finding.
+- **Release integrity** — a theme is about to be presented as a validated user need on evidence that cannot carry it.
+- **Connector unreachable** — a required support, CRM, research, or community source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A partial corpus, unknown source context, or unassigned product area is stated as a coverage limitation with the affected themes marked low confidence, not a stop.
 
 ## Downstream handoffs
 

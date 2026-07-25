@@ -30,11 +30,15 @@ Design product experiments that answer decision-relevant uncertainty. Define hyp
 
 ## Workflow
 
-- Define the decision and hypothesis.
-- Select metrics, cohorts, variants, and guardrails.
-- Set duration, analysis, and stopping rules.
-- Identify instrumentation and risk controls.
-- Prepare launch and analysis handoffs.
+**Outcome.** An experiment plan that resolves a named decision: hypothesis, population, variants, primary and guardrail metrics, duration, analysis plan, stopping rules, and the decision rule that will be applied to the result.
+
+**Ordered gate (mandated — keep this order).** Guardrail metrics, stopping rules, risk controls, and any required ethics or compliance review are fixed *before* a variant is exposed to a single user, and the analysis and decision rules are fixed *before* results are seen. This ordering is not stylistic: exposure to real users cannot be undone, and rules written after the data is visible are not rules. Do not present a plan as launch-ready with these items deferred.
+
+**Constraints.** The experiment must be able to change the decision — if no outcome would alter what the team does, say so instead of designing it. Keep primary, secondary, and guardrail metrics distinct, and state the instrumentation each depends on. Never restate an assumed conversion rate, baseline, or sample size as if it were measured.
+
+**Parallel surface.** Where several decisions, variants, or candidate metric definitions are in scope, each is an independent design unit and can be worked in parallel. Power, duration, and traffic allocation are an aggregate pass once the full metric and variant set is settled, because they are constrained by the whole design rather than by any one arm.
+
+**Acceptance bar.** The plan passes when the hypothesis is falsifiable, every metric names its instrumentation source, guardrails and stopping rules are explicit, and the decision rule states in advance what result leads to which action. A plan that cannot state what would falsify it is not finished.
 
 ## Outputs
 
@@ -63,9 +67,16 @@ Design product experiments that answer decision-relevant uncertainty. Define hyp
 
 ## Halt conditions
 
-- Decision question, metric, cohort, or instrumentation is missing.
-- Experiment risk requires approval or ethical review.
-- Results would be underpowered or misleading for the requested decision.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — the experiment requires ethical, legal, compliance, or launch approval, or exposes users to a pricing, contractual, or safety-relevant variation. Design freely; do not present it as cleared.
+- **Production or destructive** — the request is to launch, enroll users, or start exposure rather than to design. Exposure to real users is irreversible and belongs behind the ordered gate above.
+- **Security or privacy** — the cohort definition, instrumentation, or analysis would collect or expose personal data beyond what the design justifies.
+- **Source conflict** — baseline metrics or population definitions genuinely disagree across sources, so the experiment would be powered against a number nobody agrees on.
+- **Release integrity** — a decisive result is requested from a design that is underpowered, confounded, or otherwise cannot answer the question. Say the design cannot carry the decision rather than shipping a plan that will produce a misleading answer.
+- **Connector unreachable** — a required analytics or instrumentation source exists but cannot be read, so power and baselines cannot be established at all.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. A missing metric definition, cohort boundary, or instrumentation detail is a labeled assumption in the plan plus an explicit prerequisite in the launch handoff, not a stop.
 
 ## Downstream handoffs
 

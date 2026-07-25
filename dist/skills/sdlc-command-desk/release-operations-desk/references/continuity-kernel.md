@@ -83,15 +83,19 @@ continuity_packet:
       - "input"
     soft_gaps:
       - "gap"
-  codex_handoff:
+  implementation_handoff:
     ready: false
     prompt_file: "path-or-none"
-    max_context_policy: "execution_packet_only"
+    context_policy: "relevance_density"   # pass primary evidence; do not pre-compress
   ready_to_continue: true
 ```
 
 Rules:
 - Preserve source facts across desks rather than rediscovering them.
+- Default to `SOFT_GAP_ASSUMPTION_ALLOWED`; reserve hard halts for the consequence-based
+  classes in `references/halt-taxonomy.md`.
+- Where a stage operates over independent items, mark them parallel-safe rather than
+  prescribing serial iteration.
 - Missing facts, missing decisions, and missing approvals are distinct categories.
 - Auto-route upstream for recoverable missing detail.
 - Use typed hard halts for connector, source conflict, approval, security/privacy, production, and release integrity risks.

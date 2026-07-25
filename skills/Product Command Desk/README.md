@@ -13,7 +13,7 @@ skills/Product Command Desk/
   *.md
 ```
 
-Packaged ChatGPT-compatible skills are generated later under:
+Packaged {{AGENT}}-compatible skills are generated later under:
 
 ```text
 dist/skills/product-command-desk/<skill-slug>/

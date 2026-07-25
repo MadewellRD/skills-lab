@@ -30,11 +30,17 @@ Curate datasets for AI development and evaluation. Define sources, rights, label
 
 ## Workflow
 
-- Classify intended use and data rights.
-- Define source selection and exclusion rules.
-- Plan labeling, balancing, deduplication, and splits.
-- Map privacy, retention, and provenance controls.
-- Define dataset validation and change tracking.
+Produce a curation plan a data engineer can execute without further interpretation: which sources are in, which are out and why, how records are labeled and split, and what privacy, provenance, and retention controls apply.
+
+Constraints:
+
+- Intended use and data rights are established before a source is treated as usable. A source with unresolved rights stays excluded and is recorded as excluded, not silently dropped.
+- Eval and benchmark splits are contamination boundaries. State the deduplication and leakage controls that keep training data out of held-out sets.
+- Never invent provenance, license terms, consent status, or owner names. Unknown provenance is recorded as unknown, never inferred from context.
+- Label schema, quality target, and split rule are stated precisely enough to be applied mechanically.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Sources and shards are independent. Per-source rights review, quality assessment, sensitivity classification, and duplicate profiling are parallel-safe across sources and across shards of one source. Split assignment and cross-source deduplication are global operations over the combined set and run once.
 
 ## Outputs
 
@@ -61,9 +67,14 @@ Curate datasets for AI development and evaluation. Define sources, rights, label
 
 ## Halt conditions
 
-- Dataset rights, consent, sensitivity, or intended use is unclear.
-- Data could contaminate eval or benchmark splits.
-- Privacy or retention requirements are unresolved.
+Default posture is to proceed and label the assumption inline. An unknown record count or an undecided balancing ratio is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — a source would be used beyond the consent, license, or contractual scope its owner granted.
+- Production or destructive — a curation step would overwrite, delete, or re-split a dataset that a shipped eval baseline depends on.
+- Security or privacy — regulated, personal, or customer-confidential records would be included, exported, or sent for labeling without the controls that data class requires.
+- Source conflict — license, consent, or provenance records disagree about whether a source may be used or for what purpose.
+- Release integrity — a dataset would be used as release evidence while a contamination path between training data and held-out splits remains open.
+- Connector unreachable — the source data, license records, or existing split definitions exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -82,6 +93,7 @@ Curate datasets for AI development and evaluation. Define sources, rights, label
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every source carries a rights status and an inclusion or exclusion reason, the split policy and contamination controls are stated, and every sensitive field carries a named privacy treatment.

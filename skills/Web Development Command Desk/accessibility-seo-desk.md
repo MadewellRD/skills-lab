@@ -10,7 +10,7 @@ description: define accessibility and seo requirements for web surfaces includin
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Ensure the web surface is usable, perceivable, operable, understandable, and dis
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `web-performance-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Routes and page types are independent: per-route accessibility evaluation and per-page-type SEO evaluation are parallel-safe.
+- Continue to `web-performance-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: the accessibility standard is stated explicitly (WCAG 2.2 AA unless source facts require another standard), every in-scope page type carries semantic-structure, keyboard, focus, and screen-reader requirements alongside metadata, canonical, and structured-data requirements, and every remaining gap appears in the remediation backlog rather than being dropped.
 
 ## Responsibilities
 
@@ -112,9 +116,14 @@ Accessibility checklist, SEO checklist, metadata requirements, structured-data r
 
 ## Halt conditions
 
-- No page/route inventory for page-level SEO.
-- Unknown accessibility target for regulated contexts.
-- Missing content model for metadata governance.
+Halt only on a hard class:
+
+- Missing approval: a regulated context needs an accessibility conformance target or a conformance claim that only a human can accept.
+- Release integrity: a launch gate would be marked passed on accessibility or SEO conformance that has not been evidenced.
+- Source conflict: accessibility standard, localization, or canonical/indexation requirements genuinely disagree.
+- Connector unreachable: the route inventory, content model, or audit source needed for evidence cannot be reached.
+
+A missing page or route inventory, and a missing content model for metadata governance, are not halts. Proceed against the stated standard, label the assumed inventory inline, and record it in `open_questions`. Accessibility requirements are compliance obligations: never drop or downgrade one to keep the workflow moving.
 
 ## Default output modes
 

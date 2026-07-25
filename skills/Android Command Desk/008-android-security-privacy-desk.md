@@ -15,11 +15,17 @@ Assess Android security and privacy before implementation or release: permission
 
 ## Workflow
 
-1. Resolve data collected, permissions, SDKs, third parties, auth model, storage, networking, logging, and policy obligations.
-2. Review manifest permissions, exported components, deep links, network security config, secrets, logs, and dependency risk where source facts exist.
-3. Map privacy/data-safety claims to implementation evidence and user-facing disclosures.
-4. Define security acceptance gates, tests, review items, and halt conditions.
-5. Continue to performance, testing, or release when risks are passed, waived, or halted.
+**Outcome.** An Android security and privacy assessment with explicit gates: data collected and shared, permissions, third-party SDKs and dependency risk, auth and session risk, secure storage, network security, logging, exported-component and deep-link controls, Play policy and data-safety mapping, user consent, abuse, anti-tamper and game-economy risks where relevant, and the release gates that follow.
+
+**Grounding.** Work from manifest files, dependency files, auth and API docs, the data inventory, Play policy notes, the privacy policy, security findings, app/game design, and the telemetry plan. Ground every privacy and Play policy claim in source evidence, and map each data-safety claim to the implementation evidence and the user-facing disclosure that supports it. Do not invent permissions, data safety declarations, Play policy obligations, auth, storage, network, dependency, or release facts.
+
+**Compliance constraints — requirements, not guidance.** Every declared permission must have a named justification and a code path that requires it. Every data type in the Play Data safety declaration must match what the app actually collects, shares, and transmits. Policy-sensitive surfaces — monetization, ads, child-directed content, health, financial, location, and game economy — carry their own Play policy obligations, and those obligations are stated in the artifact whether or not the current implementation satisfies them.
+
+**Parallel surface.** Individual permissions, third-party SDKs, exported components, deep links, network security settings, and dependency findings are independent review items: review them in parallel. The data-safety mapping and the privacy disclosure are aggregate and must stay internally consistent across every item, so assemble them once, after the per-item review.
+
+**Acceptance bar.** The review is complete when every declared permission is justified against a code path or flagged as unjustified; every data-safety claim traces to implementation evidence or is marked unverified; third-party SDKs are enumerated with what each collects or marked unknown; each policy-sensitive surface is either cleared against a cited policy or raised as a gate; and each finding carries a severity and an explicit pass, waive-with-rationale, or halt disposition.
+
+Continue to performance, testing, or release when risks are passed, waived, or halted.
 
 ## Responsibilities
 
@@ -50,10 +56,16 @@ Security/privacy review, threat notes, data-safety mapping, permission review, r
 
 ## Halt conditions
 
-- Data safety or privacy facts are missing for release work.
-- Requested work requires handling secrets without safe instructions.
-- Manifest/exported/auth risks cannot be assessed from available evidence.
-- Policy-sensitive monetization, ads, child-directed, health, financial, location, or game economy behavior is unresolved.
+Proceed by default on assessment work: an unreviewed area is recorded as unassessed with its risk named, not turned into a stop. Security and privacy conclusions are different — declaring a surface clear is itself a consequence-bearing act. Reserve hard halts for these consequence classes:
+
+- **Approval** — a risk acceptance, policy waiver, or data-handling decision requires a human owner to authorize it.
+- **Production or destructive** — the request would change production security configuration, rotate or publish keys, or alter a live data-safety declaration.
+- **Security or privacy** — the work requires handling secrets, keys, or personal data without safe instructions, or would expose them in an artifact.
+- **Source conflict** — the manifest, the data inventory, and the privacy policy genuinely disagree about what is collected or shared. Preserve the conflict: a data-safety declaration cannot be assembled from a guess.
+- **Release integrity** — a security, privacy, permissions, or Play policy gate would be reported as passed while its evidence is missing, or policy-sensitive monetization, ads, child-directed, health, financial, location, or game economy behavior is unresolved for release work.
+- **Connector unreachable** — a manifest, dependency file, or policy source exists but cannot be read.
+
+Otherwise proceed: manifest, exported-component, deep-link, or auth risks that cannot be assessed from available evidence are recorded as unassessed with the artifact needed to assess them, and the review continues across the areas that can be assessed.
 
 ## Default output modes
 

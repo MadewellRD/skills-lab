@@ -10,7 +10,7 @@ description: create implementation-ready frontend engineering plans for web surf
 
 This desk is part of the Web Development Command Desk workflow suite. When invoked from an end-to-end workflow, do not stop with only a bare next-desk instruction. Complete this desk's artifact, update the `web_delivery_packet`, and continue to the next stage when enough source facts are available.
 
-If required facts, connector access, approval, or source evidence are missing, return `Workflow Halt` with specific resume requirements. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
+Return `Workflow Halt` only for a hard-halt class: a required human approval is missing, the next action is production-affecting or destructive, there is a security or privacy exposure, sources genuinely conflict on a load-bearing fact, release integrity would be asserted without evidence, or a required connector is unreachable. Include specific resume requirements. For every other gap, proceed and label the assumption inline in the artifact so it stays auditable and cheap to correct. Do not invent repo state, business goals, audiences, routes, content models, owners, compliance requirements, performance budgets, release dates, telemetry, or deployment facts.
 
 ## Shared web delivery packet
 
@@ -73,12 +73,16 @@ Turn approved web requirements into implementation-ready frontend architecture, 
 
 ## Workflow
 
-1. Classify the request and target surface.
-2. Run connector preflight for repo, docs, product, design, analytics, or operational facts relevant to this stage.
-3. Build source facts and separate assumptions from verified evidence.
-4. Produce this desk's artifact and update the `web_delivery_packet`.
-5. Continue to `web-security-secops-desk` when the packet is ready and the target outcome requires additional downstream work.
-6. Halt only when required source facts, approvals, or connector access are missing.
+Outcome: this desk's artifact for the classified target surface, with the `web_delivery_packet` updated and carried forward.
+
+Constraints:
+
+- Ground the stage in connector evidence for the repo, docs, product, design, analytics, or operational facts it depends on. Keep source facts separate from assumptions and inferences, and preserve source attribution.
+- Routes, pages, and components are independent: per-route rendering decisions and per-component implementation plans are parallel-safe.
+- Continue to `web-security-secops-desk` when the packet is ready and the target outcome requires additional downstream work.
+- Halt only for a hard-halt class listed under Halt conditions. Otherwise proceed and label the assumption inline.
+
+Acceptance bar: every in-scope route has a rendering decision and a data-fetching path, every planned component maps to a design-system entry, and a coding agent can execute the plan without rediscovering framework, routing, or contract facts.
 
 ## Responsibilities
 
@@ -113,9 +117,14 @@ Frontend architecture brief, rendering strategy, component implementation plan, 
 
 ## Halt conditions
 
-- No target repo/framework for implementation handoff.
-- Missing accepted requirements or component scope.
-- Unknown API/auth contracts for data-heavy surfaces.
+Halt only on a hard class:
+
+- Security or privacy: an authenticated or data-sensitive surface would be planned against auth, session, or token behavior that has no source.
+- Source conflict: repo state, framework configuration, and design or requirement docs genuinely disagree on a load-bearing implementation fact.
+- Missing approval: the handoff would authorize a coding agent to act beyond accepted scope.
+- Connector unreachable: the target repo cannot be reached, so framework, routing, and package facts are unavailable rather than merely absent.
+
+An unnamed target repo or framework, unaccepted component scope, or an unsourced contract for a non-sensitive API is not a halt. Proceed with the assumption labeled inline and recorded in `open_questions`, and never present assumed repo state as fact.
 
 ## Default output modes
 

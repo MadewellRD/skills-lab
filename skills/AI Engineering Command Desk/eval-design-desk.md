@@ -30,11 +30,20 @@ Design evaluation systems for AI behavior. Define goals, datasets, rubrics, grad
 
 ## Workflow
 
-- Define eval objectives and behavior contract.
-- Select or request dataset slices.
-- Specify scoring, graders, thresholds, and review process.
-- Map safety, regression, and release gates.
-- Define reporting and rerun cadence.
+Produce an eval plan someone else could run and get the same answer from: the behavior contract under test, the dataset slices that exercise it, the scoring method and who or what grades, the thresholds that constitute pass and fail, and the reporting and rerun cadence.
+
+Constraints:
+
+- Every eval traces to a stated behavior contract. An eval without an expected behavior measures nothing.
+- Dataset slices cover the happy path, edge cases, adversarial and negative cases, and known prior failures. Demo examples alone are not an eval.
+- Scoring is specified to the point of reproducibility: grader identity (human, model, or programmatic), rubric, grader-reliability expectation, and tie-breaking rule.
+- Thresholds are numeric and fixed before results are seen. Safety and high-impact behaviors carry explicit thresholds, never qualitative approval language.
+- Regression slices are named so a later change can be compared against this baseline.
+- Human review is specified wherever automated grading is not sufficient evidence for the risk tier.
+- Never invent baseline numbers, prior results, or thresholds. An absent baseline is recorded as absent.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Eval cases and dataset slices are independent. Authoring cases, assembling slices, and scoring runs are parallel-safe across cases, slices, and graders. Threshold setting, the regression baseline comparison, and the overall pass/fail rollup are aggregate decisions over the complete result set.
 
 ## Outputs
 
@@ -61,9 +70,14 @@ Design evaluation systems for AI behavior. Define goals, datasets, rubrics, grad
 
 ## Halt conditions
 
-- Requirements, representative examples, or scoring criteria are missing.
-- The eval would rely only on demo examples for production release.
-- Safety or high-impact behavior lacks explicit thresholds.
+Default posture is to proceed and label the assumption inline. A missing sample count or an undecided rerun cadence is a soft gap: state the assumption, mark it, and continue. Halt only when one of the six hard-halt classes applies.
+
+- Approval — the plan would set or relax a release threshold that an owner must authorize.
+- Production or destructive — running the eval would execute against production systems, live user data, or real side-effecting tools.
+- Security or privacy — eval inputs, transcripts, or grading exports would expose personal, regulated, or customer-confidential data, including to a grading model.
+- Source conflict — requirements, prior eval results, and stakeholder expectations disagree on what correct behavior is.
+- Release integrity — the eval would stand as release evidence while resting only on demo examples, or while safety and high-impact behavior lack explicit thresholds.
+- Connector unreachable — required datasets, prior eval runs, or baseline results exist but cannot be read.
 
 ## Downstream handoffs
 
@@ -83,6 +97,7 @@ Design evaluation systems for AI behavior. Define goals, datasets, rubrics, grad
 ## Quality bar
 
 - Preserve traceability from recommendation to source evidence.
-- State uncertainty explicitly and halt when required facts are missing.
+- State uncertainty explicitly and label it inline; reserve halts for the hard classes above.
 - Prefer measurable gates over qualitative approval language.
 - Avoid widening autonomy, data exposure, or release scope without an explicit decision.
+- Passing means every behavior under test has a slice, a grader, and a numeric threshold; safety and high-impact behaviors have explicit thresholds; regression slices are named; and the plan is reproducible by someone who did not write it.

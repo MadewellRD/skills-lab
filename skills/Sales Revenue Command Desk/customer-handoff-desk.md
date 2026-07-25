@@ -1,6 +1,6 @@
 ---
 name: customer-handoff-desk
-description: prepare post-sale handoff packages for onboarding, customer success, support, or implementation teams. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: prepare post-sale handoff packages for onboarding, customer success, support, or implementation teams. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Customer Handoff Desk

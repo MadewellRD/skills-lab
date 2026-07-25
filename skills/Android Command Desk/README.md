@@ -2,7 +2,7 @@
 
 Status: source-complete Android app/game command desk suite. Dist packages are generated intentionally through `tools/generate_android_command_desk_release.py` when a release candidate is prepared.
 
-This folder contains ChatGPT skill-compatible Markdown source desks for the Android Command Desk suite. The suite keeps the existing Skills-Lab mobile taxonomy: one Android orchestrator plus thirteen specialist desks covering product, discovery, architecture, UI/UX, app engineering, game engineering, backend integration, security/privacy, performance, testing, release/store ops, observability/live ops, and maintenance/growth.
+This folder contains {{AGENT}} skill-compatible Markdown source desks for the Android Command Desk suite. The suite keeps the existing Skills-Lab mobile taxonomy: one Android orchestrator plus thirteen specialist desks covering product, discovery, architecture, UI/UX, app engineering, game engineering, backend integration, security/privacy, performance, testing, release/store ops, observability/live ops, and maintenance/growth.
 
 ## Coverage
 
@@ -47,12 +47,12 @@ Use SDLC Command Desk patterns for generic lifecycle controls: requirements, dis
 - `references/desk-workflows/android-delivery-packet.md`
 - `references/platform/android-app-baseline.md`
 - `references/platform/android-game-baseline.md`
-- `references/platform/android-low-token-policy.md`
+- `references/platform/android-handoff-density-policy.md`
 
 ## Authoring convention
 
 - Suite folders are human-readable product taxonomy.
 - Desk files are ordered kebab-case and end in `.md`.
-- Source desks use ChatGPT skill-compatible front matter.
-- Packaged ChatGPT skill folders are generated artifacts, not the primary authoring structure.
+- Source desks use {{AGENT}} skill-compatible front matter.
+- Packaged {{AGENT}} skill folders are generated artifacts, not the primary authoring structure.
 - Keep `dist/` package artifacts untouched until packaging is intentionally requested.

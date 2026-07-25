@@ -1,6 +1,6 @@
 ---
 name: decommissioning-desk
-description: create connector-grounded decommissioning, api sunset, migration cutover, data retention, archive, rollback, and stakeholder communication artifacts for software delivery. use when chatgpt needs to retire a feature, service, api, dependency, integration, repository, job, flag, environment, data store, or product surface safely using github evidence, usage context, docs, release history, observability signals, compliance constraints, and downstream handoff notes for implementation-handoff-desk, deployment-desk, release-operations-desk, incident-response-desk, docs-traceability-desk, or verification-desk workflows.
+description: create connector-grounded decommissioning, api sunset, migration cutover, data retention, archive, rollback, and stakeholder communication artifacts for software delivery. use when {{AGENT}} needs to retire a feature, service, api, dependency, integration, repository, job, flag, environment, data store, or product surface safely using github evidence, usage context, docs, release history, observability signals, compliance constraints, and downstream handoff notes for implementation-handoff-desk, deployment-desk, release-operations-desk, incident-response-desk, docs-traceability-desk, or verification-desk workflows.
 ---
 
 # Decommissioning Desk
@@ -18,32 +18,21 @@ Use this skill to plan safe retirement of software assets. The output must be co
 
 ## Workflow
 
-1. Classify the decommissioning target.
-   - feature flag or feature surface
-   - api endpoint, webhook, event, schema, or SDK surface
-   - service, job, worker, repository, package, environment, or infrastructure component
-   - data store, table, topic, bucket, artifact, or report
-   - third-party integration or dependency
+**Outcome.** A retirement plan for the identified target, grounded in connector evidence, with staged gates and a rollback path.
 
-2. Run connector preflight using `references/connector-routing.md`.
-   - Use GitHub for source truth: code references, owners, commits, issues, PRs, tests, deployment config, workflow files, and release history.
-   - Use docs sources for product promises, runbooks, API docs, retention policies, roadmap status, and migration instructions.
-   - Use observability or incident sources when runtime usage, error budget, traffic, logs, or alerts affect the plan.
-   - Use issue/project sources for customer commitments, owners, blockers, and sunset milestones.
+**Target classification.** Establish exactly what is being retired: a feature flag or feature surface; an API endpoint, webhook, event, schema, or SDK surface; a service, job, worker, repository, package, environment, or infrastructure component; a data store, table, topic, bucket, artifact, or report; or a third-party integration or dependency.
 
-3. Decide whether a full plan is safe.
-   If dependency, usage, retention, or rollback facts are missing, produce a connector diagnostic or an assumptions-explicit draft. Do not invent consumers, owners, usage volume, policy requirements, or cutover dates.
+**Grounding.** Run connector preflight using `references/connector-routing.md`. Use GitHub for source truth: code references, owners, commits, issues, PRs, tests, deployment config, workflow files, and release history. Use docs sources for product promises, runbooks, API docs, retention policies, roadmap status, and migration instructions. Use observability or incident sources when runtime usage, error budget, traffic, logs, or alerts affect the plan. Use issue/project sources for customer commitments, owners, blockers, and sunset milestones.
 
-4. Produce the right artifact.
-   - Decommission plan: use `references/decommission-plan-template.md`.
-   - API sunset plan: use `references/api-sunset-template.md`.
-   - Migration/cutover plan: use `references/cutover-plan-template.md`.
-   - Data retention/archive plan: use `references/data-retention-template.md`.
-   - Communication plan: use `references/communication-plan-template.md`.
-   - Risk/rollback checklist: use `references/rollback-risk-template.md`.
+**Artifact selection.** Decommission plans use `references/decommission-plan-template.md`. API sunset plans use `references/api-sunset-template.md`. Migration and cutover plans use `references/cutover-plan-template.md`. Data retention and archive plans use `references/data-retention-template.md`. Communication plans use `references/communication-plan-template.md`. Risk and rollback checklists use `references/rollback-risk-template.md`.
 
-5. Create downstream handoff notes.
-   Use `references/handoff-rules.md` when the decommissioning plan needs follow-up implementation prompts, docs updates, verification work, release/deploy gates, or incident-support readiness.
+**Parallel surface.** Consumer discovery fans out: code references, dependent services, API callers, docs mentions, dashboards, and open issues touching the target are independent searches. Run them in parallel to build the dependency picture. The cutover sequence the plan produces is not parallel — see below.
+
+**Cutover order is content, not scaffolding.** Pre-cutover, cutover, post-cutover, and rollback gates are externally mandated order and the consequence of getting them wrong is irreversible. Emit them as ordered, numbered steps in the artifact. Never reorder, merge, or collapse them, and never present deletion before the traffic-absence and dependency-absence gates that authorize it.
+
+**Downstream handoff.** Use `references/handoff-rules.md` when the plan needs follow-up implementation prompts, docs updates, verification work, release or deploy gates, or incident-support readiness.
+
+**Acceptance bar.** The plan is done when every known consumer is named with the evidence that found it; retention and compliance obligations are stated or explicitly flagged as undetermined; each gate has an owner and an observable pass condition; the rollback path is stated and marked verified or unverified; and deletion scope is enumerated file-by-file or resource-by-resource rather than described in general terms. Do not invent consumers, owners, usage volume, policy requirements, or cutover dates. When dependency, usage, retention, or rollback facts are absent, produce an assumptions-explicit draft rather than a confident plan.
 
 ## Required behavior
 
@@ -70,16 +59,14 @@ For final user-facing artifacts, produce downloadable Markdown whenever tools al
 
 ## Halt conditions
 
-Halt or produce a connector diagnostic when:
+This desk plans irreversible work, so its halt surface is deliberately wide. Proceed and label the assumption for planning-level unknowns — an ambiguous naming question or an undetermined sunset date is a soft gap. Hard-halt for these consequence classes from `references/halt-taxonomy.md`, and do not soften them:
 
-- the target to retire is ambiguous;
-- live consumers or owners cannot be determined;
-- usage/traffic evidence is unavailable but required;
-- data retention or compliance obligations are unknown;
-- the requested retirement conflicts with public docs, API contracts, customer commitments, or active issues;
-- rollback paths are impossible or unproven;
-- deletion scope reaches unrelated files, systems, or dependencies;
-- required source facts cannot be verified through available connectors.
+- **Approval** — retirement affects customers, external consumers, or contractual commitments and no human has authorized it.
+- **Production or destructive** — rollback paths are impossible or unproven, deletion scope reaches unrelated files, systems, or dependencies, or the request asks to execute the retirement rather than plan it.
+- **Security or privacy** — data retention or compliance obligations for the affected data are unknown.
+- **Source conflict** — the requested retirement conflicts with public docs, API contracts, customer commitments, or active issues.
+- **Release integrity** — the plan would declare the target safe to remove while live consumers or owners cannot be determined, or usage and traffic evidence is required and unavailable.
+- **Connector unreachable** — a source needed to establish consumers or usage exists but cannot be read. Absence of evidence is not evidence of no consumers: treat unproven non-use as blocking, and prefer staged retirement over deletion whenever usage or ownership is uncertain.
 
 ## References
 
@@ -98,4 +85,4 @@ Halt or produce a connector diagnostic when:
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

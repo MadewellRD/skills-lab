@@ -20,31 +20,30 @@ This desk is an upstream SDLC skill. Do not write implementation prompts, branch
 
 ## Workflow
 
-1. Classify the request.
-   - New PRD from raw idea.
-   - PRD refinement from existing docs or issues.
-   - Acceptance criteria generation.
-   - Requirement normalization or review.
-   - Connector diagnostic because required context is missing.
+**Outcome.** A connector-grounded requirements artifact — a new PRD from a raw idea, a PRD refined from existing docs or issues, generated acceptance criteria, a requirement normalization or review, or a connector diagnostic when required context cannot be reached.
 
-2. Run connector preflight.
-   - Use GitHub issues and repo context for product-facing bugs, feature requests, milestones, related code boundaries, and existing issue labels.
-   - Use docs connectors or uploaded files for roadmap, customer, policy, architecture, or stakeholder decision context.
-   - Use communication connectors only for decision-bearing messages and cite/record speaker, date, and context when available.
+**Grounding.** Use GitHub issues and repo context for product-facing bugs, feature requests, milestones, related code boundaries, and existing issue labels. Use docs connectors or uploaded files for roadmap, customer, policy, architecture, or stakeholder decision context. Use communication connectors only for decision-bearing messages, and record speaker, date, and context when available.
 
-3. Build source facts.
-   - Separate verified facts from assumptions.
-   - Preserve source hierarchy from `references/source-hierarchy.md`.
-   - Mark conflicting facts explicitly.
+**Source facts.** Separate verified facts from assumptions, preserve the source hierarchy in `references/source-hierarchy.md`, and mark conflicting facts explicitly rather than resolving them silently.
 
-4. Produce the requested artifact.
-   - Use `references/prd-template.md` for PRDs.
-   - Use `references/output-contract.md` for output modes and file wrappers.
-   - Use `references/downstream-handoff.md` when preparing the next SDLC desk handoff.
+**Templates.** Use `references/prd-template.md` for PRDs, `references/output-contract.md` for output modes and file wrappers, and `references/downstream-handoff.md` when preparing the next SDLC desk handoff.
 
-5. Halt when requirement-critical facts are missing.
-   - Use `references/halt-conditions.md`.
-   - Do not invent users, acceptance criteria, issue IDs, roadmap commitments, release dates, dependencies, owners, or compliance requirements.
+**Parallel surface.** Evidence retrieval across independent sources — GitHub issues, docs, uploaded files, decision messages — carries no ordering dependency, and acceptance criteria for distinct requirement IDs are independent of each other. Fan out over both rather than iterating serially.
+
+**Acceptance bar.** The PRD is done when every requirement carries a stable ID; each requirement has acceptance criteria that are testable without further product input; non-goals, risks, and open questions are explicit rather than implied; every load-bearing fact is attributed to its source; and assumptions are labeled inline as assumptions. Do not invent users, acceptance criteria, issue IDs, roadmap commitments, release dates, dependencies, owners, or compliance requirements.
+
+## Halt policy
+
+Proceed by default. A requirement gap is normally recorded as an open question with a labeled working assumption, not a stop. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — a scope, commitment, or policy decision requires a human owner to authorize.
+- **Production or destructive** — the request would write to a live tracker, roadmap, or customer-facing commitment.
+- **Security or privacy** — the requirements would encode handling of secrets or personal data that is not sourced.
+- **Source conflict** — stakeholder decisions, docs, or issues genuinely disagree on a load-bearing requirement.
+- **Release integrity** — acceptance criteria would be stated as agreed when no source establishes agreement.
+- **Connector unreachable** — a required source exists but cannot be read. Context that is merely absent is a soft gap: continue with a labeled assumption or emit `connector-diagnostic.md`.
+
+See `references/halt-conditions.md` for the artifact format a halt must take.
 
 ## Default output modes
 
@@ -56,7 +55,7 @@ This desk is an upstream SDLC skill. Do not write implementation prompts, branch
 
 Every downloadable Markdown artifact must start with a short "How to use this file" section.
 
-## Low-token downstream policy
+## Downstream handoff density
 
 Keep downstream handoffs compact. The goal is to reduce ambiguity before coding agents spend tokens. Use requirement IDs, concise acceptance criteria, explicit non-goals, source facts, and exact open questions rather than long narrative restatement.
 
@@ -72,4 +71,4 @@ Keep downstream handoffs compact. The goal is to reduce ambiguity before coding 
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

@@ -1,0 +1,16 @@
+interface:
+  display_name: Android Testing QA Desk
+  short_description: Defines Android app/game QA, test matrix, device coverage, and
+    release gates.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#22c55e'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

@@ -1,0 +1,11 @@
+interface:
+  display_name: Product Command Desk
+  short_description: Orchestrate product workflows from idea through discovery, requirements,
+    prioritization, roadmap, launch, experimentation, feedback, retention, and retrospective.
+  default_prompt: ''
+  icon: 📦
+  primary_color: '#7c3aed'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

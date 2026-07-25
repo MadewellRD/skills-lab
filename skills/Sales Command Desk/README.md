@@ -2,7 +2,7 @@
 
 Status: v0.1.0 packaged suite generated.
 
-This folder contains source Markdown specs and reference artifacts for the Sales Command Desk suite. Packaged ChatGPT skill folders are generated under `dist/skills/sales-command-desk/`; zip bundles and manifests are generated under `dist/packages/sales-command-desk/`, `dist/manifests/`, and `releases/`.
+This folder contains source Markdown specs and reference artifacts for the Sales Command Desk suite. Packaged {{AGENT}} skill folders are generated under `dist/skills/sales-command-desk/`; zip bundles and manifests are generated under `dist/packages/sales-command-desk/`, `dist/manifests/`, and `releases/`.
 
 ## Included desks
 

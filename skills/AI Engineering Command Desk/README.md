@@ -16,7 +16,7 @@ skills/AI Engineering Command Desk/
   references/*.md
 ```
 
-Packaged ChatGPT-compatible skills are generated later under:
+Packaged {{AGENT}}-compatible skills are generated later under:
 
 ```text
 dist/skills/ai-engineering-command-desk/<skill-slug>/
@@ -80,10 +80,10 @@ Not every workflow needs every stage. The orchestrator should run the shortest s
 
 - Desk files are kebab-case and end in `.md`.
 - Each desk source file starts with `name` and `description` frontmatter.
-- Each desk defines role, evidence requirements, workflow, outputs, packet fields, halt conditions, handoffs, source hierarchy, quality bar, low-token execution policy, and continuity behavior.
+- Each desk defines role, evidence requirements, workflow, outputs, packet fields, halt conditions, handoffs, source hierarchy, quality bar, high-density execution policy, and continuity behavior.
 - Source specs must preserve halt behavior instead of inventing missing facts.
 - Source specs should be useful for later packaging but must not contain generated package output.
-- Every desk should reduce downstream Codex/Claude Code reasoning by carrying exact scope, evidence, validation gates, stop conditions, and handoff targets.
+- Every desk should reduce downstream {{CODING_AGENT}}/{{CODING_AGENT}} reasoning by carrying exact scope, evidence, validation gates, stop conditions, and handoff targets.
 
 ## Relationship to SDLC Command Desk
 

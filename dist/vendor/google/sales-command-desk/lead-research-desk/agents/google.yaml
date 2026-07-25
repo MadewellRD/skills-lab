@@ -1,0 +1,16 @@
+interface:
+  display_name: Lead Research Desk
+  short_description: Research and rank prospects using ICP, CRM, enrichment, and public
+    evidence before outreach.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

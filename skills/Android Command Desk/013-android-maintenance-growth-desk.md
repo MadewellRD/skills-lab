@@ -15,11 +15,17 @@ Plan Android maintenance and growth: dependency upgrades, Android Gradle Plugin/
 
 ## Workflow
 
-1. Resolve maintenance/growth trigger: SDK policy, dependency risk, crash/ANR trend, retention, monetization, store listing, live ops, feature debt, or migration.
-2. Collect repo, release, telemetry, policy, customer, review, and source facts.
-3. Classify work as maintenance, growth experiment, migration, refactor, decommissioning candidate, or release-policy response.
-4. Produce scoped plan with validation commands, risk controls, rollout/rollback, and success metrics.
-5. Hand off to SDLC maintenance/refactor, issue planning, implementation, experiment, retrospective, or decommissioning workflows when needed.
+**Outcome.** A bounded Android maintenance or growth plan: the trigger and its source, affected modules, dependency/SDK/engine/policy facts, the work classification (maintenance, growth experiment, migration, refactor, decommissioning candidate, or release-policy response), success metrics and guardrails, rollout and rollback, validation commands, and implementation boundaries.
+
+**Grounding.** Work from repo facts, dependency and SDK state, Play policy notices, crash/ANR and analytics trends, reviews, feedback, experiment history, release history, and live-ops data. Do not invent dependency state, SDK policy, Play policy, telemetry, experiment, monetization, store, or validation facts.
+
+**Ordered content that stays ordered.** Where the plan responds to a Play policy deadline, a target-SDK level bump, or an on-device data migration, emit the sequence as ordered steps and keep it ordered. The order is externally imposed: Play policy deadlines are set by Google and missing one removes the app from distribution, target-SDK bumps gate on Play's published enforcement dates, and an on-device migration applied out of order against user data cannot be undone by a later release.
+
+**Parallel surface.** Individual dependency upgrades, separate growth experiments, distinct debt items, and per-module impact assessments are independent: assess them in parallel. Sequencing upgrades that share a build graph is aggregate and sequential — resolve version conflicts across the whole graph once, after the per-dependency assessments exist, rather than upgrading one at a time and re-resolving each round.
+
+**Acceptance bar.** The plan is sound when the trigger cites its source; affected modules are named from repo evidence; each dependency or SDK change states its breaking-change surface and the validation command that proves it; every experiment has a metric, guardrail, sample basis, rollback, and decision rule; and each item is either scheduled with an owner or explicitly marked owner-unknown.
+
+Hand off to SDLC maintenance/refactor, issue planning, implementation, experiment, retrospective, or decommissioning workflows when needed.
 
 ## Responsibilities
 
@@ -50,10 +56,16 @@ Maintenance/growth plan, dependency/SDK update plan, experiment brief, debt regi
 
 ## Halt conditions
 
-- Trigger evidence is missing.
-- Affected modules or validation path are unknown.
-- Policy, dependency, SDK, engine, or store change has release impact but no owner or timeline.
-- Growth experiment lacks metric, guardrail, sample, rollback, or decision rule.
+Proceed by default. An incomplete trigger or unclear scope is normally a labeled assumption plus an open question, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — an upgrade, migration, experiment launch, monetization change, or decommissioning decision requires a human owner to authorize it.
+- **Production or destructive** — the plan would act on live users, live economy state, or production data: launching an experiment, removing a feature or surface, or migrating on-device user data.
+- **Security or privacy** — a dependency, SDK, or policy change alters how personal data or credentials are handled, or the upgrade is a security fix whose details cannot be handled safely here.
+- **Source conflict** — repo state, release history, and telemetry genuinely disagree on current version, dependency state, or observed trend. Preserve the conflict.
+- **Release integrity** — a Play policy, dependency, SDK, engine, or store change has release impact and would be reported as handled with no owner, timeline, or validation path.
+- **Connector unreachable** — repo, release, telemetry, or policy sources exist but cannot be read.
+
+Otherwise proceed: a missing trigger detail, unknown affected module, or unvalidated path becomes a labeled assumption naming the evidence needed to confirm it, and the plan is scoped to what the known facts support.
 
 ## Default output modes
 

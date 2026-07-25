@@ -1,6 +1,6 @@
 ---
 name: crm-update-desk
-description: create safe crm note, task, field, and stage update packages with dry-run diffs, approvals, and audit logs. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: create safe crm note, task, field, and stage update packages with dry-run diffs, approvals, and audit logs. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # CRM Update Desk

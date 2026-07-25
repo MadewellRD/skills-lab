@@ -1,6 +1,6 @@
 ---
 name: deal-review-desk
-description: prepare internal deal reviews with risks, asks, commercial impact, approvals, and recommended decisions. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: prepare internal deal reviews with risks, asks, commercial impact, approvals, and recommended decisions. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Deal Review Desk

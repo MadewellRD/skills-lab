@@ -1,6 +1,6 @@
 ---
 name: sales-command-desk
-description: route and run revenue workflow stages across sales research, discovery, outbound, call prep, qualification, proposals, crm updates, forecasting, renewals, and customer handoff. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: route and run revenue workflow stages across sales research, discovery, outbound, call prep, qualification, proposals, crm updates, forecasting, renewals, and customer handoff. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Sales Command Desk

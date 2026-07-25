@@ -6,5 +6,5 @@ Authoring convention:
 
 - Suite folders are human-readable product taxonomy.
 - Desk files are kebab-case and end in `.md`.
-- Packaged ChatGPT skill folders are generated artifacts or legacy packaging artifacts.
+- Packaged {{AGENT}} skill folders are generated artifacts or legacy packaging artifacts.
 

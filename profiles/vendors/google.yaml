@@ -1,0 +1,14 @@
+vendor: google
+display_name: Google Gemini
+tokens:
+  AGENT: Gemini
+  CODING_AGENT: Jules
+  PLATFORM: Gemini
+  INVOKE: "@<skill-name>"
+  BLOCKER_TAG: HANDOFF_BLOCKER
+  SUBAGENT_TERM: worker
+supports:
+  parallel_subagents: true
+  programmatic_tool_calling: false
+  effort_dial: false
+  skills_format: folder

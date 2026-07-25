@@ -1,6 +1,6 @@
 ---
 name: proposal-desk
-description: create customer-facing proposal, scope, deck, docx, and pdf drafts with brand, pricing, and approval controls. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: create customer-facing proposal, scope, deck, docx, and pdf drafts with brand, pricing, and approval controls. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Proposal Desk

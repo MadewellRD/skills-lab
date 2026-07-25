@@ -1,6 +1,6 @@
 ---
 name: crm-update-desk
-description: create safe crm note, task, field, and stage update packages with dry-run diffs, approvals, and audit logs. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: create safe crm note, task, field, and stage update packages with dry-run diffs, approvals, and audit logs. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # CRM Update Desk
@@ -30,12 +30,15 @@ Create safe, auditable CRM updates from meetings, emails, files, and user instru
 
 ## Workflow
 
-- Classify the sales request and workflow mode.
-- Create or update the sales workflow packet.
-- Gather only the minimum additional evidence needed to complete the current stage.
-- Produce the stage artifact with source-grounded facts and labeled assumptions.
-- Continue to downstream desks when evidence is sufficient and no approval gate blocks progress.
-- Stop only at completed target outcome, explicit approval gate, or hard halt.
+**Outcome.** A CRM update package: the proposed diff against the current record, the notes and tasks to be created, the field update set, an approval request, an audit log, and — only once approved — the write result.
+
+**Ordered gate (mandated — keep this order, every time).** Read the current record as the preimage, produce the dry-run diff against it, obtain explicit approval of that diff, execute the write, then record the audit entry. Every step precedes the next and none may be skipped or merged. This order is mandated because the CRM is a system of record: once a field is overwritten the preimage is gone and cannot be reconstructed from the artifact, an unapproved stage or amount change propagates into forecasts other people have already committed on, and a write with no audit entry cannot be traced or reversed. Never collapse the diff and the write into one action, never write ahead of approval, and never treat a user's request for an update as approval of a diff they have not seen.
+
+**Constraints.** Carry the sales workflow packet forward and update it in place. The current CRM record is the preimage for every diff; meeting notes and emails are evidence for proposed values, not values in themselves. Never invent a record ID, a field name, a picklist value, an owner, or a date — an unresolved identifier or an unknown field mapping appears in the diff as a labeled assumption for the approver to confirm, and the write for that row stays blocked until it is confirmed. No destructive or material write happens without approval.
+
+**Parallel surface.** Diff computation is parallel-safe across independent records — accounts, contacts, opportunities, notes, and tasks can each be read and diffed against their own preimage concurrently. The approval and the commit are deliberately **not** parallel: approval is requested once over the complete diff set so the approver sees the full blast radius before anything is written, and the audit log is a single record of what was approved and what was actually written.
+
+**Acceptance bar.** Every proposed change shows the current value, the proposed value, and the evidence for it. Every material change — stage, amount, close date, owner, or anything creating an external commitment — is explicitly flagged as requiring approval. The audit log states what was approved, by whom, what was written, and what was not. A diff that a reviewer cannot evaluate without opening the CRM themselves has not met the bar.
 
 ## Outputs
 
@@ -61,10 +64,16 @@ Create safe, auditable CRM updates from meetings, emails, files, and user instru
 
 ## Halt conditions
 
-- record ID cannot be resolved
-- field mapping is unknown
-- write permission is missing
-- stage, amount, close date, owner, or external commitment changes lack approval
+Proceed by default on the dry-run diff and label the assumption inline. Reserve hard halts for these consequence classes — all of which block the **write**, never the diff:
+
+- **Approval** — a stage, amount, close date, owner, or any change creating an external commitment lacks explicit approval of the diff. Hard halt, always: material CRM fields are approved by a human who has seen the proposed values, not inferred from the request that prompted them.
+- **Production or destructive** — any write to the system of record. This is the desk's core boundary: the write is gated behind the ordered sequence above and does not execute early because the change seems obviously correct. A missing write permission is the same class — hard halt on the write, produce the diff and the approval request instead.
+- **Security or privacy** — the update would place personal data, customer-confidential material, or content the customer did not consent to record into a shared system of record.
+- **Source conflict** — the current record and the source notes genuinely disagree on a material field. Show both in the diff, flag the field contested, and hard halt the write on that row; do not overwrite a disputed value.
+- **Release integrity** — the diff cannot be shown against a real preimage, so the approver would be authorizing a change they cannot evaluate.
+- **Connector unreachable** — the CRM cannot be read, so no preimage exists. Without a preimage there is no diff, and without a diff there is no write.
+
+Everything else is a soft gap: proceed with the dry-run diff, name the gap, and label what it affects. An unresolved record ID or an unknown field mapping is a labeled assumption inside the diff for the approver to confirm — the row is still shown, the write for that row stays blocked, and no ID, field, or picklist value is ever guessed into a write.
 
 ## Downstream handoffs
 

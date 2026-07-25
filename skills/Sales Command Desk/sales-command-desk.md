@@ -1,6 +1,6 @@
 ---
 name: sales-command-desk
-description: route and run revenue workflow stages across sales research, discovery, outbound, call prep, qualification, proposals, crm updates, forecasting, renewals, and customer handoff. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: route and run revenue workflow stages across sales research, discovery, outbound, call prep, qualification, proposals, crm updates, forecasting, renewals, and customer handoff. use when {{AGENT}} needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Sales Command Desk
@@ -30,12 +30,15 @@ Act as the Sales Revenue workflow orchestrator. Classify the request, select the
 
 ## Workflow
 
-- Classify the sales request and workflow mode.
-- Create or update the sales workflow packet.
-- Gather only the minimum additional evidence needed to complete the current stage.
-- Produce the stage artifact with source-grounded facts and labeled assumptions.
-- Continue to downstream desks when evidence is sufficient and no approval gate blocks progress.
-- Stop only at completed target outcome, explicit approval gate, or hard halt.
+**Outcome.** A revenue workflow that is actually run, not merely routed: the stage sequence is selected, the specialist desks execute, and the requested artifact exists at the end with its source facts, approval state, and open questions intact.
+
+**Ordered gate (mandated — keep this order).** Stages that write to the CRM, send customer-facing communication, or commit pricing run **last within the sequence and only after their approval gate has cleared**. Everything reversible is produced first; irreversible actions are batched behind the gate so a human sees the full set before anything leaves the building or lands in the system of record. This order is mandated because a sent email cannot be recalled, a CRM write overwrites the only preimage, and a quoted price becomes a commercial position. Never reorder an approval-gated stage earlier to keep momentum.
+
+**Constraints.** Preserve the sales workflow packet across every stage and update it in place rather than re-asking for facts already recorded. Load the evidence that removes ambiguity about the account, the opportunity, and the requested outcome — the constraint is relevance, not volume. Ground every stated fact in a named source and label everything else as an assumption inline. Continue into downstream desks in the same run when the evidence supports it; stopping at a stage boundary to ask permission to proceed with reversible work is a defect, not a safeguard.
+
+**Parallel surface.** Stages that do not consume each other's artifacts are independent and safe to run in parallel, as is a single stage fanned out across independent accounts, leads, or opportunities. Stages that consume an upstream artifact stay ordered, and the approval-gated stages above stay behind their gate regardless of readiness. The final stage sequence, approval log, and downstream handoff packet are a single aggregate pass once the fan-out returns.
+
+**Acceptance bar.** The workflow is complete when every stage has either a produced artifact or a named reason it was skipped, every irreversible action is either approved and logged or listed as pending with its approver named, and the packet carries source facts, assumptions, and open questions forward without loss.
 
 ## Outputs
 
@@ -61,10 +64,16 @@ Act as the Sales Revenue workflow orchestrator. Classify the request, select the
 
 ## Halt conditions
 
-- account, opportunity, target persona, or requested deliverable cannot be resolved
-- required connector access is missing
-- sources conflict on deal stage, owner, amount, close date, or customer commitment
-- a write, send, external share, stage change, booking, or commercial commitment requires approval
+Proceed by default on reversible work and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — a CRM write, a customer-facing send, an external share, a stage or forecast change, a meeting booking, a pricing commitment, or any commercial commitment is requested and its approval has not been granted. This stays a hard halt regardless of how clear the intent is; confidence is not authorization.
+- **Production or destructive** — the action would change a system of record or reach a customer rather than produce a draft. Drafts and dry-run diffs are always available as the non-destructive alternative and should be produced instead of stopping empty-handed.
+- **Security or privacy** — continuing would expose personal data, customer-confidential material, or internal-only commercial assessment to an audience that should not receive it.
+- **Source conflict** — sources genuinely disagree on deal stage, owner, amount, close date, or what was committed to the customer. Record both readings against the field and route the conflict; do not pick the one that lets the workflow continue.
+- **Release integrity** — a customer-facing artifact or a committed number is about to go out on evidence that cannot carry it.
+- **Connector unreachable** — a required CRM, calendar, email, or file source exists but cannot be read, so deal state cannot be established at all.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. An unresolved account, persona, or deliverable definition is a labeled assumption plus an open question — produce the reversible artifact on the stated assumption and let it be corrected, rather than stopping the workflow to ask.
 
 ## Downstream handoffs
 

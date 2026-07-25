@@ -15,11 +15,19 @@ Plan iOS UI/UX for native apps and games: navigation, screen states, SwiftUI/UIK
 
 ## Workflow
 
-1. Resolve target screens, user flows, navigation model, input model, and design source.
-2. Map UI states: loading, empty, success, error, offline, permission denied, purchase failure, save conflict, and gameplay pause/resume where applicable.
-3. Choose implementation-facing UI lane: Compose, UIKit, hybrid, engine UI, native overlay, or store/listing asset workflow.
-4. Define accessibility, localization, adaptive layout, and device-class gates.
-5. Continue to app or game engineering when UI scope is implementation-ready.
+**Outcome.** An implementation-ready iOS UI/UX scope: screen and flow inventory, navigation model, UI framework lane, UI state matrix, input modes and supported device classes, accessibility and localization gates, and the design-source facts and gaps behind them.
+
+**Grounding.** Work from requirements, architecture, design files, screenshots, game design docs, existing UI code, and navigation files. Do not invent screens, flows, design sources, input models, accessibility targets, or localization requirements: label an assumption as an assumption and name the design artifact that would settle it.
+
+**Coverage constraint.** Every screen carries its full state set — loading, empty, success, error, offline, permission denied, purchase failure, save conflict, and gameplay pause/resume where applicable. Choose the implementation-facing UI lane explicitly: SwiftUI, UIKit, hybrid, engine UI, native overlay, or store/listing asset workflow.
+
+**Permission request flows stay ordered.** Where a screen or flow requests an iOS permission, emit the request sequence as ordered steps and keep it ordered: the Info.plist usage-description string must exist before the API call, the in-context rationale precedes the system prompt, the prompt precedes the protected call, and a defined denied path follows. iOS itself enforces this ordering — an app calling a protected API without its usage-description string is terminated, and the system permission alert is shown only once, after which the user must change the setting in Settings. Getting the order wrong is not recoverable in-session.
+
+**Parallel surface.** Screens, user flows, device classes, and locales are independent items: build the state matrix, accessibility annotations, and localization notes across them in parallel rather than walking screen by screen. The navigation model and the UI framework lane are aggregate decisions that reconcile the per-screen results and are made once.
+
+**Acceptance bar.** UI scope is implementation-ready when every screen in the inventory has a complete state row; accessibility and localization gates are stated as checkable conditions rather than aspirations; the UI lane is chosen and justified against repo evidence; input modes are enumerated for each supported device class; and every gap in design source is named alongside the artifact that would close it.
+
+Continue to app or game engineering when UI scope is implementation-ready.
 
 ## Responsibilities
 
@@ -51,10 +59,16 @@ Screen/flow inventory, UI state matrix, navigation notes, accessibility/localiza
 
 ## Halt conditions
 
-- Target screens, flows, or input model are missing.
-- Design source is unavailable for visual implementation.
-- Accessibility or localization target is required but unknown.
-- Game HUD/menu/controller behavior is required but unresolved.
+Proceed by default. A missing design detail is normally a labeled assumption plus a named gap, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — a brand, Human Interface Guidelines, design-system, or accessibility-target decision requires a human owner to authorize it.
+- **Production or destructive** — the request would publish or overwrite store listing assets, screenshots, or live UI copy.
+- **Security or privacy** — a flow would surface personal data, request a sensitive permission, or present consent or usage-description wording that no source establishes.
+- **Source conflict** — design files, product requirements, and existing UI code genuinely disagree on a screen, flow, or state. Preserve the conflict.
+- **Release integrity** — accessibility or localization coverage would be reported as met when no evidence supports it.
+- **Connector unreachable** — a design source exists but cannot be read. A design artifact that simply does not exist yet is a soft gap.
+
+Otherwise proceed: unresolved screens, flows, input models, accessibility targets, localization scope, or HUD/menu/controller behavior become labeled assumptions in the brief plus open questions for the design owner.
 
 ## Default output modes
 
@@ -74,7 +88,7 @@ Use SDLC requirement, architecture, implementation handoff, and verification gat
 
 ## iOS research grounding
 
-- Use progressive disclosure: keep routing metadata short, active desk instructions bounded, and references cold until needed.
+- Use progressive disclosure for relevance, not for volume: route on frontmatter, load the desk that matches the request, and pull a reference when it bears on the decision rather than by default. Context is not the scarce resource; ambiguity is.
 - For app work, account for Swift, SwiftUI, SwiftData/Core Data, App Intents, widgets, StoreKit, accessibility, privacy labels, TestFlight, and App Review.
 - For game work, account for SpriteKit, SceneKit, Metal, MetalFX, Game Center, StoreKit, controller input, asset delivery, frame budget, thermal behavior, and live ops.
 - Default to instruction-only execution unless a reviewed deterministic script creates clear value.

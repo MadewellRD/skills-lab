@@ -1,6 +1,6 @@
 ---
 name: observability-readiness-desk
-description: create connector-grounded observability readiness artifacts for software delivery. use when chatgpt needs to design or review logging, metrics, traces, dashboards, alerts, slos, operational runbooks, deployment monitoring checkpoints, telemetry gaps, or production-readiness evidence from repositories, architecture docs, deployment plans, incidents, ci results, and monitoring context.
+description: create connector-grounded observability readiness artifacts for software delivery. use when {{AGENT}} needs to design or review logging, metrics, traces, dashboards, alerts, slos, operational runbooks, deployment monitoring checkpoints, telemetry gaps, or production-readiness evidence from repositories, architecture docs, deployment plans, incidents, ci results, and monitoring context.
 ---
 
 # Observability Readiness Desk
@@ -24,26 +24,29 @@ Before producing operational recommendations, gather the best available source f
 
 Required when available:
 
-1. GitHub for source code, logging/tracing/metrics instrumentation, config files, deployment manifests, CI checks, and recent PRs.
-2. Product, architecture, release, deployment, incident, or runbook docs for intended behavior and operational commitments.
-3. Monitoring, observability, or incident sources when the user asks about existing dashboards, alerts, SLOs, or production failures.
+- GitHub for source code, logging/tracing/metrics instrumentation, config files, deployment manifests, CI checks, and recent PRs.
+- Product, architecture, release, deployment, incident, or runbook docs for intended behavior and operational commitments.
+- Monitoring, observability, or incident sources when the user asks about existing dashboards, alerts, SLOs, or production failures.
+
+These sources are independent of each other and parallel-safe to retrieve concurrently.
 
 If a required source is unavailable, state the limitation and produce either a scoped user-fact-only artifact or a connector diagnostic. Do not invent dashboards, metrics, alert names, incident IDs, service ownership, or SLO targets.
 
 ## Workflow
 
-1. Classify the request: readiness review, telemetry design, runbook, SLO/alerting, deployment monitoring, incident follow-up, or gap analysis.
-2. Route to connectors using `references/connector-routing.md`.
-3. Apply truth precedence from `references/source-hierarchy.md`.
-4. Select the output shape from `references/output-contract.md`.
-5. Build the artifact using the relevant template:
-   - `references/observability-plan-template.md`
-   - `references/telemetry-design-template.md`
-   - `references/runbook-template.md`
-   - `references/slo-alerting-template.md`
-   - `references/readiness-checklist.md`
-6. Include evidence, unknowns, and assumptions. Use halt behavior from `references/halt-conditions.md` when source truth is missing or conflicting.
-7. When the next step is implementation, provide downstream handoff notes for `implementation-handoff-desk`, `deployment-desk`, `incident-response-desk`, or `release-operations-desk`.
+**Outcome.** The observability artifact the request calls for: readiness review, telemetry design, runbook, SLO/alerting plan, deployment monitoring checkpoints, incident follow-up, or gap analysis.
+
+**Grounding.** Route to connectors using `references/connector-routing.md` and apply truth precedence from `references/source-hierarchy.md`.
+
+**Templates.** Select the output shape from `references/output-contract.md` and build with the relevant template: `references/observability-plan-template.md`, `references/telemetry-design-template.md`, `references/runbook-template.md`, `references/slo-alerting-template.md`, or `references/readiness-checklist.md`.
+
+**Parallel surface.** Services, endpoints, signals, dashboards, alert rules, and SLOs are independent review units — each one's coverage assessment stands on its own. Evaluate them in parallel rather than walking the list serially, then aggregate into one gap report.
+
+**Runbooks are ordered content.** Recovery and mitigation steps inside a runbook are executed under pressure and in sequence. Keep them numbered and ordered; the operator following them must not have to derive the order.
+
+**Handoff.** When the next step is implementation, provide downstream handoff notes for `implementation-handoff-desk`, `deployment-desk`, `incident-response-desk`, or `release-operations-desk`.
+
+**Acceptance bar.** The artifact is done when every gap names the specific missing signal rather than a generic category; each proposed metric, log, trace, alert, or SLO is tied to a failure mode it would actually detect; alerts carry a threshold, an owner, and a stated action; existing coverage is distinguished from proposed coverage; and evidence, unknowns, and assumptions are labeled. Do not invent dashboards, metrics, alert names, incident IDs, service ownership, or SLO targets.
 
 ## Output rules
 
@@ -64,13 +67,18 @@ For downloadable artifacts, use `scripts/write_observability_markdown.py` to wra
 
 ## Halt rules
 
-Halt or produce a connector diagnostic when:
+Proceed by default. An unclear service boundary or a missing dashboard is a gap to record, not a stop — name the assumption inline and continue the readiness assessment. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
 
-- the service, repo, or deployment target is unclear
-- requested production claims require monitoring sources that are unavailable
-- source facts conflict across repo, docs, dashboards, or incident notes
-- the user asks for go/no-go readiness but logs, metrics, traces, alerts, or rollback/deployment context are missing
-- the task requires implementation changes better handled through `implementation-handoff-desk`
+- **Approval** — the artifact would commit the organization to an SLO, error budget, or on-call obligation that a human owner must authorize.
+- **Production or destructive** — the request asks to change live alert rules, dashboards, or sampling configuration rather than plan the change.
+- **Security or privacy** — proposed telemetry would capture secrets, credentials, or personal data.
+- **Source conflict** — repo instrumentation, docs, dashboards, and incident notes genuinely disagree on what is actually monitored.
+- **Release integrity** — a go/no-go readiness verdict is requested while logs, metrics, traces, alerts, or rollback context needed to support it are missing.
+- **Connector unreachable** — a monitoring source exists but cannot be read, and the request depends on production claims. A source that is merely absent is a soft gap: produce a scoped user-fact-only artifact and continue.
+
+When the task turns into implementation changes, route to `implementation-handoff-desk` rather than halting.
+
+Use `references/halt-conditions.md` for the halt artifact and diagnostic format.
 
 ## Composition with SDLC desk skills
 
@@ -82,4 +90,4 @@ Halt or produce a connector diagnostic when:
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

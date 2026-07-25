@@ -1,0 +1,16 @@
+interface:
+  display_name: Android Observability Liveops Desk
+  short_description: Defines crash/ANR monitoring, analytics, remote config, alerts,
+    and live ops.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#22c55e'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

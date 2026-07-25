@@ -1,0 +1,16 @@
+interface:
+  display_name: Verification Desk
+  short_description: Create requirements traceability, V&V reports, acceptance-gate
+    reviews, and release-blocker evidence maps.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

@@ -1,24 +1,25 @@
 ---
 name: objection-handling-desk
-description: draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections. use when chatgpt needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
+description: draft grounded responses to pricing, timing, security, technical, competitive, and commercial objections. use when the assistant needs to perform or continue sales revenue command desk work involving accounts, leads, opportunities, crm, calendar, email, files, prospecting, proposals, forecasts, renewals, or customer handoffs.
 ---
 
 # Objection Handling Desk
 
-## Operating contract
+## Role
 
 Classify sales objections and draft evidence-backed responses, clarifying questions, and follow-up language for verbal or written use.
 
-Read `references/suite-workflow-contract.md` for cross-desk continuation rules, `references/workflow-packet-schema.md` for packet fields, and `references/stage-contract.md` for this desk's stage contract.
+## Use when
 
-## Execution rules
+- A user asks for sales, revenue, account, lead, opportunity, renewal, forecast, proposal, or CRM workflow support.
+- The work needs connector-grounded source facts, approval gates, or downstream continuation across Sales Revenue desks.
+- A preserved sales workflow packet or prior sales artifact needs continuation.
 
-- Start by resolving the requested outcome, account/contact/opportunity context, evidence sources, and approval state.
-- Maintain a sales workflow packet throughout the response.
-- Prefer completing the requested stage over giving a bare recommendation to use another desk.
-- Continue to a downstream desk only when required facts are present and no approval gate blocks progress.
-- Halt with the suite halt format when connector access, required facts, source conflicts, or approval gates block safe continuation.
-- Do not send emails, book external meetings, write CRM fields, change stages, alter amount or close date, or share customer-facing artifacts without explicit approval.
+## Do not use when
+
+- The request is only generic copywriting with no sales workflow context.
+- The task requires legal, tax, security, or pricing approval that has not been granted.
+- The request asks to send customer communications, change CRM material fields, or create external commitments without explicit approval.
 
 ## Required evidence
 
@@ -27,13 +28,15 @@ Read `references/suite-workflow-contract.md` for cross-desk continuation rules, 
 - approved proof points and competitive claims
 - product, security, legal, or pricing constraints
 
-## Stage workflow
+## Workflow
 
-- Classify the stage mode.
-- Gather and normalize source facts.
-- Produce the requested artifact or decision output.
-- Record assumptions, open questions, and approval requirements.
-- Preserve completed stage state and downstream handoff targets.
+**Outcome.** For each objection: a classification, a core response grounded in approved proof points, the clarifying questions that should precede it, the supporting evidence list, a talk track, and an email draft — drafts only.
+
+**Constraints.** Carry the sales workflow packet forward and update it in place. Approved proof points and first-party collateral are authoritative; a response may not assert a capability, result, customer reference, timeline, or commercial concession that no approved source supports. Where the honest answer is that the claim cannot be made, the response says so and names what would be needed rather than reaching for adjacent language. Competitive and technical claims stay scoped to what is evidenced. Nothing here is sent to the customer without approval.
+
+**Parallel surface.** Objections are independent — classify each one and draft its response, questions, and evidence list in parallel rather than one objection at a time. The consistency pass is aggregate and runs once over the complete set, because contradictions only appear across responses: two individually defensible answers can promise incompatible things about timeline, scope, or price, and that is only visible when they are read together against the current proposal.
+
+**Acceptance bar.** Every response names the approved proof point or source it rests on, every unsupported claim the customer raised is answered without adopting it, and every follow-up question targets a specific unknown. A response that requires legal, security, or pricing authority to make is marked as pending that approval rather than softened until it reads as approved.
 
 ## Outputs
 
@@ -44,12 +47,31 @@ Read `references/suite-workflow-contract.md` for cross-desk continuation rules, 
 - talk track
 - email draft
 
+## Workflow packet fields
+
+- sales_workflow_id
+- workflow_mode
+- requested_outcome
+- account, contacts, and opportunity
+- source_facts and confidence labels
+- assumptions and open_questions
+- approval_state
+- completed_stages and skipped_stages
+- next_recommended_stage
+- artifacts
+
 ## Halt conditions
 
-- approved proof points are missing
-- requested claim is unsupported
-- legal/security/pricing approval is required
-- customer-facing send is requested without approval
+Proceed by default on drafting and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — a customer-facing send is requested without approval, or the response would make a legal, security, compliance, or pricing commitment that requires its named authority. Hard halt: a concession offered in an objection response is a concession the customer will hold you to.
+- **Production or destructive** — the request is to send the response rather than to draft it.
+- **Security or privacy** — the response would disclose security posture, architecture, audit findings, customer references, or contractual detail that has not been cleared for this audience.
+- **Source conflict** — approved proof points and the deal record genuinely disagree about what the customer was told or what was committed. Resolve that before answering, because the response will be read as the company's position.
+- **Release integrity** — the requested claim is unsupported and would go to the customer as fact. Answer without the claim and name what would be needed to make it; do not reach for adjacent language that implies it.
+- **Connector unreachable** — a required collateral, CRM, or notes source exists but cannot be read, so approved proof points cannot be checked at all.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing deal context or an unclear objection is a labeled assumption in the draft plus a clarifying question in the talk track. Where no approved proof point covers the topic, the draft says so plainly and routes it — that is a usable answer, not a blocked one.
 
 ## Downstream handoffs
 
@@ -57,8 +79,20 @@ Read `references/suite-workflow-contract.md` for cross-desk continuation rules, 
 - sales-call-prep-desk
 - crm-update-desk
 
-## Observability hooks
+## Source hierarchy
 
-- Log selected desk, workflow mode, sources consulted, confidence labels, approval gates, and any blocked write/send/share action.
-- Record dry-run CRM diffs before writes.
-- Record artifact names and source facts used to support customer-facing claims.
+- Approved proof points and first-party collateral are authoritative.
+- Competitive or technical claims must be grounded and scoped.
+- Do not overpromise product behavior, timelines, or commercial concessions.
+
+## Quality bar
+
+- Trace every recommendation to source evidence or clearly labeled assumptions.
+- Separate facts, hypotheses, decisions, and open questions.
+- Preserve the workflow packet in every handoff.
+- Use dry-run diffs for CRM changes before any write.
+- Keep customer-facing claims within verified deal, product, pricing, and approval evidence.
+
+## Capability baseline
+
+Use `references/capability-baseline.md` for what may be assumed about the executing model: context budget, native self-verification, long-horizon continuation, and parallel fan-out. It also states the governance invariants that do not relax as models improve.

@@ -1,0 +1,11 @@
+interface:
+  display_name: Competitive Analysis Desk
+  short_description: Analyze competitors, alternatives, substitutes, positioning,
+    and differentiation opportunities.
+  default_prompt: ''
+  icon: 📦
+  primary_color: '#7c3aed'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

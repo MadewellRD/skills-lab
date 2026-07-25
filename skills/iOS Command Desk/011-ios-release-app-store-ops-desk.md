@@ -15,11 +15,21 @@ Plan iOS release and App Store operations: build variants, signing, versioning, 
 
 ## Workflow
 
+**Outcome.** An iOS release and App Store operations package: release target and version, bundle ID and build artifacts, signing and provisioning state, TestFlight group or App Store release state, store listing and asset delivery readiness, release notes, staged rollout plan, rollback plan, and the gate evidence and approvals behind any go decision.
+
+**Grounding.** Work from QA evidence, release scope, versioning plan, CI and build output, signing policy, App Store Connect notes, listing assets, policy review, and the rollout and rollback plan. Do not invent signing state, bundle ID, App Store Connect state, release track, rollout percentages, rollback commands, or policy evidence.
+
+**Ordered release sequence — keep this ordered.** The steps below are ordered because Apple's signing chain and App Review mandate the order, not because the executing model needs the decomposition. Signing and provisioning precede archive and upload because App Store Connect rejects an artifact whose certificate, profile, entitlements, or bundle ID do not match, and the bundle ID cannot be changed after first submission. Gate verification precedes submission because App Review is an external gate on a queue this desk does not control, and a rejected submission costs a full review cycle. Approval precedes release, and phased release percentages only advance on Apple's schedule — pausing a phased release does not recall the builds already delivered to users. A future editor must not reorder, renumber, or collapse these into prose:
+
 1. Resolve release target, version, branch/commit, bundle ID, signing state, artifacts, track, and rollout plan.
 2. Verify product, technical discovery, architecture, security/privacy, performance, QA, observability, and policy gates.
 3. Define build/package commands, release notes, store listing changes, asset delivery, staged rollout, monitoring, and rollback criteria.
 4. Separate repo/package readiness from App Store Connect actions that require explicit approval.
 5. Continue to observability/live ops for launch monitoring.
+
+**Parallel surface.** Evidence collection for the individual gates in step 2, and readiness checks for individual store listing assets and locales, are independent of one another and can be gathered in parallel. The sequence above and the go/no-go roll-up are explicitly not parallel: they run once, in order, once the evidence exists.
+
+**Acceptance bar.** The release package is ready when the release is bounded by a specific version, branch, and commit; every gate is classified pass, fail, blocked, unknown, or not applicable together with the evidence supporting that classification; signing state and bundle ID are sourced rather than assumed; rollback steps are marked verified or unverified rather than presented uniformly; staged rollout has defined phases, monitoring windows, and halt criteria; and any go decision traces to gate evidence rather than to the absence of known problems.
 
 ## Responsibilities
 
@@ -50,10 +60,16 @@ Release readiness report, build/package checklist, TestFlight group or App Store
 
 ## Halt conditions
 
-- Signing or bundle ID facts are missing.
-- QA, security/privacy, performance, policy, or observability gates are unresolved.
-- Requested App Store Connect publish action lacks explicit approval.
-- Rollback plan or staged rollout criteria are missing for production release.
+Proceed by default when drafting checklists, notes, and readiness reports: an unknown gate is classified `unknown` with its missing evidence named. Release decisions are different — a go decision and any App Store Connect write are consequence-bearing acts. Reserve hard halts for these consequence classes:
+
+- **Approval** — a requested App Store Connect submit, publish, release, phased-release advance, or listing-change action lacks explicit approval. This desk prepares release decisions; it does not execute them.
+- **Production or destructive** — the action reaches production users irreversibly: releasing an approved build, advancing a phased release, publishing a listing change, or rotating signing or provisioning material.
+- **Security or privacy** — the release depends on unresolved security, privacy, privacy-label, or App Review policy risk.
+- **Source conflict** — repo state, CI output, and App Store Connect notes genuinely disagree on version, artifact, release state, or signing state. Preserve the conflict rather than picking one and shipping.
+- **Release integrity** — signing or bundle ID facts are missing; QA, security/privacy, performance, policy, or observability gates are unresolved; or a rollback plan and staged rollout criteria are missing for a production release.
+- **Connector unreachable** — repo, CI, or App Store Connect evidence exists but cannot be read.
+
+Otherwise proceed: missing listing copy, asset, or release-note detail is drafted with the assumption labeled inline and flagged for the owner before submission.
 
 ## Default output modes
 
@@ -74,7 +90,7 @@ Use `release-operations-desk`, `deployment-desk`, `verification-desk`, and `obse
 
 ## iOS research grounding
 
-- Use progressive disclosure: keep routing metadata short, active desk instructions bounded, and references cold until needed.
+- Use progressive disclosure for relevance, not for volume: route on frontmatter, load the desk that matches the request, and pull a reference when it bears on the decision rather than by default. Context is not the scarce resource; ambiguity is.
 - For app work, account for Swift, SwiftUI, SwiftData/Core Data, App Intents, widgets, StoreKit, accessibility, privacy labels, TestFlight, and App Review.
 - For game work, account for SpriteKit, SceneKit, Metal, MetalFX, Game Center, StoreKit, controller input, asset delivery, frame budget, thermal behavior, and live ops.
 - Default to instruction-only execution unless a reviewed deterministic script creates clear value.

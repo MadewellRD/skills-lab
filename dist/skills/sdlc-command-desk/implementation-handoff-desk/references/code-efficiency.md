@@ -1,6 +1,6 @@
 # Code Efficiency Rules
 
-Use this reference when drafting implementation handoffs for Codex, Claude Code, or other coding agents. The goal is to spend fewer agent tokens on invention and more on editing, testing, and verification.
+Use this reference when drafting implementation handoffs for the coding agent or other coding agents. The goal is to spend fewer agent tokens on invention and more on editing, testing, and verification.
 
 ## Principle
 

@@ -1,6 +1,6 @@
 ---
 name: verification-desk
-description: create connector-grounded verification and validation artifacts for software delivery. use when chatgpt needs to prove implemented work satisfies requirements, build requirements traceability matrices, assess acceptance gates, validate test and ci evidence, identify release blockers, or prepare downstream handoff notes for release, docs, review, or implementation-handoff-desk workflows.
+description: create connector-grounded verification and validation artifacts for software delivery. use when {{AGENT}} needs to prove implemented work satisfies requirements, build requirements traceability matrices, assess acceptance gates, validate test and ci evidence, identify release blockers, or prepare downstream handoff notes for release, docs, review, or implementation-handoff-desk workflows.
 ---
 
 # Verification Desk
@@ -18,31 +18,25 @@ Use this skill to turn requirements, implementation evidence, test results, CI/c
 
 ## Operating rules
 
-1. Run connector preflight before making claims.
-2. Treat GitHub as source of truth for PRs, commits, changed files, checks, test names, and code evidence.
-3. Treat PRDs, SRS docs, architecture/design specs, issue bodies, and acceptance criteria as requirement sources.
-4. Treat CI logs, test output, screenshots, QA notes, and artifacts as evidence sources, not as requirements.
-5. Separate verified facts from assumptions and gaps.
-6. Halt rather than inventing requirement IDs, test results, PR status, commit SHAs, CI outcomes, or release readiness.
-7. Produce downloadable Markdown artifacts when the user asks for a report, checklist, matrix, or handoff.
+- Run connector preflight before making claims.
+- Treat GitHub as source of truth for PRs, commits, changed files, checks, test names, and code evidence.
+- Treat PRDs, SRS docs, architecture/design specs, issue bodies, and acceptance criteria as requirement sources.
+- Treat CI logs, test output, screenshots, QA notes, and artifacts as evidence sources, not as requirements.
+- Separate verified facts from assumptions and gaps.
+- Never invent requirement IDs, test results, PR status, commit SHAs, CI outcomes, or release readiness. An unprovable requirement is classified `unverified`, not guessed at.
+- Produce downloadable Markdown artifacts when the user asks for a report, checklist, matrix, or handoff.
 
 ## Workflow
 
-1. Classify the request:
-   - V&V report
-   - requirements traceability matrix
-   - acceptance-gate review
-   - release readiness verification
-   - test evidence review
-   - blocker/gap analysis
-   - downstream handoff for `implementation-handoff-desk`
-2. Load source requirements from PRD, SRS, issue bodies, design docs, acceptance criteria, or user-provided scope.
-3. Load implementation evidence from GitHub PRs, commits, changed files, check status, test files, CI artifacts, and manual QA notes.
-4. Build a requirement-to-evidence mapping using `references/rtm-template.md`.
-5. Classify each requirement as `verified`, `partially verified`, `unverified`, `blocked`, or `not applicable`.
-6. Identify release blockers and evidence gaps using `references/blocker-rubric.md`.
-7. Produce the requested artifact using `references/vv-report-template.md` and `references/output-contract.md`.
-8. Include downstream handoff notes when additional implementation, documentation, testing, or release work is required.
+**Outcome.** The verification artifact the request calls for: a V&V report, requirements traceability matrix, acceptance-gate review, release readiness verification, test evidence review, blocker/gap analysis, or downstream handoff for `implementation-handoff-desk`.
+
+**Inputs.** Load source requirements from PRD, SRS, issue bodies, design docs, acceptance criteria, or user-provided scope. Load implementation evidence from GitHub PRs, commits, changed files, check status, test files, CI artifacts, and manual QA notes. Requirements and evidence are separate inventories and must stay separate in the artifact.
+
+**Mapping.** Build the requirement-to-evidence mapping using `references/rtm-template.md`. Classify each requirement as `verified`, `partially verified`, `unverified`, `blocked`, or `not applicable`. Identify release blockers and evidence gaps using `references/blocker-rubric.md`. Produce the artifact using `references/vv-report-template.md` and `references/output-contract.md`, with downstream handoff notes when additional implementation, documentation, testing, or release work is required.
+
+**Parallel surface.** Each requirement is verified against its own evidence and no requirement's status depends on another's. Retrieve evidence and classify requirements in parallel across the requirement set rather than walking the matrix row by row. Blocker aggregation and the overall release verdict are a single pass at the end, once every row is classified.
+
+**Acceptance bar.** The artifact is done when every requirement in the inventory has exactly one status and every non-`not applicable` status names the specific evidence supporting it — a test name, check, commit, PR, or QA note. Blockers must state what would clear them. Passing CI alone is not proof that every requirement is satisfied, and a merged PR alone is not proof of validation; a `verified` status that rests on either without a requirement-specific link is not acceptable.
 
 ## Connector requirements
 
@@ -97,8 +91,17 @@ Do not mark work as verified unless there is direct evidence. Passing CI alone i
 
 ## Halt behavior
 
-Use `references/halt-conditions.md`. Halt or produce a connector diagnostic when required sources are missing, requirement identity is ambiguous, evidence conflicts, CI status cannot be verified, or release readiness would require unsupported assumptions.
+Proceed by default. A requirement that cannot be proven is classified `unverified` or `blocked` with the missing evidence named — that is this desk's product, not a reason to stop. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — accepting a gap, waiving a gate, or signing off on partial coverage needs a human owner.
+- **Production or destructive** — establishing evidence would require running against production systems or data.
+- **Security or privacy** — the evidence trail would require reproducing secrets, credentials, or personal data in the artifact.
+- **Source conflict** — requirement sources and evidence genuinely disagree, or requirement identity is ambiguous across sources such that the same ID means different things.
+- **Release integrity** — a release-readiness verdict is requested and would rest on unsupported assumptions, or CI status that gates the release cannot be established. This is the primary halt class for this desk: do not issue a ready verdict that the evidence cannot carry.
+- **Connector unreachable** — a required requirement or evidence source exists but cannot be read. A merely absent source is a soft gap: classify the affected requirements `unverified`, note the limitation, and complete the matrix.
+
+Use `references/halt-conditions.md` for the halt artifact format.
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

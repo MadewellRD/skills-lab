@@ -15,11 +15,15 @@ Plan Android backend integration for app/game work: APIs, auth, sync, push, paym
 
 ## Workflow
 
-1. Resolve service/API contracts, auth model, environment, secrets policy, and test endpoints.
-2. Map app/game flows to backend calls, local cache, sync behavior, retries, and failure modes.
-3. Identify platform services: FCM, Billing, Play Games Services, app links, analytics, remote config, cloud saves, or multiplayer.
-4. Define fixtures, mocks, contract tests, observability needs, and failure-mode gates.
-5. Continue to security/privacy or engineering handoff when integration scope is clear.
+**Outcome.** An implementation-ready Android integration scope: API and service contracts, auth and session model, environment and secrets policy, local cache, sync, retry and offline behavior, platform services (FCM, Billing, Play Games Services, app links, analytics, remote config, cloud saves, multiplayer), failure-mode matrix, fixtures, mocks and contract tests, observability needs, and integration validation commands.
+
+**Grounding.** Work from architecture, API docs, OpenAPI/schema files, auth docs, Firebase/Play service configuration facts, backend issues, credentials policy, and existing integration code. Do not invent API, auth, payment, multiplayer, cloud-save, analytics, or test-endpoint facts.
+
+**Parallel surface.** Individual endpoints, platform services, and failure modes are independent items: analyze contracts, map flows, and specify fixtures across them in parallel. The auth and session model, the shared retry and offline policy, and the assembled failure-mode matrix are aggregate — they must hold consistently across every call, so settle them once the per-item analysis exists.
+
+**Acceptance bar.** Integration scope is clear when every call the app or game makes is tied to a named contract or marked unspecified; the auth and session model states refresh and failure behavior; each failure mode has a defined client behavior; fixtures or mocks exist for every contract a test must exercise; and no credential, endpoint, or Play-service fact is asserted without a source.
+
+Continue to security/privacy or engineering handoff when integration scope is clear.
 
 ## Responsibilities
 
@@ -51,10 +55,16 @@ Integration contract notes, data-flow map, failure-mode matrix, fixture/test pla
 
 ## Halt conditions
 
-- API contracts or auth model are missing.
-- Payment/store service facts are unclear.
-- Multiplayer, leaderboard, or cloud-save dependencies are unknown.
-- Test endpoints, fixture strategy, or credentials policy is unavailable.
+Proceed by default. A missing contract detail is normally a labeled assumption plus an open question for the backend owner, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — the work requires provisioning, configuring, or calling a live service the user has not authorized.
+- **Production or destructive** — the request would write to production data, a live payment or entitlement system, a real player's cloud save, or a production remote-config value.
+- **Security or privacy** — the integration requires real credentials, tokens, or keys, or moves personal data whose handling no source establishes.
+- **Source conflict** — API docs, schema files, and existing integration code genuinely disagree on a contract. Preserve the conflict rather than picking one.
+- **Release integrity** — an integration would be reported as verified when no fixture, contract test, or environment exists to exercise it.
+- **Connector unreachable** — an API doc, schema, or repo source exists but cannot be read.
+
+Otherwise proceed: unknown endpoints, auth details, payment or store service behavior, multiplayer, leaderboard or cloud-save dependencies, test endpoints, or fixture strategy become labeled assumptions in the contract notes, each with the exact question that resolves it.
 
 ## Default output modes
 

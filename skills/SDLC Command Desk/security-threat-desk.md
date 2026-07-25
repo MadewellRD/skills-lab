@@ -1,6 +1,6 @@
 ---
 name: security-threat-desk
-description: create connector-grounded security and threat-modeling artifacts for software delivery. use when chatgpt needs to assess security risk, build threat models, identify trust boundaries, review authentication or authorization surfaces, evaluate dependency and secret exposure, map mitigations to requirements, or prepare downstream handoff notes for architecture-design-desk, issue-planning-desk, verification-desk, review-quality-desk, ci-failure-desk, or implementation-handoff-desk workflows.
+description: create connector-grounded security and threat-modeling artifacts for software delivery. use when {{AGENT}} needs to assess security risk, build threat models, identify trust boundaries, review authentication or authorization surfaces, evaluate dependency and secret exposure, map mitigations to requirements, or prepare downstream handoff notes for architecture-design-desk, issue-planning-desk, verification-desk, review-quality-desk, ci-failure-desk, or implementation-handoff-desk workflows.
 ---
 
 # Security Threat Desk
@@ -16,24 +16,17 @@ Use this skill to turn requirements, architecture, repo state, dependency contex
 
 ## Core workflow
 
-1. Classify the request.
-   - Threat model: use `references/threat-model-template.md`.
-   - Security review: use `references/security-review-template.md`.
-   - Trust-boundary or data-flow review: use `references/trust-boundary-template.md`.
-   - Dependency, secret, or supply-chain review: use `references/dependency-secret-review.md`.
-   - Downstream implementation handoff: use `references/handoff-rules.md`.
+**Outcome.** The smallest sufficient security artifact: threat model, review report, trust-boundary map, dependency/secrets review, mitigation backlog, or downstream handoff.
 
-2. Run connector preflight.
-   Use `references/connector-routing.md` before making claims about code, branches, PRs, issues, dependencies, CI, or policy. GitHub is source of truth for code, dependency manifests, workflow files, PRs, commits, issues, and checks. Specs and docs are source of truth for requirements, architecture, compliance, privacy, and business policy. Communication sources are decision context only.
+**Artifact selection.** Threat models use `references/threat-model-template.md`. Security reviews use `references/security-review-template.md`. Trust-boundary or data-flow reviews use `references/trust-boundary-template.md`. Dependency, secret, or supply-chain reviews use `references/dependency-secret-review.md`. Downstream implementation handoff uses `references/handoff-rules.md`.
 
-3. Establish the source hierarchy.
-   Apply `references/source-hierarchy.md`. Current user instruction can set priority. GitHub controls repo facts. Product, architecture, and compliance docs control intent. Public sources can only support external framework or library facts.
+**Grounding.** Run connector preflight per `references/connector-routing.md` before making claims about code, branches, PRs, issues, dependencies, CI, or policy. GitHub is source of truth for code, dependency manifests, workflow files, PRs, commits, issues, and checks. Specs and docs are source of truth for requirements, architecture, compliance, privacy, and business policy. Communication sources are decision context only.
 
-4. Produce the security artifact.
-   Use the smallest sufficient artifact: threat model, review report, trust-boundary map, dependency/secrets review, mitigation backlog, or downstream handoff. Include source facts, assumptions, risks, severity, likelihood, impact, mitigations, owners when known, and unresolved questions.
+**Source hierarchy.** Apply `references/source-hierarchy.md`. Current user instruction can set priority. GitHub controls repo facts. Product, architecture, and compliance docs control intent. Public sources can only support external framework or library facts.
 
-5. Halt rather than invent.
-   If required connector facts are unavailable, produce a connector-needed diagnostic or explicitly mark the artifact as user-fact-only. Do not invent code paths, auth behavior, data classes, secrets exposure, dependency versions, compliance obligations, or CI status.
+**Parallel surface.** Trust boundaries, entry points, authentication surfaces, dependency manifests, and individual findings are independent analysis units. Examine them in parallel rather than iterating serially, then reconcile into a single ranked risk set.
+
+**Acceptance bar.** The artifact is done when every risk names its affected assets, actors, entry points, and trust boundaries; carries severity, likelihood, and impact; and maps to at least one mitigation with an owner where the owner is known from sources. Confirmed findings, plausible risks, and open questions must be visibly separated, and missing evidence called out rather than filled in. Do not invent code paths, auth behavior, data classes, secrets exposure, dependency versions, compliance obligations, or CI status. When required connector facts are absent, mark the artifact user-fact-only and continue.
 
 ## Security analysis rules
 
@@ -44,6 +37,17 @@ Use this skill to turn requirements, architecture, repo state, dependency contex
 - Do not provide exploit instructions that increase harm. Keep remediation practical and defensive.
 - When a finding requires code changes, prepare handoff notes for `issue-planning-desk` or `implementation-handoff-desk` rather than drafting unbounded implementation work.
 - When a finding blocks release, prepare evidence for `verification-desk` or `release-operations-desk`.
+
+## Halt policy
+
+Proceed by default. An unresolved security question is normally a finding to record, not a reason to stop: state the assumption inline and continue the assessment. Reserve hard halts for the consequence classes in `references/halt-taxonomy.md`:
+
+- **Approval** — a mitigation, exception, or risk acceptance needs human authorization.
+- **Production or destructive** — the recommended action touches production systems, credentials, or live access control.
+- **Security or privacy** — proceeding would expose secrets, credentials, or personal data, or the request asks for material that increases attacker capability.
+- **Source conflict** — repo state and policy or compliance documentation genuinely disagree on a load-bearing control.
+- **Release integrity** — a security gate would be reported as cleared when its result cannot be established.
+- **Connector unreachable** — a required source exists but cannot be read. Evidence that is merely absent is a soft gap: produce a connector-needed diagnostic or a user-fact-only artifact and continue.
 
 ## Output requirements
 
@@ -67,4 +71,4 @@ For deterministic file wrapping, use `scripts/write_security_markdown.py` when a
 
 ## Continuity Kernel Adoption
 
-Use `references/continuity-kernel.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/codex-conservation-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `CODEX_BLOCKER` when implementation handoff facts are insufficient for a coding agent.
+Use `references/continuity-kernel.md`, `references/capability-baseline.md`, `references/readiness-gates.md`, `references/halt-taxonomy.md`, `references/preflight-cache.md`, and `references/handoff-density-policy.md` when participating in an SDLC Command Desk workflow. Preserve and update the `continuity_packet` instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable upstream/downstream work. Use `{{BLOCKER_TAG}}` when implementation handoff facts are insufficient for a coding agent.

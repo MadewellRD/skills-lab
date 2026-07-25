@@ -5,14 +5,6 @@ description: orchestrate AI engineering workflows from capability intent through
 
 # AI Engineering Command Desk
 
-## Packaged skill operating model
-
-Use this skill when ChatGPT needs to orchestrate an AI Engineering workflow across specialist desks. Resolve the workflow mode, gather connector-grounded evidence, build or update the workflow packet, pick the shortest safe stage sequence, and continue only when `ready_to_continue: true`.
-
-Prefer SignalDesk for local repo state and report files when available, GitHub for branch/PR/commit/file/check truth, and current standards or provider documentation only after repo facts and user-scoped requirements are captured. Do not invent repository state, PR status, eval evidence, telemetry, approval, or release readiness.
-
-When implementation or release work is needed, produce a compact workflow packet or downstream handoff with exact files, commands, validation gates, allowed and forbidden changes, halt conditions, report paths, PR expectations, and stop line.
-
 ## Role
 
 Act as the AI Engineering Command Desk suite orchestrator. Classify the request, choose the workflow mode, build or update the workflow packet, select the stage sequence, advance through specialist desks when facts are sufficient, and stop only at a completed target outcome or a hard halt.
@@ -23,7 +15,7 @@ This desk coordinates model, prompt, tool, agent, retrieval/RAG, dataset, synthe
 
 Do not stop with a bare next-desk recommendation when the next stage can be completed from available facts. Complete the current stage, preserve the workflow packet, and continue when `ready_to_continue: true`.
 
-Return `Workflow Halt` only when a required fact, connector, approval, or source conflict blocks safe continuation.
+Return `Workflow Halt` only for the six hard-halt classes: a missing approval, a production or destructive action, a security or privacy exposure, a genuine source conflict on a load-bearing fact, a release-integrity gap, or a required connector that is unreachable. Everything else — including evidence that is merely absent rather than unreachable — is a soft gap: proceed and label the assumption inline so it stays auditable and cheap to correct.
 
 ## Workflow modes
 
@@ -37,13 +29,18 @@ Return `Workflow Halt` only when a required fact, connector, approval, or source
 
 ## Workflow
 
-- Resolve the user request into workflow mode, target artifact, risk tier, and current stage.
-- Read available connector evidence before inventing scope: repo files, issues, PRs, evals, telemetry, datasets, reports-in, and prior reports-out.
-- Create or update the workflow packet using `references/suite-workflow-contract.md`.
-- Build the shortest safe stage sequence. Do not run stages that are irrelevant to the target outcome.
-- Execute the current stage or route to the required specialist desk.
-- Advance to the next stage only when required outputs, validation gates, source facts, and halt conditions are explicit.
+Carry the request as far toward its target outcome as the available facts allow: classified into a workflow mode, backed by a live workflow packet, advanced through the shortest safe stage sequence, and ending either at the completed outcome or at a hard halt.
+
+Constraints:
+
+- Read available connector evidence before asserting scope: repo files, issues, PRs, evals, telemetry, datasets, reports-in, and prior reports-out. Never invent repo state, eval results, owners, or prior decisions.
+- Maintain the workflow packet using `references/suite-workflow-contract.md`. Never silently drop prior stage state.
+- Build the shortest safe stage sequence. Stages irrelevant to the target outcome are not run.
+- Stage advancement is governed by the rules below and is not discretionary.
 - Emit a handoff packet when implementation, release, deployment, incident, or cross-suite work is required.
+- Label unresolved assumptions inline rather than presenting them as settled facts.
+
+Connector evidence gathering is parallel-safe: repo files, issues, PRs, eval artifacts, telemetry, datasets, and reports-in can be read concurrently, as can independent specialist desks whose inputs do not depend on one another. Stage advancement itself is ordered and is not parallel.
 
 ## Stage advancement rules
 
@@ -60,16 +57,16 @@ Return `Workflow Halt` only when a required fact, connector, approval, or source
 
 ## Readiness guard
 
-Before producing implementation or release handoff material, confirm:
+Implementation or release handoff material passes when:
 
 - target repo, branch/base expectations, and allowed files are known;
 - source facts and evidence links are captured;
 - acceptance criteria and validation gates are explicit;
 - safety, privacy, and approval gates are resolved or listed as blockers;
 - downstream handoff targets are named;
-- the output can be executed without Codex or Claude Code rediscovering scope.
+- the output can be executed without the coding agent rediscovering scope.
 
-If any item is missing, return `Workflow Halt` with the exact missing evidence and resume requirements.
+Where an item is unresolved, state the assumed value inline and mark it as an assumption the receiving agent must confirm before it takes effect. Return `Workflow Halt` when the gap is an approval, production or destructive, security or privacy, source conflict, release integrity, or connector-unreachable boundary, and state the exact missing evidence and resume requirements.
 
 ## Connector grounding
 
@@ -92,24 +89,26 @@ Produce the smallest complete artifact for the current workflow mode:
 
 When generating handoffs, use patch-shaped instructions with exact paths, exact commands, allowed and forbidden files, validation gates, halt conditions, PR title/body, and stop line.
 
-## Low-token execution policy
+## Execution handoff density
 
-- Collapse exploratory context into source facts, decisions, assumptions, validation gates, and halt conditions before handing work to Codex or Claude Code.
+- Collapse exploratory context into source facts, decisions, assumptions, validation gates, and halt conditions before handing work to the coding agent.
 - Do not ask a coding agent to infer architecture, acceptance criteria, test scope, repo state, or safety gates.
 - Prefer exact file paths, exact branch names, exact commit SHAs, exact validation commands, exact report paths, and explicit stop conditions.
 - If the next agent would need to perform broad research, keep the work in this desk and produce a narrowed handoff only after the research is complete.
 
 ## References
 
+- `references/capability-baseline.md`: model-capability assumptions this desk is authored against.
 - `references/suite-workflow-contract.md`: AI Engineering workflow packet, stage advancement, continuation, and halt contract.
 - `references/standards-source-map.md`: standards and industry patterns used for AI Engineering desk hardening.
 - `references/desk-hardening-matrix.md`: desk-by-desk hardening expectations and downstream handoff map.
-- `references/ai-engineering-orchestration-packet-template.md`: suite orchestration packet template.
-- `references/ai-engineering-stage-routing-checklist.md`: stage routing and hard-halt checklist.
+- `docs/skills-repo-structure.md`: repository source/package layout contract.
 - `work/reports-in/`: inbound execution context.
 - `work/reports-out/`: durable report output path.
 
 ## Continuity Kernel Adoption
+
+Referenced files: `references/capability-baseline.md`, `references/suite-workflow-contract.md`.
 
 Preserve and update the workflow packet instead of reasking for facts already present. Classify missing inputs as hard halts, soft gaps, or auto-routable downstream work. Continue across stages only when the current desk has produced enough evidence for the next desk to act without rediscovering scope.
 

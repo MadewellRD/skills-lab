@@ -30,11 +30,13 @@ Analyze churn and retention signals. Identify cohorts, usage patterns, lifecycle
 
 ## Workflow
 
-- Frame the retention question and affected segments.
-- Map funnel, lifecycle, cohort, and usage evidence.
-- Cluster churn drivers and retention opportunities.
-- Identify product, support, success, or pricing interventions.
-- Define experiments or roadmap inputs.
+**Outcome.** A retention analysis that names the churn and retention drivers, ties each to cohort, usage, or feedback evidence, and converts them into candidate interventions with experiment or roadmap inputs.
+
+**Constraints.** Keep the retention question and the affected segments explicit — an analysis that does not say who churned is not an answer. Hold the line between an observed drop-off and an explanation of it: a correlation inside a cohort is evidence, never a cause on its own. Interventions that touch pricing, contracts, or customer commitments are proposals for a named owner, not decisions this desk makes.
+
+**Parallel surface.** Cohorts, lifecycle stages, customer segments, and plan tiers are independent units of analysis — profile them in parallel rather than walking the funnel one cohort at a time. The churn-driver taxonomy, cross-cohort ranking, and expected-impact estimate are a single aggregate pass once every cohort has been profiled, because each depends on the complete set.
+
+**Acceptance bar.** Every named driver cites the cohort, metric, or feedback source it rests on and carries a confidence label. Every intervention names the driver it addresses and the metric that would show it worked. A driver with no evidence behind it appears as a labeled hypothesis, not as a finding.
 
 ## Outputs
 
@@ -62,9 +64,16 @@ Analyze churn and retention signals. Identify cohorts, usage patterns, lifecycle
 
 ## Halt conditions
 
-- Required cohort, usage, or feedback data is missing.
-- Churn cause cannot be separated from incident or support failure.
-- Recommended intervention needs pricing, legal, or customer success approval.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — an intervention that changes pricing, contract terms, entitlements, or customer commitments requires its named owner in pricing, legal, or customer success before it is presented as decided.
+- **Production or destructive** — the request moves from analysis to acting on customers directly: outreach, save offers, plan changes, or account modifications.
+- **Security or privacy** — the cohort, usage, or cancellation evidence carries personal data that would be exposed in the artifact. Aggregate or strip it; do not reproduce it to make a point.
+- **Source conflict** — analytics, support, and customer-success evidence genuinely disagree about why a cohort left. Preserve both attributions rather than resolving to the convenient one.
+- **Release integrity** — a retention commitment, forecast, or save-rate target is requested and the cohort evidence cannot support it.
+- **Connector unreachable** — a required analytics, CRM, or support source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing cohort, usage, or feedback data means the analysis proceeds on what exists with the coverage limitation stated and the affected drivers marked low confidence. Churn that cannot yet be separated from an incident or support failure is recorded as a competing explanation carried forward, not a reason to stop.
 
 ## Downstream handoffs
 

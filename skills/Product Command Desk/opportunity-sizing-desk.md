@@ -30,11 +30,13 @@ Size product opportunities using appropriate methods such as TAM, SAM, SOM, acco
 
 ## Workflow
 
-- Select the sizing method appropriate to the decision.
-- Compute or frame ranges and assumptions.
-- Map confidence, sensitivity, and adoption constraints.
-- Compare opportunity against alternatives.
-- Prepare prioritization or roadmap handoff.
+**Outcome.** A sizing memo that states the method, the inputs, an explicit assumption table, a range rather than a point estimate, the sensitivity of that range, and how the opportunity compares against the alternatives it is competing with.
+
+**Constraints.** Name the sizing method and why it fits the decision — the method is part of the answer. Every input is either a sourced figure or a labeled assumption; never let an assumed conversion rate, price point, or adoption rate pass as data because it appears inside a calculation. Output ranges with confidence, not false precision: a number carried to three digits from a guessed input is a fabrication with arithmetic attached.
+
+**Parallel surface.** Segments, geographies, customer types, and alternative sizing scenarios are independent — size each in parallel rather than in sequence. The roll-up, the sensitivity analysis, and the comparison against alternatives are a single aggregate pass once every segment is sized, because they depend on the complete set and on consistent assumptions across it.
+
+**Acceptance bar.** Every figure traces to a source or a labeled assumption, the assumption table is complete enough that a reader could re-run the estimate with their own inputs, and the sensitivity section names which assumptions actually move the answer. A range whose width is dominated by one assumption says so explicitly.
 
 ## Outputs
 
@@ -62,9 +64,16 @@ Size product opportunities using appropriate methods such as TAM, SAM, SOM, acco
 
 ## Halt conditions
 
-- Target segment, sizing method, or business model is unclear.
-- Required data is missing and the user needs precise estimates.
-- Assumptions dominate the estimate without confidence labeling.
+Proceed by default and label the assumption inline. Reserve hard halts for these consequence classes:
+
+- **Approval** — the estimate is being used to commit revenue, headcount, budget, or an external financial statement and needs its named owner.
+- **Production or destructive** — the request is to act on the sizing rather than to produce it.
+- **Security or privacy** — the inputs include confidential financial, contract, or customer-identifying data that would be exposed in the artifact.
+- **Source conflict** — market, usage, and revenue sources genuinely disagree on a load-bearing input such as customer count, price point, or conversion rate. Size both readings; do not split the difference silently.
+- **Release integrity** — a precise or authoritative-looking figure is requested that the data cannot support. Produce a range with its assumptions rather than a number that will be quoted as fact.
+- **Connector unreachable** — a required analytics, billing, CRM, or market source exists but cannot be read.
+
+Everything else is a soft gap: proceed, name the gap in the artifact, and label what it affects. Missing data is exactly what the assumption table exists for — state the assumption, widen the range, mark the confidence, and continue. An estimate dominated by assumptions is valid output as long as the assumptions are labeled and the sensitivity says so; an unlabeled assumption is the defect, not the assumption itself.
 
 ## Downstream handoffs
 

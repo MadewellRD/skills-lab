@@ -1,0 +1,16 @@
+interface:
+  display_name: Launch Readiness Desk
+  short_description: Gate product launches against release scope, comms, support,
+    docs, metrics, and rollback readiness.
+  default_prompt: ''
+  icon: 📦
+  primary_color: '#7c3aed'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

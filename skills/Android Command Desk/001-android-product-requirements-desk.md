@@ -15,11 +15,17 @@ Turn Android app/game intent into source-grounded requirements with requirement 
 
 ## Workflow
 
-1. Resolve goal, user/audience, target Android surface, app/game lane, business constraints, and requested outcome.
-2. Capture source facts from issues, uploaded docs, user statements, product docs, design/game docs, store constraints, telemetry, and repo evidence.
-3. Convert needs into requirement IDs and acceptance criteria that can be verified on Android devices, emulators, CI, benchmark output, or release gates.
-4. Mark non-goals, out-of-scope platforms, privacy/policy constraints, monetization assumptions, rollout constraints, risks, and open questions.
-5. Continue to `android-technical-discovery-desk` when requirements are clear enough to inspect implementation reality.
+**Outcome.** A source-grounded Android PRD: requirement IDs, target users, supported devices and OS/API range, app/game surface and lane, monetization assumptions, Play/store constraints, acceptance criteria, non-goals, risks, and open questions.
+
+**Grounding.** Draw facts from issues, uploaded docs, user statements, product docs, design and game docs, store constraints, telemetry, and repo evidence. Attribute every load-bearing fact to its source and keep verified fact, assumption, and inference separate. Do not invent target users, device support, API levels, monetization terms, Play policy obligations, or release dates.
+
+**Constraints.** Acceptance criteria must be checkable on Android devices, emulators, CI, benchmark output, or release gates, or be marked explicitly non-automatable. Non-goals, out-of-scope platforms, privacy and policy constraints, and rollout constraints are stated, not implied.
+
+**Parallel surface.** Source retrieval across independent inputs — issues, uploaded docs, product docs, design and game docs, telemetry, repo evidence — has no ordering dependency, and acceptance criteria for distinct requirement IDs are independent of one another. Fan out over both. The risk register and the non-goals list are aggregate: assemble them once the per-requirement work is complete.
+
+**Acceptance bar.** The PRD is done when every requirement carries a stable ID; each requirement has acceptance criteria testable without further product input; the app/game lane and target surface are stated; supported devices and OS/API range are either sourced or labeled as assumptions; non-goals, risks, and open questions are explicit rather than implied; and every load-bearing fact is attributed to its source.
+
+Continue to `android-technical-discovery-desk` when requirements are clear enough to inspect implementation reality.
 
 ## Responsibilities
 
@@ -50,10 +56,16 @@ Android PRD, acceptance criteria, non-goals, risk register, open questions, sour
 
 ## Halt conditions
 
-- Product goal, target user, app/game lane, or target surface is unresolved.
-- Supported devices or OS/API range affects scope but is unknown.
-- Monetization, privacy, policy, store, or compliance constraint is launch-critical but missing.
-- Acceptance criteria cannot be made testable from available facts.
+Proceed by default. An unresolved product detail is normally an open question plus a labeled working assumption, not a stop. Reserve hard halts for these consequence classes:
+
+- **Approval** — scope, monetization, or a policy commitment needs a human owner to authorize it.
+- **Production or destructive** — the request would write requirements into a live tracker, roadmap, or customer-facing commitment.
+- **Security or privacy** — requirements would encode handling of personal data, secrets, or a child-directed, health, or financial obligation that no source establishes.
+- **Source conflict** — product docs, issues, or stakeholder statements genuinely disagree on a load-bearing requirement. Preserve the conflict rather than resolving it silently.
+- **Release integrity** — acceptance criteria would be presented as agreed, or a device/OS support range as committed, when no source establishes it.
+- **Connector unreachable** — a required source exists but cannot be read. A merely absent source is a soft gap: continue with a labeled assumption.
+
+Otherwise proceed: an unresolved goal, audience, app/game lane, device or API range, monetization assumption, or policy constraint is recorded as an open question alongside the assumption used in its place.
 
 ## Default output modes
 
