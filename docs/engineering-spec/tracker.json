@@ -1,9 +1,9 @@
 {
   "project": "Skills-Lab v1.1.0",
-  "generated_at": "2026-07-25T06:35:23+00:00",
-  "head": "62682e6",
+  "generated_at": "2026-07-25T06:41:56+00:00",
+  "head": "c1e3d18",
   "summary": {
-    "desks_authored": 145,
+    "desks_authored": 154,
     "desks_planned": 276,
     "suites_done": 0,
     "suites_total": 14
@@ -203,11 +203,11 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/20 desks; 1 skill.yaml; packaged 1; gates clean",
+      "evidence": "10/20 desks; 5 skill.yaml; packaged 1; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 10,
         "planned": 20,
-        "yamls": 1,
+        "yamls": 5,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
@@ -427,6 +427,12 @@
   ],
   "commits": [
     {
+      "sha": "c1e3d18",
+      "message": "feat: pinnable suite tracker with a reachable state source",
+      "date": "2026-07-25T06:35:23+00:00",
+      "task": null
+    },
+    {
       "sha": "62682e6",
       "message": "fix: retire compatibility shims by date, not by version",
       "date": "2026-07-25T03:20:03+00:00",
@@ -490,12 +496,6 @@
       "sha": "a1998fa",
       "message": "Add community health files",
       "date": "2026-06-06T02:12:20-07:00",
-      "task": null
-    },
-    {
-      "sha": "208bbd1",
-      "message": "chore: normalize iOS release artifacts",
-      "date": "2026-06-02T16:04:25-07:00",
       "task": null
     }
   ]
