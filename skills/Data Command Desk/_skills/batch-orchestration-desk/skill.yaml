@@ -1,0 +1,12 @@
+interface:
+  display_name: Batch Orchestration Desk
+  short_description: Designs scheduling and the DAG with data-aware triggering, sensors and
+    arrival timeouts, retry policy and non-retryable failures, concurrency pools, SLA miss
+    conditions, catch-up and backfill controls, run isolation, and run-history failure patterns.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

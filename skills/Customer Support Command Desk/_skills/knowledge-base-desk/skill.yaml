@@ -1,0 +1,10 @@
+interface:
+  display_name: Knowledge Base Desk
+  short_description: Article capture from resolved contacts, version and edition scoping, steps verified against a stated build, findability, lifecycle, and post-release staleness.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

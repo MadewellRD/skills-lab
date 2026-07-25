@@ -1,0 +1,16 @@
+interface:
+  display_name: SaaS Metrics Reporting Desk
+  short_description: ARR and its bridge across the whole customer base, reconciliation
+    to recognized revenue, retention and churn, and efficiency metrics.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

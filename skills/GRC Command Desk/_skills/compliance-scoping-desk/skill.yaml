@@ -1,0 +1,11 @@
+interface:
+  display_name: Compliance Scoping Desk
+  short_description: Audit boundary, system description, criteria selection,
+    subservice treatment, and observation period for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

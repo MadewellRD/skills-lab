@@ -1,0 +1,28 @@
+interface:
+  display_name: People Talent Command Desk
+  short_description: People and talent workflow orchestrator for workforce planning,
+    job architecture and leveling, sourcing and pipeline, structured interviewing,
+    candidate debriefs, offers and compensation, onboarding, people operations records,
+    performance review and calibration, career progression, talent review and succession,
+    manager enablement, engagement and retention, merit cycles and pay equity, policy
+    and handbook, employee relations, leave and accommodation, offboarding, and people
+    analytics.
+  default_prompt: Ask this suite for a people outcome on a named role, person, cohort,
+    or cycle, such as leveling a role against the guide and building the band-backed
+    offer it justifies, designing an interview loop and rubric before anyone is assessed
+    against it, preparing a review cycle and its calibration inputs, modeling a merit
+    cycle with its pay equity and compression reads, drafting a policy that holds
+    in every jurisdiction it covers, or working a separation through its approvals,
+    final pay timing, and record.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

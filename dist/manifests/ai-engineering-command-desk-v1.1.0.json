@@ -1,0 +1,135 @@
+{
+  "suite": "ai-engineering-command-desk",
+  "title": "AI Engineering Command Desk",
+  "version": "v1.1.0",
+  "date": "2026-07-25",
+  "skill_count": 18,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "ai-engineering-command-desk",
+      "archive": "000-ai-engineering-command-desk-skill.zip",
+      "sha256": "3faf9bb014f07bed56d3d8bb8d2b7ea1fdca6bf4a0564dc73a14571bcc17aaeb",
+      "bytes": 12803
+    },
+    {
+      "order": 1,
+      "skill": "agent-architecture-desk",
+      "archive": "001-agent-architecture-desk-skill.zip",
+      "sha256": "a52298b6e8e37ef02fd33968a54591070f7ee70c28d04f4b289483bfda0703fa",
+      "bytes": 6917
+    },
+    {
+      "order": 2,
+      "skill": "agent-observability-desk",
+      "archive": "002-agent-observability-desk-skill.zip",
+      "sha256": "36c4bc39c148579079d41488653f5cecd6f2369a705b9cfb1d7e45d227240b56",
+      "bytes": 6707
+    },
+    {
+      "order": 3,
+      "skill": "ai-incident-response-desk",
+      "archive": "003-ai-incident-response-desk-skill.zip",
+      "sha256": "0ec37de0ee34cf30310545c92e7b74766a0b0de55cf6f68673ec173deef3fb24",
+      "bytes": 6955
+    },
+    {
+      "order": 4,
+      "skill": "ai-release-readiness-desk",
+      "archive": "004-ai-release-readiness-desk-skill.zip",
+      "sha256": "d8d721a4fe048ce4d06395b3834d098611b108da867c0df91d4c0dab2c4fd326",
+      "bytes": 6599
+    },
+    {
+      "order": 5,
+      "skill": "ai-safety-review-desk",
+      "archive": "005-ai-safety-review-desk-skill.zip",
+      "sha256": "ead9f8f0332ed0748d325a724b9425b531c1a7051322bf5f8e3d2d8bd14d4d2d",
+      "bytes": 6738
+    },
+    {
+      "order": 6,
+      "skill": "cost-latency-optimization-desk",
+      "archive": "006-cost-latency-optimization-desk-skill.zip",
+      "sha256": "953ced93afd2b5d89402c9e392354a25a399186460df6ef5c5233cf1d7864d9c",
+      "bytes": 6770
+    },
+    {
+      "order": 7,
+      "skill": "dataset-curation-desk",
+      "archive": "007-dataset-curation-desk-skill.zip",
+      "sha256": "a7556697b14931fab4312a1534cdab4fa89a37ce53a2531c55390bd3110e31b8",
+      "bytes": 6656
+    },
+    {
+      "order": 8,
+      "skill": "eval-design-desk",
+      "archive": "008-eval-design-desk-skill.zip",
+      "sha256": "f5dfaed9883d9b1bb3f87b07b43c173718653ce7eddb7ee7d2c1472c31baa0ee",
+      "bytes": 6716
+    },
+    {
+      "order": 9,
+      "skill": "eval-run-analysis-desk",
+      "archive": "009-eval-run-analysis-desk-skill.zip",
+      "sha256": "4a6712f2d0905998a59ff98bdfafa569d43f17acb9a8d4252a653d9a00311bd8",
+      "bytes": 6823
+    },
+    {
+      "order": 10,
+      "skill": "fine-tuning-desk",
+      "archive": "010-fine-tuning-desk-skill.zip",
+      "sha256": "f1d4f9e61a656339affa175fc61c78ebec4364376502a715f83ff22e1fbcbdef",
+      "bytes": 6723
+    },
+    {
+      "order": 11,
+      "skill": "inference-ops-desk",
+      "archive": "011-inference-ops-desk-skill.zip",
+      "sha256": "b7310104755463800beef66ccdb0e0865f067e82945158ecbbd32ddc828072e5",
+      "bytes": 6673
+    },
+    {
+      "order": 12,
+      "skill": "model-selection-desk",
+      "archive": "012-model-selection-desk-skill.zip",
+      "sha256": "c0737b1f88cb652c5419fd64c02b808da785d6fab1a7e1071e15b680acc5e1a4",
+      "bytes": 8156
+    },
+    {
+      "order": 13,
+      "skill": "prompt-systems-desk",
+      "archive": "013-prompt-systems-desk-skill.zip",
+      "sha256": "4a3af06a175db9174b9a6353cfcc71bd2caf0f7f9f05cbc75e1905651b2a73dd",
+      "bytes": 14161
+    },
+    {
+      "order": 14,
+      "skill": "red-team-eval-desk",
+      "archive": "014-red-team-eval-desk-skill.zip",
+      "sha256": "9f81eb95da496c27bbdd33466351fee2608583f58398dc9d61e769099440b133",
+      "bytes": 6928
+    },
+    {
+      "order": 15,
+      "skill": "retrieval-rag-design-desk",
+      "archive": "015-retrieval-rag-design-desk-skill.zip",
+      "sha256": "9a9fd987a41b6afcc45a437fdc267e75cb0b335017428416718c32fd0c4dcf5b",
+      "bytes": 6832
+    },
+    {
+      "order": 16,
+      "skill": "synthetic-data-desk",
+      "archive": "016-synthetic-data-desk-skill.zip",
+      "sha256": "d230d4771f370c20d487fe8f36cf7f32ae340e57f09f8a50274f8829ee29b054",
+      "bytes": 6671
+    },
+    {
+      "order": 17,
+      "skill": "tool-schema-design-desk",
+      "archive": "017-tool-schema-design-desk-skill.zip",
+      "sha256": "3566dd8e88fd6d29a3a0775aa817122d06e3cf6e4839f7c2bb0fb12e777c4a08",
+      "bytes": 6799
+    }
+  ]
+}

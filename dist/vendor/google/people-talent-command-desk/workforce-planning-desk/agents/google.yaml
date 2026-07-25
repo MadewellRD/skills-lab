@@ -1,0 +1,17 @@
+interface:
+  display_name: Workforce Planning Desk
+  short_description: Headcount plans by org unit, level, and location, build against
+    develop against contract decisions, attrition assumptions, and requisition justification
+    and approval for the People Talent Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

@@ -1,0 +1,18 @@
+interface:
+  display_name: Dispute Claims Desk
+  short_description: Claims and breach notices covering intake against the clause
+    relied on, the evidenced timeline, cure period tracking, legal hold scope, the
+    escalation ladder, insurance notification, and the external counsel referral package.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

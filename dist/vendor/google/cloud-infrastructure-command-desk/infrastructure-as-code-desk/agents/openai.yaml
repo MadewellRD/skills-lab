@@ -1,0 +1,18 @@
+interface:
+  display_name: Infrastructure As Code Desk
+  short_description: Repository and stack layout with state-boundary blast radius,
+    module interfaces and versioning, state backend locking and encryption, provider
+    pinning, code-level test gates, and measured codification coverage.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

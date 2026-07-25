@@ -1,0 +1,16 @@
+interface:
+  display_name: Postmortem Desk
+  short_description: Blameless reviews with evidence-anchored timelines, contributing
+    factors by dimension, owned action items, budget consumed, and recurrence trend.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

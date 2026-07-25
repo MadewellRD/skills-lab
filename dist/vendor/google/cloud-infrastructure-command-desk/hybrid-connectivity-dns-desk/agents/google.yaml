@@ -1,0 +1,17 @@
+interface:
+  display_name: Hybrid Connectivity DNS Desk
+  short_description: Dedicated circuits and tunnels with diverse paths, route exchange
+    and failover, address overlap resolution, hybrid DNS, certificates, and traffic
+    distribution.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

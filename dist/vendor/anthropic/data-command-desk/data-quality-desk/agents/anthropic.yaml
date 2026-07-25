@@ -1,0 +1,18 @@
+interface:
+  display_name: Data Quality Desk
+  short_description: Designs tests and validation with written-out assertions for
+    freshness, volume, uniqueness, referential integrity, accepted values, drift and
+    business rules, derived thresholds, blocking versus warning routing, quarantine,
+    reconciliation, and an honest coverage map.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

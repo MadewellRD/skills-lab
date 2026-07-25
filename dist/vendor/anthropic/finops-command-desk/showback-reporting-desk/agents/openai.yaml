@@ -1,0 +1,18 @@
+interface:
+  display_name: Showback Reporting Desk
+  short_description: Builds the audience-specific report set with trend baselines
+    and partial-period flags, ranks top movers with traced drivers, warns where comparisons
+    are distorted, and writes what each audience does next.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

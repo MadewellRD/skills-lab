@@ -1,0 +1,10 @@
+interface:
+  display_name: Macro Response Quality Desk
+  short_description: Owns what the customer reads, covering reply drafts with every claim sourced and every commitment dated, the macro and saved-reply library, tone and reading level, localization drift, and template decay after a release.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

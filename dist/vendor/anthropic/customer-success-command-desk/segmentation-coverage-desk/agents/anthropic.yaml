@@ -1,0 +1,17 @@
+interface:
+  display_name: Segmentation Coverage Desk
+  short_description: Owns segment definitions as placement criteria, touch model assignment,
+    coverage ratios against what the motion actually requires, capacity math naming
+    where the model is oversubscribed, and the engagement contract per tier.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

@@ -1,0 +1,17 @@
+interface:
+  display_name: Requirements Specification Desk
+  short_description: Requirement sets and statements of work with mandatory against
+    desirable, service levels and remedies, exit requirements, and evaluation criteria
+    fixed before issue.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

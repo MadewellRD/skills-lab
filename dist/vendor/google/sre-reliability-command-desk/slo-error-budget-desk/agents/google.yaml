@@ -1,0 +1,17 @@
+interface:
+  display_name: SLO Error Budget Desk
+  short_description: Objectives and windows, error budget definition and balance,
+    burn rate accounting, the budget policy and its consequences, and agreed objectives
+    kept separate from aspirational ones.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

@@ -1,0 +1,19 @@
+interface:
+  display_name: Finance Accounting Command Desk
+  short_description: Accounting and finance orchestrator for close, revenue, cash,
+    planning, and audit work.
+  default_prompt: Ask it to run or unblock a close, settle how a contract's revenue
+    is recognized, chase receivables, build a budget or reforecast, explain a variance,
+    produce statements or a board package, compute runway or ARR, or prepare audit
+    support.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

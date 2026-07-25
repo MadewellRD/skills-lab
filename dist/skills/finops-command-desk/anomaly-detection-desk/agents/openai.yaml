@@ -1,0 +1,18 @@
+interface:
+  display_name: Anomaly Detection Desk
+  short_description: Triages cost anomalies with their detection basis and baseline,
+    traces root cause to a specific change rather than the service the charge landed
+    under, tunes thresholds against measured noise, and names the recurrence control.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

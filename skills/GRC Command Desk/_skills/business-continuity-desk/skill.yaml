@@ -1,0 +1,10 @@
+interface:
+  display_name: Business Continuity Desk
+  short_description: Business impact analysis, recovery objectives, plan currency, and exercise evidence for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

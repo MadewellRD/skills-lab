@@ -1,0 +1,16 @@
+interface:
+  display_name: Change Safety Desk
+  short_description: Rollout stages and canary thresholds, bake time, rollback triggers
+    and whether rollback works, freeze policy, and migration safety.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

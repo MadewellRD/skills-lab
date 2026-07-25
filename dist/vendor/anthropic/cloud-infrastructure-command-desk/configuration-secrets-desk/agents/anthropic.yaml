@@ -1,0 +1,17 @@
+interface:
+  display_name: Configuration Secrets Desk
+  short_description: Key hierarchy with scope and rotation state, secret store and
+    access policy, short-lived credentials replacing static keys, configuration layering
+    and precedence, secret delivery into workloads, and exposure remediation.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

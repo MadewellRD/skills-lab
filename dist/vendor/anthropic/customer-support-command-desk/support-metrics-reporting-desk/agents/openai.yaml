@@ -1,0 +1,18 @@
+interface:
+  display_name: Support Metrics Reporting Desk
+  short_description: Each metric with its definition, population, exclusions, and
+    source, satisfaction with response rates, breach rate against contractual targets,
+    and the decision behind each figure.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

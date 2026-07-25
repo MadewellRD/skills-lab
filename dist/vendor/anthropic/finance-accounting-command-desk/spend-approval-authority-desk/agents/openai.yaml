@@ -1,0 +1,17 @@
+interface:
+  display_name: Spend Approval And Authority Desk
+  short_description: Authority determination, total commitment value, budget headroom,
+    split-purchase testing, and unapproved spend.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

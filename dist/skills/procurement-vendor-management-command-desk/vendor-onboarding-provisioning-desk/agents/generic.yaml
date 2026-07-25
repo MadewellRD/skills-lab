@@ -1,0 +1,17 @@
+interface:
+  display_name: Vendor Onboarding Provisioning Desk
+  short_description: Vendor master and out-of-band bank verification, approved access
+    grants, the security configuration as built, invoicing setup, and a named internal
+    owner.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

@@ -1,0 +1,17 @@
+interface:
+  display_name: Diagnostic Troubleshooting Desk
+  short_description: Owns symptom to cause, covering hypotheses paired with the observation
+    that tests each, an evidence inventory with collection times and retention limits,
+    the fault domain, and the cause stated at the confidence it was established.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

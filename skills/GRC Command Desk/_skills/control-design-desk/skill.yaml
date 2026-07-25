@@ -1,0 +1,12 @@
+interface:
+  display_name: Control Design Desk
+  short_description: Re-performable control narratives, owners, frequency,
+    classification, evidence sources, and design gaps for the GRC Command Desk
+    suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

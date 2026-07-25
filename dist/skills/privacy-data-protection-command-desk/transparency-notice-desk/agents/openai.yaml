@@ -1,0 +1,19 @@
+interface:
+  display_name: Transparency Notice Desk
+  short_description: Owns notice architecture across layers and surfaces, disclosure
+    coverage checked element by element against each regime, notice at collection
+    and just-in-time placement, versioning, and whether a change is material enough
+    to require telling existing individuals.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,24 @@
+interface:
+  display_name: FinOps Command Desk
+  short_description: Cloud financial management orchestrator for cost allocation and
+    tagging, showback and chargeback, unit economics and margin, budgets and forecasts,
+    anomalies, rightsizing and waste, commitments, license spend, negotiation inputs,
+    optimization backlog, and practice maturity.
+  default_prompt: Ask this suite for a cost outcome on a named estate, team, product,
+    or workload, such as tracing why the bill moved and to which change, allocating
+    spend to teams and reporting what the untagged remainder actually is, building
+    a unit cost or a gross margin bridge that ties to the invoice, sizing commitments
+    against usage that remains after optimization, or turning a rightsizing and waste
+    sweep into an owned backlog with savings tracked against later bills.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

@@ -1,0 +1,19 @@
+interface:
+  display_name: Ticket Triage Desk
+  short_description: Owns routing and ordering, covering the queue, tier, and skill
+    each contact requires, priority kept distinct from contractual severity, spam
+    and misrouting patterns with their evidence, and contacts a published answer already
+    resolves.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

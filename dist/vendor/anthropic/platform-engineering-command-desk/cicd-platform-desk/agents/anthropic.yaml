@@ -1,0 +1,16 @@
+interface:
+  display_name: CI/CD Platform Desk
+  short_description: Reusable pipelines, runner fleet, registries, and supply-chain
+    controls for the Platform Engineering Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

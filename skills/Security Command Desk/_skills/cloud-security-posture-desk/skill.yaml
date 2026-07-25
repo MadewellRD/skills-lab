@@ -1,0 +1,10 @@
+interface:
+  display_name: Cloud Security Posture Desk
+  short_description: Cloud misconfiguration with blast radius, guardrail gaps, infrastructure-as-code drift, and entitlement findings for the Security Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

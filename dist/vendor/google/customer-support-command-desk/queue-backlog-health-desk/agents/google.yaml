@@ -1,0 +1,17 @@
+interface:
+  display_name: Queue Backlog Health Desk
+  short_description: Backlog by age cohort with untouched and pending states held
+    apart, inflow against outflow, at-risk and breached counts, reopen rate, and burn-down
+    against real capacity.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

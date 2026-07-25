@@ -1,0 +1,12 @@
+interface:
+  display_name: Data Protection Terms Desk
+  short_description: DPA review covering controller and processor roles, transfers,
+    subprocessors and flow-down, breach windows, deletion, audit rights, and model
+    training terms.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

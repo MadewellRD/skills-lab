@@ -1,0 +1,16 @@
+interface:
+  display_name: Alerting Quality Desk
+  short_description: Symptom-based and burn-rate paging, page versus ticket routing,
+    dependency-aware suppression, noise review, and detection gaps.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

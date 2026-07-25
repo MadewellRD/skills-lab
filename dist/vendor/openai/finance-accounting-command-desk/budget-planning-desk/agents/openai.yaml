@@ -1,0 +1,16 @@
+interface:
+  display_name: Budget Planning Desk
+  short_description: Operating plan by department with a named holder per line, driver
+    and headcount model, committed against discretionary cost, and plan reconciliation.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

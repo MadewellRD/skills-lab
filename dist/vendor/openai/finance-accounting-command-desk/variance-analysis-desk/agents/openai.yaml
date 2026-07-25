@@ -1,0 +1,16 @@
+interface:
+  display_name: Variance Analysis Desk
+  short_description: Budget to actual variance at the level a holder can act on, with
+    price volume mix timing and classification decomposition.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

@@ -1,0 +1,16 @@
+interface:
+  display_name: Landing Zone Account Structure Desk
+  short_description: Organization hierarchy, account separation, account vending,
+    region enablement, organization-level deny policies, and the day-one account baseline.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

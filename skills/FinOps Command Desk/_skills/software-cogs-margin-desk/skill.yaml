@@ -1,0 +1,12 @@
+interface:
+  display_name: Software Cogs Margin Desk
+  short_description: Classifies spend into cost of revenue against research and
+    internal cost, identifies capitalized development cost, computes gross margin with
+    its revenue basis, and reconciles the cost dataset to the posted ledger.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

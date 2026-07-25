@@ -1,0 +1,18 @@
+interface:
+  display_name: Expansion Whitespace Desk
+  short_description: Map whitespace, trace expansion hypotheses to specific signals,
+    qualify readiness against undelivered outcomes and open risks, and route to the
+    commercial owner.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

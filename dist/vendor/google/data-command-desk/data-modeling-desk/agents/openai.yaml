@@ -1,0 +1,19 @@
+interface:
+  display_name: Data Modeling Desk
+  short_description: Designs conceptual, logical, and physical models with a declared
+    grain per fact, fact classification, conformed dimensions, per-attribute slowly
+    changing type, key strategy, bridges and fan-out, late-arriving policy, and measure
+    additivity.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

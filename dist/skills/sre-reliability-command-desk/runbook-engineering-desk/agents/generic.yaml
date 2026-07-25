@@ -1,0 +1,16 @@
+interface:
+  display_name: Runbook Engineering Desk
+  short_description: Runbooks keyed to their trigger with the first mitigating action,
+    exact queries, access preconditions, and freshness state.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

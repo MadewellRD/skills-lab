@@ -1,0 +1,16 @@
+interface:
+  display_name: Secure SDLC Controls Desk
+  short_description: Security requirements per change class, pipeline gates, break-the-build
+    policy with a false-positive budget, and paved-road defaults.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

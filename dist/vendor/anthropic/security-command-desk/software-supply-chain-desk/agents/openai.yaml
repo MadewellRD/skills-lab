@@ -1,0 +1,17 @@
+interface:
+  display_name: Software Supply Chain Desk
+  short_description: Dependency risk and reachability, SBOM state, provenance and
+    signing, build integrity, and compromised-package response.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

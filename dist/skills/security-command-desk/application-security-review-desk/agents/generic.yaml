@@ -1,0 +1,16 @@
+interface:
+  display_name: Application Security Review Desk
+  short_description: Secure code review with the vulnerable path named, analysis triage,
+    verification-standard coverage, and remediation with its test.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

@@ -1,0 +1,18 @@
+interface:
+  display_name: Transformation Layer Desk
+  short_description: Designs the layered SQL stack from staging through intermediate
+    to marts, with materialization and incremental strategy, merge keys, dedup and
+    record selection, SCD validity windows, late-arriving handling, normalization,
+    and backfill parallel safety.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

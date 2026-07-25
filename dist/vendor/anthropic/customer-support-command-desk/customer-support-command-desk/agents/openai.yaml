@@ -1,0 +1,26 @@
+interface:
+  display_name: Customer Support Command Desk
+  short_description: Customer support workflow orchestrator for ticket intake and
+    entitlement, triage and routing, severity and SLA clocks, troubleshooting, reproduction
+    and bug intake, engineering escalation, response and macro quality, resolution
+    and closure, incident communication, post-incident follow-up, knowledge base,
+    self-service deflection, queue and backlog health, workforce coverage, helpdesk
+    tooling, QA review, contact driver analysis, and support metrics.
+  default_prompt: Ask this suite for a support outcome on a named ticket, queue, or
+    period, such as triaging a contact and setting its severity from the entitlement
+    rather than the plan label, turning an unreproducible complaint into a defect
+    engineering can act on, drafting the customer update and cadence for an outage,
+    recovering an aging backlog without mass-closing it, or explaining a satisfaction
+    drop down to the queue, macro, or defect causing it.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,16 @@
+interface:
+  display_name: Platform Change Rollout Desk
+  short_description: Tenant ring plans, breaking-change classification, upgrade sequencing,
+    rollback criteria, and change notices for the platform engineering suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

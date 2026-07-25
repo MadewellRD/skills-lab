@@ -1,0 +1,18 @@
+interface:
+  display_name: Support Tooling Automation Desk
+  short_description: Helpdesk fields, forms, views, triggers, automations, routing
+    rules, and SLA policies with blast radius, sandbox validation, and a suppression
+    path.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,21 @@
+interface:
+  display_name: GRC Command Desk
+  short_description: Assurance orchestrator for obligations, control frameworks, risk
+    registers, policy, evidence, control testing, audit engagements, and committee
+    reporting.
+  default_prompt: Ask for a readiness or gap assessment, a risk register and acceptance
+    record, a control crosswalk, an evidence or request-list package, a control test
+    with its sampling basis, a vendor or continuity review, an auditor or questionnaire
+    response, or a risk committee packet for a named scope and period.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

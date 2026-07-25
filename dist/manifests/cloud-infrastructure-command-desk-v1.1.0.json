@@ -1,0 +1,149 @@
+{
+  "suite": "cloud-infrastructure-command-desk",
+  "title": "Cloud Infrastructure Command Desk",
+  "version": "v1.1.0",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "cloud-infrastructure-command-desk",
+      "archive": "000-cloud-infrastructure-command-desk-skill.zip",
+      "sha256": "1e503da1066b6ba7f994fd4844b1c571b48d9f5210519812b35d5a5e694b14c4",
+      "bytes": 28859
+    },
+    {
+      "order": 1,
+      "skill": "cloud-cost-rightsizing-desk",
+      "archive": "001-cloud-cost-rightsizing-desk-skill.zip",
+      "sha256": "ec3e8690852729767e9c02a5d31deee2c91dce754d1a6a296154bd382c556fa3",
+      "bytes": 24750
+    },
+    {
+      "order": 2,
+      "skill": "cloud-decommissioning-desk",
+      "archive": "002-cloud-decommissioning-desk-skill.zip",
+      "sha256": "35de0f4a163d44d3b2839e085a542ac9fd753303969355d9024679d1011a93d7",
+      "bytes": 25300
+    },
+    {
+      "order": 3,
+      "skill": "cloud-identity-access-desk",
+      "archive": "003-cloud-identity-access-desk-skill.zip",
+      "sha256": "ecda1f54c8dad88b457e63d915f77e50532b787417289e8c045df9d7cfc895d0",
+      "bytes": 24818
+    },
+    {
+      "order": 4,
+      "skill": "cloud-migration-desk",
+      "archive": "004-cloud-migration-desk-skill.zip",
+      "sha256": "73c6eb330abfa1df5567d8b4a2a7a2014245b22e38651952b7988aff05a991b2",
+      "bytes": 24997
+    },
+    {
+      "order": 5,
+      "skill": "cloud-network-architecture-desk",
+      "archive": "005-cloud-network-architecture-desk-skill.zip",
+      "sha256": "af70555b554123c6d709aea40b6b36e31c3c655c3701281d252ef7c66cd327fd",
+      "bytes": 24752
+    },
+    {
+      "order": 6,
+      "skill": "cloud-security-posture-desk",
+      "archive": "006-cloud-security-posture-desk-skill.zip",
+      "sha256": "31f2973daf6f05b581e1600354835c86f2f6bc950e64a909a3d4c4ae15e29478",
+      "bytes": 24573
+    },
+    {
+      "order": 7,
+      "skill": "cloud-storage-data-services-desk",
+      "archive": "007-cloud-storage-data-services-desk-skill.zip",
+      "sha256": "28c92d16a30f8dabc149b56e0161555f8109986877ef54e3ddd9e8e5e432cb36",
+      "bytes": 25264
+    },
+    {
+      "order": 8,
+      "skill": "cloud-workload-intake-desk",
+      "archive": "008-cloud-workload-intake-desk-skill.zip",
+      "sha256": "eee9ea00994164f5edfd517b6f65c5f82b0bd8ee9fae17e0c2dfb887b0198c21",
+      "bytes": 24243
+    },
+    {
+      "order": 9,
+      "skill": "compute-platform-desk",
+      "archive": "009-compute-platform-desk-skill.zip",
+      "sha256": "1ad695e8484f3e254fb6cd18720fa470900f19a355752b20f1f30fddb2bf5915",
+      "bytes": 24444
+    },
+    {
+      "order": 10,
+      "skill": "configuration-secrets-desk",
+      "archive": "010-configuration-secrets-desk-skill.zip",
+      "sha256": "fd77c8c6583caa71b650f2545d5314b07b62e1b23b2762843aa1858e08a7a494",
+      "bytes": 24836
+    },
+    {
+      "order": 11,
+      "skill": "container-platform-desk",
+      "archive": "011-container-platform-desk-skill.zip",
+      "sha256": "d5560f0f8b4ba47ce6f2959155f995c211a8d53a59a59f7a560d19705804ea5a",
+      "bytes": 25180
+    },
+    {
+      "order": 12,
+      "skill": "drift-detection-reconciliation-desk",
+      "archive": "012-drift-detection-reconciliation-desk-skill.zip",
+      "sha256": "da41065bc34131bae757f601c3ea1c5f9eb66253b20c11cbf86d23cc7a768fa7",
+      "bytes": 24777
+    },
+    {
+      "order": 13,
+      "skill": "hybrid-connectivity-dns-desk",
+      "archive": "013-hybrid-connectivity-dns-desk-skill.zip",
+      "sha256": "dc652969cb8d9dff6fe52ce6d92736046a450d13749f25d81f2f92856a76ce24",
+      "bytes": 25089
+    },
+    {
+      "order": 14,
+      "skill": "infrastructure-as-code-desk",
+      "archive": "014-infrastructure-as-code-desk-skill.zip",
+      "sha256": "e6708c26328e590fbb0b7612fb9b877454d4fc7c869566facd0114da26a9e429",
+      "bytes": 24317
+    },
+    {
+      "order": 15,
+      "skill": "landing-zone-account-structure-desk",
+      "archive": "015-landing-zone-account-structure-desk-skill.zip",
+      "sha256": "36f2b6a204e9a604cd8cd270da85753cc2e1a6e5f9cf217244b8f7f29dda78a8",
+      "bytes": 24783
+    },
+    {
+      "order": 16,
+      "skill": "managed-database-platform-desk",
+      "archive": "016-managed-database-platform-desk-skill.zip",
+      "sha256": "19f901db5426d7a74560c79b41f48ceb0af895f2742d4fa6c0fee1c67e8a5168",
+      "bytes": 25580
+    },
+    {
+      "order": 17,
+      "skill": "provisioning-pipeline-desk",
+      "archive": "017-provisioning-pipeline-desk-skill.zip",
+      "sha256": "84c5de0ce49dd3addb0a9f7c9351c9cff1e61f3945fbd9ad2d42f9ca2e693962",
+      "bytes": 24508
+    },
+    {
+      "order": 18,
+      "skill": "resilience-multi-region-desk",
+      "archive": "018-resilience-multi-region-desk-skill.zip",
+      "sha256": "8fc2632fb816dcb997a916debe840e81e1a9afd8a9f635b906aac9bf42b425dd",
+      "bytes": 25770
+    },
+    {
+      "order": 19,
+      "skill": "tagging-inventory-desk",
+      "archive": "019-tagging-inventory-desk-skill.zip",
+      "sha256": "52d4fa82c809fdfb54497ba4603fe0335abf8464ef200eaddb895096cd28fb43",
+      "bytes": 24404
+    }
+  ]
+}

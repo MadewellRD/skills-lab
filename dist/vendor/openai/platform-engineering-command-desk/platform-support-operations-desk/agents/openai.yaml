@@ -1,0 +1,17 @@
+interface:
+  display_name: Platform Support Operations Desk
+  short_description: Support model, request taxonomy and routing, deflection targets,
+    platform failure-mode runbooks, escalation, and toil accounting for the platform
+    engineering suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

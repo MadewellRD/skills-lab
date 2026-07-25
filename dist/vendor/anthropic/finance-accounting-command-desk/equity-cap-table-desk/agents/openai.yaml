@@ -1,0 +1,17 @@
+interface:
+  display_name: Equity And Cap Table Desk
+  short_description: Cap table tied to board consents, option pool position, stock
+    compensation expense, fully diluted count, and valuation currency.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

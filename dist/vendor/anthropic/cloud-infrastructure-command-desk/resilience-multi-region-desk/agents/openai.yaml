@@ -1,0 +1,18 @@
+interface:
+  display_name: Resilience Multi Region Desk
+  short_description: Failure domain model, failover mode and running cost, replication
+    lag budget, single- location dependencies, recovery-region quota, runbooks, and
+    exercise evidence.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

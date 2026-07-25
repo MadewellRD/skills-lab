@@ -1,0 +1,16 @@
+interface:
+  display_name: Cash Flow Treasury Desk
+  short_description: Cash position by account and entity, direct thirteen week forecast
+    with its low point, runway, covenant headroom, and trapped cash.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

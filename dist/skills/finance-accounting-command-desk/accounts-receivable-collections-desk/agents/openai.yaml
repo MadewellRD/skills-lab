@@ -1,0 +1,17 @@
+interface:
+  display_name: Accounts Receivable And Collections Desk
+  short_description: Aging tied to its control account, DSO, dispute triage, collections
+    plan, allowance roll-forward, and write-off candidates.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

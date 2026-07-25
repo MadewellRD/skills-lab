@@ -1,0 +1,10 @@
+interface:
+  display_name: Voice Of Customer Desk
+  short_description: Report survey and interview findings with population and response rate, code verbatims into themes weighted by accounts and ARR, route to the owning function, and close the loop.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,16 @@
+interface:
+  display_name: Committee Reporting Desk
+  short_description: Governance forum metrics, risk against appetite, escalations,
+    and decisions requested for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

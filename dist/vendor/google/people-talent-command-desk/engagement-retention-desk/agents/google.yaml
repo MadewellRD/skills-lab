@@ -1,0 +1,17 @@
+interface:
+  display_name: Engagement Retention Desk
+  short_description: Survey reads at the cuts the response rates support, confidentiality
+    thresholds with complementary suppression, verbatim themes, drivers separated
+    from priors, retention risk, and action plans with owners and dates.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

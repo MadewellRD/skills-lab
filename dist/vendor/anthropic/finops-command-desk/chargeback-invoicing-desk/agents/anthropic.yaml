@@ -1,0 +1,17 @@
+interface:
+  display_name: Chargeback And Invoicing Desk
+  short_description: The chargeback model and rate card, a ledger that balances to
+    the invoice with any residual shown, cost center postings and statements, and
+    dispute resolution that either fixes the rule or defends it.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

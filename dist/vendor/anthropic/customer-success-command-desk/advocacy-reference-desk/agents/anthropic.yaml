@@ -1,0 +1,17 @@
+interface:
+  display_name: Advocacy Reference Desk
+  short_description: Qualify reference and case study candidates on dated willingness
+    evidence, secure scoped customer and internal approvals, and track fatigue and
+    contractual naming limits.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

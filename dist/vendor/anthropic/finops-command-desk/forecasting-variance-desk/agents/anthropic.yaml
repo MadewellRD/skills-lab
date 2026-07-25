@@ -1,0 +1,17 @@
+interface:
+  display_name: Forecasting Variance Desk
+  short_description: Forecasts spend with a stated method and measured prior accuracy,
+    models step changes explicitly, attributes variance to consumption, rate, allocation
+    or timing, and tracks commitment drawdown against a contracted floor.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

@@ -1,11 +1,11 @@
 {
   "project": "Skills-Lab v1.1.0",
-  "generated_at": "2026-07-25T07:32:55+00:00",
-  "head": "5e2cc93",
+  "generated_at": "2026-07-25T08:35:01+00:00",
+  "head": "c3187ce",
   "summary": {
-    "desks_authored": 212,
+    "desks_authored": 276,
     "desks_planned": 276,
-    "suites_done": 0,
+    "suites_done": 14,
     "suites_total": 14
   },
   "milestones": [
@@ -36,13 +36,13 @@
       "title": "Security Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -51,7 +51,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -59,13 +59,13 @@
       "title": "Platform Engineering Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -74,7 +74,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -82,13 +82,13 @@
       "title": "SRE Reliability Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -97,7 +97,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -105,13 +105,13 @@
       "title": "Cloud Infrastructure Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -120,7 +120,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -128,13 +128,13 @@
       "title": "Data Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -143,7 +143,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -151,13 +151,13 @@
       "title": "GRC Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "19/19 desks; 19 skill.yaml; packaged 1; gates clean",
+      "evidence": "19/19 desks; 19 skill.yaml; packaged 19; gates clean",
       "metrics": {
         "bodies": 19,
         "planned": 19,
@@ -166,7 +166,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 19
       }
     },
     {
@@ -174,13 +174,13 @@
       "title": "Privacy Data Protection Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "19/19 desks; 19 skill.yaml; packaged 1; gates clean",
+      "evidence": "19/19 desks; 19 skill.yaml; packaged 19; gates clean",
       "metrics": {
         "bodies": 19,
         "planned": 19,
@@ -189,7 +189,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 19
       }
     },
     {
@@ -197,13 +197,13 @@
       "title": "Legal Contracts Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -212,7 +212,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -220,13 +220,13 @@
       "title": "FinOps Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -235,7 +235,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -243,13 +243,13 @@
       "title": "Customer Success Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "20/20 desks; 20 skill.yaml; packaged 1; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
         "bodies": 20,
         "planned": 20,
@@ -258,7 +258,7 @@
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 1
+        "packaged": 20
       }
     },
     {
@@ -266,22 +266,22 @@
       "title": "Customer Support Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/19 desks; 1 skill.yaml; packaged 0; gates clean",
+      "evidence": "19/19 desks; 19 skill.yaml; packaged 19; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 19,
         "planned": 19,
-        "yamls": 1,
+        "yamls": 19,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 0
+        "packaged": 19
       }
     },
     {
@@ -289,22 +289,22 @@
       "title": "Finance Accounting Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "11/20 desks; 1 skill.yaml; packaged 0; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
-        "bodies": 11,
+        "bodies": 20,
         "planned": 20,
-        "yamls": 1,
+        "yamls": 20,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 0
+        "packaged": 20
       }
     },
     {
@@ -312,22 +312,22 @@
       "title": "People Talent Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/20 desks; 1 skill.yaml; packaged 0; gates clean",
+      "evidence": "20/20 desks; 20 skill.yaml; packaged 20; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 20,
         "planned": 20,
-        "yamls": 1,
+        "yamls": 20,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 0
+        "packaged": 20
       }
     },
     {
@@ -335,22 +335,22 @@
       "title": "Procurement Vendor Management Command Desk",
       "milestone": "M2",
       "sprint": 1,
-      "status": "in_progress",
+      "status": "done",
       "acceptance": "every planned desk has a body and a skill.yaml, the suite passes the audit gates with zero em dashes, zero vendor names and zero unresolvable citations, and every desk is packaged into dist",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "1/19 desks; 1 skill.yaml; packaged 0; gates clean",
+      "evidence": "19/19 desks; 19 skill.yaml; packaged 19; gates clean",
       "metrics": {
-        "bodies": 1,
+        "bodies": 19,
         "planned": 19,
-        "yamls": 1,
+        "yamls": 19,
         "scaffolded": true,
         "em": 0,
         "vendor": 0,
         "badcite": 0,
-        "packaged": 0
+        "packaged": 19
       }
     },
     {
@@ -358,7 +358,7 @@
       "title": "Audit gates across the whole corpus",
       "milestone": "M3",
       "sprint": 1,
-      "status": "todo",
+      "status": "done",
       "acceptance": "tools/audit_skills.py exits 0 with all 21 suites present",
       "depends_on": [
         "SL-01",
@@ -379,7 +379,7 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "not run"
+      "evidence": "=============================================================="
     },
     {
       "id": "SL-16",
@@ -426,6 +426,12 @@
     }
   ],
   "commits": [
+    {
+      "sha": "c3187ce",
+      "message": "chore: refresh tracker.json (212/276 desks, 10 suites authored)",
+      "date": "2026-07-25T07:33:01+00:00",
+      "task": null
+    },
     {
       "sha": "5e2cc93",
       "message": "chore: refresh tracker.json (152/276 desks, 7 suites authored)",
@@ -490,12 +496,6 @@
       "sha": "630a0f2",
       "message": "refactor: profile-driven skill architecture for frontier model upgrades",
       "date": "2026-07-25T01:57:34+00:00",
-      "task": null
-    },
-    {
-      "sha": "f0cb1cd",
-      "message": "chore: switch license to AGPL-3.0-only",
-      "date": "2026-06-06T02:27:10-07:00",
       "task": null
     }
   ]

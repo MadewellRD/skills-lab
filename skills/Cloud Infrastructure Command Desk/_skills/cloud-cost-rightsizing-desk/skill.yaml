@@ -1,0 +1,12 @@
+interface:
+  display_name: Cloud Cost Rightsizing Desk
+  short_description: Allocation model and allocable share, budgets and anomaly thresholds,
+    rightsizing candidates with utilization evidence and performance risk, commitment
+    coverage, waste reclamation behind dependency checks, and unit cost metrics.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

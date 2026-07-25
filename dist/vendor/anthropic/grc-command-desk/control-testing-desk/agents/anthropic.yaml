@@ -1,0 +1,16 @@
+interface:
+  display_name: Control Testing Desk
+  short_description: Test plans, sampling with its basis, attribute testing, deviation
+    analysis, and per-control conclusions for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

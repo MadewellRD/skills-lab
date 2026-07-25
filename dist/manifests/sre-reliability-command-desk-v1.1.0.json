@@ -1,0 +1,149 @@
+{
+  "suite": "sre-reliability-command-desk",
+  "title": "SRE Reliability Command Desk",
+  "version": "v1.1.0",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "sre-reliability-command-desk",
+      "archive": "000-sre-reliability-command-desk-skill.zip",
+      "sha256": "fee1d6639004323120bb170dd223726cd70580247f53f31a1820794304ff16fb",
+      "bytes": 27127
+    },
+    {
+      "order": 1,
+      "skill": "alerting-quality-desk",
+      "archive": "001-alerting-quality-desk-skill.zip",
+      "sha256": "f83cd498971da3fd2fabd87c2012bdf19c0b388aae1e98a79f5689d7e522e34c",
+      "bytes": 23162
+    },
+    {
+      "order": 2,
+      "skill": "backup-restore-desk",
+      "archive": "002-backup-restore-desk-skill.zip",
+      "sha256": "ac55e75f943fc3fae554cc5a6ec0bc5e4d7efad7a4e8a0feec7f72a9ba8e5ae4",
+      "bytes": 23755
+    },
+    {
+      "order": 3,
+      "skill": "capacity-planning-desk",
+      "archive": "003-capacity-planning-desk-skill.zip",
+      "sha256": "a45542af64b9d655f63a5d40000d0aea184d63c815b43cfbae4d514764e5d367",
+      "bytes": 23391
+    },
+    {
+      "order": 4,
+      "skill": "change-safety-desk",
+      "archive": "004-change-safety-desk-skill.zip",
+      "sha256": "9d35aa2154c0aa4c334a51517e36fd1e90696013bd5fe3c139966946226dc233",
+      "bytes": 23506
+    },
+    {
+      "order": 5,
+      "skill": "chaos-resilience-testing-desk",
+      "archive": "005-chaos-resilience-testing-desk-skill.zip",
+      "sha256": "686fa181dbe85992e13ebd0d4fc003ba27d808a2c2d56c62aa814b0100114b4c",
+      "bytes": 23636
+    },
+    {
+      "order": 6,
+      "skill": "dependency-failure-analysis-desk",
+      "archive": "006-dependency-failure-analysis-desk-skill.zip",
+      "sha256": "1032d48136722febed4450311fb209eb09b902285e337349c49fede14872f562",
+      "bytes": 23555
+    },
+    {
+      "order": 7,
+      "skill": "disaster-recovery-desk",
+      "archive": "007-disaster-recovery-desk-skill.zip",
+      "sha256": "bf5222fdafe9dbc7deb84fda07ce836d8da028c1545020265abe1ffa8ee3b99c",
+      "bytes": 23429
+    },
+    {
+      "order": 8,
+      "skill": "incident-command-desk",
+      "archive": "008-incident-command-desk-skill.zip",
+      "sha256": "e95c4921f70014561c12a7689f093ace3b452fb232f68a1f2ca8831729d4bb9b",
+      "bytes": 23636
+    },
+    {
+      "order": 9,
+      "skill": "load-performance-testing-desk",
+      "archive": "009-load-performance-testing-desk-skill.zip",
+      "sha256": "7570e44c79a537915c5a9edda5069b42f18f21013823daa85915e92e0981034f",
+      "bytes": 23762
+    },
+    {
+      "order": 10,
+      "skill": "oncall-escalation-desk",
+      "archive": "010-oncall-escalation-desk-skill.zip",
+      "sha256": "a22379afa808d747cfc573bb65c4431aa93e0439884b7bd170b6ee8eac7e2512",
+      "bytes": 23065
+    },
+    {
+      "order": 11,
+      "skill": "postmortem-desk",
+      "archive": "011-postmortem-desk-skill.zip",
+      "sha256": "ddc70b938b1adf794793e0db3736f5a3e5d362e87159c48cb4fbaa7be3aa2af3",
+      "bytes": 23290
+    },
+    {
+      "order": 12,
+      "skill": "production-readiness-review-desk",
+      "archive": "012-production-readiness-review-desk-skill.zip",
+      "sha256": "8d2b4b1413de09331b4576b7f3ed55cb4338e3846a7892e8e9974ab3dda26999",
+      "bytes": 23008
+    },
+    {
+      "order": 13,
+      "skill": "reliability-review-desk",
+      "archive": "013-reliability-review-desk-skill.zip",
+      "sha256": "a44b519207e808f80fd698ddad8f5ea54de6c04177766ee38ad336f1226ad6c1",
+      "bytes": 23017
+    },
+    {
+      "order": 14,
+      "skill": "resilience-architecture-desk",
+      "archive": "014-resilience-architecture-desk-skill.zip",
+      "sha256": "2276d0254e5a0b0b8af0dbea3ba8fedd076ac570dc0666b8e0d65ce86f6baf1f",
+      "bytes": 23560
+    },
+    {
+      "order": 15,
+      "skill": "runbook-engineering-desk",
+      "archive": "015-runbook-engineering-desk-skill.zip",
+      "sha256": "521303736b0d213a6cb2eaf83b84ba54abb5a9ce5abb26692a919d0d84143b3a",
+      "bytes": 23111
+    },
+    {
+      "order": 16,
+      "skill": "service-tiering-desk",
+      "archive": "016-service-tiering-desk-skill.zip",
+      "sha256": "0d40359539412cfbc2eb1b73cd22cfe94c1ccfd09a5c72739a6e5c5aa60a8f80",
+      "bytes": 22582
+    },
+    {
+      "order": 17,
+      "skill": "sli-specification-desk",
+      "archive": "017-sli-specification-desk-skill.zip",
+      "sha256": "34a8a8ef45f4f2f333b0a9566e8eba65ae6ec6595bb670ca0ea6e3fd1d005cd8",
+      "bytes": 22949
+    },
+    {
+      "order": 18,
+      "skill": "slo-error-budget-desk",
+      "archive": "018-slo-error-budget-desk-skill.zip",
+      "sha256": "46b6919a2c57c1485b5a7f436a7325195ecbf401dea57d77edbb06e7e2c18caf",
+      "bytes": 23003
+    },
+    {
+      "order": 19,
+      "skill": "toil-reduction-desk",
+      "archive": "019-toil-reduction-desk-skill.zip",
+      "sha256": "fe40b1abe78dd0ca5e7cf960b51a9e90f508c9d261eca27836693bd03b253392",
+      "bytes": 23234
+    }
+  ]
+}

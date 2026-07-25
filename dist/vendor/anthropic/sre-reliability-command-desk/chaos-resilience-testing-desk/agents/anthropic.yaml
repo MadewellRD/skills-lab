@@ -1,0 +1,17 @@
+interface:
+  display_name: Chaos Resilience Testing Desk
+  short_description: Steady-state hypotheses, fault injection design and scope, blast
+    radius containment with abort criteria set before injection, game days, and the
+    promotion of disproved controls from claimed to broken.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

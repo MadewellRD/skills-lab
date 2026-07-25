@@ -1,0 +1,18 @@
+interface:
+  display_name: Open Source License Desk
+  short_description: Open source review covering license read from the license file,
+    obligation set per component, copyleft reach against the real use model, compatibility
+    with the outbound grant, notice files, and per-component disposition.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,16 @@
+interface:
+  display_name: Reliability Review Desk
+  short_description: The recurring reliability review, error budget policy adjudication
+    and freeze decisions, the risk register, and a roadmap ranked by journey impact.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

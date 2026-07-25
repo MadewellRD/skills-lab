@@ -1,0 +1,18 @@
+interface:
+  display_name: People Operations Records Desk
+  short_description: Effective-dated transactions against the system of record, org
+    hierarchy integrity, payroll and equity reconciliation, data quality findings,
+    and document retention and access for the People Talent Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

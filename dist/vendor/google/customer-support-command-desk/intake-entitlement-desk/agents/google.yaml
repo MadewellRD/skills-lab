@@ -1,0 +1,18 @@
+interface:
+  display_name: Intake Entitlement Desk
+  short_description: Owns first touch, covering the arrival timestamp that starts
+    every clock, requester authorization, entitlement and coverage calendar read from
+    the executed agreement rather than the plan label, contact reason coding, duplicates
+    and merges, and work the plan does not cover.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

@@ -1,0 +1,18 @@
+interface:
+  display_name: Analytics Enablement Desk
+  short_description: Certified datasets and dashboards per persona, self-serve boundaries
+    and the joins that produce wrong numbers, dashboard hygiene, reverse-ETL, and
+    ad-hoc intake with a promotion threshold.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

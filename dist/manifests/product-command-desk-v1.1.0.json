@@ -1,0 +1,121 @@
+{
+  "suite": "product-command-desk",
+  "title": "Product Command Desk",
+  "version": "v1.1.0",
+  "date": "2026-07-25",
+  "skill_count": 16,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "product-command-desk",
+      "archive": "000-product-command-desk-skill.zip",
+      "sha256": "096f546ffc623d4f7c6e6aea6c263ad20e6633bc0bfa49a226b6a888df1d2398",
+      "bytes": 6649
+    },
+    {
+      "order": 1,
+      "skill": "churn-retention-analysis-desk",
+      "archive": "001-churn-retention-analysis-desk-skill.zip",
+      "sha256": "2991da06fdbaa685787ef9e2baec376e1ab68e520a9fdd5532c78170386c9fbc",
+      "bytes": 6566
+    },
+    {
+      "order": 2,
+      "skill": "competitive-analysis-desk",
+      "archive": "002-competitive-analysis-desk-skill.zip",
+      "sha256": "a07640c2757de257cf0ff831172f2675f08767ee83b1a7414c4cb34f20001a11",
+      "bytes": 6298
+    },
+    {
+      "order": 3,
+      "skill": "experiment-design-desk",
+      "archive": "003-experiment-design-desk-skill.zip",
+      "sha256": "891c983f047026dd8b13edb83e571dcc0cb9039bb6d40c8dd10b6d42449e34d1",
+      "bytes": 6508
+    },
+    {
+      "order": 4,
+      "skill": "feature-prioritization-desk",
+      "archive": "004-feature-prioritization-desk-skill.zip",
+      "sha256": "7a224fabed78b5519c6ab283478839aca0a788c23c2ac7bb29559330aa386071",
+      "bytes": 6218
+    },
+    {
+      "order": 5,
+      "skill": "feedback-synthesis-desk",
+      "archive": "005-feedback-synthesis-desk-skill.zip",
+      "sha256": "992f819f42a5523bb1d73896cf37c880a1534d394c22e70717f99b1ed2599da2",
+      "bytes": 6381
+    },
+    {
+      "order": 6,
+      "skill": "gtm-brief-desk",
+      "archive": "006-gtm-brief-desk-skill.zip",
+      "sha256": "1865730f67b90b07b893ebb28d86bb91d62825bf217fa598e68e0329ec80ed93",
+      "bytes": 6253
+    },
+    {
+      "order": 7,
+      "skill": "launch-readiness-desk",
+      "archive": "007-launch-readiness-desk-skill.zip",
+      "sha256": "c018fe52b758ae73d1230a32e8105f239db24fd21f5218bcb33254370ae67f24",
+      "bytes": 6439
+    },
+    {
+      "order": 8,
+      "skill": "market-discovery-desk",
+      "archive": "008-market-discovery-desk-skill.zip",
+      "sha256": "119428c73d7f585bd73310dca393e9037028ecce5694d265e8fb43ec551f220a",
+      "bytes": 6360
+    },
+    {
+      "order": 9,
+      "skill": "opportunity-sizing-desk",
+      "archive": "009-opportunity-sizing-desk-skill.zip",
+      "sha256": "063030a2035584fa897f700d0435c4f176a35924a03d8a3778222bea26a92fa1",
+      "bytes": 6414
+    },
+    {
+      "order": 10,
+      "skill": "persona-segmentation-desk",
+      "archive": "010-persona-segmentation-desk-skill.zip",
+      "sha256": "9d5fc360809d94c535f293de608685697deeca5e0fb3d40a8d476f1759b96658",
+      "bytes": 6397
+    },
+    {
+      "order": 11,
+      "skill": "prd-desk",
+      "archive": "011-prd-desk-skill.zip",
+      "sha256": "18b1ecf69a73b9ba378d29fc0690c0a0383db07c13b853d7a15127e9bc5aac25",
+      "bytes": 6288
+    },
+    {
+      "order": 12,
+      "skill": "pricing-packaging-desk",
+      "archive": "012-pricing-packaging-desk-skill.zip",
+      "sha256": "162e3b5efae0181ae35b6f97ab56f4187f506ee757ad68aeb953a0259b973e20",
+      "bytes": 6535
+    },
+    {
+      "order": 13,
+      "skill": "product-retrospective-desk",
+      "archive": "013-product-retrospective-desk-skill.zip",
+      "sha256": "e6d5a6f2e6d570a27614ed10a51425b717bb2c235dce1a26cb1222d169cb1922",
+      "bytes": 6413
+    },
+    {
+      "order": 14,
+      "skill": "roadmap-planning-desk",
+      "archive": "014-roadmap-planning-desk-skill.zip",
+      "sha256": "f667b3c1c053a4c8233946fdd21194e47af2c447c08d7a83b8a092c106f48888",
+      "bytes": 6255
+    },
+    {
+      "order": 15,
+      "skill": "user-research-desk",
+      "archive": "015-user-research-desk-skill.zip",
+      "sha256": "75cd72f262cec8d21e7d0e0172398679980aa24d85b42c087b7136ede8682ca1",
+      "bytes": 6541
+    }
+  ]
+}

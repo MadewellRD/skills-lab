@@ -1,0 +1,16 @@
+interface:
+  display_name: Audit Engagement Desk
+  short_description: Assessor request tracking, walkthroughs, question responses,
+    and the representation letter for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

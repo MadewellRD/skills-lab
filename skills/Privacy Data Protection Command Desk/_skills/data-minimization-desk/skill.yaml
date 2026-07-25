@@ -1,0 +1,10 @@
+interface:
+  display_name: Data Minimization Desk
+  short_description: Makes field-level necessity determinations tied to a named purpose, chooses pseudonymization, tokenization, aggregation, or generalization with key custody, and holds the boundary between pseudonymized data that stays in scope and anonymous data that leaves it.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,16 @@
+interface:
+  display_name: Cloud Workload Intake Desk
+  short_description: Workload framing, criticality tiering, data classification, residency,
+    compliance scope, recovery objectives, provider and region candidacy, and non-goals.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

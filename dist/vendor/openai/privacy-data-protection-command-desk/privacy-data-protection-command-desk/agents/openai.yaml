@@ -1,0 +1,23 @@
+interface:
+  display_name: Privacy Data Protection Command Desk
+  short_description: Privacy workflow orchestrator for data mapping, lawful basis,
+    notices, consent, trackers, minimization, privacy by design, DPIA, childrens data,
+    transfers, processor agreements, rights requests, retention, breach notification,
+    and program metrics.
+  default_prompt: Ask this suite for a privacy outcome on a named processing activity,
+    product, vendor, request, or incident, such as building a records of processing
+    entry with an assessed lawful basis, auditing which trackers fire before consent,
+    scoping and answering a deletion request across every system that holds the person,
+    deciding whether an incident is a notifiable personal data breach and by when,
+    or working out which transfers are running with no executed mechanism behind them.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

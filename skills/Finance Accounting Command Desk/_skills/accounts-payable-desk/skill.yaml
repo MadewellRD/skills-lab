@@ -1,0 +1,10 @@
+interface:
+  display_name: Accounts Payable Desk
+  short_description: Three way match exceptions, received-not-invoiced accrual, payment proposal, duplicates, and vendor bank change verification.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

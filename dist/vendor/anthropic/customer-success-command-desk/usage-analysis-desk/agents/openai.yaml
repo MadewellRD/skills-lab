@@ -1,0 +1,18 @@
+interface:
+  display_name: Usage Analysis Desk
+  short_description: Owns the telemetry read of entitled against provisioned against
+    active with stated definitions and windows, consumption against entitlement, decline
+    detection at the change point, and the instrumentation coverage statement.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,18 @@
+interface:
+  display_name: Renewal Termination Desk
+  short_description: The back end of the term covering the renewal calendar with the
+    last safe date to act, auto-renewal exposure, price escalation as written, termination
+    grounds and cure periods, notice drafted to the required method, and wind-down.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

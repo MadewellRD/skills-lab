@@ -1,0 +1,17 @@
+interface:
+  display_name: Managed Database Platform Desk
+  short_description: Engine selection and sizing, high-availability topology, replica
+    lag, point-in-time recovery windows, parameter baselines, connection limits, and
+    version upgrades.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

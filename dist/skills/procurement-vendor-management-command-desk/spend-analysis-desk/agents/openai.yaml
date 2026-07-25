@@ -1,0 +1,17 @@
+interface:
+  display_name: Spend Analysis Desk
+  short_description: Spend baseline from the payables ledger, supplier consolidation,
+    contract coverage, tail and off-contract spend, price variance, and savings realization.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

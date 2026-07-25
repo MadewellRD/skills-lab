@@ -1,0 +1,10 @@
+interface:
+  display_name: Equity And Cap Table Desk
+  short_description: Cap table tied to board consents, option pool position, stock compensation expense, fully diluted count, and valuation currency.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

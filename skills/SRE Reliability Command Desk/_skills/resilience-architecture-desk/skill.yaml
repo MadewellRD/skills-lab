@@ -1,0 +1,12 @@
+interface:
+  display_name: Resilience Architecture Desk
+  short_description: Timeout and retry budgets, circuit breakers, bulkheads, load shedding,
+    backpressure, cache fallbacks, idempotency, graceful degradation modes, and the proven
+    versus unproven state of each control.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

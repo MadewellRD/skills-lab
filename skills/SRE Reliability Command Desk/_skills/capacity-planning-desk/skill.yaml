@@ -1,0 +1,12 @@
+interface:
+  display_name: Capacity Planning Desk
+  short_description: Demand model, headroom against the binding saturation signal, quota and
+    scaling ceilings, provisioning lead time, failover headroom at real peak, and the measured
+    versus assumed split.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

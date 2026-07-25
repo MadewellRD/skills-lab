@@ -1,0 +1,16 @@
+interface:
+  display_name: Security Architecture Review Desk
+  short_description: Design-stage trust boundary and control placement review with
+    deviations, conditions of approval, and residual risk.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

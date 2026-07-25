@@ -1,0 +1,18 @@
+interface:
+  display_name: Platform Engineering Command Desk
+  short_description: Internal developer platform workflow orchestrator for golden
+    paths, catalog, self-service infrastructure, guardrails, adoption, and deprecation.
+  default_prompt: Ask this suite to design, roll out, measure, or retire an internal
+    developer platform capability, such as a golden path for a new service stack or
+    a chargeback model for shared platform spend.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

@@ -1,0 +1,17 @@
+interface:
+  display_name: Data Observability Desk
+  short_description: Monitors, alert routing, lineage-aware suppression, detection
+    coverage measured against how incidents were actually found, noise review, and
+    monitor ownership.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

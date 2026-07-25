@@ -1,0 +1,17 @@
+interface:
+  display_name: Platform Cost Attribution Desk
+  short_description: Allocation keys, shared and untagged spend treatment, showback
+    and chargeback design, unit economics, and waste reclamation for the platform
+    engineering suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

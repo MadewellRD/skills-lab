@@ -1,0 +1,12 @@
+interface:
+  display_name: Success Planning Desk
+  short_description: Owns desired business outcomes in the customer's own metrics, baselines
+    captured before the change with the method behind each, observable success criteria, and
+    the mutual action plan a named customer stakeholder actually agreed.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

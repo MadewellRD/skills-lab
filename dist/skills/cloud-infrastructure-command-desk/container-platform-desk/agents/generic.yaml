@@ -1,0 +1,17 @@
+interface:
+  display_name: Container Platform Desk
+  short_description: Cluster topology, node groups, autoscaling and bin packing, version
+    upgrades against the support window, ingress, image provenance, and in-cluster
+    isolation.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

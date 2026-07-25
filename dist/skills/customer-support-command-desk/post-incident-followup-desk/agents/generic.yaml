@@ -1,0 +1,17 @@
+interface:
+  display_name: Post Incident Followup Desk
+  short_description: Per-account follow-up, outage letters bounded by the incident
+    record, contractual credits, incident-generated tickets, and commitments made
+    during the event.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

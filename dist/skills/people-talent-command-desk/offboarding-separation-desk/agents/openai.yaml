@@ -1,0 +1,18 @@
+interface:
+  display_name: Offboarding Separation Desk
+  short_description: Separation basis and notice, final pay against the jurisdiction's
+    timing rule, severance and release terms, reduction in force criteria before names,
+    access scheduling, and exit coding.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

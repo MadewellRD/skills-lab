@@ -1,0 +1,16 @@
+interface:
+  display_name: Network Security Desk
+  short_description: Segmentation, egress control, edge protection, exposure review,
+    and administrative access paths for the Security Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

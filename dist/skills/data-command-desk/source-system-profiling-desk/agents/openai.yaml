@@ -1,0 +1,18 @@
+interface:
+  display_name: Source System Profiling Desk
+  short_description: Profiles source systems for grain, real keys, null rates, cardinality,
+    type and encoding surprises, arrival and lateness, delete behavior, extraction
+    and CDC feasibility, and column-level sensitivity classification.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,10 @@
+interface:
+  display_name: Month End Close Desk
+  short_description: Close calendar and blockers, cutoff testing, journal entry package, accrual completeness, intercompany, and flux review.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

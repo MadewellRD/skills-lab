@@ -1,0 +1,18 @@
+interface:
+  display_name: Disaster Recovery Desk
+  short_description: RTO and RPO per tier with sources, the failover mode actually
+    implemented, regional evacuation and failback, dependency recovery order, exercise
+    results, and the planned versus measured recovery gap.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

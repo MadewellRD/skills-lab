@@ -1,0 +1,18 @@
+interface:
+  display_name: Data Contract Desk
+  short_description: Defines producer and consumer contracts and schema evolution,
+    covering the field semantics a schema cannot carry, compatibility mode and the
+    enforcement point that rejects a violation, breaking-change policy, deprecation
+    windows, and implied contracts.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

@@ -1,0 +1,13 @@
+interface:
+  display_name: Security Command Desk
+  short_description: Security engagement orchestrator for threat modeling, control review,
+    finding triage, detection, incident response, and assurance evidence.
+  default_prompt: Ask for a security review, threat model, finding triage and remediation
+    plan, hardening baseline, detection coverage check, audit evidence package, or incident
+    support for a named system, repository, cloud account, or vendor.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

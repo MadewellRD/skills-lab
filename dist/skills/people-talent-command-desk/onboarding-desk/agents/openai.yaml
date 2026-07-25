@@ -1,0 +1,18 @@
+interface:
+  display_name: Onboarding Desk
+  short_description: Pre-start plans, the eligibility verification window, ramp milestones
+    written as observable outcomes, manager commitments, acknowledgments, and enrollment
+    deadlines for the People Talent Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

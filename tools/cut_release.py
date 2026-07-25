@@ -30,6 +30,20 @@ SUITE_TITLES = {
     'sales-command-desk': 'Sales Command Desk',
     'android-command-desk': 'Android Command Desk',
     'ios-command-desk': 'iOS Command Desk',
+    'security-command-desk': 'Security Command Desk',
+    'platform-engineering-command-desk': 'Platform Engineering Command Desk',
+    'sre-reliability-command-desk': 'SRE Reliability Command Desk',
+    'cloud-infrastructure-command-desk': 'Cloud Infrastructure Command Desk',
+    'data-command-desk': 'Data Command Desk',
+    'grc-command-desk': 'GRC Command Desk',
+    'privacy-data-protection-command-desk': 'Privacy Data Protection Command Desk',
+    'legal-contracts-command-desk': 'Legal Contracts Command Desk',
+    'finops-command-desk': 'FinOps Command Desk',
+    'customer-success-command-desk': 'Customer Success Command Desk',
+    'customer-support-command-desk': 'Customer Support Command Desk',
+    'finance-accounting-command-desk': 'Finance Accounting Command Desk',
+    'people-talent-command-desk': 'People Talent Command Desk',
+    'procurement-vendor-management-command-desk': 'Procurement Vendor Management Command Desk',
 }
 
 

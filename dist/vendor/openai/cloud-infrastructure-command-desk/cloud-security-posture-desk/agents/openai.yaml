@@ -1,0 +1,17 @@
+interface:
+  display_name: Cloud Security Posture Desk
+  short_description: Benchmark-mapped posture assessment with reachable-exposure analysis
+    rather than raw finding counts, public exposure review, encryption and logging
+    coverage, guardrail gaps, the exception register, and the remediation plan.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

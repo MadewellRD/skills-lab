@@ -1,0 +1,10 @@
+interface:
+  display_name: Data Inventory Mapping Desk
+  short_description: Discovers where personal data lives and builds the purpose-level records of processing, the data element inventory with identifiability state, the flow map covering tags, SDKs, exports, and remote access, and the coverage statement naming which systems were actually read.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

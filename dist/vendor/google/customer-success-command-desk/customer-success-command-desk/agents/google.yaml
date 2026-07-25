@@ -1,0 +1,24 @@
+interface:
+  display_name: Customer Success Command Desk
+  short_description: Customer success workflow orchestrator for post-sale handoff,
+    onboarding and time to value, usage and adoption, health scoring, success planning,
+    stakeholder mapping, playbooks, escalations, churn risk and saves, value realization,
+    business reviews, expansion, advocacy, renewals, voice of customer, coverage models,
+    and retention reporting.
+  default_prompt: Ask this suite for a customer success outcome on a named account
+    or book, such as building a success plan with baselines the customer will agree
+    to, working out why adoption stalled and what changes it, preparing a business
+    review around a value figure the customer can validate, sizing and owning the
+    risks on an account before its notice deadline, or reporting net revenue retention
+    with the population and exclusions behind the number.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

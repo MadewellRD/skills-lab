@@ -1,0 +1,17 @@
+interface:
+  display_name: Manager Enablement Desk
+  short_description: Manager capability gaps with the evidence behind each, cycle
+    support at the moment of need, preparation for the specific conversation, and
+    the boundary that routes a matter the moment the company is on notice.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

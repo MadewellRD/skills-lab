@@ -1,0 +1,18 @@
+interface:
+  display_name: Lawful Basis Desk
+  short_description: Selects and evidences a lawful basis per activity with its necessity
+    argument, completes legitimate interests assessments and special category conditions,
+    assesses compatible secondary use, and names activities where no basis holds as
+    unlawful processing.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

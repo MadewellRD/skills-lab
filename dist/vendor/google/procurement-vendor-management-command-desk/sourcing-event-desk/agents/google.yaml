@@ -1,0 +1,17 @@
+interface:
+  display_name: Sourcing Event Desk
+  short_description: Running an RFP, RFQ, or reverse auction with a pricing template
+    that makes bids comparable, one communication channel, addenda, and bid confidentiality
+    controls.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

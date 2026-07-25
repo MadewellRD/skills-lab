@@ -1,0 +1,19 @@
+interface:
+  display_name: Breach Notification Desk
+  short_description: Prepare authority filings including phased filings on incomplete
+    facts, individual notification in plain language with the steps a person can take,
+    substitute notice, processor-to-controller notice, and the multi-jurisdiction
+    filing matrix where thresholds and deadlines differ.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

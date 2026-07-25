@@ -1,0 +1,17 @@
+interface:
+  display_name: Data Platform Cost Desk
+  short_description: Spend breakdown from the billing export, top drivers named as
+    specific workloads, attribution with the unattributable share, efficiency findings,
+    the cost of freshness, and guardrails.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

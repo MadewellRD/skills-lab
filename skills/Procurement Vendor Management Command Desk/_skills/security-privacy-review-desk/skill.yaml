@@ -1,0 +1,11 @@
+interface:
+  display_name: Security Privacy Review Desk
+  short_description: Coordination of supplier security and privacy reviews covering attestation
+    scope, subprocessors, transfer mechanism, findings, and conditions with owners and dates.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

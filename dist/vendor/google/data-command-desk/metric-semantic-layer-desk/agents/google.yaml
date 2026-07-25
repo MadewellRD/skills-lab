@@ -1,0 +1,17 @@
+interface:
+  display_name: Metric Semantic Layer Desk
+  short_description: Metric definitions as real expressions, entity and measure modeling,
+    grain validity, additivity rules, time basis and fiscal calendar, certification,
+    restatement policy, and competing definitions preserved.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

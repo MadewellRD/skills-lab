@@ -1,0 +1,10 @@
+interface:
+  display_name: Attestation Reporting Desk
+  short_description: Report inventory, bridge letters, trust packages, and questionnaire responses for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

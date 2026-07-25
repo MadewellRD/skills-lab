@@ -1,0 +1,16 @@
+interface:
+  display_name: Authorization Model Desk
+  short_description: Authorization model, tenant isolation, object-level access rules,
+    policy test cases, and privilege-escalation paths.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

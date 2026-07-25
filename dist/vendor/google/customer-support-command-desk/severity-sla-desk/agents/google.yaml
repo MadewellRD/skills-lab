@@ -1,0 +1,17 @@
+interface:
+  display_name: Severity SLA Desk
+  short_description: Owns severity set from customer impact and every clock run against
+    the executed agreement, covering targets on the contractual calendar, pauses tied
+    to the written rule, and the at-risk and breached position with its credit exposure.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

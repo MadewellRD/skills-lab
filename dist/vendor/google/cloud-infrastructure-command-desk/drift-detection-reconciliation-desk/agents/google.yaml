@@ -1,0 +1,18 @@
+interface:
+  display_name: Drift Detection Reconciliation Desk
+  short_description: Declared-versus-live comparison and cadence, the drift inventory
+    scored by consequence, attribution from audit log evidence, reconciliation disposition
+    per item, the import path for unmanaged resources, and the guardrail that stops
+    recurrence.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

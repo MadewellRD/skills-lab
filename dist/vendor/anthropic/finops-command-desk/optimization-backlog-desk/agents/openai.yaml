@@ -1,0 +1,18 @@
+interface:
+  display_name: Optimization Backlog Desk
+  short_description: The deduplicated opportunity register netted for overlap, prioritized
+    on effort, risk and reversibility, with ownership, rejection reasons preserved,
+    and savings realization tracked against the bill rather than the estimate.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

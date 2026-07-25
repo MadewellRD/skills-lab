@@ -1,0 +1,15 @@
+interface:
+  display_name: Procurement Vendor Management Command Desk
+  short_description: Procurement and vendor lifecycle orchestrator for sourcing, diligence,
+    negotiation, contracting, performance, and renewals.
+  default_prompt: Ask it to run a sourcing exercise or RFP, tier a vendor's risk and
+    scope the diligence, compare bids on normalized total cost, chase a security or
+    privacy review, benchmark and negotiate a price, route a contract for signature,
+    onboard or offboard a supplier, analyze spend and consolidate overlapping tools,
+    or decide a renewal before the notice window closes.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

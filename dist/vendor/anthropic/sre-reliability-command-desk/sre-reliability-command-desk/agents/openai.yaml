@@ -1,0 +1,21 @@
+interface:
+  display_name: SRE Reliability Command Desk
+  short_description: Site reliability workflow orchestrator for SLOs and error budgets,
+    capacity, resilience testing, alerting, on-call, incident command, recovery, and
+    toil.
+  default_prompt: Ask this suite for a reliability outcome on a named service or user
+    journey, such as defining SLOs and burn-rate alerts for checkout, proving the
+    restore path for a primary datastore, or running a production readiness review
+    before launch.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

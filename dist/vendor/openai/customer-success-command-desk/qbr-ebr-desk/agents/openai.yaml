@@ -1,0 +1,17 @@
+interface:
+  display_name: QBR EBR Desk
+  short_description: Build the business review on validated value, treat missed commitments
+    honestly, state the decisions the customer must make, and record post-review actions
+    with owners.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

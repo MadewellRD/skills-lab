@@ -1,0 +1,17 @@
+interface:
+  display_name: Vendor Risk Tiering Desk
+  short_description: Third party risk tiering from data classification, criticality,
+    integration depth, and regulatory scope, producing the diligence scope and its
+    realistic lead time.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

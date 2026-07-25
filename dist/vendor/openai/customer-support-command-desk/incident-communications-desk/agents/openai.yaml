@@ -1,0 +1,17 @@
+interface:
+  display_name: Incident Communications Desk
+  short_description: Owns the customer-facing side of a mass event, covering affected
+    scope from system evidence, the impact start timestamp, one published holding
+    position, the update cadence, and proactive notification lists built from a query.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

@@ -1,0 +1,17 @@
+interface:
+  display_name: Job Architecture Leveling Desk
+  short_description: Level placement against the level guide, job family and code,
+    band and grade mapping, exemption classification, job descriptions, and posting
+    obligations for the People Talent Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

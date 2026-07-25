@@ -1,0 +1,17 @@
+interface:
+  display_name: Candidate Evaluation Debrief Desk
+  short_description: Debrief synthesis built from evidence rather than impression,
+    hire recommendations, preserved dissent, level checks, and recorded rejection
+    reasons for the People Talent Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

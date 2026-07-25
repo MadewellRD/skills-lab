@@ -1,0 +1,17 @@
+interface:
+  display_name: Workforce Coverage Desk
+  short_description: Interval volume forecasts, staffing to the service target, shrinkage
+    and occupancy, coverage gaps by interval, language, skill, and product, the skill
+    matrix, and the on-call rota.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

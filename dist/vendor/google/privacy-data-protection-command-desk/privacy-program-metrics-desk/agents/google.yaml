@@ -1,0 +1,18 @@
+interface:
+  display_name: Privacy Program Metrics Desk
+  short_description: Compute program metrics with value, basis, population, and as-of
+    date, report deadline attainment against statutory deadlines and coverage against
+    the estate, and assemble the accountability record and escalations for the governing
+    forum.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

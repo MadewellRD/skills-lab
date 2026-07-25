@@ -1,0 +1,17 @@
+interface:
+  display_name: Licensing And SaaS Spend Desk
+  short_description: Entitlement against measured use, shelfware quantified to its
+    renewal date, licence model and edition comparison, tool overlap, marketplace
+    routing with commitment drawdown, and the notice-window calendar.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

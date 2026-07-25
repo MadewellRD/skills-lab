@@ -1,0 +1,17 @@
+interface:
+  display_name: Employee Relations Desk
+  short_description: Intake with the notice date, protected activity determination,
+    interim measures, the investigation plan, findings per allegation against a named
+    standard, retaliation monitoring, and closure communication per party.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

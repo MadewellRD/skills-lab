@@ -1,0 +1,17 @@
+interface:
+  display_name: Policy Handbook Desk
+  short_description: Policy drafts a manager can apply unaided, the jurisdictional
+    matrix and local addenda, consultation triggers, acknowledgment models, the exception
+    register, and divergence between the written rule and the practice.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

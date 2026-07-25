@@ -1,0 +1,17 @@
+interface:
+  display_name: Compensation Review Cycle Desk
+  short_description: Budget pool, band refresh, market data with its cut and aging,
+    the merit model, compression and inversion, pay equity cohorts with their controls,
+    and transparency obligations per jurisdiction.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

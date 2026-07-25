@@ -1,0 +1,17 @@
+interface:
+  display_name: Cloud Commercial Negotiation Desk
+  short_description: The negotiation evidence pack, commit sizing options with shortfall
+    exposure, asks valued individually across discount, eligibility, transfer relief,
+    support and flexibility, and the walk-away position.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

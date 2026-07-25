@@ -1,0 +1,10 @@
+interface:
+  display_name: Developer Experience Research Desk
+  short_description: Friction mapping, cognitive load, and delivery baselines for the Platform Engineering Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

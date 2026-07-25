@@ -1,0 +1,11 @@
+interface:
+  display_name: Forecast Scenario Desk
+  short_description: Reforecast separating actuals from projection, scenarios split
+    by named assumptions, step changes, guidance position, and measured accuracy.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

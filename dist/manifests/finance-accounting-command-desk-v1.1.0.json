@@ -1,0 +1,149 @@
+{
+  "suite": "finance-accounting-command-desk",
+  "title": "Finance Accounting Command Desk",
+  "version": "v1.1.0",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "finance-accounting-command-desk",
+      "archive": "000-finance-accounting-command-desk-skill.zip",
+      "sha256": "9eb74a00e732d3603c58adebbba8a260949fbda51d4543b16d091e6ea0b0b590",
+      "bytes": 44073
+    },
+    {
+      "order": 1,
+      "skill": "account-reconciliation-desk",
+      "archive": "001-account-reconciliation-desk-skill.zip",
+      "sha256": "c6f06d78ab573c19f4740998ab69bc456d247930d0746d928ceeb122327eb43a",
+      "bytes": 36005
+    },
+    {
+      "order": 2,
+      "skill": "accounting-policy-coa-desk",
+      "archive": "002-accounting-policy-coa-desk-skill.zip",
+      "sha256": "23f58443ff5a865d80baa266aa6064cc62384fb6ebd40fe8e372bb08741758b8",
+      "bytes": 35832
+    },
+    {
+      "order": 3,
+      "skill": "accounts-payable-desk",
+      "archive": "003-accounts-payable-desk-skill.zip",
+      "sha256": "22486da5e2ab151d4768ce3f0c5433edf86f0b6d3db25b3a540b81f219d31194",
+      "bytes": 36064
+    },
+    {
+      "order": 4,
+      "skill": "accounts-receivable-collections-desk",
+      "archive": "004-accounts-receivable-collections-desk-skill.zip",
+      "sha256": "806e7521a4fc7b2aeeed929929b24ee43ab399d1c7e77a3a82a1624786db7164",
+      "bytes": 36034
+    },
+    {
+      "order": 5,
+      "skill": "audit-support-desk",
+      "archive": "005-audit-support-desk-skill.zip",
+      "sha256": "5dd97041065a6d13cecfd0a3ac3e07cb44670a7155c6b7e4d64cb4b8b0cabb70",
+      "bytes": 36101
+    },
+    {
+      "order": 6,
+      "skill": "billing-order-to-cash-desk",
+      "archive": "006-billing-order-to-cash-desk-skill.zip",
+      "sha256": "e1bf215bf80fbd1add76d11d07e31815764d722ed7c718ca39c5c45ad304a9d4",
+      "bytes": 35699
+    },
+    {
+      "order": 7,
+      "skill": "budget-planning-desk",
+      "archive": "007-budget-planning-desk-skill.zip",
+      "sha256": "8bb0e6172f09b87ee8108ac412ed331c4e839cf8b8e86f905566196b7cdca9b4",
+      "bytes": 35941
+    },
+    {
+      "order": 8,
+      "skill": "cash-flow-treasury-desk",
+      "archive": "008-cash-flow-treasury-desk-skill.zip",
+      "sha256": "cb96dbd1178cd50cdbe37076406b0949dfe8241a8917d586950a8ec08073fb88",
+      "bytes": 36476
+    },
+    {
+      "order": 9,
+      "skill": "equity-cap-table-desk",
+      "archive": "009-equity-cap-table-desk-skill.zip",
+      "sha256": "5a986e59ab0c98e6003d3812caf5bae9cc2253372764b0e608a44ab32a70b9d2",
+      "bytes": 35882
+    },
+    {
+      "order": 10,
+      "skill": "expense-management-desk",
+      "archive": "010-expense-management-desk-skill.zip",
+      "sha256": "69c412b36b67969d14dad3aeb94c90c64f5fec64b535ebd98462843700d54d37",
+      "bytes": 35745
+    },
+    {
+      "order": 11,
+      "skill": "financial-reporting-desk",
+      "archive": "011-financial-reporting-desk-skill.zip",
+      "sha256": "4b5bc79611b12d4f9092d93763862c8fe716dc6197de9f6c59c464b334f650bc",
+      "bytes": 36310
+    },
+    {
+      "order": 12,
+      "skill": "forecast-scenario-desk",
+      "archive": "012-forecast-scenario-desk-skill.zip",
+      "sha256": "d26f3a07dd8e30f887adcb0e5f8be6061eb7cdfb259e4cb4d755c4b2a41dd4fc",
+      "bytes": 36177
+    },
+    {
+      "order": 13,
+      "skill": "internal-controls-desk",
+      "archive": "013-internal-controls-desk-skill.zip",
+      "sha256": "8d57bb51aa201243fdae94b08c61bf96661c5404fdfa3029b7f2779fd8f0695d",
+      "bytes": 36229
+    },
+    {
+      "order": 14,
+      "skill": "month-end-close-desk",
+      "archive": "014-month-end-close-desk-skill.zip",
+      "sha256": "f237947ab112d47d73a22ae04b09e94cecae650b9f3536e99803f6642db08c18",
+      "bytes": 36114
+    },
+    {
+      "order": 15,
+      "skill": "revenue-recognition-desk",
+      "archive": "015-revenue-recognition-desk-skill.zip",
+      "sha256": "54279e51d60a9e0af005ef9fd85b1c1c556dcedea8ceed7e1309e21986b4c6f1",
+      "bytes": 35608
+    },
+    {
+      "order": 16,
+      "skill": "saas-metrics-reporting-desk",
+      "archive": "016-saas-metrics-reporting-desk-skill.zip",
+      "sha256": "0668d3f78c5d20076badf71590b3ef05a8b22d3393190b9808887d73f99c8406",
+      "bytes": 36353
+    },
+    {
+      "order": 17,
+      "skill": "spend-approval-authority-desk",
+      "archive": "017-spend-approval-authority-desk-skill.zip",
+      "sha256": "df953074755dd86298ea58e6b0107c58a51c5e85dbcb3f4f0c9762d45d02d236",
+      "bytes": 35819
+    },
+    {
+      "order": 18,
+      "skill": "tax-coordination-desk",
+      "archive": "018-tax-coordination-desk-skill.zip",
+      "sha256": "0446fd191063528d14697ebe8812982ef0344e62ba69882623c36155ba1d50ed",
+      "bytes": 36393
+    },
+    {
+      "order": 19,
+      "skill": "variance-analysis-desk",
+      "archive": "019-variance-analysis-desk-skill.zip",
+      "sha256": "a6daed80e856fffb675bfae2b743d26c4f4a6c2bc5e6f39947bf1ffdbfc17812",
+      "bytes": 35860
+    }
+  ]
+}

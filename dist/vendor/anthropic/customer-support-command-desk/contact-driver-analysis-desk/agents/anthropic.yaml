@@ -1,0 +1,17 @@
+interface:
+  display_name: Contact Driver Analysis Desk
+  short_description: Ranked contact drivers with volume and window, contacts per active
+    account, cause separated from the code that recorded it, miscoding correction,
+    and driver routing.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

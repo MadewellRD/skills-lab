@@ -1,0 +1,10 @@
+interface:
+  display_name: Data Retention Lifecycle Desk
+  short_description: Retention schedules with their basis, deletion mechanisms that actually remove data, the copy propagation map, subject request location, archival tiering, legal hold precedence, and the enforcement record.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

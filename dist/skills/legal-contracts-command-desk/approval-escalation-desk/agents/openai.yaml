@@ -1,0 +1,18 @@
+interface:
+  display_name: Approval Escalation Desk
+  short_description: The approval gate covering the deviation register, an approval
+    package presenting combined exposure, the authority level and matrix provision
+    per item, routing, escalation, and the decision record.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

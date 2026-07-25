@@ -1,0 +1,12 @@
+interface:
+  display_name: Ingestion Pipeline Desk
+  short_description: Designs batch and CDC ingestion covering extraction pattern and watermark,
+    snapshot and stream stitching, delete propagation, idempotency and dedup keys, raw record
+    preservation, drift behavior, quarantine paths, backfill bounds, and landed-count reconciliation.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,18 @@
+interface:
+  display_name: Intake Triage Desk
+  short_description: Requisition triage that classifies the capability need, checks
+    duplicates against existing agreements, converts quotes into total contract value,
+    and tests urgency.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

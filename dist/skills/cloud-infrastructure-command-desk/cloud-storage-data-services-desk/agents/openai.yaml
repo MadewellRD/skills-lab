@@ -1,0 +1,18 @@
+interface:
+  display_name: Cloud Storage Data Services Desk
+  short_description: Object block and file storage selection, access policy, lifecycle
+    and tiering, immutability, public-access blocking, key ownership, backup, and
+    restore evidence.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

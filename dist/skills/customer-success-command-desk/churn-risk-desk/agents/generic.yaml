@@ -1,0 +1,16 @@
+interface:
+  display_name: Churn Risk Desk
+  short_description: Own the churn risk register with dated evidence, category, ARR
+    exposed, root cause against symptom, and closure by observed change.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

@@ -1,0 +1,16 @@
+interface:
+  display_name: Policy Lifecycle Desk
+  short_description: Policy hierarchy, drafting and approval, review cadence, acknowledgment
+    coverage, exceptions, and retirement for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

@@ -1,0 +1,17 @@
+interface:
+  display_name: Unit Economics Desk
+  short_description: Computes unit cost metrics with a stated numerator scope and
+    a sourced denominator definition, decomposes movement into rate, volume and mix,
+    cuts cohort views, and names the metrics the data cannot yet support.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

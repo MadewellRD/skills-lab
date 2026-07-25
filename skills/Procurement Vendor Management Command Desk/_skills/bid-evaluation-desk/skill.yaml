@@ -1,0 +1,11 @@
+interface:
+  display_name: Bid Evaluation Desk
+  short_description: Bid evaluation with independent scores against published criteria, consensus
+    after, total cost normalized onto a common basis, references, and the award recommendation.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

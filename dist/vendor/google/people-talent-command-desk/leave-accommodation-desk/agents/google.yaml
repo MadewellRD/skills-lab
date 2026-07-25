@@ -1,0 +1,17 @@
+interface:
+  display_name: Leave Accommodation Desk
+  short_description: Entitlement determination with its computation, job protection
+    windows, pay treatment by component, the interactive process record, medical information
+    separation, and the return to work plan.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

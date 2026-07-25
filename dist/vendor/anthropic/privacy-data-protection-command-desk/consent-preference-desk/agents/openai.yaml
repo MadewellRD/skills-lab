@@ -1,0 +1,19 @@
+interface:
+  display_name: Consent Preference Desk
+  short_description: Designs consent per purpose with real granularity, applies the
+    freely given, specific, informed, and unambiguous test to the wording actually
+    shown, sets the consent record schema and withdrawal path, and identifies the
+    invalid-consent population with the defect named per record.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,10 @@
+interface:
+  display_name: Cookie Tracking Governance Desk
+  short_description: Inventories cookies, pixels, tags, and SDKs from live scans rather than configuration, determines strictly necessary against purpose, measures what fires before consent, reviews CMP behaviour and universal opt-out enforcement, and assigns a disposition and owner per tracker.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

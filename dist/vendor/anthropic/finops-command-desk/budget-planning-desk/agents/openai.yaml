@@ -1,0 +1,18 @@
+interface:
+  display_name: Budget Planning Desk
+  short_description: Builds budget lines scoped to named holders with a basis per
+    amount, separates run rate from growth and step changes, costs planned work, sets
+    actionable alert thresholds, and reports the lines no owner has accepted.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,10 @@
+interface:
+  display_name: Regulatory Change Desk
+  short_description: Horizon scanning, applicability determination, impact analysis, and implementation plans for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

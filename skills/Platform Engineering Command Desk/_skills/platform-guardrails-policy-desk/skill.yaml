@@ -1,0 +1,11 @@
+interface:
+  display_name: Platform Guardrails Policy Desk
+  short_description: Policy-as-code controls, enforcement points, advisory versus blocking
+    modes, secret defaults, and the waiver register for the platform engineering suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

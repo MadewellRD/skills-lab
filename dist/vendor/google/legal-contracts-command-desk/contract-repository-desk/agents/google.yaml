@@ -1,0 +1,17 @@
+interface:
+  display_name: Contract Repository Desk
+  short_description: Repository and CLM hygiene covering metadata reconciled against
+    the instrument, one version of record, family linkage, duplicate and superseded
+    resolution, retention class, access restriction, and portfolio hygiene findings.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

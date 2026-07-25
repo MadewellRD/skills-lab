@@ -1,0 +1,13 @@
+interface:
+  display_name: Signature Execution Desk
+  short_description: Execution covering the fixed execution version, signature blocks with
+    exact entity names, signatories with authority basis, counterparts and
+    electronic execution, signing sequence, effective date, and the fully
+    executed copy.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

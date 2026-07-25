@@ -1,0 +1,17 @@
+interface:
+  display_name: Adoption Enablement Desk
+  short_description: Owns the adoption gap per product and persona, its cause split
+    across capability, configuration, enablement, product, and workflow, and the intervention
+    plan matched to that cause rather than to the remedy the team controls.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

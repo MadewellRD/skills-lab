@@ -1,0 +1,17 @@
+interface:
+  display_name: FinOps Maturity Desk
+  short_description: Capability scoring backed by evidence rather than self-report,
+    gap analysis, persona adoption, the operating model with decision rights, and
+    a roadmap sequenced by capability dependency.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

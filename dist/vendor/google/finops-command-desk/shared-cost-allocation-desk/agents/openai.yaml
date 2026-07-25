@@ -1,0 +1,18 @@
+interface:
+  display_name: Shared Cost Allocation Desk
+  short_description: Splits shared pools with stated methods and rationale, attributes
+    container cost from cluster spend to namespace and workload, treats idle capacity
+    explicitly, and attributes data transfer where consumer and payer differ.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed after 2026-11-01.

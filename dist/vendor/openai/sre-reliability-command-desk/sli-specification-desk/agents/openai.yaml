@@ -1,0 +1,17 @@
+interface:
+  display_name: SLI Specification Desk
+  short_description: SLI specifications per journey with good-event and valid-event
+    definitions, measurement point and its bias, the implementation query, and the
+    measured versus unmeasured split.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

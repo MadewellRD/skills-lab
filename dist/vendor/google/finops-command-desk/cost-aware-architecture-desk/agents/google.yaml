@@ -1,0 +1,17 @@
+interface:
+  display_name: Cost Aware Architecture Desk
+  short_description: Cost drivers stated as design decisions across egress and cross-zone
+    traffic, storage class and lifecycle, managed against self-operated economics,
+    retry and logging behavior, and the resilience cost being deliberately paid.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

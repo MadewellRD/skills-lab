@@ -1,0 +1,10 @@
+interface:
+  display_name: Resolution Closure Desk
+  short_description: Owns how a ticket ends, covering resolution codes and fix type, fix against workaround, customer confirmation before closure, auto-close and pending-timeout exposure, reopen analysis, and survey suppression.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,17 @@
+interface:
+  display_name: Renewal Preparation Desk
+  short_description: Build the renewal timeline backward from the contractual notice
+    deadline, with an evidenced forecast category, uplift and concession positions,
+    procurement path, and close plan.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

@@ -1,0 +1,17 @@
+interface:
+  display_name: Service Tiering Desk
+  short_description: Critical user journey map, service-to-journey paths, criticality
+    tiers with the rule that assigns them, ownership and pager attribution, and the
+    services with no owner or tier.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

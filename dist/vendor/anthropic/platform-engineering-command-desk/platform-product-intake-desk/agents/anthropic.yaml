@@ -1,0 +1,16 @@
+interface:
+  display_name: Platform Product Intake Desk
+  short_description: Demand triage, personas, build-buy-adopt disposition, and capability
+    scope for the Platform Engineering Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic

@@ -6,8 +6,8 @@
 
 <p align="center">
   <a href="https://github.com/MadewellRD/skills-lab/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/MadewellRD/skills-lab?label=latest&sort=semver&color=22c55e"></a>
-  <a href="MANIFEST.md"><img alt="Suites" src="https://img.shields.io/badge/desk%20suites-7-0ea5e9.svg"></a>
-  <a href="MANIFEST.md"><img alt="Skills" src="https://img.shields.io/badge/skills-109-06b6d4.svg"></a>
+  <a href="MANIFEST.md"><img alt="Suites" src="https://img.shields.io/badge/desk%20suites-21-0ea5e9.svg"></a>
+  <a href="MANIFEST.md"><img alt="Skills" src="https://img.shields.io/badge/skills-385-06b6d4.svg"></a>
   <a href="profiles/"><img alt="Vendor targets" src="https://img.shields.io/badge/vendor%20targets-4-8b5cf6.svg"></a>
   <a href="profiles/frontier-2026-07.yaml"><img alt="Capability profile" src="https://img.shields.io/badge/profile-frontier--2026--07-f97316.svg"></a>
   <a href="docs/model-upgrade-playbook.md"><img alt="Model upgrade" src="https://img.shields.io/badge/model%20upgrade-one%20command-eab308.svg"></a>
@@ -28,7 +28,7 @@
 
 ## What makes this different
 
-Most skill libraries are written against whatever model existed the day they were authored, and they quietly rot as models improve. Skills-Lab treats model capability as **versioned configuration**, not as prose baked into 109 files.
+Most skill libraries are written against whatever model existed the day they were authored, and they quietly rot as models improve. Skills-Lab treats model capability as **versioned configuration**, not as prose baked into 385 files.
 
 Every assumption about the executing model lives in one file, `profiles/frontier-2026-07.yaml`. A new frontier model release is a config change and a rebuild:
 
@@ -38,7 +38,7 @@ for v in generic anthropic openai google; do python3 tools/build_skills.py --ven
 python3 tools/audit_skills.py
 ```
 
-That propagates to all 109 skills across 7 suites and 4 vendor targets. Nothing is hand-edited. See [the model upgrade playbook](docs/model-upgrade-playbook.md).
+That propagates to all 385 skills across 21 suites and 4 vendor targets. Nothing is hand-edited. See [the model upgrade playbook](docs/model-upgrade-playbook.md).
 
 **Vendor agnostic by construction.** Skill sources contain no vendor names. They use `{{AGENT}}` and `{{CODING_AGENT}}` tokens that resolve at build time from `profiles/vendors/<vendor>.yaml`. The default build mentions no vendor at all. Adding a vendor is one file and zero skill edits, and the audit fails if a vendor name leaks into a skill body.
 
@@ -46,17 +46,31 @@ That propagates to all 109 skills across 7 suites and 4 vendor targets. Nothing 
 
 ## Release status
 
-**v1.0.0** is the first release where the vendor-agnostic claim is literally true, and the first built from the capability profile.
+**v1.1.0** adds fourteen suites: security, platform engineering, reliability, cloud, data, governance, privacy, legal, finance, and the commercial functions. 385 skills across 21 suites, every one built from the same capability profile and vendor-neutral by construction.
 
 | Suite | Skills | Release tag | Packages |
 |---|---:|---|---|
-| [SDLC Command Desk](releases/sdlc-command-desk-v1.0.0.md) | 20 | `sdlc-command-desk-v1.0.0` | `dist/packages/sdlc-command-desk/` |
-| [AI Engineering Command Desk](releases/ai-engineering-command-desk-v1.0.0.md) | 18 | `ai-engineering-command-desk-v1.0.0` | `dist/packages/ai-engineering-command-desk/` |
-| [Product Command Desk](releases/product-command-desk-v1.0.0.md) | 16 | `product-command-desk-v1.0.0` | `dist/packages/product-command-desk/` |
-| [Web Development Command Desk](releases/web-development-command-desk-v1.0.0.md) | 14 | `web-development-command-desk-v1.0.0` | `dist/packages/web-development-command-desk/` |
-| [Android Command Desk](releases/android-command-desk-v1.0.0.md) | 14 | `android-command-desk-v1.0.0` | `dist/packages/android-command-desk/` |
-| [iOS Command Desk](releases/ios-command-desk-v1.0.0.md) | 14 | `ios-command-desk-v1.0.0` | `dist/packages/ios-command-desk/` |
-| [Sales Command Desk](releases/sales-command-desk-v1.0.0.md) | 13 | `sales-command-desk-v1.0.0` | `dist/packages/sales-command-desk/` |
+| [Cloud Infrastructure Command Desk](releases/cloud-infrastructure-command-desk-v1.1.0.md) | 20 | `cloud-infrastructure-command-desk-v1.1.0` | `dist/packages/cloud-infrastructure-command-desk/` |
+| [Customer Success Command Desk](releases/customer-success-command-desk-v1.1.0.md) | 20 | `customer-success-command-desk-v1.1.0` | `dist/packages/customer-success-command-desk/` |
+| [Data Command Desk](releases/data-command-desk-v1.1.0.md) | 20 | `data-command-desk-v1.1.0` | `dist/packages/data-command-desk/` |
+| [FinOps Command Desk](releases/finops-command-desk-v1.1.0.md) | 20 | `finops-command-desk-v1.1.0` | `dist/packages/finops-command-desk/` |
+| [Finance Accounting Command Desk](releases/finance-accounting-command-desk-v1.1.0.md) | 20 | `finance-accounting-command-desk-v1.1.0` | `dist/packages/finance-accounting-command-desk/` |
+| [Legal Contracts Command Desk](releases/legal-contracts-command-desk-v1.1.0.md) | 20 | `legal-contracts-command-desk-v1.1.0` | `dist/packages/legal-contracts-command-desk/` |
+| [People Talent Command Desk](releases/people-talent-command-desk-v1.1.0.md) | 20 | `people-talent-command-desk-v1.1.0` | `dist/packages/people-talent-command-desk/` |
+| [Platform Engineering Command Desk](releases/platform-engineering-command-desk-v1.1.0.md) | 20 | `platform-engineering-command-desk-v1.1.0` | `dist/packages/platform-engineering-command-desk/` |
+| [SDLC Command Desk](releases/sdlc-command-desk-v1.1.0.md) | 20 | `sdlc-command-desk-v1.1.0` | `dist/packages/sdlc-command-desk/` |
+| [SRE Reliability Command Desk](releases/sre-reliability-command-desk-v1.1.0.md) | 20 | `sre-reliability-command-desk-v1.1.0` | `dist/packages/sre-reliability-command-desk/` |
+| [Security Command Desk](releases/security-command-desk-v1.1.0.md) | 20 | `security-command-desk-v1.1.0` | `dist/packages/security-command-desk/` |
+| [Customer Support Command Desk](releases/customer-support-command-desk-v1.1.0.md) | 19 | `customer-support-command-desk-v1.1.0` | `dist/packages/customer-support-command-desk/` |
+| [GRC Command Desk](releases/grc-command-desk-v1.1.0.md) | 19 | `grc-command-desk-v1.1.0` | `dist/packages/grc-command-desk/` |
+| [Privacy Data Protection Command Desk](releases/privacy-data-protection-command-desk-v1.1.0.md) | 19 | `privacy-data-protection-command-desk-v1.1.0` | `dist/packages/privacy-data-protection-command-desk/` |
+| [Procurement Vendor Management Command Desk](releases/procurement-vendor-management-command-desk-v1.1.0.md) | 19 | `procurement-vendor-management-command-desk-v1.1.0` | `dist/packages/procurement-vendor-management-command-desk/` |
+| [AI Engineering Command Desk](releases/ai-engineering-command-desk-v1.1.0.md) | 18 | `ai-engineering-command-desk-v1.1.0` | `dist/packages/ai-engineering-command-desk/` |
+| [Product Command Desk](releases/product-command-desk-v1.1.0.md) | 16 | `product-command-desk-v1.1.0` | `dist/packages/product-command-desk/` |
+| [Android Command Desk](releases/android-command-desk-v1.1.0.md) | 14 | `android-command-desk-v1.1.0` | `dist/packages/android-command-desk/` |
+| [Web Development Command Desk](releases/web-development-command-desk-v1.1.0.md) | 14 | `web-development-command-desk-v1.1.0` | `dist/packages/web-development-command-desk/` |
+| [iOS Command Desk](releases/ios-command-desk-v1.1.0.md) | 14 | `ios-command-desk-v1.1.0` | `dist/packages/ios-command-desk/` |
+| [Sales Command Desk](releases/sales-command-desk-v1.1.0.md) | 13 | `sales-command-desk-v1.1.0` | `dist/packages/sales-command-desk/` |
 
 Archives are deterministic. The same source produces byte-identical zips, so a checksum mismatch means the content actually changed.
 
@@ -64,7 +78,7 @@ Archives are deterministic. The same source produces byte-identical zips, so a c
 python3 tools/validate_release_assets.py
 ```
 
-**Source scaffold suites**, directories with no packaged skills yet: Cloud Infrastructure, Customer Success, Customer Support, Data, Finance Accounting, FinOps, GRC, Knowledge Ops, Legal Contracts, Marketing Growth, People Talent, Platform Engineering, Privacy Data Protection, Procurement Vendor Management, Research, Security, SRE Reliability.
+**Source scaffold suites**, directories with no packaged skills yet: Knowledge Ops, Marketing Growth, Research.
 
 ---
 
@@ -171,7 +185,7 @@ docs/
 releases/                       Versioned release notes and publish scripts.
 ```
 
-Reference resolution is most-specific-wins: skill, then suite, then kernel. A file is stored once and fanned out by the build, which is why 277 source files produce over 700 packaged files with no duplication to maintain.
+Reference resolution is most-specific-wins: skill, then suite, then kernel. A file is stored once and fanned out by the build, which is why the source tree produces over 1,500 packaged reference files with no duplication to maintain.
 
 ---
 

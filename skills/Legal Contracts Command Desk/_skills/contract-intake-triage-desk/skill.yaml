@@ -1,0 +1,12 @@
+interface:
+  display_name: Contract Intake Triage Desk
+  short_description: Legal front door for contract requests, covering matter
+    classification, risk tier, review lane selection, prior-agreement check, owner and
+    turnaround.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

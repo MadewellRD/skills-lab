@@ -1,0 +1,17 @@
+interface:
+  display_name: Supplier Performance SLA Desk
+  short_description: Scorecards with named measurement sources, service levels read
+    against their exclusions, credits earned against claimed, and consumption against
+    entitlement.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

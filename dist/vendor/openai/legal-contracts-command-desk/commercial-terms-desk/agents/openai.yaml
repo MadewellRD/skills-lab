@@ -1,0 +1,16 @@
+interface:
+  display_name: Commercial Terms Desk
+  short_description: Scope, fees, payment, escalation, term and renewal windows, service
+    levels and credits, suspension, termination rights, and transition assistance.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - openai
+_generated:
+  profile: frontier-2026-07
+  vendor: openai

@@ -1,0 +1,18 @@
+interface:
+  display_name: Lineage Catalog Desk
+  short_description: Lineage at the granularity the evidence supports, the gaps the
+    graph cannot see, bidirectional impact analysis, catalog stewardship, glossary
+    mapping, measured usage, and deprecation.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

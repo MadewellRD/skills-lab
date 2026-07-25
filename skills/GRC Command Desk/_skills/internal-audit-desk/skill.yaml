@@ -1,0 +1,10 @@
+interface:
+  display_name: Internal Audit Desk
+  short_description: Audit plan, engagement fieldwork, workpapers, findings, and independent closure validation for the GRC Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

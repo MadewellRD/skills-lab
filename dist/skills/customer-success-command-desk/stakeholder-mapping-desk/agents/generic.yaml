@@ -1,0 +1,18 @@
+interface:
+  display_name: Stakeholder Mapping Desk
+  short_description: Maps the buying and using centers with influence, disposition
+    and its evidence, last-interaction recency, coverage state across engaged dormant
+    departed and unknown, multi-threading, and single-threaded exposure named as a
+    person.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic

@@ -1,0 +1,18 @@
+interface:
+  display_name: Engineering Cost Review Desk
+  short_description: The team-facing cost picture in the vocabulary of services they
+    own, movement explained as consumption, rate or allocation change, action sets
+    with owners, and guardrails split into blocking and informing.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed after 2026-11-01.

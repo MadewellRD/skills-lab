@@ -1,0 +1,19 @@
+interface:
+  display_name: Cloud Decommissioning Desk
+  short_description: Evidence-backed dependent inventory, notice window, reversible
+    quarantine, data disposition against retention holds, ordered teardown with the
+    irreversible boundary marked, credential and address release, code removal, and
+    confirmation that spend stopped.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed after 2026-11-01.

@@ -1,0 +1,12 @@
+interface:
+  display_name: Backup Restore Desk
+  short_description: Backup coverage against the data inventory, mechanism schedule retention
+    and immutability, the restore procedure with its measured time from a dated drill, integrity
+    and deletion resistance, and datasets never proven restorable.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
