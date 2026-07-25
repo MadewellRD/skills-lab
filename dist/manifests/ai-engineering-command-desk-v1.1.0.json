@@ -9,127 +9,127 @@
       "order": 0,
       "skill": "ai-engineering-command-desk",
       "archive": "000-ai-engineering-command-desk-skill.zip",
-      "sha256": "143352094c67c5d02bf031b70d73cd1f5de88a2f0fa32b30972a01ba896e1abb",
-      "bytes": 12415
+      "sha256": "5c2e77289790c8cee9c0444ea7dec7686961967697036ee402db2c098912da4d",
+      "bytes": 12544
     },
     {
       "order": 1,
       "skill": "agent-architecture-desk",
       "archive": "001-agent-architecture-desk-skill.zip",
-      "sha256": "8d2ae28f7a698f2d4eb0d52cbeeb8d594caff00cf33607b5588931822b3cba52",
-      "bytes": 6549
+      "sha256": "07bbd9053a53958cf3732af4cb98a21f8766c4bc5ee6c2971632b700ab5492c9",
+      "bytes": 6678
     },
     {
       "order": 2,
       "skill": "agent-observability-desk",
       "archive": "002-agent-observability-desk-skill.zip",
-      "sha256": "06a870759e26e882d0679ea7a7c6642152ba05b704d9651e5f8e508d7408163e",
-      "bytes": 6376
+      "sha256": "81a3a9082c5fc357a1de4f919f6d6cf9ec5e3f854e8472369afbec7eff5b0f85",
+      "bytes": 6505
     },
     {
       "order": 3,
       "skill": "ai-incident-response-desk",
       "archive": "003-ai-incident-response-desk-skill.zip",
-      "sha256": "bee3456bdd26ad6c260f56321952f8f1c0fe4c6cec4b7b181f95b4fede97b1ea",
-      "bytes": 6557
+      "sha256": "54c49d90d74cf4d35c0412a9c2492d6d3328c1be0cda3956bd3bcb8070bfa6b8",
+      "bytes": 6686
     },
     {
       "order": 4,
       "skill": "ai-release-readiness-desk",
       "archive": "004-ai-release-readiness-desk-skill.zip",
-      "sha256": "a223cc6a0f320f69bd728e50a81c818dd4226d72048c2537fdf84367afa8850a",
-      "bytes": 6213
+      "sha256": "b52cffff7900ff3716b69d4e6047365c8e8a645d2b38882278d5e5ad6f448671",
+      "bytes": 6342
     },
     {
       "order": 5,
       "skill": "ai-safety-review-desk",
       "archive": "005-ai-safety-review-desk-skill.zip",
-      "sha256": "876b9bdae0e0ffec908f3acbd996c224812f66a8bad53c451e953dae545b5608",
-      "bytes": 6413
+      "sha256": "3c741de9e386a7640053a5158fac4438117873c80ecee1973a3a8b678b874704",
+      "bytes": 6542
     },
     {
       "order": 6,
       "skill": "cost-latency-optimization-desk",
       "archive": "006-cost-latency-optimization-desk-skill.zip",
-      "sha256": "821295b50cb90fd5aabcda7952d45ef07dfa66e764b49d07b65e4f3d193e0418",
-      "bytes": 6399
+      "sha256": "0cd9cf5082f71d3fc0d818837f74621e45463acab912b6db115011ee65b51f77",
+      "bytes": 6528
     },
     {
       "order": 7,
       "skill": "dataset-curation-desk",
       "archive": "007-dataset-curation-desk-skill.zip",
-      "sha256": "9a40b1927d6b672e71eeb7a399ac3da453fa222bc45a3aa3c62638595c349f95",
-      "bytes": 6314
+      "sha256": "61bf21b732e07cc2ede7f952e2f58dcfee622cc7110697904cca0f80905263f9",
+      "bytes": 6443
     },
     {
       "order": 8,
       "skill": "eval-design-desk",
       "archive": "008-eval-design-desk-skill.zip",
-      "sha256": "f9540dd350decec92b6ff86bbba78b6a99d955ba46fc098b077a40569afb01a1",
-      "bytes": 6406
+      "sha256": "3b2b7a128cbd68f4f54241ae77fededfd45b77413731aee721add19113149236",
+      "bytes": 6535
     },
     {
       "order": 9,
       "skill": "eval-run-analysis-desk",
       "archive": "009-eval-run-analysis-desk-skill.zip",
-      "sha256": "d040237b66fb9dd9fe84b19d4df86562ce3b6d3630eb9a972c40f2ffa7e8e13a",
-      "bytes": 6489
+      "sha256": "f283e7aa2c4f7e283ac28fb5b47961fbdc29fc8a690b52e2ef1503569a5d63bf",
+      "bytes": 6618
     },
     {
       "order": 10,
       "skill": "fine-tuning-desk",
       "archive": "010-fine-tuning-desk-skill.zip",
-      "sha256": "e629aefbe175b9e1a32ab994d62be2cca2f1668c2e68c8a121ba0030a58d0079",
-      "bytes": 6405
+      "sha256": "bcd2fd25219353fb4317d82e98aeedc869c302fdbbc48f81efd9523242295f9d",
+      "bytes": 6534
     },
     {
       "order": 11,
       "skill": "inference-ops-desk",
       "archive": "011-inference-ops-desk-skill.zip",
-      "sha256": "f259a811e204383f4be13f14dec424fc014df3a2cc8ca53e407c28a7eca386c6",
-      "bytes": 6324
+      "sha256": "6b683364ba401464e976d62403b9b485abf2d3a17afa227d31c6a1bcbabeeb3b",
+      "bytes": 6453
     },
     {
       "order": 12,
       "skill": "model-selection-desk",
       "archive": "012-model-selection-desk-skill.zip",
-      "sha256": "37632928778ea5633c926a6a136f897be73b2c4a1b6583a1a20f437426cf54a4",
-      "bytes": 7822
+      "sha256": "c257e37bdd39c5980037af35d58a6a9baffccd3a087b71328280f97bef144269",
+      "bytes": 7951
     },
     {
       "order": 13,
       "skill": "prompt-systems-desk",
       "archive": "013-prompt-systems-desk-skill.zip",
-      "sha256": "c513b763880e9427848cc23c90f17d089a0ddd2beef1073d9279df1c7a737335",
-      "bytes": 13817
+      "sha256": "5658ada1a02b0280f46e4a936ae4f0e04d128d08d4d952f55ad1492989322ab5",
+      "bytes": 13946
     },
     {
       "order": 14,
       "skill": "red-team-eval-desk",
       "archive": "014-red-team-eval-desk-skill.zip",
-      "sha256": "5722d71937509864f2ddfcf76a9e100f2098c42840571c99df3d4397affe70ae",
-      "bytes": 6567
+      "sha256": "8ea4e9a40ef841b75938eb51ff040b4d98e6de7648a7c029e1caaf236153ddc3",
+      "bytes": 6696
     },
     {
       "order": 15,
       "skill": "retrieval-rag-design-desk",
       "archive": "015-retrieval-rag-design-desk-skill.zip",
-      "sha256": "d7d06f8dc65741da1860bd7f7f546ddf6231af442e7041e328539f6252baa766",
-      "bytes": 6477
+      "sha256": "36e9db0e3ae9b7d393b203312ecd8f88286aef08f5f136296936b03090f63ff8",
+      "bytes": 6606
     },
     {
       "order": 16,
       "skill": "synthetic-data-desk",
       "archive": "016-synthetic-data-desk-skill.zip",
-      "sha256": "6e755aa42b807caa1cbb14e6346ce502056819bab67fc0e7482cfe984e46ece0",
-      "bytes": 6345
+      "sha256": "709d6eb2c8fda42c5c370407a4784e82ba6db44945dc756da808ec70e5746778",
+      "bytes": 6474
     },
     {
       "order": 17,
       "skill": "tool-schema-design-desk",
       "archive": "017-tool-schema-design-desk-skill.zip",
-      "sha256": "3013129eafaf17ed04129cce961c0ef0bad76bd7d13391ae537ad69478d988e4",
-      "bytes": 6419
+      "sha256": "a9639665e30322521f7f1258bb4f444e25c97fb0814a361def8ddcb3fe7a72ab",
+      "bytes": 6548
     }
   ]
 }

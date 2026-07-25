@@ -9,141 +9,141 @@
       "order": 0,
       "skill": "platform-engineering-command-desk",
       "archive": "000-platform-engineering-command-desk-skill.zip",
-      "sha256": "095ccac2c6e3ff2351c773aaaedb8ad4990abdeb056fd2d40037d59a11ad77bd",
-      "bytes": 22502
+      "sha256": "906506fa969848ab9c3233b1fbae55a19b4d735cfd79b189314e4dc20892b489",
+      "bytes": 22631
     },
     {
       "order": 1,
       "skill": "cicd-platform-desk",
       "archive": "001-cicd-platform-desk-skill.zip",
-      "sha256": "06c7eda3541c722e309d956b0083a2fce35f46728805502d9787caa7b414fc15",
-      "bytes": 20176
+      "sha256": "9ac85de848b15074e5fe88b57126c7d5343fe55f5258a192088c907cefc58db5",
+      "bytes": 20305
     },
     {
       "order": 2,
       "skill": "developer-experience-research-desk",
       "archive": "002-developer-experience-research-desk-skill.zip",
-      "sha256": "eb7469ea29dfca2166e6c0c27d376f50f4d893c2c4056801630f295b27fbc780",
-      "bytes": 19631
+      "sha256": "1c4559b1fe5669b94fce072300ea7761dcd1ef17801153c0f767440a6957ad79",
+      "bytes": 19760
     },
     {
       "order": 3,
       "skill": "environment-management-desk",
       "archive": "003-environment-management-desk-skill.zip",
-      "sha256": "a4b635b57a91bd21ccfefe2a2b1e46f1e256d27015d9d5741fd91dad61ff8839",
-      "bytes": 19928
+      "sha256": "f4ebbcffbd8161d43d41ce1b3a0b761b9920d703480f09b631117bf90ba17b3b",
+      "bytes": 20057
     },
     {
       "order": 4,
       "skill": "golden-path-design-desk",
       "archive": "004-golden-path-design-desk-skill.zip",
-      "sha256": "ade226a647515c1b764707b673b7502694bb6085bcfb50c69703dcf0fa6b5438",
-      "bytes": 19358
+      "sha256": "624c8ff297c09f722d7da4f7bc3113221be021829129e5186a376d93dbc3ba93",
+      "bytes": 19487
     },
     {
       "order": 5,
       "skill": "platform-adoption-migration-desk",
       "archive": "005-platform-adoption-migration-desk-skill.zip",
-      "sha256": "5c9d17f1c121a1f58581e2f9d7153fafaa2251c9ba96c1ad95c99462b60ea927",
-      "bytes": 19494
+      "sha256": "74ac7818c4536e8eaff004399156c3b201ca45054bdfb7f5260ff9043e88ec75",
+      "bytes": 19623
     },
     {
       "order": 6,
       "skill": "platform-api-contract-desk",
       "archive": "006-platform-api-contract-desk-skill.zip",
-      "sha256": "9f0e91dd44c4d1907f76766ad0be1cc28a7a9937c5287852849339702c278ad6",
-      "bytes": 19641
+      "sha256": "ecf85786cae29ae8df42db9552d3caf4948c7840db84dbe455b700243084a084",
+      "bytes": 19770
     },
     {
       "order": 7,
       "skill": "platform-change-rollout-desk",
       "archive": "007-platform-change-rollout-desk-skill.zip",
-      "sha256": "8e3abcf3faf411eab56118ee099c053f034e607a6c21214ccecf066f10c98430",
-      "bytes": 19543
+      "sha256": "bd110a5344113c5264778430fb8d28940bdf975e691a46ff58dba31d1ade27cd",
+      "bytes": 19672
     },
     {
       "order": 8,
       "skill": "platform-cost-attribution-desk",
       "archive": "008-platform-cost-attribution-desk-skill.zip",
-      "sha256": "6395738d34346992e4ee1edf86e68545d29da77a134f7754862df21ea88e2513",
-      "bytes": 19579
+      "sha256": "f7f4fa5e8ea484894d977a17403e084fe84ec3a02e003f610a54eaf4b1672407",
+      "bytes": 19708
     },
     {
       "order": 9,
       "skill": "platform-deprecation-sunset-desk",
       "archive": "009-platform-deprecation-sunset-desk-skill.zip",
-      "sha256": "a5abcd20795b51aba64f19eb4ab7954b3e07c31a283ec5a504b194e60b91bd33",
-      "bytes": 19920
+      "sha256": "baa35428ec954a655c664da2d0369856658f7437b6611271083694f2305436f0",
+      "bytes": 20049
     },
     {
       "order": 10,
       "skill": "platform-governance-desk",
       "archive": "010-platform-governance-desk-skill.zip",
-      "sha256": "c8cf8b4debf429cec93c01dd4ad69825e9c59a79e47ae881546a3a9fc94af760",
-      "bytes": 19485
+      "sha256": "cc26db6b03f8867f1dc1ce3f1d29b2a10083c924349f8f47df518fb009eda7f5",
+      "bytes": 19614
     },
     {
       "order": 11,
       "skill": "platform-guardrails-policy-desk",
       "archive": "011-platform-guardrails-policy-desk-skill.zip",
-      "sha256": "4df2ff601324b43574acdf4505228a5c523f9aa4546c28e3517da1f869a90d2e",
-      "bytes": 19227
+      "sha256": "fa06a5b93d86b7cb4406574e95ea59d302ea3e52f801e20bfecd2ab61184ff1d",
+      "bytes": 19356
     },
     {
       "order": 12,
       "skill": "platform-observability-desk",
       "archive": "012-platform-observability-desk-skill.zip",
-      "sha256": "a554855b9f4c321537cbc66bb818a95ea2cfd4f8f99c72b36d8a4f8284c5e2ca",
-      "bytes": 19244
+      "sha256": "0b03fbaafc6b371a562c53161cab4de001649c9e4a8f44e2ca82a4219084d932",
+      "bytes": 19373
     },
     {
       "order": 13,
       "skill": "platform-product-intake-desk",
       "archive": "013-platform-product-intake-desk-skill.zip",
-      "sha256": "b45a907de0051ce6ef09ed903b5cc9fcbf312df7e79585cea507a4ee00feffab",
-      "bytes": 19375
+      "sha256": "526f8ab0d42102fe8455b6b7dedca002d0a52ada5cdb69fdb87f7a9abb456303",
+      "bytes": 19504
     },
     {
       "order": 14,
       "skill": "platform-slo-reliability-desk",
       "archive": "014-platform-slo-reliability-desk-skill.zip",
-      "sha256": "f0e61b43ad59dc1eecd82adfbd0d7cf3cb12d145f1f731f346f358324a4d06b8",
-      "bytes": 19314
+      "sha256": "140a07385a78e730df5d0662f9e1b4ca528428d6fabf228239bb5588dee912a6",
+      "bytes": 19443
     },
     {
       "order": 15,
       "skill": "platform-support-operations-desk",
       "archive": "015-platform-support-operations-desk-skill.zip",
-      "sha256": "27b4173ad8bcddddd8d514a3949c1d0ba2d3231176ecf4a604020967082c3016",
-      "bytes": 19332
+      "sha256": "44482c74626207f27688bf340fb05cb34c0c5aa90854862cb3607ddc4c10f4cb",
+      "bytes": 19461
     },
     {
       "order": 16,
       "skill": "scaffolding-templates-desk",
       "archive": "016-scaffolding-templates-desk-skill.zip",
-      "sha256": "26636ed5d0d904048ec1d7be6f616381bc8648ac04d788c3565c2c8a82a64d78",
-      "bytes": 19818
+      "sha256": "aec5e2831b5cdcee520d0bf62fbc4d30b49580c44c0191e493971d2f1529fc80",
+      "bytes": 19947
     },
     {
       "order": 17,
       "skill": "self-service-infrastructure-desk",
       "archive": "017-self-service-infrastructure-desk-skill.zip",
-      "sha256": "4fefb30ecadd09514dfd70aa09cab8ba3383872688c515907420ca815322eca7",
-      "bytes": 19999
+      "sha256": "795be5a3a9099cfefcd3d6c6073f6dd1eba6dc160953236610b5399db7c5d6a7",
+      "bytes": 20128
     },
     {
       "order": 18,
       "skill": "service-catalog-desk",
       "archive": "018-service-catalog-desk-skill.zip",
-      "sha256": "5a1bc7582750f9cffc8e521d30798e77d52c95765dcb447c41b24deb1079cb12",
-      "bytes": 19478
+      "sha256": "df2812939cc62682d27c4429beef2b15d57c0e431507489f55df42f5bfd644db",
+      "bytes": 19607
     },
     {
       "order": 19,
       "skill": "tenancy-isolation-desk",
       "archive": "019-tenancy-isolation-desk-skill.zip",
-      "sha256": "4e843e8f76517ea20fd1a3aa6fa52c4033c3c71d01a7e98df3e84394345e2234",
-      "bytes": 19851
+      "sha256": "d88ae372f3c5a6f48b6fb98680a89143cf1481a35136e1087005bcde9f4c14a3",
+      "bytes": 19980
     }
   ]
 }

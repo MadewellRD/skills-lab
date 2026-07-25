@@ -117,8 +117,16 @@ def render_capability_baseline(prof):
         rec = a.get('record') or []
         if rec:
             last = rec[-1]
-            L.append(f"Most recent authoring pass: **{last.get('model')}**, "
+            eff = f", {last['effort']} effort" if last.get('effort') else ''
+            L.append(f"Most recent authoring pass: **{last.get('model')}**{eff}, "
                      f"{last.get('version')}, {last.get('date')}.\n")
+        sched = a.get('scheduled') or []
+        if sched:
+            names = ', '.join(f"{x.get('model')} ({x.get('effort')})" for x in sched)
+            L.append(f"Scheduled next passes: {names}, {sched[0].get('date')}. Authoring "
+                     "across more than one vendor's frontier model tests whether this corpus "
+                     "encodes a single vendor's house style in its structure, which token "
+                     "substitution alone cannot reveal.\n")
         L.append('This is the build bench, not a runtime requirement. The capabilities '
                  'below are what the *executing* model may assume, and they are a floor '
                  'held across vendors rather than any single vendor ceiling.\n')

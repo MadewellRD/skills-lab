@@ -9,134 +9,134 @@
       "order": 0,
       "skill": "privacy-data-protection-command-desk",
       "archive": "000-privacy-data-protection-command-desk-skill.zip",
-      "sha256": "bb4a78501935f7e430665f5a5016da6e1fa8babc48e6a13c066227403a2b7c66",
-      "bytes": 38185
+      "sha256": "75d5f66b090a7f3d7add3dc8f1b6a2213b7333aff91c96e892bae7fc55e8eb8f",
+      "bytes": 38314
     },
     {
       "order": 1,
       "skill": "breach-assessment-desk",
       "archive": "001-breach-assessment-desk-skill.zip",
-      "sha256": "b8e859f982bbe412a70b72541acd014520d2ee7af3fd6d2325bdd02a5b949719",
-      "bytes": 34406
+      "sha256": "af5f4f366d24984ed566e2627dcb0aaba74e72eb3e928a40f7680d7b5cff420e",
+      "bytes": 34535
     },
     {
       "order": 2,
       "skill": "breach-notification-desk",
       "archive": "002-breach-notification-desk-skill.zip",
-      "sha256": "0c3d2f5a496a663d8770d0cca1bdfed3b6bd9dd38dea3f09b33efb14b7cfeef9",
-      "bytes": 34274
+      "sha256": "e9834a213b447c31520012052269b2caa99d90bdfe7ad0436a8f5fc16baef9f2",
+      "bytes": 34403
     },
     {
       "order": 3,
       "skill": "childrens-data-desk",
       "archive": "003-childrens-data-desk-skill.zip",
-      "sha256": "c254bf3cdbc9a68f1f7f8efebbd45d8704c36058f740388c8a75a56bd55d6eb2",
-      "bytes": 34113
+      "sha256": "c620a4de59fa50524c7387597cd47be46cee03f9e10933c0712032bf5e9d3167",
+      "bytes": 34242
     },
     {
       "order": 4,
       "skill": "consent-preference-desk",
       "archive": "004-consent-preference-desk-skill.zip",
-      "sha256": "a4c4379319d3c8511fc596b6b4826a037c44784f1ddddae0949e91ec85e4bc5f",
-      "bytes": 34405
+      "sha256": "758b5cd456aa3057645667603efaa0dfbfb40a94dfb7b1a8ecede0046699ed90",
+      "bytes": 34534
     },
     {
       "order": 5,
       "skill": "cookie-tracking-governance-desk",
       "archive": "005-cookie-tracking-governance-desk-skill.zip",
-      "sha256": "41e37dbc95e253a5820f1e7148bba505650d2c7ea3110d6550a0a2c05d567490",
-      "bytes": 34760
+      "sha256": "7acd3f881a5624faca020d007900d54fcaedd28dcc2e227d36a06c0b78a13373",
+      "bytes": 34889
     },
     {
       "order": 6,
       "skill": "cross-border-transfer-desk",
       "archive": "006-cross-border-transfer-desk-skill.zip",
-      "sha256": "c2e753dc054eb1269da374fc9ae0bf26989c2ccdbb4bf886425a1cc2856aca21",
-      "bytes": 34164
+      "sha256": "abd80a3495b33c25baf752b336e133b607fa3ad389f830aec0cd3eb86f573eb1",
+      "bytes": 34293
     },
     {
       "order": 7,
       "skill": "data-inventory-mapping-desk",
       "archive": "007-data-inventory-mapping-desk-skill.zip",
-      "sha256": "6fdc34b537d0d1c57683fad0afe9fe97e64edfe6139501db55af12af1328b193",
-      "bytes": 34344
+      "sha256": "79633a143cd69475e45e945dd2c77b3aaf2a75ea7a495c9708bf1ef296cee367",
+      "bytes": 34473
     },
     {
       "order": 8,
       "skill": "data-minimization-desk",
       "archive": "008-data-minimization-desk-skill.zip",
-      "sha256": "cd02c51aefc80780797cbb792c1368e00888ef7e3143d7d7de90ae30fafa01cd",
-      "bytes": 34657
+      "sha256": "e2b4d5ba53f4638ae1eb63a6776ae955c28a60f3dbaa6f12c04156a32df06f8d",
+      "bytes": 34786
     },
     {
       "order": 9,
       "skill": "dpia-desk",
       "archive": "009-dpia-desk-skill.zip",
-      "sha256": "ef288508de7b130e4c8f16abd2001b74aded5301fdf5fb0433dd23884dcef1f0",
-      "bytes": 34623
+      "sha256": "7548f5830b83e0cd2cd6914c9ccccd7f10e66f3ae9afa33e376bc4bcf1dab471",
+      "bytes": 34752
     },
     {
       "order": 10,
       "skill": "lawful-basis-desk",
       "archive": "010-lawful-basis-desk-skill.zip",
-      "sha256": "cbf5234024a812c7b46f524f9f7c9e8c3861e2d0516975e38d75eb84957b2949",
-      "bytes": 34300
+      "sha256": "7c3c911d7cb2e1ac364e46e2795f48d887d3046bce05f6644e708aa6e8ba7fb8",
+      "bytes": 34429
     },
     {
       "order": 11,
       "skill": "privacy-applicability-desk",
       "archive": "011-privacy-applicability-desk-skill.zip",
-      "sha256": "3724b97f0b90a808232c0cc04b657b979051469fea016cc4996aed4f45d68736",
-      "bytes": 34283
+      "sha256": "41d197a09f3243c77022c9f21a7edc1e320be203b45bd153cbf84516b13bffb5",
+      "bytes": 34412
     },
     {
       "order": 12,
       "skill": "privacy-by-design-desk",
       "archive": "012-privacy-by-design-desk-skill.zip",
-      "sha256": "5370d98e8ea9a34f7df3d0873a0ad854fed91582d64d463c54520a0dd05339a3",
-      "bytes": 34063
+      "sha256": "41bd196ef06fbbc99415bcc367e19ae52493d308b95f14d645423797001840ba",
+      "bytes": 34192
     },
     {
       "order": 13,
       "skill": "privacy-program-metrics-desk",
       "archive": "013-privacy-program-metrics-desk-skill.zip",
-      "sha256": "297046b79f069d9a416c4ec22c06da0add174d6eaa978ec74d6eaf8ec37da5c1",
-      "bytes": 33667
+      "sha256": "6196456df108aa942c1f007a673ba46cb6edce7a7f4741b6df9e4a3e9c221509",
+      "bytes": 33796
     },
     {
       "order": 14,
       "skill": "processor-vendor-agreement-desk",
       "archive": "014-processor-vendor-agreement-desk-skill.zip",
-      "sha256": "3b38458cf9c7115bc2d85ef258de348b08a92969c6e3297752d80bdd0184c5e6",
-      "bytes": 34315
+      "sha256": "5d6c3bc953673798ba4d4af333e4917f0e877abedda435cba2a85254bb916be4",
+      "bytes": 34444
     },
     {
       "order": 15,
       "skill": "retention-deletion-desk",
       "archive": "015-retention-deletion-desk-skill.zip",
-      "sha256": "c1c3c967d41578cd2e53566a78cf9fa356b585323f06f7f165a92ef8f2d7916a",
-      "bytes": 34242
+      "sha256": "3d908e8e96d598fa08022a3197a3bc9df6e033bce5081d04526929422f7c2074",
+      "bytes": 34371
     },
     {
       "order": 16,
       "skill": "rights-request-fulfillment-desk",
       "archive": "016-rights-request-fulfillment-desk-skill.zip",
-      "sha256": "81cb7805589bf0d201a0152f1a359cc19a3873bb0ec5ba3846e5cf5d323b571d",
-      "bytes": 34283
+      "sha256": "c06b8ea81af6e8d87b9a0daab8286dd0785ad2ba2a3bd963ae0e4fb45c6e3f51",
+      "bytes": 34412
     },
     {
       "order": 17,
       "skill": "rights-request-intake-desk",
       "archive": "017-rights-request-intake-desk-skill.zip",
-      "sha256": "bde4ddf5bb8a43ce6aecd34afdc6db7c2a26a4ecf65e05701b4bc7f85a3a6b9b",
-      "bytes": 33936
+      "sha256": "0ff90257802d4a95ca3c74cea5580aee4ab49d73eeca8d56492cbefbb46f9926",
+      "bytes": 34065
     },
     {
       "order": 18,
       "skill": "transparency-notice-desk",
       "archive": "018-transparency-notice-desk-skill.zip",
-      "sha256": "dda89a1277f898476688d97476e9173939e3ed167a27ebabf87b66fd4397c1f5",
-      "bytes": 34416
+      "sha256": "8cab8bc10f9861c03eeec25faf93fee9b8dffdbfc9cd148cf946e9139c9637ce",
+      "bytes": 34545
     }
   ]
 }

@@ -9,141 +9,141 @@
       "order": 0,
       "skill": "legal-contracts-command-desk",
       "archive": "000-legal-contracts-command-desk-skill.zip",
-      "sha256": "94dcf7c56dfdb39eec3fdf0cd89b0fe123b978da0069231b12d46fbe8d68052f",
-      "bytes": 34393
+      "sha256": "9910246531640c6bb66f3fd68457ea0015e8979fdd759dceb1eb86944533b840",
+      "bytes": 34522
     },
     {
       "order": 1,
       "skill": "approval-escalation-desk",
       "archive": "001-approval-escalation-desk-skill.zip",
-      "sha256": "cbd6420460770dbc6bf20a5a23722a6e4031d55329745972ab48dc0c1328da6f",
-      "bytes": 29675
+      "sha256": "1b46cf2dfa92254b1db19caccac1c6d9232a9492563819d89c9c46b236d31eea",
+      "bytes": 29804
     },
     {
       "order": 2,
       "skill": "clause-playbook-desk",
       "archive": "002-clause-playbook-desk-skill.zip",
-      "sha256": "9df76e9776dc278fc431731af0390a68901e835f74158c6a9ce2fc3b879e071e",
-      "bytes": 28085
+      "sha256": "1f0fcf31bcc27e235fc08304dc09228058f6b335dd6eed23b25953bd8acc22fd",
+      "bytes": 28214
     },
     {
       "order": 3,
       "skill": "commercial-terms-desk",
       "archive": "003-commercial-terms-desk-skill.zip",
-      "sha256": "f92533cebd01a83b73ef01ebce4a47f0dbcb1d8a19b42972ac461daf78b8d97f",
-      "bytes": 28622
+      "sha256": "b745bf82f7ae857e2208ac46e329dd0795c3ef261a1625e7bd0edaf7fabf3392",
+      "bytes": 28751
     },
     {
       "order": 4,
       "skill": "contract-drafting-desk",
       "archive": "004-contract-drafting-desk-skill.zip",
-      "sha256": "e87bab6edba4f090fbedf85372998cf667cfbd02a23cef6f82472df3eaff3f45",
-      "bytes": 28439
+      "sha256": "6fb65aa3df62ffce30788a7fec04f74f60f290d03f28b9d479db953626f675b9",
+      "bytes": 28568
     },
     {
       "order": 5,
       "skill": "contract-intake-triage-desk",
       "archive": "005-contract-intake-triage-desk-skill.zip",
-      "sha256": "f682cd6d7c211a6edc8dea2a39d2b837d80351628b8efe4294c9b6de6524b951",
-      "bytes": 28149
+      "sha256": "9a4d5027185ae0e71338678a9f6074ee2f1d05c1311b8b22a0b2f7b247a5caaf",
+      "bytes": 28278
     },
     {
       "order": 6,
       "skill": "contract-repository-desk",
       "archive": "006-contract-repository-desk-skill.zip",
-      "sha256": "87922a75fdce61da48f32abb7aee3d1cb86bb946af8e2c23147e8b4081ed63bd",
-      "bytes": 29651
+      "sha256": "d0210a03230224f8869d5e48d719c6d76778afc89afd6f03a00d972be86cb0b1",
+      "bytes": 29780
     },
     {
       "order": 7,
       "skill": "counterparty-diligence-desk",
       "archive": "007-counterparty-diligence-desk-skill.zip",
-      "sha256": "7d8acc72a26b6d04db1ff92811b65d1765ff0f9dbf91c6035392e2356cb9b2ed",
-      "bytes": 28568
+      "sha256": "07f151c6fb64baf200ee9debbf24a916ae63ef00386abdb919a741e280d19141",
+      "bytes": 28697
     },
     {
       "order": 8,
       "skill": "data-protection-terms-desk",
       "archive": "008-data-protection-terms-desk-skill.zip",
-      "sha256": "f012cfa83f6df455d86e42676a8ed84f86973717a3249346d91d885c29c5a572",
-      "bytes": 28755
+      "sha256": "b783087ac32a99f95f408145f399e1eff2c0f8d42ed7b975d274799a67f0262c",
+      "bytes": 28884
     },
     {
       "order": 9,
       "skill": "dispute-claims-desk",
       "archive": "009-dispute-claims-desk-skill.zip",
-      "sha256": "69f059d4e27b824794f7c0b002f561b2ac9f9af2472712056b957304808b03b5",
-      "bytes": 30122
+      "sha256": "e421c53d3dbaaf59a196c592e6f53e6e5216a24a82f6e8fa426ef04a0c31ff79",
+      "bytes": 30251
     },
     {
       "order": 10,
       "skill": "ip-licensing-desk",
       "archive": "010-ip-licensing-desk-skill.zip",
-      "sha256": "991dd4b840169a03b798a198eb2a159bf8e56e79c473051e1eee0bdcc7b104af",
-      "bytes": 28858
+      "sha256": "ade578742523b444f6d08475184617c08314d14423d49f56ad34514debf648af",
+      "bytes": 28987
     },
     {
       "order": 11,
       "skill": "nda-confidentiality-desk",
       "archive": "011-nda-confidentiality-desk-skill.zip",
-      "sha256": "e2d0d2fa207625b6cc26884e7acfa469e6678833a6903e99e28215b12993261d",
-      "bytes": 28543
+      "sha256": "ebf329b5a1238b74edb276df48cca12f3a429db529097904aba20f2259d06d2a",
+      "bytes": 28672
     },
     {
       "order": 12,
       "skill": "obligation-extraction-desk",
       "archive": "012-obligation-extraction-desk-skill.zip",
-      "sha256": "009f7ab6f65a37e70522086ca1da2045c95f4641fa2616afdaa7988f8ccc0b4e",
-      "bytes": 30082
+      "sha256": "2a802804ed68c08fdc276cc0296eb1d6bb14460ddbc8520ee2375d512f86700d",
+      "bytes": 30211
     },
     {
       "order": 13,
       "skill": "open-source-license-desk",
       "archive": "013-open-source-license-desk-skill.zip",
-      "sha256": "c9411909ffddbee8b2cdf6247bb7356d9183686b93ffabeee2cede6ab9f2b404",
-      "bytes": 29685
+      "sha256": "2d65855f25e25f3d10685da336f0e97d5479403b44f53d59d4225b78e32535f5",
+      "bytes": 29814
     },
     {
       "order": 14,
       "skill": "redline-negotiation-desk",
       "archive": "014-redline-negotiation-desk-skill.zip",
-      "sha256": "3fd39f732cec69156b26cbafa5fb5fb076ccb96ba17d8e7924a72be199d8523f",
-      "bytes": 29953
+      "sha256": "0e73e7c2e338930af4bbb9e845ab8a491c47b8f774a677fd1bb5a7110a325744",
+      "bytes": 30082
     },
     {
       "order": 15,
       "skill": "regulatory-flowdown-desk",
       "archive": "015-regulatory-flowdown-desk-skill.zip",
-      "sha256": "28f429d85e5090d266dc9281b30a41ceba07323f76ec1db9a31993af6504b37a",
-      "bytes": 29902
+      "sha256": "783ddca91886c4abb6396ac5fe96b8dfbb35104bab7b31f09766bc979d5fd283",
+      "bytes": 30031
     },
     {
       "order": 16,
       "skill": "renewal-termination-desk",
       "archive": "016-renewal-termination-desk-skill.zip",
-      "sha256": "d37b0eed247a085ed59256bd536464fa0ca7df4ab7e9cc2712dffa987a70587f",
-      "bytes": 30103
+      "sha256": "693e3160b33c819bca47ffea6bb5745e16f7722bb14b98959514a059bfbc83d4",
+      "bytes": 30232
     },
     {
       "order": 17,
       "skill": "risk-allocation-desk",
       "archive": "017-risk-allocation-desk-skill.zip",
-      "sha256": "a36e082d3496f10ccf73f3a668e6da070e3ce8abf6fbf094d4345d2d2b06adc1",
-      "bytes": 28853
+      "sha256": "1f1be9fd0da2e35e69a40837f71418700c9c1d28a18fb8b859fe893962342d1b",
+      "bytes": 28982
     },
     {
       "order": 18,
       "skill": "security-exhibit-desk",
       "archive": "018-security-exhibit-desk-skill.zip",
-      "sha256": "2dbcf21cfba73a5c5e3c377c440553aa3d51a8003c55b45c730453090c573c69",
-      "bytes": 28675
+      "sha256": "6b0c14e65bc5e2fea86d5ad634d450a4f8cc5850d80ff9d628d439268a6aebfe",
+      "bytes": 28804
     },
     {
       "order": 19,
       "skill": "signature-execution-desk",
       "archive": "019-signature-execution-desk-skill.zip",
-      "sha256": "f92de5e4784c9031f740a347783540d3e504f3536e5491e1cac82c2c1ae6e795",
-      "bytes": 29971
+      "sha256": "e64135624eae7a61384a2c6fa08e1feca082f69b726bc70f29d265219a1851c7",
+      "bytes": 30100
     }
   ]
 }

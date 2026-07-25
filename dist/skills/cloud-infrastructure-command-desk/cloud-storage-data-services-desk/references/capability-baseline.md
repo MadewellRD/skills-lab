@@ -8,7 +8,9 @@ This file tells a desk what it may assume about the model executing it. It exist
 
 Every skill in this repository is authored and upgraded using the most capable frontier model available at the time, run at its highest reasoning effort. This applies to new suites, to the per-release capability upgrade, and to any substantive edit to a desk body, a kernel reference, or this profile.
 
-Most recent authoring pass: **claude-opus-5**, v1.1.0, 2026-07-25.
+Most recent authoring pass: **claude-opus-5**, max effort, v1.1.0, 2026-07-25.
+
+Scheduled next passes: fable-5 (max), chatgpt-sol-5.6 (ultra), 2026-07-28. Authoring across more than one vendor's frontier model tests whether this corpus encodes a single vendor's house style in its structure, which token substitution alone cannot reveal.
 
 This is the build bench, not a runtime requirement. The capabilities below are what the *executing* model may assume, and they are a floor held across vendors rather than any single vendor ceiling.
 

@@ -30,11 +30,14 @@ model vendor; per-vendor builds are generated from the same source under
 ## Authoring standard
 
 Authored using the most capable frontier model available at the time, run at its
-highest reasoning effort, per `authoring_standard` in
+highest reasoning effort, recorded per release in `authoring_standard` in
 `profiles/frontier-2026-07.yaml`. Authoring happens once per release and execution
 happens on every invocation, so the effort asymmetry is decisive: prose written at
 a reduced tier looks correct and leaves the ambiguity in place, which is the defect
 this repository exists to remove.
+
+Effort is attested by the maintainer rather than self-reported by the authoring
+run, because a session reporting its own effort tier is not evidence of it.
 
 ## Governance
 
