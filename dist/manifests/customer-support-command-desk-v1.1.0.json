@@ -9,134 +9,134 @@
       "order": 0,
       "skill": "customer-support-command-desk",
       "archive": "000-customer-support-command-desk-skill.zip",
-      "sha256": "39aae43e46fb91f484672893f6abace7a512d4de6ff8a88b1903e2de0b574257",
-      "bytes": 40465
+      "sha256": "a81c4fd5703b4c4680bfa98160cd0314763c91ba14cf68ff3ca5bede80b6ebc3",
+      "bytes": 40720
     },
     {
       "order": 1,
       "skill": "contact-driver-analysis-desk",
       "archive": "001-contact-driver-analysis-desk-skill.zip",
-      "sha256": "7d103dbcc68165cb337b1416cea67226f9f5e6c3fbe5c9b75b7f2f4439894f4c",
-      "bytes": 34551
+      "sha256": "adf8a33ef79b3cebbc390a5dd1c1436863b8941c7dbae49d94653d99bd8ff55e",
+      "bytes": 34806
     },
     {
       "order": 2,
       "skill": "diagnostic-troubleshooting-desk",
       "archive": "002-diagnostic-troubleshooting-desk-skill.zip",
-      "sha256": "f525c3759b71cc7e99245b3771a10f9b2a3f979d9ea323866b97ff55c3e03e97",
-      "bytes": 34082
+      "sha256": "0ecda5dbacd31b480427b620f93f4fc7edfc8de350779fb1f1356d261e08bb35",
+      "bytes": 34337
     },
     {
       "order": 3,
       "skill": "engineering-escalation-desk",
       "archive": "003-engineering-escalation-desk-skill.zip",
-      "sha256": "57306655ba7c35b1a0352e54ce5e5cab16420163b6f0bca9fbc4ccea83aeda48",
-      "bytes": 34062
+      "sha256": "6e0a0c03dad65ab42a22510a75872709ebf342b19d5a522fd2c0554ed5e011ec",
+      "bytes": 34317
     },
     {
       "order": 4,
       "skill": "incident-communications-desk",
       "archive": "004-incident-communications-desk-skill.zip",
-      "sha256": "b84b542b546d86f8f137fffffdb4739f180006b1b9e32088d4f61b3dfd09f5cc",
-      "bytes": 34412
+      "sha256": "4c7482894ada664b8320bafb59256b518c6c455bbd2e842e65cf10939f88333c",
+      "bytes": 34667
     },
     {
       "order": 5,
       "skill": "intake-entitlement-desk",
       "archive": "005-intake-entitlement-desk-skill.zip",
-      "sha256": "8ef4fbde02a8e750374ae7c26dbeb20c3175077e4993fe7ab10f424b4131cbe7",
-      "bytes": 33864
+      "sha256": "6ec6a880112f92e76b51de8520f88a7264145415d715f81825df5c22d3a671e4",
+      "bytes": 34119
     },
     {
       "order": 6,
       "skill": "knowledge-base-desk",
       "archive": "006-knowledge-base-desk-skill.zip",
-      "sha256": "50a2309c7f20b17fd416ec69c334b50e9d7103449df2ab30f49ffac8ffd64b7f",
-      "bytes": 34247
+      "sha256": "0fe44bc4df14d444de2e9867453a5b48da3cfd173212c5875796ca945070f706",
+      "bytes": 34502
     },
     {
       "order": 7,
       "skill": "macro-response-quality-desk",
       "archive": "007-macro-response-quality-desk-skill.zip",
-      "sha256": "933362dd7525662f46bf5c7c54c520d40d8bd66f39f8f0da006137dde79692e9",
-      "bytes": 34009
+      "sha256": "3644cb945fb639f83f315ce52d44cf5ab3f4aa60cc38ca0d08cfc98ab12f1f56",
+      "bytes": 34264
     },
     {
       "order": 8,
       "skill": "post-incident-followup-desk",
       "archive": "008-post-incident-followup-desk-skill.zip",
-      "sha256": "3247fd89e14de6f3b6e080f6fea18e63dab57538c949c279fc96a93bd89dff0b",
-      "bytes": 34267
+      "sha256": "f27a9429802c32508858d33297dcba8859823705ed42267d3905761b3e75dc61",
+      "bytes": 34522
     },
     {
       "order": 9,
       "skill": "quality-assurance-review-desk",
       "archive": "009-quality-assurance-review-desk-skill.zip",
-      "sha256": "11874ec876290e75b5a68d20d1b5c97af3a0cfc2df34528377b718fce6514507",
-      "bytes": 34557
+      "sha256": "1cf60fbd6198f4c4dcef36071369dd03e9c91ff60c797080e330254bd5990250",
+      "bytes": 34812
     },
     {
       "order": 10,
       "skill": "queue-backlog-health-desk",
       "archive": "010-queue-backlog-health-desk-skill.zip",
-      "sha256": "a4fdb2e088ede0f38c3796718500322ca8ac442e80f1364f7b134edf4010cc7b",
-      "bytes": 34318
+      "sha256": "28770a4dbb2a76c201dee67b7ec66a3d4c578f00c78082af6d9fabaf30520c1f",
+      "bytes": 34573
     },
     {
       "order": 11,
       "skill": "reproduction-bug-intake-desk",
       "archive": "011-reproduction-bug-intake-desk-skill.zip",
-      "sha256": "24953353034d8e9701a232e3a405720b67703a74e5de8e8a3f8dd068555d6e8b",
-      "bytes": 34344
+      "sha256": "2b2a376ea3a21e3d540ebaf0a4e7682b4644423ed07422d8bff668d0f6db8f8d",
+      "bytes": 34599
     },
     {
       "order": 12,
       "skill": "resolution-closure-desk",
       "archive": "012-resolution-closure-desk-skill.zip",
-      "sha256": "b8b7333ae4841bafda1f86937e9de5d29e5d21d57632e20fefa3b689db69b47c",
-      "bytes": 34006
+      "sha256": "4bb8a33229bc15fb57ec6b45c59c260a69881595b32a71ef889e1f9500c4c528",
+      "bytes": 34261
     },
     {
       "order": 13,
       "skill": "self-service-deflection-desk",
       "archive": "013-self-service-deflection-desk-skill.zip",
-      "sha256": "1a480e641bb9221eeb8178fd833ae13037d5a49d6f769f0c67fd4cd97aea64dc",
-      "bytes": 34531
+      "sha256": "bea6d1bb738d5559a3dc97a18d50dc7562c1c413ab33643914e2e87ae9f16e66",
+      "bytes": 34786
     },
     {
       "order": 14,
       "skill": "severity-sla-desk",
       "archive": "014-severity-sla-desk-skill.zip",
-      "sha256": "7cd9696809abe5570aa1d484d9252007de0d7bc2b57cf05ed6405c1cd11fb263",
-      "bytes": 33863
+      "sha256": "1bbca0280147d5ec6aa7d33af80ddd0e1bd0246440046030e5846c578e499c8c",
+      "bytes": 34118
     },
     {
       "order": 15,
       "skill": "support-metrics-reporting-desk",
       "archive": "015-support-metrics-reporting-desk-skill.zip",
-      "sha256": "665cd8b1f08ccf2ae6568dc49f072cd785c1f68b212e6f447baf7f8f1e36ac59",
-      "bytes": 34704
+      "sha256": "6513c676f84c16bf585c470b6645659f1e55fc12163f002244a041c39eedf366",
+      "bytes": 34959
     },
     {
       "order": 16,
       "skill": "support-tooling-automation-desk",
       "archive": "016-support-tooling-automation-desk-skill.zip",
-      "sha256": "fbe9fd2680fd85f132bf10cfd0d69fb1c737da22fc2088da21449336d2acb33b",
-      "bytes": 34933
+      "sha256": "a33b54183f0e79b442ff2d7e9a07b09397fc2d3dff686eb1fc3f0a0a262f5897",
+      "bytes": 35188
     },
     {
       "order": 17,
       "skill": "ticket-triage-desk",
       "archive": "017-ticket-triage-desk-skill.zip",
-      "sha256": "5dc35eff0b623640063428c401033d75786b9906122f0a3fce86875947e77b08",
-      "bytes": 33732
+      "sha256": "18cad7b9a2a0336d1119d0cc75333c5ce723663fda22acf86229cd7ccbb49ad5",
+      "bytes": 33987
     },
     {
       "order": 18,
       "skill": "workforce-coverage-desk",
       "archive": "018-workforce-coverage-desk-skill.zip",
-      "sha256": "ba80d70a108803216833cca466b67020f111511c4f6856debc198e7671b48558",
-      "bytes": 34661
+      "sha256": "b32fa18dcf2ffa6f0e5c7b4f2f4f32b646580f7af0cf9e94658123ca63b6075c",
+      "bytes": 34916
     }
   ]
 }

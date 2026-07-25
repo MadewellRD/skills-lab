@@ -9,141 +9,141 @@
       "order": 0,
       "skill": "finops-command-desk",
       "archive": "000-finops-command-desk-skill.zip",
-      "sha256": "338a8494125e96fe8545529d493cdfbe42d09f168cf6d1d1670dce979418134a",
-      "bytes": 38934
+      "sha256": "1669a9fb8ef364705d419fc7794681d228723638adebdc5ad29a2e1f6bc5749e",
+      "bytes": 39189
     },
     {
       "order": 1,
       "skill": "anomaly-detection-desk",
       "archive": "001-anomaly-detection-desk-skill.zip",
-      "sha256": "927dde909e8d9dde4560fa0f3c14512a367e751d4dbc63848ccbe4cba9c1e11b",
-      "bytes": 32351
+      "sha256": "78857cfa968c706e8b695b86306f4202f24f80ab504ca9f8e71650655518be31",
+      "bytes": 32606
     },
     {
       "order": 2,
       "skill": "budget-planning-desk",
       "archive": "002-budget-planning-desk-skill.zip",
-      "sha256": "90835f44e18e667ca1c44e117575d6d5ad0fb03635d5103d5f8eac592d258585",
-      "bytes": 31938
+      "sha256": "0712d3f6563c9a7c1e6d42d00265352a6937f405ca65553a9098a8ef16890ac7",
+      "bytes": 32193
     },
     {
       "order": 3,
       "skill": "chargeback-invoicing-desk",
       "archive": "003-chargeback-invoicing-desk-skill.zip",
-      "sha256": "287dc355332018e960ad6055f3473c03aa368047201e7c8054eebddcc0392753",
-      "bytes": 33255
+      "sha256": "0db268c84c67ec3ecff12736cc2c5524ed15b926fdecc7f6c52a5b0b01386886",
+      "bytes": 33510
     },
     {
       "order": 4,
       "skill": "cloud-commercial-negotiation-desk",
       "archive": "004-cloud-commercial-negotiation-desk-skill.zip",
-      "sha256": "8bb6b6d63b12bf545dc9d887ec8a856d8ad3a35dab83a546fd7c50f2219464b2",
-      "bytes": 33912
+      "sha256": "5a0485f6095f878f905e651737c10cc06e279bf3ccc51a5d0e33016258889a06",
+      "bytes": 34167
     },
     {
       "order": 5,
       "skill": "commitment-portfolio-desk",
       "archive": "005-commitment-portfolio-desk-skill.zip",
-      "sha256": "09e2f6ab46c8cc5f2bc8a8303e123cd19f7c6e344e235cc2e6524072f87e7ae6",
-      "bytes": 33814
+      "sha256": "3af57150c86af9d58c0ee01bb48515cd670dfbe7b48e4bdb3a3e9b6c61972b2e",
+      "bytes": 34069
     },
     {
       "order": 6,
       "skill": "cost-allocation-tagging-desk",
       "archive": "006-cost-allocation-tagging-desk-skill.zip",
-      "sha256": "9d0759a30dd2d479f9b33055692fcedf7f8fc69f5262c3f95eb6f0a87b13ae5d",
-      "bytes": 32079
+      "sha256": "4e57a2c26f504e6e2f52e6606c7dca1f4c99aeacc0a302381f159291716c01c4",
+      "bytes": 32334
     },
     {
       "order": 7,
       "skill": "cost-aware-architecture-desk",
       "archive": "007-cost-aware-architecture-desk-skill.zip",
-      "sha256": "09585ce56162d521876cd6accb8c4e10da37cdab4cf3377c5c6468b5b1048a1f",
-      "bytes": 34064
+      "sha256": "c199dc21e1ccec020a919f3dc76949aead0df8d5eba744cd14ad7e81bb2a1078",
+      "bytes": 34319
     },
     {
       "order": 8,
       "skill": "cost-data-ingestion-desk",
       "archive": "008-cost-data-ingestion-desk-skill.zip",
-      "sha256": "ee9919fe41794d613f41d82279fd3a5b02994ec2503a757d5c716eb09ea62b83",
-      "bytes": 32148
+      "sha256": "dea3527d2a4e3a5036018386a7c14f6e810f7fbb380b695dbeeedefb967bb33e",
+      "bytes": 32403
     },
     {
       "order": 9,
       "skill": "engineering-cost-review-desk",
       "archive": "009-engineering-cost-review-desk-skill.zip",
-      "sha256": "ce13edaeab5e41d8ac9e2c1af7229ec6afdb9eab0f9301efe1bbe48c7ec3c89f",
-      "bytes": 33727
+      "sha256": "d7bea49ea78a04e987b306d027f0d9015956c660b10c567f90d6357259053d00",
+      "bytes": 33982
     },
     {
       "order": 10,
       "skill": "finops-maturity-desk",
       "archive": "010-finops-maturity-desk-skill.zip",
-      "sha256": "3a6606055ecc27e2a78bddf33f52797251c779d3833c72c6c1b8c056f3e394c6",
-      "bytes": 33447
+      "sha256": "55835a197fe317c556453182f896d4dc4aac618f87812560ab6b006dc8d801f1",
+      "bytes": 33702
     },
     {
       "order": 11,
       "skill": "forecasting-variance-desk",
       "archive": "011-forecasting-variance-desk-skill.zip",
-      "sha256": "0d17a6ebec5237717d6e0c6bd4ff4d717c5c35d7e46f81715963867f95ab6996",
-      "bytes": 32236
+      "sha256": "518ca9b2f67b8f2140d60a4338080df418e2cf62b41d679adf0b7144b04f1106",
+      "bytes": 32491
     },
     {
       "order": 12,
       "skill": "licensing-saas-spend-desk",
       "archive": "012-licensing-saas-spend-desk-skill.zip",
-      "sha256": "597eb646e6f9ba06ee76bbed0e02d680b004d2af9cb9c3c3c87947bbfbe51ab2",
-      "bytes": 33867
+      "sha256": "678f0d130d71ee162c38598ebd29a4c4e02ba29e807f7d1aebdeb63ab9b2aeae",
+      "bytes": 34122
     },
     {
       "order": 13,
       "skill": "optimization-backlog-desk",
       "archive": "013-optimization-backlog-desk-skill.zip",
-      "sha256": "de4772555ad7bc4a26d300c145cd9da857b90e1cc96be7af1abc0157f038bf42",
-      "bytes": 33828
+      "sha256": "91c1fef61dde187a5b72e5ca1a4f431fae7692b72189107b9b77ee7915aa2870",
+      "bytes": 34083
     },
     {
       "order": 14,
       "skill": "rightsizing-desk",
       "archive": "014-rightsizing-desk-skill.zip",
-      "sha256": "2e475f3c19c3a6699748e55351db7cae92d07937e8c54012f4c1e3c0181a07dd",
-      "bytes": 32731
+      "sha256": "23cce1a40d56a5fbad1845b97933731cdc4ff0bf9d88d1423e9c388f63ab1478",
+      "bytes": 32986
     },
     {
       "order": 15,
       "skill": "shared-cost-allocation-desk",
       "archive": "015-shared-cost-allocation-desk-skill.zip",
-      "sha256": "4e8e1f382885defd22b1f20c086fbd3ce96e469e19c51f9deec64280d6b0877e",
-      "bytes": 32207
+      "sha256": "853bb0790d832b1155f51593cc06cd74b18f0ac3b5e514fd0a861d9a41f0f8e4",
+      "bytes": 32462
     },
     {
       "order": 16,
       "skill": "showback-reporting-desk",
       "archive": "016-showback-reporting-desk-skill.zip",
-      "sha256": "be31443357b541c2549021f4ddd21281e72b40b0640f64c9de4d786c38481e58",
-      "bytes": 31776
+      "sha256": "e2fce0819a9d9876b2a3c74681f064818fe195324d859353c0f97b4b22da9d7b",
+      "bytes": 32031
     },
     {
       "order": 17,
       "skill": "software-cogs-margin-desk",
       "archive": "017-software-cogs-margin-desk-skill.zip",
-      "sha256": "2c03dfe26d601346be46d35dadf8023cbc7e03d987685c6685776a9081649fd6",
-      "bytes": 32043
+      "sha256": "ec7f2fcbd8cb78e9f67b23a94b1dfe3a110b8324f36767713b13be3b54979620",
+      "bytes": 32298
     },
     {
       "order": 18,
       "skill": "unit-economics-desk",
       "archive": "018-unit-economics-desk-skill.zip",
-      "sha256": "c39f3583d14e4552bdb63915cebcfaaa4e3fd803ea69a3a06e146c60dbac56db",
-      "bytes": 31650
+      "sha256": "e079548214cd71eb7c7d9cf7a9be6814a8e8d609964d6c6603845dd027d270da",
+      "bytes": 31905
     },
     {
       "order": 19,
       "skill": "waste-elimination-desk",
       "archive": "019-waste-elimination-desk-skill.zip",
-      "sha256": "cda3553c6ed209b1c809ae442dc3a4ecfb1517bc808db2ba49e81f2cf7244ed9",
-      "bytes": 33751
+      "sha256": "ad0b8039972866c2a2a4b848b966fc06f905c96e50d04a6eeca61fd2d5fd5e2f",
+      "bytes": 34006
     }
   ]
 }

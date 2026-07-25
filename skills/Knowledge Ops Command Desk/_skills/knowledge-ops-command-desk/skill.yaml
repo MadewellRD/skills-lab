@@ -1,0 +1,16 @@
+interface:
+  display_name: Knowledge Ops Command Desk
+  short_description: Knowledge workflow orchestrator for taxonomy, content audits,
+    findability, expert capture, runbook accuracy, consolidation, freshness, access
+    scope, search and retrieval quality, localization, governance, and retirement.
+  default_prompt: Ask this suite for a knowledge outcome on a named corpus, question,
+    or audience, such as auditing a wiki against what people actually search for,
+    consolidating four pages that contradict each other into one canonical answer,
+    verifying a runbook against the system it operates, curating a corpus before it is
+    admitted to retrieval, or retiring stale content without breaking the links into it.
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true

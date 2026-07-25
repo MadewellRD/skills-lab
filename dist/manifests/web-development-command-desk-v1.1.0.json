@@ -9,99 +9,99 @@
       "order": 0,
       "skill": "web-development-command-desk",
       "archive": "000-web-development-command-desk-skill.zip",
-      "sha256": "8bca41de4c16452d00f33df72d98387198675a79230a34035532b95c94b1bc88",
-      "bytes": 9684
+      "sha256": "8659555421aa145df3d0385895ea376ebf8288eafedba1f3140646fbb238e5df",
+      "bytes": 9939
     },
     {
       "order": 1,
       "skill": "accessibility-seo-desk",
       "archive": "001-accessibility-seo-desk-skill.zip",
-      "sha256": "fd4b26d317b02ff5cfe7e44b03973e00c36e375dd0e326f7b43b7347a0ac93ac",
-      "bytes": 6845
+      "sha256": "5d06713561a6e93bf46df2b23eef5e6bda4a92ff280be7abd7648a6a0d9cd57c",
+      "bytes": 7100
     },
     {
       "order": 2,
       "skill": "backend-integration-desk",
       "archive": "002-backend-integration-desk-skill.zip",
-      "sha256": "b4eb455ffbe7dc93676144fa52bcd1622c8ca0afcd37b76f71de89724204bec6",
-      "bytes": 6613
+      "sha256": "b148e3ae820d094e894334ce43e988dfc9f4099f88d2c73ef9a008069211c95c",
+      "bytes": 6868
     },
     {
       "order": 3,
       "skill": "cms-content-operations-desk",
       "archive": "003-cms-content-operations-desk-skill.zip",
-      "sha256": "eb9a880d44c3561b42b3769ccf496e7edad3030d973bcffc2d88d384fa7451a0",
-      "bytes": 6575
+      "sha256": "d0cd587438a0323a5df0ab3b108cea7b3372f7178f6d33a4e588316964eb6186",
+      "bytes": 6830
     },
     {
       "order": 4,
       "skill": "frontend-engineering-desk",
       "archive": "004-frontend-engineering-desk-skill.zip",
-      "sha256": "741bb215b9a5300d65194ea5ee99115633b8852043ea1652fabc0e2e51ff95ce",
-      "bytes": 6666
+      "sha256": "2bc8c0d26d1481958a0ee3c83594b1e94511814c3812f784499d76a2606ce667",
+      "bytes": 6921
     },
     {
       "order": 5,
       "skill": "information-architecture-desk",
       "archive": "005-information-architecture-desk-skill.zip",
-      "sha256": "4082726cdeb999b2add94d1fbd52c67c72aaaa481324f2b712fd074b33b702cd",
-      "bytes": 6638
+      "sha256": "c1bd1004957bcfd3d1806610b03a2635083c84124eea8d7bb3e96646407717ea",
+      "bytes": 6893
     },
     {
       "order": 6,
       "skill": "site-product-requirements-desk",
       "archive": "006-site-product-requirements-desk-skill.zip",
-      "sha256": "de185f0296884be4c336959b548526f5bde08a64673b7017c36bfc168eff6645",
-      "bytes": 6670
+      "sha256": "7d270b0dfd25134fb396220d64a081e3c8f7f4193058b25e2bf073f398af0120",
+      "bytes": 6925
     },
     {
       "order": 7,
       "skill": "ux-ui-design-system-desk",
       "archive": "007-ux-ui-design-system-desk-skill.zip",
-      "sha256": "0185a343504afbea3fd63d499a4fc3b9c35c35cf196202075acd42c14601aff5",
-      "bytes": 6507
+      "sha256": "819c38b3fa49333b0450e9ade55090b755dceec2e9748011a52edb32b736a0b2",
+      "bytes": 6762
     },
     {
       "order": 8,
       "skill": "web-maintenance-growth-desk",
       "archive": "008-web-maintenance-growth-desk-skill.zip",
-      "sha256": "3be03c6d83c6e09ba91d7af98c04c6c63b96dd0aa424dcd4523e9ce770efa24c",
-      "bytes": 6737
+      "sha256": "4955a421db4fec4086e5d63df239e08e5cecb43baab0c1356edad2c59b39efec",
+      "bytes": 6992
     },
     {
       "order": 9,
       "skill": "web-observability-desk",
       "archive": "009-web-observability-desk-skill.zip",
-      "sha256": "ecafb9b4dbcc74c8c785163d98a9934b6d6b315d134f2c8c1b25ce9f4a5a617b",
-      "bytes": 6513
+      "sha256": "6a74e969e88ed1cf7cd570bef44239fb414099ca9dfd280c9b31f40f728cd61f",
+      "bytes": 6768
     },
     {
       "order": 10,
       "skill": "web-performance-desk",
       "archive": "010-web-performance-desk-skill.zip",
-      "sha256": "9cc4b1c7c694a91bb2b4a7fe44d38d82d34d78b6773174dccc27404698e3b54d",
-      "bytes": 6523
+      "sha256": "dc48357e7cdd427eb833ac141645a27294174c146ef95db96f66ab17b0d8fd86",
+      "bytes": 6778
     },
     {
       "order": 11,
       "skill": "web-release-deployment-desk",
       "archive": "011-web-release-deployment-desk-skill.zip",
-      "sha256": "834afc57fb04e4dab00469da745a14846d6e8a208054b7526d8f8391b26fe5d2",
-      "bytes": 6783
+      "sha256": "dd2734aa0809fae2adbed06ba769ff492cf26345c9bbfa194c86074e52ca3c57",
+      "bytes": 7038
     },
     {
       "order": 12,
       "skill": "web-security-secops-desk",
       "archive": "012-web-security-secops-desk-skill.zip",
-      "sha256": "61ddaa8c30079851c98b3cd811c331fc0bdd3e9857ad0c55428847455056d80e",
-      "bytes": 6696
+      "sha256": "d39c49f97eb1c4cc4af851f01d989e5ca4536712629202ae19a7b4d34dcb01d1",
+      "bytes": 6951
     },
     {
       "order": 13,
       "skill": "web-testing-qa-desk",
       "archive": "013-web-testing-qa-desk-skill.zip",
-      "sha256": "1c5b194e94c25820bd939cb1236bd675d1a6eb809211832d576ac151077dd264",
-      "bytes": 6473
+      "sha256": "b7fc7c20578cded927f38bb5a1e4c909c5323d6ec82bb9e4bdc63e00ca05b0f0",
+      "bytes": 6728
     }
   ]
 }

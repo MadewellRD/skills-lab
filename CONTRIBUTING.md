@@ -92,6 +92,20 @@ By contributing to this repository, you agree that your contribution is submitte
    fails on vendor leakage, unresolved tokens, broken citations, capability debt,
    duplication, and em dashes.
 
+## Authoring standard
+
+Skills are authored and upgraded with the most capable frontier model available, run at
+its highest reasoning effort. See `authoring_standard` in
+`profiles/frontier-2026-07.yaml`. Do not submit desk bodies drafted at a reduced tier
+intending to raise quality later: the structural defects a weaker pass introduces survive
+editing, because they read as finished.
+
+Two things this rules out specifically. Do not template one suite from another; paragraph
+reuse across suites is measured and gated, not a matter of taste. Do not hand-write a
+generic desk to fill a roster slot; a desk that does not use the real vocabulary, real
+artifacts, and real failure modes of its profession is worse than an absent desk, because
+it looks like coverage.
+
 Model capability assumptions belong in `profiles/`, never in a skill body. If you
 find yourself writing "the model may not be able to", that is a profile change.
 See `docs/model-upgrade-playbook.md`.

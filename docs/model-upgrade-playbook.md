@@ -89,6 +89,18 @@ as menus ("produce one of these"). Long-horizon capability makes the full set ac
 a single run - but raising the set never licenses inventing the contents of one. See
 `output_ambition.guard` in the profile.
 
+## Author at the ceiling
+
+Run the upgrade with the most capable frontier model available, at its highest reasoning
+effort, and record which model in `authoring_standard.record`. This is policy, in
+`profiles/frontier-2026-07.yaml`, not a preference.
+
+The asymmetry decides it. An upgrade pass runs once; the skills it produces are read on
+every invocation until the next pass. A cheaper authoring run does not produce visibly
+worse prose, which is exactly the problem: it produces prose that reads as finished and
+leaves the ambiguity in place. That is the defect the corpus exists to remove, reintroduced
+at the source.
+
 ## The line that matters most
 
 **Capability scaffolding is removable. Governance is not.**

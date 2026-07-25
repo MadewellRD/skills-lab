@@ -110,6 +110,18 @@ def render_capability_baseline(prof):
     L.append('This file tells a desk what it may assume about the model executing it. It '
              'exists so capability assumptions live in exactly one place instead of being '
              're-litigated inside every skill body.\n')
+    a = prof.get('authoring_standard') or {}
+    if a:
+        L.append('## How this skill was authored\n')
+        L.append(' '.join(str(a.get('policy', '')).split()) + '\n')
+        rec = a.get('record') or []
+        if rec:
+            last = rec[-1]
+            L.append(f"Most recent authoring pass: **{last.get('model')}**, "
+                     f"{last.get('version')}, {last.get('date')}.\n")
+        L.append('This is the build bench, not a runtime requirement. The capabilities '
+                 'below are what the *executing* model may assume, and they are a floor '
+                 'held across vendors rather than any single vendor ceiling.\n')
     L.append('## What you may assume\n')
     L.append('| Capability | Value | What it unlocks |')
     L.append('|---|---|---|')

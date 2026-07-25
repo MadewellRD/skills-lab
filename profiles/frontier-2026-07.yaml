@@ -29,6 +29,47 @@ reference_models:
   - {vendor: moonshot,  model: kimi-k3,              role: floor_check}
 
 # ---------------------------------------------------------------------------
+# AUTHORING STANDARD, how this corpus is written, as distinct from what it assumes
+# about the model that later executes it. Capability describes the runtime floor;
+# this describes the build bench.
+# ---------------------------------------------------------------------------
+authoring_standard:
+  policy: >
+    Every skill in this repository is authored and upgraded using the most capable
+    frontier model available at the time, run at its highest reasoning effort. This
+    applies to new suites, to the per-release capability upgrade, and to any
+    substantive edit to a desk body, a kernel reference, or this profile.
+  rationale: >
+    These skills are read by models, not by people, and their job is to remove ambiguity
+    before a coding agent spends tokens on it. Authoring at reduced effort produces prose
+    that looks correct and leaves the ambiguity in place, which is the one defect the
+    whole repository exists to prevent. The cost asymmetry is decisive: authoring happens
+    once per release, execution happens on every invocation forever.
+  requirements:
+    - Highest available reasoning effort for the model in use. Never a reduced tier.
+    - The reference ceiling model, not a smaller sibling chosen for speed or price.
+    - Domain vocabulary that a practitioner in the field would recognise as their own.
+    - Machine-verified against tools/audit_skills.py before release, never asserted.
+  anti_requirements:
+    - Do not author at a lower tier and plan to raise quality in a later pass. The
+      structural defects introduced by a weaker pass survive editing.
+    - Do not template one suite from another. Measured paragraph reuse across suites is
+      a release gate, not a style preference.
+
+  # Per-release record. Model is stated because it is verifiable from the run.
+  # Effort is a requirement above; record it per release only when it is attested,
+  # rather than inferring it from inside the session that would be certifying itself.
+  record:
+    - version: v1.0.0
+      date: 2026-07-25
+      model: claude-opus-5
+      scope: capability upgrade of 109 existing skills, profile architecture
+    - version: v1.1.0
+      date: 2026-07-25
+      model: claude-opus-5
+      scope: 14 new suites, 276 new desks
+
+# ---------------------------------------------------------------------------
 # CAPABILITIES; what the floor model can now do.
 # Each carries `evidence` so a future maintainer can re-verify instead of trusting.
 # ---------------------------------------------------------------------------

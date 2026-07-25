@@ -11,6 +11,7 @@
   <a href="profiles/"><img alt="Vendor targets" src="https://img.shields.io/badge/vendor%20targets-4-8b5cf6.svg"></a>
   <a href="profiles/frontier-2026-07.yaml"><img alt="Capability profile" src="https://img.shields.io/badge/profile-frontier--2026--07-f97316.svg"></a>
   <a href="docs/model-upgrade-playbook.md"><img alt="Model upgrade" src="https://img.shields.io/badge/model%20upgrade-one%20command-eab308.svg"></a>
+  <a href="profiles/frontier-2026-07.yaml#L60"><img alt="Authored with" src="https://img.shields.io/badge/authored-frontier%20model%20%7C%20max%20effort-ec4899.svg"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPL--3.0--only-blue.svg"></a>
 </p>
 
@@ -39,6 +40,8 @@ python3 tools/audit_skills.py
 ```
 
 That propagates to all 385 skills across 21 suites and 4 vendor targets. Nothing is hand-edited. See [the model upgrade playbook](docs/model-upgrade-playbook.md).
+
+**Authored at the frontier, deliberately.** Every skill here is written and upgraded using the most capable frontier model available at the time, run at its highest reasoning effort, and that is recorded as policy in `authoring_standard` rather than left as an implicit habit. The asymmetry is the reason: authoring happens once per release, execution happens on every invocation forever. Prose written at a reduced tier reads as correct and quietly leaves the ambiguity in place, which is the single defect this repository exists to remove. Each release records the model that authored it.
 
 **Vendor agnostic by construction.** Skill sources contain no vendor names. They use `{{AGENT}}` and `{{CODING_AGENT}}` tokens that resolve at build time from `profiles/vendors/<vendor>.yaml`. The default build mentions no vendor at all. Adding a vendor is one file and zero skill edits, and the audit fails if a vendor name leaks into a skill body.
 

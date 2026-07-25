@@ -27,6 +27,15 @@ model vendor; per-vendor builds are generated from the same source under
 - Output contracts state the artifact set a complete run delivers rather than a menu.
   This never licenses inventing an artifact that has no source basis.
 
+## Authoring standard
+
+Authored using the most capable frontier model available at the time, run at its
+highest reasoning effort, per `authoring_standard` in
+`profiles/frontier-2026-07.yaml`. Authoring happens once per release and execution
+happens on every invocation, so the effort asymmetry is decisive: prose written at
+a reduced tier looks correct and leaves the ambiguity in place, which is the defect
+this repository exists to remove.
+
 ## Governance
 
 Governance invariants were held fixed: never invent facts, separate fact from

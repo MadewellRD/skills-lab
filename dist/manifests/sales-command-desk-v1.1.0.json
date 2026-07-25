@@ -9,92 +9,92 @@
       "order": 0,
       "skill": "sales-command-desk",
       "archive": "000-sales-command-desk-skill.zip",
-      "sha256": "dce966ed214a0b98d19e6d9b835c42b43bf2b460edca1fd0e35036646cb967f3",
-      "bytes": 6461
+      "sha256": "23d3daeea8f8cb24e6ce464153698f090eb8c3b6fc6b20a0ca027be48cfe21d2",
+      "bytes": 6716
     },
     {
       "order": 1,
       "skill": "account-discovery-desk",
       "archive": "001-account-discovery-desk-skill.zip",
-      "sha256": "554adcc1e924939383b39fc3cee82efc5280db0545a8f5e7fbb6a366189b95d7",
-      "bytes": 5891
+      "sha256": "37edd01673b4a6243efb0073f5b6af4621a1d95aea4aacca0886f7acf15795dd",
+      "bytes": 6146
     },
     {
       "order": 2,
       "skill": "crm-update-desk",
       "archive": "002-crm-update-desk-skill.zip",
-      "sha256": "1442c8483a1d1fbac5ddfea81913e9326134ca14db9a34be00568350f307d640",
-      "bytes": 6156
+      "sha256": "e77977aff2363c36c02cf09d96f67b3e94eb86538b9998a2a00ea349829e78c9",
+      "bytes": 6411
     },
     {
       "order": 3,
       "skill": "customer-handoff-desk",
       "archive": "003-customer-handoff-desk-skill.zip",
-      "sha256": "b9f869c5b3c8fa121eba5deb48509e930342fdfec7700861cb3a94d984cc8087",
-      "bytes": 6100
+      "sha256": "d869fc1ee62abe4fd1f17a14b5e0bc0792a9029f1ab47d911fc08e57ecc2d786",
+      "bytes": 6355
     },
     {
       "order": 4,
       "skill": "deal-review-desk",
       "archive": "004-deal-review-desk-skill.zip",
-      "sha256": "f4a5c98132837b3d60d55d37a637dd51f794700f816846e38ddc410d50fbeba7",
-      "bytes": 5739
+      "sha256": "1baacb5d49b733c4bd3b6f0c7f41c20309b0ed5ae397c76d5969d32bd1cadf22",
+      "bytes": 5994
     },
     {
       "order": 5,
       "skill": "lead-research-desk",
       "archive": "005-lead-research-desk-skill.zip",
-      "sha256": "bd3bde57504f56b998579b4ae251ed39b0ed73b12287b832b49d9415a4cd7c19",
-      "bytes": 5819
+      "sha256": "d582ba212e7adcff6cf5db26fa1e537c0a4d63ab7bfe84f04d882ce4e4ff93c4",
+      "bytes": 6074
     },
     {
       "order": 6,
       "skill": "objection-handling-desk",
       "archive": "006-objection-handling-desk-skill.zip",
-      "sha256": "bf691df87232ff8d7be3372e50410ea4d23fe2276545e37efe267da475d97bc1",
-      "bytes": 5892
+      "sha256": "ed1569bbfdb8de26d1fbfa513f24daa012430d467a63483302b6b6a0089a1f07",
+      "bytes": 6147
     },
     {
       "order": 7,
       "skill": "outbound-sequence-desk",
       "archive": "007-outbound-sequence-desk-skill.zip",
-      "sha256": "13811b1a6d947a167a88daddf5769b0df0cec466df9ccf71b41d64e2e9ae13dd",
-      "bytes": 6100
+      "sha256": "23794a461d649024b78a3830d575d16de266ceb9dce76f4b435b0caaa66912c5",
+      "bytes": 6355
     },
     {
       "order": 8,
       "skill": "pipeline-forecast-desk",
       "archive": "008-pipeline-forecast-desk-skill.zip",
-      "sha256": "37f216456c4da9d6bfd123c9942608a99da9bb1ed96bf09dca406761679cbf8d",
-      "bytes": 6098
+      "sha256": "944d472562a8fc357c6acd718ae97f255e8e326fa75c634b5f4a11f17041f22e",
+      "bytes": 6353
     },
     {
       "order": 9,
       "skill": "proposal-desk",
       "archive": "009-proposal-desk-skill.zip",
-      "sha256": "ff424c59335aca5fa3ada4e0fb364849d5589b02b5777f7b7cf20722650fc09a",
-      "bytes": 5971
+      "sha256": "194786165e2e162cdf97897ed9ce9eeb4029195c748361aba59e422e3cc57e9c",
+      "bytes": 6226
     },
     {
       "order": 10,
       "skill": "qualification-desk",
       "archive": "010-qualification-desk-skill.zip",
-      "sha256": "3a32b637be3911f6d91e60a6393eb851bcf9357714819c56f9f2fb90f8c4ea30",
-      "bytes": 5872
+      "sha256": "11276c310eb90edfb97a8649285514c01185e1b2a65aded823173ef9b73a9702",
+      "bytes": 6127
     },
     {
       "order": 11,
       "skill": "renewal-expansion-desk",
       "archive": "011-renewal-expansion-desk-skill.zip",
-      "sha256": "5086d36ad836ee940dfc094ec5557ac704314746597877ef9861ae3314f98753",
-      "bytes": 5950
+      "sha256": "e62aef4b7cb29d3d3051fa29e1ccf58014284ffd86dbcb663e31ac89619b2ad8",
+      "bytes": 6205
     },
     {
       "order": 12,
       "skill": "sales-call-prep-desk",
       "archive": "012-sales-call-prep-desk-skill.zip",
-      "sha256": "ff997fdbe4df3b552e961136144c22355f960bbd93f857e2c1111536a542589e",
-      "bytes": 5856
+      "sha256": "46f8aca498cb1665a0d6c943f7c54562b0ab5aa6225a8004d68963003f61383b",
+      "bytes": 6111
     }
   ]
 }

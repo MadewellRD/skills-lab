@@ -9,141 +9,141 @@
       "order": 0,
       "skill": "finance-accounting-command-desk",
       "archive": "000-finance-accounting-command-desk-skill.zip",
-      "sha256": "1c9a9eb3b266be72a6e5eac668b35675b6fb8f2e1ffa3c4f23f785b66f31636e",
-      "bytes": 43472
+      "sha256": "4c3de6d9c49b5c7928c2763c6dd7a8b44c202daad5d9cfe9d11c9d14cd69b4fe",
+      "bytes": 43727
     },
     {
       "order": 1,
       "skill": "account-reconciliation-desk",
       "archive": "001-account-reconciliation-desk-skill.zip",
-      "sha256": "de1f95426ffa2673770d9042bd8ec18f36534dabecfecbf8461b9d72b158dd73",
-      "bytes": 35528
+      "sha256": "1e6348665c642187398e491f6e8ef3b6f17625dad9bf23d2c5f9ba03e20afa34",
+      "bytes": 35783
     },
     {
       "order": 2,
       "skill": "accounting-policy-coa-desk",
       "archive": "002-accounting-policy-coa-desk-skill.zip",
-      "sha256": "8b08a4ec3b261f704df9a90f124d2adc704eae505a0bcbbf09c6e011471b3076",
-      "bytes": 35358
+      "sha256": "db524c3327a819e825365744bfbfbbb4e6fdc171c2802f831f4d0d778ebbcb86",
+      "bytes": 35613
     },
     {
       "order": 3,
       "skill": "accounts-payable-desk",
       "archive": "003-accounts-payable-desk-skill.zip",
-      "sha256": "da1ed3a9ca5adb02b08443dec416feb63e56e97bfe8bb342d1559ce76fd4980b",
-      "bytes": 35595
+      "sha256": "d2a146a7a50fc04642c84eb0d05d8378d876d533089b6e9f2223a915167e1298",
+      "bytes": 35850
     },
     {
       "order": 4,
       "skill": "accounts-receivable-collections-desk",
       "archive": "004-accounts-receivable-collections-desk-skill.zip",
-      "sha256": "e2837fba2589367d9bcf0e007f8d1a01423906c3e1d8901a778d1cd12913a69d",
-      "bytes": 35528
+      "sha256": "f03f557ead6cae2d8caa35c8662ca66176156a1a72e6039efe7e41f6e58720fc",
+      "bytes": 35783
     },
     {
       "order": 5,
       "skill": "audit-support-desk",
       "archive": "005-audit-support-desk-skill.zip",
-      "sha256": "e7cd68c7717cef148aa9537780b7dc2998c14cf15967dab8d6bc0b8be8937ecb",
-      "bytes": 35640
+      "sha256": "444303bae6369b5b2982793da712adbfdbcb9f27f3b686f56b48d52774c6d21a",
+      "bytes": 35895
     },
     {
       "order": 6,
       "skill": "billing-order-to-cash-desk",
       "archive": "006-billing-order-to-cash-desk-skill.zip",
-      "sha256": "24257981ba094990fe10e913f31d62cdc86c4a4978198db5b787ae9faa3fc260",
-      "bytes": 35223
+      "sha256": "b8e794b406134e9f9ab9f27281e8986c0bc095db3f4a5bdc60f774c22b49b9f0",
+      "bytes": 35478
     },
     {
       "order": 7,
       "skill": "budget-planning-desk",
       "archive": "007-budget-planning-desk-skill.zip",
-      "sha256": "b4c532d4bc8e1fcb88379cf70dd150f24ec559454d862cb1739fa10710736b2c",
-      "bytes": 35462
+      "sha256": "3bc3bf46adf51c5ae80511925cc5186c2dd17a19e7a3fd7abd10a58497798461",
+      "bytes": 35717
     },
     {
       "order": 8,
       "skill": "cash-flow-treasury-desk",
       "archive": "008-cash-flow-treasury-desk-skill.zip",
-      "sha256": "fc91a100fafb803c79d1d640f231d5a3a48fb75e5600ee5117157f34333ee20c",
-      "bytes": 36001
+      "sha256": "6b1b028c33dbb7eaa0beb4a74c0344dcab433d9599a34d4acdd03329e03dc794",
+      "bytes": 36256
     },
     {
       "order": 9,
       "skill": "equity-cap-table-desk",
       "archive": "009-equity-cap-table-desk-skill.zip",
-      "sha256": "f6c6a3cd3ea437716e38f3095abdc03ffb65a33282fa162679774d89cd94d22a",
-      "bytes": 35413
+      "sha256": "e8920003002f44170ccf1c570155ae25656d8f7256a94596ce92b0dfa1211447",
+      "bytes": 35668
     },
     {
       "order": 10,
       "skill": "expense-management-desk",
       "archive": "010-expense-management-desk-skill.zip",
-      "sha256": "81b39bd21b462e29c017391e9765544bc457a1de0e28447af9c5ded20c8c3694",
-      "bytes": 35279
+      "sha256": "e50eb7fe387d472b2c58c91117c18efc400d8a1776071f2c44fa4f2de8ea5d6f",
+      "bytes": 35534
     },
     {
       "order": 11,
       "skill": "financial-reporting-desk",
       "archive": "011-financial-reporting-desk-skill.zip",
-      "sha256": "6c359dddcd629e19da78fbb1de18f843b3f56d6d17404ce401a3d106c7e24e9c",
-      "bytes": 35830
+      "sha256": "fc8868ce935c1a91e90c6e7a4df61be061f64b0a151b676371e8d4b6967cafc3",
+      "bytes": 36085
     },
     {
       "order": 12,
       "skill": "forecast-scenario-desk",
       "archive": "012-forecast-scenario-desk-skill.zip",
-      "sha256": "b602b8265b4bf02bd147a14ef033f467db4918cbb3ba22650248b70047d6dc44",
-      "bytes": 35704
+      "sha256": "23aefba55da853443949ecba635164f0e2927736232b7e03e3c6fb74ae1554b8",
+      "bytes": 35959
     },
     {
       "order": 13,
       "skill": "internal-controls-desk",
       "archive": "013-internal-controls-desk-skill.zip",
-      "sha256": "29dd8c816a5ec44b27f4414688258e9f0490b2d9682d623be81e531b27ac390f",
-      "bytes": 35759
+      "sha256": "450bab272e2a0a283f909ed3ad85381d798ee226599cba4c51c7f4d441596ede",
+      "bytes": 36014
     },
     {
       "order": 14,
       "skill": "month-end-close-desk",
       "archive": "014-month-end-close-desk-skill.zip",
-      "sha256": "32d79904ce5acd563db344bfed2152af4a34c3568cc594af9bb54180c0f8d6fc",
-      "bytes": 35649
+      "sha256": "f7cb825e53a0275a37324f8a4792c197c94c65370060f6cc468842cd52bd71e7",
+      "bytes": 35904
     },
     {
       "order": 15,
       "skill": "revenue-recognition-desk",
       "archive": "015-revenue-recognition-desk-skill.zip",
-      "sha256": "47a2b3641704a66b80f27c18c7e3738f11aac26d375505324f38f837615bd4ba",
-      "bytes": 35149
+      "sha256": "fadb81f62f5e9ab9d48b445bef7f890ff9ab8969a3b7f414e93b25c30dc57f3b",
+      "bytes": 35404
     },
     {
       "order": 16,
       "skill": "saas-metrics-reporting-desk",
       "archive": "016-saas-metrics-reporting-desk-skill.zip",
-      "sha256": "0c3eb6988d1373c95377cc693c5d4455656b3132f29dccd148f8028ec588ed26",
-      "bytes": 35866
+      "sha256": "321702d73f9e9cf7390ea8b8293874a22bdd1d18060608420e9eb6a5d97d44ff",
+      "bytes": 36121
     },
     {
       "order": 17,
       "skill": "spend-approval-authority-desk",
       "archive": "017-spend-approval-authority-desk-skill.zip",
-      "sha256": "4deaf78d0651153266a47200a605f53320bc7ad3a46c9df012df8bf4d07eeaf8",
-      "bytes": 35342
+      "sha256": "f3d7225b5f488697a99d77499a61fe59285f48b7977bc48ababa4b169fa12f32",
+      "bytes": 35597
     },
     {
       "order": 18,
       "skill": "tax-coordination-desk",
       "archive": "018-tax-coordination-desk-skill.zip",
-      "sha256": "945bfd15e78d647720c3b80c8401b4e85922b318cbeccb17a54827a38c2021ba",
-      "bytes": 35935
+      "sha256": "927b08450666f1f8bb2253de07c9e1da73dbcfb236dcd606484565ec7434ca13",
+      "bytes": 36190
     },
     {
       "order": 19,
       "skill": "variance-analysis-desk",
       "archive": "019-variance-analysis-desk-skill.zip",
-      "sha256": "a22754d9ce2a1d3c791060ce9d7f2ec7fd73ee32735adf10aef9949ecb024e58",
-      "bytes": 35393
+      "sha256": "c3c3062ba91600167bc7a8731d590ecae00fb02be8769b9548beb55000fe9916",
+      "bytes": 35648
     }
   ]
 }
