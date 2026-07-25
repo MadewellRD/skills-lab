@@ -1,0 +1,17 @@
+interface:
+  display_name: Deal Review Desk
+  short_description: Prepare internal deal reviews with risks, asks, commercial impact,
+    approvals, and recommended decisions.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed in v1.1.0.

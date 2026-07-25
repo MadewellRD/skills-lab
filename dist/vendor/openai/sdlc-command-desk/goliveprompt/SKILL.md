@@ -48,6 +48,7 @@ Three references carry the detail the phases depend on:
 - `references/tracker-contract.md` for Phase 5. It holds the `tracker.json` schema and the artifact requirements. A tracker built off-schema breaks the next session's artifact, so build to the schema even when improvising the visual design.
 - `references/presets.md` for known projects and their standing constraints.
 - `references/capability-baseline.md` for what the executing model may assume about context, self-verification, long-horizon work, and parallel fan-out.
+- `references/halt-taxonomy.md` for when to stop. Phase 3 is a hard gate, so treat a failed audit as a release-integrity halt rather than a note to carry forward. Everything short of the six consequence classes is a soft gap: record it against the GL id and keep moving.
 
 ## Parallel surface
 

@@ -1,6 +1,6 @@
 # Contributing to Skills-Lab
 
-Skills-Lab publishes Desk Suites: structured ChatGPT skill systems that guide users through professional workflows and hand constrained, source-grounded work to execution agents. Contributions should improve those systems without weakening taxonomy, naming, packaging, validation, or release integrity.
+Skills-Lab publishes Desk Suites: structured, vendor-neutral agent skill systems that guide users through professional workflows and hand constrained, source-grounded work to execution agents. Contributions should improve those systems without weakening taxonomy, naming, packaging, validation, or release integrity.
 
 ## Contribution principles
 
@@ -28,7 +28,7 @@ Use command-desk naming for suite-level orchestrators and domain-desk naming for
 
 ## Skill authoring expectations
 
-Skill content should be operational, bounded, and low-token. Prefer checklists, gates, inputs, outputs, handoff formats, and halt conditions over long explanatory prose. A desk should tell the model what to do, what to inspect, what to produce, when to stop, and what evidence is required.
+Skill content should be operational and bounded. Judge it on whether it removes ambiguity, not on whether it is short: context is no longer the scarce resource. Prefer checklists, gates, inputs, outputs, handoff formats, and halt conditions over long explanatory prose, because those remove ambiguity per line, not because they are brief. A desk should tell the model what to do, what to inspect, what to produce, when to stop, and what evidence is required.
 
 Every skill change should preserve these properties:
 
@@ -82,3 +82,16 @@ Do not include credentials, private data, production logs, proprietary content, 
 ## License
 
 By contributing to this repository, you agree that your contribution is submitted under the repository's AGPL-3.0-only license unless explicitly stated otherwise in the contribution and accepted by maintainers.
+
+## Two rules the build enforces
+
+1. **Never hand-edit `dist/`.** It is generated from source plus the active
+   capability profile. Edit source and rebuild.
+2. **Never hardcode a vendor name in a skill body.** Use `{{AGENT}}` or
+   `{{CODING_AGENT}}`; they resolve per vendor at build time. `tools/audit_skills.py`
+   fails on vendor leakage, unresolved tokens, broken citations, capability debt,
+   duplication, and em dashes.
+
+Model capability assumptions belong in `profiles/`, never in a skill body. If you
+find yourself writing "the model may not be able to", that is a profile change.
+See `docs/model-upgrade-playbook.md`.

@@ -1,0 +1,17 @@
+interface:
+  display_name: Proposal Desk
+  short_description: Create customer-facing proposal, scope, deck, DOCX, and PDF drafts
+    with brand, pricing, and approval controls.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed in v1.1.0.

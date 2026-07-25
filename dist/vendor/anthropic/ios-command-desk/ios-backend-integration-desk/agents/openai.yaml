@@ -1,0 +1,17 @@
+interface:
+  display_name: iOS Backend Integration Desk
+  short_description: Defines APIs, auth, sync, push, payments, multiplayer, and cloud
+    saves.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#0ea5e9'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed in v1.1.0.

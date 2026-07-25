@@ -1,0 +1,17 @@
+interface:
+  display_name: iOS Security Privacy Desk
+  short_description: Reviews security, privacy, permissions, privacy labels, policy,
+    and abuse risks.
+  default_prompt: ''
+  icon: 🤖
+  primary_color: '#0ea5e9'
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed in v1.1.0.

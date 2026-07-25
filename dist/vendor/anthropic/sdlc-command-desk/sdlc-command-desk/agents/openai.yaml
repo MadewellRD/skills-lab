@@ -1,0 +1,17 @@
+interface:
+  display_name: SDLC Command Desk
+  short_description: Routes SDLC work across lifecycle desk skills and enforces connector-grounded
+    stage order.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed in v1.1.0.

@@ -41,6 +41,27 @@ def subst(text, tokens):
     return ''.join(out)
 
 
+
+# Reference files renamed in v1.0.0. The build emits the OLD name as a pointer for one
+# release cycle so forks and vendored copies keep resolving. Remove in v1.1.0.
+COMPAT_SHIMS = {
+    'codex-conservation-policy.md':          'handoff-density-policy.md',
+    'low-token-policy.md':                   'handoff-density-policy.md',
+    'platform/ios-low-token-policy.md':      'platform/ios-handoff-density-policy.md',
+    'platform/android-low-token-policy.md':  'platform/android-handoff-density-policy.md',
+}
+SHIM_REMOVED_IN = 'v1.1.0'
+
+def shim_body(old, new):
+    return (f"# Moved: `{old}`\n\n"
+            f"This file was renamed in v1.0.0. The current version is **`{new}`** in this "
+            f"same `references/` directory. Read that instead; it is the authoritative copy.\n\n"
+            f"The rename went with a change of premise, not just a name. Context is no longer "
+            f"scarce, so the rule is no longer 'send less'. It is 'send the right thing': a "
+            f"handoff is judged on whether it removes ambiguity, not on how short it is.\n\n"
+            f"This pointer exists so forks and vendored copies keep resolving through one "
+            f"release cycle. It is removed in {SHIM_REMOVED_IN}.\n")
+
 def render_capability_baseline(prof):
     """Render kernel/references/capability-baseline.md FROM the profile.
 
@@ -115,7 +136,7 @@ def main():
          newline='').write(render_capability_baseline(prof))
 
     if os.path.isdir(out_root): shutil.rmtree(out_root)
-    n_sk = n_ref = n_orph = 0
+    n_sk = n_ref = n_orph = n_shim = 0
     unresolved = []
 
     for desk in sorted(os.listdir('skills')):
@@ -160,6 +181,12 @@ def main():
                 os.makedirs(os.path.dirname(o), exist_ok=True)
                 open(o, 'w', encoding='utf-8', newline='').write(txt)
                 n_ref += 1
+                for old, new in COMPAT_SHIMS.items():
+                    if new == rel:
+                        so = f'{dst}/references/{old}'
+                        os.makedirs(os.path.dirname(so), exist_ok=True)
+                        open(so, 'w', encoding='utf-8', newline='').write(shim_body(old, new))
+                        n_shim += 1
                 want |= set(CITE.findall(txt)) - seen
 
             for kind in ('scripts', 'assets'):
@@ -180,10 +207,17 @@ def main():
                 os.makedirs(f'{dst}/agents', exist_ok=True)
                 yaml.safe_dump(y, open(f'{dst}/agents/{vend["vendor"]}.yaml', 'w', encoding='utf-8'),
                                sort_keys=False, allow_unicode=True)
+                # pre-v1.0.0 consumers looked for agents/openai.yaml unconditionally
+                if vend['vendor'] != 'openai':
+                    y2 = dict(y); y2['_deprecated'] = (
+                        f'Legacy path. Use agents/{vend["vendor"]}.yaml. Removed in {SHIM_REMOVED_IN}.')
+                    yaml.safe_dump(y2, open(f'{dst}/agents/openai.yaml', 'w', encoding='utf-8'),
+                                   sort_keys=False, allow_unicode=True)
 
     print(f"vendor={a.vendor}  profile={prof['profile']['id']}  ->  {out_root}")
     print(f"  skills built     : {n_sk}")
     print(f"  references shipped: {n_ref}")
+    print(f"  compat shims      : {n_shim}  (removed in {SHIM_REMOVED_IN})")
     print(f"  unresolved refs  : {len(unresolved)}")
     for s, r in unresolved[:10]: print(f"      {s} -> {r}")
     return 1 if unresolved else 0

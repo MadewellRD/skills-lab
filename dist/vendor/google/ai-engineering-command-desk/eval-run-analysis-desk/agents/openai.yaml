@@ -1,0 +1,19 @@
+interface:
+  display_name: Eval Run Analysis Desk
+  short_description: Analyzes AI eval runs, regressions, failure clusters, blockers,
+    and rerun plans.
+  default_prompt: Use @eval-run-analysis-desk to interpret completed AI eval results,
+    compare against baselines and thresholds, classify failures, identify blockers,
+    assess grader reliability, and produce low-token rerun or fix handoffs.
+  icon: 📊
+  primary_color: '#2563eb'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed in v1.1.0.

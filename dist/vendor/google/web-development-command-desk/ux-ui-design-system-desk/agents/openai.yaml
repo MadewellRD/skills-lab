@@ -1,0 +1,17 @@
+interface:
+  display_name: UX UI Design System Desk
+  short_description: Ux/ui systems, components, states, and responsive patterns for
+    the Web Development Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed in v1.1.0.

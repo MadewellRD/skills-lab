@@ -14,8 +14,14 @@ REPO = Path(__file__).resolve().parents[1]
 SOURCE = REPO / "skills" / "SDLC Command Desk"
 DIST = REPO / "dist" / "skills" / "sdlc-command-desk"
 PACKAGES = REPO / "dist" / "packages" / "sdlc-command-desk"
-RELEASE_NOTES = REPO / "releases" / "sdlc-command-desk-v0.2.0.md"
+# Version is read from MANIFEST.md rather than hardcoded, so cutting a release does not
+# require editing this file. Hardcoding it is what made this validator fail on v1.0.0.
+def _active_version() -> str:
+    import re as _re
+    m = _re.search(r"sdlc-command-desk-v(\d+\.\d+\.\d+)", MANIFEST_TEXT)
+    return m.group(1) if m else "0.0.0"
 MANIFEST = REPO / "MANIFEST.md"
+MANIFEST_TEXT = MANIFEST.read_text(encoding="utf-8") if MANIFEST.exists() else ""
 
 EXPECTED = [
     "sdlc-command-desk",
@@ -37,7 +43,15 @@ EXPECTED = [
     "maintenance-refactor-desk",
     "retrospective-desk",
     "decommissioning-desk",
+    "goliveprompt",
 ]
+# Skills that are protocol runners rather than lifecycle stages. They carry their own
+# state (goliveprompt uses tracker.json and a fixed six-phase sequence), so requiring the
+# suite workflow packet on top would duplicate state and create two sources of truth for
+# where a run is. They still must adopt the halt taxonomy and the capability baseline.
+STAGE_EXEMPT = {"goliveprompt"}
+EXEMPT_REQ_REFS = ["halt-taxonomy.md", "capability-baseline.md"]
+
 REQ_REFS = [
     "continuity-kernel.md",
     "readiness-gates.md",
@@ -83,12 +97,16 @@ for name in EXPECTED:
     check(agent_yaml.exists(), f"agents/generic.yaml exists: {agent_yaml.relative_to(REPO)}")
 
     text = skill_md.read_text(encoding="utf-8") if skill_md.exists() else ""
-    check("Suite workflow mode" in text, f"suite workflow mode text: {name}")
-    check("Continuity Kernel Adoption" in text, f"continuity section: {name}")
-
-    for ref in REQ_REFS:
-        ref_path = packaged / "references" / ref
-        check(ref_path.exists(), f"reference {ref}: {name}")
+    if name in STAGE_EXEMPT:
+        for ref in EXEMPT_REQ_REFS:
+            ref_path = packaged / "references" / ref
+            check(ref_path.exists(), f"reference {ref}: {name} (protocol runner)")
+    else:
+        check("Suite workflow mode" in text, f"suite workflow mode text: {name}")
+        check("Continuity Kernel Adoption" in text, f"continuity section: {name}")
+        for ref in REQ_REFS:
+            ref_path = packaged / "references" / ref
+            check(ref_path.exists(), f"reference {ref}: {name}")
 
 runner = DIST / "sdlc-command-desk" / "scripts" / "run_sdlc_workflow.py"
 check(runner.exists(), f"workflow runner exists: {runner.relative_to(REPO)}")
@@ -100,8 +118,10 @@ if runner.exists():
 zip_count = len(list(PACKAGES.glob("*.zip"))) if PACKAGES.exists() else 0
 check(zip_count == len(EXPECTED), f"expected {len(EXPECTED)} SDLC zip artifacts; found {zip_count}")
 
+VERSION = _active_version()
+RELEASE_NOTES = REPO / "releases" / f"sdlc-command-desk-v{VERSION}.md"
 check(RELEASE_NOTES.exists(), f"release notes exist: {RELEASE_NOTES.relative_to(REPO)}")
-check(MANIFEST.exists() and "sdlc-command-desk-v0.2.0" in MANIFEST.read_text(encoding="utf-8"), "MANIFEST references sdlc-command-desk-v0.2.0")
+check(f"sdlc-command-desk-v{VERSION}" in MANIFEST_TEXT, f"MANIFEST references sdlc-command-desk-v{VERSION}")
 
 if failures:
     print(f"\nSDLC validation failed: {len(failures)} issue(s)")

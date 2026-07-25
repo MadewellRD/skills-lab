@@ -1,0 +1,17 @@
+interface:
+  display_name: Sales Call Prep Desk
+  short_description: Prepare agendas, discovery questions, attendee context, objection
+    watchlists, and follow-up scaffolds for sales meetings.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google
+_deprecated: Legacy path. Use agents/google.yaml. Removed in v1.1.0.

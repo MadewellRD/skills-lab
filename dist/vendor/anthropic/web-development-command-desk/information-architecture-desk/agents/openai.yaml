@@ -1,0 +1,17 @@
+interface:
+  display_name: Information Architecture Desk
+  short_description: Sitemap, navigation, route, and content structure for the Web
+    Development Command Desk suite.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed in v1.1.0.

@@ -1,0 +1,18 @@
+interface:
+  display_name: Sales Command Desk
+  short_description: Route and run revenue workflow stages across sales research,
+    discovery, outbound, call prep, qualification, proposals, CRM updates, forecasting,
+    renewals, and customer handoff.
+  default_prompt: ''
+  icon: chart-line
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - anthropic
+_generated:
+  profile: frontier-2026-07
+  vendor: anthropic
+_deprecated: Legacy path. Use agents/anthropic.yaml. Removed in v1.1.0.

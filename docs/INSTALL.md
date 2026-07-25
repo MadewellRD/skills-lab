@@ -2,11 +2,13 @@
 
 This guide explains how to use the SDLC Command Desk skill suite from this repository.
 
-Current recommended install set: `sdlc-command-desk-v0.2.0` for the SDLC workflow, or the latest published suite release for the workflow you want to install.
+Current recommended install set: `sdlc-command-desk-v1.0.0` for the SDLC workflow, or the v1.0.0 release of whichever suite matches your work.
+
+Packaged skills are vendor-neutral by default. If you want a build that uses your platform's own vocabulary, per-vendor builds are generated from the same source under `dist/vendor/<vendor>/` for `anthropic`, `openai`, and `google`.
 
 ## What you need
 
-- ChatGPT with Skills support.
+- Any assistant platform with skills support. The default build names no vendor.
 - The packaged skill archives from this repository or a GitHub Release.
 - GitHub connector access if you want repository-grounded behavior.
 - Optional document or communication connectors for product docs, roadmap docs, decisions, support tickets, or operational evidence.
@@ -39,7 +41,7 @@ Install the top-level router first, then install the lifecycle desks.
 
 ## Upload rule
 
-Each ChatGPT skill upload should contain one valid skill directory with one `SKILL.md` entrypoint.
+Each skill upload should contain one valid skill directory with one `SKILL.md` entrypoint.
 
 The upload-facing filename may be `skill.zip`. For repository and release organization, descriptive ordered filenames are used.
 
@@ -66,7 +68,7 @@ Use technical-discovery-desk to inspect this repo and produce a feasibility/risk
 ```
 
 ```text
-Use implementation-handoff-desk to turn this approved issue plan into a low-token Codex handoff prompt.
+Use implementation-handoff-desk to turn this approved issue plan into a coding-agent handoff prompt.
 ```
 
 ## Connector setup

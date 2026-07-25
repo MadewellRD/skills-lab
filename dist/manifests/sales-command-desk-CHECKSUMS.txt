@@ -1,0 +1,13 @@
+af370196f4f9c6aa8b14940ce73b272ae4a4076783db661e96705c5aa80fb0b8  dist/packages/sales-command-desk/000-sales-command-desk-skill.zip
+fac2908230927a8d96c5a7483a613a15be8783152a4da6871e15123995e3c545  dist/packages/sales-command-desk/001-account-discovery-desk-skill.zip
+52ed2a9a11ee0cde295ff290cbb4bec4df75723431f42f2c85b0870b0985dd43  dist/packages/sales-command-desk/002-crm-update-desk-skill.zip
+d07d2b681dbcd7f69b0324f3f9efa31c371c253fdf4dcc4f82965f7248f10084  dist/packages/sales-command-desk/003-customer-handoff-desk-skill.zip
+1a566e2c2f87c21dc59428690a98dd5735c1103984040037a90896ea549c4b60  dist/packages/sales-command-desk/004-deal-review-desk-skill.zip
+3094bf82ff5b7e304716d271ba3fa34d17dc5e53787fc224b81c109870d09437  dist/packages/sales-command-desk/005-lead-research-desk-skill.zip
+9b3398ddfc9d205495ada1ec7235a9b9b2d5566908c2a6aba2938cdfe97fec37  dist/packages/sales-command-desk/006-objection-handling-desk-skill.zip
+d1c8c55c693bd808b58c33c80861671abc86669b77d5fdfa582836d6466ff9c5  dist/packages/sales-command-desk/007-outbound-sequence-desk-skill.zip
+b53d6bd505b844c162dc27bcef9b49954733aba15ffa4f88d117ebca72e1a9dd  dist/packages/sales-command-desk/008-pipeline-forecast-desk-skill.zip
+3892d015b599527df950df732e40fc42490e586e538735e7f7cedd7828f0e4f1  dist/packages/sales-command-desk/009-proposal-desk-skill.zip
+bedc29555b1a9d3bf163a8b51263c647826d655f5fb1464122516b10e30c00dd  dist/packages/sales-command-desk/010-qualification-desk-skill.zip
+317481c2313a704c5824520e0cae9ce23d41248bec533430b1a3b6d53b8ac455  dist/packages/sales-command-desk/011-renewal-expansion-desk-skill.zip
+ea0a7571030dc3affed7cab7c62da89fb92ea081239119f6a3936e32c65586fd  dist/packages/sales-command-desk/012-sales-call-prep-desk-skill.zip

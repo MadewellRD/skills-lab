@@ -1,0 +1,17 @@
+interface:
+  display_name: Decommissioning Desk
+  short_description: Plan safe retirement of features, APIs, services, data stores,
+    integrations, and software assets.
+  default_prompt: ''
+  icon: archive
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - generic
+_generated:
+  profile: frontier-2026-07
+  vendor: generic
+_deprecated: Legacy path. Use agents/generic.yaml. Removed in v1.1.0.
