@@ -1,7 +1,7 @@
 {
   "project": "Skills-Lab v1.1.1",
-  "generated_at": "2026-08-15T04:15:38+00:00",
-  "head": "1aacc3f0",
+  "generated_at": "2026-08-15T04:18:08+00:00",
+  "head": "46c62426",
   "summary": {
     "desks_authored": 276,
     "desks_planned": 276,
@@ -523,9 +523,9 @@
   ],
   "commits": [
     {
-      "sha": "1aacc3f0",
+      "sha": "46c62426",
       "message": "chore(tracker): extend to the post-release remediation cycle",
-      "date": "2026-08-15T04:15:11+00:00",
+      "date": "2026-08-15T04:15:38Z",
       "task": null
     },
     {
@@ -543,49 +543,49 @@
     {
       "sha": "846ca568",
       "message": "release: v1.1.1, remove published internal configuration",
-      "date": "2026-08-15T03:51:53+00:00",
+      "date": "2026-08-15T03:51:53Z",
       "task": null
     },
     {
       "sha": "88e1fd5a",
       "message": "Merge branch 'fix/scrub-internal-project-references' into release/v1.1.1",
-      "date": "2026-08-15T03:50:13+00:00",
+      "date": "2026-08-15T03:50:13Z",
       "task": null
     },
     {
       "sha": "ed134859",
       "message": "Merge branch 'fix/validate-release-assets-all-suites' into release/v1.1.1",
-      "date": "2026-08-15T03:50:13+00:00",
+      "date": "2026-08-15T03:50:13Z",
       "task": null
     },
     {
       "sha": "6f57a5bd",
       "message": "fix(goliveprompt): remove internal project references from a public package",
-      "date": "2026-08-15T03:34:02+00:00",
+      "date": "2026-08-15T03:34:02Z",
       "task": null
     },
     {
       "sha": "1568b8ed",
       "message": "feat(presets): fail CI on an unpinned goliveprompt repository root",
-      "date": "2026-08-15T03:18:48+00:00",
+      "date": "2026-08-15T03:18:48Z",
       "task": null
     },
     {
       "sha": "b0cadb0b",
       "message": "ci(release-assets): run the validators on push and pull request",
-      "date": "2026-08-15T03:16:39+00:00",
+      "date": "2026-08-15T03:16:39Z",
       "task": null
     },
     {
       "sha": "0deb0e68",
       "message": "fix(validate-release-assets): discover suites instead of hardcoding seven of them",
-      "date": "2026-08-15T03:16:16+00:00",
+      "date": "2026-08-15T03:16:16Z",
       "task": null
     },
     {
       "sha": "7c0c2505",
       "message": "fix(cut-release): merge scoped cuts into the repo-wide index instead of replacing it",
-      "date": "2026-08-15T03:14:42+00:00",
+      "date": "2026-08-15T03:14:42Z",
       "task": null
     },
     {
