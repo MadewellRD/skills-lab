@@ -124,13 +124,11 @@
 533475f82817c5e9e27e7c519c88cd751169a4bc76dcea7b1abca3389ab84180  dist/packages/procurement-vendor-management-command-desk/006-procurement-policy-desk-skill.zip
 54a25f710595c581100b2f37f96ed112972926ea01122f04275b5af1d890bf9d  dist/packages/finance-accounting-command-desk/014-month-end-close-desk-skill.zip
 54c49d90d74cf4d35c0412a9c2492d6d3328c1be0cda3956bd3bcb8070bfa6b8  dist/packages/ai-engineering-command-desk/003-ai-incident-response-desk-skill.zip
-5658ada1a02b0280f46e4a936ae4f0e04d128d08d4d952f55ad1492989322ab5  dist/packages/ai-engineering-command-desk/013-prompt-systems-desk-skill.zip
 56b1dd4f8c7447f29696c7c2d38755db2fdee335b1a76452e33db278fd7eff98  dist/packages/finops-command-desk/003-chargeback-invoicing-desk-skill.zip
 584fcdde485ede0ed9cc15484689b28af32861a84e14f334bd2501cfb4af449f  dist/packages/ios-command-desk/003-ios-backend-integration-desk-skill.zip
 591e8e354092bd523715a32cad2fbdfa99943838d96b731a77f954e29f51d9bb  dist/packages/security-command-desk/003-authorization-model-desk-skill.zip
 5a57f326079f796ac8de08b252ab00a821e70d6634660582808d87828e46b6ba  dist/packages/finance-accounting-command-desk/007-budget-planning-desk-skill.zip
 5b2c53b8281b37da028c7e9764afbe639b40ad34afb1344b985075c33e14b871  dist/packages/people-talent-command-desk/019-workforce-planning-desk-skill.zip
-5c2e77289790c8cee9c0444ea7dec7686961967697036ee402db2c098912da4d  dist/packages/ai-engineering-command-desk/000-ai-engineering-command-desk-skill.zip
 5c7dce506b4fb44c04ca65b694a5a6f6b6a5527be320631d42823065beb53d36  dist/packages/procurement-vendor-management-command-desk/005-pricing-negotiation-desk-skill.zip
 5c9b95504ccbac291857c44c378a85e79151e5196de685edf2f921179f143293  dist/packages/sdlc-command-desk/002-ci-failure-desk-skill.zip
 5d6c3bc953673798ba4d4af333e4917f0e877abedda435cba2a85254bb916be4  dist/packages/privacy-data-protection-command-desk/014-processor-vendor-agreement-desk-skill.zip
@@ -146,6 +144,7 @@
 61bf21b732e07cc2ede7f952e2f58dcfee622cc7110697904cca0f80905263f9  dist/packages/ai-engineering-command-desk/007-dataset-curation-desk-skill.zip
 624c8ff297c09f722d7da4f7bc3113221be021829129e5186a376d93dbc3ba93  dist/packages/platform-engineering-command-desk/004-golden-path-design-desk-skill.zip
 62914b6345ea94dea150454b0c2831419e21b276319941f8e897db66f123c4d9  dist/packages/grc-command-desk/001-attestation-reporting-desk-skill.zip
+6360c1116d516d2562c369b02ce9ca1feb5fe101d509a10983b15e21b534817d  dist/packages/sdlc-command-desk/006-goliveprompt-skill.zip
 6369379ee81fccbde2ccb3e3138f5722203383507b67de04d73d80769bbd46c5  dist/packages/customer-support-command-desk/008-post-incident-followup-desk-skill.zip
 639c8ced84cd4085436f311ada42c3be0d0d5550f392292332204dfcfca1bc48  dist/packages/customer-success-command-desk/010-qbr-ebr-desk-skill.zip
 64ebae0016c5f3a5b8b2ca9cbe92a04455aa8818e1fa3663673640e78fe303d4  dist/packages/finops-command-desk/012-licensing-saas-spend-desk-skill.zip
@@ -238,7 +237,6 @@
 9a4d5027185ae0e71338678a9f6074ee2f1d05c1311b8b22a0b2f7b247a5caaf  dist/packages/legal-contracts-command-desk/005-contract-intake-triage-desk-skill.zip
 9ac85de848b15074e5fe88b57126c7d5343fe55f5258a192088c907cefc58db5  dist/packages/platform-engineering-command-desk/001-cicd-platform-desk-skill.zip
 9b64bd6b21e034fceb350d6314ce814088c5fc72a5f029bc13eeea8a51a4018b  dist/packages/data-command-desk/019-warehouse-lakehouse-architecture-desk-skill.zip
-9bd0c9cdce9cf9e91e53065ad6100fad77dc8d183ca083ad187d315e14ddaa62  dist/packages/sdlc-command-desk/006-goliveprompt-skill.zip
 9d927f5bfc6bfdc1c4ac150fe2e31e9d2c73241007744dcb6bf97d51ea37c818  dist/packages/customer-success-command-desk/019-voice-of-customer-desk-skill.zip
 9e44eeab485aabbef68d0eebe624102f652059fcf877e27e63a22c5b87a008d3  dist/packages/product-command-desk/013-product-retrospective-desk-skill.zip
 9ef76a976bc5afbf8273c77a842e1878b29e920c37695803ed379c74209eb1c8  dist/packages/security-command-desk/004-cloud-security-posture-desk-skill.zip
@@ -257,9 +255,11 @@ ade578742523b444f6d08475184617c08314d14423d49f56ad34514debf648af  dist/packages/
 ae15e5122d55d98f1a876ab2cab98c2658dafe4a1e1634dd50f3459e567c8c9d  dist/packages/sales-command-desk/007-outbound-sequence-desk-skill.zip
 ae56ae74ae54e25be9d4c5a84d8b93cf0fabc4d20a7d7d325a0162afc3703727  dist/packages/security-command-desk/009-identity-access-management-desk-skill.zip
 aec5e2831b5cdcee520d0bf62fbc4d30b49580c44c0191e493971d2f1529fc80  dist/packages/platform-engineering-command-desk/016-scaffolding-templates-desk-skill.zip
+af05863566c421206b7c165d1ecd4be7e2f6b09e8b24fb7936eedd336f9879ca  dist/packages/ai-engineering-command-desk/000-ai-engineering-command-desk-skill.zip
 af5f4f366d24984ed566e2627dcb0aaba74e72eb3e928a40f7680d7b5cff420e  dist/packages/privacy-data-protection-command-desk/001-breach-assessment-desk-skill.zip
 afeb1323d47070ae2d67f669d35b832f0755b9a20d7566b6a29d43470f4eb61b  dist/packages/ios-command-desk/013-ios-ui-ux-desk-skill.zip
 b018a27cb4fa62fa1049104ec80f65bf1f99c63d88db7e30fd3235f2d2398a24  dist/packages/sales-command-desk/006-objection-handling-desk-skill.zip
+b0bfe5560770a3063b66ac4d8fcde664f53976927920ba3af899ad9afe5d0eef  dist/packages/ai-engineering-command-desk/013-prompt-systems-desk-skill.zip
 b0ffda8f624f04abad2a2c394a356076a1a77f0c2da20a7d7079e5a2373e2163  dist/packages/web-development-command-desk/000-web-development-command-desk-skill.zip
 b13ed711b905afd13ef48d7969ae74dc888f8579e5e9277588b4de8e0b7fb9c4  dist/packages/customer-support-command-desk/015-support-metrics-reporting-desk-skill.zip
 b28b66ddaad3a7539b097abbb1e8e9e2c2b5a6ece9d3abc7feda6b7e18cfbfd9  dist/packages/finops-command-desk/019-waste-elimination-desk-skill.zip

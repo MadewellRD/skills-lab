@@ -4,7 +4,7 @@
 8bfee9adff843950748325283eaf7187bd0f7797c0623c44862a66fcf12bf98f  dist/packages/sdlc-command-desk/003-decommissioning-desk-skill.zip
 353055a2c6f4dcacff9c3db0ab7198b3d78fa8c948a45a76ef6fa0d466f9b554  dist/packages/sdlc-command-desk/004-deployment-desk-skill.zip
 6a5e3177808d0b3107ce772781389b25a0c98d18ae80513c05c9aa9273eb3c88  dist/packages/sdlc-command-desk/005-docs-traceability-desk-skill.zip
-9bd0c9cdce9cf9e91e53065ad6100fad77dc8d183ca083ad187d315e14ddaa62  dist/packages/sdlc-command-desk/006-goliveprompt-skill.zip
+6360c1116d516d2562c369b02ce9ca1feb5fe101d509a10983b15e21b534817d  dist/packages/sdlc-command-desk/006-goliveprompt-skill.zip
 013b573da399d1b6eb1514ce5266e89350997bcbd9b6f0c899b80fff58fe4caf  dist/packages/sdlc-command-desk/007-implementation-handoff-desk-skill.zip
 d2c4af6c98a267e56ee2e93f4c2cda6a5f7e79fa3ac7d5966c376c0aa24e4044  dist/packages/sdlc-command-desk/008-incident-response-desk-skill.zip
 048b4043360dbea92b4de96d8c9e76d9493ec7fbbd2892f85ec41a41ce807a41  dist/packages/sdlc-command-desk/009-issue-planning-desk-skill.zip

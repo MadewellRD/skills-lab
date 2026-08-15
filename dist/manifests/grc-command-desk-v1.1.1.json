@@ -1,0 +1,142 @@
+{
+  "suite": "grc-command-desk",
+  "title": "GRC Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 19,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "grc-command-desk",
+      "archive": "000-grc-command-desk-skill.zip",
+      "sha256": "0fddbcac6751d7b44ecbc551326b72cc9e5206d4fb0d887e7295e9663d2ac89e",
+      "bytes": 27864
+    },
+    {
+      "order": 1,
+      "skill": "attestation-reporting-desk",
+      "archive": "001-attestation-reporting-desk-skill.zip",
+      "sha256": "62914b6345ea94dea150454b0c2831419e21b276319941f8e897db66f123c4d9",
+      "bytes": 25296
+    },
+    {
+      "order": 2,
+      "skill": "audit-engagement-desk",
+      "archive": "002-audit-engagement-desk-skill.zip",
+      "sha256": "2b41b46a53e100e9fcc793d5e204c10adad0adb5199fcc7c78e4631bcf8c30cd",
+      "bytes": 25136
+    },
+    {
+      "order": 3,
+      "skill": "audit-readiness-desk",
+      "archive": "003-audit-readiness-desk-skill.zip",
+      "sha256": "32fec17afdcaa4494b3214f43cb34f4445fc8597d114176343ba20839d06c5e5",
+      "bytes": 24823
+    },
+    {
+      "order": 4,
+      "skill": "business-continuity-desk",
+      "archive": "004-business-continuity-desk-skill.zip",
+      "sha256": "2426ec0bd01b86db04f150124a2db81be0ee79c633d0808d34879bf7e6633db8",
+      "bytes": 25172
+    },
+    {
+      "order": 5,
+      "skill": "committee-reporting-desk",
+      "archive": "005-committee-reporting-desk-skill.zip",
+      "sha256": "cf4cdf3618a5bf1a3b8bad80a59fa056017fec5c979ff5d52d7c6dd20203dc5e",
+      "bytes": 25080
+    },
+    {
+      "order": 6,
+      "skill": "compliance-obligations-desk",
+      "archive": "006-compliance-obligations-desk-skill.zip",
+      "sha256": "2a39d50eb143dae5be7250263928dd0d2beecb616f73038b4b6987f7874ecbba",
+      "bytes": 24665
+    },
+    {
+      "order": 7,
+      "skill": "compliance-scoping-desk",
+      "archive": "007-compliance-scoping-desk-skill.zip",
+      "sha256": "4e754c2b76a0dd7aaa0a1027465e83639ce2d2ec3a8f75da4bf69e796f5fcbeb",
+      "bytes": 24453
+    },
+    {
+      "order": 8,
+      "skill": "continuous-control-monitoring-desk",
+      "archive": "008-continuous-control-monitoring-desk-skill.zip",
+      "sha256": "d4ea0b0b5fae385fcdeebef74ed312493f5e28614f4856b4634af68505e268a0",
+      "bytes": 25121
+    },
+    {
+      "order": 9,
+      "skill": "control-design-desk",
+      "archive": "009-control-design-desk-skill.zip",
+      "sha256": "d71385cccf6318d3f2487260b3535f46e8cc2bf6ae504ef6580b786f983df5b0",
+      "bytes": 24448
+    },
+    {
+      "order": 10,
+      "skill": "control-framework-crosswalk-desk",
+      "archive": "010-control-framework-crosswalk-desk-skill.zip",
+      "sha256": "6bb9627c2f49e9694ce1a78a1f78b5bf17a097d2bc1ce7bd9ccc4b5fef85340b",
+      "bytes": 24676
+    },
+    {
+      "order": 11,
+      "skill": "control-testing-desk",
+      "archive": "011-control-testing-desk-skill.zip",
+      "sha256": "ee135bf6542b2094ce325676ca1892954343bd4b9a15f62bad28b840253b1ff6",
+      "bytes": 25061
+    },
+    {
+      "order": 12,
+      "skill": "evidence-collection-desk",
+      "archive": "012-evidence-collection-desk-skill.zip",
+      "sha256": "b85830dc55c3cf64c96b44f16e61482592f39c7999265a4a17eae00b1451b5b1",
+      "bytes": 25030
+    },
+    {
+      "order": 13,
+      "skill": "exception-remediation-desk",
+      "archive": "013-exception-remediation-desk-skill.zip",
+      "sha256": "949a10d32e350d2f62fe7d40100c9c1b090cd5801a926aebd378c2861d5b8f76",
+      "bytes": 25492
+    },
+    {
+      "order": 14,
+      "skill": "internal-audit-desk",
+      "archive": "014-internal-audit-desk-skill.zip",
+      "sha256": "f3d5f65593ee00e036af1638e59f1aa2fd19d4eee088c8f1757fc325f84a3d39",
+      "bytes": 25217
+    },
+    {
+      "order": 15,
+      "skill": "policy-lifecycle-desk",
+      "archive": "015-policy-lifecycle-desk-skill.zip",
+      "sha256": "c17e065ad294520c2c64cd85a40223284c6db7da319cf27aaeb4b407dfae48bd",
+      "bytes": 24711
+    },
+    {
+      "order": 16,
+      "skill": "regulatory-change-desk",
+      "archive": "016-regulatory-change-desk-skill.zip",
+      "sha256": "1a0be7c9d46d22913e6457af991d0c10f19a74e8052b202f263833f09ea6604e",
+      "bytes": 25357
+    },
+    {
+      "order": 17,
+      "skill": "risk-register-desk",
+      "archive": "017-risk-register-desk-skill.zip",
+      "sha256": "7965bf49aa44dd8efc3f55c8934c4ec125be6eace00075556e9ee679840ec3e1",
+      "bytes": 24868
+    },
+    {
+      "order": 18,
+      "skill": "third-party-risk-desk",
+      "archive": "018-third-party-risk-desk-skill.zip",
+      "sha256": "25eec79ff5a924a4252a358ac167231c075c0ae96fa4ee9bc65f5b0166eeabf0",
+      "bytes": 25440
+    }
+  ]
+}

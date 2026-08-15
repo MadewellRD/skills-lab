@@ -1,0 +1,149 @@
+{
+  "suite": "data-command-desk",
+  "title": "Data Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "data-command-desk",
+      "archive": "000-data-command-desk-skill.zip",
+      "sha256": "c11eeae5961c86717e838cfdb826f500d856c6e8bfc21df1de05186f22319a56",
+      "bytes": 34262
+    },
+    {
+      "order": 1,
+      "skill": "analytics-enablement-desk",
+      "archive": "001-analytics-enablement-desk-skill.zip",
+      "sha256": "3e97fcbbd2f1418befaee6e7b3ece5b44ffa83af811e0203125849a4bde3589d",
+      "bytes": 29443
+    },
+    {
+      "order": 2,
+      "skill": "batch-orchestration-desk",
+      "archive": "002-batch-orchestration-desk-skill.zip",
+      "sha256": "750778f4f1a5747d6a5a7d7bfe9f1e78d9b702942856abcbfc2b979dd7a85286",
+      "bytes": 29464
+    },
+    {
+      "order": 3,
+      "skill": "data-contract-desk",
+      "archive": "003-data-contract-desk-skill.zip",
+      "sha256": "fe7df91e5920097b36b3bfc4505c7f1b7654084c7ab1d917aa2eaf2a6d6d7962",
+      "bytes": 29055
+    },
+    {
+      "order": 4,
+      "skill": "data-governance-access-desk",
+      "archive": "004-data-governance-access-desk-skill.zip",
+      "sha256": "b4254eb569984cbd9717ab06e88ca3aec5f5ae7bfc023d2e682f166fd3eb059c",
+      "bytes": 30070
+    },
+    {
+      "order": 5,
+      "skill": "data-incident-response-desk",
+      "archive": "005-data-incident-response-desk-skill.zip",
+      "sha256": "428c789ccb94169a1190fa8b06976fcf49909830232981ecaf483edcb43097c8",
+      "bytes": 30174
+    },
+    {
+      "order": 6,
+      "skill": "data-migration-desk",
+      "archive": "006-data-migration-desk-skill.zip",
+      "sha256": "ee7542960f9b314398eefa5bf932562db5164e05cc61dc2af77ad1605a675cad",
+      "bytes": 29950
+    },
+    {
+      "order": 7,
+      "skill": "data-modeling-desk",
+      "archive": "007-data-modeling-desk-skill.zip",
+      "sha256": "7d995ea1e0e899a8d5b7edbb615fd16ef5679ed36986bd3d2863f3ff0128ba46",
+      "bytes": 28849
+    },
+    {
+      "order": 8,
+      "skill": "data-observability-desk",
+      "archive": "008-data-observability-desk-skill.zip",
+      "sha256": "d2f5d5e2d19c88114af7d0f1f5ef60e2ef95056fc68fa177afb41af5b4cb1f90",
+      "bytes": 29003
+    },
+    {
+      "order": 9,
+      "skill": "data-platform-cost-desk",
+      "archive": "009-data-platform-cost-desk-skill.zip",
+      "sha256": "961b04ab95353769b365b796eaceca043ea45d6ec7063a20f8011fbed4da74ca",
+      "bytes": 29634
+    },
+    {
+      "order": 10,
+      "skill": "data-product-definition-desk",
+      "archive": "010-data-product-definition-desk-skill.zip",
+      "sha256": "44f1a8e1718c621b1692a9ca1233198e23b6a3bd0d32be59f365164e4cca6ec2",
+      "bytes": 28493
+    },
+    {
+      "order": 11,
+      "skill": "data-quality-desk",
+      "archive": "011-data-quality-desk-skill.zip",
+      "sha256": "cb02163e23d84dc456059c8ac97ddc611018f7be00a236f5866ec61fd44dadc9",
+      "bytes": 29094
+    },
+    {
+      "order": 12,
+      "skill": "data-retention-lifecycle-desk",
+      "archive": "012-data-retention-lifecycle-desk-skill.zip",
+      "sha256": "5fccb45cf685328cd8ff49b31b4b309bd4643b7bda27b624c154533768ab17d2",
+      "bytes": 29841
+    },
+    {
+      "order": 13,
+      "skill": "ingestion-pipeline-desk",
+      "archive": "013-ingestion-pipeline-desk-skill.zip",
+      "sha256": "9f03fc49bcc8a76ec0bf75b731efafe0a99b9d407e0f1200b9b1a93db6d1427d",
+      "bytes": 29410
+    },
+    {
+      "order": 14,
+      "skill": "lineage-catalog-desk",
+      "archive": "014-lineage-catalog-desk-skill.zip",
+      "sha256": "30e206a2943a701bf20642b5ae8d5008492d0be7ece94bd3c41b8c35d9118f1f",
+      "bytes": 29593
+    },
+    {
+      "order": 15,
+      "skill": "metric-semantic-layer-desk",
+      "archive": "015-metric-semantic-layer-desk-skill.zip",
+      "sha256": "6111d27c9af7776226f4a567e06d8394b06555abbedcef21c915d3c47baea369",
+      "bytes": 29971
+    },
+    {
+      "order": 16,
+      "skill": "source-system-profiling-desk",
+      "archive": "016-source-system-profiling-desk-skill.zip",
+      "sha256": "f0e4f52d0901e5d0fe6b1cd6e10336f5b8f257df7d79244fc76c2ec6fd4dcf92",
+      "bytes": 28923
+    },
+    {
+      "order": 17,
+      "skill": "streaming-pipeline-desk",
+      "archive": "017-streaming-pipeline-desk-skill.zip",
+      "sha256": "69c399a3fec317e7fb14e994c1b9a7cfaea5af4bdd910795ef568adb8d1ae064",
+      "bytes": 29467
+    },
+    {
+      "order": 18,
+      "skill": "transformation-layer-desk",
+      "archive": "018-transformation-layer-desk-skill.zip",
+      "sha256": "e63f8df4189d57bcb445f0464ee41c60f665c4034accb49215293d8d9d258933",
+      "bytes": 29443
+    },
+    {
+      "order": 19,
+      "skill": "warehouse-lakehouse-architecture-desk",
+      "archive": "019-warehouse-lakehouse-architecture-desk-skill.zip",
+      "sha256": "9b64bd6b21e034fceb350d6314ce814088c5fc72a5f029bc13eeea8a51a4018b",
+      "bytes": 29401
+    }
+  ]
+}

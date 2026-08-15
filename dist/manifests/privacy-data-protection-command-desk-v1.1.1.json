@@ -1,0 +1,142 @@
+{
+  "suite": "privacy-data-protection-command-desk",
+  "title": "Privacy Data Protection Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 19,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "privacy-data-protection-command-desk",
+      "archive": "000-privacy-data-protection-command-desk-skill.zip",
+      "sha256": "75d5f66b090a7f3d7add3dc8f1b6a2213b7333aff91c96e892bae7fc55e8eb8f",
+      "bytes": 38314
+    },
+    {
+      "order": 1,
+      "skill": "breach-assessment-desk",
+      "archive": "001-breach-assessment-desk-skill.zip",
+      "sha256": "af5f4f366d24984ed566e2627dcb0aaba74e72eb3e928a40f7680d7b5cff420e",
+      "bytes": 34535
+    },
+    {
+      "order": 2,
+      "skill": "breach-notification-desk",
+      "archive": "002-breach-notification-desk-skill.zip",
+      "sha256": "e9834a213b447c31520012052269b2caa99d90bdfe7ad0436a8f5fc16baef9f2",
+      "bytes": 34403
+    },
+    {
+      "order": 3,
+      "skill": "childrens-data-desk",
+      "archive": "003-childrens-data-desk-skill.zip",
+      "sha256": "c620a4de59fa50524c7387597cd47be46cee03f9e10933c0712032bf5e9d3167",
+      "bytes": 34242
+    },
+    {
+      "order": 4,
+      "skill": "consent-preference-desk",
+      "archive": "004-consent-preference-desk-skill.zip",
+      "sha256": "758b5cd456aa3057645667603efaa0dfbfb40a94dfb7b1a8ecede0046699ed90",
+      "bytes": 34534
+    },
+    {
+      "order": 5,
+      "skill": "cookie-tracking-governance-desk",
+      "archive": "005-cookie-tracking-governance-desk-skill.zip",
+      "sha256": "7acd3f881a5624faca020d007900d54fcaedd28dcc2e227d36a06c0b78a13373",
+      "bytes": 34889
+    },
+    {
+      "order": 6,
+      "skill": "cross-border-transfer-desk",
+      "archive": "006-cross-border-transfer-desk-skill.zip",
+      "sha256": "abd80a3495b33c25baf752b336e133b607fa3ad389f830aec0cd3eb86f573eb1",
+      "bytes": 34293
+    },
+    {
+      "order": 7,
+      "skill": "data-inventory-mapping-desk",
+      "archive": "007-data-inventory-mapping-desk-skill.zip",
+      "sha256": "79633a143cd69475e45e945dd2c77b3aaf2a75ea7a495c9708bf1ef296cee367",
+      "bytes": 34473
+    },
+    {
+      "order": 8,
+      "skill": "data-minimization-desk",
+      "archive": "008-data-minimization-desk-skill.zip",
+      "sha256": "e2b4d5ba53f4638ae1eb63a6776ae955c28a60f3dbaa6f12c04156a32df06f8d",
+      "bytes": 34786
+    },
+    {
+      "order": 9,
+      "skill": "dpia-desk",
+      "archive": "009-dpia-desk-skill.zip",
+      "sha256": "7548f5830b83e0cd2cd6914c9ccccd7f10e66f3ae9afa33e376bc4bcf1dab471",
+      "bytes": 34752
+    },
+    {
+      "order": 10,
+      "skill": "lawful-basis-desk",
+      "archive": "010-lawful-basis-desk-skill.zip",
+      "sha256": "7c3c911d7cb2e1ac364e46e2795f48d887d3046bce05f6644e708aa6e8ba7fb8",
+      "bytes": 34429
+    },
+    {
+      "order": 11,
+      "skill": "privacy-applicability-desk",
+      "archive": "011-privacy-applicability-desk-skill.zip",
+      "sha256": "41d197a09f3243c77022c9f21a7edc1e320be203b45bd153cbf84516b13bffb5",
+      "bytes": 34412
+    },
+    {
+      "order": 12,
+      "skill": "privacy-by-design-desk",
+      "archive": "012-privacy-by-design-desk-skill.zip",
+      "sha256": "41bd196ef06fbbc99415bcc367e19ae52493d308b95f14d645423797001840ba",
+      "bytes": 34192
+    },
+    {
+      "order": 13,
+      "skill": "privacy-program-metrics-desk",
+      "archive": "013-privacy-program-metrics-desk-skill.zip",
+      "sha256": "6196456df108aa942c1f007a673ba46cb6edce7a7f4741b6df9e4a3e9c221509",
+      "bytes": 33796
+    },
+    {
+      "order": 14,
+      "skill": "processor-vendor-agreement-desk",
+      "archive": "014-processor-vendor-agreement-desk-skill.zip",
+      "sha256": "5d6c3bc953673798ba4d4af333e4917f0e877abedda435cba2a85254bb916be4",
+      "bytes": 34444
+    },
+    {
+      "order": 15,
+      "skill": "retention-deletion-desk",
+      "archive": "015-retention-deletion-desk-skill.zip",
+      "sha256": "3d908e8e96d598fa08022a3197a3bc9df6e033bce5081d04526929422f7c2074",
+      "bytes": 34371
+    },
+    {
+      "order": 16,
+      "skill": "rights-request-fulfillment-desk",
+      "archive": "016-rights-request-fulfillment-desk-skill.zip",
+      "sha256": "c06b8ea81af6e8d87b9a0daab8286dd0785ad2ba2a3bd963ae0e4fb45c6e3f51",
+      "bytes": 34412
+    },
+    {
+      "order": 17,
+      "skill": "rights-request-intake-desk",
+      "archive": "017-rights-request-intake-desk-skill.zip",
+      "sha256": "0ff90257802d4a95ca3c74cea5580aee4ab49d73eeca8d56492cbefbb46f9926",
+      "bytes": 34065
+    },
+    {
+      "order": 18,
+      "skill": "transparency-notice-desk",
+      "archive": "018-transparency-notice-desk-skill.zip",
+      "sha256": "8cab8bc10f9861c03eeec25faf93fee9b8dffdbfc9cd148cf946e9139c9637ce",
+      "bytes": 34545
+    }
+  ]
+}

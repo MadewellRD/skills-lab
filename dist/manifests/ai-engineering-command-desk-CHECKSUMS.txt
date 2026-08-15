@@ -1,4 +1,4 @@
-5c2e77289790c8cee9c0444ea7dec7686961967697036ee402db2c098912da4d  dist/packages/ai-engineering-command-desk/000-ai-engineering-command-desk-skill.zip
+af05863566c421206b7c165d1ecd4be7e2f6b09e8b24fb7936eedd336f9879ca  dist/packages/ai-engineering-command-desk/000-ai-engineering-command-desk-skill.zip
 07bbd9053a53958cf3732af4cb98a21f8766c4bc5ee6c2971632b700ab5492c9  dist/packages/ai-engineering-command-desk/001-agent-architecture-desk-skill.zip
 81a3a9082c5fc357a1de4f919f6d6cf9ec5e3f854e8472369afbec7eff5b0f85  dist/packages/ai-engineering-command-desk/002-agent-observability-desk-skill.zip
 54c49d90d74cf4d35c0412a9c2492d6d3328c1be0cda3956bd3bcb8070bfa6b8  dist/packages/ai-engineering-command-desk/003-ai-incident-response-desk-skill.zip
@@ -11,7 +11,7 @@ f283e7aa2c4f7e283ac28fb5b47961fbdc29fc8a690b52e2ef1503569a5d63bf  dist/packages/
 bcd2fd25219353fb4317d82e98aeedc869c302fdbbc48f81efd9523242295f9d  dist/packages/ai-engineering-command-desk/010-fine-tuning-desk-skill.zip
 6b683364ba401464e976d62403b9b485abf2d3a17afa227d31c6a1bcbabeeb3b  dist/packages/ai-engineering-command-desk/011-inference-ops-desk-skill.zip
 c257e37bdd39c5980037af35d58a6a9baffccd3a087b71328280f97bef144269  dist/packages/ai-engineering-command-desk/012-model-selection-desk-skill.zip
-5658ada1a02b0280f46e4a936ae4f0e04d128d08d4d952f55ad1492989322ab5  dist/packages/ai-engineering-command-desk/013-prompt-systems-desk-skill.zip
+b0bfe5560770a3063b66ac4d8fcde664f53976927920ba3af899ad9afe5d0eef  dist/packages/ai-engineering-command-desk/013-prompt-systems-desk-skill.zip
 8ea4e9a40ef841b75938eb51ff040b4d98e6de7648a7c029e1caaf236153ddc3  dist/packages/ai-engineering-command-desk/014-red-team-eval-desk-skill.zip
 36e9db0e3ae9b7d393b203312ecd8f88286aef08f5f136296936b03090f63ff8  dist/packages/ai-engineering-command-desk/015-retrieval-rag-design-desk-skill.zip
 709d6eb2c8fda42c5c370407a4784e82ba6db44945dc756da808ec70e5746778  dist/packages/ai-engineering-command-desk/016-synthetic-data-desk-skill.zip

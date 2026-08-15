@@ -1,0 +1,149 @@
+{
+  "suite": "customer-success-command-desk",
+  "title": "Customer Success Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "customer-success-command-desk",
+      "archive": "000-customer-success-command-desk-skill.zip",
+      "sha256": "0c407a1e5a3a3c547914b6ccc3e2fecb0b70636c071382ef3f2634bb4c15993b",
+      "bytes": 38638
+    },
+    {
+      "order": 1,
+      "skill": "adoption-enablement-desk",
+      "archive": "001-adoption-enablement-desk-skill.zip",
+      "sha256": "d46d1128e7cb10f2f02c1fdaf8a8b629f8e400c28a6a34c84addd33836dfbd62",
+      "bytes": 33740
+    },
+    {
+      "order": 2,
+      "skill": "advocacy-reference-desk",
+      "archive": "002-advocacy-reference-desk-skill.zip",
+      "sha256": "38afcb51387485b7a47a949bdd686be7a51bc940784b564534ba1ebd39c15431",
+      "bytes": 34557
+    },
+    {
+      "order": 3,
+      "skill": "churn-risk-desk",
+      "archive": "003-churn-risk-desk-skill.zip",
+      "sha256": "b73c097e2022cbe58a0c8148fecbf84a4777228fef09e5f6a493a2f0f358c107",
+      "bytes": 34495
+    },
+    {
+      "order": 4,
+      "skill": "escalation-management-desk",
+      "archive": "004-escalation-management-desk-skill.zip",
+      "sha256": "0d4b16db8801a129804aa69d558e33abe3cbc11e2f38838f742e48bac86a4488",
+      "bytes": 34167
+    },
+    {
+      "order": 5,
+      "skill": "expansion-whitespace-desk",
+      "archive": "005-expansion-whitespace-desk-skill.zip",
+      "sha256": "0517b95ba9d6be2c9412214550ea96f2db035a4e9748ba79602055a4f45795eb",
+      "bytes": 34197
+    },
+    {
+      "order": 6,
+      "skill": "health-scoring-desk",
+      "archive": "006-health-scoring-desk-skill.zip",
+      "sha256": "ac41c0c1dc740c4bcf414c1013c1c57e55c0c7cd09b045cf09eddacb90d11b1b",
+      "bytes": 33734
+    },
+    {
+      "order": 7,
+      "skill": "onboarding-time-to-value-desk",
+      "archive": "007-onboarding-time-to-value-desk-skill.zip",
+      "sha256": "ef3fb3ded107db983e3a56148a62c8a8421ffef22358c21b9b7c8a5b546c8565",
+      "bytes": 33979
+    },
+    {
+      "order": 8,
+      "skill": "playbook-design-desk",
+      "archive": "008-playbook-design-desk-skill.zip",
+      "sha256": "473aa5d54057c48b333b163c982e77dc345a6cb40c5d65fa6f4969c09089525f",
+      "bytes": 33957
+    },
+    {
+      "order": 9,
+      "skill": "post-sale-handoff-desk",
+      "archive": "009-post-sale-handoff-desk-skill.zip",
+      "sha256": "e24a291894b243657511e871b87ab2539fc767523e3576c3be9904c8364045ac",
+      "bytes": 33682
+    },
+    {
+      "order": 10,
+      "skill": "qbr-ebr-desk",
+      "archive": "010-qbr-ebr-desk-skill.zip",
+      "sha256": "639c8ced84cd4085436f311ada42c3be0d0d5550f392292332204dfcfca1bc48",
+      "bytes": 34408
+    },
+    {
+      "order": 11,
+      "skill": "renewal-preparation-desk",
+      "archive": "011-renewal-preparation-desk-skill.zip",
+      "sha256": "ee283b0e5dd88bb0b555f02257f4b1365554e86b059a5eda5cf0a5044f001127",
+      "bytes": 34784
+    },
+    {
+      "order": 12,
+      "skill": "retention-portfolio-reporting-desk",
+      "archive": "012-retention-portfolio-reporting-desk-skill.zip",
+      "sha256": "ea3fdaff18ecd3a178af14026701a0a46f0c64b3c759140302434b02e445cc96",
+      "bytes": 34276
+    },
+    {
+      "order": 13,
+      "skill": "save-play-desk",
+      "archive": "013-save-play-desk-skill.zip",
+      "sha256": "d790569a6e59e17d8fe52176067fe347c3c97646f130aec02cec9b0c5442bc17",
+      "bytes": 34520
+    },
+    {
+      "order": 14,
+      "skill": "segmentation-coverage-desk",
+      "archive": "014-segmentation-coverage-desk-skill.zip",
+      "sha256": "db1959ea568668f09fd2ed5f81b9d8625a2998e8987bee729c144a3c7fb56d09",
+      "bytes": 33856
+    },
+    {
+      "order": 15,
+      "skill": "stakeholder-mapping-desk",
+      "archive": "015-stakeholder-mapping-desk-skill.zip",
+      "sha256": "e6f1f0ae23258d685164ccc789301136d96ed2d841f360640d87897a2c6083f0",
+      "bytes": 33681
+    },
+    {
+      "order": 16,
+      "skill": "success-planning-desk",
+      "archive": "016-success-planning-desk-skill.zip",
+      "sha256": "17a86b7ab0d9af654647a5ef5f0e539408d8e239d1705bee61a26760b99280ec",
+      "bytes": 33882
+    },
+    {
+      "order": 17,
+      "skill": "usage-analysis-desk",
+      "archive": "017-usage-analysis-desk-skill.zip",
+      "sha256": "d2b2c6562382e93c9706dfb68e6ed5fb7db066c089a6a157c809d36c25c188a8",
+      "bytes": 33662
+    },
+    {
+      "order": 18,
+      "skill": "value-realization-desk",
+      "archive": "018-value-realization-desk-skill.zip",
+      "sha256": "eaefaa8eb98ecd2d2b20d079a92584ea29ce687091069bb19075b317d4cfbf8c",
+      "bytes": 34394
+    },
+    {
+      "order": 19,
+      "skill": "voice-of-customer-desk",
+      "archive": "019-voice-of-customer-desk-skill.zip",
+      "sha256": "9d927f5bfc6bfdc1c4ac150fe2e31e9d2c73241007744dcb6bf97d51ea37c818",
+      "bytes": 34306
+    }
+  ]
+}

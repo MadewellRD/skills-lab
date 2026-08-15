@@ -1,0 +1,149 @@
+{
+  "suite": "sdlc-command-desk",
+  "title": "SDLC Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "sdlc-command-desk",
+      "archive": "000-sdlc-command-desk-skill.zip",
+      "sha256": "659983be900bfb9ccc599adbed57632e409d6db8ab70fb9593ceed4a4288b5de",
+      "bytes": 28755
+    },
+    {
+      "order": 1,
+      "skill": "architecture-design-desk",
+      "archive": "001-architecture-design-desk-skill.zip",
+      "sha256": "7481f3de6d5a19b1013d97db0c65c57fc6af1da13fd12f05b91009d5bf373637",
+      "bytes": 21534
+    },
+    {
+      "order": 2,
+      "skill": "ci-failure-desk",
+      "archive": "002-ci-failure-desk-skill.zip",
+      "sha256": "5c9b95504ccbac291857c44c378a85e79151e5196de685edf2f921179f143293",
+      "bytes": 22333
+    },
+    {
+      "order": 3,
+      "skill": "decommissioning-desk",
+      "archive": "003-decommissioning-desk-skill.zip",
+      "sha256": "8bfee9adff843950748325283eaf7187bd0f7797c0623c44862a66fcf12bf98f",
+      "bytes": 23663
+    },
+    {
+      "order": 4,
+      "skill": "deployment-desk",
+      "archive": "004-deployment-desk-skill.zip",
+      "sha256": "353055a2c6f4dcacff9c3db0ab7198b3d78fa8c948a45a76ef6fa0d466f9b554",
+      "bytes": 21963
+    },
+    {
+      "order": 5,
+      "skill": "docs-traceability-desk",
+      "archive": "005-docs-traceability-desk-skill.zip",
+      "sha256": "6a5e3177808d0b3107ce772781389b25a0c98d18ae80513c05c9aa9273eb3c88",
+      "bytes": 20847
+    },
+    {
+      "order": 6,
+      "skill": "goliveprompt",
+      "archive": "006-goliveprompt-skill.zip",
+      "sha256": "6360c1116d516d2562c369b02ce9ca1feb5fe101d509a10983b15e21b534817d",
+      "bytes": 16624
+    },
+    {
+      "order": 7,
+      "skill": "implementation-handoff-desk",
+      "archive": "007-implementation-handoff-desk-skill.zip",
+      "sha256": "013b573da399d1b6eb1514ce5266e89350997bcbd9b6f0c899b80fff58fe4caf",
+      "bytes": 62129
+    },
+    {
+      "order": 8,
+      "skill": "incident-response-desk",
+      "archive": "008-incident-response-desk-skill.zip",
+      "sha256": "d2c4af6c98a267e56ee2e93f4c2cda6a5f7e79fa3ac7d5966c376c0aa24e4044",
+      "bytes": 17209
+    },
+    {
+      "order": 9,
+      "skill": "issue-planning-desk",
+      "archive": "009-issue-planning-desk-skill.zip",
+      "sha256": "048b4043360dbea92b4de96d8c9e76d9493ec7fbbd2892f85ec41a41ce807a41",
+      "bytes": 18680
+    },
+    {
+      "order": 10,
+      "skill": "maintenance-refactor-desk",
+      "archive": "010-maintenance-refactor-desk-skill.zip",
+      "sha256": "aad880681050f0b135b3b8f53ce8a79bdd8457351632151fe33c3079786639e6",
+      "bytes": 22966
+    },
+    {
+      "order": 11,
+      "skill": "observability-readiness-desk",
+      "archive": "011-observability-readiness-desk-skill.zip",
+      "sha256": "793bdc523938851e20a9e346ec09836ac2bb65ea9d1433696b9e310f241d602e",
+      "bytes": 20962
+    },
+    {
+      "order": 12,
+      "skill": "product-requirements-desk",
+      "archive": "012-product-requirements-desk-skill.zip",
+      "sha256": "27ca14981e7b5b29f309ccfb0b509163125374a493f8d24af5812c48dc42481b",
+      "bytes": 18102
+    },
+    {
+      "order": 13,
+      "skill": "release-operations-desk",
+      "archive": "013-release-operations-desk-skill.zip",
+      "sha256": "f6695eefa4a590aab17add0291d1ecc9c482dc41cca2ce200737bc9101705427",
+      "bytes": 20750
+    },
+    {
+      "order": 14,
+      "skill": "retrospective-desk",
+      "archive": "014-retrospective-desk-skill.zip",
+      "sha256": "ba360e07f4679c8f471ee269b9b7124574408a3924acec2dec633bf0ba19e3c4",
+      "bytes": 18679
+    },
+    {
+      "order": 15,
+      "skill": "review-quality-desk",
+      "archive": "015-review-quality-desk-skill.zip",
+      "sha256": "f83ac21918fd41904be2570fc294b687485594a8125977ebd35a37a22bdf1b22",
+      "bytes": 17583
+    },
+    {
+      "order": 16,
+      "skill": "security-threat-desk",
+      "archive": "016-security-threat-desk-skill.zip",
+      "sha256": "f2d3f84335f7a5f2483d66eb0c63bc960c3aceb3e64ad83c439550a7cbce0dfd",
+      "bytes": 21919
+    },
+    {
+      "order": 17,
+      "skill": "technical-discovery-desk",
+      "archive": "017-technical-discovery-desk-skill.zip",
+      "sha256": "be734b6eedfe0d482a4730071c70ce2b7b06a2738460e05c20095b98b921fe08",
+      "bytes": 21111
+    },
+    {
+      "order": 18,
+      "skill": "test-strategy-desk",
+      "archive": "018-test-strategy-desk-skill.zip",
+      "sha256": "4a6e57003b69d3a66294e625d5e8c346e79a6c6205d18bde8f3ba286a5bcde84",
+      "bytes": 22713
+    },
+    {
+      "order": 19,
+      "skill": "verification-desk",
+      "archive": "019-verification-desk-skill.zip",
+      "sha256": "eaaf92cc4b7c205974885f93660b802b2e63ea17dce1baa71ce52b6b82453ea8",
+      "bytes": 18786
+    }
+  ]
+}

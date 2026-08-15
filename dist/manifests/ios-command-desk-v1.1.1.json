@@ -1,0 +1,107 @@
+{
+  "suite": "ios-command-desk",
+  "title": "iOS Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 14,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "ios-command-desk",
+      "archive": "000-ios-command-desk-skill.zip",
+      "sha256": "3f995e419a4b28ce1e9b9b98ef8384901b2632fab516d174f8d7a6e0bc6406e1",
+      "bytes": 8851
+    },
+    {
+      "order": 1,
+      "skill": "ios-app-engineering-desk",
+      "archive": "001-ios-app-engineering-desk-skill.zip",
+      "sha256": "08ac790f984bc39ce0d52569a8c49846eac7640ed28346e3406c3df3103303f9",
+      "bytes": 7670
+    },
+    {
+      "order": 2,
+      "skill": "ios-architecture-design-desk",
+      "archive": "002-ios-architecture-design-desk-skill.zip",
+      "sha256": "1d3bfc8d323b40ed28f3a56f93e6cb9f97333b73faa32b5caddf7c8674c04128",
+      "bytes": 6698
+    },
+    {
+      "order": 3,
+      "skill": "ios-backend-integration-desk",
+      "archive": "003-ios-backend-integration-desk-skill.zip",
+      "sha256": "584fcdde485ede0ed9cc15484689b28af32861a84e14f334bd2501cfb4af449f",
+      "bytes": 6496
+    },
+    {
+      "order": 4,
+      "skill": "ios-game-engineering-desk",
+      "archive": "004-ios-game-engineering-desk-skill.zip",
+      "sha256": "96920c8547689823e5a912e53a5fac552315b1b164e7ac631f474675f510d7c7",
+      "bytes": 7799
+    },
+    {
+      "order": 5,
+      "skill": "ios-maintenance-growth-desk",
+      "archive": "005-ios-maintenance-growth-desk-skill.zip",
+      "sha256": "ea1acfa2175e73af6431c9e13e7f6cff80807e151492499f91240cc8cdfff16d",
+      "bytes": 6826
+    },
+    {
+      "order": 6,
+      "skill": "ios-observability-liveops-desk",
+      "archive": "006-ios-observability-liveops-desk-skill.zip",
+      "sha256": "85350a74aa2d296c516cc883458f208fc9d066c68ded75958e56a46e18789f93",
+      "bytes": 6446
+    },
+    {
+      "order": 7,
+      "skill": "ios-performance-optimization-desk",
+      "archive": "007-ios-performance-optimization-desk-skill.zip",
+      "sha256": "50b9c39433cfaf1c9f5288463d1e6030d18d2441da736f2f488c131b3ca5ceb1",
+      "bytes": 6502
+    },
+    {
+      "order": 8,
+      "skill": "ios-product-requirements-desk",
+      "archive": "008-ios-product-requirements-desk-skill.zip",
+      "sha256": "913fc8c26587e8a3fca337cb0470116bcf5c4b95b505bae0e43123ef2b47e012",
+      "bytes": 6516
+    },
+    {
+      "order": 9,
+      "skill": "ios-release-app-store-ops-desk",
+      "archive": "009-ios-release-app-store-ops-desk-skill.zip",
+      "sha256": "bd373cb6cf676b38f0f74a2e1be2474702b6c2340196a074d37cf740b701d1e2",
+      "bytes": 7120
+    },
+    {
+      "order": 10,
+      "skill": "ios-security-privacy-desk",
+      "archive": "010-ios-security-privacy-desk-skill.zip",
+      "sha256": "cbaeb7f56948100cf7f3f0c9da0f6f7397b71253f07e3f50a04337a0543701c3",
+      "bytes": 7067
+    },
+    {
+      "order": 11,
+      "skill": "ios-technical-discovery-desk",
+      "archive": "011-ios-technical-discovery-desk-skill.zip",
+      "sha256": "edbf69a0677ab8a16fe69c34500238f066942e31973420959c7975429f1a8581",
+      "bytes": 6569
+    },
+    {
+      "order": 12,
+      "skill": "ios-testing-qa-desk",
+      "archive": "012-ios-testing-qa-desk-skill.zip",
+      "sha256": "310fadd901f98a0254edd2b76515c4e2b3983cb3ce3fc2b00b514ddbc9a64491",
+      "bytes": 6485
+    },
+    {
+      "order": 13,
+      "skill": "ios-ui-ux-desk",
+      "archive": "013-ios-ui-ux-desk-skill.zip",
+      "sha256": "afeb1323d47070ae2d67f669d35b832f0755b9a20d7566b6a29d43470f4eb61b",
+      "bytes": 6657
+    }
+  ]
+}

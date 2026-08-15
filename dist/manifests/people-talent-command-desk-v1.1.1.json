@@ -1,0 +1,149 @@
+{
+  "suite": "people-talent-command-desk",
+  "title": "People Talent Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "people-talent-command-desk",
+      "archive": "000-people-talent-command-desk-skill.zip",
+      "sha256": "27318c65d86186633cbe6a25f66b28ec22cf82c0c1a6f48a579e6deeefb642a2",
+      "bytes": 48316
+    },
+    {
+      "order": 1,
+      "skill": "candidate-evaluation-debrief-desk",
+      "archive": "001-candidate-evaluation-debrief-desk-skill.zip",
+      "sha256": "0a110189ea774f84ca4c14f677da8dd95ee8e7f6bf0fa9a07f95009145e18c1e",
+      "bytes": 40116
+    },
+    {
+      "order": 2,
+      "skill": "career-framework-progression-desk",
+      "archive": "002-career-framework-progression-desk-skill.zip",
+      "sha256": "6a9864f4fa82dee24e0f00844c93c24ee3796abf6fca436f340f8058ef021fee",
+      "bytes": 40427
+    },
+    {
+      "order": 3,
+      "skill": "compensation-review-cycle-desk",
+      "archive": "003-compensation-review-cycle-desk-skill.zip",
+      "sha256": "ec0aa8ee09ecca82901c60c141f096a1b8190713ef343a61012ee71f7d036050",
+      "bytes": 41283
+    },
+    {
+      "order": 4,
+      "skill": "employee-relations-desk",
+      "archive": "004-employee-relations-desk-skill.zip",
+      "sha256": "ab4135c9229bcdd08f4ba828d25150456467cc0b62d7ad39ffb8c4ff6056d627",
+      "bytes": 41457
+    },
+    {
+      "order": 5,
+      "skill": "engagement-retention-desk",
+      "archive": "005-engagement-retention-desk-skill.zip",
+      "sha256": "f0d3d932759c2e029673880394233f64ee198f1d6c17192a9a599ae9cdb1f22f",
+      "bytes": 40815
+    },
+    {
+      "order": 6,
+      "skill": "job-architecture-leveling-desk",
+      "archive": "006-job-architecture-leveling-desk-skill.zip",
+      "sha256": "82e30d85e5f2453ee11ed272b1ee969ebb9d2fed24eabbe9bfccdcfad86a2133",
+      "bytes": 40194
+    },
+    {
+      "order": 7,
+      "skill": "leave-accommodation-desk",
+      "archive": "007-leave-accommodation-desk-skill.zip",
+      "sha256": "992aed32a6e58a4cf879da583de9f19f4c5c4d248bbd44bbee65a6933eb71d87",
+      "bytes": 41545
+    },
+    {
+      "order": 8,
+      "skill": "manager-enablement-desk",
+      "archive": "008-manager-enablement-desk-skill.zip",
+      "sha256": "1e3fca355a496a8620087395b45d64a9f2a624ff1fbc366be048dcd8954c4f9b",
+      "bytes": 40923
+    },
+    {
+      "order": 9,
+      "skill": "offboarding-separation-desk",
+      "archive": "009-offboarding-separation-desk-skill.zip",
+      "sha256": "1a2963a69c64b81dd29576600f3db383fbe42449358b24c12211e8d6c79e7027",
+      "bytes": 41923
+    },
+    {
+      "order": 10,
+      "skill": "offer-compensation-desk",
+      "archive": "010-offer-compensation-desk-skill.zip",
+      "sha256": "2554ce00d065f7ab2e442a53dc62ced3a5b137a312bd13c555ababca8c4e959f",
+      "bytes": 40360
+    },
+    {
+      "order": 11,
+      "skill": "onboarding-desk",
+      "archive": "011-onboarding-desk-skill.zip",
+      "sha256": "0405d35dd2ac41f9d86605421ea79da162cbdbb3f58c0f5d665a563c4fd50c8f",
+      "bytes": 40082
+    },
+    {
+      "order": 12,
+      "skill": "people-analytics-desk",
+      "archive": "012-people-analytics-desk-skill.zip",
+      "sha256": "69f2d181ec1f50509faba87c1f2c2fae5fbbcc81d4dd2581a7b0c5d5b6527502",
+      "bytes": 41074
+    },
+    {
+      "order": 13,
+      "skill": "people-operations-records-desk",
+      "archive": "013-people-operations-records-desk-skill.zip",
+      "sha256": "efce87057bcf4af7514ded314d2267ad8cf6e487c760e0bd957ec1bb0e196bba",
+      "bytes": 40406
+    },
+    {
+      "order": 14,
+      "skill": "performance-review-calibration-desk",
+      "archive": "014-performance-review-calibration-desk-skill.zip",
+      "sha256": "286fc31e94f3e9d69c9b8a78e77625b767824352ce92db9158bec722149257f5",
+      "bytes": 40488
+    },
+    {
+      "order": 15,
+      "skill": "policy-handbook-desk",
+      "archive": "015-policy-handbook-desk-skill.zip",
+      "sha256": "c004d7082aab481c82af77e71daf1929ba9469589bd82ce6c2b1d90d9d632ca2",
+      "bytes": 40809
+    },
+    {
+      "order": 16,
+      "skill": "sourcing-pipeline-desk",
+      "archive": "016-sourcing-pipeline-desk-skill.zip",
+      "sha256": "de2ac01a2c7515a19228ac64616ea43c09c090903d8c470e641df645d994b35b",
+      "bytes": 40168
+    },
+    {
+      "order": 17,
+      "skill": "structured-interview-design-desk",
+      "archive": "017-structured-interview-design-desk-skill.zip",
+      "sha256": "c80da2ac55190fb1ab4b8150ea2a210f9b858ac1048f0cbf1ab54ca1a2e7b529",
+      "bytes": 40706
+    },
+    {
+      "order": 18,
+      "skill": "talent-review-succession-desk",
+      "archive": "018-talent-review-succession-desk-skill.zip",
+      "sha256": "ddc3027714b94d6ae9961394721e3f39cff844669fd25547ddba89cb667f0e09",
+      "bytes": 40574
+    },
+    {
+      "order": 19,
+      "skill": "workforce-planning-desk",
+      "archive": "019-workforce-planning-desk-skill.zip",
+      "sha256": "5b2c53b8281b37da028c7e9764afbe639b40ad34afb1344b985075c33e14b871",
+      "bytes": 39999
+    }
+  ]
+}

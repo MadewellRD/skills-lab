@@ -1,0 +1,107 @@
+{
+  "suite": "web-development-command-desk",
+  "title": "Web Development Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 14,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "web-development-command-desk",
+      "archive": "000-web-development-command-desk-skill.zip",
+      "sha256": "b0ffda8f624f04abad2a2c394a356076a1a77f0c2da20a7d7079e5a2373e2163",
+      "bytes": 10068
+    },
+    {
+      "order": 1,
+      "skill": "accessibility-seo-desk",
+      "archive": "001-accessibility-seo-desk-skill.zip",
+      "sha256": "0ee23ea75e0cac8b489bea0166d5e34994d0e5db4126fbe84caaece92621c67f",
+      "bytes": 7229
+    },
+    {
+      "order": 2,
+      "skill": "backend-integration-desk",
+      "archive": "002-backend-integration-desk-skill.zip",
+      "sha256": "97c50ceb9dc040330616f7230cd225b4d917cbca119037d7cab604febebf7642",
+      "bytes": 6997
+    },
+    {
+      "order": 3,
+      "skill": "cms-content-operations-desk",
+      "archive": "003-cms-content-operations-desk-skill.zip",
+      "sha256": "6b0627273be1c22d769390ba32876d5948024f8955c81bc30bdc3a5b224c2861",
+      "bytes": 6959
+    },
+    {
+      "order": 4,
+      "skill": "frontend-engineering-desk",
+      "archive": "004-frontend-engineering-desk-skill.zip",
+      "sha256": "4616c63c462c515a4151321a063fae9f2351289f862434b96207ed832684819a",
+      "bytes": 7050
+    },
+    {
+      "order": 5,
+      "skill": "information-architecture-desk",
+      "archive": "005-information-architecture-desk-skill.zip",
+      "sha256": "6fd42ab360b09bf5cb902032490f1314c9ccdec18217482bfdf8b9dba2da9b6c",
+      "bytes": 7022
+    },
+    {
+      "order": 6,
+      "skill": "site-product-requirements-desk",
+      "archive": "006-site-product-requirements-desk-skill.zip",
+      "sha256": "81c3ec7a52b35beda3577c46792a93b5b3a405f5c0e636ce4ac66da6c5a54bb3",
+      "bytes": 7054
+    },
+    {
+      "order": 7,
+      "skill": "ux-ui-design-system-desk",
+      "archive": "007-ux-ui-design-system-desk-skill.zip",
+      "sha256": "140aa19181f76b969c57477c2760a72f0d2a5899d585acdda9d987161dd09929",
+      "bytes": 6891
+    },
+    {
+      "order": 8,
+      "skill": "web-maintenance-growth-desk",
+      "archive": "008-web-maintenance-growth-desk-skill.zip",
+      "sha256": "15eeab5afc32da968dae3bebb5a2a5be60fc5def1778f9acbb2c653fd3c64524",
+      "bytes": 7121
+    },
+    {
+      "order": 9,
+      "skill": "web-observability-desk",
+      "archive": "009-web-observability-desk-skill.zip",
+      "sha256": "82648f6c96fd03bc3e0ba18570a988ca649115df5794e90fe9c614a13ab16461",
+      "bytes": 6897
+    },
+    {
+      "order": 10,
+      "skill": "web-performance-desk",
+      "archive": "010-web-performance-desk-skill.zip",
+      "sha256": "f6ee4361a6f8ebfca484315cea189472911811804956450d6aeb08399db6ac2f",
+      "bytes": 6907
+    },
+    {
+      "order": 11,
+      "skill": "web-release-deployment-desk",
+      "archive": "011-web-release-deployment-desk-skill.zip",
+      "sha256": "6108a779b0aedbd70944795663a0899228e4bc99feb1d9d795ba68e24f06a011",
+      "bytes": 7167
+    },
+    {
+      "order": 12,
+      "skill": "web-security-secops-desk",
+      "archive": "012-web-security-secops-desk-skill.zip",
+      "sha256": "6a3cb6f7251ffdef92731bdfa518ec2931484d5e66ee30438ad4fb91964c8b8d",
+      "bytes": 7080
+    },
+    {
+      "order": 13,
+      "skill": "web-testing-qa-desk",
+      "archive": "013-web-testing-qa-desk-skill.zip",
+      "sha256": "310736141cbc81e494b7798ab4764f795349defdd70d7d38b1934d0183f8cdde",
+      "bytes": 6857
+    }
+  ]
+}

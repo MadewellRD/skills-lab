@@ -1,0 +1,149 @@
+{
+  "suite": "platform-engineering-command-desk",
+  "title": "Platform Engineering Command Desk",
+  "version": "v1.1.1",
+  "date": "2026-07-25",
+  "skill_count": 20,
+  "artifacts": [
+    {
+      "order": 0,
+      "skill": "platform-engineering-command-desk",
+      "archive": "000-platform-engineering-command-desk-skill.zip",
+      "sha256": "906506fa969848ab9c3233b1fbae55a19b4d735cfd79b189314e4dc20892b489",
+      "bytes": 22631
+    },
+    {
+      "order": 1,
+      "skill": "cicd-platform-desk",
+      "archive": "001-cicd-platform-desk-skill.zip",
+      "sha256": "9ac85de848b15074e5fe88b57126c7d5343fe55f5258a192088c907cefc58db5",
+      "bytes": 20305
+    },
+    {
+      "order": 2,
+      "skill": "developer-experience-research-desk",
+      "archive": "002-developer-experience-research-desk-skill.zip",
+      "sha256": "1c4559b1fe5669b94fce072300ea7761dcd1ef17801153c0f767440a6957ad79",
+      "bytes": 19760
+    },
+    {
+      "order": 3,
+      "skill": "environment-management-desk",
+      "archive": "003-environment-management-desk-skill.zip",
+      "sha256": "f4ebbcffbd8161d43d41ce1b3a0b761b9920d703480f09b631117bf90ba17b3b",
+      "bytes": 20057
+    },
+    {
+      "order": 4,
+      "skill": "golden-path-design-desk",
+      "archive": "004-golden-path-design-desk-skill.zip",
+      "sha256": "624c8ff297c09f722d7da4f7bc3113221be021829129e5186a376d93dbc3ba93",
+      "bytes": 19487
+    },
+    {
+      "order": 5,
+      "skill": "platform-adoption-migration-desk",
+      "archive": "005-platform-adoption-migration-desk-skill.zip",
+      "sha256": "74ac7818c4536e8eaff004399156c3b201ca45054bdfb7f5260ff9043e88ec75",
+      "bytes": 19623
+    },
+    {
+      "order": 6,
+      "skill": "platform-api-contract-desk",
+      "archive": "006-platform-api-contract-desk-skill.zip",
+      "sha256": "ecf85786cae29ae8df42db9552d3caf4948c7840db84dbe455b700243084a084",
+      "bytes": 19770
+    },
+    {
+      "order": 7,
+      "skill": "platform-change-rollout-desk",
+      "archive": "007-platform-change-rollout-desk-skill.zip",
+      "sha256": "bd110a5344113c5264778430fb8d28940bdf975e691a46ff58dba31d1ade27cd",
+      "bytes": 19672
+    },
+    {
+      "order": 8,
+      "skill": "platform-cost-attribution-desk",
+      "archive": "008-platform-cost-attribution-desk-skill.zip",
+      "sha256": "f7f4fa5e8ea484894d977a17403e084fe84ec3a02e003f610a54eaf4b1672407",
+      "bytes": 19708
+    },
+    {
+      "order": 9,
+      "skill": "platform-deprecation-sunset-desk",
+      "archive": "009-platform-deprecation-sunset-desk-skill.zip",
+      "sha256": "baa35428ec954a655c664da2d0369856658f7437b6611271083694f2305436f0",
+      "bytes": 20049
+    },
+    {
+      "order": 10,
+      "skill": "platform-governance-desk",
+      "archive": "010-platform-governance-desk-skill.zip",
+      "sha256": "cc26db6b03f8867f1dc1ce3f1d29b2a10083c924349f8f47df518fb009eda7f5",
+      "bytes": 19614
+    },
+    {
+      "order": 11,
+      "skill": "platform-guardrails-policy-desk",
+      "archive": "011-platform-guardrails-policy-desk-skill.zip",
+      "sha256": "fa06a5b93d86b7cb4406574e95ea59d302ea3e52f801e20bfecd2ab61184ff1d",
+      "bytes": 19356
+    },
+    {
+      "order": 12,
+      "skill": "platform-observability-desk",
+      "archive": "012-platform-observability-desk-skill.zip",
+      "sha256": "0b03fbaafc6b371a562c53161cab4de001649c9e4a8f44e2ca82a4219084d932",
+      "bytes": 19373
+    },
+    {
+      "order": 13,
+      "skill": "platform-product-intake-desk",
+      "archive": "013-platform-product-intake-desk-skill.zip",
+      "sha256": "526f8ab0d42102fe8455b6b7dedca002d0a52ada5cdb69fdb87f7a9abb456303",
+      "bytes": 19504
+    },
+    {
+      "order": 14,
+      "skill": "platform-slo-reliability-desk",
+      "archive": "014-platform-slo-reliability-desk-skill.zip",
+      "sha256": "140a07385a78e730df5d0662f9e1b4ca528428d6fabf228239bb5588dee912a6",
+      "bytes": 19443
+    },
+    {
+      "order": 15,
+      "skill": "platform-support-operations-desk",
+      "archive": "015-platform-support-operations-desk-skill.zip",
+      "sha256": "44482c74626207f27688bf340fb05cb34c0c5aa90854862cb3607ddc4c10f4cb",
+      "bytes": 19461
+    },
+    {
+      "order": 16,
+      "skill": "scaffolding-templates-desk",
+      "archive": "016-scaffolding-templates-desk-skill.zip",
+      "sha256": "aec5e2831b5cdcee520d0bf62fbc4d30b49580c44c0191e493971d2f1529fc80",
+      "bytes": 19947
+    },
+    {
+      "order": 17,
+      "skill": "self-service-infrastructure-desk",
+      "archive": "017-self-service-infrastructure-desk-skill.zip",
+      "sha256": "795be5a3a9099cfefcd3d6c6073f6dd1eba6dc160953236610b5399db7c5d6a7",
+      "bytes": 20128
+    },
+    {
+      "order": 18,
+      "skill": "service-catalog-desk",
+      "archive": "018-service-catalog-desk-skill.zip",
+      "sha256": "df2812939cc62682d27c4429beef2b15d57c0e431507489f55df42f5bfd644db",
+      "bytes": 19607
+    },
+    {
+      "order": 19,
+      "skill": "tenancy-isolation-desk",
+      "archive": "019-tenancy-isolation-desk-skill.zip",
+      "sha256": "d88ae372f3c5a6f48b6fb98680a89143cf1481a35136e1087005bcde9f4c14a3",
+      "bytes": 19980
+    }
+  ]
+}
