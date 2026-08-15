@@ -70,7 +70,7 @@ Where an item is unresolved, state the assumed value inline and mark it as an as
 
 ## Connector grounding
 
-Use SignalDesk for local repo state, worktree status, local files, and `work/reports-in` or `work/reports-out` when available. Use GitHub for branch, PR, commit, remote file, changed-file, merged-state, and check status truth. Use web research for current industry standards when the desk domain depends on external AI, MLOps, safety, observability, or provider guidance.
+Use the local filesystem connector for repo state, worktree status, local files, and `work/reports-in` or `work/reports-out` when available. Use GitHub for branch, PR, commit, remote file, changed-file, merged-state, and check status truth. Use web research for current industry standards when the desk domain depends on external AI, MLOps, safety, observability, or provider guidance.
 
 Treat conflicts in this order: repo evidence and eval/telemetry first, explicit user decision second, official standards/provider docs third, practitioner guidance fourth. Do not smooth over conflicts; preserve them as hard halts or soft gaps.
 

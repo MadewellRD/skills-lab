@@ -30,7 +30,11 @@ BIB = re.compile(r'(source-inventory|standards-source-map|source-analysis)\.md$'
 leak = []
 for f in glob.glob('dist/skills/**/*.md', recursive=True):
     if BIB.search(f): continue
-    for m in re.findall(r'\b(ChatGPT|Codex|Claude Code)\b', open(f, encoding='utf-8').read()):
+    # SignalDesk is not a model vendor, but naming it is the same defect: a specific
+    # product hardcoded where a capability belongs. It put an internal tool name into a
+    # public package, so it is gated here rather than left to review.
+    for m in re.findall(r'\b(ChatGPT|Codex|Claude Code|SignalDesk)\b',
+                        open(f, encoding='utf-8').read()):
         leak.append((os.path.basename(f), m))
 print(f"  vendor mentions in generic build: {len(leak)}   (bibliography files exempt)")
 for f, m in leak[:8]: print(f"    {f}: {m}")

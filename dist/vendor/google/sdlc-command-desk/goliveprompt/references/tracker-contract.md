@@ -6,30 +6,30 @@ The tracker artifact reads from `{SPEC_DIR}/tracker.json`. The file is the state
 
 ```json
 {
-  "project": "MrdOS",
+  "project": "EXAMPLE-APP",
   "generated_at": "2026-07-24T00:00:00Z",
   "milestones": [
-    { "id": "M1", "name": "Governed approvals", "sprint": 1 }
+    { "id": "M1", "name": "Milestone name", "sprint": 1 }
   ],
   "tasks": [
     {
       "id": "GL-01",
-      "title": "Web 428 step-up re-auth round trip",
+      "title": "Short imperative description of the work",
       "milestone": "M1",
       "sprint": 1,
       "status": "in_progress",
-      "acceptance": "Stale session on an Orange approval blocks, re-auths, and completes in the browser",
+      "acceptance": "A verifiable gate, stated as observable behaviour",
       "depends_on": [],
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "npm run build exit 0; live round trip pending GL-02 flag flip"
+      "evidence": "the command that ran, its result, and what is still outstanding"
     }
   ],
   "commits": [
     {
       "sha": "a1b2c3d",
-      "message": "add web step-up re-auth round trip for governed approvals",
+      "message": "conventional commit subject",
       "date": "2026-07-24T00:00:00Z",
       "task": "GL-01"
     }

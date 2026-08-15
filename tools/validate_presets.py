@@ -6,8 +6,8 @@
 An unpinned REPO is not a stylistic problem. `list_roots` returns overlapping roots, and
 more than one of them can contain a directory with the project's name, so an instruction
 to resolve the root by search is re-decided every session and can land on a dormant clone.
-That defect shipped, was found in the field, and was fixed by pinning mrdOS. This check
-exists so it cannot come back quietly.
+That defect shipped and was found in the field. This check exists so it cannot come back
+quietly.
 
 A project may be left unpinned deliberately, but only out loud: it needs an entry in the
 UNPINNED_ALLOWANCES block inside presets.md naming the project and the reason. An
@@ -34,9 +34,9 @@ REPO_LINE = re.compile(r"^REPO\s*=\s*(\S.*?)\s*$")
 #   <!-- UNPINNED_ALLOWANCE: PROJECT_NAME -- reason text -->
 #
 # The separator must be a SPACED " -- ". An earlier version matched the project as
-# [^-]*, which silently failed on ROGUE-OPS because the hyphen in the project name ate
-# the delimiter: the allowance was recorded, looked correct, and did nothing. Requiring
-# surrounding whitespace lets a project name contain hyphens.
+# [^-]*, which silently failed on any project name containing a hyphen: the hyphen ate
+# the delimiter, so the allowance was recorded, looked correct, and did nothing.
+# Requiring surrounding whitespace lets a project name contain hyphens.
 ALLOWANCE = re.compile(
     r"<!--\s*UNPINNED_ALLOWANCE:\s*(?P<project>\S+)\s+--\s+(?P<reason>.+?)\s*-->",
     re.DOTALL,
@@ -60,10 +60,30 @@ def parse_blocks(text: str) -> list[tuple[str, str, int]]:
     return blocks
 
 
+def strip_fences(text: str) -> str:
+    """Blank out fenced code blocks, preserving line count.
+
+    presets.md documents its own allowance syntax inside a fence. That example is a
+    template, not a declaration, and grading it made the file fail its own check by
+    reporting an allowance for the placeholder project name.
+    """
+    out, fenced = [], False
+    for line in text.splitlines():
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            out.append("")
+            continue
+        out.append("" if fenced else line)
+    return "\n".join(out)
+
+
 def parse_allowances(text: str) -> dict[str, str]:
-    """Project name -> reason, for deliberately unpinned projects."""
+    """Project name -> reason, for deliberately unpinned projects.
+
+    Read from prose only. An allowance shown inside a fence is documentation.
+    """
     out: dict[str, str] = {}
-    for m in ALLOWANCE.finditer(text):
+    for m in ALLOWANCE.finditer(strip_fences(text)):
         reason = " ".join(m.group("reason").split())
         if reason:
             out[m.group("project").strip().upper()] = reason
@@ -88,7 +108,11 @@ def main() -> int:
     print(f"Checking {rel}")
 
     for project, value, line_no in blocks:
-        # Strip a trailing parenthetical note such as "(remote github.com/...)".
+        # An angle-bracket value is a documentation placeholder in the shape template, not
+        # a declared preset. Grading it would make the file's own instructions fail.
+        if value.startswith("<") and value.endswith(">"):
+            continue
+        # Strip a trailing parenthetical note such as "(remote example.invalid/...)".
         path_part = value.split("  (")[0].strip()
         if ABSOLUTE.match(path_part):
             print(f"OK: {project} pinned to {path_part}")
