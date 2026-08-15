@@ -1,7 +1,7 @@
 {
-  "project": "Skills-Lab v1.1.0",
-  "generated_at": "2026-07-25T09:15:12+00:00",
-  "head": "730b22b3",
+  "project": "Skills-Lab v1.1.1",
+  "generated_at": "2026-08-15T04:15:38+00:00",
+  "head": "1aacc3f0",
   "summary": {
     "desks_authored": 276,
     "desks_planned": 276,
@@ -28,6 +28,11 @@
       "id": "M4",
       "name": "Release",
       "sprint": 1
+    },
+    {
+      "id": "M5",
+      "name": "Post-release remediation",
+      "sprint": 2
     }
   ],
   "tasks": [
@@ -379,7 +384,7 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "=============================================================="
+      "evidence": "RESULT: PASS"
     },
     {
       "id": "SL-16",
@@ -399,7 +404,7 @@
       "title": "Package and checksum every suite",
       "milestone": "M4",
       "sprint": 1,
-      "status": "todo",
+      "status": "done",
       "acceptance": "tools/cut_release.py writes 21 suite package sets and validate_release_assets.py exits 0",
       "depends_on": [
         "SL-15"
@@ -407,14 +412,14 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "not run"
+      "evidence": "21 suite package sets; checksums verify"
     },
     {
       "id": "SL-18",
       "title": "Publish v1.1.0",
       "milestone": "M4",
       "sprint": 1,
-      "status": "todo",
+      "status": "done",
       "acceptance": "21 suite releases plus repo-level v1.1.0 tagged, assets uploaded, README, MANIFEST and About reflect 21 suites",
       "depends_on": [
         "SL-17"
@@ -422,80 +427,171 @@
       "source": "recon",
       "blocked_on": null,
       "pr": null,
-      "evidence": "not run"
+      "evidence": "21 suite releases plus repo-level v1.1.0 published"
+    },
+    {
+      "id": "SL-19",
+      "title": "Scoped --suite cut must not truncate the repo-wide index",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "a scoped cut leaves every untouched suite byte-identical in root CHECKSUMS.txt and MANIFEST.md, and an unscoped cut is byte-identical to before the change",
+      "depends_on": [],
+      "source": "handoff:SL-02",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "merge_root_checksums and suite_version present in cut_release.py; reproduced the defect at 385->20 lines before fixing"
+    },
+    {
+      "id": "SL-20",
+      "title": "Release validation must cover every packaged suite",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "all 21 suites reported by name, refuses a corrupted archive, a missing archive, and a truncated checksum file",
+      "depends_on": [],
+      "source": "handoff:SL-03",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "discovery from dist/manifests/*-CHECKSUMS.txt; expected count from the JSON manifest, not from the file under test; bidirectional check added after a counterfactual showed the first fix passed on 5 of 20 recorded"
+    },
+    {
+      "id": "SL-21",
+      "title": "Release validators run automatically in CI",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "workflow triggers on push and pull_request, runs all three validators, and a run on the introducing commit is green",
+      "depends_on": [],
+      "source": "handoff:SL-04",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "auto triggers: True; preset gate wired: True; green run on push to main"
+    },
+    {
+      "id": "SL-22",
+      "title": "Remove published internal project configuration",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "zero internal project names, absolute paths, repository URLs or connector names in the packaged tree, and the exposed archives are off the affected releases",
+      "depends_on": [],
+      "source": "operator",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "packaged-tree scan: 0 occurrences across 1896 shipped reference files"
+    },
+    {
+      "id": "SL-23",
+      "title": "Guard against an unpinned repository root returning",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "a non-absolute REPO fails the check unless an allowance records why, and the check runs in CI",
+      "depends_on": [],
+      "source": "handoff:SL-07",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "validate_presets.py present and wired into the workflow; five counterfactuals refuse, clean state passes"
+    },
+    {
+      "id": "SL-24",
+      "title": "Cut and publish the release carrying the fixes",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "21 suite releases plus repo-level v1.1.1, artifact diff reported in full, exposed assets removed from earlier releases with a notice",
+      "depends_on": [],
+      "source": "handoff:SL-05",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "3 of 385 archives moved, 382 unchanged, none added or removed"
+    },
+    {
+      "id": "SL-25",
+      "title": "Pin remaining repository roots",
+      "milestone": "M5",
+      "sprint": 2,
+      "status": "done",
+      "acceptance": "superseded: pinning PROMETHEUS, SOCIETY and ROGUE-OPS would have added three more absolute local paths to a public package, which is the defect SL-22 exists to remove",
+      "depends_on": [],
+      "source": "handoff:SL-06",
+      "blocked_on": null,
+      "pr": null,
+      "evidence": "closed as superseded by SL-22, not completed as specified"
     }
   ],
   "commits": [
     {
-      "sha": "730b22b3",
-      "message": "docs: record the authoring standard as policy",
-      "date": "2026-07-25T09:00:46+00:00",
+      "sha": "1aacc3f0",
+      "message": "chore(tracker): extend to the post-release remediation cycle",
+      "date": "2026-08-15T04:15:11+00:00",
       "task": null
     },
     {
-      "sha": "ff4bc787",
-      "message": "breaking: retire compatibility shims in v1.1.0",
-      "date": "2026-07-25T08:47:58+00:00",
+      "sha": "b9bb4b5d",
+      "message": "ci(release-assets): run validators on push and pull request",
+      "date": "2026-08-14T21:09:30-07:00",
       "task": null
     },
     {
-      "sha": "9031192c",
-      "message": "release: v1.1.0, fourteen new Desk Suites",
-      "date": "2026-07-25T08:35:06+00:00",
+      "sha": "7ffd59c7",
+      "message": "chore(ci): defer the workflow trigger change to a token with workflow scope",
+      "date": "2026-08-14T20:57:43-07:00",
       "task": null
     },
     {
-      "sha": "c3187ce7",
-      "message": "chore: refresh tracker.json (212/276 desks, 10 suites authored)",
-      "date": "2026-07-25T07:33:01+00:00",
+      "sha": "846ca568",
+      "message": "release: v1.1.1, remove published internal configuration",
+      "date": "2026-08-15T03:51:53+00:00",
       "task": null
     },
     {
-      "sha": "5e2cc938",
-      "message": "chore: refresh tracker.json (152/276 desks, 7 suites authored)",
-      "date": "2026-07-25T06:42:01+00:00",
+      "sha": "88e1fd5a",
+      "message": "Merge branch 'fix/scrub-internal-project-references' into release/v1.1.1",
+      "date": "2026-08-15T03:50:13+00:00",
       "task": null
     },
     {
-      "sha": "c1e3d181",
-      "message": "feat: pinnable suite tracker with a reachable state source",
-      "date": "2026-07-25T06:35:23+00:00",
+      "sha": "ed134859",
+      "message": "Merge branch 'fix/validate-release-assets-all-suites' into release/v1.1.1",
+      "date": "2026-08-15T03:50:13+00:00",
       "task": null
     },
     {
-      "sha": "62682e6d",
-      "message": "fix: retire compatibility shims by date, not by version",
-      "date": "2026-07-25T03:20:03+00:00",
+      "sha": "6f57a5bd",
+      "message": "fix(goliveprompt): remove internal project references from a public package",
+      "date": "2026-08-15T03:34:02+00:00",
       "task": null
     },
     {
-      "sha": "a81bfde4",
-      "message": "feat: complete compatibility shim coverage",
-      "date": "2026-07-25T03:07:49+00:00",
+      "sha": "1568b8ed",
+      "message": "feat(presets): fail CI on an unpinned goliveprompt repository root",
+      "date": "2026-08-15T03:18:48+00:00",
       "task": null
     },
     {
-      "sha": "d5b19875",
-      "message": "release: repo-level v1.0.0 notes",
-      "date": "2026-07-24T19:50:39-07:00",
+      "sha": "b0cadb0b",
+      "message": "ci(release-assets): run the validators on push and pull request",
+      "date": "2026-08-15T03:16:39+00:00",
       "task": null
     },
     {
-      "sha": "e3afe796",
-      "message": "chore: ignore transfer bundles and loose .skill drops",
-      "date": "2026-07-24T19:47:43-07:00",
+      "sha": "0deb0e68",
+      "message": "fix(validate-release-assets): discover suites instead of hardcoding seven of them",
+      "date": "2026-08-15T03:16:16+00:00",
       "task": null
     },
     {
-      "sha": "16533a6e",
-      "message": "release: v1.0.0 across all seven suites",
-      "date": "2026-07-25T02:46:22+00:00",
+      "sha": "7c0c2505",
+      "message": "fix(cut-release): merge scoped cuts into the repo-wide index instead of replacing it",
+      "date": "2026-08-15T03:14:42+00:00",
       "task": null
     },
     {
-      "sha": "629b2295",
-      "message": "fix: generate capability-baseline.md from the profile",
-      "date": "2026-07-25T02:30:04+00:00",
+      "sha": "20953ff8",
+      "message": "fix(goliveprompt): pin the mrdOS repo root instead of resolving it by search (#33)",
+      "date": "2026-08-14T19:16:46-07:00",
       "task": null
     }
   ]
