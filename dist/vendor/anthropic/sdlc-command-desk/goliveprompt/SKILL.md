@@ -34,7 +34,7 @@ SPEC_DIR  = docs/engineering-spec
 TRACKER   = {project}-golive-tracker
 ```
 
-Resolution order: the current request, then `references/presets.md`, then the repo itself (resolve the root through SignalDesk `list_roots`, read the github remote from git config), then the conversation history. Only after all four come up empty, ask, and ask for everything missing in one batch. Never ask for a value a preset already supplies.
+Resolution order: the current request, then `references/presets.md`, then the repo itself (resolve the root through the local filesystem connector's root listing, read the github remote from git config), then the conversation history. Only after all four come up empty, ask, and ask for everything missing in one batch. Never ask for a value a preset already supplies.
 
 The defaults for `SPRINTS`, `TIMELINE`, `SPEC_DIR`, and `TRACKER` stand unless the user overrides them. Do not confirm defaults.
 

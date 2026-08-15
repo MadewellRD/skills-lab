@@ -73,7 +73,7 @@ Prompt variants, fixtures, and eval cases are independent. Drafting and scoring 
 
 ## Connector grounding
 
-Use SignalDesk for local prompt files, reports-in, reports-out, and working-tree truth. Use GitHub for remote source files, PRs, issues, commits, changed files, and review history. Use eval artifacts, telemetry, incident reports, and production logs when diagnosing prompt behavior. Use official model/provider prompting guidance only after repo evidence and user-scoped requirements are captured.
+Use the local filesystem connector for prompt files, reports-in, reports-out, and working-tree truth. Use GitHub for remote source files, PRs, issues, commits, changed files, and review history. Use eval artifacts, telemetry, incident reports, and production logs when diagnosing prompt behavior. Use official model/provider prompting guidance only after repo evidence and user-scoped requirements are captured.
 
 Treat prompt text as one control layer, not as an authorization system. If a prompt depends on a tool, retrieval source, memory store, or policy gate, establish that boundary from source evidence. Where it cannot be established, record it explicitly as unverified, and halt when the prompt would otherwise become the sole control over access, authorization, or destructive action.
 
