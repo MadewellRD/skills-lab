@@ -1,6 +1,12 @@
 name: Validate release assets
 
+# Dispatch-only meant nothing ran these checks unless a human remembered to. That is how
+# the seven-of-twenty-one coverage gap in validate_release_assets.py survived: the gate
+# existed, reported success, and was almost never invoked.
 on:
+  push:
+    branches: [main]
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -14,6 +20,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
+      - name: Install build dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Validate goliveprompt preset repository roots
+        run: python tools/validate_presets.py
 
       - name: Validate SDLC suite layout
         run: python tools/validate_sdlc_suite.py
