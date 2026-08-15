@@ -24,6 +24,9 @@ jobs:
       - name: Install build dependencies
         run: python -m pip install --disable-pip-version-check PyYAML
 
+      - name: Validate goliveprompt preset repository roots
+        run: python tools/validate_presets.py
+
       - name: Validate SDLC suite layout
         run: python tools/validate_sdlc_suite.py
 

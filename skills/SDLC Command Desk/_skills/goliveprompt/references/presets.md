@@ -69,3 +69,7 @@ Governance-first AI execution framework. The colon in the project name is droppe
 PROMETHEUS, SOCIETY and ROGUE-OPS still carry unpinned `REPO` lines and are not pinned here because no session has established their roots against ground truth. SOCIETY is ambiguous today: `D:\dev\society` and `D:\dev\society-platform` both exist. Pin each from the next session that works it, from the reflog and the remote rather than from a guess.
 
 A new project needs only `PROJECT` and a reachable `REPO`. Everything else takes the defaults. Add a preset block once the project has been run through the protocol and its tracker name is fixed, since the tracker name is the value most likely to drift from the default.
+
+<!-- UNPINNED_ALLOWANCE: PROMETHEUS -- no session has established the working clone against reflog and remote; pin from the next session that works it -->
+<!-- UNPINNED_ALLOWANCE: SOCIETY -- ambiguous today: D:\dev\society and D:\dev\society-platform both exist and neither has been checked against its reflog -->
+<!-- UNPINNED_ALLOWANCE: ROGUE-OPS -- D:\dev\ROGUE-OPS is the likely root but D:\dev\ROGUE-GPT sits beside it and the working clone has not been confirmed -->
