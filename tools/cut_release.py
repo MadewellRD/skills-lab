@@ -114,9 +114,13 @@ def main() -> int:
         write_notes(slug, ver, a.date, entries)
         summary.append((slug, len(entries), sum(e['bytes'] for e in entries)))
 
-    (ROOT / 'CHECKSUMS.txt').write_text('\n'.join(sorted(root_lines)) + '\n',
+    # A scoped run (--suite) must MERGE into the root checksum file, never replace it.
+    # Replacing it dropped every suite the run did not process, which turned a scoped cut
+    # into silent data loss across the other 20 suites.
+    merged = merge_root_checksums(root_lines, suites)
+    (ROOT / 'CHECKSUMS.txt').write_text('\n'.join(merged) + '\n',
                                         encoding='utf-8', newline='')
-    write_manifest(ver, a.date, suites)
+    write_manifest(a.date)
 
     print(f'release v{ver}  ({a.date})')
     total = 0
@@ -126,6 +130,46 @@ def main() -> int:
     print(f'  {"TOTAL":<32} {total:>3} skills')
     print(f'  root CHECKSUMS.txt: {len(root_lines)} entries')
     return 0
+
+
+def merge_root_checksums(new_lines: list[str], processed: list[str]) -> list[str]:
+    """Root CHECKSUMS.txt is the whole repository's index, not this run's output.
+
+    Keep every recorded line whose archive belongs to a suite this run did NOT touch,
+    exactly as it was, and replace only the lines for suites that were processed. Sorted
+    output keeps a full cut and a scoped cut converging on the same file.
+    """
+    owned = {f'dist/packages/{s}/' for s in processed}
+    kept = []
+    existing = ROOT / 'CHECKSUMS.txt'
+    if existing.exists():
+        for line in existing.read_text(encoding='utf-8').splitlines():
+            if not line.strip():
+                continue
+            parts = line.split(None, 1)
+            path = parts[1].strip().replace('\\', '/') if len(parts) == 2 else ''
+            if not any(path.startswith(o) for o in owned):
+                kept.append(line)
+    return sorted(set(kept) | set(new_lines))
+
+
+def suite_version(slug: str) -> str:
+    """The version a suite is actually at, read from its own generated manifests.
+
+    MANIFEST.md is a registry of where each suite stands, not a snapshot of one run. A
+    scoped cut raises one suite's version and must leave the rest reading their own, so
+    the version cannot come from this run's --version argument.
+    """
+    best = None
+    for f in MAN.glob(f'{slug}-v*.json'):
+        raw = f.name[len(slug) + 2:-5]
+        try:
+            key = tuple(int(x) for x in raw.split('.'))
+        except ValueError:
+            continue
+        if best is None or key > best[0]:
+            best = (key, raw)
+    return best[1] if best else '0.0.0'
 
 
 def write_notes(slug: str, ver: str, date: str, entries: list[dict]) -> None:
@@ -194,10 +238,16 @@ def write_notes(slug: str, ver: str, date: str, entries: list[dict]) -> None:
     p.write_text('\n'.join(lines), encoding='utf-8', newline='')
 
 
-def write_manifest(ver: str, date: str, suites: list[str]) -> None:
-    """Generate MANIFEST.md from actual dist state so it cannot drift from reality."""
+def write_manifest(date: str) -> None:
+    """Generate MANIFEST.md from actual dist state so it cannot drift from reality.
+
+    Enumerates every suite present in dist/skills rather than only the suites this run
+    processed. A scoped cut previously regenerated the registry from its own subset and
+    erased the rest.
+    """
     rows, sections = [], []
-    for slug in suites:
+    for slug in sorted(d.name for d in DIST.iterdir() if d.is_dir()):
+        ver = suite_version(slug)
         skills = sorted(d.name for d in (DIST / slug).iterdir() if d.is_dir())
         skills.sort(key=lambda n: (n != slug, n))
         title = SUITE_TITLES.get(slug, slug)
