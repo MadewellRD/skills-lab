@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Skills-Lab v1.1.0 Tracker</title>
+<title>Skills-Lab Tracker</title>
 <style>
   :root{
     --bg:#0b0f14; --panel:#131a22; --panel2:#182029; --line:#243040;
@@ -116,6 +116,7 @@ function tally(tasks){
 function render(d){
   document.getElementById('err').innerHTML = '';
   document.getElementById('proj').textContent = d.project || 'Tracker';
+  document.title = (d.project || 'Skills-Lab') + ' Tracker';
   const st = d.generated_at ? new Date(d.generated_at) : null;
   const age = st ? (Date.now()-st.getTime())/60000 : null;
   document.getElementById('stamp').innerHTML = st
