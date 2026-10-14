@@ -1,0 +1,17 @@
+interface:
+  display_name: Repo Governance Desk
+  short_description: Loads a repository's governance profile and enforces its decision
+    ledger, gate of record, hard invariants, and authority model across every SDLC
+    stage.
+  default_prompt: ''
+  icon: null
+  primary_color: null
+  icon_small: null
+  icon_large: null
+policy:
+  allow_implicit_invocation: true
+  products:
+  - google
+_generated:
+  profile: frontier-2026-07
+  vendor: google

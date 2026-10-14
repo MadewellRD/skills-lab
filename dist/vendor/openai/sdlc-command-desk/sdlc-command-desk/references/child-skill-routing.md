@@ -22,6 +22,11 @@
 | refactor or upgrade dependencies | maintenance-refactor-desk | test-strategy-desk, implementation-handoff-desk |
 | run retrospective | retrospective-desk | docs-traceability-desk |
 | retire feature/api/system | decommissioning-desk | deployment-desk, docs-traceability-desk |
+| work in a repository that declares a decision ledger, a local gate receipt, hard invariants, or an authority model | repo-governance-desk (overlay; loads first, constrains every other stage) | architecture-design-desk, review-quality-desk, release-operations-desk, deployment-desk |
+
+## Governance overlay
+
+When the repository declares a governance profile (`GOVERNANCE.md`, or a Governance section in its contributor instructions), run `repo-governance-desk` before the first lifecycle stage. It does not replace a stage; it binds the profile's source hierarchy, gate of record, invariants, and authority model onto every stage that follows, and adds the invariant and authority halt classes.
 
 ## Implementation readiness test
 
