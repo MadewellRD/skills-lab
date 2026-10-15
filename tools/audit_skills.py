@@ -33,7 +33,7 @@ for f in glob.glob('dist/skills/**/*.md', recursive=True):
     # SignalDesk is not a model vendor, but naming it is the same defect: a specific
     # product hardcoded where a capability belongs. It put an internal tool name into a
     # public package, so it is gated here rather than left to review.
-    for m in re.findall(r'\b(ChatGPT|Codex|Claude Code|SignalDesk)\b',
+    for m in re.findall(r'\b(ChatGPT|Codex|Claude Code|SignalDesk|nMCP|NativeMCP)\b',
                         open(f, encoding='utf-8').read()):
         leak.append((os.path.basename(f), m))
 print(f"  vendor mentions in generic build: {len(leak)}   (bibliography files exempt)")

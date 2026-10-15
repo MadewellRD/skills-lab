@@ -43,6 +43,7 @@ EXPECTED = [
     "maintenance-refactor-desk",
     "retrospective-desk",
     "decommissioning-desk",
+    "repo-governance-desk",
     "goliveprompt",
 ]
 # Skills that are protocol runners rather than lifecycle stages. They carry their own
